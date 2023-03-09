@@ -1,0 +1,51 @@
+{
+  "name": "pillar-ui",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "description": "A monorepo containing a comprehensive set of reusable UI components, React hooks, and other tools for modern web development. Built with accessibility, scalability, and best practices in mind, this monorepo streamlines the development process and makes it easier than ever to build robust, high-quality web applications.",
+  "author": {
+    "name": "Hamza Miloud Amar",
+    "email": "hamzamiloudamar@gmail.com"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "design-system",
+    "user-interface",
+    "accessible",
+    "a11y",
+    "pillar-core",
+    "pillar-icons",
+    "pillar-hooks",
+    "ui-components",
+    "custom-hooks",
+    "icons",
+    "stitches",
+    "css-in-js"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=docs^... && changeset publish",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install",
+    "lint-language": "alex"
+  },
+  "devDependencies": {
+    "alex": "^11.0.0",
+    "eslint-config-custom": "*",
+    "husky": "^8.0.3",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "packageManager": "yarn@1.22.15"
+}
