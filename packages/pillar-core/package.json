@@ -1,6 +1,7 @@
 {
   "name": "@pillar/core",
   "version": "0.0.0",
+  "style": "dist/css/main.min.css",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -20,14 +21,14 @@
     "storybook"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "js-build": "npx tsup",
+    "js-build:watch": "npx tsup --watch",
+    "css-build": "postcss src/css/main.css -o css/main.min.css",
+    "css-build:watch": "yarn css-build --watch",
+    "build": "yarn js-build && yarn css-build",
+    "dev": "npm-run-all -p -r js-build:watch css-build:watch",
     "lint": "eslint \"src/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
-  },
-  "dependencies": {
-    "@radix-ui/colors": "^0.1.8",
-    "@stitches/react": "^1.2.8"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -37,10 +38,18 @@
     "@pillar/tsconfig": "*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
     "eslint": "^8.15.0",
     "eslint-config-pillar": "*",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
     "react": "^18.1.0",
-    "tsup": "^5.10.1",
+    "sass": "^1.59.2",
+    "tsup": "^6.7.0",
     "typescript": "^4.5.3"
   },
   "publishConfig": {

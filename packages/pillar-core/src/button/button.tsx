@@ -1,9 +1,10 @@
-import { StyledButton } from './button.style'
+import React from 'react'
+import type { ButtonProps } from './button.type'
 
-function Button(props: any) {
-  return <StyledButton>{props.children}</StyledButton>
+function Button({ children }: ButtonProps) {
+  return <button className="btn">{children}</button>
 }
 
-Button.displayName = 'Button'
+Button.displayName = '@Pillar-Button'
 
 export default Button
