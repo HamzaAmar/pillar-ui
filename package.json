@@ -38,14 +38,19 @@
     "release": "turbo run build --filter=docs^... && changeset publish",
     "pre-commit": "lint-staged",
     "prepare": "husky install",
-    "lint-language": "alex"
+    "lint-staged": "lint-staged",
+    "lint-language": "alex",
+    "prettier:base": "prettier --parser typescript --write",
+    "prettier:check": "yarn prettier:base --list-different \"packages/**/*.{ts,tsx}\"",
+    "prettier:write": "yarn prettier:base \"src/**/*.{ts,tsx}\""
   },
   "devDependencies": {
     "alex": "^11.0.0",
     "eslint-config-custom": "*",
     "husky": "^8.0.3",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "lint-staged": "^v13.2.0"
   },
   "packageManager": "yarn@1.22.15"
 }
