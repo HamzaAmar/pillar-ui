@@ -1,0 +1,48 @@
+version: 2
+updates:
+  # Update dependencies in the root directory
+  - package-ecosystem: 'yarn'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
+      timezone: 'UTC'
+    open-pull-requests-limit: 5
+    labels:
+      - 'dependencies'
+    reviewers:
+      - HamzaAmar
+  # Update dependencies in the packages directory
+  - package-ecosystem: 'yarn'
+    directory: '/packages/*'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
+      timezone: 'UTC'
+    labels:
+      - 'dependencies'
+    reviewers:
+      - HamzaAmar
+    open-pull-requests-limit: 5
+    dep: true
+    # Install dependencies using Turbo
+    commands:
+      - 'yarn install'
+  - package-ecosystem: 'yarn'
+    directory: '/apps/*'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
+      timezone: 'UTC'
+    labels:
+      - 'dependencies'
+    reviewers:
+      - HamzaAmar
+    open-pull-requests-limit: 5
+    dep: true
+    # Install dependencies using Turbo
+    commands:
+      - 'yarn install'
