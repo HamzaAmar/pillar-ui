@@ -1,0 +1,60 @@
+.chips {
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0 0.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 25ch;
+  border: 2px solid transparent;
+  font-weight: 500;
+  font-size: min(var(--size), 16px);
+}
+
+// Variants Style Section
+
+.chips__solid {
+  background-color: var(--color-shared-9);
+  color: white;
+}
+
+.chips__outline {
+  color: var(--color-shared-11);
+  border-color: var(--color-shared-11);
+}
+
+.chips__soft {
+  border-color: var(--color-shared-7);
+  background-color: var(--color-shared-3);
+  color: var(--color-shared-11);
+}
+
+// Size Style Section
+
+.chips__2xs {
+  --size: 0.5rem;
+}
+
+.chips__xs {
+  --size: 0.675rem;
+}
+
+.chips__sm {
+  --size: 0.675rem;
+}
+
+.chips__md {
+  --size: 0.75em;
+}
+
+.chips__lg {
+  --size: 0.865rem;
+}
+
+.chips__xl {
+  --size: 1rem;
+}
+
+.chips__2xl {
+  --size: 1.125rem;
+}

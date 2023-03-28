@@ -1,0 +1,152 @@
+.u_primary {
+  --color-shared-1: var(--primary-1);
+  --color-shared-2: var(--primary-2);
+  --color-shared-3: var(--primary-3);
+  --color-shared-4: var(--primary-4);
+  --color-shared-5: var(--primary-5);
+  --color-shared-6: var(--primary-6);
+  --color-shared-7: var(--primary-7);
+  --color-shared-8: var(--primary-8);
+  --color-shared-9: var(--primary-9);
+  --color-shared-10: var(--primary-10);
+  --color-shared-11: var(--primary-11);
+  --color-shared-12: var(--primary-12);
+}
+
+.u_secondary {
+  --color-shared-1: var(--slate-12);
+  --color-shared-2: var(--slate-11);
+  --color-shared-3: var(--slate-10);
+  --color-shared-4: var(--slate-9);
+  --color-shared-5: var(--slate-8);
+  --color-shared-6: var(--slate-7);
+  --color-shared-7: var(--slate-6);
+  --color-shared-8: var(--slate-5);
+  --color-shared-9: var(--slate-4);
+  --color-shared-10: var(--slate-3);
+  --color-shared-11: var(--slate-2);
+  --color-shared-12: var(--slate-1);
+}
+
+.u_slate {
+  --color-shared-1: var(--slate-1);
+  --color-shared-2: var(--slate-2);
+  --color-shared-3: var(--slate-3);
+  --color-shared-4: var(--slate-4);
+  --color-shared-5: var(--slate-5);
+  --color-shared-6: var(--slate-6);
+  --color-shared-7: var(--slate-7);
+  --color-shared-8: var(--slate-8);
+  --color-shared-9: var(--slate-9);
+  --color-shared-10: var(--slate-10);
+  --color-shared-11: var(--slate-11);
+  --color-shared-12: var(--slate-12);
+}
+
+.u_purple {
+  --color-shared-1: var(--purple-1);
+  --color-shared-2: var(--purple-2);
+  --color-shared-3: var(--purple-3);
+  --color-shared-4: var(--purple-4);
+  --color-shared-5: var(--purple-5);
+  --color-shared-6: var(--purple-6);
+  --color-shared-7: var(--purple-7);
+  --color-shared-8: var(--purple-8);
+  --color-shared-9: var(--purple-9);
+  --color-shared-10: var(--purple-10);
+  --color-shared-11: var(--purple-11);
+  --color-shared-12: var(--purple-12);
+}
+
+.u_indigo,
+.u_info {
+  --color-shared-1: var(--indigo-1);
+  --color-shared-2: var(--indigo-2);
+  --color-shared-3: var(--indigo-3);
+  --color-shared-4: var(--indigo-4);
+  --color-shared-5: var(--indigo-5);
+  --color-shared-6: var(--indigo-6);
+  --color-shared-7: var(--indigo-7);
+  --color-shared-8: var(--indigo-8);
+  --color-shared-9: var(--indigo-9);
+  --color-shared-10: var(--indigo-10);
+  --color-shared-11: var(--indigo-11);
+  --color-shared-12: var(--indigo-12);
+}
+
+.u_warning,
+.u_orange {
+  --color-shared-1: var(--orange-1);
+  --color-shared-2: var(--orange-2);
+  --color-shared-3: var(--orange-3);
+  --color-shared-4: var(--orange-4);
+  --color-shared-5: var(--orange-5);
+  --color-shared-6: var(--orange-6);
+  --color-shared-7: var(--orange-7);
+  --color-shared-8: var(--orange-8);
+  --color-shared-9: var(--orange-9);
+  --color-shared-10: var(--orange-10);
+  --color-shared-11: var(--orange-11);
+  --color-shared-12: var(--orange-12);
+}
+
+.u_success,
+.u_green {
+  --color-shared-1: var(--green-1);
+  --color-shared-2: var(--green-2);
+  --color-shared-3: var(--green-3);
+  --color-shared-4: var(--green-4);
+  --color-shared-5: var(--green-5);
+  --color-shared-6: var(--green-6);
+  --color-shared-7: var(--green-7);
+  --color-shared-8: var(--green-8);
+  --color-shared-9: var(--green-9);
+  --color-shared-10: var(--green-10);
+  --color-shared-11: var(--green-11);
+  --color-shared-12: var(--green-12);
+}
+
+.u_danger,
+.u_red {
+  --color-shared-1: var(--red-1);
+  --color-shared-2: var(--red-2);
+  --color-shared-3: var(--red-3);
+  --color-shared-4: var(--red-4);
+  --color-shared-5: var(--red-5);
+  --color-shared-6: var(--red-6);
+  --color-shared-7: var(--red-7);
+  --color-shared-8: var(--red-8);
+  --color-shared-9: var(--red-9);
+  --color-shared-10: var(--red-10);
+  --color-shared-11: var(--red-11);
+  --color-shared-12: var(--red-12);
+}
+
+.u_brown {
+  --color-shared-1: var(--brown-1);
+  --color-shared-2: var(--brown-2);
+  --color-shared-3: var(--brown-3);
+  --color-shared-4: var(--brown-4);
+  --color-shared-5: var(--brown-5);
+  --color-shared-6: var(--brown-6);
+  --color-shared-7: var(--brown-7);
+  --color-shared-8: var(--brown-8);
+  --color-shared-9: var(--brown-9);
+  --color-shared-10: var(--brown-10);
+  --color-shared-11: var(--brown-11);
+  --color-shared-12: var(--brown-12);
+}
+.u_violet {
+  --color-shared-1: var(--violet-1);
+  --color-shared-2: var(--violet-2);
+  --color-shared-3: var(--violet-3);
+  --color-shared-4: var(--violet-4);
+  --color-shared-5: var(--violet-5);
+  --color-shared-6: var(--violet-6);
+  --color-shared-7: var(--violet-7);
+  --color-shared-8: var(--violet-8);
+  --color-shared-9: var(--violet-9);
+  --color-shared-10: var(--violet-10);
+  --color-shared-11: var(--violet-11);
+  --color-shared-12: var(--violet-12);
+}

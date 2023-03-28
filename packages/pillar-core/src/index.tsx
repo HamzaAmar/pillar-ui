@@ -1,2 +1,1 @@
-export { Avatar } from './avatar'
-export { Button } from './button'
+export { Avatar, Button, Spinner, Alert, Badge, Chips, Flex, Grid } from './core'

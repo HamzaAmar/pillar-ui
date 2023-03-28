@@ -1,0 +1,14 @@
+/* /// TRUNCATE TEXT UTILITY */
+
+.u_multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-numbers, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.u_singleline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

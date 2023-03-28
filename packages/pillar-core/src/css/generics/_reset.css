@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  appearance: none;
+  border: none;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--slate-12);
+
+  /* // Please Make Sure If you want to update This Background color you need to update .storybook/preview.js */
+  background-color: var(--slate-1);
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu,
+    Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Lucida Grande', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  height: 100%;
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+}
+
+body[lang='ar'] * {
+  letter-spacing: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-bg-light);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  outline: 1px solid slategrey;
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+*[aria-busy='true'],
+*[hidden] {
+  display: none;
+}

@@ -1,19 +1,6 @@
 /* Color Section */
 
 :root {
-  --primary-1: var(--indigo-1);
-  --primary-2: var(--indigo-2);
-  --primary-3: var(--indigo-3);
-  --primary-4: var(--indigo-4);
-  --primary-5: var(--indigo-5);
-  --primary-6: var(--indigo-6);
-  --primary-7: var(--indigo-7);
-  --primary-8: var(--indigo-8);
-  --primary-9: var(--indigo-9);
-  --primary-10: var(--indigo-10);
-  --primary-11: var(--indigo-11);
-  --primary-12: var(--indigo-12);
-
   --opacity-1: hsl(0deg 0% 0% / 1.2%);
   --opacity-2: hsl(0deg 0% 0% / 2.7%);
   --opacity-3: hsl(0deg 0% 0% / 4.7%);
@@ -39,32 +26,6 @@
   --slate-10: hsl(206deg 5.8% 52.3%);
   --slate-11: hsl(206deg 6% 43.5%);
   --slate-12: hsl(206deg 24% 9%);
-
-  --text-1: hsl(200deg 7% 8.8%);
-  --text-2: hsl(195deg 7.1% 11%);
-  --text-3: hsl(197deg 6.8% 13.6%);
-  --text-4: hsl(198deg 6.6% 15.8%);
-  --text-5: hsl(199deg 6.4% 17.9%);
-  --text-6: hsl(201deg 6.2% 20.5%);
-  --text-7: hsl(203deg 6% 24.3%);
-  --text-8: hsl(207deg 5.6% 31.6%);
-  --text-9: hsl(206deg 6% 43.9%);
-  --text-10: hsl(206deg 5.2% 49.5%);
-  --text-11: hsl(206deg 6% 63%);
-  --text-12: hsl(210deg 6% 93%);
-
-  --mint-1: hsl(165deg 80% 98.8%);
-  --mint-2: hsl(164deg 88.2% 96.7%);
-  --mint-3: hsl(164deg 76.6% 93.3%);
-  --mint-4: hsl(165deg 68.8% 89.5%);
-  --mint-5: hsl(165deg 60.6% 84.5%);
-  --mint-6: hsl(165deg 53.5% 76.9%);
-  --mint-7: hsl(166deg 50.7% 66.1%);
-  --mint-8: hsl(168deg 52.8% 51%);
-  --mint-9: hsl(167deg 65% 66%);
-  --mint-10: hsl(167deg 59.3% 63.1%);
-  --mint-11: hsl(172deg 72% 28.5%);
-  --mint-12: hsl(172deg 70% 12%);
 
   --indigo-1: hsl(225deg 60% 99.4%);
   --indigo-2: hsl(223deg 100% 98.6%);
@@ -131,19 +92,6 @@
   --brown-11: hsl(25deg 30% 41%);
   --brown-12: hsl(20deg 30% 19%);
 
-  --yellow-1: hsl(60deg 54% 98.5%);
-  --yellow-2: hsl(52deg 100% 95.5%);
-  --yellow-3: hsl(55deg 100% 90.9%);
-  --yellow-4: hsl(54deg 100% 86.6%);
-  --yellow-5: hsl(52deg 97.9% 82%);
-  --yellow-6: hsl(50deg 89.4% 76.1%);
-  --yellow-7: hsl(47deg 80.4% 68%);
-  --yellow-8: hsl(48deg 100% 46.1%);
-  --yellow-9: hsl(53deg 92% 50%);
-  --yellow-10: hsl(50deg 100% 48.5%);
-  --yellow-11: hsl(42deg 100% 29%);
-  --yellow-12: hsl(40deg 55% 13.5%);
-
   --orange-1: hsl(24deg 70% 99%);
   --orange-2: hsl(24deg 83.3% 97.6%);
   --orange-3: hsl(24deg 100% 95.3%);
@@ -199,19 +147,6 @@
   --opacity-10: hsl(0deg 0% 100% / 44.6%);
   --opacity-11: hsl(0deg 0% 100% / 59.2%);
   --opacity-12: hsl(0deg 0% 100% / 92.3%);
-
-  --text-1: hsl(206deg 30% 98.8%);
-  --text-2: hsl(210deg 16.7% 97.6%);
-  --text-3: hsl(209deg 13.3% 95.3%);
-  --text-4: hsl(209deg 12.2% 93.2%);
-  --text-5: hsl(208deg 11.7% 91.1%);
-  --text-6: hsl(208deg 11.3% 88.9%);
-  --text-7: hsl(207deg 11.1% 85.9%);
-  --text-8: hsl(205deg 10.7% 78%);
-  --text-9: hsl(206deg 6% 56.1%);
-  --text-10: hsl(206deg 5.8% 52.3%);
-  --text-11: hsl(206deg 6% 43.5%);
-  --text-12: hsl(206deg 24% 9%);
 
   --red-1: hsl(353deg 23% 9.8%);
   --red-2: hsl(357deg 34.4% 12%);
@@ -291,32 +226,6 @@
   --green-11: hsl(151deg 50% 53.2%);
   --green-12: hsl(137deg 72% 94%);
 
-  --yellow-1: hsl(45deg 100% 5.5%);
-  --yellow-2: hsl(46deg 100% 6.7%);
-  --yellow-3: hsl(45deg 100% 8.7%);
-  --yellow-4: hsl(45deg 100% 10.4%);
-  --yellow-5: hsl(47deg 100% 12.1%);
-  --yellow-6: hsl(49deg 100% 14.3%);
-  --yellow-7: hsl(49deg 90.3% 18.4%);
-  --yellow-8: hsl(50deg 100% 22%);
-  --yellow-9: hsl(53deg 92% 50%);
-  --yellow-10: hsl(54deg 100% 68%);
-  --yellow-11: hsl(48deg 100% 47%);
-  --yellow-12: hsl(53deg 100% 91%);
-
-  --mint-1: hsl(173deg 50% 6.6%);
-  --mint-2: hsl(176deg 73% 7.3%);
-  --mint-3: hsl(175deg 79.3% 8.9%);
-  --mint-4: hsl(174deg 84.8% 10.3%);
-  --mint-5: hsl(174deg 90.2% 11.9%);
-  --mint-6: hsl(173deg 96% 13.8%);
-  --mint-7: hsl(172deg 100% 16.8%);
-  --mint-8: hsl(170deg 100% 21.4%);
-  --mint-9: hsl(167deg 65% 66%);
-  --mint-10: hsl(163deg 80% 77%);
-  --mint-11: hsl(167deg 70% 48%);
-  --mint-12: hsl(165deg 80% 94.8%);
-
   --orange-1: hsl(30deg 70% 7.2%);
   --orange-2: hsl(28deg 100% 8.4%);
   --orange-3: hsl(26deg 91.1% 11.6%);
@@ -331,7 +240,23 @@
   --orange-12: hsl(24deg 97% 93.2%);
 }
 
-.primary {
+:root,
+.dark {
+  --primary-1: var(--indigo-1);
+  --primary-2: var(--indigo-2);
+  --primary-3: var(--indigo-3);
+  --primary-4: var(--indigo-4);
+  --primary-5: var(--indigo-5);
+  --primary-6: var(--indigo-6);
+  --primary-7: var(--indigo-7);
+  --primary-8: var(--indigo-8);
+  --primary-9: var(--indigo-9);
+  --primary-10: var(--indigo-10);
+  --primary-11: var(--indigo-11);
+  --primary-12: var(--indigo-12);
+}
+
+.indigo {
   --primary-1: var(--indigo-1);
   --primary-2: var(--indigo-2);
   --primary-3: var(--indigo-3);

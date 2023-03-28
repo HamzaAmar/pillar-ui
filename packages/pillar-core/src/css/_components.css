@@ -1,4 +1,3 @@
-/* Btn Style */
-@import '../button/_button.css';
-/* Avatar Style */
-@import '../avatar/_avatar.css';
+@import '../core/button/_button.css';
+@import '../core/avatar/_avatar.css';
+@import '../core/spinner/_spinner.css';

@@ -1,0 +1,84 @@
+/*
+ 1-  TO Support in flex and in grid because safari does not support end in flex
+*/
+
+/* Justify Content Section Style Start */
+
+.u_justify-end {
+  justify-content: flex-end;
+  justify-content: end;
+}
+
+.u_justify-between {
+  justify-content: space-between;
+}
+
+.u_justify-around {
+  justify-content: space-around;
+}
+
+.u_justify-evenly {
+  justify-content: space-evenly;
+}
+
+.u_justify-center {
+  justify-content: center;
+}
+
+/* Align Item Section Style Start */
+
+.u_justify-items-center {
+  justify-items: center;
+}
+
+.u_justify-items-end {
+  justify-content: flex-end;
+  justify-items: end;
+}
+
+.u_justify-items-baseline {
+  justify-items: baseline;
+}
+
+.u_justify-items-stretch {
+  justify-items: stretch;
+}
+
+/* // Align Item Section Style Start */
+
+.u_items-center {
+  align-items: center;
+}
+
+.u_items-end {
+  align-items: flex-end;
+  align-items: end;
+}
+
+.u_items-baseline {
+  align-items: baseline;
+}
+
+.u_items-start {
+  align-items: flex-start;
+  align-items: start;
+}
+
+/* // Align Content Section Style Start */
+
+.u_content-end {
+  align-content: flex-end;
+  align-content: end;
+}
+
+.u_content-between {
+  align-content: space-between;
+}
+
+.u_content-around {
+  align-content: space-around;
+}
+
+.u_content-evenly {
+  align-content: space-evenly;
+}

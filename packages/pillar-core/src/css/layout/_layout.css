@@ -1,0 +1,39 @@
+.l_direction-column {
+  flex-direction: column;
+}
+
+.l_flex-wrap {
+  flex-wrap: wrap;
+}
+
+.l_flex-none {
+  flex: none;
+}
+
+.l_flex-1 {
+  flex: 1;
+}
+
+.l_flex-2 {
+  flex: 2;
+}
+
+.l_flex-auto {
+  flex: auto;
+}
+
+.l_flex {
+  display: flex;
+}
+
+.l_flex-inline {
+  display: inline-flex;
+}
+
+.l_grid {
+  display: grid;
+}
+
+.l_grid-inline {
+  display: inline-grid;
+}

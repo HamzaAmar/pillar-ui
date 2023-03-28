@@ -1,0 +1,83 @@
+.btn {
+  position: relative;
+  display: var(--display, inline-flex);
+  gap: min(0.5em, 0.75rem);
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  transition: transform 0.15s;
+  padding: 0.5em 1.5em;
+  text-transform: uppercase;
+  max-width: 100%;
+  transition: transform 50ms cubic-bezier(0.68, 0.55, 0.265, -2);
+}
+
+.btn:hover {
+  background-color: var(--color-shared-4);
+}
+
+.btn:active {
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 2px dashed var(--color-shared-9);
+  outline-offset: 1px;
+}
+
+.btn:disabled {
+  background-color: var(--slate-5);
+  color: var(--slate-11);
+  pointer-events: none;
+}
+
+.btn--text {
+  --line-numbers: 1;
+  font-size: 0.9em;
+}
+
+.btn__solid {
+  background-color: var(--color-shared-8);
+  color: var(--color-shared-12);
+}
+
+.btn__solid:hover {
+  background-color: var(--color-shared-9);
+  color: white;
+}
+
+.btn__outline {
+  color: var(--color-shared-11);
+  border-color: var(--color-shared-11);
+  background-color: var(--color-shared-1);
+}
+
+.btn__outline:hover {
+  background-color: var(--color-shared-4);
+}
+
+.btn__soft {
+  color: var(--color-shared-11);
+  background-color: var(--color-shared-3);
+  border-color: var(--color-shared-5);
+}
+
+.btn__text {
+  color: var(--color-shared-11);
+  border-color: transparent;
+}
+
+.btn__link {
+  color: var(--color-shared-11);
+  text-decoration: underline 1.5px;
+}
+
+.btn__fluid {
+  display: flex;
+  width: 100%;
+}
