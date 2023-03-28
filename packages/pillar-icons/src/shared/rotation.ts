@@ -1,4 +1,4 @@
-import { Rotation } from '../type'
+import { Rotation } from '../../type'
 
 export const ROTATION: Record<Rotation, string> = {
   left: '90',
