@@ -1,0 +1,26 @@
+.alert {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.alert__solid.u_info {
+  color: white;
+}
+
+.alert__solid {
+  background-color: var(--color-shared-9);
+  color: black;
+  border-inline-start: 6px solid var(--color-shared-11);
+}
+
+.alert__outline {
+  background-color: var(--color-shared-2);
+  border: 2px solid;
+  color: var(--color-shared-11);
+}
+
+.alert__soft {
+  background-color: var(--color-shared-6);
+  color: var(--color-shared-12);
+  border-inline-start: 6px solid var(--color-shared-9);
+}
