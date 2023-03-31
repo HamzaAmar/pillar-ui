@@ -1,17 +1,17 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { classnames } from '../../utils/classnames'
-import { Close, Info, CircleAlert, CircleClose, CircleCheck } from '@pillar/icons'
+import { Close, CircleWarning, CircleInfo, CircleX, CircleCheck } from '@pillar/icons'
 import { useBoolean } from '@pillar/hooks'
 import { Flex, Text, IconButton } from '..'
 
 import type { AlertProps, IconsStatus } from './alert.type'
 
 const icons: IconsStatus = {
-  info: <Info width="24" />,
-  danger: <CircleClose width="24" />,
+  info: <CircleInfo width="24" />,
+  danger: <CircleX width="24" />,
   success: <CircleCheck width="24" />,
-  warning: <CircleAlert type="circle" width="24" />,
+  warning: <CircleWarning type="circle" width="24" />,
 }
 
 const Alert = forwardRef((props, forwardedRef) => {
