@@ -12,7 +12,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "exclude": ["node_modules"]
 }
