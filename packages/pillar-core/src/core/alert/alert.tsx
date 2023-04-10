@@ -1,66 +1,59 @@
 import { forwardRef } from 'react'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { classnames } from '../../utils/classnames'
-import { Close, CircleWarning, CircleInfo, CircleX, CircleCheck } from '@pillar/icons'
-import { useBoolean } from '@pillar/hooks'
-import { Flex, Text, IconButton } from '..'
+import { Close } from '@pillar/icons'
+import { useBooleanState } from '@pillar/hooks'
+import { Flex, Text, IconButton, FlexProps } from '..'
 
-import type { AlertProps, IconsStatus } from './alert.type'
-
-const icons: IconsStatus = {
-  info: <CircleInfo width="24" />,
-  danger: <CircleX width="24" />,
-  success: <CircleCheck width="24" />,
-  warning: <CircleWarning type="circle" width="24" />,
-}
+import type { AlertProps } from './alert.type'
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
 const Alert = forwardRef((props, forwardedRef) => {
   const {
-    type = 'danger',
-    showIcon,
+    color = 'danger',
     message,
+    size = 'sm',
     title,
     inline,
     variant = 'solid',
+    closable = false,
     corner = 'md',
     className,
+    icon,
     ...rest
   } = props
-  const { state, handleTrue } = useBoolean(false)
+  const { booleanValue, setTrue } = useBooleanState(false)
 
-  if (state) {
+  // Hide the component if booleanValue is true
+  if (booleanValue) {
     return null
   }
-  const _className = classnames(`alert alert__${variant} u_${type} l_corner-${corner}`, { className })
+  const _className = classnames(`alert alert__${variant} u_${color} l_corner-${corner} l_size-${size}`, {
+    [className!]: !!className,
+  })
 
-  const inlineText = !inline ? { direction: 'column' as const } : {}
+  const inlineText: Partial<FlexProps> = !inline ? { direction: 'column' } : { items: 'center', gap: 'xs' }
+
+  const _title = title && (
+    <Text transform="capitalize" leading="md" weight="medium">
+      {title}
+    </Text>
+  )
+  const _message = message && <Text as="span">{message}</Text>
+
+  const closeIcon = closable && (
+    <IconButton size="2xs" onClick={setTrue} icon={<Close />} title="close title" color={color} />
+  )
 
   return (
     <Flex ref={forwardedRef} gap="2xs" justify="between" items="start" className={_className} role="alert" {...rest}>
       <Flex items="start" gap="sm">
-        {showIcon && <span className="u_items-self u_leading__normal">{icons[type]}</span>}
+        {icon && <span className="u_items-self u_leading__normal">{icon}</span>}
         <Flex {...inlineText} justify="center">
-          {Boolean(title) && (
-            <Text transform="capitalize" leading="md" size="sm" weight="medium">
-              {title}
-            </Text>
-          )}
-          {message && (
-            <Text as="span" size="xs">
-              {message}
-            </Text>
-          )}
+          {_title}
+          {_message}
         </Flex>
       </Flex>
-      <IconButton
-        size="xs"
-        corner="full"
-        onClick={handleTrue}
-        icon={<Close />}
-        title="close title"
-        variant="soft"
-        color="slate"
-      />
+      {closeIcon}
     </Flex>
   )
 }) as ForwardRefComponent<'div', AlertProps>

@@ -1,0 +1,21 @@
+.alert {
+  padding: 0.5rem 1rem;
+}
+
+.alert__solid {
+  background-color: var(--color-shared-8);
+  color: var(--color-shared-12);
+  border-inline-start: 6px solid var(--color-shared-9);
+}
+
+.alert__outline {
+  background-color: var(--color-shared-3);
+  border: 1px solid;
+  color: var(--color-shared-11);
+}
+
+.alert__soft {
+  background-color: var(--color-shared-5);
+  color: var(--color-shared-12);
+  border: 1px solid var(--color-shared-7);
+}

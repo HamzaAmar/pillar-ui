@@ -1,16 +1,14 @@
 import type { ReactNode } from 'react'
-import type { Corner, Variant } from '../../types'
-
-type Status = 'success' | 'warning' | 'danger' | 'info'
+import type { Color, Corner, Variant, Size } from '../../types'
 
 export interface AlertProps {
-  type?: Status
+  color?: Color
+  size?: Size
+  corner?: Corner
   title?: string
   message?: string
   variant?: Omit<Variant, 'transparent'>
-  showIcon?: boolean
   inline?: boolean
-  corner?: Corner
+  icon?: ReactNode
+  closable?: boolean
 }
-
-export type IconsStatus = Record<Status, ReactNode>
