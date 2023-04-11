@@ -1,0 +1,20 @@
+.breadcrumb svg {
+  width: 1em;
+}
+
+.breadcrumb--link {
+  font-size: 1em;
+  cursor: pointer;
+  color: var(--color-shared-11);
+  &:hover {
+    text-decoration: underline 2px;
+    color: var(--color-shared-10);
+  }
+  &:focus {
+    outline: 1px solid;
+  }
+  &[aria-current='page'] {
+    color: var(--slate-11);
+    text-decoration: none;
+  }
+}
