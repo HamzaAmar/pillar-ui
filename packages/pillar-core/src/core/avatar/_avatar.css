@@ -1,6 +1,46 @@
 .avatar {
-  color: white;
-  width: 2.5em;
-  height: 2.5em;
-  border-radius: inherit;
+  overflow: hidden;
+  border: 2px solid var(--slate-1);
+}
+
+.avatar__size {
+  width: 2.75em;
+  height: 2.75em;
+}
+
+.avatar__soft {
+  background-color: var(--color-shared-3);
+  color: var(--color-shared-11);
+}
+
+.avatar__solid {
+  background-color: var(--color-shared-8);
+  color: var(--color-shared-12);
+}
+.avatar__outline {
+  background-color: var(--color-shared-3);
+  box-shadow: 0 0 0 2px var(--color-shared-9);
+}
+
+.avatar-group {
+  display: flex;
+}
+
+.avatar-group__stack > * + * {
+  margin-inline-start: -0.5em;
+}
+
+.avatar-group__grid {
+  display: flex;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.avatar-group > * {
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+.avatar-group > *:hover {
+  transform: scale(1.1) translateY(-2px);
+  z-index: 1;
 }
