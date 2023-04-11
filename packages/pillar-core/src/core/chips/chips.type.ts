@@ -1,11 +1,9 @@
 import type { ReactNode } from 'react'
-import type { Color, Corner, Size } from '../../types'
-
-type Variant = 'solid' | 'soft' | 'outline'
+import type { Color, Corner, Size, Variant } from '../../types'
 
 export interface ChipsProps {
   variant?: Variant
-  size?: Size
+  size?: Omit<Size, '3xs' | '3xl'>
   color?: Color
   corner?: Corner
   children: ReactNode
