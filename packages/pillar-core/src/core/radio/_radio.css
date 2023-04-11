@@ -1,0 +1,106 @@
+/* // TODO: LOOKING FOR A WAY TO MAKE FOCUS HAPPEN ONLY FOR KEYBOARD USER FOCUS-VISIBLE WITH FOCUS-WITHIN */
+.radio-container {
+  border-radius: 0.5em;
+  /* width: fit-content; */
+  &:focus-within {
+    outline: 2px dashed var(--color-shared-10);
+    outline-offset: 2px;
+  }
+  &[aria-disabled='true'] {
+    color: var(--slate-11);
+    cursor: not-allowed;
+  }
+}
+
+.custom-radio {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid var(--slate-7);
+  flex: none;
+
+  &:hover {
+    border-color: var(--color-shared-9);
+  }
+}
+
+.radio {
+  &:checked {
+    & + .custom-radio__solid {
+      outline: 0.45em var(--color-shared-9) solid;
+      outline-offset: -0.45em;
+    }
+    & + .custom-radio__outline {
+      outline: 0.35em var(--color-shared-9) solid;
+      border-color: var(--color-shared-9);
+      outline-offset: -0.75em;
+    }
+    & + .custom-radio__soft {
+      outline: 0.35em var(--color-shared-11) solid;
+      border-color: var(--color-shared-5);
+      outline-offset: -0.75em;
+      background: var(--color-shared-5);
+    }
+  }
+
+  &:disabled + .custom-radio {
+    filter: grayscale(1);
+    background: var(--slate-8);
+  }
+}
+
+.radio__label {
+  max-width: 55ch;
+  color: var(--text-8);
+}
+
+/* Radio Group Section Style Start */
+.radio-group {
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.radio-group--legend {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  margin-inline-start: 0.5rem;
+}
+
+.radio-group--horizontal {
+  flex-direction: vertical;
+}
+
+.radio-group--vertical {
+  flex-direction: column;
+}
+
+/* Radio Group Section Style End */
+
+.custom-radio-content {
+  position: relative;
+}
+
+.custom-radio--check-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+.radio:checked + .custom-radio-content .custom-radio--check-icon {
+  visibility: visible;
+}
+
+@media (forced-colors: active) {
+  .radio:disabled {
+    & + .custom-radio {
+      background-color: GrayText;
+      border-color: GrayText;
+      filter: none;
+    }
+    & ~ * {
+      color: GrayText;
+    }
+  }
+}
