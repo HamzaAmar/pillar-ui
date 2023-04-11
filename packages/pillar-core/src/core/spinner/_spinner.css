@@ -1,8 +1,8 @@
 .spinner {
   position: relative;
   flex: none;
-  width: 1em;
-  height: 1em;
+  width: 1.5em;
+  height: 1.5em;
   box-sizing: content-box;
 }
 
@@ -27,36 +27,9 @@
   animation-timing-function: linear;
 }
 
-// Spinner Size Style Section Start
-.spinner__2xs {
-  font-size: 0.675em;
+.spinner__invert {
+  filter: invert(70%);
 }
-
-.spinner__xs {
-  font-size: 0.75em;
-}
-
-.spinner__sm {
-  font-size: 0.875em;
-}
-
-.spinner__md {
-  font-size: 1.25em;
-}
-
-.spinner__lg {
-  font-size: 1.75em;
-}
-
-.spinner__xl {
-  font-size: 2.5em;
-}
-
-.spinner__2xl {
-  font-size: 4em;
-}
-
-// Spinner Size Style Section End
 
 @keyframes spinner-move {
   to {

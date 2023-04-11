@@ -4,4 +4,5 @@ export interface SpinnerProps {
   color?: Color
   size?: Size
   thickness?: string
+  invert?: boolean
 }
