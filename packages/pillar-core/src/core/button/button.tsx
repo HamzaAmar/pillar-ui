@@ -18,28 +18,40 @@ export const Button = forwardRef(
       iconPosition = 'start',
       className,
       disabled,
+      fluid,
+      as: Tag = 'button',
       ...rest
     },
     forwardedRef
   ) => {
     const startIcon = iconPosition === 'start' && icon
     const endIcon = iconPosition === 'end' && icon
-    const _className = classnames(`btn btn__${variant} l_size-${size} l_corner-${corner} u_${color}`, {
-      className: !!className,
+    const _className = classnames(`btn btn__${variant} l_size-${size} l_corner-${corner} u_${color} u_singleline`, {
+      [className!]: !!className,
     })
     const _disabled = disabled || state === 'loading'
 
     return (
-      <button disabled={_disabled} ref={forwardedRef} className={_className} {...rest}>
-        <div>
-          {startIcon}
-          <span className="btn--text u_multiline">{children}</span>
-          {endIcon}
-        </div>
-        <div>
-          <Spinner />
-        </div>
-      </button>
+      <div data-disabled={_disabled} className={classnames('btn--wrapper', { btn__fluid: !!fluid })}>
+        <Tag disabled={_disabled} ref={forwardedRef} className={_className} {...rest}>
+          <Flex
+            className={classnames({ 'u_hide-visibility': state === 'loading' })}
+            gap="xs"
+            items="center"
+            justify="center"
+          >
+            {startIcon}
+            <span className="btn--text">{children}</span>
+            {endIcon}
+          </Flex>
+          {state === 'loading' && (
+            <Flex className="btn--loading" gap="xs" items="center" justify="center">
+              <span>Loading</span>
+              <Spinner />
+            </Flex>
+          )}
+        </Tag>
+      </div>
     )
   }
 ) as ForwardRefComponent<'button', ButtonProps>
@@ -62,15 +74,13 @@ export const IconButton = forwardRef(
     forwardedRef
   ) => {
     const iconButtonClassName = classnames(
-      `icon-button btn__${size} btn__${variant} l_corner-${corner} u_${color}`,
-      className
+      `icon-button btn btn__${variant} l_size-${size} l_corner-${corner} u_${color} u_center`,
+      { [className!]: !!className }
     )
 
     return (
       <Tag aria-label={title} className={iconButtonClassName} ref={forwardedRef} {...rest}>
-        <Flex as="span" items="center" justify="center">
-          {icon}
-        </Flex>
+        {icon}
       </Tag>
     )
   }
