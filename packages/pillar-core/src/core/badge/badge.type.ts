@@ -9,8 +9,9 @@ interface BadgeBaseProps {
 
 interface BadgeNumericProps extends BadgeBaseProps {
   variant: 'numeric'
-  value: number
+  number: number
   max?: number
+  showZero?: boolean
 }
 
 interface IconBadgeProps extends BadgeBaseProps {
