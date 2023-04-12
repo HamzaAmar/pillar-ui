@@ -2,50 +2,6 @@
   color: var(--color-text);
 }
 
-.text {
-  font-size: var(--font-size);
-}
-
-.heading {
-  font-size: calc(var(--font-size) * 1.5);
-}
-
-/* Text Variant Styles Section Start */
-
-.typography__3xs {
-  --font-size: 0.5rem;
-}
-
-.typography__2xs {
-  --font-size: 0.675rem;
-}
-
-.typography__xs {
-  --font-size: 0.75rem;
-}
-
-.typography__sm {
-  letter-spacing: 0.875px;
-}
-
-.typography__md {
-  --font-size: 1rem;
-}
-
-.typography__lg {
-  --font-size: 1.25rem;
-}
-
-.typography__xl {
-  --font-size: 1.5rem;
-}
-
-.typography__2xl {
-  --font-size: 1.75rem;
-}
-
-.typography__3xl {
-  --font-size: 2rem;
-}
-
-/* Text Variant Style Section End */
+/* .heading {
+  font-size: calc(100% * 1em);
+} */

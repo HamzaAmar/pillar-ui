@@ -5,9 +5,8 @@ type Contrast = 'low' | 'high'
 type FontStyle = 'italic' | 'oblique'
 type Align = 'start' | 'center' | 'end'
 type Decoration = 'line-through' | 'underline' | 'overline'
-export type Leading = 'normal' | 'sm' | 'md' | 'lg'
-
-type Transform = 'uppercase' | 'lowercase' | 'capitalize'
+type Leading = 'normal' | 'sm' | 'md' | 'lg'
+type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'first-letter-only'
 type Weight = 'thin' | 'extra-light' | 'light' | 'normal' | 'medium' | 'semi-bold' | 'bold' | 'extra-bold' | 'black'
 
 interface TypographyBaseProps {

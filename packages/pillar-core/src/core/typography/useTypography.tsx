@@ -5,7 +5,7 @@ import { TypographyProps } from './typography.type'
 
 const useTypography = (props: TypographyProps) => {
   const {
-    size = 'md',
+    size,
     truncate,
     className,
     transform,
@@ -14,13 +14,15 @@ const useTypography = (props: TypographyProps) => {
     align,
     decoration,
     color,
+    fontStyle,
     contrast = 'high',
     ..._rest
   } = props
 
   const contrastLvl = contrast === 'high' ? 12 : 11
 
-  const _className = classnames(`typography typography__${size}`, {
+  const _className = classnames(`typography`, {
+    [`l_size-${size}`]: Boolean(size),
     [`u_${truncate}`]: Boolean(truncate),
     [`${className}`]: Boolean(className),
     [`u_transform__${transform}`]: Boolean(transform),
@@ -28,6 +30,7 @@ const useTypography = (props: TypographyProps) => {
     [`u_font-${weight}`]: Boolean(weight),
     [`u_decoration__${decoration}`]: Boolean(decoration),
     [`u_leading__${leading}`]: Boolean(leading),
+    [`u_style__${fontStyle}`]: Boolean(fontStyle),
   })
 
   const truncateStyle = truncate === 'multiline' ? { '--line-numbers': props.numberLine } : {}
