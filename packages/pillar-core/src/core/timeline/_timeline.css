@@ -1,0 +1,57 @@
+.timeline {
+  position: relative;
+}
+
+.timeline--line {
+  border-left: var(--color-shared-9) 0.15em var(--timeline-variant);
+  width: 0.15em;
+  position: absolute;
+  left: -4px;
+  top: 0.25rem;
+  height: 100%;
+}
+
+.timeline--content {
+  padding-inline-start: 1rem;
+}
+
+.timeline--item {
+  position: relative;
+  padding: 0.25rem;
+}
+
+.timeline--bullet {
+  width: 1em;
+  height: 1em;
+  background-color: var(--slate-1);
+  border: var(--color-shared-9) 0.15em solid;
+  transform: translateX(-50%) translateX(-2px);
+  overflow: hidden;
+  box-shadow: 0 0 0 0.3em var(--slate-1);
+}
+/* .timeline--item::before {
+  content: "";
+  position: absolute;
+  background-color: var(--slate-1);
+  border: 2px solid var(--color-shared-9);
+  left: -0.25rem;
+  top: 25%;
+  width: var(--bullet-size);
+  height: var(--bullet-size);
+} */
+
+/* 
+====================================================================================================
+Variant Section Style Start
+====================================================================================================
+*/
+
+.timeline--item__solid {
+  --timeline-variant: solid;
+}
+.timeline--item__dotted {
+  --timeline-variant: dotted;
+}
+.timeline--item__dashed {
+  --timeline-variant: dashed;
+}
