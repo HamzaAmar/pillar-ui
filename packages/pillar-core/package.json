@@ -1,7 +1,7 @@
 {
   "name": "@pillar/core",
   "version": "0.0.0",
-  "style": "dist/css/main.min.css",
+  "style": "./dist/css/main.min.css",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

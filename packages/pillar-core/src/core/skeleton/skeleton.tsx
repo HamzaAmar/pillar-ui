@@ -7,7 +7,7 @@ const Avatar = forwardRef(({ size = 'xl', corner = 'full', children, isLoading =
   const _className = classnames(`skeleton skeleton--avatar l_size-${size} l_corner-${corner}`, {
     [className!]: !!className,
   })
-  return isLoading ? <div className={_className} {...rest} /> : <div>{children}</div>
+  return isLoading ? <div className={_className} ref={ref} {...rest} /> : <div>{children}</div>
 }) as ForwardRefComponent<'div', SkeletonType.SkeletonAvatarProps>
 
 Avatar.displayName = 'Pillar-SkeletonAvatar'
