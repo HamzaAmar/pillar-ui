@@ -10,3 +10,7 @@
   width: 1px;
   white-space: nowrap;
 }
+
+.u_hide-visibility {
+  visibility: hidden;
+}

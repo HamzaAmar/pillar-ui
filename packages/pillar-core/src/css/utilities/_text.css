@@ -1,0 +1,71 @@
+.u_transform__uppercase {
+  text-transform: uppercase;
+}
+
+.u_transform__lowercase {
+  text-transform: lowercase;
+}
+
+.u_transform__capitalize {
+  text-transform: capitalize;
+}
+
+.u_transform__first-letter-only::first-letter {
+  text-transform: uppercase;
+}
+
+/*
+      Align Text Style Section
+  */
+
+.u_align__center {
+  text-align: center;
+}
+
+.u_align__end {
+  text-align: end;
+}
+
+.u_align__start {
+  text-align: start;
+}
+
+.u_align__justify {
+  text-align: justify;
+}
+
+/*
+      Align Text Decoration Section
+  */
+
+.u_decoration__overline {
+  text-decoration: overline;
+}
+
+.u_decoration__underline {
+  text-decoration: underline;
+}
+
+.u_decoration__line-through {
+  text-decoration: line-through;
+}
+
+/*
+      Align Text Decoration Section
+  */
+
+.u_leading__normal {
+  line-height: 1;
+}
+
+.u_leading__sm {
+  line-height: 1.25;
+}
+
+.u_leading__md {
+  line-height: 1.5;
+}
+
+.u_leading__lg {
+  line-height: 1.75;
+}

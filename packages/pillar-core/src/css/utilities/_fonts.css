@@ -1,0 +1,75 @@
+/* .u_size-3xs {
+  font-size: clamp(0.7rem, calc(0.8rem + -0.13vw), 0.77rem);
+}
+.u_size-2xs {
+  font-size: clamp(0.79rem, calc(0.84rem + -0.06vw), 0.82rem);
+}
+
+.u_size-xs {
+  font-size: clamp(0.88rem, calc(0.87rem + 0.02vw), 0.89rem);
+}
+.u_size-sm {
+  font-size: clamp(0.94rem, calc(0.91rem + 0.12vw), 1rem);
+}
+.u_size-md {
+  font-size: clamp(1rem, calc(0.95rem + 0.24vw), 1.13rem);
+}
+.u_size-lg {
+  font-size: clamp(1.07rem, calc(0.99rem + 0.39vw), 1.27rem);
+}
+.u_size-xl {
+  font-size: clamp(1.14rem, calc(1.03rem + 0.56vw), 1.42rem);
+}
+.u_size-2xl {
+  font-size: clamp(1.22rem, calc(1.06rem + 0.75vw), 1.6rem);
+}
+.u_size-3xl {
+  font-size: clamp(1.3rem, calc(1.1rem + 0.99vw), 1.8rem);
+}
+.u_size-4xl {
+  font-size: clamp(1.38rem, calc(1.13rem + 1.26vw), 2.03rem);
+} */
+
+.u_font-thin {
+  font-weight: 100;
+}
+
+.u_font-extra-light {
+  font-weight: 200;
+}
+
+.u_font-light {
+  font-weight: 300;
+}
+
+.u_font-normal {
+  font-weight: 400;
+}
+
+.u_font-medium {
+  font-weight: 500;
+}
+
+.u_font-semi-bold {
+  font-weight: 600;
+}
+
+.u_font-bold {
+  font-weight: 700;
+}
+
+.u_font-extra-bold {
+  font-weight: 800;
+}
+
+.u_font-black {
+  font-weight: 900;
+}
+
+.u_style__italic {
+  font-style: italic;
+}
+
+.u_style__oblique {
+  font-style: oblique;
+}
