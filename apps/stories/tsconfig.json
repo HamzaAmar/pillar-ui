@@ -1,0 +1,5 @@
+{
+  "extends": "@pillar/tsconfig/react-library.json",
+  "include": ["./src/**/*", "index.tsx", "../../apps/stories/stories/chips.stories.tsx"],
+  "exclude": ["dist", "build", "node_modules"]
+}

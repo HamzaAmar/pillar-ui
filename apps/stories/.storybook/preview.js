@@ -10,6 +10,7 @@ export const parameters = {
       { name: 'light', class: 'light', color: 'hsl(0deg 0% 95%)' },
     ],
   },
+  backgrounds: { disable: true },
   controls: {
     matchers: {
       color: /(background|color)$/i,
