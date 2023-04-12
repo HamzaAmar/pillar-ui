@@ -1,5 +1,4 @@
-import { useState, useRef, useCallback } from 'react'
-import type { Dispatch, SetStateAction } from 'react'
+import { useState, useRef, useCallback, type Dispatch, type SetStateAction } from 'react'
 import type { UseControllableStateParams } from './useControllableState.type'
 
 /**

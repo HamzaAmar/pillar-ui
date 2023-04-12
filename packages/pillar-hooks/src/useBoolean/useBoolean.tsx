@@ -10,7 +10,7 @@ export function useBooleanState(defaultValue: boolean = false) {
   const [booleanValue, setBooleanValue] = useState(!!defaultValue)
   const setTrue = useCallback(() => setBooleanValue(true), [])
   const setFalse = useCallback(() => setBooleanValue(false), [])
-  const toggleValue = useCallback(() => setBooleanValue((value) => !value), [])
+  const setToggle = useCallback(() => setBooleanValue((value) => !value), [])
 
-  return { booleanValue, setBooleanValue, setTrue, setFalse, toggleValue }
+  return { booleanValue, setBooleanValue, setTrue, setFalse, setToggle }
 }

@@ -66,6 +66,7 @@ export function useStepper(maxSteps: number, initialStep: number = 0) {
 
   return {
     currentStep,
+    setCurrentStep,
     goToNextStep,
     goToPreviousStep,
     jumpToStep,
