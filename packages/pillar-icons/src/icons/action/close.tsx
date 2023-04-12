@@ -3,7 +3,7 @@ import { SvgType } from '../../type'
 
 const close = (props: SvgType) => (
   <svg {...svgProps} {...props}>
-    <path d="m13.3 1.6-12 12m0-12 12 12" />
+    <path d="M18 6 6 18M6 6l12 12" />
   </svg>
 )
 

@@ -7,4 +7,4 @@ const seven = (props: SvgType) => (
   </svg>
 )
 
-export default anchor
+export default seven

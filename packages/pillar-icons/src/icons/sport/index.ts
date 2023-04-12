@@ -1,4 +1,4 @@
-export { default as AmericanFootBall } from './americanFootBall'
+export { default as AmericanFootball } from './americanFootball'
 export { default as Barbell } from './barbell'
 export { default as Baseball } from './baseball'
 export { default as Basketball } from './basketball'
