@@ -12,14 +12,12 @@ export default {
   },
 } as ComponentMeta<typeof Alert>
 
-function AlertBase(props) {
-  return (
-    <Alert
-      {...props}
-      title="hello"
-      message="hello world my name is hamza miloud amar iam a full stack javascript developer"
-    />
-  )
+function AlertBase({
+  title = 'hello',
+  message = 'hello world my name is hamza miloud amar iam a full stack javascript developer',
+  ...rest
+}) {
+  return <Alert title={title} message={message} {...rest} />
 }
 
 export const AlertColors = () => {
@@ -40,15 +38,41 @@ export const AlertColors = () => {
 export const AlertSizes = () => {
   return (
     <Flex gap="sm" direction="column">
-      <AlertBase size="3xs" />
       <AlertBase size="2xs" />
+      <AlertBase
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
+        size="2xs"
+      />
       <AlertBase size="xs" />
+      <AlertBase
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
+        size="xs"
+      />
       <AlertBase size="sm" />
+      <AlertBase
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
+        size="sm"
+      />
       <AlertBase size="md" />
+      <AlertBase
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
+        size="md"
+      />
       <AlertBase size="lg" />
+      <AlertBase
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
+        size="lg"
+      />
       <AlertBase size="xl" />
+      <AlertBase
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
+        size="xl"
+      />
       <AlertBase size="2xl" />
-      <AlertBase size="3xl" />
+      <AlertBase
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
+        size="2xl"
+      />
     </Flex>
   )
 }
@@ -84,6 +108,15 @@ export const AlertIcon = () => {
       <AlertBase icon={<CircleCheck width="20" />} color="success" />
       <AlertBase icon={<CircleWarning width="20" />} color="warning" />
       <AlertBase icon={<CircleInfo width="20" />} color="info" />
+    </Flex>
+  )
+}
+
+export const AlertAction = () => {
+  return (
+    <Flex direction="column" gap="sm">
+      <AlertBase closable />
+      <AlertBase />
     </Flex>
   )
 }
@@ -127,7 +160,22 @@ export const AlertCustomStyle = () => {
   return (
     <Flex direction="column" gap="sm">
       <Alert color="danger" title="hello" style={{ background: 'green' }} />
+      <Alert color="danger" title="hello" style={{ background: 'green' }} closable />
+      <Alert color="danger" title="hello" style={{ background: 'green' }} variant="outline" />
+      <Alert color="danger" title="hello" style={{ background: 'green' }} variant="soft" />
       <Alert color="danger" title="hello" className="u_violet" />
+      <Alert color="danger" title="hello" className="u_violet" closable />
+      <Alert color="danger" title="hello" className="u_violet" variant="outline" />
+      <Alert color="danger" title="hello" className="u_violet" variant="soft" />
+    </Flex>
+  )
+}
+
+export const AlertIsomerphic = () => {
+  return (
+    <Flex direction="column" gap="sm">
+      <AlertBase as="span" />
+      <AlertBase as="article" />
     </Flex>
   )
 }

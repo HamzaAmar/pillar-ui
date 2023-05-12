@@ -31,7 +31,7 @@ const Alert = forwardRef((props, forwardedRef) => {
     [className!]: !!className,
   })
 
-  const inlineText: Partial<FlexProps> = !inline ? { direction: 'column' } : { items: 'center', gap: 'xs' }
+  const inlineText: Partial<FlexProps> = !inline ? { direction: 'column' } : { items: 'center' }
 
   const _title = title && (
     <Text transform="capitalize" leading="md" weight="medium">
@@ -48,7 +48,7 @@ const Alert = forwardRef((props, forwardedRef) => {
     <Flex ref={forwardedRef} gap="2xs" justify="between" items="start" className={_className} role="alert" {...rest}>
       <Flex items="start" gap="sm">
         {icon && <span className="u_items-self u_leading__normal">{icon}</span>}
-        <Flex {...inlineText} justify="center">
+        <Flex {...inlineText} gap="xs" justify="center">
           {_title}
           {_message}
         </Flex>

@@ -2,15 +2,23 @@
   padding: 0.5rem 1rem;
 }
 
+/*
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Alert Variants Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
 .alert__solid {
   background-color: var(--color-shared-8);
   color: var(--color-shared-12);
-  border-inline-start: 6px solid var(--color-shared-9);
+  /* border-inline-start: 6px solid var(--color-shared-9); */
+  border-inline-start: 6px solid var(--opacity-8);
 }
 
 .alert__outline {
   background-color: var(--color-shared-3);
   border: 1px solid;
+  /* border: 1px solid var(--opacity-8); */
   color: var(--color-shared-11);
 }
 
@@ -18,4 +26,5 @@
   background-color: var(--color-shared-5);
   color: var(--color-shared-12);
   border: 1px solid var(--color-shared-7);
+  /* border: 1px solid var(--opacity-7); */
 }
