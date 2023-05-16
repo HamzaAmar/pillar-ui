@@ -1,0 +1,10 @@
+.kdb {
+  padding: 0.25em 0.375em;
+  background: var(--color-shared-8, var(--slate-1));
+  color: var(--color-shared-12, var(--slate-12));
+  border: 0.075em solid var(--color-shared-9, var(--slate-12));
+  border-bottom-width: 0.175em;
+  width: fit-content;
+  box-shadow: inset 1px 1px 0.175em var(--color-shared-6, var(--slate-6));
+  line-height: 1;
+}
