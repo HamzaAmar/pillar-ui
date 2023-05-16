@@ -1,0 +1,76 @@
+/*
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Accdordion Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.accordion {
+  & svg {
+    width: 1em;
+  }
+}
+.accordion-hide {
+  display: none;
+}
+
+.accordion--button:focus-visible {
+  outline: 2px dashed var(--color-shared-11);
+  outline-offset: -2px;
+}
+
+/*
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Accdordion Item Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.accordion--item {
+  border-block-end: 1px solid var(--slate-6);
+  font-size: clamp(0.65rem, 0.9em, 1.5rem);
+}
+
+.accordion--item__solid {
+  background: var(--color-shared-8);
+  border-color: var(--color-shared-9);
+  color: var(--color-shared-12);
+}
+.accordion--item__soft {
+  border-color: var(--color-shared-11);
+  color: var(--color-shared-11);
+}
+.accordion--item__outline {
+  background: var(--color-shared-2);
+  color: var(--color-shared-11);
+  border: 1px solid var(--color-shared-6);
+}
+.accordion--item__outline:not(:first-child) {
+  border-top: none;
+}
+
+/*
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Accdordion Panel Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.accordion--panel {
+  padding: 1rem 0.5rem;
+  color: var(--slate-12);
+}
+/*713
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Accdordion Button Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.accordion--button {
+  width: 100%;
+  text-align: start;
+  background: transparent;
+  padding: 1em 0.5em;
+  cursor: pointer;
+  color: currentColor;
+}
+
+.accordion--button:hover {
+  background: var(--opacity-3);
+}
