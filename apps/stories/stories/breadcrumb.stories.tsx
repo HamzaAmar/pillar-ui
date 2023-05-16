@@ -23,7 +23,7 @@ export function BreadcrumbDefault() {
 
 export function BreadcrumbSeparator() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Breadcrumb separator="-">
         <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
         <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
@@ -53,7 +53,7 @@ export function BreadcrumbSeparator() {
 
 export function BreadcrumbColor() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Breadcrumb color="red">
         <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
         <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
@@ -123,7 +123,7 @@ export function BreadcrumbColor() {
 
 export function BreadcrumbIcons() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Breadcrumb>
         <Breadcrumb.Item link="../../..">
           Home
@@ -192,7 +192,7 @@ export function BreadcrumbIcons() {
 
 export function BreadcrumbSize() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Breadcrumb size="2xs" separator="-">
         <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
         <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
@@ -249,6 +249,74 @@ export function BreadcrumbSize() {
         <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
         <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
         <Breadcrumb.Item link="./" current>
+          breadcrumb
+        </Breadcrumb.Item>
+      </Breadcrumb>
+    </div>
+  )
+}
+
+export function BreadcrumbCustomStyle() {
+  return (
+    <div className="l_flow__md">
+      <Breadcrumb className="u_red" separator="-">
+        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
+        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
+        <Breadcrumb.Item link="./" current>
+          breadcrumb
+        </Breadcrumb.Item>
+      </Breadcrumb>
+
+      <Breadcrumb style={{ color: 'red', background: 'var(--slate-5)' }} separator="*">
+        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
+        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
+        <Breadcrumb.Item link="./" current>
+          breadcrumb
+        </Breadcrumb.Item>
+      </Breadcrumb>
+
+      <Breadcrumb separator={<Minus width={10} />}>
+        <Breadcrumb.Item style={{ color: 'red', background: 'white' }} link="../..">
+          components
+        </Breadcrumb.Item>
+        <Breadcrumb.Item style={{ color: 'red', background: 'white' }} link="../">
+          base-ui
+        </Breadcrumb.Item>
+        <Breadcrumb.Item style={{ color: 'red', background: 'white' }} link="./" current>
+          breadcrumb
+        </Breadcrumb.Item>
+      </Breadcrumb>
+    </div>
+  )
+}
+
+export function BreadcrumbPolymorphic() {
+  return (
+    <div className="l_flow__md">
+      <Breadcrumb as="div" separator="-">
+        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
+        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
+        <Breadcrumb.Item link="./" current>
+          breadcrumb
+        </Breadcrumb.Item>
+      </Breadcrumb>
+
+      <Breadcrumb as="span" separator="*">
+        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
+        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
+        <Breadcrumb.Item link="./" current>
+          breadcrumb
+        </Breadcrumb.Item>
+      </Breadcrumb>
+
+      <Breadcrumb as="article" separator={<Minus width={10} />}>
+        <Breadcrumb.Item as="button" link="../..">
+          components
+        </Breadcrumb.Item>
+        <Breadcrumb.Item as="div" link="../">
+          base-ui
+        </Breadcrumb.Item>
+        <Breadcrumb.Item as="kbd" link="./" current>
           breadcrumb
         </Breadcrumb.Item>
       </Breadcrumb>

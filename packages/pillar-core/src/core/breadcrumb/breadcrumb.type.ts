@@ -1,11 +1,14 @@
 import type { ReactElement, ReactNode } from 'react'
 import type { Color, Size } from '../../types'
 
-export interface BreadcrumbProps {
-  children: ReactNode
+export interface BreadCrumbBase {
   separator?: string | ReactElement
   size?: Size
   color?: Color
+}
+
+export interface BreadcrumbProps extends BreadCrumbBase {
+  children: ReactNode
 }
 
 export interface BreadcrumbItemProps extends BreadcrumbProps {
@@ -14,6 +17,4 @@ export interface BreadcrumbItemProps extends BreadcrumbProps {
   icon?: ReactNode
 }
 
-export interface BreadcrumbContextType extends Omit<BreadcrumbProps, 'children'> {}
-
-export interface BreadcrumbProviderProps extends BreadcrumbProps {}
+export interface BreadcrumbContextProps extends BreadcrumbProps {}
