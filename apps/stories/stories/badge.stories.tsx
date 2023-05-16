@@ -14,7 +14,7 @@ export default {
 
 export const BadgeSize = () => {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Flex items="center" gap="sm">
         <Badge size="3xs" variant="numeric" number={15} max={15} />
         <Badge size="2xs" variant="numeric" number={15} max={15} />
@@ -104,6 +104,39 @@ export const BadgeNumericMaxValue = () => {
       <Badge variant="numeric" number={1500} max={100} color="purple" />
       <Badge variant="numeric" number={15} max={1} color="violet" />
       <Badge variant="numeric" number={15} max={15} color="slate" />
+    </Flex>
+  )
+}
+
+export const BadgeCustomStyle = () => {
+  return (
+    <Flex gap="sm">
+      <Badge variant="numeric" number={15} max={10} className="u_danger" />
+      <Badge variant="numeric" number={15} max={10} className="u_brown" />
+      <Badge variant="numeric" number={15} max={10} style={{ background: 'red' }} />
+      <Badge
+        variant="numeric"
+        number={15}
+        max={10}
+        style={{ background: 'green', color: 'white', border: '4px solid darkred' }}
+      />
+    </Flex>
+  )
+}
+
+export const BadgePolymorphic = () => {
+  return (
+    <Flex gap="sm">
+      <Badge as="button" onClick={() => alert('Hello')} variant="numeric" number={15} max={10} className="u_danger" />
+      <Badge as="a" href="#Hello" variant="numeric" number={15} max={10} className="u_brown" />
+      <Badge as="span" variant="numeric" number={15} max={10} style={{ background: 'red' }} />
+      <Badge
+        as="kbd"
+        variant="numeric"
+        number={15}
+        max={10}
+        style={{ background: 'green', color: 'white', border: '4px solid darkred' }}
+      />
     </Flex>
   )
 }

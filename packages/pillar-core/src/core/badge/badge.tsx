@@ -5,12 +5,19 @@ import { classnames } from '../../utils/classnames'
 import type { BadgeProps } from './badge.type'
 
 const badge = forwardRef((props, ref) => {
-  let { color = 'primary', size = 'md', variant = 'numeric', corner = 'full', className, ...rest } = props
-  let valueToString
+  let {
+    color = 'primary',
+    size = 'md',
+    as: Tag = 'div',
+    variant = 'numeric',
+    corner = 'full',
+    className,
+    ...rest
+  } = props
 
   const _className = classnames(`badge l_size-${size} u_center u_${color} l_corner-${corner}`, {
-    [className!]: Boolean(className),
     badge__dot: variant === 'dot',
+    [className!]: Boolean(className),
   })
 
   /*
@@ -18,6 +25,8 @@ const badge = forwardRef((props, ref) => {
    statement for typescript Look for discriminated union I use Props.variant === 'numeric' does not support
    for destructring with default value
   */
+  let valueToString
+
   if (props.variant === 'numeric') {
     if (!props.number && !props.showZero) return null
     const { number, max } = props
@@ -27,9 +36,9 @@ const badge = forwardRef((props, ref) => {
   }
 
   return (
-    <div ref={ref} className={_className} {...rest}>
+    <Tag ref={ref} className={_className} {...rest}>
       {valueToString}
-    </div>
+    </Tag>
   )
 }) as ForwardRefComponent<'div', BadgeProps>
 

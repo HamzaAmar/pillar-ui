@@ -2,8 +2,11 @@
   color: white;
   font-weight: 500;
   background-color: var(--color-shared-9);
+  text-decoration: none;
+  /* TO make it grow when the content of it is big */
   min-width: var(--badge-size, 1.75em);
   height: var(--badge-size, 1.75em);
+  flex: none;
   line-height: 1;
   padding: 0.125rem;
 }
