@@ -1,17 +1,14 @@
 .btn--wrapper {
   display: inline-block;
   width: fit-content;
+  position: relative;
   &[data-disabled='true'] {
     cursor: not-allowed;
   }
 }
 
 .btn {
-  position: relative;
   border: 2px solid transparent;
-  background-color: transparent;
-  cursor: pointer;
-  user-select: none;
   font-weight: 500;
   transition: transform 0.15s;
   padding: 0.5em 1.5em;
@@ -83,14 +80,12 @@
   min-width: 100%;
 }
 
-.btn--loading {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-/* Icon Button Style Section */
+/*
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Icon Button Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
 .icon-button {
   padding: 0.25em;
   line-height: 0;

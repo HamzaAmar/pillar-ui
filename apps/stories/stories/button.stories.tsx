@@ -28,7 +28,7 @@ export function ButtonsColors() {
 
 export function ButtonsVariants() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Flex gap="sm">
         <Button color="green">Green</Button>
         <Button color="orange">Orange</Button>
@@ -251,7 +251,7 @@ export function ButtonIcons() {
 
 export function ButtonsFluid() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xs" color="green">
         Green
       </Button>
@@ -294,6 +294,40 @@ export function ButtonsState() {
       </Button>
       <Button disabled color="green">
         Disabled
+      </Button>
+    </Flex>
+  )
+}
+
+export function ButtonLoadingState() {
+  return (
+    <Flex gap="sm" items="center" wrap>
+      <Button state="loading" size="3xs" color="green">
+        Green
+      </Button>
+      <Button state="loading" size="2xs" color="orange">
+        Orange
+      </Button>
+      <Button state="loading" size="xs" color="red">
+        Red
+      </Button>
+      <Button state="loading" size="sm" color="violet">
+        Violet
+      </Button>
+      <Button state="loading" size="md" color="slate">
+        Slate
+      </Button>
+      <Button state="loading" size="lg" color="indigo">
+        Indigo
+      </Button>
+      <Button state="loading" size="xl" color="purple">
+        Purple
+      </Button>
+      <Button state="loading" size="2xl" color="brown">
+        Brown
+      </Button>
+      <Button state="loading" size="3xl" color="brown">
+        Brown
       </Button>
     </Flex>
   )
