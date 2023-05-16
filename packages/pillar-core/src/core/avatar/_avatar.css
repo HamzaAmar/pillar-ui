@@ -1,26 +1,58 @@
 .avatar {
+  display: inline-block;
   overflow: hidden;
+  padding: 0;
   border: 2px solid var(--slate-1);
+  background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(var(--slate-1), var(--slate-1));
+  background-clip: content-box, padding-box;
+}
+.avatar > * {
+  border-radius: inherit;
 }
 
 .avatar__size {
-  width: 2.75em;
-  height: 2.75em;
+  --size: 2.75em;
+  width: var(--size);
+  height: var(--size);
 }
 
 .avatar__soft {
-  background-color: var(--color-shared-3);
+  --bg: var(--color-shared-3);
   color: var(--color-shared-11);
 }
 
 .avatar__solid {
-  background-color: var(--color-shared-8);
+  --bg: var(--color-shared-8);
   color: var(--color-shared-12);
 }
 .avatar__outline {
-  background-color: var(--color-shared-3);
-  box-shadow: 0 0 0 2px var(--color-shared-9);
+  --bg: var(--color-shared-3);
+  padding: 3px;
+  border: 2px solid var(--color-shared-9);
 }
+
+.avatar__dashed {
+  --bg: var(--color-shared-3);
+  padding: 3px;
+  border: 2px dashed var(--color-shared-9);
+}
+
+.avatar--fallback {
+  width: 2.75em;
+  text-align: center;
+  aspect-raio: 1/1;
+}
+
+.avatar--img {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Avatar Group Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
 
 .avatar-group {
   display: flex;
