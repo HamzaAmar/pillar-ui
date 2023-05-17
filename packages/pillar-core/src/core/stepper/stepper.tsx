@@ -1,4 +1,5 @@
-import { Children, isValidElement, createElement, type ReactNode, useId } from 'react'
+import { Children, isValidElement, createElement, useId } from 'react'
+import type { ReactNode } from 'react'
 import { Flex, Text } from '..'
 import { StepperProvider, useStepperContext } from './stepper.context'
 import type { StepperProps, StepProps } from './stepper.type'
@@ -57,7 +58,6 @@ const Stepper = ({ children, color = 'slate', active = 1, completeComponent, ...
   const _children = Children.map(children, (child, index) => {
     if (isValidElement(child)) {
       const step = index
-      console.log(step, active, step === active)
       const state = active === step ? 'current' : active > step ? 'complete' : 'inactive'
 
       const { children, ...props } = child.props
