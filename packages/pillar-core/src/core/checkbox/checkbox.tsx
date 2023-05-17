@@ -33,7 +33,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRe
   }, [isIndeterminate])
 
   const ref = composeRef(forwardedRef, checkboxRef)
-  const _className = classnames('checkbox--label', { 'u_sr-only': showLabel })
+  const _className = classnames('checkbox--label', { 'u_visually-hidden': showLabel })
 
   return (
     <Flex
@@ -48,7 +48,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRe
       <input
         type="checkbox"
         ref={ref}
-        className="u_sr-only checkbox--element"
+        className="u_visually-hidden checkbox--element"
         name={name}
         aria-checked={isIndeterminate && 'mixed'}
         {...rest}

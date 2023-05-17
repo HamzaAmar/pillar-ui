@@ -15,7 +15,6 @@ const ParentCheckbox = ({ children }) => {
   const child = Array.from({ length: React.Children.count(children) }, () => false)
   const { checkedItems, isAllChecked, isIndeterminate, handleToggleAll, handleToggleItem } = useCheckboxGroup(child)
 
-  console.log(isAllChecked)
   return (
     <>
       <Checkbox
@@ -55,7 +54,7 @@ export const CheckboxColor = () => {
 
 export const CheckboxDisabled = () => {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Flex gap="sm" items="center">
         <Checkbox disabled name="hello" label="Hello" color="danger" />
         <Checkbox disabled name="hello" label="Hello" color="success" />

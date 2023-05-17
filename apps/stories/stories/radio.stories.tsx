@@ -36,7 +36,7 @@ export function RadioColors() {
 
 export function RadioDefaultCheck() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Flex gap="sm" items="center">
         <Radio defaultChecked color="red" name="solid.red" label="Red" />
         <Radio defaultChecked color="green" name="solid.green" label="Green" />
@@ -73,7 +73,7 @@ export function RadioDefaultCheck() {
 
 export function RadioVariants() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Flex gap="sm" items="center">
         <Radio color="red" name="red" label="Red" />
         <Radio color="green" name="green" label="Green" />
@@ -125,7 +125,7 @@ export function RadioSizes() {
 
 export function RadioStates() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Flex gap="sm" items="center">
         <Radio name="red" label="Red" />
         <Radio name="red" label="Red" defaultChecked />

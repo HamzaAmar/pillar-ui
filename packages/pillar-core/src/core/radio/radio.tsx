@@ -45,7 +45,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
         {children}
         <CircleCheck className="custom-radio--check-icon" width={20} />
       </span>
-      <span className={classnames(`radio__label`, { 'u_sr-only': !showLabel })}>{label}</span>
+      <span className={classnames(`radio__label`, { 'u_visually-hidden': !showLabel })}>{label}</span>
     </Flex>
   )
 }
@@ -61,7 +61,7 @@ export const RadioGroup = ({ direction = 'column', children, label, showLabel, i
 
   return (
     <fieldset role="radiogroup" className="form-group--container">
-      <legend className={classnames('form-group--legend', { 'u_sr-only': !showLabel })}>{label}</legend>
+      <legend className={classnames('form-group--legend', { 'u_visually-hidden': !showLabel })}>{label}</legend>
 
       {/*
        TODO: ADD DEFAULT  TO RADIO GROUP 
