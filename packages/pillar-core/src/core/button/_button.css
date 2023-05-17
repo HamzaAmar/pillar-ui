@@ -30,6 +30,7 @@
     background-color: var(--slate-5);
     color: var(--slate-11);
     pointer-events: none;
+    border-color: var(--slate-5);
   }
   & svg {
     font-size: 1em;
