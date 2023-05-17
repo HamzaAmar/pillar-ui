@@ -1,0 +1,22 @@
+.separator {
+  width: 100%;
+  height: 0.0875em;
+  background: var(--color-shared-8);
+}
+
+.separator__horizontal {
+  width: 100%;
+  height: 0.0875em;
+}
+
+.separator__vertical {
+  width: 0.0875em;
+  height: 100%;
+}
+
+.separator--text {
+  background: var(--slate-1);
+  font-size: max(0.75em, 0.75rem);
+  line-height: 1.1;
+  padding: 0 0.5em;
+}
