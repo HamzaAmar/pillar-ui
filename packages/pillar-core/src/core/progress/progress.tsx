@@ -8,58 +8,37 @@ import type {
   ProgressBarStackProps,
 } from './progress.type'
 
-const sizes = {
-  '3xs': 32,
-  '2xs': 49,
-  xs: 66,
-  sm: 84,
-  md: 100,
-  lg: 125,
-  xl: 150,
-  '2xl': 175,
-  '3xl': 200,
-} as const
+export const ProgressCircle = ({
+  size = 'md',
+  min = 0,
+  max = 100,
+  value,
+  label,
+  color = 'indigo',
+  ...rest
+}: ProgressCircleProps) => {
+  const progress = ((value - min) / (max - min)) * 100
+  const circumference = 2 * Math.PI * 45 // Circumference based on the radius
 
-export const ProgressCircle = ({ size = 'md', value, label, color = 'indigo', ...rest }: ProgressCircleProps) => {
-  const progressSize = sizes[size]
-  const progressHalf = progressSize / 2
-
-  const radius = progressHalf - 5
-  const circumference = progressSize * Math.PI
-  const progress = (value / 100) * circumference
+  const dashOffset = circumference - (progress / 100) * circumference
 
   return (
-    <Flex justify="center" items="center" className={`progress-circle u_${color}`} {...rest}>
-      <svg
-        role="progressbar"
-        aria-valuenow={value}
-        aria-valuemax={100}
-        aria-valuemin={100}
-        aria-label={`Progress : ${value}%`}
-        viewBox={`0 0 ${progressSize} ${progressSize}`}
-        width={progressSize}
-        height={progressSize}
-      >
-        <circle className="progress-circle__background" r={radius} cx={progressHalf} cy={progressHalf} />
+    <div className={`circle-progress l_size-${size} u_${color}`} {...rest}>
+      <svg className="circle-progress--svg" viewBox="0 0 100 100">
+        <circle className="circle-progress--background" cx="50" cy="50" r="45" />
         <circle
-          className="progress-circle__progress"
-          r={radius}
-          cx={progressHalf}
-          cy={progressHalf}
+          className={`circle-progress--bar`}
+          cx="50"
+          cy="50"
+          r="45"
           strokeDasharray={circumference}
-          strokeDashoffset={circumference - progress}
+          strokeDashoffset={dashOffset}
         />
-        <text
-          x={progressHalf}
-          y={progressHalf}
-          className="progress-circle__text"
-          textAnchor="middle"
-          dominantBaseline="central"
-        >
-          {value}%
+        <text fill="black" className="circle-progress--text" x="50" y="50">
+          {progress}%
         </text>
       </svg>
-    </Flex>
+    </div>
   )
 }
 
@@ -74,7 +53,7 @@ ProgressBarProps) => {
   return (
     <div className={`u_${color}`}>
       <Flex justify="end">
-        <Text size={size} className={classnames({ 'u_sr-only': !showValue })}>
+        <Text size={size} className={classnames({ 'u_visually-hidden': !showValue })}>
           {value}%
         </Text>
       </Flex>

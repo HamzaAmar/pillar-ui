@@ -12,7 +12,7 @@ export default {
 
 export const ProgressBarSize = () => {
   return (
-    <Flex direction="column" gap="sm">
+    <Flex direction="column" gap="sm" wrap>
       <ProgressBar size="3xs" value={90} label="hello" />
       <ProgressBar size="2xs" value={90} label="hello" />
       <ProgressBar size="xs" value={90} label="hello" />
@@ -27,7 +27,7 @@ export const ProgressBarSize = () => {
 }
 export const ProgressBarColor = () => {
   return (
-    <Flex direction="column" gap="sm">
+    <Flex direction="column" gap="sm" wrap>
       <ProgressBar color="red" value={90} label="hello" />
       <ProgressBar color="green" value={90} label="hello" />
       <ProgressBar color="orange" value={90} label="hello" />
@@ -53,6 +53,57 @@ export const ProgressCircleSize = () => {
       <ProgressCircle size="2xl" value={95} label="hello" />
       <ProgressCircle size="3xl" value={95} label="hello" />
     </Flex>
+  )
+}
+
+export const ProgressCircleStroke = () => {
+  return (
+    <div className="l_flow-md">
+      <Flex gap="sm">
+        <ProgressCircle stroke="sm" size="3xs" value={15} label="hello" />
+        <ProgressCircle stroke="sm" size="2xs" value={15} label="hello" />
+        <ProgressCircle stroke="sm" size="xs" value={15} label="hello" />
+        <ProgressCircle stroke="sm" size="sm" value={30} label="hello" />
+        <ProgressCircle stroke="sm" size="md" value={45} label="hello" />
+        <ProgressCircle stroke="sm" size="lg" value={60} label="hello" />
+        <ProgressCircle stroke="sm" size="xl" value={90} label="hello" />
+        <ProgressCircle stroke="sm" size="2xl" value={95} label="hello" />
+        <ProgressCircle stroke="sm" size="3xl" value={95} label="hello" />
+      </Flex>
+      <Flex gap="sm">
+        <ProgressCircle stroke="md" size="3xs" value={15} label="hello" />
+        <ProgressCircle stroke="md" size="2xs" value={15} label="hello" />
+        <ProgressCircle stroke="md" size="xs" value={15} label="hello" />
+        <ProgressCircle stroke="md" size="sm" value={30} label="hello" />
+        <ProgressCircle stroke="md" size="md" value={45} label="hello" />
+        <ProgressCircle stroke="md" size="lg" value={60} label="hello" />
+        <ProgressCircle stroke="md" size="xl" value={90} label="hello" />
+        <ProgressCircle stroke="md" size="2xl" value={95} label="hello" />
+        <ProgressCircle stroke="md" size="3xl" value={95} label="hello" />
+      </Flex>
+      <Flex gap="sm">
+        <ProgressCircle stroke="lg" size="3xs" value={15} label="hello" />
+        <ProgressCircle stroke="lg" size="2xs" value={15} label="hello" />
+        <ProgressCircle stroke="lg" size="xs" value={15} label="hello" />
+        <ProgressCircle stroke="lg" size="sm" value={30} label="hello" />
+        <ProgressCircle stroke="lg" size="md" value={45} label="hello" />
+        <ProgressCircle stroke="lg" size="lg" value={60} label="hello" />
+        <ProgressCircle stroke="lg" size="xl" value={90} label="hello" />
+        <ProgressCircle stroke="lg" size="2xl" value={95} label="hello" />
+        <ProgressCircle stroke="lg" size="3xl" value={95} label="hello" />
+      </Flex>
+      <Flex gap="sm">
+        <ProgressCircle stroke="xl" size="3xs" value={15} label="hello" />
+        <ProgressCircle stroke="xl" size="2xs" value={15} label="hello" />
+        <ProgressCircle stroke="xl" size="xs" value={15} label="hello" />
+        <ProgressCircle stroke="xl" size="sm" value={30} label="hello" />
+        <ProgressCircle stroke="xl" size="md" value={45} label="hello" />
+        <ProgressCircle stroke="xl" size="lg" value={60} label="hello" />
+        <ProgressCircle stroke="xl" size="xl" value={90} label="hello" />
+        <ProgressCircle stroke="xl" size="2xl" value={95} label="hello" />
+        <ProgressCircle stroke="xl" size="3xl" value={95} label="hello" />
+      </Flex>
+    </div>
   )
 }
 
@@ -95,7 +146,7 @@ function ProgressBarStackBase(props) {
 
 export const ProgressBarStackSizes = () => {
   return (
-    <Flex direction="column" gap="sm">
+    <Flex direction="column" gap="sm" wrap>
       <ProgressBarStackBase size="3xs" />
       <ProgressBarStackBase size="2xs" />
       <ProgressBarStackBase size="xs" />

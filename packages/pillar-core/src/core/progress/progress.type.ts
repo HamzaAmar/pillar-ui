@@ -7,6 +7,8 @@ interface ProgressCoreProps {
   showValue?: boolean
   label: string
   value: number
+  min?: number
+  max?: number
 }
 
 export interface ProgressBarStackItemProps extends Omit<ProgressCoreProps, 'size'> {
