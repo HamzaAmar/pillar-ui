@@ -2,6 +2,15 @@
   color: var(--color-text);
 }
 
-/* .heading {
-  font-size: calc(100% * 1em);
-} */
+.link {
+  cursor: pointer;
+  padding: 2px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline var(--color-text) 1px;
+  }
+  &:focus {
+    outline: 2px dashed var(--color-shared-9);
+    outline-offset: -1px;
+  }
+}

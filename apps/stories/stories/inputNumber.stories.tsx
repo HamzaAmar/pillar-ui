@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { ChangeEvent, FormEvent, useState } from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Flex, InputNumber } from '@pillar/core'
 
 export default {
-  title: 'Components/form/InputNumber',
+  title: 'Components/Form/InputNumber',
   component: InputNumber,
   args: {
     'aria-label': 'Nice',
@@ -39,6 +39,22 @@ export const StepAndMaxInput = () => {
       <InputNumber step="1" max="10" size="sm" placeholder="Step 1 max 10" />
       <InputNumber step="10" max="100" placeholder="Step 10 max 100" />
       <InputNumber step=".1" max=".5" size="lg" placeholder="Step 0.1 max 0.5" />
+    </Flex>
+  )
+}
+
+export const InputValueUpdateCheck = () => {
+  const [value, setValue] = useState('')
+
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    setValue(e.target.value)
+  }
+  return (
+    <Flex gap="sm" direction="column">
+      <h1>value:{value}</h1>
+      <InputNumber value={value} onChange={handleChange} step="1" max="10" size="sm" placeholder="Step 1 max 10" />
+      <InputNumber value={value} onChange={handleChange} step="10" max="100" placeholder="Step 10 max 100" />
+      <InputNumber value={value} onChange={handleChange} step=".1" max=".5" size="lg" placeholder="Step 0.1 max 0.5" />
     </Flex>
   )
 }

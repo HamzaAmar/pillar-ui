@@ -4,7 +4,7 @@ import { User } from '@pillar/icons'
 import { Flex, Input } from '@pillar/core'
 
 export default {
-  title: 'Components/form/Input',
+  title: 'Components/Form/Input',
   component: Input,
   args: {
     'aria-label': 'Nice',
@@ -83,6 +83,28 @@ export const SizeInput = () => {
       <Input size="sm" placeholder="Small(sm)" />
       <Input placeholder="Medium (md default You don't need it)" />
       <Input size="lg" placeholder="Large(lg)" />
+    </Flex>
+  )
+}
+
+export const ColorInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <Input color="indigo" variant="bordered" autoFocus placeholder="Focus" />
+      <Input color="warning" variant="bordered" autoFocus placeholder="Normal" />
+      <Input color="violet" variant="outline" autoFocus placeholder="Disabled" />
+      <Input color="brown" variant="outline" autoFocus placeholder="readOnly" />
+      <Input color="slate" variant="filled" autoFocus placeholder="isInvalid" />
+      <Input color="purple" variant="filled" autoFocus suffixInput={<User width="16" />} placeholder="Error" />
+      <Input color="green" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
+      <Input
+        color="red"
+        variant="bordered"
+        autoFocus
+        prefixInput={'https://'}
+        suffixInput=".com"
+        defaultValue="Default Value"
+      />
     </Flex>
   )
 }

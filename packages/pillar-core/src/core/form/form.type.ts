@@ -1,10 +1,18 @@
-import { Corner, Size } from '../../types'
-import type { ComponentPropsWithRef, ReactNode, ReactElement } from 'react'
-import { TypographyProps } from '..'
+import type { Color, Corner, Size } from '../../types'
+import type { ComponentPropsWithRef, ReactNode, ReactElement, AriaAttributes } from 'react'
+import type { TypographyProps } from '..'
 
 type Variant = 'filled' | 'outline' | 'bordered'
 type Status = 'danger' | 'success' | 'warning' | 'primary' | 'text'
 type Direction = 'row' | 'column'
+
+interface FormFieldSharedProps {
+  corner?: Corner
+  size?: Size
+  fluid?: boolean
+  variant?: Variant
+  color?: Color
+}
 
 interface SharedProps {
   required?: boolean
@@ -16,52 +24,43 @@ interface SharedProps {
   id?: string
 }
 
-export interface FormGroupProps {
+export interface FormGroupProps extends FormFieldSharedProps {
   title: string
-  showLabel?: boolean
+  hideTitle?: boolean
   children: ReactNode
   direction?: Direction
-  fluid?: boolean
   hideBorder?: boolean
 }
 
-export interface SelectProps extends Omit<ComponentPropsWithRef<'select'>, 'size'> {
-  corner?: Corner
-  size?: Size
-  fluid?: boolean
+export interface SelectProps extends Omit<ComponentPropsWithRef<'select'>, 'size' | 'color'>, FormFieldSharedProps {
   isInvalid?: boolean
-  variant?: Variant
   status?: Status
 }
 
-export interface InputProps extends Omit<ComponentPropsWithRef<'input'>, 'size'> {
-  variant?: Variant
-  corner?: Corner
+export interface InputProps extends FormFieldSharedProps, Omit<ComponentPropsWithRef<'input'>, 'size' | 'color'> {
   status?: Status
-  size?: Size
   className?: string
   prefixInput?: ReactNode | string
   suffixInput?: ReactNode | string
   isInvalid?: boolean
-  fluid?: boolean
 }
-export interface TextAreaProps extends ComponentPropsWithRef<'textarea'> {
-  variant?: Variant
-  corner?: Corner
-  className?: string
+
+export interface InputPasswordProps extends InputProps {
+  visibleIcon?: ReactElement
+  hiddenIcon?: ReactElement
+}
+
+export interface TextareaProps extends Omit<ComponentPropsWithRef<'textarea'>, 'size' | 'color'>, FormFieldSharedProps {
   prefixInput?: ReactNode | string
   suffixInput?: ReactNode | string
   isInvalid?: boolean
   status?: Status
-  fluid?: boolean
-  size?: Size
 }
 
 export interface TextFormFieldProps extends Omit<SharedProps, 'id'> {
   label: string
   trailingIcon?: ReactNode
   leadingIcon?: ReactNode
-  className?: string
   hideLabel?: boolean
   readOnly?: boolean
   id?: string
@@ -70,10 +69,10 @@ export interface TextFormFieldProps extends Omit<SharedProps, 'id'> {
   hint?: string
 }
 
-export interface TextFieldProviderProps extends SharedProps {
-  ariaDescribedby: string | null
+export interface FormControllerContextProps extends Omit<SharedProps, 'children'> {
+  describedby: AriaAttributes['aria-describedby']
 }
-export interface TextFieldGroupContextProps extends Omit<TextFieldProviderProps, 'children'> {}
+export interface FormGroupContextProps extends FormFieldSharedProps {}
 
 export interface FormControllerProps {
   children: ReactNode

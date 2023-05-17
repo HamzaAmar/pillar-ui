@@ -1,0 +1,118 @@
+import React from 'react'
+import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import { User } from '@pillar/icons'
+import { Flex, InputSearch } from '@pillar/core'
+
+export default {
+  title: 'Components/Form/InputSearch',
+  component: InputSearch,
+  args: {
+    'aria-label': 'Nice',
+    placeholder: 'Type your Name',
+  },
+} as ComponentMeta<typeof InputSearch>
+
+const Template: ComponentStory<typeof InputSearch> = (args) => <InputSearch {...args} />
+
+export const FilledInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <InputSearch aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
+      <InputSearch aria-label="hello" placeholder="Normal" variant="filled" />
+      <InputSearch aria-label="hello" disabled placeholder="Disabled" variant="filled" />
+      <InputSearch aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
+      <InputSearch aria-label="hello" isInvalid placeholder="Error" variant="filled" />
+      <InputSearch aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" variant="filled" />
+      <InputSearch aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" variant="filled" />
+      <InputSearch
+        aria-label="hello"
+        prefixInput={'https://'}
+        suffixInput=".com"
+        defaultValue="Default Value"
+        variant="filled"
+      />
+    </Flex>
+  )
+}
+export const OutlineInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <InputSearch autoFocus placeholder="Focus" />
+      <InputSearch placeholder="Normal" />
+      <InputSearch disabled placeholder="Disabled" />
+      <InputSearch readOnly placeholder="readOnly" />
+      <InputSearch isInvalid placeholder="isInvalid" />
+      <InputSearch suffixInput={<User width="16" />} placeholder="Error" />
+      <InputSearch prefixInput={<User width="16" />} placeholder="Placeholder" />
+      <InputSearch prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
+    </Flex>
+  )
+}
+export const BorderedInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <InputSearch variant="bordered" autoFocus placeholder="Focus" />
+      <InputSearch variant="bordered" placeholder="Normal" />
+      <InputSearch variant="bordered" disabled placeholder="Disabled" />
+      <InputSearch variant="bordered" readOnly placeholder="readOnly" />
+      <InputSearch variant="bordered" isInvalid placeholder="isInvalid" />
+      <InputSearch variant="bordered" suffixInput={<User width="16" />} placeholder="Error" />
+      <InputSearch variant="bordered" prefixInput={<User width="16" />} placeholder="Placeholder" />
+      <InputSearch variant="bordered" prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
+    </Flex>
+  )
+}
+
+export const CornerInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <InputSearch corner="sharp" placeholder="sharp" />
+      <InputSearch corner="xs" placeholder="xs" />
+      <InputSearch corner="sm" placeholder="sm" />
+      <InputSearch corner="md" placeholder="md" />
+      <InputSearch corner="lg" placeholder="lg" />
+      <InputSearch corner="xl" placeholder="xl" />
+      <InputSearch corner="full" placeholder="full" />
+    </Flex>
+  )
+}
+
+export const SizeInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <InputSearch size="sm" placeholder="Small(sm)" />
+      <InputSearch placeholder="Medium (md default You don't need it)" />
+      <InputSearch size="lg" placeholder="Large(lg)" />
+    </Flex>
+  )
+}
+
+export const ColorInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <InputSearch color="indigo" variant="bordered" autoFocus placeholder="Focus" />
+      <InputSearch color="warning" variant="bordered" autoFocus placeholder="Normal" />
+      <InputSearch color="violet" variant="outline" autoFocus placeholder="Disabled" />
+      <InputSearch color="brown" variant="outline" autoFocus placeholder="readOnly" />
+      <InputSearch color="slate" variant="filled" autoFocus placeholder="isInvalid" />
+      <InputSearch color="purple" variant="filled" autoFocus suffixInput={<User width="16" />} placeholder="Error" />
+      <InputSearch
+        color="green"
+        variant="bordered"
+        autoFocus
+        prefixInput={<User width="16" />}
+        placeholder="Placeholder"
+      />
+      <InputSearch
+        color="red"
+        variant="bordered"
+        autoFocus
+        prefixInput={'https://'}
+        suffixInput=".com"
+        defaultValue="Default Value"
+      />
+    </Flex>
+  )
+}
+
+export const Playground = Template.bind({})

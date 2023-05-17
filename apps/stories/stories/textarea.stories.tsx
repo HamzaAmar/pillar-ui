@@ -4,7 +4,7 @@ import { User } from '@pillar/icons'
 import { Flex, Textarea } from '@pillar/core'
 
 export default {
-  title: 'Components/form/Textarea',
+  title: 'Components/Form/Textarea',
   component: Textarea,
   args: {
     'aria-label': 'Nice',
@@ -14,7 +14,7 @@ export default {
 
 const Template: ComponentStory<typeof Textarea> = (args) => <Textarea {...args} />
 
-export const FilledInput = () => {
+export const FilledTextarea = () => {
   return (
     <Flex gap="sm" direction="column">
       <Textarea autoFocus placeholder="Focus" variant="filled" />
@@ -22,14 +22,13 @@ export const FilledInput = () => {
       <Textarea disabled placeholder="Disabled" variant="filled" />
       <Textarea readOnly placeholder="readOnly" variant="filled" />
       <Textarea isInvalid placeholder="Error" variant="filled" />
-      <Textarea suffixInput={<User width="16" />} placeholder="Error" variant="filled" />
       <Textarea prefixInput={<User width="16" />} placeholder="Placeholder" variant="filled" />
       <Textarea prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" variant="filled" />
     </Flex>
   )
 }
 
-export const OutlineInput = () => {
+export const OutlineTextarea = () => {
   return (
     <Flex gap="sm" direction="column">
       <Textarea autoFocus placeholder="Focus" />
@@ -37,13 +36,28 @@ export const OutlineInput = () => {
       <Textarea disabled placeholder="Disabled" />
       <Textarea readOnly placeholder="readOnly" />
       <Textarea isInvalid placeholder="isInvalid" />
-      <Textarea suffixInput={<User width="16" />} placeholder="Error" />
       <Textarea prefixInput={<User width="16" />} placeholder="Placeholder" />
       <Textarea prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
+      <Textarea prefixInput={'httpsssss://'} suffixInput=".com" defaultValue="Default Value" />
     </Flex>
   )
 }
-export const CornerInput = () => {
+
+export const BorderedTextarea = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <Textarea variant="bordered" autoFocus placeholder="Focus" />
+      <Textarea variant="bordered" placeholder="Normal" />
+      <Textarea variant="bordered" disabled placeholder="Disabled" />
+      <Textarea variant="bordered" readOnly placeholder="readOnly" />
+      <Textarea variant="bordered" isInvalid placeholder="isInvalid" />
+      <Textarea variant="bordered" prefixInput={<User width="16" />} placeholder="Placeholder" />
+      <Textarea variant="bordered" prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
+    </Flex>
+  )
+}
+
+export const CornerTextarea = () => {
   return (
     <Flex gap="sm" direction="column">
       <Textarea corner="sharp" placeholder="sharp" />
@@ -57,7 +71,7 @@ export const CornerInput = () => {
   )
 }
 
-export const SizeInput = () => {
+export const SizeTextarea = () => {
   return (
     <Flex gap="sm" direction="column">
       <Textarea size="sm" placeholder="Small(sm)" />

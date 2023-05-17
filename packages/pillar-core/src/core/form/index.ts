@@ -1,6 +1,14 @@
-export { Input, Textarea, InputNumber, InputPassword, InputSearch, Select, InputFile } from './formField'
-export { default as FormGroup } from './formGroup'
-export { FormController } from './formController'
+export {
+  Input,
+  Textarea,
+  InputNumber,
+  InputPassword,
+  InputSearch,
+  Select,
+  InputFile,
+  FormGroup,
+  FormController,
+} from './formField'
 export type {
   FormControllerProps,
   FormGroupProps,
@@ -8,8 +16,9 @@ export type {
   FormMessageProps,
   InputProps,
   SelectProps,
-  TextAreaProps,
-  TextFieldGroupContextProps,
-  TextFieldProviderProps,
+  TextareaProps,
+  FormGroupContextProps,
   TextFormFieldProps,
+  FormControllerContextProps,
+  InputPasswordProps,
 } from './form.type'

@@ -1,7 +1,7 @@
 /*
-=================================================================================================
- Form Field Wrapper  Style Section 
-=================================================================================================
+/////////////////////////////////////////////////////////////////////////////////////////////////
+  Form Field Wrapper  Style Section 
+/////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
 .form-field-wrapper {
@@ -9,53 +9,29 @@
   color: var(--text-6);
   position: relative;
   overflow: hidden;
+
+  &:focus-within {
+    outline: 2px solid var(--color-shared-9, var(--primary-9));
+    outline-offset: -1px;
+  }
+
+  &[data-invalid='true'] {
+    color: var(--red-11);
+    border-color: var(--red-9);
+    outline-color: var(--red-9);
+    background-color: var(--red-3);
+  }
+
+  &[data-disabled='true'] {
+    background-color: var(--slate-7);
+    cursor: not-allowed;
+  }
 }
 
-.form-field-wrapper .form-field-wrapper__fluid {
+/* .form-field-wrapper .form-field-wrapper__fluid { */
+.form-field-wrapper__fluid {
   width: 100%;
   display: block;
-}
-
-.form-field-wrapper:focus-within {
-  outline: 2px solid var(--primary-8);
-  outline-offset: -1px;
-}
-
-.text-field--root {
-  width: 100%;
-  &[data-disabled='true'] {
-    color: var(--slate-11);
-
-    & .form-field-wrapper {
-      background-color: var(--slate-5);
-      cursor: not-allowed;
-
-      &:hover[data-disabled='false'] {
-        border-color: var(--primary-8);
-      }
-    }
-  }
-  &[data-readonly='true'] .form-field-wrapper {
-    background-color: var(--slate-5);
-  }
-}
-
-.form-field-wrapper[data-invalid='true'] {
-  color: var(--red-11);
-  border-color: var(--red-9);
-  outline-color: var(--red-9);
-  background-color: var(--red-3);
-}
-
-.form-field-wrapper__bordered[data-invalid='true'] {
-  border: none;
-  outline: none;
-  &::after {
-    background: var(--red-11);
-  }
-  &::before {
-    background: var(--red-5);
-  }
 }
 
 .form-field-wrapper__outline {
@@ -63,44 +39,61 @@
 }
 .form-field-wrapper__filled {
   border-color: var(--opacity-5);
-  background-color: var(--opacity-3);
+  background-color: var(--opacity-4);
 }
 
 .form-field-wrapper__bordered {
   border: none;
   outline: 2px solid transparent;
   background-color: var(--opacity-3);
+
+  &::before,
+  &::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--opacity-7);
+    border-radius: 100px;
+  }
+  &::after {
+    background-color: var(--color-shared-9, var(--primary-9));
+    transform: scaleX(0);
+    transition: transform 0.2s;
+  }
+  &:focus-within {
+    outline: none;
+    &::after {
+      transform: none;
+      transition: transform 220ms ease-out;
+    }
+  }
+  &[data-invalid='true'] {
+    border: none;
+    outline: none;
+    &::after {
+      background: var(--red-11);
+    }
+    &::before {
+      background: var(--red-5);
+    }
+  }
 }
 
-.form-field-wrapper__bordered::before,
-.form-field-wrapper__bordered::after {
-  content: '';
-  height: 2px;
+.text-field--root {
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: var(--opacity-7);
-  border-radius: 100px;
-}
 
-.form-field-wrapper__bordered::after {
-  background-color: var(--primary-9);
-  transform: scaleX(0);
-  transition: transform 0.2s;
-}
-.form-field-wrapper__bordered:focus-within::after {
-  transform: none;
-  transition: transform 0.5s ease-out;
-}
-.form-field-wrapper__bordered:focus-within {
-  outline: none;
+  &[data-readonly='true'] .form-field-wrapper {
+    background-color: var(--slate-5);
+  }
 }
 
 /*
-=================================================================================================
+/////////////////////////////////////////////////////////////////////////////////////////////////
  Form Field Style Section 
-=================================================================================================
+/////////////////////////////////////////////////////////////////////////////////////////////////
 */
 .form-field {
   appearance: none;
@@ -111,23 +104,23 @@
   cursor: inherit;
   padding-inline: 0.5em;
   min-height: 2em;
-}
+  resize: none;
 
-.form-field[type='color'] {
-  padding: 0;
-  height: 2rem;
+  &[type='color'] {
+    padding: 0;
+    height: 2rem;
+  }
+  &:disabled {
+    pointer-events: none;
+    background-color: var(--slate-7);
+  }
 }
 
 /*
-=================================================================================================
- Input Style Section 
-=================================================================================================
+/////////////////////////////////////////////////////////////////////////////////////////////////
+  Input Style Section 
+/////////////////////////////////////////////////////////////////////////////////////////////////
 */
-
-.form-field:disabled {
-  pointer-events: none;
-  background-color: var(--slate-7);
-}
 
 .input-field--prefix,
 .input-field--suffix {
@@ -139,9 +132,9 @@
 /*
 
 /*
-=================================================================================================
- Input Number Style Section 
-=================================================================================================
+/////////////////////////////////////////////////////////////////////////////////////////////////
+  Input Number Style Section 
+/////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
 .input-number--counter-wrapper {
@@ -154,37 +147,40 @@
   line-height: 0;
   background-color: var(--slate-7);
   height: 50%;
-}
-.number-input--button:hover {
-  background-color: var(--slate-8);
-}
-.number-input--button:active {
-  background-color: var(--opacity-8);
+  &:active {
+    background-color: var(--opacity-8);
+  }
+  &:hover {
+    background-color: var(--slate-8);
+  }
 }
 
 /*
-=================================================================================================
- Input Password Style Section 
-=================================================================================================
+/////////////////////////////////////////////////////////////////////////////////////////////////
+  Input Password Style Section 
+/////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
 .password-input--button {
   line-height: 0;
-}
-.password-input--button:focus {
-  outline: 2px solid var(--primary-11);
-  outline-offset: -2px;
-  box-shadow: inset 0 0 16px var(--opacity-8);
-}
 
-.password-input--button:hover {
-  background-color: var(--slate-5);
+  &:focus {
+    outline: 2px solid var(--color-shared-11, var(--primary-11));
+    outline-offset: -2px;
+    box-shadow: inset 0 0 16px var(--opacity-8);
+  }
+  &:hover {
+    background-color: var(--slate-5);
+  }
+  & svg {
+    width: 20px;
+  }
 }
 
 /*
-=================================================================================================
- Form Group Style Section 
-=================================================================================================
+/////////////////////////////////////////////////////////////////////////////////////////////////
+  Form Group Style Section 
+/////////////////////////////////////////////////////////////////////////////////////////////////
 */
 .form-group--container {
   color: var(--slate-11);
@@ -208,9 +204,9 @@
 }
 
 /*
-=================================================================================================
- Form Controller Style Section 
-=================================================================================================
+/////////////////////////////////////////////////////////////////////////////////////////////////
+  Form Controller Style Section 
+/////////////////////////////////////////////////////////////////////////////////////////////////
 */
 .form-controller--required {
   color: var(--red-11);
@@ -237,12 +233,12 @@
 }
 
 .input-file {
-  background-color: var(--slate-7);
+  background-color: var(--color-shared-7, var(--slate-7));
+  font-size: 0.9em;
   padding: 0.25rem 1rem;
-  font-size: 0.85rem;
   cursor: pointer;
-}
 
-.input-file:hover {
-  background-color: var(--slate-8);
+  .form-field-wrapper:not([data-disabled]) &:hover {
+    background-color: var(--color-shared-8, var(--slate-8));
+  }
 }
