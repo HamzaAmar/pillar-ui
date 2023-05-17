@@ -43,7 +43,7 @@ export const ChipsColor = () => (
 )
 
 export const ChipsVariants = () => (
-  <div className="l_flow">
+  <div className="l_flow__md">
     <Flex gap="xs">
       <Chips color="danger" variant="outline">
         Hello
