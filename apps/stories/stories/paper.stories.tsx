@@ -40,9 +40,6 @@ export function PaperBackground() {
 export function PaperPadding() {
   return (
     <div className="l_flow__md">
-      <Paper padding="3xs" background="brown">
-        Hello
-      </Paper>
       <Paper padding="2xs" background="red">
         Hello
       </Paper>
@@ -62,9 +59,6 @@ export function PaperPadding() {
         Hello
       </Paper>
       <Paper padding="2xl" background="indigo">
-        Hello
-      </Paper>
-      <Paper padding="3xl" background="slate">
         Hello
       </Paper>
     </div>
@@ -106,9 +100,7 @@ export function PaperShadow() {
   return (
     <div className="l_flow__md">
       <Paper padding="sm">Hello</Paper>
-      <Paper padding="sm" shadow="2xs">
-        Hello
-      </Paper>
+
       <Paper padding="sm" shadow="xs">
         Hello
       </Paper>
@@ -122,9 +114,6 @@ export function PaperShadow() {
         Hello
       </Paper>
       <Paper padding="sm" shadow="xl">
-        Hello
-      </Paper>
-      <Paper padding="sm" shadow="2xl">
         Hello
       </Paper>
     </div>
