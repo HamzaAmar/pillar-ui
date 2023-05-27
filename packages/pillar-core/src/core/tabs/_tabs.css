@@ -1,0 +1,62 @@
+.tabs--list {
+  flex-shrink: 0;
+  /* browser decide if x is ok to scroll and show bars on, y hidden */
+  overflow: auto hidden;
+  /* prevent scroll chaining on x scroll */
+  overscroll-behavior-x: contain;
+  /* scrolling should snap children on x */
+  scroll-snap-type: x mandatory;
+
+  @media (hover: none) {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &[aria-orientation='horizontal'] {
+    border-inline-end: 1px solid var(--opacity-6);
+
+    & .tab {
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+      &[aria-selected='true'] {
+        border-inline-end-color: var(--color-shared-9);
+      }
+    }
+  }
+  &[aria-orientation='vertical'] {
+    border-block-end: 1px solid var(--opacity-6);
+    & .tab {
+      border-end-start-radius: 0;
+      border-end-end-radius: 0;
+      &[aria-selected='true'] {
+        border-block-end-color: var(--color-shared-9);
+      }
+    }
+  }
+}
+
+.tab {
+  padding: 0.5em 1em;
+  border: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.tab__solid[aria-selected='true'] {
+  background: var(--color-shared-8);
+  color: var(--color-shared-12);
+}
+.tab__soft[aria-selected='true'] {
+  border: 1px solid var(--opacity-6);
+  border-bottom: 0;
+  background: var(--color-shared-4);
+  color: var(--color-shared-12);
+}
+.tab__outline[aria-selected='true'] {
+  border: 1px solid var(--opacity-6);
+  border-bottom: 0;
+  background: var(--slate-1);
+}

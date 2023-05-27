@@ -9,7 +9,7 @@ export interface GridBaseProps {
   areas?: string
 }
 type Items = 'center' | 'end' | 'start'
-type Justify = 'around' | 'between' | 'evenly' | 'end' | 'center'
+type Justify = 'start' | 'around' | 'between' | 'evenly' | 'end' | 'center'
 type Direction = 'column' | 'row'
 type Flex = '1' | 'none' | 'auto'
 

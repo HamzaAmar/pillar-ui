@@ -26,7 +26,7 @@ const getStyles = (obj?: Record<string, string | undefined>) => {
 */
 
 const Item = forwardRef((props, forwardedRef) => {
-  const { column, row, area, children, style, className, as: Tag = 'div' } = props
+  const { column, row, area, children, style, className, as: Tag = 'div', ...rest } = props
 
   const _className = classnames('grid--item', {
     className: Boolean(className),
@@ -43,13 +43,14 @@ const Item = forwardRef((props, forwardedRef) => {
       }}
       className={_className}
       ref={forwardedRef}
+      {...rest}
     >
       {children}
     </Tag>
   )
 }) as ForwardRefComponent<'div', GridItemProps>
 
-Item.displayName = 'GridItem'
+Item.displayName = 'Pillar-GridItem'
 
 /*
 ===============================================================================================
@@ -57,34 +58,34 @@ Item.displayName = 'GridItem'
 ===============================================================================================
 */
 
-export const Grid = forwardRef(
-  ({ gap, columns, rows, items, justify, areas, children, style, className }, forwardedRef) => {
-    const _className = classnames('grid', {
-      [`u_justify-${justify}`]: !!justify,
-      [`u_items-${items}`]: !!items,
-      [`u_spacing-${gap}`]: !!gap,
-      [className!]: Boolean(className),
-    })
+export const Grid = forwardRef((props, forwardedRef) => {
+  const { gap, columns, rows, items, justify, areas, children, style, as: Tag = 'div', className, ...rest } = props
+  const _className = classnames('grid', {
+    [`u_justify-${justify}`]: !!justify,
+    [`u_items-${items}`]: !!items,
+    [`u_spacing-${gap}`]: !!gap,
+    [className!]: Boolean(className),
+  })
 
-    const regularStyle = getStyles({ columns, rows, areas })
+  const gridStyle = getStyles({ columns, rows, areas })
 
-    return (
-      <div
-        style={{
-          ...regularStyle,
-          ...style,
-        }}
-        className={_className}
-        ref={forwardedRef}
-      >
-        {children}
-      </div>
-    )
-  }
-) as ForwardRefComponent<'div', GridProps> & { Item: typeof Item }
+  return (
+    <div
+      style={{
+        ...gridStyle,
+        ...style,
+      }}
+      className={_className}
+      ref={forwardedRef}
+      {...rest}
+    >
+      {children}
+    </div>
+  )
+}) as ForwardRefComponent<'div', GridProps> & { Item: typeof Item }
 
 Grid.Item = Item
-Grid.displayName = 'Grid'
+Grid.displayName = 'Pillar-Grid'
 
 /*
 ===============================================================================================
@@ -96,7 +97,7 @@ export const Flex = forwardRef((props, forwardedRef) => {
   const { children, justify, items, flex, direction, wrap, inline, as: Tag = 'div', gap, className, ...rest } = props
 
   const _className = classnames('flex', {
-    [`u_justify-${justify}`]: !!justify,
+    [`u_justify-${justify}`]: !!justify && justify !== 'start',
     [`u_items-${items}`]: !!items,
     // [`u_flex-${flex}`]: !!items,
     [`l_direction-${direction}`]: !!direction && direction !== 'row',
@@ -113,4 +114,4 @@ export const Flex = forwardRef((props, forwardedRef) => {
   )
 }) as ForwardRefComponent<'div', FlexProps>
 
-Flex.displayName = 'Flex'
+Flex.displayName = 'Pillar-Flex'
