@@ -1,3 +1,18 @@
-.l_flow > * + * {
-  margin-top: var(--flow-gap, 1em);
+.l_flow__xs > * + * {
+  margin-top: 4px;
+}
+
+.l_flow__sm > * + * {
+  margin-top: 8px;
+}
+
+.l_flow__md > * + * {
+  margin-top: 12px;
+}
+
+.l_flow__lg > * + * {
+  margin-top: 16px;
+}
+.l_flow__xl > * + * {
+  margin-top: 24px;
 }

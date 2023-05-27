@@ -13,5 +13,14 @@
 @import '../core/stepper/_stepper.css';
 @import '../core/timeline/_timeline.css';
 @import '../core/switch/_switch.css';
+@import '../core/paper/_paper.css';
 @import '../core/typography/_typography.css';
 @import '../core/progress/_progress.css';
+@import '../core/rating/_rating.css';
+@import '../core/pagination/_pagination.css';
+@import '../core/separator/_separator.css';
+@import '../core/table/_table.css';
+@import '../core/tabs/_tabs.css';
+@import '../core/accordion/_accordion.css';
+@import '../core/kbd/_kbd.css';
+@import '../core/code/_code.css';

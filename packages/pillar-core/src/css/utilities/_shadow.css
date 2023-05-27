@@ -1,0 +1,24 @@
+.u_shadow-2xs {
+  box-shadow: 0 1px 2px -1px var(--opacity-5);
+}
+.u_shadow-xs {
+  box-shadow: 0 2px 4px -2px var(--opacity-5);
+}
+.u_shadow-sm {
+  box-shadow: 0 4px 8px -4px var(--opacity-5);
+}
+.u_shadow-md {
+  box-shadow: 0 6px 12px -6px var(--opacity-5);
+}
+.u_shadow-lg {
+  box-shadow: 0 8px 16px -8px var(--opacity-5);
+}
+.u_shadow-xl {
+  box-shadow: 0 12px 24px -12px var(--opacity-5);
+}
+.u_shadow-2xl {
+  box-shadow: 0 16px 32px -16px var(--opacity-5);
+}
+.u_shadow-in-out {
+  box-shadow: 0 16px 32px -16px var(--opacity-5);
+}

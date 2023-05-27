@@ -1,0 +1,37 @@
+/* $screen-phone-medium: 30rem;
+$screen-phone-large: 35.5rem;
+$screen-tablet-small: 48rem;
+$screen-desktop-small: 64rem;
+$screen-desktop-medium: 85rem;
+$screen-desktop-large: 90rem; */
+
+/* @media (min-width: $screen-phone-large), screen and (orientation: landscape) {
+} */
+
+@media (max-width: 64rem) {
+  .md_grid-one {
+    grid-template-columns: minmax(0, 1fr);
+    & > * {
+      --column: span 1 !important;
+    }
+  }
+  .md_grid-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 35.5rem) {
+  .sm_grid-one {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .history-trading-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sm-hide {
+    display: none;
+  }
+}

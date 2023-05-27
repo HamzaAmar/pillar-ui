@@ -30,6 +30,14 @@
   display: inline-flex;
 }
 
+.l_justify-self-end {
+  justify-self: end;
+}
+
+.l_justify-self-center {
+  justify-self: center;
+}
+
 .l_grid {
   display: grid;
 }
