@@ -57,7 +57,7 @@ export function IconButtonsCorners() {
 
 export function IconButtonsVariants() {
   return (
-    <div className="l_flow">
+    <div className="l_flow__md">
       <Flex gap="sm">
         <IconButton icon={<ThumbUp />} color="green" />
         <IconButton icon={<ThumbUp />} color="orange" />
