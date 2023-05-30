@@ -1,10 +1,14 @@
 import { ROTATION, svgProps } from '../../shared'
-import { SvgWithDirection } from '../../type'
+import { SvgType, SvgWithDirection } from '../../type'
 
-const arrow = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
+const ArrowDown = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
   <svg {...svgProps} transform={`rotate(${ROTATION[direction]})`} {...rest}>
     <path d="M12 5v14m0 0 4-4m-4 4-4-4" />
   </svg>
 )
 
-export default arrow
+const ArrowLeft = ({ direction, ...rest }: SvgType) => <ArrowDown direction="left" {...rest} />
+const ArrowRight = ({ direction, ...rest }: SvgType) => <ArrowDown direction="right" {...rest} />
+const ArrowTop = ({ direction, ...rest }: SvgType) => <ArrowDown direction="top" {...rest} />
+
+export { ArrowDown, ArrowLeft, ArrowRight, ArrowTop }
