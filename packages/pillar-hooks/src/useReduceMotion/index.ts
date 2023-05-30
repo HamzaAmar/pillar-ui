@@ -1,0 +1,1 @@
+export { useReducedMotion } from './useReduceMotion'
