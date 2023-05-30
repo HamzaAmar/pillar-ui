@@ -10,21 +10,29 @@
   "files": [
     "dist/**"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
   "keywords": [
     "react",
     "typescript",
     "icons",
     "svg",
     "scalable",
-    "pillar-icons",
-    "design-system",
-    "accessible"
+    "@pillar-icons",
+    "typescript",
+    "accessible",
+    "web-development"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
+    "build": "npx tsup",
+    "build:watch": "npx tsup --watch",
     "lint": "eslint \"src/**/*.ts*\"",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "yarn build:watch"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -39,9 +47,6 @@
     "react": "^18.1.0",
     "tsup": "^5.10.1",
     "typescript": "^4.5.3"
-  },
-  "dependencies": {
-    "@stitches/react": "^1.2.8"
   },
   "publishConfig": {
     "access": "public"
