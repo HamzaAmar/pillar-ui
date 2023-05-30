@@ -1,22 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 type CopiedValue = string | null
-type CopyFn = (text: string) => Promise<boolean> // Return success
+type CopyFn = (text: string) => Promise<boolean>
 
 /**
- * Custom hook for copying text to the clipboard.
- *
- * @returns {Array} An array containing the copied text value and a function for copying text to the clipboard this is the format[text, copyFN].
+ * Custom hook for copying text to the clipboard with optional timeout.
+ * @param {number} [timeout] - The timeout duration in milliseconds.
+ * @returns {{
+ *   text: CopiedValue,
+ *   copy: CopyFn,
+ *   copied: boolean
+ * }} - An object containing the current copied text, the copy function, and the copied state.
  */
-export function useCopyToClipboard(): [CopiedValue, CopyFn] {
-  const [text, setText] = useState<CopiedValue>(null)
 
-  /**
-   * Copies the specified text to the clipboard.
-   *
-   * @param {string} text - The text to copy to the clipboard.
-   * @returns {Promise<boolean>} A promise that resolves to `true` if the text was successfully copied to the clipboard and `false` otherwise.
-   */
+export function useCopyToClipboard(timeout: number = 300) {
+  const [text, setText] = useState<CopiedValue>(null)
+  const [copied, setCopied] = useState<boolean>(false)
+
   const copy: CopyFn = async (text) => {
     if (!navigator?.clipboard) {
       console.warn('Clipboard not supported')
@@ -27,13 +27,24 @@ export function useCopyToClipboard(): [CopiedValue, CopyFn] {
     try {
       await navigator.clipboard.writeText(text)
       setText(text)
+      setCopied(true)
       return true
     } catch (error) {
       console.warn('Copy failed', error)
       setText(null)
+      setCopied(false)
       return false
     }
   }
 
-  return [text, copy]
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setText(null)
+      setCopied(false)
+    }, timeout)
+
+    return () => clearTimeout(timeoutId)
+  }, [timeout, copied])
+
+  return { text, copy, copied }
 }
