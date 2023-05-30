@@ -1,9 +1,16 @@
 import { ChangeEvent, useState } from 'react'
 
 /**
- * A custom React hook that manages the state of a group of checkboxes and provides toggle functionality.
- * @param initialCheckedState An optional initial value for the checked state of the checkboxes.
- * @returns An object containing the state of the checkboxes and functions for updating their state.
+ * Custom hook for managing a checkbox group state with helper functions for toggling and checking items.
+ * @param {boolean[]} [initialCheckedState=[]] - The initial state of the checkbox group as an array of boolean values.
+ * @returns {{
+ *   checkedItems: boolean[],
+ *   setCheckedItems: React.Dispatch<React.SetStateAction<boolean[]>>,
+ *   isIndeterminate: boolean,
+ *   isAllChecked: boolean,
+ *   handleToggleAll: (event: React.ChangeEvent<HTMLInputElement>) => void,
+ *   handleToggleItem: (currentIndex: number) => void
+ * }}
  */
 export function useCheckboxGroup(initialCheckedState: boolean[] = []) {
   const [checkedItems, setCheckedItems] = useState(initialCheckedState)
@@ -12,8 +19,8 @@ export function useCheckboxGroup(initialCheckedState: boolean[] = []) {
   const isIndeterminate = !isAllChecked && checkedItems.some(Boolean)
 
   /**
-   * Handles toggling the checked state of all checkboxes.
-   * @param event The change event of the root checkbox.
+   * Handles the toggle action for all items in the checkbox group.
+   * @param {React.ChangeEvent<HTMLInputElement>} event - The event triggered by the toggle action.
    */
   function handleToggleAll(event: ChangeEvent<HTMLInputElement>) {
     const isChecked = event.target.checked
@@ -22,8 +29,8 @@ export function useCheckboxGroup(initialCheckedState: boolean[] = []) {
   }
 
   /**
-   * Handles toggling the checked state of an individual checkbox.
-   * @param currentIndex The index of the checkbox to toggle.
+   * Handles the toggle action for a specific item in the checkbox group.
+   * @param {number} currentIndex - The index of the item to toggle.
    */
   function handleToggleItem(currentIndex: number) {
     const checkAll = checkedItems.map((val, index) => (index === currentIndex ? !val : val))
