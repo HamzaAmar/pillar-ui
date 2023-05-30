@@ -7,7 +7,7 @@ import { useState } from 'react'
  * @param {number} [initialStep=0] - The initial step to begin the sequence with. Defaults to `0`.
  * @returns {Object} An object containing the current step and functions for navigating between steps.
  */
-export function useStepper(maxSteps: number, initialStep: number = 0) {
+export function useStepper(maxSteps: number, initialStep: number = 1) {
   const [currentStep, setCurrentStep] = useState(initialStep)
 
   /**
@@ -21,7 +21,7 @@ export function useStepper(maxSteps: number, initialStep: number = 0) {
    * Goes to the previous step in the sequence.
    */
   function goToPreviousStep() {
-    if (currentStep > 0) setCurrentStep((currentStep) => currentStep - 1)
+    if (currentStep > 1) setCurrentStep((currentStep) => currentStep - 1)
   }
 
   /**
@@ -34,15 +34,17 @@ export function useStepper(maxSteps: number, initialStep: number = 0) {
       console.warn(
         `Your current step (${currentStep}) is smaller than your intended step size (${step}). We will reset you to step ${initialStep}.`
       )
-      jumpToStep(initialStep)
-    } else if (step > maxSteps) {
+      setCurrentStep(initialStep)
+      return
+    }
+    if (step > maxSteps) {
       console.warn(
         `Your current step (${step}) is bigger than your intended maxSteps (${maxSteps}). We will send you to last step ${maxSteps}.`
       )
-      jumpToStep(maxSteps)
-    } else {
-      jumpToStep(step)
+      setCurrentStep(maxSteps)
+      return
     }
+    setCurrentStep(step)
   }
 
   /**
@@ -56,11 +58,11 @@ export function useStepper(maxSteps: number, initialStep: number = 0) {
    * Jumps to the first step in the sequence.
    */
   function jumpToFirstStep() {
-    setCurrentStep(initialStep)
+    setCurrentStep(1)
   }
 
   // Check if the current step is the first step
-  const isFirst = currentStep === initialStep
+  const isFirst = currentStep === 1
   // Check if the current step is the last step
   const isLast = currentStep === maxSteps
 
