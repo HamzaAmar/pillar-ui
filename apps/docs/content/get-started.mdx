@@ -1,0 +1,97 @@
+---
+title: 'Get Started'
+type: 'Utilities'
+excerpt: 'Welcome to the Pillar project! This monorepo houses a comprehensive collection of reusable UI components, React hooks, and other tools designed to enhance modern web development. With a focus on accessibility, scalability, and best practices, Pillar streamlines the development process and empowers you to build robust, high-quality web applications.'
+file: 'utils'
+---
+
+## Installation
+
+To start using Pillar in your project, follow these simple steps:
+
+1. Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
+
+1. Create a new project or navigate to your existing project directory in the terminal.
+
+1. Install one or more of Pillar Packages by running the following command:
+
+```bash
+npm install @pillar/core
+```
+
+or You prefer Yarn
+
+```bash
+yarn add @pillar/core
+```
+
+1. You can also install the other packages that Pillar support to make the proccess for making you site faster and simple
+
+```bash
+npm install @pillar/hooks @pillar/utilities @pillar/icons
+```
+
+or You prefer Yarn
+
+```bash
+yarn add @pillar/hooks @pillar/utilities @pillar/icons
+```
+
+## Theming
+
+Pillar provides a powerful theming system that allows you to customize the visual appearance of your application. The useTheme hook from @pillar/core is used to access and apply the theme throughout your project.
+
+### Usage
+
+To add a theme to your project, follow these steps:
+
+1. Import the useTheme hook from @pillar/core:
+
+   ```tsx
+   import { useTheme } from '@pillar/core'
+   ```
+
+1. Inside your functional component, call the useTheme hook to access the theme object:
+
+```tsx
+function MyComponent() {
+  useTheme()
+
+  // Use the theme object to style your components
+  // ...
+}
+```
+
+1. Use the properties of the theme object to apply the theme to your components. For example, you can use the theme.color property to set the color of an element:
+
+```tsx
+function MyComponent() {
+  useTheme()
+
+  return (
+    <div style={{ backgroundColor: 'var(--primary-8)', color: 'var(--primary-12)' }}>
+      This text will be styled using the primary color from the theme.
+    </div>
+  )
+}
+```
+
+### Customizing the Theme
+
+Pillar provides a default theme that is designed to be accessible and visually appealing. However, you can easily customize the theme to match your project's specific requirements. The theme customization allows you to choose your preferred color scheme, support dark and light modes, and ensure color accessibility.
+
+#### Default Theme
+
+The default theme provided by Pillar already ensures accessibility and provides a set of colors that are trusted to have sufficient color contrast. This helps maintain a high level of usability and readability in your application. The default theme also includes support for both dark and light modes.
+
+```tsx
+import { violet, grass, baselineGridMD } from '@pillar/core'
+
+useTheme({
+  color: {
+    primary: violet,
+    secondary: grass,
+  },
+  baselineGrid: baselineGridMD,
+})
+```

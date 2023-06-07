@@ -1,0 +1,107 @@
+---
+title: Chips
+type: Components
+excerpt: The Chips component is a UI component that is used to represent small pieces of information. It can be used to display different types of information like tags, categories, and status indicators.
+items: ['Chips']
+file: ' core'
+---
+
+### Props
+
+The following are the props that can be used with the Chips component:
+
+### color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+The color prop is used to specify the background color of the Chips component. It supports the following color options: danger, warning, success, brown, primary, secondary, purple, and surface.
+
+Example:
+
+```tsx showLineNumbers title="Chips.tsx"
+<Chips color="success" variant="solid">
+  Hello
+</Chips>
+```
+
+### variant
+
+The variant prop is used to specify the style of the Chips component. It supports the following style options: solid, outline, and soft.
+
+Example:
+
+```tsx showLineNumbers title="Chips.tsx"
+<Chips color="success" variant="outline">
+  Hello
+</Chips>
+```
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop is used to specify the size of the Chips component. It supports the following size options: 2xs, xs, sm, md, lg, xl, and 2xl.
+
+Example:
+
+```tsx showLineNumbers title="Chips.tsx"
+<Chips size="md" variant="outline">
+  Hello
+</Chips>
+```
+
+### corner
+
+The corner prop is used to specify the corner style of the Chips component. It supports the following corner options: sharp, xs, sm, md, lg, xl, full, and circle.
+
+Example:
+
+```tsx showLineNumbers title="Chips.tsx"
+<Chips corner="full" variant="outline">
+  Hello
+</Chips>
+```
+
+### prefix and suffix
+
+The prefix and suffix props are used to add icons or text before or after the Chips component.
+
+Example:
+
+```tsx showLineNumbers title="Chips.tsx"
+<Chips prefix={<Close />} variant="outline">
+  Hello
+</Chips>
+```
+
+## Use Case
+
+The Chips component can be used to represent different types of information like tags, categories, and status indicators. It can also be used to represent different styles and sizes of text.
+
+## Implementation Details
+
+The Chips component is implemented using React and styled with CSS. The component is designed to be flexible and customizable, with options for changing the color, style, size, and corner style of the component.
+
+## Accessibility
+
+The Chips component is designed to be accessible and meets the following criteria:
+
+- The component can be operated using the keyboard.
+- The component has a visible focus indicator.
+- The component has an accessible name and role.
+
+## TypeScript Support
+
+The Chips component has TypeScript support and includes type definitions for its props.
+
+## Troubleshooting
+
+If you encounter any issues with the Chips component, make sure that you have correctly passed the props and values. If you are still having issues, check the console for any error messages.
+
+## Conclusion
+
+The Chips component is a versatile UI component that can be used to represent different types of information. It is flexible, customizable, and accessible, making it a great addition to any UI design.

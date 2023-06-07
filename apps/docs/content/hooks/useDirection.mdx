@@ -1,0 +1,76 @@
+---
+title: 'useDirection'
+type: 'Hooks'
+excerpt: 'A custom React hook that allows you to manage and toggle the directionality of your application.'
+file: ' hooks'
+---
+
+# `useDirection`
+
+A custom React hook that allows you to manage and toggle the directionality of your application.
+
+## Introduction
+
+`useDirection` is a custom hook that provides an easy way to manage and toggle the direction of your application. This hook is particularly useful when working on multilingual applications where directionality can change based on the selected language.
+
+## Why `useDirection`
+
+This hook simplifies the process of managing the directionality of your application, allowing you to toggle between left-to-right (LTR) and right-to-left (RTL) directionality with ease.
+
+## Installation
+
+To use `useDirection`, simply import it into your React component:
+
+```tsx
+import { useDirection } from 'path/to/useDirection'
+```
+
+## Usage
+
+Once you've imported useDirection, you can use it in your component like this:
+
+```tsx showLineNumbers title="Home.tsx"
+function MyComponent() {
+  const { isLtr, direction, directionScript, toggleDirection } = useDirection()
+
+  return (
+    <div>
+      <h1>{direction}</h1>
+      <p>The current direction is: {isLtr ? 'LTR' : 'RTL'}</p>
+      <button onClick={toggleDirection}>Toggle direction</button>
+      {directionScript}
+    </div>
+  )
+}
+```
+
+## Return value
+
+useDirection returns an object with the following properties:
+
+- `isLtr` (boolean): Indicates whether the current direction is LTR (true) or RTL (false).
+- `direction` (string): The current direction, either 'ltr' or 'rtl'.
+- `directionScript` (ReactNode): A script element that can be used to add custom scripts to the head of your document.
+- `toggleDirection` (function): A function that toggles the direction between LTR and RTL.
+
+## Implementation details
+
+The useDirection hook works by setting the dir attribute of the documentElement to the current direction, and using the localStorage API to store the selected direction for future sessions.
+
+## TypeScript Support
+
+This hook has built-in TypeScript support, with types for the return value and the Direction type.
+
+## Troubleshooting
+
+### The direction isn't changing
+
+If the direction isn't changing when you click the toggle button, make sure that your html element has a dir attribute set to 'ltr' or 'rtl'.
+
+### The localStorage API isn't working
+
+If the localStorage API isn't working, make sure that your browser supports it and that it hasn't been disabled by the user or by a browser extension.
+
+## Conclusion
+
+useDirection is a simple yet powerful hook that makes it easy to manage and toggle the directionality of your React application. Whether you're building a multilingual application or just need to support LTR and RTL languages, this hook can save you time and hassle.

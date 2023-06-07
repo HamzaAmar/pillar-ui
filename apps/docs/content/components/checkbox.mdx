@@ -1,0 +1,212 @@
+---
+title: Checkbox
+type: Components
+excerpt: The Checkbox component is a UI component that provides a visual representation of a binary option. It allows users to select or deselect an option by clicking on the checkbox.
+items: ['Checkbox']
+file: ' core'
+---
+
+## Props
+
+The following are the props that can be used with the Checkbox component:
+
+### label
+
+The label prop is used to specify the text that appears next to the checkbox.
+
+Example:
+
+```tsx showLineNumbers title="Checkbox.tsx"
+<Checkbox label="Option 1" />
+```
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop determines the size of the Badge. It accepts the following values:
+
+```tsx showLineNumbers title="Checkbox.tsx"
+export const BadgeSize = () => {
+  return (
+    <div className="l_flow__md">
+      <Flex items="center" gap="sm">
+        <Checkbox size="3xs" variant="numeric" number={15} max={15} />
+        <Checkbox size="2xs" variant="numeric" number={15} max={15} />
+        <Checkbox size="xs" variant="numeric" number={15} max={15} />
+        <Checkbox size="sm" variant="numeric" number={15} max={15} />
+        <Checkbox size="md" variant="numeric" number={15} max={15} />
+        <Checkbox size="lg" variant="numeric" number={15} max={15} />
+        <Checkbox size="2xl" variant="numeric" number={15} max={15} />
+        <Checkbox size="3xl" variant="numeric" number={15} max={15} />
+      </Flex>
+    </div>
+  )
+}
+```
+
+### color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+The color prop is used to specify the background color of the Checkbox component. It supports the following color options: danger, warning, success, brown, primary, secondary, purple, and surface.
+
+Example:
+
+```tsx showLineNumbers title="Checkbox.tsx"
+export const CheckboxColor = () => {
+  return (
+    <Flex gap="sm" items="center">
+      <Checkbox name="hello" label="Hello" color="danger" />
+      <Checkbox name="hello" label="Hello" color="success" />
+      <Checkbox name="hello" label="Hello" color="warning" />
+      <Checkbox name="hello" label="Hello" color="primary" />
+      <Checkbox name="hello" label="Hello" color="secondary" />
+      <Checkbox name="hello" label="Hello" color="purple" />
+      <Checkbox name="hello" label="Hello" color="brown" />
+      <Checkbox name="hello" label="Hello" color="surface" />
+    </Flex>
+  )
+}
+```
+
+### disabled: boolean
+
+The disabled state of the Checkbox component is used to indicate that the checkbox cannot be interacted with. It is often used when the user is not allowed to select an option or when the option is not applicable in the current context. In this state, the checkbox appears grayed out and its label may also be grayed out to indicate that it is disabled.
+Example:
+
+```tsx showLineNumbers title="Checkbox.tsx"
+export const CheckboxDisabled = () => {
+  return (
+    <div className="l_flow__md">
+      <Flex gap="sm" items="center">
+        <Checkbox disabled name="hello" label="Hello" color="danger" />
+        <Checkbox disabled name="hello" label="Hello" color="success" />
+        <Checkbox disabled name="hello" label="Hello" color="warning" />
+        <Checkbox disabled name="hello" label="Hello" color="primary" />
+        <Checkbox disabled name="hello" label="Hello" color="secondary" />
+        <Checkbox disabled name="hello" label="Hello" color="purple" />
+        <Checkbox disabled name="hello" label="Hello" color="brown" />
+        <Checkbox disabled name="hello" label="Hello" color="surface" />
+      </Flex>
+      <Flex gap="sm" items="center">
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="danger" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="success" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="warning" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="primary" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="secondary" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="purple" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="brown" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="surface" />
+      </Flex>
+    </div>
+  )
+}
+```
+
+### defaultChecked:boolean
+
+The defaultChecked prop in the Checkbox component is used to set the initial checked state of the checkbox when it is first rendered. This prop can be used when you want the checkbox to be checked by default when the user first loads the page.
+
+#### Usage
+
+```tsx showLineNumbers title="Checkbox.tsx"
+import { Flex, Checkbox } from '@pillar/core'
+
+export const CheckboxDefaultCheckedColor = () => {
+  return (
+    <Flex gap="sm" items="center">
+      <Checkbox defaultChecked name="hello" label="Hello" color="danger" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="success" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="warning" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="primary" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="secondary" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="surface" />
+    </Flex>
+  )
+}
+```
+
+Here's an example of using the defaultChecked prop with different colors in the Checkbox component:
+
+### size:Size
+
+The size prop is used to set the size of the checkbox component. It accepts the following options: 3xs, 2xs, xs, sm, md, lg, xl, 2xl, and 3xl.
+
+```tsx showLineNumbers title="Checkbox.tsx"
+import { Flex, Checkbox } from '@pillar/core'
+
+export const CheckboxSize = () => {
+  return (
+    <Flex gap="sm" items="center">
+      <Checkbox size="3xs" name="hello" label="Hello" color="success" />
+      <Checkbox size="2xs" name="hello" label="Hello" color="success" />
+      <Checkbox size="xs" name="hello" label="Hello" color="success" />
+      <Checkbox size="sm" name="hello" label="Hello" color="success" />
+      <Checkbox size="md" name="hello" label="Hello" color="warning" />
+      <Checkbox size="lg" name="hello" label="Hello" color="primary" />
+      <Checkbox size="xl" name="hello" label="Hello" color="primary" />
+      <Checkbox size="2xl" name="hello" label="Hello" color="primary" />
+      <Checkbox size="3xl" name="hello" label="Hello" color="primary" />
+    </Flex>
+  )
+}
+```
+
+### checkbox status
+
+Checkbox component can have different status based on its checked and isIndeterminate props:
+
+checked: When the checked prop is set to true, it means the checkbox is selected or checked. In the CheckboxStatus example, the second checkbox has the checked prop set to true.
+isIndeterminate: When the isIndeterminate prop is set to true, it means the checkbox is in an indeterminate or mixed state. This is commonly used when a group of checkboxes has a parent checkbox to select/deselect all its child checkboxes. In the CheckboxStatus example, the third and fourth checkboxes have the isIndeterminate prop set to true.
+By default, when neither checked nor isIndeterminate props are set, the checkbox is not selected and has no indeterminate state.
+
+Examples
+
+```tsx showLineNumbers title="Checkbox.tsx"
+import { Checkbox } from '@pillar/core'
+
+export const CheckboxStatus = () => {
+  return (
+    <Flex gap="sm" items="center">
+      <Checkbox name="hello" label="Hello" />
+      <Checkbox name="hello" label="Hello" checked />
+      <Checkbox name="hello" label="Hello" isIndeterminate />
+      <Checkbox name="hello" label="Hello" isIndeterminate checked />
+    </Flex>
+  )
+}
+```
+
+## Use Case
+
+The Checkbox component is commonly used in forms to allow users to select or deselect options. It can be used to represent binary options, such as yes/no or agree/disagree.
+
+## Implementation Details
+
+The Checkbox component is implemented using React and styled with CSS. The component is designed to be flexible and customizable, with options for changing the label, color, size, and state of the component.
+
+## Accessibility
+
+The Checkbox component is designed to be accessible and meets the following criteria:
+
+The component can be operated using the keyboard.
+The component has a visible focus indicator.
+The component has an accessible name and role.
+The component is labeled with the associated text label.
+
+## TypeScript Support
+
+The Checkbox component has TypeScript support and includes type definitions for its props.
+
+## Troubleshooting
+
+If you encounter any issues with the Checkbox component, make sure that you have correctly passed the props and values. If you are still having issues, check the console for any error messages.
+
+## Conclusion
+
+The Checkbox component is a simple yet important UI component that allows users to select or deselect options. It is flexible, customizable, and accessible, making it a great addition to any UI design.

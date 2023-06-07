@@ -1,0 +1,75 @@
+---
+title: Skeleton
+type: Components
+excerpt: The Skeleton component is a UI component that provides a temporary visual representation of content while it is being loaded. It is commonly used to improve the perceived performance and user experience of an application.
+items: ['Skeleton', 'Skeleton.Avatar', 'Skeleton.Text', 'Skeleton.Button', 'Skeleton.Box']
+file: 'core'
+---
+
+## Props
+
+The following are the props that can be used with the Skeleton component:
+
+### isLoading
+
+- Type: `boolean`
+- Default: `true`
+- options: true, false
+
+Determines whether the skeleton component should be shown as loading or not
+
+Example:
+
+```tsx showLineNumbers title="SkeletonExample.tsx"
+
+```
+
+### size
+
+- Type: `string`
+- default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+Specifies the size of the skeleton component. Supported sizes are:`xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`, `6xl`.
+
+Example:
+
+```tsx showLineNumbers title="SkeletonExample.tsx"
+
+```
+
+### lines
+
+Type: number
+Default: 2.5
+Options: Any Number
+
+Specifies the number of lines to display for the skeleton text Only Exist for Skeleton.Text.
+
+## Use Case
+
+The Skeleton component is typically used in scenarios where content is being fetched asynchronously and there is a delay in loading the actual data. It provides a visual cue to the user that content is being loaded.
+
+## Implementation Details
+
+The Skeleton component is implemented using React and CSS. It creates a placeholder effect by using animated gradients . The size, shape, and animation of the skeleton can be customized using CSS styles.
+
+## Accessibility
+
+The Skeleton component is designed to be accessible and meets the following criteria:
+
+- The component has proper ARIA attributes to convey that it represents a loading state.
+- The component has sufficient color contrast to meet accessibility standards.
+- The component has sufficient color contrast to meet accessibility standards.
+- The component respects the user's preference for reducing motion, if enabled in their operating system or browser settings.
+
+By respecting the reduce motion preference, the Skeleton component ensures a more comfortable experience for users who may have motion sensitivity or prefer reduced animation effects.
+
+## Troubleshooting
+
+- **Skeleton component is not displaying properly**: Make sure that the isLoading prop is set to true to enable the loading state.
+- **Skeleton component does not match the design**: You can customize the appearance of the Skeleton component by modifying the CSS eiter by adding a ClassName or add Style property
+
+## Conclusion
+
+The Skeleton component is a useful tool for enhancing the perceived performance and user experience of your application. By providing temporary placeholders during loading, you can improve the visual feedback for users and make your application feel more responsive.

@@ -1,0 +1,99 @@
+---
+title: Kbd
+type: Components
+excerpt: The Kbd component is a UI component that represents a keyboard key. It can be used to display keyboard shortcuts or any other key-related information.
+items: ['Kbd']
+file: 'core'
+---
+
+## Props
+
+The following are the props that can be used with the Kbd component:
+
+### title
+
+The title prop is used to specify the text or label of the keyboard key.
+
+Example:
+
+```tsx
+<Kbd title="Esc" />
+```
+
+### color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `surfacece` | `primary` | `secondary`
+
+The color prop is used to specify the background color of the Kbd component. It supports various color options.
+
+```tsx
+<Kbd title="Esc" />
+<Kbd title="Esc" color="danger" />
+<Kbd title="Esc" color="success" />
+<Kbd title="Esc" color="warning" />
+<Kbd title="Esc" color="primary" />
+<Kbd title="Esc" color="surfacece" />
+<Kbd title="Esc" color="secondary" />
+```
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop is used to specify the size of the Kbd component. It supports various size options.
+
+```tsx
+<Kbd title="Esc" />
+<Kbd title="Esc" size="2xs" />
+<Kbd title="Esc" size="xs" />
+<Kbd title="Esc" size="sm" />
+<Kbd title="Esc" size="md" />
+<Kbd title="Esc" size="lg" />
+<Kbd title="Esc" size="xl" />
+<Kbd title="Esc" size="2xl" />
+```
+
+### corner
+
+The corner prop is used to specify the corner style of the Kbd component. It supports various corner options.
+
+```tsx
+<Kbd title="Esc" corner="sharp" />
+<Kbd title="Esc" />
+<Kbd title="Esc" corner="xs" />
+<Kbd title="Esc" corner="md" />
+<Kbd title="Esc" corner="xl" />
+<Kbd title="Esc" corner="full" />
+<Kbd title="Esc" corner="circle" />
+```
+
+## Use Case
+
+The Kbd component can be used to represent keyboard keys or shortcuts in a user interface. It can be used in documentation, tutorials, or any other context where keyboard-related information needs to be displayed.
+
+## Implementation Details
+
+The Kbd component is implemented using React and styled with CSS. It provides a simple and consistent way to display keyboard keys in a UI.
+
+## Accessibility
+
+The Kbd component is designed to be accessible and meets the following criteria:
+
+The component has a visible focus indicator.
+The component has a descriptive label or title.
+
+## TypeScript Support
+
+The Kbd component has TypeScript support and includes type definitions for its props.
+
+## Troubleshooting
+
+If you encounter any issues with the Kbd component, make sure that you have correctly passed the props and values. If you are still having issues, check the console for any error messages.
+
+## Conclusion
+
+The Kbd component is a useful UI component for displaying keyboard keys or shortcuts. It provides customization options for color, size, and corner style, allowing it to be integrated seamlessly into various UI designs.

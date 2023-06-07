@@ -1,0 +1,152 @@
+---
+title: Spinner
+type: Components
+excerpt: The Spinner component is used to indicate loading or progress state.
+items: ['Spinner']
+file: ' core'
+---
+
+## Props
+
+The Spinner component accepts the following props:
+
+### color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+The color prop sets the color of the spinner. You can choose from a range of colors including green, red, orange, primary, purple, secondary, brown and surface.
+
+```tsx showLineNumbers title="Spinner.tsx"
+import { Spinner, Flex } from '@pillar/core'
+
+export function SpinnerColors() {
+  return (
+    <Flex gap="sm">
+      <Spinner color="success" />
+      <Spinner color="danger" />
+      <Spinner color="warning" />
+      <Spinner color="primary" />
+      <Spinner color="secondary" />
+      <Spinner color="surface" />
+    </Flex>
+  )
+}
+```
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop sets the size of the spinner. You can choose from a range of sizes including 3xs, 2xs, xs, sm, md, xl, 2xl and 3xl.
+
+```tsx showLineNumbers title="Spinner.tsx"
+import { Spinner, Flex } from '@pillar/core'
+
+export function SpinnerSizes() {
+  return (
+    <Flex gap="sm" items="center">
+      <Spinner size="3xs" />
+      <Spinner size="2xs" />
+      <Spinner size="xs" />
+      <Spinner size="sm" />
+      <Spinner size="md" />
+      <Spinner size="xl" />
+      <Spinner size="2xl" />
+      <Spinner size="3xl" />
+    </Flex>
+  )
+}
+```
+
+### thickness
+
+The thickness prop sets the thickness of the spinner. You can set any thickness value in pixels.
+
+```tsx showLineNumbers title="Spinner.tsx"
+import { Spinner, Flex } from '@pillar/core'
+
+export function SpinnerThickness() {
+  return (
+    <Flex gap="sm" items="center">
+      <Spinner size="3xs" thickness="1px" />
+      <Spinner size="2xs" thickness="2px" />
+      <Spinner size="xs" thickness="3px" />
+      <Spinner size="sm" thickness="4px" />
+      <Spinner size="md" thickness="5px" />
+      <Spinner size="xl" thickness="2px" />
+      <Spinner size="2xl" thickness="2px" />
+      <Spinner size="3xl" thickness="200px" />
+    </Flex>
+  )
+}
+```
+
+### invert
+
+The invert prop inverts the color of the spinner, which can be useful when the spinner's default color clashes with the background color.
+
+```tsx showLineNumbers title="Spinner.tsx"
+import { Spinner, Flex } from '@pillar/core'
+
+export function SpinnerInvert() {
+  return (
+    <div className="l_flow__md">
+      <Flex gap="sm" items="center">
+        <Spinner color="success" />
+        <Spinner color="danger" />
+        <Spinner color="warning" />
+        <Spinner color="primary" />
+        <Spinner color="purple" />
+        <Spinner color="secondary" />
+        <Spinner color="brown" />
+        <Spinner color="surface" />
+      </Flex>
+      <Flex gap="sm" items="center">
+        <Spinner invert color="success" />
+        <Spinner invert color="danger" />
+        <Spinner invert color="warning" />
+        <Spinner invert color="primary" />
+        <Spinner invert color="purple" />
+        <Spinner invert color="secondary" />
+        <Spinner invert color="brown" />
+        <Spinner invert color="surface" />
+      </Flex>
+    </div>
+  )
+}
+```
+
+## Use Case
+
+The Spinner component is used to indicate loading or progress state. It can be used in various scenarios such as when data is being fetched or when a page is loading.
+
+- **Indicating data loading**: When data is being fetched from an API or a database, a Spinner can be used to indicate to the user that the data is being loaded.
+- **Indicating page loading**: When a page is being loaded, a Spinner can be used to indicate to the user that the page is loading.
+- **Indicating form submission**: When a form is being submitted, a Spinner can be used to indicate to the user that the form is being processed.
+- **Indicating file upload**: When a file is being uploaded, a Spinner can be used to indicate to the user that the file is being uploaded.
+
+These are just some of the common use cases for a Spinner component. It can be used in any scenario where you need to indicate loading or progress state to the user.
+
+## Implementation details
+
+The Spinner component is implemented using React and TypeScript. It is part of the @pillar/core package.
+
+## Accessibility
+
+The Spinner component follows accessibility best practices.
+
+## TypeScript Support
+
+The Spinner component is fully typed and supports TypeScript.
+
+## Troubleshooting
+
+If you encounter any issues while using the Spinner component, please check if you have imported it correctly and if you are passing valid props.
+
+## Conclusion
+
+The Spinner component is a versatile and easy-to-use component that can be used to indicate loading or progress state. It comes with a range of customization options and follows accessibility best practices.

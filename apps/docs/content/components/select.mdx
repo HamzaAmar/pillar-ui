@@ -1,0 +1,103 @@
+---
+title: Select
+type: Components
+excerpt: The Select component is used to create dropdown menus in your UI with various customization options.
+items: ['Select']
+file: 'core'
+---
+
+## Props
+
+The following are the props that can be used with the Select component:
+
+### variant
+
+- Type: string
+- Default: `filled`
+- Options: `filled`, `outline`, `bordered`
+
+The variant prop is used to customize the appearance of the select component. It supports three options: "filled", "outline", and "bordered".
+
+Example:
+
+```tsx
+<Select variant="filled" />
+<Select variant="outline" />
+<Select variant="bordered" />
+```
+
+### corner
+
+- Type: string
+- Default: `sm`
+- Options: `sharp`, `xs`, `sm`, `md`, `lg`, `xl`, `full`
+
+The corner prop is used to specify the corner style of the select component. It supports various options for corner shape customization.
+
+```tsx
+<Select corner="sharp" />
+<Select corner="xs" />
+<Select corner="sm" />
+<Select corner="md" />
+<Select corner="lg" />
+<Select corner="xl" />
+<Select corner="full" />
+```
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs`, `xs`, `sm`, `md`, `lg`, `xl`, `2xl`
+
+The size prop is used to specify the size of the select component. It supports various options You can see them above
+
+```tsx
+<Select size="2xs" />
+<Select size="xs" />
+<Select size="sm" />
+<Select size="md" />
+<Select size="lg" />
+<Select size="xl" />
+<Select size="2xl" />
+```
+
+## Best Practices
+
+When it comes to selecting options from a predefined set, choosing the appropriate UI element is crucial for providing a seamless user experience. While checkboxes and radio buttons are common choices for selection, there are scenarios where using the Select component is more suitable. Consider the following best practices:
+
+- **Multiple options selection**: If you need to allow users to select multiple options simultaneously, the Select component is an ideal choice. It provides a dropdown menu that supports multiple selection, whereas checkboxes and radio buttons typically allow only single selection.
+
+- **Conserving screen space**: When dealing with a long list of options, the Select component helps conserve screen space by displaying a compact dropdown menu that expands on demand. This is especially useful in situations where screen real estate is limited, such as mobile devices or interfaces with complex layouts.
+
+- **Reducing visual clutter**: If you have a large number of selectable options, using checkboxes or radio buttons can lead to a cluttered interface, making it difficult for users to quickly scan and select their desired option. The Select component presents a more streamlined and organized interface, allowing users to easily browse and select options from a dropdown list.
+
+- **Hierarchical options**: When dealing with hierarchical data or nested options, the Select component provides a hierarchical structure through nested `<optgroup>` elements. This allows you to present a logical grouping of options, enhancing clarity and ease of selection. Checkboxes and radio buttons, on the other hand, are better suited for flat lists without hierarchical relationships.
+
+- **Enhanced mobile experience**: Select components are generally more mobile-friendly compared to checkboxes and radio buttons, especially when dealing with touch-based interactions. Dropdown menus are easier to interact with on touchscreens, and they can be collapsed when not in use, providing a cleaner and more intuitive mobile experience.
+
+However, it's important to note that there are situations where checkboxes and radio buttons are more appropriate. For instance, when the number of options is limited and visible on the screen, checkboxes or radio buttons can provide a more direct and immediate selection experience.
+
+## Use Case
+
+The Select component is useful for creating dropdown menus in your UI, allowing users to select options from a list. It can be used in forms, configuration settings, or any other scenario where user input selection is required.
+
+## Implementation Details
+
+The Select component is implemented using React and can be styled with CSS or customized using component props. It provides a flexible and accessible way to create dropdown menus.
+
+## Accessibility
+
+The Select component is designed to be accessible and meets the following criteria:
+
+- The component has appropriate ARIA attributes and roles for screen readers.
+- The component has keyboard navigation support.
+- The component has visible focus indicators.
+
+## TypeScript Support
+
+The Select component has TypeScript support
+
+## Conclusion
+
+The Select component is a versatile UI component that allows you to create dropdown menus with ease. It provides various customization options such as autofocus, placeholder, disabled state, error indication, different variants, corner styles, sizes, and colors. With its simple implementation and accessibility features, the Select component can be seamlessly integrated into your UI designs.

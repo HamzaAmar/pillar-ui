@@ -1,0 +1,302 @@
+---
+title: Button
+type: Components
+excerpt: The Button component is a reusable button component that can be used throughout your React application.
+items: ['Button']
+file: ' core'
+---
+
+## Import
+
+```bash
+import { Button } from '@pillar/core'
+```
+
+## Props
+
+The Button component accepts the following props:
+
+### color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+The color prop determines the background color of the Button. It accepts any of the Color types defined in your library, including primary, secondary, success, danger, warning, info, and light. If not provided, it defaults to the primary color.
+
+Example usage:
+
+```tsx showLineNumbers title="Button.tsx"
+function ButtonColors(){
+    return(
+        // danger or red
+        <Button color='danger' >Hello World</Button>
+        // warning or orange
+        <Button color='orange' >Hello World</Button>
+        // success or green
+        <Button color='success' >Hello World</Button>
+        <Button color='primary' >Hello World</Button>
+        <Button color='secondary' >Hello World</Button>
+        <Button color='surface' >Hello World</Button>
+
+        // ===== Icon Button Section=====
+        // danger or red
+        <IconButton color='danger' />
+        // warning or orange
+        <IconButton color='orange' />
+        // success or green
+        <IconButton color='success' />
+        <IconButton color='primary' />
+        <IconButton color='secondary' />
+        <IconButton color='surface' />
+    )
+}
+
+```
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop determines the size of the Button. It accepts any of the Size types defined in your library, including (3xs, 2xs,xs, sm, md, and lg, xl, 2xl, 3xl). If not provided, it defaults to the md size.
+
+Example usage:
+
+```tsx showLineNumbers title="Button.tsx"
+function ButtonSizes(){
+    return(
+        <Button size='3xs' >Hello World</Button>
+        <Button size='2xs' >Hello World</Button>
+        <Button size='xs' >Hello World</Button>
+        <Button size='md' >Hello World</Button>
+        <Button size='lg' >Hello World</Button>
+        <Button size='xl' >Hello World</Button>
+        <Button size='2xl' >Hello World</Button>
+        <Button size='3xl' >Hello World</Button>
+
+        // ===== Icon Button Section=====
+        <IconButton size='2xs' />
+        <IconButton size='xs' />
+        <IconButton size='xs' />
+        <IconButton size='md' />
+        <IconButton size='lg' />
+        <IconButton size='xl' />
+        <IconButton size='2xl' />
+
+    )
+}
+
+```
+
+### corner
+
+- Type: string
+- Default: `sm`
+- Options: `sharp` | `xs` | `sm` | `md` | `lg`| `xl` | `radius` | `full`
+
+The corner prop determines the border radius of the Button. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
+
+Example usage:
+
+```tsx showLineNumbers title="Button.tsx"
+function ButtonCorners(){
+    return(
+        <Button corner='sharp' >Hello World</Button>
+        <Button corner='xs' >Hello World</Button>
+        <Button corner='md' >Hello World</Button>
+        <Button corner='lg' >Hello World</Button>
+        <Button corner='xl' >Hello World</Button>
+        <Button corner='circle' >Hello World</Button>
+        <Button corner='full' >Hello World</Button>
+
+        // ===== Icon Button Section=====
+         <IconButton corner='sharp' />
+        <IconButton corner='xs' />
+        <IconButton corner='md' />
+        <IconButton corner='lg' />
+        <IconButton corner='xl' />
+        <IconButton corner='circle' />
+        <IconButton corner='full' />
+
+    )
+}
+
+```
+
+### variant
+
+Type: string
+Default: `undefined`
+Options: `solid` | `outline` | `soft` | `text`
+
+The corner prop determines the border radius of the Button. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
+
+Example usage:
+
+```tsx showLineNumbers title="Button.tsx"
+function ButtonVariants(){
+    return(
+        <Button variant='solid' >Hello World</Button>
+        <Button variant='soft' >Hello World</Button>
+        <Button variant='outline' >Hello World</Button>
+        <Button variant='text' >Hello World</Button>
+        <Button variant='link' >Hello World</Button>
+
+        // ===== Icon Button Section=====
+
+        // For Icon Button Only this Three Variants That is Supported
+        <IconButton variant='solid' />
+        <IconButton variant='soft' />
+        <IconButton variant='outline' />
+    )
+}
+
+```
+
+### icon
+
+The `corner` prop determines the border radius of the Button. It accepts any of the Corner types defined in your library, including (`square`, `xs`, `sm`, `md`, `xl`, `full`, `circle`), and pill. If not provided, it defaults to the square corner.
+
+Example usage:
+
+```tsx showLineNumbers title="Button.tsx"
+import {Close,Maximun,Minimum } from '@pillar/icons'
+
+function ButtonIcon(){
+    return(
+
+        <Button icon={<Close />} >Hello World</Button>
+        <Button icon={<Maximun />} >Hello World</Button>
+        <Button icon={<Minimum />} >Hello World</Button>
+
+        // ===== Icon Button Section=====
+        <IconButton icon={<Close />}  title='Close Modal' />
+        <IconButton icon={<Maximun />}  title='Active Picture In Picture Mode' />
+        <IconButton icon={<Minimum />}  title='disactive Picture In Picture Mode' />
+    )
+}
+
+```
+
+### iconPosition
+
+- Type: string
+- Default: `start`
+- Options: `start` | `end`
+
+The `iconPosition` prop determines the position of the icon in relation to the button text. It can be one of `start` or `end`. By default, it is set to start.
+
+Example usage:
+
+```tsx showLineNumbers title="Button.tsx"
+import {Close,Maximun,Minimum } from '@pillar/icons'
+
+function ButtonIcon(){
+    return(
+        // If Icon Button Does not exist mean It not supported
+        <Button icon={<Close />} >Hello World</Button>
+        <Button icon={<Maximun />} >Hello World</Button>
+        <Button icon={<Minimum />} >Hello World</Button>
+    )
+}
+
+```
+
+### fuild
+
+- Type: boolean
+- Default: `false`
+- Options: `true` | `false`
+
+The `fluid` prop determines if the button should take up the full width of its container. By default, it is set to false.
+
+Example usage:
+
+```tsx showLineNumbers title="Button.tsx"
+function ButtonIcon() {
+  return <Button fluid>Hello World</Button>
+}
+```
+
+### state
+
+Same as Button.
+
+```tsx showLineNumbers title="IconButton.tsx"
+function IconButtonStates() {
+  return
+   <IconButton state="loading" />
+   <IconButton disabled />
+}
+```
+
+### title
+
+the title prop is important for screen reader users as it provides a description of the button that can be read out loud when the user focuses on the button. This can improve accessibility and usability for people who are visually impaired or have difficulty using a mouse or touch screen.
+
+Example usage:
+
+```tsx showLineNumbers title="Button.tsx"
+import {Close,Maximun,Minimum } from '@pillar/icons'
+
+function ButtonIcon(){
+    return(
+
+        <IconButton icon={<Close />} />
+        <IconButton icon={<Maximun />} />
+        <IconButton icon={<Minimum />} />
+    )
+}
+
+```
+
+## Use Case
+
+The Button component can be used in a variety of contexts to trigger an action or navigate to a different part of an application. Some common use cases for the Button component include:
+
+- Submitting a form
+- Triggering a modal or popover
+- Starting or stopping a process
+- Navigating to a different page or section of the application
+- Calling an API or performing an asynchronous action
+- By providing different colors, sizes, and variants, the Button component can be customized to fit the specific design needs of an application.
+
+## Implementation details
+
+The Button component in this documentation is an example of a React functional component. It can be imported from the @pillar/core library and used in a JSX file.
+
+The Button component takes in several optional props that can be used to customize its appearance and behavior, such as size, color, variant, icon, and disabled. It also accepts a onClick prop to specify the function to be executed when the button is clicked.
+
+## Accessibility
+
+The Alert component is designed to be accessible to all users. Here are some guidelines to help ensure that your use of the Alert component is as accessible as possible:
+
+- Use a descriptive title: When using the Alert component, make sure that the title accurately describes the content of the Alert. This will help users who use assistive technologies like screen readers to understand the purpose of the Alert without having to read its content.
+
+- Provide descriptive text: If you are including descriptive text in your Alert, make sure that it is concise and easy to understand. Avoid using complex or technical language that might be difficult for some users to understand.
+
+- Use appropriate colors: Be careful when choosing colors for your Alert, as some users may have difficulty distinguishing between certain color combinations. Make sure that the color contrast between the background color and text color is sufficient to ensure that the Alert is legible for all users.
+
+- Use ARIA roles and attributes: The Alert component includes appropriate ARIA roles and attributes to help ensure that it is properly identified by assistive technologies. If you are building a custom Alert component, make sure to include these roles and attributes as well.
+
+By following these guidelines, you can help ensure that your use of the Alert component is as accessible as possible to all users, including those who use assistive technologies to access the web.
+
+## TypeScript Support
+
+The Button component includes TypeScript support for type checking and better code editor tooling. TypeScript definitions are included in the @pillar/core library, making it easier to develop and maintain large-scale applications with the Button component.
+
+## Troubleshooting
+
+If the Button component is not behaving as expected, it may be due to an incorrect usage of the component or the props passed to it. Some common issues to check for include:
+
+- Incorrectly passing props to the Button component
+- Using an invalid value for a prop, such as an invalid color or variant
+- Improperly handling the onClick function or passing in an incorrect function
+- Missing required props for the Button component
+- If you are still having issues, try checking the documentation or seeking help from the community or the @pillar/core library maintainers.
+
+## Conclusion
+
+The Button component is a versatile component that can be used in a variety of contexts to trigger actions and navigate an application. By customizing its appearance and behavior using props, the Button component can be tailored to meet the specific design needs of an application.

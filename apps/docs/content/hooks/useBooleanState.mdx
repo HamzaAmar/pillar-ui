@@ -1,0 +1,79 @@
+---
+title: 'useBooleanState'
+type: 'Hooks'
+excerpt: 'The useBooleanState hook is a custom hook for managing a boolean state value. It returns an object containing the current boolean value and functions for updating it.'
+file: ' hooks'
+---
+
+# useBooleanState
+
+## Introduction
+
+The useBooleanState hook is a custom hook for managing a boolean state value. It returns an object containing the current boolean value and functions for updating it.
+
+## Why useBooleanState
+
+Managing boolean state values can be a common task in React applications, and this hook provides an easy way to handle it in a consistent and reusable way.
+
+## Installation
+
+To use useBooleanState in your project, you can install it from npm:
+
+```tsx
+npm install --dev '@pillar/hooks'
+```
+
+## Usage
+
+To use the useBooleanState hook in your React components, import it and call it in your functional component like this:
+
+```tsx showLineNumbers title="Alert.tsx"
+import { useBooleanState } from '@pillar/hooks'
+
+function MyComponent() {
+  const { booleanValue, setTrue, setFalse, setToggle } = useBooleanState()
+
+  return (
+    <div>
+      <p>Current value: {booleanValue.toString()}</p>
+      <button onClick={setTrue}>Set true</button>
+      <button onClick={setFalse}>Set false</button>
+      <button onClick={setToggle}>Toggle value</button>
+    </div>
+  )
+}
+```
+
+You can optionally pass in a boolean value as the default value when calling the useBooleanState hook:
+
+```tsx showLineNumbers title="Alert.tsx"
+const { booleanValue, setTrue, setFalse, setToggle } = useBooleanState(true)
+```
+
+## Use Case
+
+- **Toggling a menu or modal**: You can use useBooleanState to manage the state of a menu or modal that is toggled by a button click.
+
+- **Managing the state** of a checkbox or toggle switch: If you have a checkbox or toggle switch in your UI, you can use useBooleanState to manage its state.
+
+- **Controlling the visibility of an element**: You can use useBooleanState to manage the visibility of an element based on a boolean value. For example, you could use it to show or hide a tooltip when a user hovers over an element.
+
+- **Conditional rendering**: You can use useBooleanState to conditionally render components based on a boolean value. For example, you could use it to conditionally render a "Save" button only when a form has been edited.
+
+- **Managing the state of a feature flag**: If you have a feature flag in your application that determines whether a certain feature is enabled or not, you can use useBooleanState to manage the state of the flag. This allows you to easily toggle the feature on and off as needed.
+
+## Implementation details
+
+The useBooleanState hook uses the useState and useCallback hooks from the React library to manage the boolean state value and update functions respectively.
+
+## TypeScript Support
+
+This hook is written in TypeScript and provides type definitions for its usage
+
+## Troubleshooting
+
+If you encounter any issues using the useBooleanState hook, please refer to the documentation or open an issue on the project's GitHub repository.
+
+## Conclusion
+
+The useDarkMode custom hook is a useful tool for adding dark mode functionality to your React application. By using this hook, you can make your app more accessible and improve the user experience for your users.

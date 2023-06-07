@@ -1,0 +1,237 @@
+---
+title: Paper
+type: Components
+excerpt: The Paper component is a versatile container component used to display content. It can be customized with different background colors, text colors, corners, padding, spacing, shadow, and more.
+items: ['Paper']
+file: ' core'
+---
+
+## Usage
+
+```tsx showLineNumbers title="Paper.tsx"
+import { Paper } from '@your-library/core'
+function(){
+    return(
+        <Paper
+            background="gray-200"
+            color="gray-700"
+            corner="md"
+            padding="md"
+            spacing="md"
+            shadow="sm"
+            width="100%"
+            height="auto"
+        >
+            <p>Some content goes here...</p>
+        </Paper>
+    )
+}
+```
+
+## Props
+
+The Paper component accepts the following props:
+
+### background
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `surface` | `primary` | `secondary`
+
+The background prop determines the background color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it defaults to the white color.
+
+Example usage:
+
+```tsx showLineNumbers title="Paper.tsx"
+function PaperBackgrounds(){
+    return(
+        <Paper background='danger' />
+        <Paper background='green-5' />
+        <Paper background='primary-12' />
+        <Paper background='surface-1' />
+    )
+}
+```
+
+## color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `surface` | `primary` | `secondary`
+
+The color prop determines the text color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it `inherit` the of its parent.
+
+We recommend using the color from step 11 or 12 because it provides high contrast against the background. It's important to always check color contrast when changing the background or paper color.
+
+Example usage:
+
+```tsx showLineNumbers title="Paper.tsx"
+function PaperColors(){
+    return(
+        <Paper color='gray-12' />
+        <Paper color='primary-11' />
+        <Paper color='surface' />
+    )
+}
+```
+
+### corner
+
+**corner**
+Type: string
+Default: md
+Options: sharp | xs | sm | md | lg | xl | circle | full
+
+The corner prop determines the border radius of the Paper component. It accepts any of the Corner types defined in our library, including (sharp, xs, sm, md, lg, xl, circle, full). If not provided, it defaults to the md corner.
+
+Example usage:
+
+```tsx showLineNumbers title="Paper.tsx"
+function PaperCorners(){
+    return(
+        <Paper corner='sharp' />
+        <Paper corner='xs' />
+        <Paper corner='md' />
+        <Paper corner='lg' />
+        <Paper corner='xl' />
+        <Paper corner='circle' />
+        <Paper corner='full' />
+    )
+}
+```
+
+## padding
+
+**padding**
+Type: string
+Default: md
+Options: 2xs | xs | sm | md | lg | xl
+
+The padding prop determines the padding size of the Paper component. It accepts any of the Size types defined in our library. If not provided, it defaults to the md padding.
+
+Example usage:
+
+```tsx showLineNumbers title="Paper.tsx"
+function PaperPadding(){
+    return(
+        <Paper padding='2xs' />
+        <Paper padding='xs' />
+        <Paper padding='sm' />
+        <Paper padding='md' />
+        <Paper padding='lg' />
+        <Paper padding='xl' />
+    )
+}
+```
+
+## spacing
+
+**spacing**
+Type: string
+Default: md
+Options: xs | sm | md | lg | xl
+The spacing prop determines the space between the Paper and its surrounding elements. It accepts any of the Size types defined in our library, excluding (2xl, 2xs). If not provided, it defaults to the md spacing.
+
+Example usage:
+
+```tsx showLineNumbers title="Paper.tsx"
+function PaperSpacing(){
+    return(
+        <Paper spacing='xs' />
+        <Paper spacing='sm' />
+        <Paper spacing='md' />
+        <Paper spacing='lg' />
+        <Paper spacing='xl' />
+    )
+}
+```
+
+## shadow
+
+**shadow**
+Type: string
+Default: none
+Options: none | xs | sm | md | lg | xl
+The shadow prop determines the shadow of the Paper. It accepts any of the Shadow types defined in our library, including (none, xs, sm, md, lg, xl). If not provided, it defaults to the none shadow.
+
+Example usage:
+
+```tsx showLineNumbers title="Paper.tsx"
+function PaperShadow(){
+    return(
+        <Paper shadow='xs' />
+        <Paper shadow='sm' />
+        <Paper shadow='md' />
+        <Paper shadow='lg' />
+        <Paper shadow='xl' />
+    )
+}
+```
+
+## width
+
+**width**
+Type: string | number | undefined
+Default: undefined
+The width prop determines the width of the Paper. It accepts any valid CSS width value.
+
+Example usage:
+
+```tsx showLineNumbers title="Paper.tsx"
+function PaperWidth(){
+    return(
+        <Paper width={200} />
+        <Paper width='50%' />
+        <Paper width='40ch' />
+        <Paper width='300px' />
+        <Paper width='30rem' />
+    )
+}
+```
+
+## height
+
+**height**
+Type: string | number | undefined
+Default: undefined
+The height prop determines the height of the Paper. It accepts any valid CSS height value.
+
+Example usage:
+
+```tsx showLineNumbers title="Paper.tsx"
+function PaperHeight(){
+    return(
+        <Paper height={200} />
+        <Paper height='50%' />
+        <Paper height='200px' />
+        <Paper height='50vh' />
+        <Paper height='50lvh' />
+    )
+}
+```
+
+## Use Case
+
+In this section, you will provide an overview of the use case that this document is addressing. You will describe the problem that the code/library solves, and provide a high-level overview of how it works.
+
+## Implementation details
+
+In this section, you will dive into the technical details of the code/library. You will describe how the code is structured and how it works. You will cover topics such as configuration options, API endpoints, and code examples.
+
+## Accessibility
+
+In this section, you will discuss accessibility considerations for the code/library. You will explain how the code is designed to be accessible, and what steps can be taken to ensure that it is accessible for users with disabilities.
+
+When customizing the color and background of the component, it's important to ensure that the contrast between the two is sufficient for users with low vision or color blindness. A good rule of thumb is to use a color contrast checker, such as the one provided by WebAIM, to make sure that the contrast ratio meets the WCAG 2.1 guidelines. You can also check the contrast ratio using your browser's dev tools, which usually include a color contrast analyzer.
+
+## TypeScript Support
+
+In this section, you will discuss the TypeScript support for the code/library. You will explain how the code can be used with TypeScript, what type definitions are available, and how to use them.
+
+## Troubleshooting
+
+In this section, you will provide guidance on troubleshooting common issues that may arise when using the code/library. You will provide solutions to common problems and explain how to debug issues.
+
+## Conclusion
+
+In this section, you will summarize the main points covered in the document. You will reiterate the use case for the code/library, highlight the key features, and provide a call to action for users to get started.

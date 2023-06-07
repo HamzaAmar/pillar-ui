@@ -1,0 +1,400 @@
+---
+title: 'is'
+type: 'Utilities'
+excerpt: 'The is collection consists of utility functions that are used to check if a given value satisfies certain conditions or criteria, returning either true or false based on the result. These functions are designed to provide type checking and validation capabilities in JavaScript or TypeScript applications.'
+file: 'utils'
+---
+
+This documentation provides an overview and usage information for a set of utility functions. These functions are used for type checking and validation purposes in JavaScript or TypeScript applications. The functions are designed to determine the type or nature of a given value.
+
+## isBrowser
+
+```bash
+export {isBrowser} from '@pillar/utils'
+```
+
+This function checks whether the code is executing in a browser environment. It returns true if the current runtime environment is a browser, and false otherwise.
+
+### usage
+
+```ts
+export { isBrowser } from '@pillar/utils'
+
+if (isBrowser) {
+  window.localStorage.get('card')
+}
+```
+
+## isServer
+
+```bash
+export { isServer } from '@pillar/utils'
+```
+
+This function checks whether the code is executing in a server or non-browser environment. It returns true if the current runtime environment is a non-browser environment (such as server-side JavaScript or Node.js), and false otherwise.
+
+### usage
+
+```ts
+export { isServer } from '@pillar/utils'
+
+if (isServer) {
+  try{
+    const users = await fetch('/api/id/300?query=alluser')
+  }
+}
+```
+
+## isBoolean
+
+```bash
+export { isBoolean } from '@pillar/utils'
+```
+
+This function checks whether the code is executing in a server or non-browser environment. It returns true if the current runtime environment is a non-browser environment (such as server-side JavaScript or Node.js), and false otherwise.
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { isBoolean } from '@pillar/utils'
+
+const value = 'false'
+
+const isOpen = isBoolean(value) ? value : !value
+```
+
+## isFunction
+
+```bash
+export { isFunction } from '@pillar/utils'
+```
+
+isFunction function is a built-in JavaScript function that checks if the value passed to it is a function. It returns a boolean value of either true or false.
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { useState } from 'react'
+export { isFunction } from '@pillar/utils'
+
+const value = 'false'
+
+const [open, setOpen] = useState(isFunction(value) ? initialVal() : initialVal)
+```
+
+## isNumber
+
+```bash
+export { isFunction } from '@pillar/utils'
+```
+
+isNumber function is a built-in JavaScript function that checks if the value passed to it is a number. It returns a boolean value of either true or false.
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { useState } from 'react'
+export { isFunction } from '@pillar/utils'
+
+const value = 'false'
+
+const [open, setOpen] = useState(isFunction(value) ? initialVal() : initialVal)
+```
+
+## isInteger
+
+```bash
+export { isFunction } from '@pillar/utils'
+```
+
+isInteger function is a built-in JavaScript function that checks if the value passed to it is an integer. It returns a boolean value of either true or false.
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { useState } from 'react'
+export { isFunction } from '@pillar/utils'
+
+const value = 'false'
+
+const [open, setOpen] = useState(isFunction(value) ? initialVal() : initialVal)
+```
+
+## isFloat
+
+```bash
+export { isFloat } from '@pillar/utils'
+```
+
+isFloat function is a built-in JavaScript function that checks if the value passed to it is an float number. It returns a boolean value of either true or false.
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { useState } from 'react'
+export { isFloat } from '@pillar/utils'
+
+const value = 'false'
+
+const [open, setOpen] = useState(isFloat(value) ? initialVal() : initialVal)
+```
+
+## isString
+
+```bash
+export { isString } from '@pillar/utils'
+```
+
+The isString function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { useState } from 'react'
+export { isString } from '@pillar/utils'
+
+const value = 'false'
+
+const [open, setOpen] = useState(isString(value) ? initialVal : initialVal.toString())
+```
+
+## isObject
+
+```bash
+export { isObject } from '@pillar/utils'
+```
+
+The isObject function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { useState } from 'react'
+export { isObject } from '@pillar/utils'
+
+const value = 'false'
+
+const [open, setOpen] = useState(isObject(value) ? initialVal : initialVal.toString())
+```
+
+## isArray
+
+```bash
+export { isArray } from '@pillar/utils'
+```
+
+The isArray function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { useState } from 'react'
+export { isArray } from '@pillar/utils'
+
+const value = 'false'
+
+const [open, setOpen] = useState(isArray(value) ? initialVal : initialVal.toString())
+```
+
+## isRef
+
+```bash
+export { isRef } from '@pillar/utils'
+```
+
+The isRef function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { useState } from 'react'
+export { isRef } from '@pillar/utils'
+
+const value = 'false'
+
+const [open, setOpen] = useState(isRef(value) ? initialVal : initialVal.toString())
+```
+
+## isWindow
+
+```bash
+export { isWindow } from '@pillar/utils'
+```
+
+The isWindow function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
+
+### usage
+
+This function checks whether a value is a boolean.
+
+- **Parameters**: val (unknown): The value to be checked.
+- **Returns**: true if the value is a boolean, false otherwise.
+
+```ts
+export { useState } from 'react'
+export { isWindow } from '@pillar/utils'
+
+const value = 'false'
+
+const [open, setOpen] = useState(isWindow(value) ? initialVal : initialVal.toString())
+```
+
+## isDate(val)
+
+```bash
+## { isWindow } from '@pillar/utils'
+```
+
+This function checks if a value is a Date object. It determines whether the provided value is an instance of the Date class, which represents a specific point in time.
+
+- **Parameters**: val (unknown): The value to check.
+- **Returns**: true if the value is a Date object, false otherwise.
+
+Use Case: Use this function to determine if a value is an instance of the Date class.
+
+## isPromise(val)
+
+```bash
+export { isPromise } from '@pillar/utils'
+```
+
+This function checks if a value is a Promise object. A Promise is a JavaScript object used for asynchronous operations, providing a way to handle and chain the results of asynchronous operations.
+
+- **Parameters**: val (unknown): The value to check.
+- **Returns**: true if the value is a Promise, false otherwise.
+
+Use Case: Use this function to verify if a value represents a Promise object, allowing you to handle promises in a specific manner in your code.
+
+```bash
+export { isError } from '@pillar/utils'
+```
+
+## isError(val)
+
+ParametersisError
+
+val (unknown): The value to -check.
+**Returns**: true if the value is an instance of the Error class, false otherwise.
+
+Description: Checks if a value is an instance of the Error class.
+
+Use Case: Use this function to determine if a value is an Error object.
+
+```bash
+export { isError } from '@pillar/utils'
+
+if(!isError){
+  console.log('Hello World')
+}
+```
+
+## isLeapYear(year)
+
+```bash
+export { isLeapYear } from '@pillar/utils'
+
+```
+
+This function checks if a year is a leap year. A leap year has 366 days instead of the usual 365 days and occurs every four years to account for the extra time it takes for the Earth to complete one orbit around the Sun.
+
+- **Parameters**: year (number): The year to check.
+- **Returns**: true if the year is a leap year, false otherwise.
+
+Use Case: Use this function to identify if a specific year is a leap year, which can be useful for handling calendar-related calculations or displaying accurate date information.
+
+```ts
+export { isLeapYear } from '@pillar/utils'
+
+const daysInYear = isLeapYear ? 366 : 365
+```
+
+## isValidDate(dateString)
+
+```bash
+export { isValidDate } from '@pillar/utils'
+```
+
+- **Parameters**: dateString (Date|string): The string or Date object to check.
+- **Returns**: true if the string is a valid date, false otherwise.
+
+This function checks if a string or Date object represents a valid date. It validates if the provided value corresponds to a valid date according to JavaScript's Date parsing rules.
+
+Use Case: Use this function to ensure that a string or Date object contains a valid date before performing further operations or displaying the date information.
+
+```ts
+export { isValidDate, getYear } from '@pillar/utils'
+
+const date = '1993/08/10'
+const age = 24
+const dateOfBirth = getYear(new Date(getYear() - age))
+
+console.log(isValidDate(date) ? date : dateOfBirth)
+```
+
+## isEmptyObject(obj)
+
+```bash
+export { isEmptyObject } from '@pillar/utils'
+```
+
+This function checks if an object is empty, meaning it has no own enumerable properties. It verifies whether the provided object does not have any properties defined directly on it.
+
+- **Parameters**: obj (object): The object to check.
+- **Returns**: true if the object is empty, false otherwise.
+
+Use Case: Use this function to determine if an object is empty, enabling you to handle scenarios where you need to check if an object has any properties or perform logic based on its emptiness.
+
+```ts
+export { isEmptyObject } from '@pillar/utils'
+
+const date = '1993/08/10'
+const age = 24
+const isEmptyArray = isEmptyObject([])
+const isEmptyObj = isEmptyObject({})
+const isNotEmptyObj = isEmptyObject({ key: 'hello' })
+```

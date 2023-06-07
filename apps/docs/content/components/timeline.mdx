@@ -1,0 +1,346 @@
+---
+title: Timeline
+type: Components
+excerpt: The timeline component used to display a list of events in chronological order. It is a flexible component that can be customized to meet the needs of your application.
+items: ['Timeline', 'Timeline.Item']
+file: ' core'
+---
+
+### Size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop determines the size of the Timeline. It accepts any of the Size types defined in your library, including (3xs, 2xs,xs, sm, md, and lg, xl, 2xl, 3xl). If not provided, it defaults to the md size.
+
+Example usage:
+
+```tsx showLineNumbers title="Timeline.tsx"
+const Items = (props: Omit<TimelineItemProps, 'children'>) => {
+  return (
+    <>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+    </>
+  )
+}
+
+export const TimelineSize = () => {
+  return (
+    <Flex gap="sm">
+      <Timeline size="2xs">
+        <Items />
+      </Timeline>
+      <Timeline size="xs">
+        <Items />
+      </Timeline>
+      <Timeline size="sm">
+        <Items />
+      </Timeline>
+      <Timeline size="md">
+        <Items />
+      </Timeline>
+      <Timeline size="lg">
+        <Items />
+      </Timeline>
+      <Timeline size="xl">
+        <Items />
+      </Timeline>
+      <Timeline size="2xl">
+        <Items />
+      </Timeline>
+    </Flex>
+  )
+}
+```
+
+### Color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+The color prop determines the color of the Timeline. It accepts a string representing a color name or a color value in hex, rgb, rgba format.###
+
+code Example
+
+```tsx
+const Items = (props: Omit<TimelineItemProps, 'children'>) => {
+  return (
+    <>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+    </>
+  )
+}
+
+export const TimelineColor = () => {
+  return (
+    <Flex gap="sm">
+      <Timeline color="surface">
+        <Items />
+      </Timeline>
+      <Timeline color="secondary">
+        <Items />
+      </Timeline>
+      <Timeline color="primary">
+        <Items />
+      </Timeline>
+      <Timeline color="success">
+        <Items />
+      </Timeline>
+      <Timeline color="danger">
+        <Items />
+      </Timeline>
+      <Timeline color="warning">
+        <Items />
+      </Timeline>
+    </Flex>
+  )
+}
+```
+
+### corner?: Corner
+
+Type: string
+Default: `md`
+Options: `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
+The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
+
+The corner prop determines the border radius of the Timeline. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
+
+```tsx showLineNumbers title="Timeline.tsx"
+const Items = (props: Omit<TimelineItemProps, 'children'>) => {
+  return (
+    <>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+    </>
+  )
+}
+
+export const TimelineCorner = () => {
+  return (
+    <Grid columns="1fr 1fr 1fr" className="md_grid-two sm_grid-one" gap="lg">
+      <Timeline corner="sharp">
+        <Items />
+      </Timeline>
+      <Timeline corner="xs">
+        <Items />
+      </Timeline>
+      <Timeline>
+        <Items />
+      </Timeline>
+      <Timeline corner="md">
+        <Items />
+      </Timeline>
+      <Timeline corner="lg">
+        <Items />
+      </Timeline>
+      <Timeline corner="xl">
+        <Items />
+      </Timeline>
+      <Timeline corner="full">
+        <Items />
+      </Timeline>
+    </Grid>
+  )
+}
+```
+
+### variant: Variant
+
+The variant property specifies the type of border for a component. The possible values are:
+
+- **solid**: A solid border for the timeline Line.
+- **dotted**: A dotted border for the timeline Line.
+- **dashed**: A dashed border for the timeline Line.
+
+The default value is solid.
+
+```tsx showLineNumbers title="Timeline.tsx"
+const Items = (props: Omit<TimelineItemProps, 'children'>) => {
+  return (
+    <>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item {...props}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+    </>
+  )
+}
+
+export const TimelineVariant = () => {
+  return (
+    <Grid columns="1fr 1fr 1fr" className="md_grid-two sm_grid-one" gap="lg">
+      <Timeline variant="solid">
+        <Items />
+      </Timeline>
+      <Timeline variant="dotted">
+        <Items />
+      </Timeline>
+      <Timeline variant="dashed">
+        <Items />
+      </Timeline>
+    </Grid>
+  )
+}
+```
+
+### bullet: ReactElement
+
+The bullet prop can be used to customize the appearance of the bullet. It accepts a React element, which can be used to change the color, size, and style of the bullet.
+
+```tsx showLineNumbers title="Timeline.tsx"
+export const TimelineCustomBullet = () => {
+  return (
+    <Timeline>
+      <Timeline.Item bullet={<Cross />}>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item
+        bullet={<Avatar variant="image" size="xs" image="https://picsum.photos/id/152/40/40" title="hello" />}
+      >
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Heading size="xs">Hello</Heading>
+        <Text size="xs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
+          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
+          quae.
+        </Text>
+      </Timeline.Item>
+    </Timeline>
+  )
+}
+```
+
+## Use Case
+
+Timelines are often used to display a list of events in chronological order. They can be used to track progress, provide a history of events, or simply to present information in a visually appealing way.
+
+## Implementation Details
+
+The timeline component is implemented using HTML, CSS, and React. The HTML code for the timeline consists of a list element, which contains the events. The CSS code for the timeline defines the style of the timeline, including the color, size, and shape. The React code for the timeline renders the HTML and CSS code, and also handles events such as clicking on an event.
+
+## Accessibility
+
+The timeline component is accessible to all users, including those with disabilities. The HTML and CSS code for the timeline is semantic, which means that it can be read by screen readers. The React code for the timeline also includes accessibility features such as keyboard navigation and aria labels.
+
+## TypeScript Support
+
+The timeline component is fully supported by TypeScript. The TypeScript interface for the timeline component is included in the documentation.
+
+## Troubleshooting
+
+If you encounter any problems using the timeline component, please consult the documentation or contact the developer for support.
+
+## Conclusion
+
+The timeline component is a versatile and powerful component that can be used to display a list of events in chronological order. It is easy to use and customize, and it is accessible to all users.

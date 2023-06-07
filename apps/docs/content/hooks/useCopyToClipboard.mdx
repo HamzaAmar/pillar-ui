@@ -1,0 +1,66 @@
+---
+title: 'useCopyToClipboard'
+type: 'Hooks'
+excerpt: 'The useCopyToClipboard hook is a custom hook for copying text to the clipboard. It returns an array containing the copied text value and a function for copying text to the clipboard.'
+file: ' hooks'
+---
+
+# useCopyToClipboard
+
+## Introduction
+
+The useCopyToClipboard hook is a custom hook for copying text to the clipboard. It returns an array containing the copied text value and a function for copying text to the clipboard.
+
+## Why useCopyToClipboard
+
+The useCopyToClipboard hook simplifies the process of copying text to the clipboard for users. It handles the complexities of interacting with the browser's Clipboard API and provides an easy-to-use function for copying text.
+
+## Installation
+
+To use the useCopyToClipboard hook, simply import it into your React component:
+
+```tsx
+// With NPM
+npm install --dev '@pillar/hooks'
+
+// With YARN
+yarn add '@pillar/hooks'
+
+// Uses
+import { useCopyToClipboard } from '@pillar/hooks'
+```
+
+## Usage
+
+To use the useCopyToClipboard hook, call it inside your functional component like so:
+
+```tsx showLineNumbers title="Alert.tsx"
+function MyComponent() {
+  const [copiedText, copyToClipboard] = useCopyToClipboard()
+
+  return (
+    <div>
+      <button onClick={() => copyToClipboard('Text to copy')}>Copy text to clipboard</button>
+      <p>Copied text: {copiedText}</p>
+    </div>
+  )
+}
+```
+
+The useCopyToClipboard hook returns an array with two values: the current copied text value (initially null) and the copyToClipboard function. The copyToClipboard function takes a string parameter as the text to be copied and returns a promise that resolves to true if the text was successfully copied to the clipboard and false otherwise.
+
+## Implementation details
+
+The useCopyToClipboard hook uses the browser's Clipboard API to copy text to the clipboard. If the Clipboard API is not available, the hook logs a warning message to the console and returns false.
+
+## TypeScript Support
+
+The useCopyToClipboard hook is written in TypeScript and provides type definitions for its parameters and return values.
+
+## Troubleshooting
+
+If you encounter issues with the useCopyToClipboard hook, ensure that your browser supports the Clipboard API and that your code is executing on the client-side.
+
+## Conclusion
+
+The useCopyToClipboard hook provides an easy-to-use way to copy text to the clipboard in a React component. It simplifies the process of interacting with the browser's Clipboard API and provides a convenient function for copying text.

@@ -1,0 +1,93 @@
+---
+title: 'useArray'
+type: 'Hooks'
+excerpt: 'The useArray custom hook is a custom hook for managing an array state value. It returns an object containing the current array value, a function to add an element to the array, a function to remove an element from the array, and a function to sort the array.'
+file: ' hooks'
+---
+
+## Why useArray
+
+Managing array state values can be a common task in React applications, and this hook provides an easy way to handle it in a consistent and reusable way.
+
+## Usage
+
+To use the useArray hook in your React components, import it and call it in your functional component like this:
+
+```tsx
+import { useArray } from '@pillar/hooks'
+
+function MyComponent() {
+  const { list, addElement, removeElement } = useArray([1, 2, 3])
+
+  return (
+    <div>
+      <p>Current array: {array}</p>
+      <button onClick={addElement(4)}>Add Element</button>
+      <button onClick={removeElement(2)}>Remove Element</button>
+    </div>
+  )
+}
+```
+
+## Parameters
+
+The useArray hook takes an object of the following parameters:
+
+- initialValue (optional): The initial value of the array. Defaults to an empty array.
+
+## Returned values
+
+The useArray hook returns an object of the following values:
+
+- list: The current value of the array.
+- first: The first element in the array.
+- last: The last element in the array.
+- isEmpty: Whether the array is empty.
+- getElementIndex: A function to get the index of an element in the array.
+- hasElement: A function to check if an element exists in the array.
+- removeElement: A function to remove an element from the array.
+- addElement: A function to add an element to the array.
+- clear: A function to clear the array.
+- setList: A function to set the value of the array.
+
+## Use Case
+
+The useArray hook can be used for a variety of purposes, including:
+
+- Managing a list of items in a shopping cart: The useArray hook could be used to keep track of the items in the cart and their quantities.
+
+- Implementing a to-do list: The useArray hook could be used to keep track of the tasks in the to-do list and their completion status.
+
+- Building a chat application: The useArray hook could be used to keep track of the messages in a chat room and their timestamps.
+
+- Displaying a list of articles: The useArray hook could be used to keep track of the articles to be displayed on a website and their metadata.
+
+- Creating a playlist for a music streaming service: The useArray hook could be used to keep track of the songs in the playlist and their order.
+
+- Managing a list of contacts: The useArray hook could be used to keep track of the contacts in an address book and their contact information.
+
+- Implementing a photo gallery: The useArray hook could be used to keep track of the photos in the gallery and their metadata.
+
+- Building a social media feed: The useArray hook could be used to keep track of the posts in the feed and their timestamps.
+
+- Creating a list of bookmarks: The useArray hook could be used to keep trackof the bookmarks in a web browser and their URLs.
+
+- Implementing a filterable list: The useArray hook could be used to keep track of the items in a list that match a certain criteria and update the list dynamically as the filter changes.
+
+These are just some examples, but the useArray hook can be used in many different contexts where you need to manage a list of items in your application.
+
+## Implementation details
+
+The useArray hook uses the useState hook from the React library to manage the array state value.
+
+## TypeScript Support
+
+This hook is written in TypeScript and provides type definitions for its usage
+
+## Troubleshooting
+
+If you encounter any issues using the useArray hook, please refer to the documentation or open an issue on the project's GitHub repository.
+
+## Conclusion
+
+The useArray custom hook is a useful tool for adding array functionality to your React application. By using this hook, you can make your app more engaging and interactive for your users.##

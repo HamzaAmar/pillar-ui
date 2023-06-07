@@ -1,0 +1,204 @@
+---
+title: Stepper
+type: Components
+excerpt: The Stepper component provides a step-by-step process or progress indicator to guide users through a series of sequential steps or stages. It is commonly used in multi-step forms, onboarding flows, and progress tracking interfaces.
+items: ['Stepper', 'Stepper.Step']
+file: 'core'
+---
+
+The Stepper component allows you to create a step-by-step process or progress indicator in your application. It helps users navigate through a series of sequential steps or stages, providing clear visual feedback on their progress. The Stepper component consists of two main parts: the main Stepper component and the Stepper.Step component.
+
+## Stepper
+
+The Stepper component is the main container that holds all the individual steps and manages the state of the active step. It provides various props to customize its appearance and behavior.
+
+### Color
+
+Type: `string`
+Default: `primary`
+Options: `purple` | `secondary` | `brown` | `surface` | `primary` | `secondary`
+The color prop determines the color scheme of the Stepper component. It accepts a string value representing the color name or color code. The available options are:
+
+Example usage:
+
+```tsx
+export const StepperIcon = () => {
+  const { currentStep, setCurrentStep, isFirst, isLast, goToNextStep, goToPreviousStep } = useStepper(3)
+
+  return (
+    <Flex gap="lg" direction="column">
+      <Stepper active={currentStep} setActive={setCurrentStep} completeComponent={<CompleteComponent />}>
+        <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
+          <Heading size="xs">Hello World</Heading>
+          <Text size="sm" color="surface" contrast="low">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
+            tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
+          </Text>
+        </Stepper.Step>
+        <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
+          <Heading size="xs">Hello World</Heading>
+          <Text size="sm" color="surface" contrast="low">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
+            tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
+          </Text>
+        </Stepper.Step>
+        <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
+          <Heading size="xs">Hello World</Heading>
+          <Text size="sm" color="surface" contrast="low">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
+            tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
+          </Text>
+        </Stepper.Step>
+      </Stepper>
+      <Flex items="center" justify="center" gap="sm">
+        <Button disabled={isLast} onClick={goToNextStep}>
+          Next
+        </Button>
+        <Button disabled={isFirst} onClick={goToPreviousStep} variant="soft">
+          Back
+        </Button>
+      </Flex>
+    </Flex>
+  )
+}
+```
+
+### Corner
+
+Type: string
+Default: `md`
+Options: `sharp` | `xs` | `sm` | `md` | `lg` | `xl` | `full`
+
+The corner prop determines the corner style of the Stepper component. It accepts a string value representing the corner style. The available options are:
+Example usage:
+
+```tsx
+export const StepperIcon = () => {
+  const { currentStep, setCurrentStep, isFirst, isLast, goToNextStep, goToPreviousStep } = useStepper(3)
+
+  return (
+    <Flex gap="lg" direction="column">
+      <Stepper size="lg" active={currentStep} setActive={setCurrentStep} completeComponent={<CompleteComponent />}>
+        <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
+          <Heading size="xs">Hello World</Heading>
+          <Text size="sm" color="surface" contrast="low">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
+            tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
+          </Text>
+        </Stepper.Step>
+        <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
+          <Heading size="xs">Hello World</Heading>
+          <Text size="sm" color="surface" contrast="low">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
+            tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
+          </Text>
+        </Stepper.Step>
+        <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
+          <Heading size="xs">Hello World</Heading>
+          <Text size="sm" color="surface" contrast="low">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
+            tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
+          </Text>
+        </Stepper.Step>
+      </Stepper>
+      <Flex items="center" justify="center" gap="sm">
+        <Button disabled={isLast} onClick={goToNextStep}>
+          Next
+        </Button>
+        <Button disabled={isFirst} onClick={goToPreviousStep} variant="soft">
+          Back
+        </Button>
+      </Flex>
+    </Flex>
+  )
+}
+```
+
+### Size
+
+Type: string
+Default: `md`
+Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+The size prop determines the size of the Stepper component. It accepts a string value representing the size. The available options are:
+Example usage:
+
+```tsx
+export const StepperIcon = () => {
+  const { currentStep, setCurrentStep, isFirst, isLast, goToNextStep, goToPreviousStep } = useStepper(3)
+
+  return (
+    <Flex gap="lg" direction="column">
+      <Stepper corner="sm" active={currentStep} setActive={setCurrentStep} completeComponent={<CompleteComponent />}>
+        <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
+          <Heading size="xs">Hello World</Heading>
+          <Text size="sm" color="surface" contrast="low">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
+            tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
+          </Text>
+        </Stepper.Step>
+        <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
+          <Heading size="xs">Hello World</Heading>
+          <Text size="sm" color="surface" contrast="low">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
+            tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
+          </Text>
+        </Stepper.Step>
+        <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
+          <Heading size="xs">Hello World</Heading>
+          <Text size="sm" color="surface" contrast="low">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
+            tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
+          </Text>
+        </Stepper.Step>
+      </Stepper>
+      <Flex items="center" justify="center" gap="sm">
+        <Button disabled={isLast} onClick={goToNextStep}>
+          Next
+        </Button>
+        <Button disabled={isFirst} onClick={goToPreviousStep} variant="soft">
+          Back
+        </Button>
+      </Flex>
+    </Flex>
+  )
+}
+```
+
+## Stepper.Step
+
+The Stepper.Step component represents an individual step within the Stepper component. It displays the step's title, icon, and description. You can include any custom content within each step to provide relevant information or actions for that step.
+
+## Use Case
+
+The Stepper component is suitable for the following use cases:
+
+- Multi-step forms: Guide users through a form with multiple sections or steps, ensuring they complete each step before moving to the next.
+- Onboarding flows: Provide a guided experience for new users, helping them complete onboarding tasks in a structured manner.
+- Progress tracking: Show the progress of a long process or workflow, such as a multi-step checkout or a task completion tracker.
+
+## Accessibility
+
+The Stepper component strives to be accessible to all users. When using the Stepper component, ensure the following accessibility considerations:
+
+- Provide clear and descriptive labels for each step using the title and description props.
+- Ensure that the active step is visually distinguishable from the inactive steps.
+- Use appropriate ARIA roles and attributes to convey the interactive nature of the stepper and its individual steps.
+- If the steps contain interactive elements, ensure they are accessible and keyboard navigable.
+
+## TypeScript Support
+
+The Stepper component is written in TypeScript and provides full TypeScript support. This includes type definitions for the component props and any associated hooks or utilities.
+
+## Troubleshooting
+
+If you encounter any issues while using the Stepper component, consider the following troubleshooting steps:
+
+- Double-check that you have correctly passed the active and setActive props to the Stepper component.
+- Ensure that the active prop corresponds to a valid index of the steps array.
+- Verify that you have provided the required props (title, icon, etc.) for each Stepper.Step component.
+
+If the issue persists, consult the documentation or seek help from the development community for further assistance.
+
+## Conclusion
+
+The Stepper component provides an intuitive and visually appealing way to guide users through multi-step processes or track progress. By using the Stepper component in your application, you can enhance the user experience and make complex workflows more manageable. Experiment with the various customization options and adapt the Stepper component to your specific use cases.

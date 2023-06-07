@@ -32,11 +32,11 @@ function(){
 
 The Alert component accepts the following props:
 
-### color?: Color
+### color
 
-Type: string
-Default: `primary`
-Options: `red` | `danger` | `orange` | `warning` | `green` | `success` | `indigo` | `violet` | `purple` | `brown` | `slate` | `primary`
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
 
 The color prop determines the background color of the Alert. It accepts any of the Color types defined in our library see options above. If not provided, it defaults to the primary color.
 
@@ -45,17 +45,12 @@ Example usage:
 ```tsx showLineNumbers title="Alert.tsx"
 function AlertColors(){
     return(
-        // danger or red
-        <Alert title="Success!" color='red' />
-        // warning or orange
-        <Alert title="Success!" color='orange' />
-        // success or green
-        <Alert title="Success!" color='green' />
-        <Alert title="Success!" color='indigo' />
-        <Alert title="Success!" color='violet' />
-        <Alert title="Success!" color='purple' />
-        <Alert title="Success!" color='brown' />
-        <Alert title="Success!" color='slate' />
+        <Alert title="Success!" color='danger' />
+        <Alert title="Success!" color='warning' />
+        <Alert title="Success!" color='success' />
+        <Alert title="Success!" color='primary' />
+        <Alert title="Success!" color='surface' />
+        <Alert title="Success!" color='secondary' />
     )
 }
 
@@ -63,9 +58,10 @@ function AlertColors(){
 
 ### size?: Size
 
-Type: string
-Default: `md`
-Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
 The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 Example usage:
@@ -206,8 +202,8 @@ The as prop allows you to customize the tag of the alert. The default tag is div
 Here is an example of how to display the alert as a span:
 
 ```tsx
-<Alert as='span' color="danger" title="hello" style={{ background: 'green' }} />
-<Alert as='article' color="danger" title="hello" style={{ background: 'green' }} />
+<Alert as='span' color="danger" title="hello" style={{ background: 'success' }} />
+<Alert as='article' color="danger" title="hello" style={{ background: 'success' }} />
 ```
 
 ## custom the style
@@ -217,13 +213,13 @@ We know that you may not always like the style of the alerts that we provide in 
 Here is an example of how to use the `style` prop to set the background color of the alert:
 
 ```tsx
-<Alert color="danger" title="hello" style={{ background: 'green' }} />
+<Alert color="danger" title="hello" style={{ background: 'success' }} />
 ```
 
 Here is an example of how to use the `className` prop to add custom CSS classes to the alert:
 
 ```tsx
-<Alert color="danger" title="hello" className="u_violet" />
+<Alert color="danger" title="hello" className="u_secondary" />
 ```
 
 ## accessibility

@@ -1,0 +1,200 @@
+---
+title: Badge
+type: Components
+excerpt: The Badge component is used to display small pieces of information such as counts, statuses, and notifications in a concise and eye-catching way.
+items: ['Badge']
+file: ' core'
+---
+
+## Import
+
+```bash
+import { Badge } from 'your-library'
+```
+
+## props
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop determines the size of the Badge. It accepts the following values:
+
+```tsx showLineNumbers title="Badge.tsx"
+export const BadgeSize = () => {
+  return (
+    <div className="l_flow__md">
+      <Flex items="center" gap="sm">
+        <Badge size="3xs" variant="numeric" number={15} max={15} />
+        <Badge size="2xs" variant="numeric" number={15} max={15} />
+        <Badge size="xs" variant="numeric" number={15} max={15} />
+        <Badge size="sm" variant="numeric" number={15} max={15} />
+        <Badge size="md" variant="numeric" number={15} max={15} />
+        <Badge size="lg" variant="numeric" number={15} max={15} />
+        <Badge size="2xl" variant="numeric" number={15} max={15} />
+        <Badge size="3xl" variant="numeric" number={15} max={15} />
+      </Flex>
+      <Flex items="center" gap="sm">
+        <Badge size="3xs" variant="icon" icon={<Check />} />
+        <Badge size="2xs" variant="icon" icon={<Check />} />
+        <Badge size="xs" variant="icon" icon={<Check />} />
+        <Badge size="sm" variant="icon" icon={<Check />} />
+        <Badge size="md" variant="icon" icon={<Check />} />
+        <Badge size="lg" variant="icon" icon={<Check />} />
+        <Badge size="2xl" variant="icon" icon={<Check />} />
+        <Badge size="3xl" variant="icon" icon={<Check />} />
+      </Flex>
+      <Flex items="center" gap="sm">
+        <Badge size="3xs" variant="dot" />
+        <Badge size="2xs" variant="dot" />
+        <Badge size="xs" variant="dot" />
+        <Badge size="sm" variant="dot" />
+        <Badge size="md" variant="dot" />
+        <Badge size="lg" variant="dot" />
+        <Badge size="2xl" variant="dot" />
+        <Badge size="3xl" variant="dot" />
+      </Flex>
+    </div>
+  )
+}
+```
+
+### variant
+
+The variant prop determines the type of Badge to render. It accepts the following values:
+
+- **numeric**: displays a numeric value.
+- **icon**: displays an icon.
+- **dot**: displays a dot.
+
+```tsx showLineNumbers title="Badge.tsx"
+  export const BadgeNumericColor = () => {
+  return (
+  <Flex gap="sm">
+    <Badge variant="numeric" number={15} max={15} color="danger" />
+    <Badge variant="numeric" number={15} max={15} color="success" />
+    <Badge variant="numeric" number={15} max={15} color="warning" />
+    <Badge variant="numeric" number={15} max={15} color="primary" />
+    <Badge variant="numeric" number={15} max={15} color="brown" />
+    <Badge variant="numeric" number={15} max={15} color="purple" />
+    <Badge variant="numeric" number={15} max={15} color="secondary" />
+    <Badge variant="numeric" number={15} max={15} color="surface" />
+  </Flex>
+  <Flex gap="sm">
+    <Badge variant="icon" icon={<Check />} color="danger" />
+    <Badge variant="icon" icon={<Check />} color="success" />
+    <Badge variant="icon" icon={<Check />} color="warning" />
+    <Badge variant="icon" icon={<Check />} color="primary" />
+    <Badge variant="icon" icon={<Check />} color="brown" />
+    <Badge variant="icon" icon={<Check />} color="purple" />
+    <Badge variant="icon" icon={<Check />} color="secondary" />
+    <Badge variant="icon" icon={<Check />} color="surface" />
+  </Flex>
+  <Flex gap="sm">
+    <Badge variant="dot" color="danger" />
+    <Badge variant="dot" color="success" />
+    <Badge variant="dot" color="warning" />
+    <Badge variant="dot" color="primary" />
+    <Badge variant="dot" color="brown" />
+    <Badge variant="dot" color="purple" />
+    <Badge variant="dot" color="secondary" />
+    <Badge variant="dot" color="surface" />
+  </Flex>
+  ) }
+
+```
+
+### number?: number
+
+The number prop is required for the numeric variant. It determines the numeric value to display.
+
+```tsx showLineNumbers title="Badge.tsx"
+export const BadgeNumericMaxValue = () => {
+  return (
+    <Flex gap="sm">
+      <Badge variant="numeric" number={15} color="danger" />
+      <Badge variant="numeric" number={150} color="success" />
+      <Badge variant="numeric" number={5} color="warning" />
+      <Badge variant="numeric" number={0} color="primary" />
+      <Badge variant="numeric" showZero number={0} color="danger" />
+      <Badge variant="numeric" number={12211} color="brown" />
+      <Badge variant="numeric" number={1500} color="purple" />
+      <Badge variant="numeric" number={15} color="secondary" />
+      <Badge variant="numeric" number={15} color="surface" />
+    </Flex>
+  )
+}
+```
+
+### max?: number
+
+The max prop is required for the numeric variant. It determines the maximum value that can be displayed. If the number prop is greater than max, the badge will display max+.
+
+```tsx showLineNumbers title="Badge.tsx"
+export const BadgeNumericMaxValue = () => {
+  return (
+    <Flex gap="sm">
+      <Badge variant="numeric" number={15} max={10} color="danger" />
+      <Badge variant="numeric" number={150} max={100} color="success" />
+      <Badge variant="numeric" number={5} max={0} color="warning" />
+      <Badge variant="numeric" number={0} max={15} color="primary" />
+      <Badge variant="numeric" showZero number={0} max={15} color="danger" />
+      <Badge variant="numeric" number={12211} max={10000} color="brown" />
+      <Badge variant="numeric" number={1500} max={100} color="purple" />
+      <Badge variant="numeric" number={15} max={1} color="secondary" />
+      <Badge variant="numeric" number={15} max={15} color="surface" />
+    </Flex>
+  )
+}
+```
+
+### color?: string
+
+Type: Color (string)
+Default: `primary`
+Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+The color prop determines the color of the Badge. It accepts a string representing a color name or a color value in hex, rgb, rgba format.###
+
+code Example
+
+```tsx showLineNumbers title="Badge.tsx"
+export const BadgeDotColor = () => {
+  return (
+    <Flex gap="sm">
+      <Badge variant="dot" color="danger" />
+      <Badge variant="dot" color="success" />
+      <Badge variant="dot" color="warning" />
+      <Badge variant="dot" color="primary" />
+      <Badge variant="dot" color="secondary" />
+      <Badge variant="dot" color="surface" />
+    </Flex>
+  )
+}
+```
+
+## Use Case
+
+Badges are often used to highlight important or urgent information, such as unread messages, new notifications, or error messages. They can also be used to display a user's status, such as "online" or "away."
+
+## Implementation details
+
+The Badge component typically consists of a small shape, such as a circle or square, with a number or text inside. The number or text is often used to indicate the quantity of items or the specific type of notification. The Badge component can be implemented using HTML and CSS, or with a UI framework or library such as React, Angular, or Vue.
+
+## Accessibility
+
+When implementing the Badge component, it's important to ensure that it is accessible to all users, including those with disabilities. This can include using appropriate colors and contrast ratios, providing alternative text for screen readers, and ensuring that the component is keyboard accessible.
+
+## TypeScript Support
+
+Many UI frameworks and libraries, including React, Angular, and Vue, have built-in TypeScript support, which can be useful when implementing the Badge component. Using TypeScript can help catch errors early in the development process and make it easier to maintain and scale the component over time.
+
+## Troubleshooting
+
+Common issues when implementing the Badge component can include incorrect positioning, incorrect styling, or issues with accessibility. Troubleshooting these issues may involve inspecting the HTML and CSS, checking for errors in the code, and testing with different devices and browsers.
+
+## Conclusion
+
+The Badge component is a useful UI element for highlighting important or urgent information, and can be implemented using HTML and CSS or with a UI framework or library. When implementing the Badge component, it's important to consider accessibility, TypeScript support, and troubleshooting common issues.

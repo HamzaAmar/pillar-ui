@@ -1,0 +1,55 @@
+---
+title: useIsomorphicLayoutEffect
+type: Hooks
+excerpt: The useIsomorphicLayoutEffect custom hook is a React hook that provides a cross-platform solution for using either the useLayoutEffect or useEffect hook based on whether the code is running in a browser or a server-side environment. This hook ensures that the effect is executed synchronously in the same phase as React's layout calculation, regardless of the environment.
+file: hooks
+---
+
+# useIsomorphicLayoutEffect
+
+## Introduction
+
+The useIsomorphicLayoutEffect custom hook is a React hook that provides a cross-platform solution for using either the `useLayoutEffect` or `useEffect` hook based on whether the code is running in a browser or a server-side environment. This hook ensures that the effect is executed synchronously in the same phase as React's layout calculation, regardless of the environment.
+
+React provides two similar hooks: `useLayoutEffect` and `useEffect`. The primary difference between them is the timing of when the effect is executed. `useLayoutEffect` runs synchronously after React has performed all the necessary DOM mutations, whereas `useEffect` runs asynchronously in a separate microtask. The `useIsomorphicLayoutEffect` hook helps maintain consistent behavior across different environments.
+
+## Usage
+
+To use the `useIsomorphicLayoutEffect` hook, simply import it into your component and call it like any other React hook:
+
+```jsx showLineNumbers title="useIsomorphicLayoutEffect.js"
+import { useLayoutEffect, useEffect } from 'react'
+
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
+
+function App() {
+  useIsomorphicLayoutEffect(() => {
+    // Perform some side effects synchronously
+    console.log('Layout effect executed')
+    // ...
+    return () => {
+      // Clean up the effect
+      console.log('Layout effect cleanup')
+      // ...
+    }
+  }, [])
+
+  return <div>Example Component</div>
+}
+```
+
+The useIsomorphicLayoutEffect hook dynamically selects either useLayoutEffect or useEffect based on the environment. If the code is running in a browser, useLayoutEffect will be used. Otherwise, useEffect will be used. The effect callback and dependencies are passed to the selected hook as usual.
+
+It's important to note that you should only use useIsomorphicLayoutEffect when the behavior of the effect needs to be synchronous and tightly coupled with React's layout calculation. In most cases, the default useEffect hook should suffice.
+
+## Implementation Details
+
+The useIsomorphicLayoutEffect hook leverages the typeof window check to determine whether the code is running in a browser or a server-side environment. If window is defined, indicating that the code is running in a browser, the useLayoutEffect hook is used. Otherwise, the useEffect hook is used. This ensures that the effect is executed synchronously during the appropriate phase in React's lifecycle.
+
+## TypeScript Support
+
+The useIsomorphicLayoutEffect hook has built-in support for TypeScript and provides typechecking and autocompletion when used in TypeScript projects.
+
+## Conclusion
+
+The useIsomorphicLayoutEffect custom hook allows you to use either useLayoutEffect or useEffect based on the current environment, ensuring that the effect is executed synchronously during React's layout calculation. This hook provides a cross-platform solution for consistent behavior across different environments.

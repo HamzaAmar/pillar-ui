@@ -1,0 +1,157 @@
+---
+title: Switch
+type: Components
+excerpt: The Switch component is used to toggle between two states.
+items: ['Switch']
+file: ' core'
+---
+
+## Props
+
+The Switch component accepts the following props:
+
+### label
+
+The label prop sets the label for the switch.
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop sets the size of the switch. You can choose from a range of sizes including 3xs, 2xs, xs, sm, md, lg, xl, 2xl and 3xl.
+
+```tsx showLineNumbers title="Switch.tsx"
+import { Flex, Switch } from '@pillar/core'
+
+export function SwitchSizes() {
+  return (
+    <Flex gap="sm" items="center">
+      <Switch label="Hello" size="3xs" />
+      <Switch label="Hello" size="2xs" />
+      <Switch label="Hello" size="xs" />
+      <Switch label="Hello" size="sm" />
+      <Switch label="Hello" size="md" />
+      <Switch label="Hello" size="lg" />
+      <Switch label="Hello" size="xl" />
+      <Switch label="Hello" size="2xl" />
+      <Switch label="Hello" size="3xl" />
+    </Flex>
+  )
+}
+```
+
+### color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+The color prop sets the color of the switch. You can choose from a range of colors including red, orange, green, primary, purple, secondary, surface and brown.
+
+```tsx showLineNumbers title="Switch.tsx"
+import { Flex, Switch } from '@pillar/core'
+
+export function SwitchSizes() {
+  return (
+    <Flex gap="sm" items="center">
+      <Switch label="Hello" color="danger" />
+      <Switch label="Hello" color="warning" />
+      <Switch label="Hello" color="success" />
+      <Switch label="Hello" color="primary" />
+      <Switch label="Hello" color="secondary" />
+      <Switch label="Hello" color="surface" />
+    </Flex>
+  )
+}
+```
+
+### defaultPressed
+
+The defaultPressed prop sets the default state of the switch. If set to true, the switch will be in the pressed state by default.
+
+```tsx showLineNumbers title="Switch.tsx"
+import { Flex, Switch } from '@pillar/core'
+
+export function SwitchDefault() {
+  return (
+    <Flex gap="sm" items="center">
+      <Switch label="Hello" defaultPressed color="danger" />
+      <Switch label="Hello" defaultPressed color="warning" />
+      <Switch label="Hello" defaultPressed color="success" />
+      <Switch label="Hello" defaultPressed color="primary" />
+      <Switch label="Hello" defaultPressed color="secondary" />
+      <Switch label="Hello" defaultPressed color="surface" />
+    </Flex>
+  )
+}
+```
+
+### corner
+
+The corner prop sets the corner style of the switch. You can choose from a range of corner styles including sharp, xs, sm, md, lg, xl and full.
+
+```tsx showLineNumbers title="Switch.tsx"
+import { Flex, Switch } from '@pillar/core'
+
+export function SwitchDefault() {
+  return (
+    <Flex gap="sm" items="center">
+      <Switch label="Hello" corner="sharp" />
+      <Switch label="Hello" corner="xs" />
+      <Switch label="Hello" corner="sm" />
+      <Switch label="Hello" corner="md" />
+      <Switch label="Hello" corner="lg" />
+      <Switch label="Hello" corner="xl" />
+      <Switch label="Hello" corner="full" />
+    </Flex>
+  )
+}
+```
+
+### disabled
+
+The disabled prop disables the switch.
+
+```tsx showLineNumbers title="Switch.tsx"
+import { Flex, Switch } from '@pillar/core'
+
+export function SwitchDefault() {
+  return (
+    <Flex gap="sm" items="center">
+      <Switch label="Hello" disabled />
+      <Switch label="Hello" disabled defaultPressed />
+    </Flex>
+  )
+}
+```
+
+## Use Case
+
+The Switch component is used to toggle between two states. It can be used in various scenarios such as when you need to enable or disable a feature or when you need to switch between two modes.
+
+## Implementation details
+
+The Switch component is implemented using React and TypeScript. It is part of the @pillar/core package.
+
+## Accessibility
+
+The Switch component follows accessibility best practices.
+
+- Supports Windows High Contrast Mode
+- Supports Reduced Animation Mode
+- Supports Right-to-Left (RTL) Languages
+- Provides labels with descriptive names for accessibility and screen readers
+
+## TypeScript Support
+
+The Switch component is fully typed and supports TypeScript.
+
+## Troubleshooting
+
+If you encounter any issues while using the Switch component, please check if you have imported it correctly and if you are passing valid props.
+
+## Conclusion
+
+The Switch component is a versatile and easy-to-use component that can be used to toggle between two states. It comes with a range of customization options and follows accessibility best practices.

@@ -1,0 +1,284 @@
+---
+title: Text
+type: Components
+excerpt: The Accordion component is a collapsible container that can be used to toggle the visibility of content. It's often used to hide content that may be overwhelming or to group related information together.
+items: ['Text']
+file: ' core'
+---
+
+## Props
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop controls the size of the text. The following values are valid:
+
+Example:
+
+```tsx showLineNumbers title="Text.tsx"
+<Text size="xs">Some text.</Text>
+<Text size="sm">Some text.</Text>
+<Text size="md">Some text.</Text>
+<Text size="lg">Some text.</Text>
+<Text size="xl">Some text.</Text>
+<Text size="2xl">Some text.</Text>
+```
+
+### weight
+
+The weight prop controls the weight (boldness) of the text. The following values are valid:
+
+Example:
+
+```tsx showLineNumbers title="Text.tsx"
+<Text weight="thin">Some text.</Text>
+<Text weight="extra-light">Some text.</Text>
+<Text weight="normal">Some text.</Text>
+<Text weight="bold">Some text.</Text>
+<Text weight="extra-bold">Some text.</Text>
+```
+
+Example:
+
+```tsx showLineNumbers title="Text.tsx"
+<Text size="lg" weight="bold">
+  Some important text.
+</Text>
+```
+
+### weight
+
+The truncate prop with the value of "multiline" will truncate the text if it exceeds the specified numberLine prop value and will display an ellipsis at the end of the last visible line. On the other hand, if the truncate prop value is "singleline", it will truncate the text to fit within a single line and display an ellipsis at the end of the truncated text.
+
+truncate (optional): Determines whether the text should be truncated and how it should be truncated. If the value is "singleline", the text will be truncated to fit within a single line and display an ellipsis at the end of the truncated text. If the value is "multiline", the text will be truncated if it exceeds the specified numberLine prop value and display an ellipsis at the end of the last visible line.
+
+Example:
+
+```tsx showLineNumbers title="Text.tsx"
+export function TextTrucates() {
+  return (
+    <div className="l_flow__md">
+      <Text size="3xl" truncate="multiline" numberLine={1}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Text>
+      <Text size="3xl" truncate="multiline" numberLine={2}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Text>
+      <Text size="3xl" truncate="multiline" numberLine={3}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Text>
+      <Text size="3xl" truncate="multiline" numberLine={4}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Text>
+
+      <Text size="3xl" truncate="multiline" numberLine={5}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Text>
+
+      <Text size="3xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Text>
+    </div>
+  )
+}
+```
+
+Example:
+
+```tsx showLineNumbers title="Text.tsx"
+<Text size="lg" weight="bold">
+  Some important text.
+</Text>
+```
+
+### align
+
+This property specifies the horizontal alignment of the text within the parent element. It can take one of the following values:
+
+- start: The text is aligned to the left (default).
+- center: The text is centered horizontally.
+- end: The text is aligned to the right.
+
+Example:
+
+```tsx showLineNumbers title="Text.tsx"
+export function TextAligns() {
+  return (
+    <div className="l_flow">
+      <Text align="start">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Text>
+      <Text align="center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Text>
+      <Text align="end">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Text>
+    </div>
+  )
+}
+```
+
+### Color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+The color prop sets the color of the text . The available options are: red, brown, purple, secondary, green, orange, primary, and surface. The contrast prop sets the contrast level between the text and the background color. When contrast is set to "high", the text has a higher contrast with the background, making it easier to read, while when contrast is set to "low", the text has lower contrast with the background, which can make it more difficult to read the default is `high`.
+
+Example:
+
+```tsx showLineNumbers title="Text.tsx"
+export function TextColors() {
+  return (
+    <div className="l_flow">
+      <Text color="danger" contrast="high">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="secondary">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="success">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="warning">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="primary">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="surface">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+
+      <Text color="danger" contrast="low">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="secondary" contrast="low">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="success" contrast="low">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="warning" contrast="low">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="primary" contrast="low">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+      <Text color="surface" contrast="low">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Text>
+    </div>
+  )
+}
+```
+
+### leading
+
+you can customize the leading (line height) of your text by using the leading prop. This prop accepts four different values: "normal", "sm", "md", and "lg"
+
+Example
+
+```tsx showLineNumbers title="Text.tsx"
+<Text leading="normal">
+  This text has a normal line height.
+</Text>
+<Text leading="sm">
+  This text has a small line height.
+</Text>
+<Text leading="md">
+  This text has a medium line height.
+</Text>
+<Text leading="lg">
+  This text has a large line height.
+</Text>
+
+```
+
+By using the leading prop, you can easily adjust the line height of your text to create a more visually appealing design.
+
+### dir For RTL language Support
+
+"dir": This prop sets the direction of the text within the component. It accepts the values "rtl" for right-to-left direction or "ltr" for left-to-right direction. This prop is useful when displaying text in languages that are read from right to left, such as Arabic or Hebrew.
+
+```tsx showLineNumbers title="Text.tsx"
+export function TextRTL() {
+  return (
+    <div className="l_flow">
+      <Text dir="rtl">
+        مُرَاكُش اموراكوش، «أرض الله») تسمى أيضًا بالمدينة الحمراء وعاصمة النخيل، هي ثالث أكبر مدينة في المملكة المغربية
+        من ناحية عدد السكان. وهي عاصمة جهة مراكش آسفي. تقع مراكش على بعد 580 كم (360 ميل) جنوب شرق طنجة، 327 كم (203
+        ميل) جنوب شرق العاصمة المغربية الرباط، 239 كم (149 ميل) جنوب شرق الدار البيضاء، و 246 كم (153 ميل) شمال شرق
+        أكادير.
+      </Text>
+      <Text dir="rtl">ללמוד לקוד זה אחד הדברים הכי טובים שאני עושה כל חיי</Text>
+      <Text dir="rtl">ކޯޑް ކުރަން ދަސްކުރުމަކީ އަހަރެންގެ މުޅި އުމުރުގައި ވެސް ކުރި އެންމެ ރަނގަޅު ކަމެކެވެ</Text>
+    </div>
+  )
+}
+```
+
+## Use Case
+
+The Text component can be used to display text in various sizes and weights.
+
+## Implementation details
+
+The Text component is implemented using JSX and styled with CSS.
+
+## Accessibility
+
+The Text component uses semantic HTML elements and provides an aria-label attribute when necessary to ensure accessibility.
+
+## TypeScript Support
+
+The Text component has full TypeScript support.
+
+## Troubleshooting
+
+If the text is not displaying as expected, make sure that the correct props are being used and that any necessary styles are applied.
+
+## Conclusion
+
+The Text component is a versatile component that can be used to display text in various sizes and weights with full accessibility and TypeScript support.

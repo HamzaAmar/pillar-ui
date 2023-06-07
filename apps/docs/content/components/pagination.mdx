@@ -1,0 +1,130 @@
+---
+title: Pagination
+type: Components
+excerpt: The Pagination component is used to navigate between pages of content.
+items: ['Pagination']
+file: ' core'
+---
+
+## Props
+
+The Pagination component accepts the following props:
+
+### color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `surfacece` | `primary` | `secondary`
+
+The color prop sets the color of the pagination buttons. You can choose from a range of colors including red, green, orange, primary, purple, secondary, surfacece and brown.
+
+```tsx showLineNumbers title="Pagination.tsx"
+import { Flex, Pagination } from '@pillar/core'
+
+export function PaginationDefault() {
+  return (
+    <Flex gap="sm" items="center">
+      <Pagination />
+      <Pagination color="danger" />
+      <Pagination color="success" />
+      <Pagination color="warning" />
+      <Pagination color="primary" />
+      <Pagination color="secondary" />
+      <Pagination color="surfacece" />
+    </Flex>
+  )
+}
+```
+
+### variant
+
+The variant prop sets the style of the pagination buttons. You can choose from three variants: default, soft and solid.
+
+```tsx showLineNumbers title="Pagination.tsx"
+import { Flex, Pagination } from '@pillar/core'
+
+export function PaginationDefault() {
+  return (
+    <Flex gap="sm" items="center">
+      <Pagination variant="soft" />
+      <Pagination variant="solid" />
+      <Pagination variant="outline" />
+    </Flex>
+  )
+}
+```
+
+### corner
+
+The corner prop sets the corner style of the pagination buttons. You can choose from a range of corner styles including sharp, xs, sm, md, lg, xl and full.
+
+```tsx showLineNumbers title="Pagination.tsx"
+import { Flex, Pagination } from '@pillar/core'
+
+export function PaginationDefault() {
+  return (
+    <Flex gap="sm" items="center">
+      <Pagination />
+      <Pagination corner="full" />
+      <Pagination corner="xs" />
+      <Pagination corner="sm" />
+      <Pagination corner="md" />
+      <Pagination corner="lg" />
+      <Pagination corner="xl" />
+      <Pagination corner="circle" />
+      <Pagination corner="radius" />
+    </Flex>
+  )
+}
+```
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop sets the size of the pagination buttons. You can choose from a range of sizes including 3xs, 2xs, xs, sm, md, lg, xl, 2xl and 3xl.
+
+```tsx showLineNumbers title="Pagination.tsx"
+import { Flex, Pagination } from '@pillar/core'
+
+export function PaginationDefault() {
+  return (
+    <Flex gap="sm" items="center">
+      <Pagination />
+      <Pagination size="2xs" />
+      <Pagination size="xs" />
+      <Pagination size="sm" />
+      <Pagination size="md" />
+      <Pagination size="lg" />
+      <Pagination size="xl" />
+      <Pagination size="2xl" />
+    </Flex>
+  )
+}
+```
+
+## Use Case
+
+The Pagination component is used to navigate between pages of content. It can be used in various scenarios such as when you have a large dataset that needs to be split into multiple pages or when you have a long article that needs to be split into multiple sections.
+
+## Implementation details
+
+The Pagination component is implemented using React and TypeScript. It is part of the @pillar/core package.
+
+## Accessibility
+
+The Pagination component follows accessibility best practices.
+
+## TypeScript Support
+
+The Pagination component is fully typed and supports TypeScript.
+
+## Troubleshooting
+
+If you encounter any issues while using the Pagination component, please check if you have imported it correctly and if you are passing valid props.
+
+## Conclusion
+
+The Pagination component is a versatile and easy-to-use component that can be used to navigate between pages of content. It comes with a range of customization options and follows accessibility best practices.

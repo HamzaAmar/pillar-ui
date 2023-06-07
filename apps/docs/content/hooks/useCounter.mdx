@@ -1,0 +1,74 @@
+---
+title: 'useCounter'
+type: 'Hooks'
+excerpt: 'The useCounter hook is a custom hook for managing a counter state value. It returns an object containing the current counter value, a function to increment the counter value, and a function to decrement the counter value.'
+file: ' hooks'
+---
+
+## Why useCounter
+
+Managing counter state values can be a common task in React applications, and this hook provides an easy way to handle it in a consistent and reusable way.
+
+## Usage
+
+To use the useCounter hook in your React components, import it and call it in your functional component like this:
+
+Parameters its an object of the following:
+
+- **value (optional)**: The initial value of the counter. Defaults to 0.
+- **min (optional)**: The minimum value of the counter. Defaults to -Infinity.
+- **max (optional)**: The maximum value of the counter. Defaults to Infinity.
+
+Returned values is An object of the following:
+
+- **count**: The current value of the counter.
+- **increment**: A function to increment the counter value.
+- **decrement**: A function to decrement the counter value.
+
+```tsx
+import { useCounter } from '@pillar/hooks'
+
+function MyComponent() {
+  const { count, increment, decrement } = useCounter({ value: 10, min: 0, max: 100 })
+
+  return (
+    <div>
+      <p>Current count: {count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={() => decrement(5)}>Decrement By 5</button>
+      <button onClick={() => increment(5)}>Icrement By 5</button>
+    </div>
+  )
+}
+```
+
+## Use Case
+
+The useCounter hook can be used for a variety of purposes, including:
+
+- Displaying a counter: You can use useCounter to display a counter in your UI. For example, you could use it to display the number of items in a shopping cart.
+
+- Tracking user interactions: You can use useCounter to track user interactions with your UI. For example, you could use it to track the number of times a user clicks on a button.
+
+- Implementing a game mechanic: You can use useCounter to implement a game mechanic in your UI. For example, you could use it to track the number of lives a player has in a game.
+
+- Controlling the visibility of an element: You can use useCounter to control the visibility of an element based on the counter value. For example, you could use it to show or hide a progress bar based on the number of items that have been downloaded.
+
+- Conditional rendering: You can use useCounter to conditionally render components based on the counter value. For example, you could use it to conditionally render a "More" button only when there are more items to display.
+
+- Implementation details
+
+The useCounter hook uses the useState hook from the React library to manage the counter state value.
+
+## TypeScript Support
+
+This hook is written in TypeScript and provides type definitions for its usage
+
+## Troubleshooting
+
+If you encounter any issues using the useCounter hook, please refer to the documentation or open an issue on the project's GitHub repository.
+
+## Conclusion
+
+The useCounter custom hook is a useful tool for adding counter functionality to your React application. By using this hook, you can make your app more engaging and interactive for your users.

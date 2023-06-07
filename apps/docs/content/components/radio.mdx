@@ -1,0 +1,258 @@
+---
+title: Radio
+type: Components
+excerpt: The Radio component is a simple radio input that allows users to select a single option from a list of options.
+items: ['Radio']
+file: ' core'
+---
+
+## Usage
+
+```tsx showLineNumbers title="Paper.tsx"
+import { Radio } from '@pillar/core'
+
+function RadioColors() {
+  return <Radio label="Option 1" />
+}
+```
+
+## Props
+
+### label (required)
+
+The label is essential for all users as it appears next to the radio button, providing context and clarity. It is especially crucial for those who rely on screen readers to access the content.
+
+### color
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `surface` | `primary` | `secondary`
+
+The color scheme to use for the radio button. Possible values are "primary", "secondary", "success", "warning", and "error". Defaults to "primary".
+
+```tsx showLineNumbers title="Paper.tsx"
+import { Flex, Radio } from '@pillar/core'
+
+export function RadioColors() {
+  return (
+    <div>
+      <Flex gap="sm" items="center">
+        <Radio color="danger" name="red" label="Red" />
+        <Radio color="success" name="green" label="Green" />
+        <Radio color="warning" name="orange" label="Orange" />
+        <Radio color="primary" name="primary" label="Primary" />
+        <Radio color="surface" name="surface" label="Slate" />
+        <Radio color="secondary" name="secondary" label="Secondary" />
+      </Flex>
+    </div>
+  )
+}
+```
+
+### color
+
+The color scheme to use for the radio button. Possible values are "primary", "secondary", "success", "warning", and "error". Defaults to "primary".
+
+```tsx showLineNumbers title="Paper.tsx"
+import { Flex, Radio } from '@pillar/core'
+
+export function RadioColors() {
+  return (
+    <div>
+      <Flex gap="sm" items="center">
+        <Radio color="danger" name="red" label="Red" />
+        <Radio color="success" name="green" label="Green" />
+        <Radio color="warning" name="orange" label="Orange" />
+        <Radio color="primary" name="primary" label="Primary" />
+        <Radio color="brown" name="brown" label="Brown" />
+        <Radio color="surface" name="surface" label="Slate" />
+        <Radio color="purple" name="purple" label="Purple" />
+        <Radio color="secondary" name="secondary" label="Secondary" />
+      </Flex>
+    </div>
+  )
+}
+```
+
+### variant
+
+The variant prop controls the visual appearance of the radio button by changing the way it is displayed when selected. It determines whether the radio button has a solid ring, an outline, or a soft background color when it is checked. This allows you to customize the look and feel of the radio button to better match the design of your application.
+
+```tsx showLineNumbers title="Paper.tsx"
+import { Flex, Radio } from '@pillar/core'
+
+export function RadioVariants() {
+  return (
+    <div className="l_flow__md">
+      <Flex gap="sm" items="center">
+        <Radio color="danger" name="red" label="Red" />
+        <Radio color="success" name="green" label="Green" />
+        <Radio color="warning" name="orange" label="Orange" />
+        <Radio color="primary" name="primary" label="Primary" />
+        <Radio color="brown" name="brown" label="Brown" />
+        <Radio color="surface" name="surface" label="Slate" />
+        <Radio color="purple" name="purple" label="Purple" />
+        <Radio color="secondary" name="secondary" label="Secondary" />
+      </Flex>
+      <Flex gap="sm" items="center">
+        <Radio variant="outline" color="danger" name="red2" label="Red" />
+        <Radio variant="outline" color="success" name="green2" label="Green" />
+        <Radio variant="outline" color="warning" name="orange2" label="Orange" />
+        <Radio variant="outline" color="primary" name="primary2" label="Primary" />
+        <Radio variant="outline" color="brown" name="brown2" label="Brown" />
+        <Radio variant="outline" color="surface" name="surface2" label="Slate" />
+        <Radio variant="outline" color="purple" name="purple2" label="Purple" />
+        <Radio variant="outline" color="secondary" name="secondary2" label="Secondary" />
+      </Flex>
+      <Flex gap="sm" items="center">
+        <Radio variant="soft" color="danger" name="red3" label="Red" />
+        <Radio variant="soft" color="success" name="green3" label="Green" />
+        <Radio variant="soft" color="warning" name="orange3" label="Orange" />
+        <Radio variant="soft" color="primary" name="primary3" label="Primary" />
+        <Radio variant="soft" color="brown" name="brown3" label="Brown" />
+        <Radio variant="soft" color="surface" name="surface3" label="Slate" />
+        <Radio variant="soft" color="purple" name="purple3" label="Purple" />
+        <Radio variant="soft" color="secondary" name="secondary3" label="Secondary" />
+      </Flex>
+    </div>
+  )
+}
+```
+
+### size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size of the radio button. Possible values are "2xs", "xs","sm", "md", "lg", "xl", '2xl'. Defaults to "md".
+
+```tsx showLineNumbers title="Paper.tsx"
+import { Flex, Radio } from '@pillar/core'
+
+export function RadioSizes() {
+  return (
+    <Flex gap="sm" items="center">
+      <Radio size="3xs" name="red" label="Red" />
+      <Radio size="2xs" name="green" label="Green" />
+      <Radio size="xs" name="orange" label="Orange" />
+      <Radio size="sm" name="primary" label="primary" />
+      <Radio size="lg" name="surface" label="Slate" />
+      <Radio size="3xl" name="secondary" label="Secondary" />
+    </Flex>
+  )
+}
+```
+
+### state
+
+The Radio component can be in several different states depending on its props:
+
+#### default
+
+**Default state**: By default, the radio button is unchecked and enabled.
+
+```tsx showLineNumbers title="Paper.tsx"
+export function RadioStates() {
+  return (
+    <div className="l_flow__md">
+      <Flex gap="sm" items="center">
+        <Radio name="red" label="Red" />
+        <Radio variant="soft" name="red" label="Red" />
+        <Radio variant="outline" name="red" label="Red" />
+
+        <Radio name="red" label="Red" defaultChecked />
+        <Radio name="red" label="Red" disabled />
+        <Radio name="red" label="Red" disabled defaultChecked />
+      </Flex>
+      <Flex gap="sm" items="center">
+        <Radio variant="soft" name="checked.red" label="Red" defaultChecked />
+        <Radio variant="soft" name="red" label="Red" disabled />
+        <Radio variant="soft" name="disabled.checked.red" label="Red" disabled defaultChecked />
+      </Flex>
+      <Flex gap="sm" items="center">
+        <Radio variant="outline" name="red" label="Red" defaultChecked />
+        <Radio variant="outline" name="red" label="Red" disabled />
+        <Radio variant="outline" name="red" label="Red" disabled defaultChecked />
+      </Flex>
+    </div>
+  )
+}
+```
+
+#### checked
+
+**Checked state**: The defaultChecked prop can be used to set the radio button as checked by default. Additionally, clicking on the radio button will toggle it between checked and unchecked states.
+
+```tsx showLineNumbers title="Paper.tsx"
+import { Flex, Radio } from '@pillar/core'
+export function RadioStates() {
+  return (
+    <div className="l_flow__md">
+      <Flex gap="sm" items="center">
+        <Radio variant="soft" name="checked.red" label="Red" defaultChecked />
+        <Radio variant="outline" name="red" label="Red" defaultChecked />
+        <Radio name="red" label="Red" defaultChecked />
+      </Flex>
+    </div>
+  )
+}
+```
+
+#### disabled
+
+**Disabled state**: The disabled prop can be used to disable the radio button, preventing it from being clicked or interacted with in any way.
+
+```tsx showLineNumbers title="Paper.tsx"
+import { Flex, Radio } from '@pillar/core'
+export function RadioStates() {
+  return (
+    <div className="l_flow__md">
+      <Flex gap="sm" items="center">
+        <Radio name="red" label="Red" disabled />
+        <Radio variant="soft" name="red" label="Red" disabled />
+        <Radio variant="outline" name="red" label="Red" disabled />
+      </Flex>
+    </div>
+  )
+}
+```
+
+**use case Disabled**
+
+- When a user has not yet completed a form, but some options are not applicable or not yet available. By disabling certain radio buttons, you can indicate to the user that these options are not currently selectable, while still providing a visual representation of all the available choices.
+
+- When presenting information that is read-only or cannot be changed by the user. In this case, the radio buttons can be disabled to indicate that they are not interactive, and are only there for informational purposes.
+
+- When presenting a set of options that are only available to certain users or under certain conditions. By disabling some radio buttons, you can clearly show which options are available and which are not.
+
+- When dealing with multi-step processes, you may want to disable certain options until the user has completed a previous step. This can help prevent errors and ensure that the user follows the correct sequence of steps.
+
+- When presenting options that require additional permissions or authorization. By disabling certain radio buttons, you can indicate to the user that these options are only available to certain users or under certain conditions.
+
+**Checked and disabled state**: The defaultChecked and disabled props can be combined to set the radio button as checked and disabled by default. In this state, the radio button cannot be interacted with or toggled.
+
+#### defaultCheck and disabled
+
+```tsx showLineNumbers title="Paper.tsx"
+import { Flex, Radio } from '@pillar/core'
+export function RadioStates() {
+  return (
+    <div className="l_flow__md">
+      <Flex gap="sm" items="center">
+        <Radio name="red" label="Red" disabled defaultChecked />
+        <Radio variant="soft" name="red" label="Red" disabled defaultChecked />
+        <Radio variant="outline" name="red" label="Red" disabled defaultChecked />
+      </Flex>
+    </div>
+  )
+}
+```
+
+## Customization
+
+The Radio component can be customized by passing a custom `className` or `style` prop. Additionally, you can create a custom Radio component by extending the base component and adding your own custom styles and functionality.
+
+```
+
+```

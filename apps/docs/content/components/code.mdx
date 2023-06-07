@@ -1,0 +1,104 @@
+---
+title: Code
+type: Components
+excerpt: The Code component is used to render code to the screen.
+items: ['Code']
+file: 'core'
+---
+
+## Props
+
+### corner: Corner
+
+can be used to customize the corners of the code block. The corner prop accepts a string that can be one of the following values:
+
+- sharp: The code block will have sharp corners.
+- sm: The code block will have small, rounded corners.
+- md: The code block will have medium-sized, rounded corners.
+- lg: The code block will have large, rounded corners.
+- full: The code block will have rounded corners that fill the entire block.
+
+```tsx showLineNumbers title="Code.tsx"
+export const CodeCorners = () => {
+  return (
+    <Flex gap="sm" direction="column" justify="center">
+      <Code corner="sharp">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code corner="sm">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code corner="md">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code corner="lg">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code corner="full">{`console.log('Hello world Every thing is OK')`}</Code>
+    </Flex>
+  )
+}
+```
+
+### color?: string
+
+- Type: string
+- Default: `primary`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+The color prop determines the color of the code. It accepts a string representing a color name or a color value in hex, rgb, rgba format.
+
+```tsx showLineNumbers title="Code.tsx"
+export const CodeColors = () => {
+  return (
+    <Flex gap="sm" direction="column" justify="center">
+      <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="success">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="warning">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="primary">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="surface">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="secondary">{`console.log('Hello world Every thing is OK')`}</Code>
+    </Flex>
+  )
+}
+```
+
+### Size
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop determines the size of the code. It accepts a string representing a length in pixels.
+
+```tsx showLineNumbers title="Code.tsx"
+export const CodeSizes = () => {
+  return (
+    <Flex gap="sm" direction="column" justify="center">
+      <Code size="2xs">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="xs">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="sm">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="md">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="lg">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="xl">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="2xl">{`console.log('Hello world Every thing is OK')`}</Code>
+    </Flex>
+  )
+}
+```
+
+## Use Case
+
+The Code component is used to render code to the screen. It can be used to display code snippets, documentation, or even entire applications.
+
+## Implementation details
+
+The Code component renders a block of text, with each line of code indented by four spaces. The Code component also has a few other props that can be used to customize the appearance of the code, such as the color, size, and background color.
+
+## Accessibility
+
+The Code component is accessible to all users, including those with disabilities. The code is rendered as a block of text, which is easy to read and understand. The Code component also has a few other props that can be used to improve the accessibility of the code, such as the color and size.
+
+## TypeScript Support
+
+Many UI frameworks and libraries, including React, Angular, and Vue, have built-in TypeScript support, which can be useful when implementing the Code component. Using TypeScript can help catch errors early in the development process and make it easier to maintain and scale the component over time.
+
+## Troubleshooting
+
+Common issues when implementing the Code component can include incorrect positioning, incorrect styling, or issues with accessibility. Troubleshooting these issues may involve inspecting the HTML and CSS, checking for errors in the code, and testing with different devices and browsers.
+
+## Conclusion
+
+The Code component is a useful UI element for rendering code to the screen. It can be implemented using HTML and CSS, or with a UI framework or library. When implementing the Code component, it's important to consider accessibility, TypeScript support, and troubleshooting common issues.

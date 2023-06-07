@@ -1,0 +1,64 @@
+---
+title: usePreferColorScheme
+type: Hooks
+excerpt: The usePreferColorScheme hook is a custom hook for detecting the user's preferred color scheme. It returns a string value of either "dark" or "light".
+file: hooks
+---
+
+## Introduction
+
+The usePreferColorScheme hook is a custom hook for detecting the user's preferred color scheme. It returns a string value of either "dark" or "light".
+
+## Why usePreferColorScheme
+
+The usePreferColorScheme hook is a useful tool for adding dark mode functionality to your React application. By using this hook, you can make your app more accessible and improve the user experience for your users.
+
+## Installation
+
+To use usePreferColorScheme in your project, you can install it from npm:
+
+```bash
+npm install --dev @pillar/hooks
+```
+
+## Usage
+
+To use the usePreferColorScheme hook in your React components, import it and call it in your functional component like this:
+
+```tsx
+import { usePreferColorScheme } from '@pillar/hooks'
+
+function MyComponent() {
+  const { preferColorScheme } = usePreferColorScheme()
+
+  return (
+    <div>
+      <p>Current color scheme: {preferColorScheme}</p>
+    </div>
+  )
+}
+```
+
+## Use Case
+
+The usePreferColorScheme hook can be used in a variety of situations where you need to detect the user's preferred color scheme. For example, you could use it to:
+
+- Change the style of your application based on the user's preferred color scheme.
+- Enable or disable a feature based on the user's preferred color scheme.
+- Present the user with a choice of color schemes to select from.
+
+## Implementation details
+
+The usePreferColorScheme hook uses the useMediaQuery hook from the React library to detect the user's preferred color scheme.
+
+## TypeScript Support
+
+This hook is written in TypeScript and provides type definitions for its usage.
+
+## Troubleshooting
+
+If you encounter any issues using the usePreferColorScheme hook, please refer to the documentation or open an issue on the project's GitHub repository.
+
+## Conclusion
+
+The usePreferColorScheme custom hook is a useful tool for adding dark mode functionality to your React application. By using this hook, you can make your app more accessible and improve the user experience for your users.##
