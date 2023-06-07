@@ -1,19 +1,27 @@
 {
   "name": "@pillar/utils",
   "version": "0.0.0",
+  "sideEffects": false,
+  "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "sideEffects": false,
-  "license": "MIT",
   "files": [
     "dist/**"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "build": "npx tsup",
+    "build:watch": "npx tsup --watch",
     "lint": "eslint \"src/**/*.ts*\"",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "yarn build:watch",
+    "test": "vitest --watch"
   },
   "devDependencies": {
     "@pillar/tsconfig": "*",
@@ -23,7 +31,8 @@
     "eslint-config-custom": "*",
     "react": "^18.1.0",
     "tsup": "^5.10.1",
-    "typescript": "^4.5.3"
+    "typescript": "^4.5.3",
+    "vitest": "^0.31.2"
   },
   "publishConfig": {
     "access": "public"
