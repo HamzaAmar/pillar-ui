@@ -6,7 +6,7 @@ describe('isReactElement', () => {
   it('should return true for valid React elements', () => {
     const element = <div>Hello, World!</div>
     expect(isReactElement(element)).toBe(true)
-    const element2 = React.cloneElement(element, { size: 'sm', style: { backgroundColor: 'red' } })
+    const element2 = React.cloneElement(element, { size: 'sm', style: { backgroundColor: 'danger' } })
     expect(isReactElement(element2)).toBe(true)
     const element3 = React.createElement('div', { size: 'sm' }, <div>Hello, World!</div>)
     expect(isReactElement(element3)).toBe(true)

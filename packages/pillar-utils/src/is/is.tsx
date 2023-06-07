@@ -120,5 +120,34 @@ export function isError(val: unknown): val is Error {
  * @returns {boolean} `true` if the year is a leap year, `false` otherwise.
  */
 export function isLeapYear(year: number): boolean {
+  if (Number.isNaN(year) || year <= 0) return false
   return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)
 }
+
+/**
+ * Checks if a string is a valid date.
+ * @param {string} dateString - The string to check.
+ * @returns {boolean} - Returns true if the string is a valid date, false otherwise.
+ */
+export function isValidDate(dateString: Date | string): boolean {
+  const date = new Date(dateString)
+  if (date.toString() === 'Invalid Date' || isNaN(date.getTime())) return false
+
+  return true
+}
+
+/**
+ * Checks if an object is empty.
+ * @param {object} obj - The object to check.
+ * @returns {boolean} Returns true if the object is empty, false otherwise.
+ */
+export function isEmptyObject(obj: object): boolean {
+  return Object.keys(obj).length === 0
+}
+
+// /**
+//  * Checks if the current environment is development.
+//  *
+//  * @returns {boolean} Returns `true` if the current environment is not production, `false` otherwise.
+//  */
+// export const isDev = () => process.env.NODE_ENV !== 'production'
