@@ -42,7 +42,9 @@ describe('useCopyToClipboard custom hook', () => {
     expect(result.current.text).toEqual('Hello, world!')
     expect(result.current.copied).toBe(true)
 
-    await new Promise((resolve) => setTimeout(resolve, 400))
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 400))
+    })
 
     expect(result.current.text).toBe(null)
     expect(result.current.copied).toBe(false)

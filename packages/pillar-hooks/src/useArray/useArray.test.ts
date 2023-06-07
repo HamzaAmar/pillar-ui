@@ -18,7 +18,6 @@ describe('useArray custom hook', () => {
     act(() => {
       result.current.addElement('developer', 'last')
     })
-    console.log(result.current.list)
     expect(result.current.list).toStrictEqual([...initialValue, 'developer'])
 
     act(() => {

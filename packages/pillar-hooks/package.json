@@ -9,33 +9,47 @@
     "functional programming"
   ],
   "version": "0.0.0",
+  "sideEffects": false,
+  "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "sideEffects": false,
-  "license": "MIT",
   "files": [
     "dist/**"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react --env.NODE_ENV production",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "build": "npx tsup",
+    "build:watch": "npx tsup --watch",
     "lint": "eslint \"src/**/*.ts*\"",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "yarn build:watch",
+    "test": "vitest --watch"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.0.0"
   },
   "devDependencies": {
     "@pillar/tsconfig": "*",
+    "@pillar/utils": "*",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
+    "@vitejs/plugin-react": "^4.0.0",
     "eslint": "^8.15.0",
     "eslint-config-custom": "*",
+    "jsdom": "^22.1.0",
     "react": "^18.1.0",
     "tsup": "^5.10.1",
-    "typescript": "^4.5.3"
+    "typescript": "^4.5.3",
+    "vite": "^4.3.9",
+    "vitest": "^0.31.1"
   },
   "publishConfig": {
     "access": "public"
