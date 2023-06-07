@@ -24,19 +24,15 @@ export const ChipsColor = () => (
     <Chips color="success" variant="solid">
       Hello
     </Chips>
-    <Chips color="brown" variant="solid">
+
+    <Chips color="primary" variant="solid">
       Hello
     </Chips>
-    <Chips color="indigo" variant="solid">
+    <Chips color="secondary" variant="solid">
       Hello
     </Chips>
-    <Chips color="violet" variant="solid">
-      Hello
-    </Chips>
-    <Chips color="purple" variant="solid">
-      Hello
-    </Chips>
-    <Chips color="slate" variant="solid">
+
+    <Chips color="surface" variant="solid">
       Hello
     </Chips>
   </Flex>
@@ -54,19 +50,14 @@ export const ChipsVariants = () => (
       <Chips color="success" variant="outline">
         Hello
       </Chips>
-      <Chips color="brown" variant="outline">
+
+      <Chips color="primary" variant="outline">
         Hello
       </Chips>
-      <Chips color="purple" variant="outline">
+      <Chips color="secondary" variant="outline">
         Hello
       </Chips>
-      <Chips color="indigo" variant="outline">
-        Hello
-      </Chips>
-      <Chips color="violet" variant="outline">
-        Hello
-      </Chips>
-      <Chips color="slate" variant="outline">
+      <Chips color="surface" variant="outline">
         Hello
       </Chips>
     </Flex>
@@ -80,19 +71,13 @@ export const ChipsVariants = () => (
       <Chips color="success" variant="soft">
         Hello
       </Chips>
-      <Chips color="brown" variant="soft">
+      <Chips color="primary" variant="soft">
         Hello
       </Chips>
-      <Chips color="purple" variant="soft">
+      <Chips color="secondary" variant="soft">
         Hello
       </Chips>
-      <Chips color="indigo" variant="soft">
-        Hello
-      </Chips>
-      <Chips color="violet" variant="soft">
-        Hello
-      </Chips>
-      <Chips color="slate" variant="soft">
+      <Chips color="surface" variant="soft">
         Hello
       </Chips>
     </Flex>
@@ -106,19 +91,13 @@ export const ChipsVariants = () => (
       <Chips color="success" variant="solid">
         Hello
       </Chips>
-      <Chips color="brown" variant="solid">
+      <Chips color="primary" variant="solid">
         Hello
       </Chips>
-      <Chips color="purple" variant="solid">
+      <Chips color="secondary" variant="solid">
         Hello
       </Chips>
-      <Chips color="indigo" variant="solid">
-        Hello
-      </Chips>
-      <Chips color="violet" variant="solid">
-        Hello
-      </Chips>
-      <Chips color="slate" variant="solid">
+      <Chips color="surface" variant="solid">
         Hello
       </Chips>
     </Flex>

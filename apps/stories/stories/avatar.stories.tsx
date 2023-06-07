@@ -81,48 +81,40 @@ export function AvatarsColors() {
   return (
     <div className="l_flow__md">
       <Flex gap="xs" items="center">
-        <Avatar color="red" variant="solid" image={image} title="Hello" />
-        <Avatar color="red" variant="solid" title="Hello" />
-        <Avatar color="green" variant="solid" title="Hello" />
-        <Avatar color="orange" variant="solid" title="Hello" />
-        <Avatar color="brown" variant="solid" title="Hello" />
-        <Avatar color="purple" variant="solid" title="Hello" />
-        <Avatar color="violet" variant="solid" title="Hello" />
-        <Avatar color="indigo" variant="solid" title="Hello" />
-        <Avatar color="slate" variant="solid" title="Hello" />
+        <Avatar color="danger" variant="solid" image={image} title="Hello" />
+        <Avatar color="danger" variant="solid" title="Hello" />
+        <Avatar color="success" variant="solid" title="Hello" />
+        <Avatar color="warning" variant="solid" title="Hello" />
+        <Avatar color="secondary" variant="solid" title="Hello" />
+        <Avatar color="primary" variant="solid" title="Hello" />
+        <Avatar color="surface" variant="solid" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
-        <Avatar color="red" variant="outline" image={image} title="Hello" />
-        <Avatar color="red" variant="outline" title="Hello" />
-        <Avatar color="green" variant="outline" title="Hello" />
-        <Avatar color="orange" variant="outline" title="Hello" />
-        <Avatar color="brown" variant="outline" title="Hello" />
-        <Avatar color="purple" variant="outline" title="Hello" />
-        <Avatar color="violet" variant="outline" title="Hello" />
-        <Avatar color="indigo" variant="outline" title="Hello" />
-        <Avatar color="slate" variant="outline" title="Hello" />
+        <Avatar color="danger" variant="outline" image={image} title="Hello" />
+        <Avatar color="danger" variant="outline" title="Hello" />
+        <Avatar color="success" variant="outline" title="Hello" />
+        <Avatar color="warning" variant="outline" title="Hello" />
+        <Avatar color="secondary" variant="outline" title="Hello" />
+        <Avatar color="primary" variant="outline" title="Hello" />
+        <Avatar color="surface" variant="outline" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
-        <Avatar color="red" variant="dashed" image={image} title="Hello" />
-        <Avatar color="red" variant="dashed" title="Hello" />
-        <Avatar color="green" variant="dashed" title="Hello" />
-        <Avatar color="orange" variant="dashed" title="Hello" />
-        <Avatar color="brown" variant="dashed" title="Hello" />
-        <Avatar color="purple" variant="dashed" title="Hello" />
-        <Avatar color="violet" variant="dashed" title="Hello" />
-        <Avatar color="indigo" variant="dashed" title="Hello" />
-        <Avatar color="slate" variant="dashed" title="Hello" />
+        <Avatar color="danger" variant="dashed" image={image} title="Hello" />
+        <Avatar color="danger" variant="dashed" title="Hello" />
+        <Avatar color="success" variant="dashed" title="Hello" />
+        <Avatar color="warning" variant="dashed" title="Hello" />
+        <Avatar color="secondary" variant="dashed" title="Hello" />
+        <Avatar color="primary" variant="dashed" title="Hello" />
+        <Avatar color="surface" variant="dashed" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
-        <Avatar color="red" variant="soft" image={image} title="Hello" />
-        <Avatar color="red" variant="soft" title="Hello" />
-        <Avatar color="green" variant="soft" title="Hello" />
-        <Avatar color="orange" variant="soft" title="Hello" />
-        <Avatar color="brown" variant="soft" title="Hello" />
-        <Avatar color="purple" variant="soft" title="Hello" />
-        <Avatar color="violet" variant="soft" title="Hello" />
-        <Avatar color="indigo" variant="soft" title="Hello" />
-        <Avatar color="slate" variant="soft" title="Hello" />
+        <Avatar color="danger" variant="soft" image={image} title="Hello" />
+        <Avatar color="danger" variant="soft" title="Hello" />
+        <Avatar color="success" variant="soft" title="Hello" />
+        <Avatar color="warning" variant="soft" title="Hello" />
+        <Avatar color="secondary" variant="soft" title="Hello" />
+        <Avatar color="primary" variant="soft" title="Hello" />
+        <Avatar color="surface" variant="soft" title="Hello" />
       </Flex>
     </div>
   )
@@ -187,7 +179,7 @@ export function AvatarGroupVariants() {
 export function AvatarGroupCustom() {
   return (
     <div className="l_flow__md">
-      <Avatar.Group limit={6} layout="stack" color="red" variant="outline" fallback={<Dots width="20" />}>
+      <Avatar.Group limit={6} layout="stack" color="danger" variant="outline" fallback={<Dots width="20" />}>
         <Avatar title="Hello" />
         <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
         <Avatar fallback={<Dots width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
@@ -215,7 +207,7 @@ export function AvatarCustomStyle() {
   return (
     <div className="l_flow__md">
       <Avatar title="Hello" className="u_brown" />
-      <Avatar title="Hello" style={{ background: 'red', color: 'white' }} />
+      <Avatar title="Hello" style={{ background: 'danger', color: 'white' }} />
     </div>
   )
 }

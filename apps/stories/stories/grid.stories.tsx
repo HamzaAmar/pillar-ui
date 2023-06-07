@@ -12,7 +12,7 @@ export default {
 } as ComponentMeta<typeof Grid>
 
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" background="slate-6" corner="sm" {...props} />
+  return <Paper as={Flex} justify="center" items="center" background="surface-6" corner="sm" {...props} />
 }
 
 export const EqualColumns = () => {
@@ -21,7 +21,7 @@ export const EqualColumns = () => {
       {Array.from({ length: 144 }, (_, index) => (
         <div
           style={{
-            background: `${index % 2 === 0 ? 'var(--indigo-8)' : 'var(--indigo-9)'}`,
+            background: `${index % 2 === 0 ? 'var(--primary-8)' : 'var(--primary-9)'}`,
             borderRadius: '.375rem',
           }}
         ></div>
@@ -34,7 +34,7 @@ export const ResponsiveColumns = () => {
   return (
     <Grid gap="xs" columns="repeat(4, 1fr)">
       {Array.from({ length: 24 }, () => (
-        <div style={{ background: 'var(--indigo-9)', minHeight: '5rem' }} />
+        <div style={{ background: 'var(--primary-9)', minHeight: '5rem' }} />
       ))}
     </Grid>
   )
@@ -43,13 +43,13 @@ export const ResponsiveColumns = () => {
 export const SpanningColumns = () => {
   return (
     <Grid gap="sm" columns="200px 1fr 1fr" rows="1fr 1fr">
-      <Grid.Item style={{ minHeight: '10rem', background: 'var(--indigo-8)' }} row="span 2">
+      <Grid.Item style={{ minHeight: '10rem', background: 'var(--primary-8)' }} row="span 2">
         Nice to Meet You
       </Grid.Item>
-      <Grid.Item style={{ height: '10rem', background: 'var(--indigo-8)' }}>Hello</Grid.Item>
+      <Grid.Item style={{ height: '10rem', background: 'var(--primary-8)' }}>Hello</Grid.Item>
 
-      <Grid.Item style={{ height: '10rem', background: 'var(--indigo-8)' }}>Hello</Grid.Item>
-      <Grid.Item style={{ height: '10rem', background: 'var(--indigo-8)' }} column="span 2">
+      <Grid.Item style={{ height: '10rem', background: 'var(--primary-8)' }}>Hello</Grid.Item>
+      <Grid.Item style={{ height: '10rem', background: 'var(--primary-8)' }} column="span 2">
         Hello
       </Grid.Item>
     </Grid>
@@ -58,19 +58,19 @@ export const SpanningColumns = () => {
 
 export const ComplexGridOne = () => (
   <Grid columns="100px 1fr 100px" rows="2rem minmax(6rem, 1fr) 2rem" gap="sm">
-    <Grid.Item column="1/4" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="1/4" style={{ background: 'var(--surface-8)' }}>
       Header
     </Grid.Item>
-    <Grid.Item column="span 1" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="span 1" style={{ background: 'var(--surface-8)' }}>
       sidebar
     </Grid.Item>
-    <Grid.Item column="span 1" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="span 1" style={{ background: 'var(--surface-8)' }}>
       main
     </Grid.Item>
-    <Grid.Item column="span 1" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="span 1" style={{ background: 'var(--surface-8)' }}>
       sidebar
     </Grid.Item>
-    <Grid.Item column="span 3" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="span 3" style={{ background: 'var(--surface-8)' }}>
       Footer
     </Grid.Item>
   </Grid>
@@ -78,19 +78,19 @@ export const ComplexGridOne = () => (
 
 export const ComplexGridTwo = () => (
   <Grid columns="100px 1fr 100px" rows="2rem minmax(6rem, 1fr) 2rem" gap="sm">
-    <Grid.Item column="2/4" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="2/4" style={{ background: 'var(--surface-8)' }}>
       Header
     </Grid.Item>
-    <Grid.Item column="span 1" row="1 / span 3" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="span 1" row="1 / span 3" style={{ background: 'var(--surface-8)' }}>
       sidebar
     </Grid.Item>
-    <Grid.Item column="2 / 3" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="2 / 3" style={{ background: 'var(--surface-8)' }}>
       main
     </Grid.Item>
-    <Grid.Item column="3 / 4" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="3 / 4" style={{ background: 'var(--surface-8)' }}>
       sidebar
     </Grid.Item>
-    <Grid.Item column="2 / span 2" style={{ background: 'var(--slate-8)' }}>
+    <Grid.Item column="2 / span 2" style={{ background: 'var(--surface-8)' }}>
       Footer
     </Grid.Item>
   </Grid>

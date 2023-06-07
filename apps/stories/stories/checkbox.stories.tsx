@@ -43,11 +43,9 @@ export const CheckboxColor = () => {
       <Checkbox name="hello" label="Hello" color="danger" />
       <Checkbox name="hello" label="Hello" color="success" />
       <Checkbox name="hello" label="Hello" color="warning" />
-      <Checkbox name="hello" label="Hello" color="indigo" />
-      <Checkbox name="hello" label="Hello" color="violet" />
-      <Checkbox name="hello" label="Hello" color="purple" />
-      <Checkbox name="hello" label="Hello" color="brown" />
-      <Checkbox name="hello" label="Hello" color="slate" />
+      <Checkbox name="hello" label="Hello" color="primary" />
+      <Checkbox name="hello" label="Hello" color="secondary" />
+      <Checkbox name="hello" label="Hello" color="surface" />
     </Flex>
   )
 }
@@ -59,21 +57,17 @@ export const CheckboxDisabled = () => {
         <Checkbox disabled name="hello" label="Hello" color="danger" />
         <Checkbox disabled name="hello" label="Hello" color="success" />
         <Checkbox disabled name="hello" label="Hello" color="warning" />
-        <Checkbox disabled name="hello" label="Hello" color="indigo" />
-        <Checkbox disabled name="hello" label="Hello" color="violet" />
-        <Checkbox disabled name="hello" label="Hello" color="purple" />
-        <Checkbox disabled name="hello" label="Hello" color="brown" />
-        <Checkbox disabled name="hello" label="Hello" color="slate" />
+        <Checkbox disabled name="hello" label="Hello" color="primary" />
+        <Checkbox disabled name="hello" label="Hello" color="secondary" />
+        <Checkbox disabled name="hello" label="Hello" color="surface" />
       </Flex>
       <Flex gap="sm" items="center">
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="danger" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="success" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="warning" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="indigo" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="violet" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="purple" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="brown" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="slate" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="primary" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="secondary" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="surface" />
       </Flex>
     </div>
   )
@@ -85,11 +79,9 @@ export const CheckboxDefaultCheckedColor = () => {
       <Checkbox defaultChecked name="hello" label="Hello" color="danger" />
       <Checkbox defaultChecked name="hello" label="Hello" color="success" />
       <Checkbox defaultChecked name="hello" label="Hello" color="warning" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="indigo" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="violet" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="purple" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="brown" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="slate" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="primary" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="secondary" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="surface" />
     </Flex>
   )
 }
@@ -102,10 +94,10 @@ export const CheckboxSize = () => {
       <Checkbox size="xs" name="hello" label="Hello" color="success" />
       <Checkbox size="sm" name="hello" label="Hello" color="success" />
       <Checkbox size="md" name="hello" label="Hello" color="warning" />
-      <Checkbox size="lg" name="hello" label="Hello" color="indigo" />
-      <Checkbox size="xl" name="hello" label="Hello" color="indigo" />
-      <Checkbox size="2xl" name="hello" label="Hello" color="indigo" />
-      <Checkbox size="3xl" name="hello" label="Hello" color="indigo" />
+      <Checkbox size="lg" name="hello" label="Hello" color="primary" />
+      <Checkbox size="xl" name="hello" label="Hello" color="primary" />
+      <Checkbox size="2xl" name="hello" label="Hello" color="primary" />
+      <Checkbox size="3xl" name="hello" label="Hello" color="primary" />
     </Flex>
   )
 }

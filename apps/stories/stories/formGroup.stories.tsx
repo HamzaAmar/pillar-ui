@@ -119,7 +119,7 @@ export const ColorInput = () => {
 export const CornerInput = () => {
   return (
     <div>
-      <FormGroup size="sm" color="red" title="Name" direction="row">
+      <FormGroup size="sm" color="danger" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />
@@ -130,7 +130,7 @@ export const CornerInput = () => {
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
-      <FormGroup size="sm" color="brown" title="Name" direction="row">
+      <FormGroup size="sm" color="success" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />
@@ -141,7 +141,7 @@ export const CornerInput = () => {
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
-      <FormGroup size="sm" color="indigo" title="Name" direction="row">
+      <FormGroup size="sm" color="primary" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />
@@ -152,7 +152,7 @@ export const CornerInput = () => {
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
-      <FormGroup size="sm" color="violet" title="Name" direction="row">
+      <FormGroup size="sm" color="secondary" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />

@@ -14,14 +14,12 @@ export const KbdColors = () => {
   return (
     <Flex gap="sm" direction="column">
       <Kbd title="Esc" />
-      <Kbd title="Esc" color="red" />
+      <Kbd title="Esc" color="danger" />
       <Kbd title="Esc" color="success" />
-      <Kbd title="Esc" color="orange" />
-      <Kbd title="Esc" color="indigo" />
-      <Kbd title="Esc" color="slate" />
-      <Kbd title="Esc" color="brown" />
-      <Kbd title="Esc" color="violet" />
-      <Kbd title="Esc" color="purple" />
+      <Kbd title="Esc" color="warning" />
+      <Kbd title="Esc" color="primary" />
+      <Kbd title="Esc" color="surface" />
+      <Kbd title="Esc" color="secondary" />
     </Flex>
   )
 }

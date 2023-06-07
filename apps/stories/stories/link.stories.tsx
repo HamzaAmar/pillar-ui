@@ -172,53 +172,42 @@ export function LinkAligns() {
 export function LinkColors() {
   return (
     <div className="l_flow__md">
-      <Link href="#" color="red" contrast="high">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Link>
-      <Link href="#" color="brown" contrast="high">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Link>
-      <Link href="#" color="purple" contrast="high">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Link>
-      <Link href="#" color="violet" contrast="high">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Link>
-      <Link href="#" color="green" contrast="high">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Link>
-      <Link href="#" color="orange" contrast="high">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Link>
-      <Link href="#" color="indigo" contrast="high">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Link>
-      <Link href="#" color="slate" contrast="high">
+      <Link href="#" color="danger" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
 
-      <Link href="#" color="red">
+      <Link href="#" color="secondary" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="brown">
+      <Link href="#" color="success" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="purple">
+      <Link href="#" color="warning" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="violet">
+      <Link href="#" color="primary" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="green">
+      <Link href="#" color="surface" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="orange">
+
+      <Link href="#" color="danger">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="indigo">
+      <Link href="#" color="secondary">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="slate">
+      <Link href="#" color="success">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Link>
+      <Link href="#" color="warning">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Link>
+      <Link href="#" color="primary">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+      </Link>
+      <Link href="#" color="surface">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
     </div>

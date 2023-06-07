@@ -10,14 +10,12 @@ export default {
 export const CodeColors = () => {
   return (
     <Flex gap="sm" direction="column" justify="center">
-      <Code color="red">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="success">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="orange">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="indigo">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="slate">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="brown">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="violet">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="purple">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="warning">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="primary">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="surface">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="secondary">{`console.log('Hello world Every thing is OK')`}</Code>
     </Flex>
   )
 }
@@ -58,7 +56,7 @@ export const CodeLong = () => {
           laborum reiciendis.
         </div>`}
       </Code>
-      <Code color="slate" corner="sharp">
+      <Code color="surface" corner="sharp">
         {`<!DOCTYPE html>
             <html lang="en">
             <head>
@@ -72,7 +70,7 @@ export const CodeLong = () => {
             </body>
             </html>`}
       </Code>
-      <Code color="orange" corner="sharp">
+      <Code color="warning" corner="sharp">
         {`<!DOCTYPE html>
             <html lang="en">
             <head>
@@ -86,7 +84,7 @@ export const CodeLong = () => {
             </body>
             </html>`}
       </Code>
-      <Code color="orange" corner="sharp">
+      <Code color="warning" corner="sharp">
         {`<!DOCTYPE html>
             <html lang="en">
             <head>

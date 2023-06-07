@@ -16,7 +16,7 @@ const CompleteComponent = () => {
         <Check width={60} />
       </div>
       <Text weight="bold">Success</Text>
-      <Text style={{ width: '90ch' }} size="sm" color="slate" contrast="low">
+      <Text style={{ width: '90ch' }} size="sm" color="surface" contrast="low">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, illum, ut eius esse voluptates voluptatibus
         perferendis laborum, quam temporibus consequuntur iure porro excepturi dolore. Enim labore id tempore iusto sed?{' '}
       </Text>
@@ -32,21 +32,21 @@ export const StepperIcon = () => {
       <Stepper active={currentStep} setActive={setCurrentStep} completeComponent={<CompleteComponent />}>
         <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
-          <Text size="sm" color="slate" contrast="low">
+          <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </Stepper.Step>
         <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading size="xs">Hello World</Heading>
-          <Text size="sm" color="slate" contrast="low">
+          <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </Stepper.Step>
         <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading size="xs">Hello World</Heading>
-          <Text size="sm" color="slate" contrast="low">
+          <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
@@ -78,19 +78,19 @@ function StepperBase(props) {
       >
         <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
-          <Text size="sm" color="slate" contrast="low">
+          <Text size="sm" color="surface" contrast="low">
             Hello
           </Text>
         </Stepper.Step>
         <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading size="xs">Hello World</Heading>
-          <Text size="sm" color="slate" contrast="low">
+          <Text size="sm" color="surface" contrast="low">
             World
           </Text>
         </Stepper.Step>
         <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading size="xs">Hello World</Heading>
-          <Text size="sm" color="slate" contrast="low">
+          <Text size="sm" color="surface" contrast="low">
             Nice{' '}
           </Text>
         </Stepper.Step>
@@ -124,14 +124,12 @@ export const StepperCorners = () => {
 export const StepperColors = () => {
   return (
     <div className="l_flow__md">
-      <StepperBase color="red" />
-      <StepperBase color="orange" />
-      <StepperBase color="green" />
-      <StepperBase color="purple" />
-      <StepperBase color="violet" />
-      <StepperBase color="brown" />
-      <StepperBase color="slate" />
-      <StepperBase color="indigo" />
+      <StepperBase color="danger" />
+      <StepperBase color="warning" />
+      <StepperBase color="success" />
+      <StepperBase color="secondary" />
+      <StepperBase color="surface" />
+      <StepperBase color="primary" />
     </div>
   )
 }
@@ -144,21 +142,21 @@ export const DefaultStepper = () => {
       <Stepper active={currentStep} setActive={setCurrentStep} completeComponent={<CompleteComponent />}>
         <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
-          <Text size="sm" color="slate" contrast="low">
+          <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </Stepper.Step>
         <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading size="xs">Hello Nice</Heading>
-          <Text size="sm" color="slate" contrast="low">
+          <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </Stepper.Step>
         <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading size="xs">Nice to Meet You</Heading>
-          <Text size="sm" color="slate" contrast="low">
+          <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>

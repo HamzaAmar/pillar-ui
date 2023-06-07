@@ -90,21 +90,19 @@ export const SizeInput = () => {
 export const ColorInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <InputSearch color="indigo" variant="bordered" autoFocus placeholder="Focus" />
+      <InputSearch color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <InputSearch color="warning" variant="bordered" autoFocus placeholder="Normal" />
-      <InputSearch color="violet" variant="outline" autoFocus placeholder="Disabled" />
-      <InputSearch color="brown" variant="outline" autoFocus placeholder="readOnly" />
-      <InputSearch color="slate" variant="filled" autoFocus placeholder="isInvalid" />
-      <InputSearch color="purple" variant="filled" autoFocus suffixInput={<User width="16" />} placeholder="Error" />
+      <InputSearch color="secondary" variant="outline" autoFocus placeholder="Disabled" />
+      <InputSearch color="surface" variant="filled" autoFocus placeholder="isInvalid" />
       <InputSearch
-        color="green"
+        color="success"
         variant="bordered"
         autoFocus
         prefixInput={<User width="16" />}
         placeholder="Placeholder"
       />
       <InputSearch
-        color="red"
+        color="danger"
         variant="bordered"
         autoFocus
         prefixInput={'https://'}

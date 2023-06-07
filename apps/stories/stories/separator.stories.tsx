@@ -15,13 +15,11 @@ export const SeparatorColors = () => {
   return (
     <div className="l_flow__md">
       <Separator color="danger" />
-      <Separator color="brown" />
       <Separator color="warning" />
       <Separator color="success" />
-      <Separator color="purple" />
-      <Separator color="violet" />
-      <Separator color="indigo" />
-      <Separator color="slate" />
+      <Separator color="secondary" />
+      <Separator color="primary" />
+      <Separator color="surface" />
     </div>
   )
 }

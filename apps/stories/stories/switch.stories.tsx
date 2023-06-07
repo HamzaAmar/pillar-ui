@@ -29,14 +29,12 @@ export function SwitchSizes() {
 export function SwitchColors() {
   return (
     <Flex gap="sm" items="center">
-      <Switch label="Hello" color="red" />
-      <Switch label="Hello" color="orange" />
-      <Switch label="Hello" color="green" />
-      <Switch label="Hello" color="indigo" />
-      <Switch label="Hello" color="purple" />
-      <Switch label="Hello" color="violet" />
-      <Switch label="Hello" color="slate" />
-      <Switch label="Hello" color="brown" />
+      <Switch label="Hello" color="danger" />
+      <Switch label="Hello" color="warning" />
+      <Switch label="Hello" color="success" />
+      <Switch label="Hello" color="primary" />
+      <Switch label="Hello" color="secondary" />
+      <Switch label="Hello" color="surface" />
     </Flex>
   )
 }
@@ -44,14 +42,12 @@ export function SwitchColors() {
 export function SwitchColorsDefault() {
   return (
     <Flex gap="sm" items="center">
-      <Switch label="Hello" defaultPressed color="red" />
-      <Switch label="Hello" defaultPressed color="orange" />
-      <Switch label="Hello" defaultPressed color="green" />
-      <Switch label="Hello" defaultPressed color="indigo" />
-      <Switch label="Hello" defaultPressed color="purple" />
-      <Switch label="Hello" defaultPressed color="violet" />
-      <Switch label="Hello" defaultPressed color="slate" />
-      <Switch label="Hello" defaultPressed color="brown" />
+      <Switch label="Hello" defaultPressed color="danger" />
+      <Switch label="Hello" defaultPressed color="warning" />
+      <Switch label="Hello" defaultPressed color="success" />
+      <Switch label="Hello" defaultPressed color="primary" />
+      <Switch label="Hello" defaultPressed color="secondary" />
+      <Switch label="Hello" defaultPressed color="surface" />
     </Flex>
   )
 }

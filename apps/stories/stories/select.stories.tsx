@@ -138,7 +138,7 @@ export const SizeSelect = () => {
 export const ColorSelect = () => {
   return (
     <Flex gap="sm" direction="column">
-      <Select color="indigo" variant="bordered" autoFocus placeholder="Focus">
+      <Select color="primary" variant="bordered" autoFocus placeholder="Focus">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
@@ -146,27 +146,19 @@ export const ColorSelect = () => {
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select color="violet" variant="outline" autoFocus placeholder="Disabled">
+      <Select color="secondary" variant="outline" autoFocus placeholder="Disabled">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select color="brown" variant="outline" autoFocus placeholder="readOnly">
+      <Select color="surface" variant="filled" autoFocus placeholder="isInvalid">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select color="slate" variant="filled" autoFocus placeholder="isInvalid">
+      <Select color="success" variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select color="purple" variant="filled" autoFocus>
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select color="green" variant="bordered" autoFocus>
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select color="red" variant="bordered" autoFocus>
+      <Select color="danger" variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>

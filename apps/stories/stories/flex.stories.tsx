@@ -11,7 +11,9 @@ export default {
   },
 } as ComponentMeta<typeof Flex>
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" height="100px" background="slate-6" corner="sm" {...props} />
+  return (
+    <Paper as={Flex} justify="center" items="center" height="100px" background="surface-6" corner="sm" {...props} />
+  )
 }
 
 const boxes = Array.from({ length: 5 }, (_, index) => <Box width="100px" key={index} />)
@@ -102,13 +104,13 @@ export const FlexJustify = () => {
 export const FlexItems = () => {
   return (
     <div className="l_flow__sm">
-      <Flex as={Paper} height="100px" background="slate-5" gap="sm" items="center">
+      <Flex as={Paper} height="100px" background="surface-5" gap="sm" items="center">
         Hello
       </Flex>
-      <Flex as={Paper} height="100px" background="slate-5" gap="sm" items="end">
+      <Flex as={Paper} height="100px" background="surface-5" gap="sm" items="end">
         Hello
       </Flex>
-      <Flex as={Paper} height="100px" background="slate-5" gap="sm">
+      <Flex as={Paper} height="100px" background="surface-5" gap="sm">
         Hello
       </Flex>
     </div>

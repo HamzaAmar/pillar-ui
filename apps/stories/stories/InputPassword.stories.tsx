@@ -84,14 +84,12 @@ export const SizeInput = () => {
 export const ColorInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <InputPassword color="indigo" variant="bordered" autoFocus placeholder="Focus" />
+      <InputPassword color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <InputPassword color="warning" variant="bordered" autoFocus placeholder="Normal" />
-      <InputPassword color="violet" variant="outline" autoFocus placeholder="Disabled" />
-      <InputPassword color="brown" variant="outline" autoFocus placeholder="readOnly" />
-      <InputPassword color="slate" variant="filled" autoFocus placeholder="isInvalid" />
-      <InputPassword color="purple" variant="filled" autoFocus placeholder="Error" />
-      <InputPassword color="green" variant="bordered" autoFocus placeholder="Placeholder" />
-      <InputPassword color="red" variant="bordered" autoFocus defaultValue="Default Value" />
+      <InputPassword color="secondary" variant="outline" autoFocus placeholder="Disabled" />
+      <InputPassword color="surface" variant="filled" autoFocus placeholder="isInvalid" />
+      <InputPassword color="success" variant="bordered" autoFocus placeholder="Placeholder" />
+      <InputPassword color="danger" variant="bordered" autoFocus defaultValue="Default Value" />
     </Flex>
   )
 }
@@ -99,7 +97,12 @@ export const ColorInput = () => {
 export const InputPasswordCustomIcon = () => {
   return (
     <Flex gap="sm" direction="column">
-      <InputPassword placeholder="enter your password" color="indigo" visibleIcon={<Lock />} hiddenIcon={<LockOff />} />
+      <InputPassword
+        placeholder="enter your password"
+        color="primary"
+        visibleIcon={<Lock />}
+        hiddenIcon={<LockOff />}
+      />
       <InputPassword
         placeholder="enter your password"
         color="warning"

@@ -46,20 +46,20 @@ const Items = (props: Omit<TimelineItemProps, 'children'>) => {
 export const TimelineColor = () => {
   return (
     <Flex gap="sm">
-      <Timeline color="slate">
+      <Timeline color="surface">
         <Items />
       </Timeline>
 
-      <Timeline color="indigo">
+      <Timeline color="primary">
         <Items />
       </Timeline>
-      <Timeline color="green">
+      <Timeline color="success">
         <Items />
       </Timeline>
-      <Timeline color="red">
+      <Timeline color="danger">
         <Items />
       </Timeline>
-      <Timeline color="orange">
+      <Timeline color="warning">
         <Items />
       </Timeline>
       <Timeline color="purple">

@@ -53,13 +53,11 @@ export const RatingColor = () => {
   return (
     <Flex direction="column" gap="md">
       <Rating color="danger" rating={4} />
-      <Rating color="indigo" rating={4} />
-      <Rating color="purple" rating={4} />
-      <Rating color="violet" rating={4} />
+      <Rating color="primary" rating={4} />
+      <Rating color="secondary" rating={4} />
       <Rating color="success" rating={4} />
       <Rating color="warning" rating={4} />
-      <Rating color="slate" rating={4} />
-      <Rating color="brown" rating={4} />
+      <Rating color="surface" rating={4} />
     </Flex>
   )
 }

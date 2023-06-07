@@ -24,13 +24,11 @@ export const AlertColors = () => {
   return (
     <Flex gap="sm" direction="column">
       <AlertBase color="danger" />
-      <AlertBase color="brown" />
       <AlertBase color="warning" />
       <AlertBase color="success" />
-      <AlertBase color="purple" />
-      <AlertBase color="violet" />
-      <AlertBase color="indigo" />
-      <AlertBase color="slate" />
+      <AlertBase color="secondary" />
+      <AlertBase color="primary" />
+      <AlertBase color="surface" />
     </Flex>
   )
 }
@@ -159,14 +157,14 @@ export const AlertTitleIcon = () => {
 export const AlertCustomStyle = () => {
   return (
     <Flex direction="column" gap="sm">
-      <Alert color="danger" title="hello" style={{ background: 'green' }} />
-      <Alert color="danger" title="hello" style={{ background: 'green' }} closable />
-      <Alert color="danger" title="hello" style={{ background: 'green' }} variant="outline" />
-      <Alert color="danger" title="hello" style={{ background: 'green' }} variant="soft" />
-      <Alert color="danger" title="hello" className="u_violet" />
-      <Alert color="danger" title="hello" className="u_violet" closable />
-      <Alert color="danger" title="hello" className="u_violet" variant="outline" />
-      <Alert color="danger" title="hello" className="u_violet" variant="soft" />
+      <Alert color="danger" title="hello" style={{ background: 'success' }} />
+      <Alert color="danger" title="hello" style={{ background: 'success' }} closable />
+      <Alert color="danger" title="hello" style={{ background: 'success' }} variant="outline" />
+      <Alert color="danger" title="hello" style={{ background: 'success' }} variant="soft" />
+      <Alert color="danger" title="hello" className="u_secondary" />
+      <Alert color="danger" title="hello" className="u_secondary" closable />
+      <Alert color="danger" title="hello" className="u_secondary" variant="outline" />
+      <Alert color="danger" title="hello" className="u_secondary" variant="soft" />
     </Flex>
   )
 }

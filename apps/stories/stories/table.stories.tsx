@@ -100,25 +100,17 @@ export const NormalTableColor = () => {
         </Heading>
         <NormalTableExample color="success" variant="striped" />
         <Heading as="h2" size="xs">
-          Striped Table purple
+          Striped Table Secondary
         </Heading>
-        <NormalTableExample color="purple" variant="striped" />
-        <Heading as="h2" size="xs">
-          Striped Table Violet
-        </Heading>
-        <NormalTableExample color="violet" variant="striped" />
+        <NormalTableExample color="secondary" variant="striped" />
         <Heading as="h2" size="xs">
           Striped Table Orange
         </Heading>
-        <NormalTableExample color="orange" variant="striped" />
+        <NormalTableExample color="warning" variant="striped" />
         <Heading as="h2" size="xs">
-          Striped Table Brown
+          Striped Table primary
         </Heading>
-        <NormalTableExample color="brown" variant="striped" />
-        <Heading as="h2" size="xs">
-          Striped Table indigo
-        </Heading>
-        <NormalTableExample color="indigo" variant="striped" />
+        <NormalTableExample color="primary" variant="striped" />
       </Flex>
 
       <Heading size="sm">Default Table</Heading>
@@ -133,21 +125,13 @@ export const NormalTableColor = () => {
         </Heading>
         <NormalTableExample color="success" />
         <Heading as="h2" size="xs">
-          Default Table purple
+          Default Table secondary
         </Heading>
-        <NormalTableExample color="purple" />
+        <NormalTableExample color="secondary" />
         <Heading as="h2" size="xs">
-          Default Table violet
+          Default Table primary
         </Heading>
-        <NormalTableExample color="violet" />
-        <Heading as="h2" size="xs">
-          Default Table indigo
-        </Heading>
-        <NormalTableExample color="violet" />
-        <Heading as="h2" size="xs">
-          Default Table brown
-        </Heading>
-        <NormalTableExample color="brown" />
+        <NormalTableExample color="secondary" />
       </Flex>
       <Heading size="sm">Soft Table</Heading>
       <Flex wrap gap="xs">
@@ -161,21 +145,13 @@ export const NormalTableColor = () => {
         </Heading>
         <NormalTableExample variant="soft" color="success" />
         <Heading as="h2" size="xs">
-          Soft Table purple
+          Soft Table secondary
         </Heading>
-        <NormalTableExample variant="soft" color="purple" />
+        <NormalTableExample variant="soft" color="secondary" />
         <Heading as="h2" size="xs">
-          Soft Table violet
+          Soft Table primary
         </Heading>
-        <NormalTableExample variant="soft" color="violet" />
-        <Heading as="h2" size="xs">
-          Soft Table brown
-        </Heading>
-        <NormalTableExample variant="soft" color="brown" />
-        <Heading as="h2" size="xs">
-          Soft Table indigo
-        </Heading>
-        <NormalTableExample variant="soft" color="indigo" />
+        <NormalTableExample variant="soft" color="primary" />
       </Flex>
       <NormalTableExample variant="soft" />
       <Heading size="sm">Head Color Table</Heading>
@@ -190,21 +166,13 @@ export const NormalTableColor = () => {
         </Heading>
         <NormalTableExample variant="head-color" color="success" />
         <Heading as="h2" size="xs">
-          Head Color Table purple
+          Head Color Table secondary
         </Heading>
-        <NormalTableExample variant="head-color" color="purple" />
+        <NormalTableExample variant="head-color" color="secondary" />
         <Heading as="h2" size="xs">
-          Head Color Table violet
+          Head Color Table primary
         </Heading>
-        <NormalTableExample variant="head-color" color="violet" />
-        <Heading as="h2" size="xs">
-          Head Color Table brown
-        </Heading>
-        <NormalTableExample variant="head-color" color="brown" />
-        <Heading as="h2" size="xs">
-          Head Color Table indigo
-        </Heading>
-        <NormalTableExample variant="head-color" color="indigo" />
+        <NormalTableExample variant="head-color" color="primary" />
       </Flex>
       <NormalTableExample variant="head-color" />
     </Flex>

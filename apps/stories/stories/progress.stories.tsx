@@ -26,14 +26,12 @@ export const ProgressBarSize = () => {
 export const ProgressBarColor = () => {
   return (
     <Flex direction="column" gap="sm" wrap>
-      <ProgressBar color="red" value={90} label="hello" />
-      <ProgressBar color="green" value={90} label="hello" />
-      <ProgressBar color="orange" value={90} label="hello" />
-      <ProgressBar color="purple" value={90} label="hello" />
-      <ProgressBar color="violet" value={90} label="hello" />
-      <ProgressBar color="brown" value={90} label="hello" />
-      <ProgressBar color="slate" value={90} label="hello" />
-      <ProgressBar color="indigo" value={90} label="hello" />
+      <ProgressBar color="danger" value={90} label="hello" />
+      <ProgressBar color="success" value={90} label="hello" />
+      <ProgressBar color="warning" value={90} label="hello" />
+      <ProgressBar color="secondary" value={90} label="hello" />
+      <ProgressBar color="surface" value={90} label="hello" />
+      <ProgressBar color="primary" value={90} label="hello" />
     </Flex>
   )
 }
@@ -85,14 +83,12 @@ export const ProgressCircleSize = () => {
 export const ProgressCircleColor = () => {
   return (
     <Flex gap="sm">
-      <ProgressCircle color="red" value={15} label="hello" />
-      <ProgressCircle color="green" value={30} label="hello" />
-      <ProgressCircle color="orange" value={60} label="hello" />
-      <ProgressCircle color="indigo" value={45} label="hello" />
-      <ProgressCircle color="purple" value={90} label="hello" />
-      <ProgressCircle color="violet" value={90} label="hello" />
-      <ProgressCircle color="brown" value={90} label="hello" />
-      <ProgressCircle color="slate" value={90} label="hello" />
+      <ProgressCircle color="danger" value={15} label="hello" />
+      <ProgressCircle color="success" value={30} label="hello" />
+      <ProgressCircle color="warning" value={60} label="hello" />
+      <ProgressCircle color="primary" value={45} label="hello" />
+      <ProgressCircle color="secondary" value={90} label="hello" />
+      <ProgressCircle color="surface" value={90} label="hello" />
     </Flex>
   )
 }
@@ -109,7 +105,7 @@ function ProgressBarStackBase(props) {
       <ProgressBarStack.Item label="React" color="purple" value={25}>
         <button>React 25%</button>
       </ProgressBarStack.Item>
-      <ProgressBarStack.Item label="Node" color="indigo" value={15}>
+      <ProgressBarStack.Item label="Node" color="primary" value={15}>
         <button>Node 15%</button>
       </ProgressBarStack.Item>
       <ProgressBarStack.Item label="SCSS" color="warning" value={15}>

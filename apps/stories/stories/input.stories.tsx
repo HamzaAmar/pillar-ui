@@ -90,15 +90,13 @@ export const SizeInput = () => {
 export const ColorInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <Input color="indigo" variant="bordered" autoFocus placeholder="Focus" />
+      <Input color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <Input color="warning" variant="bordered" autoFocus placeholder="Normal" />
-      <Input color="violet" variant="outline" autoFocus placeholder="Disabled" />
-      <Input color="brown" variant="outline" autoFocus placeholder="readOnly" />
-      <Input color="slate" variant="filled" autoFocus placeholder="isInvalid" />
-      <Input color="purple" variant="filled" autoFocus suffixInput={<User width="16" />} placeholder="Error" />
-      <Input color="green" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
+      <Input color="secondary" variant="outline" autoFocus placeholder="Disabled" />
+      <Input color="surface" variant="filled" autoFocus placeholder="isInvalid" />
+      <Input color="success" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
       <Input
-        color="red"
+        color="danger"
         variant="bordered"
         autoFocus
         prefixInput={'https://'}

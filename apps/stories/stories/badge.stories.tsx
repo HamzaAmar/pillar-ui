@@ -55,11 +55,9 @@ export const BadgeNumericColor = () => {
       <Badge variant="numeric" number={15} max={15} color="danger" />
       <Badge variant="numeric" number={15} max={15} color="success" />
       <Badge variant="numeric" number={15} max={15} color="warning" />
-      <Badge variant="numeric" number={15} max={15} color="indigo" />
-      <Badge variant="numeric" number={15} max={15} color="brown" />
-      <Badge variant="numeric" number={15} max={15} color="purple" />
-      <Badge variant="numeric" number={15} max={15} color="violet" />
-      <Badge variant="numeric" number={15} max={15} color="slate" />
+      <Badge variant="numeric" number={15} max={15} color="primary" />
+      <Badge variant="numeric" number={15} max={15} color="secondary" />
+      <Badge variant="numeric" number={15} max={15} color="surface" />
     </Flex>
   )
 }
@@ -69,11 +67,9 @@ export const BadgeIconColor = () => {
       <Badge variant="icon" icon={<Check />} color="danger" />
       <Badge variant="icon" icon={<Check />} color="success" />
       <Badge variant="icon" icon={<Check />} color="warning" />
-      <Badge variant="icon" icon={<Check />} color="indigo" />
-      <Badge variant="icon" icon={<Check />} color="brown" />
-      <Badge variant="icon" icon={<Check />} color="purple" />
-      <Badge variant="icon" icon={<Check />} color="violet" />
-      <Badge variant="icon" icon={<Check />} color="slate" />
+      <Badge variant="icon" icon={<Check />} color="primary" />
+      <Badge variant="icon" icon={<Check />} color="secondary" />
+      <Badge variant="icon" icon={<Check />} color="surface" />
     </Flex>
   )
 }
@@ -83,11 +79,9 @@ export const BadgeDotColor = () => {
       <Badge variant="dot" color="danger" />
       <Badge variant="dot" color="success" />
       <Badge variant="dot" color="warning" />
-      <Badge variant="dot" color="indigo" />
-      <Badge variant="dot" color="brown" />
-      <Badge variant="dot" color="purple" />
-      <Badge variant="dot" color="violet" />
-      <Badge variant="dot" color="slate" />
+      <Badge variant="dot" color="primary" />
+      <Badge variant="dot" color="secondary" />
+      <Badge variant="dot" color="surface" />
     </Flex>
   )
 }
@@ -98,12 +92,10 @@ export const BadgeNumericMaxValue = () => {
       <Badge variant="numeric" number={15} max={10} color="danger" />
       <Badge variant="numeric" number={150} max={100} color="success" />
       <Badge variant="numeric" number={5} max={0} color="warning" />
-      <Badge variant="numeric" number={0} max={15} color="indigo" />
-      <Badge variant="numeric" showZero number={0} max={15} color="red" />
-      <Badge variant="numeric" number={12211} max={10000} color="brown" />
-      <Badge variant="numeric" number={1500} max={100} color="purple" />
-      <Badge variant="numeric" number={15} max={1} color="violet" />
-      <Badge variant="numeric" number={15} max={15} color="slate" />
+      <Badge variant="numeric" number={0} max={15} color="primary" />
+      <Badge variant="numeric" showZero number={0} max={15} color="danger" />
+      <Badge variant="numeric" number={15} max={1} color="secondary" />
+      <Badge variant="numeric" number={15} max={15} color="surface" />
     </Flex>
   )
 }
@@ -113,12 +105,12 @@ export const BadgeCustomStyle = () => {
     <Flex gap="sm">
       <Badge variant="numeric" number={15} max={10} className="u_danger" />
       <Badge variant="numeric" number={15} max={10} className="u_brown" />
-      <Badge variant="numeric" number={15} max={10} style={{ background: 'red' }} />
+      <Badge variant="numeric" number={15} max={10} style={{ background: 'danger' }} />
       <Badge
         variant="numeric"
         number={15}
         max={10}
-        style={{ background: 'green', color: 'white', border: '4px solid darkred' }}
+        style={{ background: 'success', color: 'white', border: '4px solid darkred' }}
       />
     </Flex>
   )
@@ -129,13 +121,13 @@ export const BadgePolymorphic = () => {
     <Flex gap="sm">
       <Badge as="button" onClick={() => alert('Hello')} variant="numeric" number={15} max={10} className="u_danger" />
       <Badge as="a" href="#Hello" variant="numeric" number={15} max={10} className="u_brown" />
-      <Badge as="span" variant="numeric" number={15} max={10} style={{ background: 'red' }} />
+      <Badge as="span" variant="numeric" number={15} max={10} style={{ background: 'danger' }} />
       <Badge
         as="kbd"
         variant="numeric"
         number={15}
         max={10}
-        style={{ background: 'green', color: 'white', border: '4px solid darkred' }}
+        style={{ background: 'success', color: 'white', border: '4px solid darkred' }}
       />
     </Flex>
   )

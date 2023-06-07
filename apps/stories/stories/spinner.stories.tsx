@@ -11,14 +11,12 @@ export default {
 export function SpinnerColors() {
   return (
     <Flex gap="sm">
-      <Spinner color="green" />
-      <Spinner color="red" />
-      <Spinner color="orange" />
-      <Spinner color="indigo" />
-      <Spinner color="purple" />
-      <Spinner color="violet" />
-      <Spinner color="brown" />
-      <Spinner color="slate" />
+      <Spinner color="success" />
+      <Spinner color="danger" />
+      <Spinner color="warning" />
+      <Spinner color="primary" />
+      <Spinner color="secondary" />
+      <Spinner color="surface" />
     </Flex>
   )
 }
@@ -57,24 +55,24 @@ export function SpinnerInvert() {
   return (
     <div className="l_flow__md">
       <Flex gap="sm" items="center">
-        <Spinner color="green" />
-        <Spinner color="red" />
-        <Spinner color="orange" />
-        <Spinner color="indigo" />
+        <Spinner color="success" />
+        <Spinner color="danger" />
+        <Spinner color="warning" />
+        <Spinner color="primary" />
         <Spinner color="purple" />
-        <Spinner color="violet" />
+        <Spinner color="secondary" />
         <Spinner color="brown" />
-        <Spinner color="slate" />
+        <Spinner color="surface" />
       </Flex>
       <Flex gap="sm" items="center">
-        <Spinner invert color="green" />
-        <Spinner invert color="red" />
-        <Spinner invert color="orange" />
-        <Spinner invert color="indigo" />
+        <Spinner invert color="success" />
+        <Spinner invert color="danger" />
+        <Spinner invert color="warning" />
+        <Spinner invert color="primary" />
         <Spinner invert color="purple" />
-        <Spinner invert color="violet" />
+        <Spinner invert color="secondary" />
         <Spinner invert color="brown" />
-        <Spinner invert color="slate" />
+        <Spinner invert color="surface" />
       </Flex>
     </div>
   )

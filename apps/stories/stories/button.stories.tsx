@@ -14,14 +14,12 @@ export const Playground = Hello.bind({})
 export function ButtonsColors() {
   return (
     <Flex gap="sm">
-      <Button color="green">Green</Button>
-      <Button color="orange">Orange</Button>
-      <Button color="red">Red</Button>
-      <Button color="violet">Violet</Button>
-      <Button color="slate">Slate</Button>
-      <Button color="indigo">Indigo</Button>
-      <Button color="purple">Purple</Button>
-      <Button color="brown">Brown</Button>
+      <Button color="success">Green</Button>
+      <Button color="warning">Orange</Button>
+      <Button color="danger">Red</Button>
+      <Button color="secondary">Secondary</Button>
+      <Button color="surface">Slate</Button>
+      <Button color="primary">Primary</Button>
     </Flex>
   )
 }
@@ -30,117 +28,91 @@ export function ButtonsVariants() {
   return (
     <div className="l_flow__md">
       <Flex gap="sm">
-        <Button color="green">Green</Button>
-        <Button color="orange">Orange</Button>
-        <Button color="red">Red</Button>
-        <Button color="violet">Violet</Button>
-        <Button color="slate">Slate</Button>
-        <Button color="indigo">Indigo</Button>
-        <Button color="purple">Purple</Button>
-        <Button color="brown">Brown</Button>
+        <Button color="success">Green</Button>
+        <Button color="warning">Orange</Button>
+        <Button color="danger">Red</Button>
+        <Button color="secondary">Secondary</Button>
+        <Button color="surface">Slate</Button>
+        <Button color="primary">Primary</Button>
       </Flex>
       <Flex gap="sm">
-        <Button variant="outline" color="green">
+        <Button variant="outline" color="success">
           Green
         </Button>
-        <Button variant="outline" color="orange">
+        <Button variant="outline" color="warning">
           Orange
         </Button>
-        <Button variant="outline" color="red">
+        <Button variant="outline" color="danger">
           Red
         </Button>
-        <Button variant="outline" color="violet">
-          Violet
+        <Button variant="outline" color="secondary">
+          Secondary
         </Button>
-        <Button variant="outline" color="slate">
+        <Button variant="outline" color="surface">
           Slate
         </Button>
-        <Button variant="outline" color="indigo">
-          Indigo
-        </Button>
-        <Button variant="outline" color="purple">
-          Purple
-        </Button>
-        <Button variant="outline" color="brown">
-          Brown
+        <Button variant="outline" color="primary">
+          Primary
         </Button>
       </Flex>
       <Flex gap="sm">
-        <Button variant="soft" color="green">
+        <Button variant="soft" color="success">
           Green
         </Button>
-        <Button variant="soft" color="orange">
+        <Button variant="soft" color="warning">
           Orange
         </Button>
-        <Button variant="soft" color="red">
+        <Button variant="soft" color="danger">
           Red
         </Button>
-        <Button variant="soft" color="violet">
-          Violet
+        <Button variant="soft" color="secondary">
+          Secondary
         </Button>
-        <Button variant="soft" color="slate">
+        <Button variant="soft" color="surface">
           Slate
         </Button>
-        <Button variant="soft" color="indigo">
-          Indigo
-        </Button>
-        <Button variant="soft" color="purple">
-          Purple
-        </Button>
-        <Button variant="soft" color="brown">
-          Brown
+        <Button variant="soft" color="primary">
+          Primary
         </Button>
       </Flex>
       <Flex gap="sm">
-        <Button variant="link" color="green">
+        <Button variant="link" color="success">
           Green
         </Button>
-        <Button variant="link" color="orange">
+        <Button variant="link" color="warning">
           Orange
         </Button>
-        <Button variant="link" color="red">
+        <Button variant="link" color="danger">
           Red
         </Button>
-        <Button variant="link" color="violet">
-          Violet
+        <Button variant="link" color="secondary">
+          Secondary
         </Button>
-        <Button variant="link" color="slate">
+        <Button variant="link" color="surface">
           Slate
         </Button>
-        <Button variant="link" color="indigo">
-          Indigo
-        </Button>
-        <Button variant="link" color="purple">
-          Purple
-        </Button>
-        <Button variant="link" color="brown">
-          Brown
+        <Button variant="link" color="primary">
+          Primary
         </Button>
       </Flex>
       <Flex gap="sm">
-        <Button variant="text" color="green">
+        <Button variant="text" color="success">
           Green
         </Button>
-        <Button variant="text" color="orange">
+        <Button variant="text" color="warning">
           Orange
         </Button>
-        <Button variant="text" color="red">
+        <Button variant="text" color="danger">
           Red
         </Button>
-        <Button variant="text" color="violet">
-          Violet
+        <Button variant="text" color="secondary">
+          Secondary
         </Button>
-        <Button variant="text" color="slate">
+        <Button variant="text" color="surface">
           Slate
         </Button>
-        <Button variant="text" color="indigo">
-          Indigo
-        </Button>
-        <Button variant="text" color="purple">
-          Purple
-        </Button>
-        <Button variant="text" color="brown">
-          Brown
+        <Button variant="text" color="primary">
+          Primary
         </Button>
       </Flex>
     </div>
@@ -150,29 +122,23 @@ export function ButtonsVariants() {
 export function ButtonsCorners() {
   return (
     <Flex gap="sm">
-      <Button corner="sharp" color="green">
+      <Button corner="sharp" color="success">
         Green
       </Button>
-      <Button corner="xs" color="orange">
+      <Button corner="xs" color="warning">
         Orange
       </Button>
-      <Button corner="sm" color="red">
+      <Button corner="sm" color="danger">
         Red
       </Button>
-      <Button corner="md" color="violet">
-        Violet
+      <Button corner="md" color="secondary">
+        Secondary
       </Button>
-      <Button corner="lg" color="slate">
+      <Button corner="lg" color="surface">
         Slate
       </Button>
-      <Button corner="xl" color="indigo">
-        Indigo
-      </Button>
-      <Button corner="circle" color="purple">
-        Purple
-      </Button>
-      <Button corner="full" color="brown">
-        Brown
+      <Button corner="xl" color="primary">
+        Primary
       </Button>
     </Flex>
   )
@@ -181,31 +147,31 @@ export function ButtonsCorners() {
 export function ButtonSizes() {
   return (
     <Flex gap="sm" items="center">
-      <Button size="3xs" color="green">
+      <Button size="3xs" color="success">
         Green
       </Button>
-      <Button size="2xs" color="orange">
+      <Button size="2xs" color="warning">
         Orange
       </Button>
-      <Button size="xs" color="red">
+      <Button size="xs" color="danger">
         Red
       </Button>
-      <Button size="sm" color="violet">
-        Violet
+      <Button size="sm" color="secondary">
+        Secondary
       </Button>
-      <Button size="md" color="slate">
+      <Button size="md" color="surface">
         Slate
       </Button>
-      <Button size="lg" color="indigo">
-        Indigo
+      <Button size="lg" color="primary">
+        Primary
       </Button>
-      <Button size="xl" color="purple">
+      <Button size="xl" color="secondary">
         Purple
       </Button>
-      <Button size="2xl" color="brown">
+      <Button size="2xl" color="secondary">
         Brown
       </Button>
-      <Button size="3xl" color="brown">
+      <Button size="3xl" color="secondary">
         Brown
       </Button>
     </Flex>
@@ -215,34 +181,34 @@ export function ButtonSizes() {
 export function ButtonIcons() {
   return (
     <Flex gap="sm" items="center" wrap>
-      <Button size="3xs" color="green">
+      <Button size="3xs" color="success">
         No Icon
       </Button>
-      <Button icon={<ThumbUp />} iconPosition="end" size="3xs" color="green">
+      <Button icon={<ThumbUp />} iconPosition="end" size="3xs" color="success">
         Green
       </Button>
-      <Button icon={<ThumbUp />} size="2xs" color="orange">
+      <Button icon={<ThumbUp />} size="2xs" color="warning">
         Orange
       </Button>
-      <Button icon={<ThumbUp />} iconPosition="end" size="xs" color="red">
+      <Button icon={<ThumbUp />} iconPosition="end" size="xs" color="danger">
         Red
       </Button>
-      <Button icon={<ThumbUp />} size="sm" color="violet">
-        Violet
+      <Button icon={<ThumbUp />} size="sm" color="secondary">
+        Secondary
       </Button>
-      <Button icon={<ThumbUp />} iconPosition="end" size="md" color="slate">
+      <Button icon={<ThumbUp />} iconPosition="end" size="md" color="surface">
         Slate
       </Button>
-      <Button icon={<ThumbUp />} size="lg" color="indigo">
-        Indigo
+      <Button icon={<ThumbUp />} size="lg" color="primary">
+        Primary
       </Button>
-      <Button icon={<ThumbUp />} iconPosition="end" size="xl" color="purple">
+      <Button icon={<ThumbUp />} iconPosition="end" size="xl" color="success">
         Purple
       </Button>
-      <Button icon={<ThumbUp />} size="2xl" color="brown">
+      <Button icon={<ThumbUp />} size="2xl" color="secondary">
         Brown
       </Button>
-      <Button icon={<ThumbUp />} iconPosition="end" size="3xl" color="brown">
+      <Button icon={<ThumbUp />} iconPosition="end" size="3xl" color="secondary">
         Brown
       </Button>
     </Flex>
@@ -252,31 +218,31 @@ export function ButtonIcons() {
 export function ButtonsFluid() {
   return (
     <div className="l_flow__md">
-      <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xs" color="green">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xs" color="success">
         Green
       </Button>
-      <Button fluid icon={<ThumbUp />} size="2xs" color="orange">
+      <Button fluid icon={<ThumbUp />} size="2xs" color="warning">
         Orange
       </Button>
-      <Button fluid icon={<ThumbUp />} iconPosition="end" size="xs" color="red">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" size="xs" color="danger">
         Red
       </Button>
-      <Button fluid icon={<ThumbUp />} size="sm" color="violet">
-        Violet
+      <Button fluid icon={<ThumbUp />} size="sm" color="secondary">
+        Secondary
       </Button>
-      <Button fluid icon={<ThumbUp />} iconPosition="end" size="md" color="slate">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" size="md" color="surface">
         Slate
       </Button>
-      <Button fluid icon={<ThumbUp />} size="lg" color="indigo">
-        Indigo
+      <Button fluid icon={<ThumbUp />} size="lg" color="primary">
+        Primary
       </Button>
-      <Button fluid icon={<ThumbUp />} iconPosition="end" size="xl" color="purple">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" size="xl" color="success">
         Purple
       </Button>
-      <Button fluid icon={<ThumbUp />} size="2xl" color="brown">
+      <Button fluid icon={<ThumbUp />} size="2xl" color="secondary">
         Brown
       </Button>
-      <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xl" color="brown">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xl" color="secondary">
         Brown
       </Button>
     </div>
@@ -286,13 +252,13 @@ export function ButtonsFluid() {
 export function ButtonsState() {
   return (
     <Flex items="center" gap="xs">
-      <Button state="idle" color="green">
+      <Button state="idle" color="success">
         Idle
       </Button>
-      <Button state="loading" color="green">
+      <Button state="loading" color="success">
         Loading
       </Button>
-      <Button disabled color="green">
+      <Button disabled color="success">
         Disabled
       </Button>
     </Flex>
@@ -302,31 +268,31 @@ export function ButtonsState() {
 export function ButtonLoadingState() {
   return (
     <Flex gap="sm" items="center" wrap>
-      <Button state="loading" size="3xs" color="green">
+      <Button state="loading" size="3xs" color="success">
         Green
       </Button>
-      <Button state="loading" size="2xs" color="orange">
+      <Button state="loading" size="2xs" color="warning">
         Orange
       </Button>
-      <Button state="loading" size="xs" color="red">
+      <Button state="loading" size="xs" color="danger">
         Red
       </Button>
-      <Button state="loading" size="sm" color="violet">
-        Violet
+      <Button state="loading" size="sm" color="secondary">
+        Secondary
       </Button>
-      <Button state="loading" size="md" color="slate">
+      <Button state="loading" size="md" color="surface">
         Slate
       </Button>
-      <Button state="loading" size="lg" color="indigo">
-        Indigo
+      <Button state="loading" size="lg" color="primary">
+        Primary
       </Button>
-      <Button state="loading" size="xl" color="purple">
+      <Button state="loading" size="xl" color="success">
         Purple
       </Button>
-      <Button state="loading" size="2xl" color="brown">
+      <Button state="loading" size="2xl" color="secondary">
         Brown
       </Button>
-      <Button state="loading" size="3xl" color="brown">
+      <Button state="loading" size="3xl" color="secondary">
         Brown
       </Button>
     </Flex>
@@ -336,10 +302,10 @@ export function ButtonLoadingState() {
 export function ButtonsCustomStyle() {
   return (
     <Flex items="center" gap="xs">
-      <Button style={{ background: 'orange' }} state="idle" color="green">
+      <Button style={{ background: 'orange' }} state="idle" color="success">
         Hello world
       </Button>
-      <Button className="u_violet" color="green">
+      <Button className="u_secondary" color="success">
         Hello world
       </Button>
     </Flex>
@@ -349,12 +315,12 @@ export function ButtonsCustomStyle() {
 export function ButtonsLongText() {
   return (
     <Flex items="center" gap="xs" wrap>
-      <Button style={{ background: 'orange' }} state="idle" color="green">
+      <Button style={{ background: 'orange' }} state="idle" color="success">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam asperiores a vitae expedita nostrum
         perspiciatis est excepturi, eligendi facere vel quis, et in dolores eos voluptates libero, adipisci
         necessitatibus voluptatum?
       </Button>
-      <Button className="u_violet" color="green">
+      <Button className="u_secondary" color="success">
         Hello world
       </Button>
     </Flex>

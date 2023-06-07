@@ -25,14 +25,12 @@ export function PaperBackground() {
   return (
     <div className="l_flow__md">
       <Paper>Hello</Paper>
-      <Paper background="brown">Hello</Paper>
       <Paper background="red">Hello</Paper>
       <Paper background="orange">Hello</Paper>
       <Paper background="green">Hello</Paper>
-      <Paper background="purple">Hello</Paper>
-      <Paper background="violet">Hello</Paper>
-      <Paper background="indigo">Hello</Paper>
-      <Paper background="slate">Hello</Paper>
+      <Paper background="secondary">Hello</Paper>
+      <Paper background="primary">Hello</Paper>
+      <Paper background="surface">Hello</Paper>
     </div>
   )
 }
@@ -55,10 +53,10 @@ export function PaperPadding() {
       <Paper padding="lg" background="purple">
         Hello
       </Paper>
-      <Paper padding="xl" background="violet">
+      <Paper padding="xl" background="secondary">
         Hello
       </Paper>
-      <Paper padding="2xl" background="indigo">
+      <Paper padding="2xl" background="primary">
         Hello
       </Paper>
     </div>
@@ -68,28 +66,28 @@ export function PaperPadding() {
 export function PaperCorner() {
   return (
     <div className="l_flow__md">
-      <Paper padding="sm" background="slate-4">
+      <Paper padding="sm" background="surface-4">
         Hello
       </Paper>
-      <Paper padding="sm" background="slate-4" corner="xs">
+      <Paper padding="sm" background="surface-4" corner="xs">
         Hello
       </Paper>
-      <Paper padding="sm" background="slate-4" corner="sm">
+      <Paper padding="sm" background="surface-4" corner="sm">
         Hello
       </Paper>
-      <Paper padding="sm" background="slate-4" corner="md">
+      <Paper padding="sm" background="surface-4" corner="md">
         Hello
       </Paper>
-      <Paper padding="sm" background="slate-4" corner="lg">
+      <Paper padding="sm" background="surface-4" corner="lg">
         Hello
       </Paper>
-      <Paper padding="sm" background="slate-4" corner="xl">
+      <Paper padding="sm" background="surface-4" corner="xl">
         Hello
       </Paper>
-      <Paper padding="sm" background="slate-4" corner="full">
+      <Paper padding="sm" background="surface-4" corner="full">
         Hello
       </Paper>
-      <Paper padding="sm" background="slate-4" corner="circle">
+      <Paper padding="sm" background="surface-4" corner="circle">
         Hello
       </Paper>
     </div>
@@ -123,28 +121,22 @@ export function PaperShadow() {
 export function PaperColors() {
   return (
     <div className="l_flow__md">
-      <Paper padding="sm" background="red-4" color="red">
+      <Paper padding="sm" background="red-4" color="danger">
         Hello
       </Paper>
-      <Paper padding="sm" background="green-4" color="green" corner="xs">
+      <Paper padding="sm" background="green-4" color="success" corner="xs">
         Hello
       </Paper>
-      <Paper padding="sm" background="orange-4" color="orange" corner="sm">
+      <Paper padding="sm" background="orange-4" color="warning" corner="sm">
         Hello
       </Paper>
-      <Paper padding="sm" background="brown-4" color="brown" corner="md">
+      <Paper padding="sm" background="secondary-4" color="secondary" corner="xl">
         Hello
       </Paper>
-      <Paper padding="sm" background="purple-4" color="purple" corner="lg">
+      <Paper padding="sm" background="surface-4" color="surface" corner="full">
         Hello
       </Paper>
-      <Paper padding="sm" background="violet-4" color="violet" corner="xl">
-        Hello
-      </Paper>
-      <Paper padding="sm" background="slate-4" color="slate" corner="full">
-        Hello
-      </Paper>
-      <Paper padding="sm" background="indigo-4" color="indigo" corner="circle">
+      <Paper padding="sm" background="primary-4" color="primary" corner="circle">
         Hello
       </Paper>
     </div>
@@ -154,28 +146,22 @@ export function PaperColors() {
 export function PaperWidths() {
   return (
     <div className="l_flow__md">
-      <Paper background="red-4" color="red">
+      <Paper background="red-4" color="danger">
         Hello
       </Paper>
-      <Paper width="100px" background="green-4" color="green">
+      <Paper width="100px" background="green-4" color="success">
         Hello
       </Paper>
-      <Paper width="50%" background="orange-4" color="orange">
+      <Paper width="50%" background="orange-4" color="warning">
         Hello
       </Paper>
-      <Paper width="70%" background="brown-4" color="brown">
+      <Paper width="15rem" background="secondary-4" color="secondary">
         Hello
       </Paper>
-      <Paper width="100ch" background="purple-4" color="purple">
+      <Paper width="min(100px, 10rem)" background="surface-4" color="surface">
         Hello
       </Paper>
-      <Paper width="15rem" background="violet-4" color="violet">
-        Hello
-      </Paper>
-      <Paper width="min(100px, 10rem)" background="slate-4" color="slate">
-        Hello
-      </Paper>
-      <Paper width="100vw" background="indigo-4" color="indigo">
+      <Paper width="100vw" background="primary-4" color="primary">
         Hello
       </Paper>
     </div>
@@ -185,28 +171,22 @@ export function PaperWidths() {
 export function PaperHeights() {
   return (
     <div className="l_flow__md">
-      <Paper height="100px" background="red-4" color="red">
+      <Paper height="100px" background="red-4" color="danger">
         Hello
       </Paper>
-      <Paper height="5rem" background="green-4" color="green">
+      <Paper height="5rem" background="green-4" color="success">
         Hello
       </Paper>
-      <Paper height="20ch" background="orange-4" color="orange">
+      <Paper height="20ch" background="orange-4" color="warning">
         Hello
       </Paper>
-      <Paper height="70px" background="brown-4" color="brown">
+      <Paper height="30vmin" background="secondary-4" color="secondary">
         Hello
       </Paper>
-      <Paper height="20vh" background="purple-4" color="purple">
+      <Paper height="min(100px, 8rem)" background="surface-4" color="surface">
         Hello
       </Paper>
-      <Paper height="30vmin" background="violet-4" color="violet">
-        Hello
-      </Paper>
-      <Paper height="min(100px, 8rem)" background="slate-4" color="slate">
-        Hello
-      </Paper>
-      <Paper background="indigo-4" color="indigo">
+      <Paper background="primary-4" color="primary">
         Hello
       </Paper>
     </div>
@@ -217,13 +197,11 @@ export function PaperHeights() {
 //   return (
 //     <Flex gap="sm" direction="column">
 //       <PaperBase color="danger" />
-//       <PaperBase color="brown" />
 //       <PaperBase color="warning" />
 //       <PaperBase color="success" />
-//       <PaperBase color="purple" />
-//       <PaperBase color="violet" />
-//       <PaperBase color="indigo" />
-//       <PaperBase color="slate" />
+//       <PaperBase color="secondary" />
+//       <PaperBase color="primary" />
+//       <PaperBase color="surface" />
 //     </Flex>
 //   )
 // }
@@ -317,8 +295,8 @@ export function PaperHeights() {
 // export const PaperCustomStyle = () => {
 //   return (
 //     <Flex direction="column" gap="sm">
-//       <Paper color="danger" title="hello" style={{ background: 'green' }} />
-//       <Paper color="danger" title="hello" className="u_violet" />
+//       <Paper color="danger" title="hello" style={{ background: 'success' }} />
+//       <Paper color="danger" title="hello" className="u_secondary" />
 //     </Flex>
 //   )
 // }
