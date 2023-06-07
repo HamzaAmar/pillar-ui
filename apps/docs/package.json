@@ -10,21 +10,30 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
+    "@pillar/core": "*",
+    "@pillar/hooks": "*",
+    "@pillar/icons": "*",
+    "contentlayer": "^0.3.2",
+    "github-slugger": "^2.0.0",
     "next": "^13.1.1",
+    "next-contentlayer": "^0.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@pillar/core": "*",
-    "@pillar/icons": "*",
-    "@pillar/hooks": "*"
+    "reading-time": "^1.5.0",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-pretty-code": "^0.9.5",
+    "rehype-slug": "^5.1.0",
+    "remark-gfm": "^3.0.1",
+    "shiki": "^0.14.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "eslint": "7.32.0",
-    "eslint-config-custom": "*",
     "@pillar/tsconfig": "*",
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
+    "eslint": "7.32.0",
+    "eslint-config-custom": "*",
     "typescript": "^4.5.3"
   }
 }
