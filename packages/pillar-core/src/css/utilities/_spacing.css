@@ -1,28 +1,28 @@
 /* //Spacing Style Section Start */
 .u_spacing-2xs {
-  gap: clamp(2px, calc(1.2px + 0.27vw), 4px);
+  --spacing: clamp(2px, calc(1.2px + 0.27vw), 4px);
 }
 .u_spacing-xs {
-  gap: clamp(4px, calc(2.4px + 0.49vw), 8px);
+  --spacing: clamp(4px, calc(2.4px + 0.49vw), 8px);
 }
 .u_spacing-sm {
-  gap: clamp(6px, calc(3.68px + 0.73vw), 12px);
+  --spacing: clamp(6px, calc(3.68px + 0.73vw), 12px);
 }
 .u_spacing-md {
-  gap: clamp(8px, calc(4.8px + 0.98vw), 16px);
+  --spacing: clamp(8px, calc(4.8px + 0.98vw), 16px);
 }
 .u_spacing-lg {
-  gap: clamp(12px, calc(7.3px + 1.46vw), 24px);
+  --spacing: clamp(12px, calc(7.3px + 1.46vw), 24px);
 }
 .u_spacing-xl {
-  gap: clamp(16px, calc(9.76px + 1.95vw), 32px);
+  --spacing: clamp(16px, calc(9.76px + 1.95vw), 32px);
 }
 .u_spacing-2xl {
-  gap: clamp(24px, calc(14.5px + 2.93vw), 48px);
+  --spacing: clamp(24px, calc(14.5px + 2.93vw), 48px);
 }
 
 .u_spacing-3xl {
-  gap: clamp(32px, calc(19.52px + 3.9vw), 64px);
+  --spacing: clamp(32px, calc(19.52px + 3.9vw), 64px);
 }
 /* //Spacing Style Section End */
 

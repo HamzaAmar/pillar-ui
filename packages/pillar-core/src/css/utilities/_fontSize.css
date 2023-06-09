@@ -1,0 +1,27 @@
+.u_size-3xs {
+  --font-size: var(--font-3xs);
+}
+.u_size-2xs {
+  --font-size: var(--font-2xs);
+}
+.u_size-xs {
+  --font-size: var(--font-xs);
+}
+.u_size-sm {
+  --font-size: var(--font-sm);
+}
+.u_size-md {
+  --font-size: var(--font-md);
+}
+.u_size-lg {
+  --font-size: var(--font-lg);
+}
+.u_size-xl {
+  --font-size: var(--font-xl);
+}
+.u_size-2xl {
+  --font-size: var(--font-2xl);
+}
+.u_size-3xl {
+  --font-size: var(--font-3xl);
+}

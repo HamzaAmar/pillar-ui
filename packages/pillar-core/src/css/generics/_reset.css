@@ -65,10 +65,10 @@ html {
 }
 
 body {
-  color: var(--slate-12);
+  color: var(--surface-12);
 
   /* // Please Make Sure If you want to update This Background color you need to update .storybook/preview.js */
-  background-color: var(--slate-1);
+  background-color: var(--surface-1);
   -webkit-font-smoothing: antialiased;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu,
     Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
@@ -89,17 +89,17 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--color-bg-light);
+  background: var(--surface-8);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--color-primary-light);
-  outline: 1px solid slategrey;
+  background: var(--primary-8);
+  outline: 1px solid surfacegrey;
   border-radius: 2px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary-dark);
+  background: var(--primary-10);
 }
 
 *[aria-busy='true'],
@@ -108,8 +108,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 code {
-  background: var(--slate-5);
-  color: var(--slate-12);
+  background: var(--surface-5);
+  color: var(--surface-12);
   padding: 0 0.375em;
   line-height: 1.5;
   width: fit-content;

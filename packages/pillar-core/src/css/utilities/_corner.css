@@ -1,0 +1,31 @@
+.u_corner-sharp {
+  --border-radius: 0;
+}
+
+.u_corner-xs {
+  --border-radius: var(--corner-xs);
+}
+
+.u_corner-sm {
+  --border-radius: var(--corner-sm);
+}
+
+.u_corner-md {
+  --border-radius: var(--corner-md);
+}
+
+.u_corner-lg {
+  --border-radius: var(--corner-lg);
+}
+
+.u_corner-xl {
+  --border-radius: var(--corner-xl);
+}
+
+.u_corner-circle {
+  --border-radius: var(--corner-round);
+}
+
+.u_corner-full {
+  --border-radius: var(--corner-full);
+}

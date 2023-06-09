@@ -1,10 +1,10 @@
 :root {
-  --radius-none: 0;
-  --radius-xs: 0.125em;
-  --radius-sm: 0.25em;
-  --radius-md: 0.5em;
-  --radius-lg: 0.75em;
-  --radius-xl: 1em;
-  --radius-round: 50%;
-  --radius-full: 99rem;
+  --corner-sharp: 0;
+  --corner-xs: 0.125em;
+  --corner-sm: 0.25em;
+  --corner-md: 0.5em;
+  --corner-lg: 0.75em;
+  --corner-xl: 1em;
+  --corner-round: 50%;
+  --corner-full: 99rem;
 }

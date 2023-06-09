@@ -1,13 +1,13 @@
 .u_transform__uppercase {
-  text-transform: uppercase;
+  --text-transform: uppercase;
 }
 
 .u_transform__lowercase {
-  text-transform: lowercase;
+  --text-transform: lowercase;
 }
 
 .u_transform__capitalize {
-  text-transform: capitalize;
+  --text-transform: capitalize;
 }
 
 .u_transform__first-letter-only::first-letter {
