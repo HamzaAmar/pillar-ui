@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '../../utils/classnames'
+import { classnames } from '@pillar/utils'
 
 import type { BadgeProps } from './badge.type'
 
@@ -15,9 +15,11 @@ const badge = forwardRef((props, ref) => {
     ...rest
   } = props
 
-  const _className = classnames(`badge l_size-${size} u_center u_${color} l_corner-${corner}`, {
+  const classNames = classnames(`badge u_center u_${color} `, {
     badge__dot: variant === 'dot',
-    [className!]: Boolean(className),
+    [className!]: !!className,
+    [`u_size-${size}`]: !!size,
+    [`u_corner-${corner}`]: !!corner,
   })
 
   /*
@@ -25,19 +27,21 @@ const badge = forwardRef((props, ref) => {
    statement for typescript Look for discriminated union I use Props.variant === 'numeric' does not support
    for destructring with default value
   */
-  let valueToString
+  let displayValue
+  const isNumeric = props.variant === 'numeric'
 
-  if (props.variant === 'numeric') {
-    if (!props.number && !props.showZero) return null
+  if (isNumeric) {
     const { number, max } = props
-    valueToString = max && number > max ? `${max}+` : number.toString()
+    displayValue = max && number > max ? `${max}+` : number.toString()
   } else if (props.variant === 'icon') {
-    valueToString = props.icon
+    displayValue = props.icon
   }
 
+  if (isNumeric && !props.number && !props.showZero) return null
+
   return (
-    <Tag ref={ref} className={_className} {...rest}>
-      {valueToString}
+    <Tag ref={ref} className={classNames} {...rest}>
+      {displayValue}
     </Tag>
   )
 }) as ForwardRefComponent<'div', BadgeProps>

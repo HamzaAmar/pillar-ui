@@ -5,10 +5,12 @@
   text-decoration: none;
   /* TO make it grow when the content of it is big */
   min-width: var(--badge-size, 1.75em);
+  max-width: fit-content;
   height: var(--badge-size, 1.75em);
-  flex: none;
   line-height: 1;
   padding: 0.125rem;
+  border-radius: var(--border-radius, var(--avatar-corner, 10em));
+  font-size: calc(var(--font-size, var(--badge-size, 1rem)) * 0.825);
 }
 
 .badge__dot {
