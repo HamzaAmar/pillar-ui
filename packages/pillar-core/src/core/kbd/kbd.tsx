@@ -1,12 +1,15 @@
 import { forwardRef } from 'react'
-import { classnames } from '../../utils'
+import { classnames } from '@pillar/utils'
 import type { KbdProps } from './kbd.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 
-const kbd = forwardRef(({ title, color, size = 'md', corner = 'xs', className, ...rest }, ref) => {
-  const _className = classnames(`kdb u_${color} l_size-${size} l_corner-${corner}`)
+const kbd = forwardRef(({ title, color = 'primary', size, corner, className, ...rest }, ref) => {
+  const classNames = classnames(`kdb u_${color}`, {
+    [`u_size-${size}`]: !!size,
+    [`u_corner-${corner}`]: !!corner,
+  })
   return (
-    <kbd ref={ref} className={_className} {...rest}>
+    <kbd ref={ref} className={classNames} {...rest}>
       {title}
     </kbd>
   )
