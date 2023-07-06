@@ -11,4 +11,7 @@ export interface AlertProps {
   inline?: boolean
   icon?: ReactNode
   closable?: boolean
+  visible?: boolean
+  defaultVisible?: boolean
+  onClose?: () => void
 }

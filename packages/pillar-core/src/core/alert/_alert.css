@@ -1,5 +1,12 @@
 .alert {
+  width: 100%;
   padding: 0.5rem 1rem;
+  border-radius: var(--border-radius, var(--alert-corner, 0));
+  font-size: var(--font-size, var(--alert-size, 1rem));
+}
+
+.alert-close {
+  margin-inline-start: auto;
 }
 
 /*
@@ -11,14 +18,12 @@
 .alert__solid {
   background-color: var(--color-shared-8);
   color: var(--color-shared-12);
-  /* border-inline-start: 6px solid var(--color-shared-9); */
   border-inline-start: 6px solid var(--opacity-8);
 }
 
 .alert__outline {
   background-color: var(--color-shared-3);
   border: 1px solid;
-  /* border: 1px solid var(--opacity-8); */
   color: var(--color-shared-11);
 }
 
@@ -26,5 +31,4 @@
   background-color: var(--color-shared-5);
   color: var(--color-shared-12);
   border: 1px solid var(--color-shared-7);
-  /* border: 1px solid var(--opacity-7); */
 }

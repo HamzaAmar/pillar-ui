@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
-import { classnames } from '../../utils/classnames'
+import { classnames } from '@pillar/utils'
 import { Close } from '@pillar/icons'
-import { useBooleanState } from '@pillar/hooks'
+import { useControllableState } from '@pillar/hooks'
 import { Flex, Text, IconButton, FlexProps } from '..'
 
 import type { AlertProps } from './alert.type'
@@ -11,24 +11,42 @@ const Alert = forwardRef((props, forwardedRef) => {
   const {
     color = 'danger',
     message,
-    size = 'sm',
+    size,
     title,
     inline,
     variant = 'solid',
     closable = false,
-    corner = 'md',
+    corner,
     className,
+    visible,
+    defaultVisible = true,
+    onClose,
     icon,
     ...rest
   } = props
-  const { booleanValue, setTrue } = useBooleanState(false)
 
-  // Hide the component if booleanValue is true
-  if (booleanValue) {
+  const [isVisible, setVisible] = useControllableState({
+    controlledValue: visible,
+    defaultValue: defaultVisible,
+  })
+
+  const handleToggle = () => {
+    if (closable && onClose) {
+      onClose()
+    } else {
+      setVisible(!isVisible)
+    }
+  }
+
+  // Hide the component if isVisible is true
+  if (!isVisible) {
     return null
   }
-  const _className = classnames(`alert alert__${variant} u_${color} l_corner-${corner} l_size-${size}`, {
+
+  const classNames = classnames(`alert alert__${variant} u_${color}`, {
     [className!]: !!className,
+    [`u_corner-${corner}`]: !!corner,
+    [`u_size-${size}`]: !!size,
   })
 
   const inlineText: Partial<FlexProps> = !inline ? { direction: 'column' } : { items: 'center' }
@@ -41,19 +59,17 @@ const Alert = forwardRef((props, forwardedRef) => {
   const _message = message && <Text as="span">{message}</Text>
 
   const closeIcon = closable && (
-    <IconButton size="2xs" onClick={setTrue} icon={<Close />} title="close title" color={color} />
+    <IconButton size="2xs" onClick={handleToggle} icon={<Close />} title="close title" color={color} />
   )
 
   return (
-    <Flex ref={forwardedRef} gap="2xs" justify="between" items="start" className={_className} role="alert" {...rest}>
-      <Flex items="start" gap="sm">
-        {icon && <span className="u_items-self u_leading__normal">{icon}</span>}
-        <Flex {...inlineText} gap="xs" justify="center">
-          {_title}
-          {_message}
-        </Flex>
+    <Flex ref={forwardedRef} gap="sm" items="start" className={classNames} role="alert" {...rest}>
+      {icon && <span className="u_items-self u_leading__normal">{icon}</span>}
+      <Flex {...inlineText} gap="xs" justify="center">
+        {_title}
+        {_message}
       </Flex>
-      {closeIcon}
+      <div className="alert-close">{closeIcon}</div>
     </Flex>
   )
 }) as ForwardRefComponent<'div', AlertProps>
