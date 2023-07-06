@@ -7,7 +7,7 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 const [PaginationProvider, usePaginationContext] = createContext<PaginationContextProps>('Pagination')
 
 import type { PaginationContextProps, PaginationItem, PaginationProps } from './pagination.type'
-import { createContext } from '../../utils/context'
+import { createContext } from '@pillar/utils'
 
 const Item = forwardRef((props, forwardedRef) => {
   const context = usePaginationContext()
@@ -15,7 +15,7 @@ const Item = forwardRef((props, forwardedRef) => {
     active = 1,
     children,
     variant = context?.variant ?? 'outline',
-    color = context?.color ?? 'slate',
+    color = context?.color ?? 'surface',
     size = context?.size ?? 'md',
     corner = context?.corner ?? 'sm',
     number,
@@ -44,6 +44,7 @@ Item.displayName = 'Pillar-PaginationItem'
 
 export const Pagination = (props: PaginationProps) => {
   const { pageSize = 10, ...rest } = props
+
   const { currentStep, range, goToNextStep, goToPreviousStep, jumpToStep, isFirst, isLast } = usePagination({
     totalPages: 10,
   })
