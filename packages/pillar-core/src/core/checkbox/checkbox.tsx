@@ -1,28 +1,26 @@
 // Disabled State Label And Box
 
 import { Check, Minus } from '@pillar/icons'
-import { classnames, composeRef } from '../../utils'
+import { classnames, composeRef } from '@pillar/utils'
 import { useEffect, useRef, forwardRef } from 'react'
 
 import type { CheckboxProps } from './checkbox.type'
-import { Flex } from '../layout'
+import { Flex } from '../flex'
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRef) => {
   let {
     name,
     label,
-    icon = <Check aria-hidden="true" focusable="false" className="checkbox--check" />,
-    size = 'md',
-    color = 'primary',
+    icon = <Check strokeWidth={2} aria-hidden="true" focusable="false" className="checkbox--check" />,
+    size,
+    color,
     showLabel,
     isIndeterminate = false,
     ...rest
   } = props
 
   const checkboxRef = useRef<HTMLInputElement>(null)
-
-  icon =
-    isIndeterminate && !rest.checked ? <Minus aria-hidden="true" focusable="false" className="checkbox--check" /> : icon
+  icon = isIndeterminate ? <Minus aria-hidden="true" focusable="false" className="checkbox--check" /> : icon
 
   useEffect(() => {
     if (checkboxRef.current) {
@@ -33,7 +31,8 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRe
   }, [isIndeterminate])
 
   const ref = composeRef(forwardedRef, checkboxRef)
-  const _className = classnames('checkbox--label', { 'u_visually-hidden': showLabel })
+  const classNamesRoot = classnames(`checkbox`, { [`u_size-${size}`]: !!size, [`u_${color}`]: !!color })
+  const classNames = classnames('checkbox--label', { 'u_visually-hidden': !!showLabel })
 
   return (
     <Flex
@@ -42,7 +41,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRe
       justify="center"
       inline
       as="label"
-      className={`checkbox l_size-${size} u_${color}`}
+      className={classNamesRoot}
       data-disabled={props.disabled}
     >
       <input
@@ -50,11 +49,11 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRe
         ref={ref}
         className="u_visually-hidden checkbox--element"
         name={name}
-        aria-checked={isIndeterminate && 'mixed'}
+        aria-checked={isIndeterminate ? 'mixed' : rest.checked}
         {...rest}
       />
       <span className="checkbox--indicator">{icon}</span>
-      <div className={_className}>{label}</div>
+      <div className={classNames}>{label}</div>
     </Flex>
   )
 })

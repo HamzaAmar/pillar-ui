@@ -1,10 +1,11 @@
 .checkbox {
   cursor: pointer;
+  font-size: var(--font-size, var(--checkbox-size, 1rem));
   &:hover > .checkbox--indicator {
-    box-shadow: 0 0 0 0.125em var(--color-shared-7);
+    box-shadow: 0 0 0 0.125em var(--color-shared-7, var(--primary-7));
   }
   &:focus-within {
-    outline: 2px dashed var(--color-shared-10);
+    outline: 2px dashed var(--color-shared-10, var(--primary-10));
     outline-offset: 2px;
   }
   &[data-disabled='true'] {
@@ -14,23 +15,25 @@
 
 .checkbox--element {
   &:checked:disabled + .checkbox--indicator {
-    color: var(--slate-5);
+    color: var(--surface-5);
   }
-
+  &[aria-checked='false'] + .checkbox--indicator svg {
+    display: none;
+  }
   &:checked + .checkbox--indicator,
   &:indeterminate + .checkbox--indicator {
-    background-color: var(--color-shared-9);
+    background-color: var(--color-shared-9, none);
     color: white; /* Responsible For The Color Of The Check Icon stroke  white in checked state */
   }
 
   &:disabled + .checkbox--indicator {
     box-shadow: none;
-    border-color: var(--slate-10);
-    background-color: var(--slate-10);
+    border-color: var(--surface-10);
+    background-color: var(--surface-10);
     color: transparent; /* Responsible For The Color Of The Check Icon stroke  transparent in disabled state */
   }
   &:disabled ~ * {
-    color: var(--slate-10);
+    color: var(--surface-10);
   }
 }
 
