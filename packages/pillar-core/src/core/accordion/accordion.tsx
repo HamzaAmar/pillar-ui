@@ -1,5 +1,11 @@
 import { Children, cloneElement, forwardRef, isValidElement, useId } from 'react'
+import { classnames, createContext } from '@pillar/utils'
+import { ChevronDown } from '@pillar/icons'
+// import { useControllableState } from '@pillar/hooks'
+
 import { ForwardRefComponent } from '../../types/polymorphic.type'
+import { Flex } from '../flex'
+
 import type {
   AccordionButtonProps,
   AccordionContextProps,
@@ -8,12 +14,7 @@ import type {
   AccordionPanelProps,
   AccordionProps,
 } from './accordion.type'
-// import { useControllableState } from '@pillar/hooks'
-import { classnames } from '../../utils'
-import { Flex } from '../layout'
-import { ChevronDown } from '@pillar/icons'
 import { useAccordion } from './useAccordion'
-import { createContext } from '../../utils/context'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -24,17 +25,19 @@ import { createContext } from '../../utils/context'
 const [AccordionItemProvider, useAccordionItemContext] = createContext<AccordionItemContextProps>('AccordionItem')
 const [AccordionProvider, useAccordionContext] = createContext<AccordionContextProps>('Accordion')
 
-const AccordionItem = forwardRef(({ children, value, ...rest }, ref) => {
+const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) => {
   const id = useId()
-  const obj = { id, value }
+  const itemContextValue = { id, value }
   const context = useAccordionContext()
-  const classNames = classnames(`accordion--item accordion--item__${context?.variant} l_corner-${context?.corner}`, {
+  const classNames = classnames(`accordion--item accordion--item__${context?.variant} `, {
     [`accordion--item__${context?.variant}`]: !!context?.variant,
+    [`u_corner-${context?.corner}`]: !!context?.corner,
+    [className!]: !!className,
   })
 
   return (
     <div ref={ref} className={classNames} {...rest}>
-      <AccordionItemProvider {...obj}>{children}</AccordionItemProvider>
+      <AccordionItemProvider {...itemContextValue}>{children}</AccordionItemProvider>
     </div>
   )
 }) as ForwardRefComponent<'div', AccordionItemProps>
@@ -50,17 +53,17 @@ AccordionItem.displayName = 'Pillar-AccordionItem'
 const AccordionButton = forwardRef((props, ref) => {
   const itemContext = useAccordionItemContext()
   const accordionContext = useAccordionContext()
-  const { children, id = itemContext?.id, icon = <ChevronDown />, title, ...rest } = props
-
+  const { children, id = itemContext?.id, icon = <ChevronDown />, title, className, ...rest } = props
+  const classNames = classnames('accordion--button', { [className!]: !!className })
   return (
     <Flex
       justify="between"
       items="center"
       as="button"
-      aria-expanded={accordionContext?.checkIfOpen?.(itemContext?.value!)}
+      aria-expanded={accordionContext?.isItemOpen?.(itemContext?.value!)}
       aria-controls={id}
-      className="accordion--button"
-      onClick={() => accordionContext?.ToggleAccordion?.(itemContext?.value!)}
+      className={classNames}
+      onClick={() => accordionContext?.toggleAccordion?.(itemContext?.value!)}
       ref={ref}
       {...rest}
     >
@@ -79,12 +82,13 @@ AccordionButton.displayName = 'Pillar-AccordionButton'
 */
 
 const AccordionPanel = forwardRef((props, ref) => {
-  const { children, ...rest } = props
+  const { children, className, ...rest } = props
   const contextItem = useAccordionItemContext()
   const context = useAccordionContext()
-  // const { checkIfOpen } = useAccordionContext()
+  // const { isItemOpen } = useAccordionContext()
   const classNames = classnames('accordion--panel', {
-    'accordion-hide': !context?.checkIfOpen?.(contextItem?.value!),
+    'accordion-hide': !context?.isItemOpen?.(contextItem?.value!),
+    [className!]: !!className,
   })
   return (
     <div id={context?.id} className={classNames} ref={ref} {...rest}>
@@ -109,12 +113,18 @@ export const Accordion = forwardRef((props, ref) => {
     color,
     variant,
     size = 'md',
-    corner = 'sharp',
+    corner,
     separate,
+    className,
     ...rest
   } = props
   const context = useAccordion(props)
-  const classNames = classnames(`accordion l_size-${size}`, { [`u_${color}`]: !!color, l_flow: !!separate })
+  const classNames = classnames(`accordion l_flow__sm`, {
+    [`u_${color}`]: !!color,
+    [`u_size-${size}`]: !!size,
+    l_flow: !!separate,
+    [className!]: !!className,
+  })
   const accordionContext = { ...context, variant, corner }
 
   return (

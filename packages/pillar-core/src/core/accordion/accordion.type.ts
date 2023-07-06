@@ -1,7 +1,5 @@
-// import type { CSSProperties } from 'react'
-import type { ReactElement, ReactNode, Dispatch, SetStateAction } from 'react'
+import type { ReactElement, Dispatch, SetStateAction } from 'react'
 import { Color, Corner, Size, Variant } from '../../types'
-// import type { Color, Corner, Size } from '../../types'
 
 export interface AccordionProps {
   type?: 'single' | 'multiple'
@@ -28,8 +26,8 @@ export interface AccordionPanelProps {
 export interface UseAccordionReturns {
   state: number | number[]
   setState: Dispatch<SetStateAction<number | number[]>>
-  ToggleAccordion: (currentIndex: number) => void
-  checkIfOpen: (value: number) => boolean
+  toggleAccordion: (currentIndex: number) => void
+  isItemOpen: (value: number) => boolean
 }
 
 export interface AccordionContextProps extends Partial<UseAccordionReturns> {

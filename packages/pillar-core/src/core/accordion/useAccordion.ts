@@ -2,25 +2,26 @@ import { useState } from 'react'
 import type { AccordionProps } from './accordion.type'
 
 export function useAccordion({ type, collapsible }: AccordionProps) {
-  const [state, setState] = useState<number | number[]>(type === 'multiple' ? [] : -1)
-  function checkIfOpen(index: number) {
-    return typeof state === 'number' ? state === index : state.includes(index)
+  const [activeItems, setActiveItems] = useState<number | number[]>(type === 'multiple' ? [] : -1)
+
+  function isItemOpen(index: number) {
+    return typeof activeItems === 'number' ? activeItems === index : activeItems.includes(index)
   }
 
-  function ToggleAccordion(currentIndex: number) {
-    if (checkIfOpen(currentIndex) && !collapsible) {
-      if (Array.isArray(state) && state.length === 1) return
-      if (state === currentIndex) return
+  function toggleAccordion(currentIndex: number) {
+    if (isItemOpen(currentIndex) && !collapsible) {
+      if (Array.isArray(activeItems) && activeItems.length === 1) return
+      if (activeItems === currentIndex) return
     }
 
-    if (Array.isArray(state)) {
-      const newState = checkIfOpen(currentIndex)
-        ? state.filter((value) => currentIndex !== value)
-        : [...state, currentIndex]
-      return setState(newState)
+    if (Array.isArray(activeItems)) {
+      const newState = isItemOpen(currentIndex)
+        ? activeItems.filter((value) => currentIndex !== value)
+        : [...activeItems, currentIndex]
+      return setActiveItems(newState)
     }
-    setState((val) => (currentIndex === val ? -1 : currentIndex))
+    setActiveItems((val) => (currentIndex === val ? -1 : currentIndex))
   }
 
-  return { state, setState, ToggleAccordion, checkIfOpen }
+  return { activeItems, setActiveItems, toggleAccordion, isItemOpen }
 }
