@@ -1,11 +1,12 @@
-import type { ReactElement, CSSProperties, ReactNode } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 import type { Color, Size, Corner, Variant } from '../../types'
 
 // type VariantUnion = Variant | 'link' | 'text'
 type Position = 'start' | 'end'
 type State = 'idle' | 'loading'
 
-type ButtonVariant = Variant | 'link'
+type ButtonVariant = Variant | 'link' | 'gradient'
+type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'first-letter-only'
 
 interface BaseButton {
   color?: Color
@@ -14,8 +15,7 @@ interface BaseButton {
   variant?: ButtonVariant
   state?: State
   icon?: ReactElement
-  className?: string
-  style?: CSSProperties
+  transform?: Transform
 }
 
 /**

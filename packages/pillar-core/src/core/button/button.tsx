@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '../../utils/classnames'
-import { Flex } from '../layout'
+import { classnames } from '@pillar/utils'
+import { Flex } from '../flex'
 import { Spinner } from '../spinner'
 import type { ButtonProps, IconButtonProps } from './button.type'
 
@@ -15,51 +15,54 @@ export const Button = forwardRef((props, forwardedRef) => {
   const {
     children,
     color = 'primary',
-    corner = 'xs',
+    corner,
     variant = 'solid',
-    size = 'md',
+    size,
     state = 'idle',
     icon,
     iconPosition = 'start',
     className,
     disabled,
+    transform,
     fluid,
     as = 'button',
     ...rest
   } = props
   const startIcon = iconPosition === 'start' && icon
   const endIcon = iconPosition === 'end' && icon
-  const _className = classnames(`btn btn__${variant} l_size-${size} l_corner-${corner} u_${color} u_singleline`, {
+  const classNames = classnames(`btn  btn__${variant} u_${color} u_singleline`, {
     [className!]: !!className,
+    btn__fluid: !!fluid,
+    [`u_transform__${transform}`]: !!transform,
+    [`u_size-${size}`]: !!size,
+    [`u_corner-${corner}`]: !!corner,
   })
   const _disabled = disabled || state === 'loading'
 
   return (
-    <div data-disabled={_disabled} className={classnames('btn--wrapper', { btn__fluid: !!fluid })}>
-      <Flex
-        as={as}
-        gap="xs"
-        items="center"
-        justify="center"
-        disabled={_disabled}
-        ref={forwardedRef}
-        className={_className}
-        {...rest}
-      >
-        {state === 'loading' ? (
-          <>
-            <span> Loading </span>
-            <Spinner size={size} />
-          </>
-        ) : (
-          <>
-            {startIcon}
-            <span className="btn--text">{children}</span>
-            {endIcon}
-          </>
-        )}
-      </Flex>
-    </div>
+    <Flex
+      as={as}
+      gap="xs"
+      items="center"
+      justify="center"
+      disabled={_disabled}
+      ref={forwardedRef}
+      className={classNames}
+      {...rest}
+    >
+      {state === 'loading' ? (
+        <>
+          <span> Loading </span>
+          <Spinner size={size} />
+        </>
+      ) : (
+        <>
+          {startIcon}
+          <span className="btn--text">{children}</span>
+          {endIcon}
+        </>
+      )}
+    </Flex>
   )
 }) as ForwardRefComponent<'button', ButtonProps>
 
@@ -86,10 +89,11 @@ export const IconButton = forwardRef(
     },
     forwardedRef
   ) => {
-    const iconButtonClassName = classnames(
-      `icon-button btn btn__${variant} l_size-${size} l_corner-${corner} u_${color} u_center`,
-      { [className!]: !!className }
-    )
+    const iconButtonClassName = classnames(`icon-button btn btn__${variant} u_${color} u_center`, {
+      [className!]: !!className,
+      [`u_size-${size}`]: !!size,
+      [`u_corner-${corner}`]: !!corner,
+    })
 
     return (
       <Tag aria-label={title} className={iconButtonClassName} ref={forwardedRef} {...rest}>
