@@ -1,4 +1,4 @@
-import { classnames } from '../../utils'
+import { classnames } from '@pillar/utils'
 import { Flex, Text } from '..'
 import { Children, isValidElement } from 'react'
 import type {
@@ -14,16 +14,18 @@ export const ProgressCircle = ({
   max = 100,
   value,
   label,
-  color = 'indigo',
+  color = 'primary',
   ...rest
 }: ProgressCircleProps) => {
   const progress = ((value - min) / (max - min)) * 100
+  const _value = Number.isInteger(progress) ? progress : progress.toFixed(2)
+
   const circumference = 2 * Math.PI * 45 // Circumference based on the radius
 
   const dashOffset = circumference - (progress / 100) * circumference
 
   return (
-    <div className={`circle-progress l_size-${size} u_${color}`} {...rest}>
+    <div className={`circle-progress u_size-${size} u_${color}`} {...rest}>
       <svg className="circle-progress--svg" viewBox="0 0 100 100">
         <circle className="circle-progress--background" cx="50" cy="50" r="45" />
         <circle
@@ -35,7 +37,7 @@ export const ProgressCircle = ({
           strokeDashoffset={dashOffset}
         />
         <text fill="black" className="circle-progress--text" x="50" y="50">
-          {progress}%
+          {_value}%
         </text>
       </svg>
     </div>
@@ -48,25 +50,29 @@ export const ProgressBar = ({
   color = 'primary',
   size = 'md',
   label,
-}: // className,
-ProgressBarProps) => {
+  min = 0,
+  max = 100,
+}: ProgressBarProps) => {
+  const MaxValue = Math.min(value, max)
+  const progress = ((MaxValue - min) / (max - min)) * 100
+
   return (
     <div className={`u_${color}`}>
       <Flex justify="end">
         <Text size={size} className={classnames({ 'u_visually-hidden': !showValue })}>
-          {value}%
+          {MaxValue}%
         </Text>
       </Flex>
       <div
         role="progressbar"
         aria-valuemax={100}
         aria-valuemin={0}
-        aria-valuenow={value}
-        aria-valuetext={`${value}%`}
+        aria-valuenow={progress}
+        aria-valuetext={`${progress}%`}
         aria-label={label}
-        className={`progress-bar l_size-${size}`}
+        className={`progress-bar u_size-${size}`}
       >
-        <div className="progress-bar--inner" style={{ width: `${value}%` }} />
+        <div className="progress-bar--inner" style={{ width: `${progress}%` }} />
       </div>
     </div>
   )
@@ -87,13 +93,13 @@ export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProp
   })
   return (
     <div className="l_flow-sm">
-      <Flex gap="2xs" className={`progress-bar progressbar-stack l_size-${size}`}>
+      <Flex gap="2xs" className={`progress-bar progressbar-stack u_size-${size}`}>
         {children}
       </Flex>
       <Flex as="ul" wrap gap="md">
         {_children?.map(({ children, color }, index) => (
           <Flex items="center" gap="2xs" as="li" className={`progress-stack--list-item u_${color}`} key={index}>
-            <Text as="span" color="slate" size="sm" contrast="low">
+            <Text as="span" color="surface" size="sm" contrast="low">
               {children}
             </Text>
           </Flex>
