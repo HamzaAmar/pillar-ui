@@ -1,10 +1,10 @@
 import { svgProps } from '../../shared'
 import type { SvgType } from '../../type'
 
-const SvgComponent = (props: SvgType) => (
+const vercel = (props: SvgType) => (
   <svg {...svgProps} {...props}>
     <path d="M3 19h18L12 4 3 19Z" />
   </svg>
 )
 
-export default SvgComponent
+export default vercel
