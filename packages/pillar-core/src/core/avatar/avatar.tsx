@@ -2,11 +2,10 @@
 import { Children, forwardRef } from 'react'
 import { User } from '@pillar/icons'
 import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
-import { classnames } from '../../utils/classnames'
+import { classnames, createContext } from '@pillar/utils'
 import { useBooleanState } from '@pillar/hooks'
 // import { AvatarProvider, useAvatarContext } from './context'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { createContext } from '../../utils/context'
 import { Text } from '../typography'
 
 const [AvatarProvider, useAvatarContext] = createContext<AvatarGroupContextProps>('Avatar')
@@ -24,7 +23,7 @@ export const AvatarGroup = forwardRef(
       size = 'md',
       layout = 'stack',
       variant = 'soft',
-      color = 'indigo',
+      color = 'primary',
       corner = 'full',
       fallback,
       animate,
@@ -34,31 +33,28 @@ export const AvatarGroup = forwardRef(
     },
     ref
   ) => {
-    const restNumbers = limit && limit < Children.count(children) ? Children.count(children) - limit : null
+    const childCount = Children.count(children)
 
-    const max = limit && limit < Children.count(children) ? limit : Children.count(children)
+    const restCount = limit && limit < childCount ? childCount - limit : null
+
+    const maxCount = limit ? Math.min(limit, childCount) : childCount
 
     const contextProps = { color, corner, size, animate, variant, fallback }
 
     return (
       <Tag ref={ref} className={`avatar-group avatar-group__${layout}`} {...rest}>
         <AvatarProvider {...contextProps}>
-          {Array.from(new Array(max)).map((_, index) => {
+          {Array.from(new Array(maxCount)).map((_, index) => {
             return Children.toArray(children)[index]
           })}
         </AvatarProvider>
 
-        {restNumbers && (
-          // <div
-          //   className={`avatar avatar__size l_corner-${corner} avatar__${variant} l_size-${size} u_center u_${color} u_center`}
-          // >
-          //   <span className="avatar--letter">{restNumbers}</span> <span className="avatar--letter avatar--plus">+</span>
-          // </div>
+        {restCount && (
           <Avatar
             {...contextProps}
             fallback={
               <Text size="sm" weight="medium">
-                {restNumbers}+
+                {restCount}+
               </Text>
             }
           />
@@ -77,15 +73,15 @@ Avatar Component
 */
 
 export const Avatar = forwardRef((props, ref) => {
-  const { booleanValue, setTrue } = useBooleanState()
+  const { booleanValue: isError, setTrue } = useBooleanState(false)
   const context = useAvatarContext()
   const {
     as: Tag = 'div',
     animate = context?.animate,
     variant = context?.variant ?? 'soft',
-    size = context?.size ?? 'md',
-    corner = context?.corner ?? 'full',
-    color = context?.color ?? 'indigo',
+    size = context?.size,
+    corner = context?.corner,
+    color = context?.color ?? 'primary',
     fallback = context?.fallback ?? <User width="max(1.75em, 10px)" />,
     image = '',
     className,
@@ -93,20 +89,21 @@ export const Avatar = forwardRef((props, ref) => {
     ...rest
   } = props
 
-  const _image = <img className="avatar--img" src={image} onError={setTrue} alt={title} />
-
-  const content = booleanValue ? <span className="avatar--fallback u_center">{fallback}</span> : _image
-
-  const _className = classnames(
-    `avatar avatar__size avatar__${variant} l_corner-${corner} l_size-${size} u_${color} u_center`,
-    {
-      [`u_${animate}`]: !!animate,
-      [className!]: !!className,
-    }
+  const content = isError ? (
+    <span className="avatar--fallback u_center">{fallback}</span>
+  ) : (
+    <img className="avatar--img" src={image} onError={setTrue} alt={title} />
   )
 
+  const classNames = classnames(`avatar avatar__size avatar__${variant} u_${color} u_center`, {
+    [`u_${animate}`]: !!animate,
+    [className!]: !!className,
+    [`u_size-${size}`]: !!size,
+    [`u_corner-${corner}`]: !!corner,
+  })
+
   return (
-    <Tag ref={ref} className={_className} {...rest}>
+    <Tag ref={ref} className={classNames} {...rest}>
       {content}
     </Tag>
   )
