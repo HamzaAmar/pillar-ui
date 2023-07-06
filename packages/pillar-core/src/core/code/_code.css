@@ -1,8 +1,7 @@
 .code {
   background: var(--color-shared-4);
   color: var(--color-shared-11);
-  padding: 0 0.375em;
   flex: none;
-  line-height: 1.5;
-  width: fit-content;
+  font-size: var(--font-size, var(--code-size, 0.875rem));
+  border-radius: var(--border-radius, var(--code-corner, 0.25rem));
 }
