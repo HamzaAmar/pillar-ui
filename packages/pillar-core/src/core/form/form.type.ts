@@ -26,9 +26,10 @@ interface SharedProps {
 
 export interface FormGroupProps extends FormFieldSharedProps {
   title: string
-  hideTitle?: boolean
   children: ReactNode
   direction?: Direction
+
+  hideTitle?: boolean
   hideBorder?: boolean
 }
 

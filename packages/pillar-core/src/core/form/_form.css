@@ -9,6 +9,9 @@
   color: var(--text-6);
   position: relative;
   overflow: hidden;
+  height: fit-content;
+  font-size: max(16px, var(--font-size, var(--button-size, 1rem)));
+  border-radius: var(--border-radius, var(--button-corner, 0.25rem));
 
   &:focus-within {
     outline: 2px solid var(--color-shared-9, var(--primary-9));
@@ -16,14 +19,14 @@
   }
 
   &[data-invalid='true'] {
-    color: var(--red-11);
-    border-color: var(--red-9);
-    outline-color: var(--red-9);
-    background-color: var(--red-3);
+    color: var(--danger-11);
+    border-color: var(--danger-9);
+    outline-color: var(--danger-9);
+    background-color: var(--danger-3);
   }
 
   &[data-disabled='true'] {
-    background-color: var(--slate-7);
+    background-color: var(--surface-7);
     cursor: not-allowed;
   }
 }
@@ -35,7 +38,7 @@
 }
 
 .form-field-wrapper__outline {
-  border-color: var(--slate-7);
+  border-color: var(--surface-7);
 }
 .form-field-wrapper__filled {
   border-color: var(--opacity-5);
@@ -86,7 +89,7 @@
   width: 100%;
 
   &[data-readonly='true'] .form-field-wrapper {
-    background-color: var(--slate-5);
+    background-color: var(--surface-5);
   }
 }
 
@@ -112,7 +115,16 @@
   }
   &:disabled {
     pointer-events: none;
-    background-color: var(--slate-7);
+    background-color: var(--surface-7);
+  }
+}
+
+.form-field[type='number'] {
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 
@@ -142,16 +154,21 @@
   right: 0;
   top: 0;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  & * + * {
+    border-top: 1px solid var(--opacity-6);
+  }
 }
 .number-input--button {
   line-height: 0;
-  background-color: var(--slate-7);
+  background-color: var(--surface-7);
   height: 50%;
   &:active {
     background-color: var(--opacity-8);
   }
   &:hover {
-    background-color: var(--slate-8);
+    background-color: var(--surface-8);
   }
 }
 
@@ -170,7 +187,7 @@
     box-shadow: inset 0 0 16px var(--opacity-8);
   }
   &:hover {
-    background-color: var(--slate-5);
+    background-color: var(--surface-5);
   }
   & svg {
     width: 20px;
@@ -183,7 +200,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 .form-group--container {
-  color: var(--slate-11);
+  color: var(--surface-11);
   border: 1px solid var(--opacity-6);
 }
 
@@ -222,23 +239,23 @@
 }
 
 .select-field {
-  background-color: var(--slate-1);
+  background-color: var(--surface-1);
 }
 .select-chevron {
   position: absolute;
   right: 0.5rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--slate-11);
+  color: var(--surface-11);
 }
 
 .input-file {
-  background-color: var(--color-shared-7, var(--slate-7));
+  background-color: var(--color-shared-7, var(--surface-7));
   font-size: 0.9em;
   padding: 0.25rem 1rem;
   cursor: pointer;
 
   .form-field-wrapper:not([data-disabled]) &:hover {
-    background-color: var(--color-shared-8, var(--slate-8));
+    background-color: var(--color-shared-8, var(--surface-8));
   }
 }

@@ -1,9 +1,8 @@
 import { ChevronDown, Eye, EyeOff, ListSearch } from '@pillar/icons'
 import { useBooleanState, useControllableState } from '@pillar/hooks'
-import { Flex } from '..'
-import { classnames } from '../../utils'
+import { Flex, Text, Grid } from '..'
+import { classnames, composeRef, createContext } from '@pillar/utils'
 import { ChangeEvent, forwardRef, useId, useRef } from 'react'
-import { composeRef } from '../../utils'
 
 import type {
   FormControllerProps,
@@ -15,8 +14,6 @@ import type {
   FormControllerContextProps,
   FormGroupContextProps,
 } from './form.type'
-import { Text, Grid } from '..'
-import { createContext } from '../../utils/context'
 
 const [FormControllerProvider, useFormController] = createContext<FormControllerContextProps>('FormController')
 const [FormGroupProvider, useFormGroup] = createContext<FormGroupContextProps>('FormGroup')
@@ -31,10 +28,10 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
   const ctx = useFormController()
   const formGroupContext = useFormGroup()
   const {
-    size = formGroupContext?.size ?? 'md',
+    size = formGroupContext?.size,
     variant = formGroupContext?.variant ?? 'outline',
-    corner = formGroupContext?.corner ?? 'sm',
-    color = formGroupContext?.color ?? 'indigo',
+    corner = formGroupContext?.corner,
+    color = formGroupContext?.color ?? 'primary',
     fluid = formGroupContext?.fluid,
     isInvalid,
     id,
@@ -44,14 +41,14 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
     ...restProps
   } = props
 
-  const prefixInputIfExist = !!prefixInput && (
+  const prefixInputElement = !!prefixInput && (
     <span className="input-field--prefix u_flex-inline u_items-center u_justify-center">{prefixInput}</span>
   )
-  const suffixInputIfExist = !!suffixInput && <span className="input-field--suffix u_center">{suffixInput}</span>
+  const suffixInputElement = !!suffixInput && <span className="input-field--suffix u_center">{suffixInput}</span>
 
   const wrapperClassName = classnames(
-    `form-field-wrapper l_corner-${corner} form-field-wrapper__${variant} u_flex u_items-start u_spacing-xs u_${color}`,
-    { 'form-field-wrapper__fluid': fluid }
+    `form-field-wrapper u_corner-${corner} form-field-wrapper__${variant} u_flex u_items-start u_spacing-xs u_${color}`,
+    { 'form-field-wrapper__fluid': !!fluid }
   )
 
   return (
@@ -63,7 +60,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
       data-invalid={isInvalid}
       data-readonly={restProps.readOnly}
     >
-      {prefixInputIfExist}
+      {prefixInputElement}
 
       <textarea
         aria-describedby={ctx?.describedby}
@@ -72,7 +69,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
         {...ctx}
         className={`form-field textarea__${size}`}
       ></textarea>
-      {suffixInputIfExist}
+      {suffixInputElement}
     </Flex>
   )
 })
@@ -92,7 +89,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
-    color = formGroupContext?.color ?? 'indigo',
+    color = formGroupContext?.color ?? 'primary',
     fluid = formGroupContext?.fluid,
     prefixInput,
     suffixInput,
@@ -100,11 +97,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
     ...restProps
   } = props
 
-  const prefixInputIfExist = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
-  const suffixInputIfExist = !!suffixInput && <span className="input-field--suffix u_center">{suffixInput}</span>
+  const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
+  const suffixInputElement = !!suffixInput && <span className="input-field--suffix u_center">{suffixInput}</span>
 
   const wrapperClassName = classnames(
-    `form-field-wrapper  l_corner-${corner} form-field-wrapper__${variant} u_flex u_${color}`,
+    `form-field-wrapper  u_corner-${corner} form-field-wrapper__${variant} u_flex u_${color}`,
     {
       'form-field-wrapper__fluid': !!fluid,
     }
@@ -119,7 +116,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
       data-invalid={isInvalid}
       data-readonly={restProps.readOnly}
     >
-      {prefixInputIfExist}
+      {prefixInputElement}
       <input
         aria-describedby={ctx?.describedby}
         type="text"
@@ -127,9 +124,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
         aria-invalid={isInvalid}
         {...restProps}
         {...ctx}
-        className={`form-field l_size-${size}`}
+        className={`form-field u_size-${size}`}
       />
-      {suffixInputIfExist}
+      {suffixInputElement}
     </Flex>
   )
 })
@@ -149,7 +146,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
-    color = formGroupContext?.color ?? 'indigo',
+    color = formGroupContext?.color ?? 'primary',
     fluid = formGroupContext?.fluid,
     prefixInput,
     suffixInput,
@@ -161,7 +158,10 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
 
   const composedRef = composeRef(inputRef, forwardedRef)
 
-  const wrapperClassName = `form-field-wrapper l_corner-${corner} form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`
+  const wrapperClassName = classnames(
+    `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
+    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+  )
 
   return (
     <div
@@ -176,9 +176,9 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
         ref={composedRef}
         {...rest}
         {...ctx}
-        className={`form-field l_size-${size}`}
+        className="form-field"
       />
-      <Flex direction="column" className="input-number--counter-wrapper">
+      <div className="input-number--counter-wrapper">
         <button
           onClick={() => {
             inputRef.current?.focus()
@@ -204,7 +204,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
         >
           <ChevronDown height="90%" />
         </button>
-      </Flex>
+      </div>
     </div>
   )
 })
@@ -224,7 +224,7 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
-    color = formGroupContext?.color ?? 'indigo',
+    color = formGroupContext?.color ?? 'primary',
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
@@ -235,7 +235,10 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
 
   const { booleanValue: showPassword, setToggle } = useBooleanState(false)
   const type = showPassword ? 'text' : 'password'
-  const wrapperClassName = `form-field-wrapper l_corner-${corner} form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`
+  const wrapperClassName = classnames(
+    `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
+    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+  )
   const label = showPassword ? 'Hide Password' : 'Show Password'
   return (
     <Flex
@@ -251,7 +254,7 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
         ref={forwardedRef}
         {...restProps}
         {...ctx}
-        className={`form-field l_size-${size} l_flex-1 `}
+        className="form-field"
       />
 
       <button aria-label={label} type="button" onClick={setToggle} className="password-input--button u_center">
@@ -276,14 +279,16 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
-    color = formGroupContext?.color ?? 'indigo',
+    color = formGroupContext?.color ?? 'primary',
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
     ...restProps
   } = props
-  const wrapperClassName = `form-field-wrapper l_corner-${corner} form-field-wrapper__${variant} l_size-${size} u_flex u_spacing-xs u_${color}`
-
+  const wrapperClassName = classnames(
+    `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
+    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+  )
   return (
     <Flex justify="between" className={wrapperClassName}>
       <input
@@ -292,9 +297,14 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
         ref={forwardedRef}
         {...restProps}
         {...ctx}
-        className={`form-field form-field__search`}
+        className="form-field form-field__search"
       />
-      <ListSearch className="search-field--icon" width="1.25em" stroke="var(--slate-11)" transform="translate(-8,0)" />
+      <ListSearch
+        className="search-field--icon"
+        width="1.25em"
+        stroke="var(--surface-11)"
+        transform="translate(-8,0)"
+      />
     </Flex>
   )
 })
@@ -314,13 +324,16 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
-    color = formGroupContext?.color ?? 'indigo',
+    color = formGroupContext?.color ?? 'primary',
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
     ...restProps
   } = props
-  const wrapperClassName = `form-field-wrapper l_corner-${corner} form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`
+  const wrapperClassName = classnames(
+    `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
+    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+  )
 
   return (
     <div className={wrapperClassName} data-disabled={restProps.disabled} data-invalid={isInvalid}>
@@ -329,7 +342,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
         ref={forwardedRef}
         {...restProps}
         {...ctx}
-        className={`form-field select-field l_size-${size}`}
+        className="form-field select-field"
       >
         {children}
       </select>
@@ -356,17 +369,20 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
-    color = formGroupContext?.color ?? 'indigo',
+    color = formGroupContext?.color ?? 'primary',
     fluid = formGroupContext?.fluid,
     value,
-    title,
+    title = 'Select File',
     isInvalid,
     children,
     ...rest
   } = props
   const inputRef = useRef<HTMLInputElement>(null)
   const composedRef = composeRef(inputRef, forwardedRef)
-  const wrapperClassName = `form-field-wrapper l_corner-${corner} form-field-wrapper__${variant}  l_size-${size} u_${color}`
+  const wrapperClassName = classnames(
+    `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
+    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+  )
   const [_value, setValue] = useControllableState({ controlledValue: value, defaultValue: null })
   const hasValue = Array.isArray(_value) ? _value.length !== 0 : !!_value
 
@@ -384,10 +400,9 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
     }
     setValue(e.target.files?.[0].name ?? '')
   }
-  console.log(rest.disabled)
   return (
     <Grid
-      columns="auto 1fr"
+      grid="auto 1fr"
       gap="xs"
       className={wrapperClassName}
       data-disabled={rest.disabled}
@@ -401,14 +416,14 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
         ref={composedRef}
         {...rest}
         {...ctx}
-        className={`u_visually-hidden`}
+        className="u_visually-hidden"
         onChange={handleChange}
       />
-      <Flex as="span" items="center" className={`input-file`}>
+      <Flex as="span" items="center" className="input-file">
         {title}
       </Flex>
 
-      <Text as={Flex} color="slate" size="xs" contrast="low" items="center">
+      <Text as={Flex} color="surface" size="xs" contrast="low" items="center">
         {hasValue ? _value : 'No file Choose'}
       </Text>
     </Grid>
@@ -442,7 +457,7 @@ export const FormController = (props: FormControllerProps) => {
       <Flex direction="column" gap="2xs" className={classnames('text-field--root', { [className!]: !!className })}>
         <Text
           className={classnames({
-            'u_visually-hidden': hideLabel,
+            'u_visually-hidden': !!hideLabel,
           })}
           as="label"
           size="sm"
@@ -458,7 +473,7 @@ export const FormController = (props: FormControllerProps) => {
         )}
         {children}
         {error && (
-          <Text as={Flex} gap="xs" items="center" id={messageID} color="red" size="xs" contrast="low" role="alert">
+          <Text as={Flex} gap="xs" items="center" id={messageID} color="danger" size="xs" contrast="low" role="alert">
             <span>{/* <Alert type="circle" width="20" /> */}</span>
             <span> {error}</span>
           </Text>
@@ -479,13 +494,13 @@ export const FormGroup = ({
   return (
     <fieldset
       className={classnames('form-group--container', {
-        'form-group--hide-border ': hideBorder,
+        'form-group--hide-border ': !!hideBorder,
       })}
     >
-      <legend className={classnames('form-group--legend', { 'u_visually-hidden': hideTitle })}>{title}</legend>
+      <legend className={classnames('form-group--legend', { 'u_visually-hidden': !!hideTitle })}>{title}</legend>
       <Flex
         gap="sm"
-        className={classnames('form-group', { 'form-group--fluid': rest.fluid })}
+        className={classnames('form-group', { 'form-group--fluid': !!rest.fluid })}
         items="start"
         direction={direction}
       >
