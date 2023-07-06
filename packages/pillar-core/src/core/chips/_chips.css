@@ -1,19 +1,21 @@
 .chips {
   text-transform: capitalize;
-  display: inline-block;
-  padding: 0 0.5em;
+  height: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125em;
+  padding: 0 0.375em;
+  width: fit-content;
   max-width: 25ch;
   border: 2px solid transparent;
   font-weight: 500;
-}
-
-.chips--content {
-  font-size: 0.875em;
+  font-size: calc(var(--font-size, var(--chip-size, 1rem)) * 0.75);
+  border-radius: var(--border-radius, var(--chip-corner, 1em));
   line-height: 1.2;
-}
-
-.chips--content svg {
-  width: 1em;
+  justify-content: safe left;
+  & svg {
+    width: 1em;
+  }
 }
 
 /* Chips Variants */

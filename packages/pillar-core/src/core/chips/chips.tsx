@@ -1,29 +1,35 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { ChipsProps } from './chips.type'
-import { classnames } from '../../utils'
+import { classnames } from '@pillar/utils'
 
 const chips = forwardRef((props, ref) => {
   const {
-    size = 'md',
-    color = 'red',
+    size,
+    color = 'primary',
     as: Tag = 'span',
+    icon,
+    iconPosition = 'start',
     variant = 'solid',
-    corner = 'full',
+    corner,
     className,
     children,
     ...rest
   } = props
-  const _className = classnames(
-    `chips chips__${variant} l_size-${size} l_corner-${corner} u_${color} u_singleline u_center`,
-    {
-      [className!]: !!className,
-    }
-  )
+  const classNames = classnames(`chips chips__${variant} u_${color} u_singleline`, {
+    [className!]: !!className,
+    [`u_size-${size}`]: !!size,
+    [`u_corner-${corner}`]: !!corner,
+  })
+
+  const startIcon = icon && iconPosition === 'start' && icon
+  const endIcon = icon && iconPosition === 'end' && icon
 
   return (
-    <Tag ref={ref} className={_className} {...rest}>
-      <span className="chips--content">{children}</span>
+    <Tag ref={ref} className={classNames} {...rest}>
+      {startIcon}
+      {children}
+      {endIcon}
     </Tag>
   )
 }) as ForwardRefComponent<'span', ChipsProps>
