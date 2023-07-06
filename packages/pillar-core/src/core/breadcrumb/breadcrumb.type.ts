@@ -17,4 +17,6 @@ export interface BreadcrumbItemProps extends BreadcrumbProps {
   icon?: ReactNode
 }
 
-export interface BreadcrumbContextProps extends BreadcrumbProps {}
+export interface BreadcrumbContextProps {
+  separator?: string | ReactElement
+}
