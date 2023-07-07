@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Alert, Flex } from '@pillar/core'
+import { Alert, Button, Flex } from '@pillar/core'
 import { Check, CircleCheck, CircleInfo, CircleWarning } from '@pillar/icons'
 
 export default {
@@ -29,6 +29,20 @@ export const AlertColors = () => {
       <AlertBase color="secondary" />
       <AlertBase color="primary" />
       <AlertBase color="surface" />
+    </Flex>
+  )
+}
+
+export const AlertControlled = () => {
+  const [open, setOpen] = useState(true)
+
+  function onClose() {
+    setOpen((isOpen) => (isOpen ? false : true))
+  }
+  return (
+    <Flex gap="sm" direction="column">
+      <Button onClick={onClose}>{open ? 'Hide' : 'Open'} The Alert</Button>
+      <AlertBase color="danger" visible={open} onClose={onClose} closable />
     </Flex>
   )
 }
@@ -157,10 +171,10 @@ export const AlertTitleIcon = () => {
 export const AlertCustomStyle = () => {
   return (
     <Flex direction="column" gap="sm">
-      <Alert color="danger" title="hello" style={{ background: 'success' }} />
-      <Alert color="danger" title="hello" style={{ background: 'success' }} closable />
-      <Alert color="danger" title="hello" style={{ background: 'success' }} variant="outline" />
-      <Alert color="danger" title="hello" style={{ background: 'success' }} variant="soft" />
+      <Alert color="danger" title="hello" style={{ backgroundColor: 'red' }} />
+      <Alert color="danger" title="hello" style={{ backgroundColor: 'green' }} closable />
+      <Alert color="danger" title="hello" style={{ backgroundColor: 'orange' }} variant="outline" />
+      <Alert color="danger" title="hello" style={{ backgroundColor: 'purple' }} variant="soft" />
       <Alert color="danger" title="hello" className="u_secondary" />
       <Alert color="danger" title="hello" className="u_secondary" closable />
       <Alert color="danger" title="hello" className="u_secondary" variant="outline" />

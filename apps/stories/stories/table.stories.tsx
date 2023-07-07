@@ -5,7 +5,7 @@ import type { TableProps } from '@pillar/core'
 import { ArrowDown } from '@pillar/icons'
 
 export default {
-  default: 'Components/Table',
+  title: 'Components/Table',
   component: Table,
 } as ComponentMeta<typeof Table>
 

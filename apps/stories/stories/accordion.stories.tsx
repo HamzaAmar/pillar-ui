@@ -58,7 +58,7 @@ export const AlertCollapse = () => {
 export const AlertColors = () => {
   return (
     <div className="l_flow__md">
-      <Grid columns="1fr 1fr 1fr" gap="lg">
+      <Grid grid="1fr 1fr 1fr" gap="lg">
         <AccordionBase color="danger" />
         <AccordionBase color="success" />
         <AccordionBase color="warning" />
@@ -66,7 +66,7 @@ export const AlertColors = () => {
         <AccordionBase color="secondary" />
         <AccordionBase color="surface" />
       </Grid>
-      <Grid columns="1fr 1fr 1fr" gap="lg">
+      <Grid grid="1fr 1fr 1fr" gap="lg">
         <AccordionBase variant="soft" color="danger" />
         <AccordionBase variant="soft" color="success" />
         <AccordionBase variant="soft" color="warning" />
@@ -74,7 +74,7 @@ export const AlertColors = () => {
         <AccordionBase variant="soft" color="secondary" />
         <AccordionBase variant="soft" color="surface" />
       </Grid>
-      <Grid columns="1fr 1fr 1fr" gap="lg">
+      <Grid grid="1fr 1fr 1fr" gap="lg">
         <AccordionBase separate variant="soft" color="danger" />
         <AccordionBase separate variant="soft" color="success" />
         <AccordionBase separate variant="soft" color="warning" />
@@ -82,7 +82,7 @@ export const AlertColors = () => {
         <AccordionBase separate variant="soft" color="secondary" />
         <AccordionBase separate variant="soft" color="surface" />
       </Grid>
-      <Grid columns="1fr 1fr 1fr" gap="lg">
+      <Grid grid="1fr 1fr 1fr" gap="lg">
         <AccordionBase variant="outline" color="danger" />
         <AccordionBase variant="outline" color="success" />
         <AccordionBase variant="outline" color="warning" />
@@ -90,7 +90,7 @@ export const AlertColors = () => {
         <AccordionBase variant="outline" color="secondary" />
         <AccordionBase variant="outline" color="surface" />
       </Grid>
-      <Grid columns="1fr 1fr 1fr" gap="lg">
+      <Grid grid="1fr 1fr 1fr" gap="lg">
         <AccordionBase separate variant="outline" color="danger" />
         <AccordionBase separate variant="outline" color="success" />
         <AccordionBase separate variant="outline" color="warning" />
@@ -98,7 +98,7 @@ export const AlertColors = () => {
         <AccordionBase separate variant="outline" color="secondary" />
         <AccordionBase separate variant="outline" color="surface" />
       </Grid>
-      <Grid columns="1fr 1fr 1fr" gap="lg">
+      <Grid grid="1fr 1fr 1fr" gap="lg">
         <AccordionBase variant="solid" color="danger" />
         <AccordionBase variant="solid" color="success" />
         <AccordionBase variant="solid" color="warning" />
@@ -106,7 +106,7 @@ export const AlertColors = () => {
         <AccordionBase variant="solid" color="secondary" />
         <AccordionBase variant="solid" color="surface" />
       </Grid>
-      <Grid columns="1fr 1fr 1fr" gap="lg">
+      <Grid grid="1fr 1fr 1fr" gap="lg">
         <AccordionBase separate variant="solid" color="danger" />
         <AccordionBase separate variant="solid" color="success" />
         <AccordionBase separate variant="solid" color="warning" />

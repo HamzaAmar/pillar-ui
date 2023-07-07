@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Pagination } from '@pillar/core'
 
 export default {
-  default: 'Components/Pagintaion',
+  title: 'Components/Pagintaion',
   component: Pagination,
 } as ComponentMeta<typeof Pagination>
 

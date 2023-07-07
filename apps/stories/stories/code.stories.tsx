@@ -3,7 +3,7 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Flex, Code } from '@pillar/core'
 
 export default {
-  code: 'Components/Code',
+  title: 'Components/Code',
   component: Code,
 } as ComponentMeta<typeof Code>
 

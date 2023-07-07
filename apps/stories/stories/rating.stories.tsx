@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Flex, Rating } from '@pillar/core'
 
 export default {
-  default: 'Components/Rating',
+  title: 'Components/Rating',
   component: Rating,
   args: {
     rating: 1,

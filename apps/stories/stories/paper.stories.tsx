@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Paper } from '@pillar/core'
+import { Paper, Flex } from '@pillar/core'
 
 export default {
   title: 'Components/Paper',
@@ -25,9 +25,9 @@ export function PaperBackground() {
   return (
     <div className="l_flow__md">
       <Paper>Hello</Paper>
-      <Paper background="red">Hello</Paper>
-      <Paper background="orange">Hello</Paper>
-      <Paper background="green">Hello</Paper>
+      <Paper background="danger">Hello</Paper>
+      <Paper background="warning">Hello</Paper>
+      <Paper background="success">Hello</Paper>
       <Paper background="secondary">Hello</Paper>
       <Paper background="primary">Hello</Paper>
       <Paper background="surface">Hello</Paper>
@@ -38,27 +38,52 @@ export function PaperBackground() {
 export function PaperPadding() {
   return (
     <div className="l_flow__md">
-      <Paper padding="2xs" background="red">
-        Hello
-      </Paper>
-      <Paper padding="xs" background="orange">
-        Hello
-      </Paper>
-      <Paper padding="sm" background="green">
-        Hello
-      </Paper>
-      <Paper padding="md" background="purple">
-        Hello
-      </Paper>
-      <Paper padding="lg" background="purple">
-        Hello
-      </Paper>
-      <Paper padding="xl" background="secondary">
-        Hello
-      </Paper>
-      <Paper padding="2xl" background="primary">
-        Hello
-      </Paper>
+      <Flex>
+        <Paper p="2xs" background="danger">
+          Hello
+        </Paper>
+        <Paper p="xs" background="warning">
+          Hello
+        </Paper>
+        <Paper p="sm" background="success">
+          Hello
+        </Paper>
+        <Paper p="md" background="surface">
+          Hello
+        </Paper>
+        <Paper p="xl" background="secondary">
+          Hello
+        </Paper>
+        <Paper p="2xl" background="primary">
+          Hello
+        </Paper>
+      </Flex>
+      <Flex>
+        <Paper p="2xs" pt="lg" background="danger">
+          Hello
+        </Paper>
+        <Paper p="2xs" pr="lg" background="warning">
+          Hello
+        </Paper>
+        <Paper p="2xs" pb="lg" background="success">
+          Hello
+        </Paper>
+        <Paper p="2xs" pl="lg" background="surface">
+          Hello
+        </Paper>
+        <Paper p="2xs" plr="lg" background="secondary">
+          Hello
+        </Paper>
+        <Paper p="2xs" ptb="lg" background="primary">
+          Hello
+        </Paper>
+        <Paper ptb="lg" background="primary">
+          Hello
+        </Paper>
+        <Paper plr="lg" background="primary">
+          Hello
+        </Paper>
+      </Flex>
     </div>
   )
 }
@@ -66,28 +91,28 @@ export function PaperPadding() {
 export function PaperCorner() {
   return (
     <div className="l_flow__md">
-      <Paper padding="sm" background="surface-4">
+      <Paper p="sm" background="surface-4">
         Hello
       </Paper>
-      <Paper padding="sm" background="surface-4" corner="xs">
+      <Paper p="sm" background="surface-4" corner="xs">
         Hello
       </Paper>
-      <Paper padding="sm" background="surface-4" corner="sm">
+      <Paper p="sm" background="surface-4" corner="sm">
         Hello
       </Paper>
-      <Paper padding="sm" background="surface-4" corner="md">
+      <Paper p="sm" background="surface-4" corner="md">
         Hello
       </Paper>
-      <Paper padding="sm" background="surface-4" corner="lg">
+      <Paper p="sm" background="surface-4" corner="lg">
         Hello
       </Paper>
-      <Paper padding="sm" background="surface-4" corner="xl">
+      <Paper p="sm" background="surface-4" corner="xl">
         Hello
       </Paper>
-      <Paper padding="sm" background="surface-4" corner="full">
+      <Paper p="sm" background="surface-4" corner="full">
         Hello
       </Paper>
-      <Paper padding="sm" background="surface-4" corner="circle">
+      <Paper p="sm" background="surface-4" corner="circle">
         Hello
       </Paper>
     </div>
@@ -97,21 +122,21 @@ export function PaperCorner() {
 export function PaperShadow() {
   return (
     <div className="l_flow__md">
-      <Paper padding="sm">Hello</Paper>
+      <Paper p="sm">Hello</Paper>
 
-      <Paper padding="sm" shadow="xs">
+      <Paper p="sm" shadow="xs">
         Hello
       </Paper>
-      <Paper padding="sm" shadow="sm">
+      <Paper p="sm" shadow="sm">
         Hello
       </Paper>
-      <Paper padding="sm" shadow="md">
+      <Paper p="sm" shadow="md">
         Hello
       </Paper>
-      <Paper padding="sm" shadow="lg">
+      <Paper p="sm" shadow="lg">
         Hello
       </Paper>
-      <Paper padding="sm" shadow="xl">
+      <Paper p="sm" shadow="xl">
         Hello
       </Paper>
     </div>
@@ -121,22 +146,22 @@ export function PaperShadow() {
 export function PaperColors() {
   return (
     <div className="l_flow__md">
-      <Paper padding="sm" background="red-4" color="danger">
+      <Paper p="sm" background="surface-4" color="danger-11">
         Hello
       </Paper>
-      <Paper padding="sm" background="green-4" color="success" corner="xs">
+      <Paper p="sm" background="surface-4" color="success-11">
         Hello
       </Paper>
-      <Paper padding="sm" background="orange-4" color="warning" corner="sm">
+      <Paper p="sm" background="surface-4" color="warning-11">
         Hello
       </Paper>
-      <Paper padding="sm" background="secondary-4" color="secondary" corner="xl">
+      <Paper p="sm" background="surface-4" color="secondary-11">
         Hello
       </Paper>
-      <Paper padding="sm" background="surface-4" color="surface" corner="full">
+      <Paper p="sm" background="surface-4" color="surface-11">
         Hello
       </Paper>
-      <Paper padding="sm" background="primary-4" color="primary" corner="circle">
+      <Paper p="sm" background="surface-4" color="primary-11">
         Hello
       </Paper>
     </div>
@@ -146,13 +171,13 @@ export function PaperColors() {
 export function PaperWidths() {
   return (
     <div className="l_flow__md">
-      <Paper background="red-4" color="danger">
+      <Paper background="danger-4" color="danger">
         Hello
       </Paper>
-      <Paper width="100px" background="green-4" color="success">
+      <Paper width="100px" background="success-4" color="success">
         Hello
       </Paper>
-      <Paper width="50%" background="orange-4" color="warning">
+      <Paper width="50%" background="warning-4" color="warning">
         Hello
       </Paper>
       <Paper width="15rem" background="secondary-4" color="secondary">
@@ -171,13 +196,13 @@ export function PaperWidths() {
 export function PaperHeights() {
   return (
     <div className="l_flow__md">
-      <Paper height="100px" background="red-4" color="danger">
+      <Paper height="100px" background="danger-4" color="danger">
         Hello
       </Paper>
-      <Paper height="5rem" background="green-4" color="success">
+      <Paper height="5rem" background="success-4" color="success">
         Hello
       </Paper>
-      <Paper height="20ch" background="orange-4" color="warning">
+      <Paper height="20ch" background="warning-4" color="warning">
         Hello
       </Paper>
       <Paper height="30vmin" background="secondary-4" color="secondary">
@@ -186,6 +211,40 @@ export function PaperHeights() {
       <Paper height="min(100px, 8rem)" background="surface-4" color="surface">
         Hello
       </Paper>
+      <Paper background="primary-4" color="primary">
+        Hello
+      </Paper>
+    </div>
+  )
+}
+
+export function PaperBorders() {
+  return (
+    <div className="l_flow__md">
+      <Paper borderStyle="dotted">Dotted</Paper>
+      <Paper borderStyle="dotted" p="sm" borderPosition="top">
+        Border Top
+      </Paper>
+      <Paper borderStyle="dotted" p="sm" borderPosition="right">
+        Border Right
+      </Paper>
+      <Paper borderStyle="dotted" p="sm" borderPosition="bottom">
+        Border Bottom
+      </Paper>
+      <Paper borderStyle="dotted" p="sm" borderPosition="left">
+        Border Left
+      </Paper>
+      <Paper borderStyle="dotted" p="sm" borderPosition="block">
+        Border Block
+      </Paper>
+      <Paper borderStyle="dotted" p="sm" borderPosition="inline">
+        Border Inline
+      </Paper>
+
+      <Paper borderStyle="dashed">Hello</Paper>
+      <Paper borderColor="danger-9">Hello</Paper>
+      <Paper borderColor="warning-9">Hello</Paper>
+      <Paper borderWidth="4px">Hello</Paper>
       <Paper background="primary-4" color="primary">
         Hello
       </Paper>

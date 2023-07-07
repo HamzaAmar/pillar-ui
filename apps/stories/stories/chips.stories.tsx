@@ -1,17 +1,19 @@
-import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import React, { useRef, useState, CSSProperties } from 'react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Chips, Flex } from '@pillar/core'
-import { Close } from '@pillar/icons'
+import { Dots, Plus } from '@pillar/icons'
+import { Button } from '@pillar/core'
 
 export default {
   title: 'Components/Chips',
   component: Chips,
   args: {
-    children: 'Hello World',
+    children: 'Hello world',
   },
 } as ComponentMeta<typeof Chips>
 
 const Template: ComponentStory<typeof Chips> = (args) => <Chips {...args} />
+export const Playground = Template.bind({})
 
 export const ChipsColor = () => (
   <Flex gap="xs">
@@ -105,90 +107,182 @@ export const ChipsVariants = () => (
 )
 
 export const ChipsSize = () => (
-  <Flex gap="xs" items="center">
-    <Chips size="2xs" variant="outline">
-      Hello
-    </Chips>
-    <Chips size="xs" variant="outline">
-      Hello
-    </Chips>
-    <Chips size="sm" variant="outline">
-      Hello
-    </Chips>
-    <Chips size="md" variant="outline">
-      Hello
-    </Chips>
-    <Chips size="lg" variant="outline">
-      Hello
-    </Chips>
-    <Chips size="xl" variant="outline">
-      Hello
-    </Chips>
-    <Chips size="2xl" variant="outline">
-      Hello
-    </Chips>
-  </Flex>
+  <div>
+    <h1>With Props</h1>
+
+    <Flex gap="xs" items="center">
+      <Chips size="2xs" variant="outline">
+        Hello
+      </Chips>
+      <Chips size="xs" variant="outline">
+        Hello
+      </Chips>
+      <Chips size="sm" variant="outline">
+        Hello
+      </Chips>
+      <Chips size="md" variant="outline">
+        Hello
+      </Chips>
+      <Chips size="lg" variant="outline">
+        Hello
+      </Chips>
+      <Chips size="xl" variant="outline">
+        Hello
+      </Chips>
+      <Chips size="2xl" variant="outline">
+        Hello
+      </Chips>
+    </Flex>
+    <h1>With 2rem</h1>
+    <Flex gap="xs" style={{ '--chip-size': '2rem' } as CSSProperties}>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+    </Flex>
+    <h1>With 1em</h1>
+    <Flex gap="xs" style={{ '--chip-size': '1em' } as CSSProperties}>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+    </Flex>
+  </div>
 )
 
 export const ChipsCorner = () => (
-  <Flex gap="xs">
-    <Chips corner="sharp" variant="outline">
-      Hello
-    </Chips>
-    <Chips corner="xs" variant="outline">
-      Hello
-    </Chips>
-    <Chips corner="sm" variant="outline">
-      Hello
-    </Chips>
-    <Chips corner="md" variant="outline">
-      Hello
-    </Chips>
-    <Chips corner="lg" variant="outline">
-      Hello
-    </Chips>
-    <Chips corner="xl" variant="outline">
-      Hello
-    </Chips>
-    <Chips corner="full" variant="outline">
-      Hello
-    </Chips>
-    <Chips corner="circle" variant="outline">
-      Hello
-    </Chips>
-  </Flex>
+  <div className="l_fow__sm">
+    <h1>With Props</h1>
+    <Flex gap="xs">
+      <Chips corner="sharp" variant="outline">
+        Hello
+      </Chips>
+      <Chips corner="xs" variant="outline">
+        Hello
+      </Chips>
+      <Chips corner="sm" variant="outline">
+        Hello
+      </Chips>
+      <Chips corner="md" variant="outline">
+        Hello
+      </Chips>
+      <Chips corner="lg" variant="outline">
+        Hello
+      </Chips>
+      <Chips corner="xl" variant="outline">
+        Hello
+      </Chips>
+      <Chips corner="full" variant="outline">
+        Hello
+      </Chips>
+      <Chips corner="circle" variant="outline">
+        Hello
+      </Chips>
+    </Flex>
+    <h1>With 1rem radius</h1>
+    <Flex gap="xs" style={{ '--chip-corner': '1rem' } as CSSProperties}>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+    </Flex>
+    <h1>With Sharp</h1>
+    <Flex gap="xs" style={{ '--chip-corner': '0' } as CSSProperties}>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+      <Chips variant="outline">Hello</Chips>
+    </Flex>
+  </div>
 )
 
 export const ChipsIcons = () => (
   <Flex gap="xs" items="center">
-    <Chips size="3xs" prefix={<Close />} variant="outline">
+    <Chips size="2xs" variant="outline">
+      Hello
+      <Plus />
+    </Chips>
+    <Chips size="xs" variant="outline">
+      <Plus />
       Hello
     </Chips>
-    <Chips size="2xs" suffix={<Close />} variant="outline">
+    <Chips size="sm" variant="outline">
+      Hello
+      <Plus />
+    </Chips>
+    <Chips size="md" variant="outline">
+      <Plus />
       Hello
     </Chips>
-    <Chips size="xs" prefix={<Close />} variant="outline">
+    <Chips size="lg" variant="outline">
+      Hello
+      <Plus />
+    </Chips>
+    <Chips size="xl" variant="outline">
+      <Plus />
       Hello
     </Chips>
-    <Chips size="sm" suffix={<Close />} variant="outline">
+    <Chips size="2xl" variant="outline">
       Hello
-    </Chips>
-    <Chips size="md" prefix={<Close />} variant="outline">
-      Hello
-    </Chips>
-    <Chips size="lg" suffix={<Close />} variant="outline">
-      Hello
-    </Chips>
-    <Chips size="xl" prefix={<Close />} variant="outline">
-      Hello
-    </Chips>
-    <Chips size="2xl" suffix={<Close />} variant="outline">
-      Hello
-    </Chips>
-    <Chips size="3xl" prefix={<Close />} variant="outline">
-      Hello
+      <Dots />
     </Chips>
   </Flex>
 )
 
-export const Playground = Template.bind({})
+export const ChipsStrange = () => (
+  <Flex gap="xs" items="center">
+    <Chips variant="outline">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse architecto recusandae quibusdam molestias velit
+      corrupti, ullam blanditiis earum, pariatur, sunt delectus reiciendis! Rerum nesciunt optio perferendis unde
+      necessitatibus, dolore nobis?
+    </Chips>
+    <Chips variant="outline">H</Chips>
+  </Flex>
+)
+
+export const BadgeRefForwarded = () => {
+  const chipsRef = useRef<HTMLDivElement>(null)
+  const [count, setCount] = useState(1)
+
+  const handleClick = () => {
+    setCount((count) => count + 1)
+    if (chipsRef.current?.style) {
+      const { style } = chipsRef.current
+      if (count % 2 === 0) {
+        style.backgroundColor = 'var(--primary-8)'
+        style.borderColor = 'var(--primary-12)'
+        style.borderColor = 'var(--primary-11)'
+        return
+      }
+      style.background = 'var(--secondary-8)'
+      style.color = 'var(--secondary-12)'
+      style.borderColor = 'var(--secondary-11)'
+      return
+    }
+  }
+
+  return (
+    <Flex gap="sm">
+      <Chips ref={chipsRef} variant="outline">
+        Hello
+      </Chips>
+      <Button onClick={handleClick}>Number {count}</Button>
+    </Flex>
+  )
+}

@@ -74,7 +74,7 @@ export const SkeletonTextLines = () => {
 export const SkeletonTextSizes = () => {
   const loading = useLoading()
   return (
-    <Grid columns="1fr 1fr" gap="xl">
+    <Grid grid="1fr 1fr" gap="xl">
       <Skeleton.Text size="3xs" isLoading={loading}>
         <Text size="xs">hello world</Text>
       </Skeleton.Text>

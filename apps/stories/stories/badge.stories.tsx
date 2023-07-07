@@ -1,7 +1,7 @@
-import React from 'react'
-import { Check } from '@pillar/icons'
+import React, { useRef, useState } from 'react'
+import { Check, Plus, Plane, ChevronDown, Apple, Alien, LetterSpacing, SuperScript } from '@pillar/icons'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Badge, Flex } from '@pillar/core'
+import { Badge, Button, Flex } from '@pillar/core'
 
 export default {
   title: 'Components/Badge',
@@ -27,13 +27,13 @@ export const BadgeSize = () => {
       </Flex>
       <Flex items="center" gap="sm">
         <Badge size="3xs" variant="icon" icon={<Check />} />
-        <Badge size="2xs" variant="icon" icon={<Check />} />
-        <Badge size="xs" variant="icon" icon={<Check />} />
-        <Badge size="sm" variant="icon" icon={<Check />} />
-        <Badge size="md" variant="icon" icon={<Check />} />
-        <Badge size="lg" variant="icon" icon={<Check />} />
-        <Badge size="2xl" variant="icon" icon={<Check />} />
-        <Badge size="3xl" variant="icon" icon={<Check />} />
+        <Badge size="2xs" variant="icon" icon={<Plus />} />
+        <Badge size="xs" variant="icon" icon={<Plane />} />
+        <Badge size="sm" variant="icon" icon={<Apple />} />
+        <Badge size="md" variant="icon" icon={<Alien />} />
+        <Badge size="lg" variant="icon" icon={<ChevronDown />} />
+        <Badge size="2xl" variant="icon" icon={<LetterSpacing />} />
+        <Badge size="3xl" variant="icon" icon={<SuperScript />} />
       </Flex>
       <Flex items="center" gap="sm">
         <Badge size="3xs" variant="dot" />
@@ -61,6 +61,41 @@ export const BadgeNumericColor = () => {
     </Flex>
   )
 }
+
+export const BadgeCorner = () => {
+  return (
+    <div className="l_flow__md">
+      <Flex gap="sm">
+        <Badge variant="numeric" corner="sharp" number={15} max={15} color="danger" />
+        <Badge variant="numeric" corner="xs" number={15} max={15} color="success" />
+        <Badge variant="numeric" corner="sm" number={15} max={15} color="warning" />
+        <Badge variant="numeric" corner="md" number={15} max={15} color="secondary" />
+        <Badge variant="numeric" corner="lg" number={15} max={15} color="secondary" />
+        <Badge variant="numeric" corner="circle" number={15} max={15} color="primary" />
+        <Badge variant="numeric" corner="full" number={15} max={15} color="surface" />
+      </Flex>
+      <Flex gap="sm">
+        <Badge variant="icon" icon={<Check />} corner="sharp" color="danger" />
+        <Badge variant="icon" icon={<Plus />} corner="xs" color="success" />
+        <Badge variant="icon" icon={<Plane />} corner="sm" color="warning" />
+        <Badge variant="icon" icon={<Apple />} corner="md" color="secondary" />
+        <Badge variant="icon" icon={<Alien />} corner="lg" color="secondary" />
+        <Badge variant="icon" icon={<ChevronDown />} corner="circle" color="primary" />
+        <Badge variant="icon" icon={<LetterSpacing />} corner="full" color="surface" />
+      </Flex>
+      <Flex gap="sm">
+        <Badge variant="dot" corner="sharp" color="danger" />
+        <Badge variant="dot" corner="xs" color="success" />
+        <Badge variant="dot" corner="sm" color="warning" />
+        <Badge variant="dot" corner="md" color="secondary" />
+        <Badge variant="dot" corner="lg" color="secondary" />
+        <Badge variant="dot" corner="circle" color="primary" />
+        <Badge variant="dot" corner="full" color="surface" />
+      </Flex>
+    </div>
+  )
+}
+
 export const BadgeIconColor = () => {
   return (
     <Flex gap="sm">
@@ -96,6 +131,33 @@ export const BadgeNumericMaxValue = () => {
       <Badge variant="numeric" showZero number={0} max={15} color="danger" />
       <Badge variant="numeric" number={15} max={1} color="secondary" />
       <Badge variant="numeric" number={15} max={15} color="surface" />
+    </Flex>
+  )
+}
+
+export const BadgeRefForwarded = () => {
+  const badgeRef = useRef<HTMLDivElement>(null)
+  const [count, setCount] = useState(1)
+
+  const handleClick = () => {
+    setCount((count) => count + 1)
+    if (badgeRef.current?.style) {
+      const { style } = badgeRef.current
+      if (count % 2 === 0) {
+        style.backgroundColor = 'black'
+        style.color = 'white'
+        return
+      }
+      style.background = 'white'
+      style.color = 'black'
+      return
+    }
+  }
+
+  return (
+    <Flex gap="sm">
+      <Badge ref={badgeRef} variant="numeric" number={15} max={10} color="danger" />
+      <Button onClick={handleClick}>Number {count}</Button>
     </Flex>
   )
 }

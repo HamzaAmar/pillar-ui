@@ -40,12 +40,13 @@ const ParentCheckbox = ({ children }) => {
 export const CheckboxColor = () => {
   return (
     <Flex gap="sm" items="center">
-      <Checkbox name="hello" label="Hello" color="danger" />
-      <Checkbox name="hello" label="Hello" color="success" />
-      <Checkbox name="hello" label="Hello" color="warning" />
-      <Checkbox name="hello" label="Hello" color="primary" />
-      <Checkbox name="hello" label="Hello" color="secondary" />
-      <Checkbox name="hello" label="Hello" color="surface" />
+      <Checkbox name="hello" label="Transparent" />
+      <Checkbox name="hello" label="Danger" color="danger" />
+      <Checkbox name="hello" label="Success" color="success" />
+      <Checkbox name="hello" label="Warning" color="warning" />
+      <Checkbox name="hello" label="Primary" color="primary" />
+      <Checkbox name="hello" label="Secondary" color="secondary" />
+      <Checkbox name="hello" label="Surface" color="surface" />
     </Flex>
   )
 }

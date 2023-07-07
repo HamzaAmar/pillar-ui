@@ -5,7 +5,7 @@ import type { TabProps } from '@pillar/core'
 import { ArrowDown } from '@pillar/icons'
 
 export default {
-  default: 'Components/Tabs',
+  title: 'Components/Tabs',
   component: Tabs,
 } as ComponentMeta<typeof Tabs>
 
@@ -98,7 +98,7 @@ export const TabDirection = () => {
 
 export const TabVariants = () => {
   return (
-    <Grid columns="1fr 1fr" gap="sm">
+    <Grid grid="1fr 1fr" gap="sm">
       <Flex direction="column" gap="sm">
         <TabBase variant="solid" color="danger" defaultValue={1} />
         <TabBase variant="solid" color="warning" defaultValue={1} />

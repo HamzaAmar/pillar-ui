@@ -1,5 +1,5 @@
-import React from 'react'
-import { Avatar, Flex } from '@pillar/core'
+import React, { useRef, useState } from 'react'
+import { Avatar, Button, Flex } from '@pillar/core'
 import { Dots, UserInfo, UserOff } from '@pillar/icons'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
@@ -38,6 +38,31 @@ export function AvatarsFallback() {
       <Avatar size="xl" title="Hello" />
       <Avatar size="2xl" title="Hello" />
       <Avatar size="3xl" title="Hello" />
+    </Flex>
+  )
+}
+
+export const AvatarRefForwarded = () => {
+  const avatarRef = useRef<HTMLDivElement>(null)
+  const [count, setCount] = useState(1)
+
+  const handleClick = () => {
+    setCount((count) => count + 1)
+    if (avatarRef.current?.style) {
+      const { style } = avatarRef.current
+      if (count % 2 === 0) {
+        avatarRef.current.style.setProperty('--img-size', '2.5rem')
+        return
+      }
+      avatarRef.current.style.setProperty('--img-size', '3rem')
+      return
+    }
+  }
+
+  return (
+    <Flex gap="sm" items="center">
+      <Avatar ref={avatarRef} image="https://picsum.photos/id/128/100/100" title="Hello" />
+      <Button onClick={handleClick}>Number {count}</Button>
     </Flex>
   )
 }
