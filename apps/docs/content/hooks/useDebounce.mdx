@@ -1,8 +1,11 @@
 ---
-title: 'useDarkMode'
-type: 'Hooks'
+title: useDarkMode
+type: Hooks
 excerpt: 'The useDarkMode custom hook is a React hook that enables you to easily toggle between dark and light mode in your application. This hook provides a simple and powerful way to add dark mode support to your React application, which can be particularly useful for users who prefer a darker interface or who use your application in low-light environments.'
-file: 'hooks'
+file: hooks
+root: hooks
+---
+
 ---
 
 # useDebounce
@@ -23,7 +26,7 @@ To use useDebounce in your project, you can create a file (e.g., `useDebounce.ts
 
 To use the useDebounce hook in your React components, import it and call it in your functional component like this:
 
-```tsx
+```tsx title='app.ts' showLineNumbers
 import React, { useState } from 'react'
 import { useDebounce } from '@pillar/hooks'
 

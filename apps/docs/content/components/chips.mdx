@@ -4,6 +4,7 @@ type: Components
 excerpt: The Chips component is a UI component that is used to represent small pieces of information. It can be used to display different types of information like tags, categories, and status indicators.
 items: ['Chips']
 file: ' core'
+root: 'components'
 ---
 
 ### Props
@@ -20,10 +21,17 @@ The color prop is used to specify the background color of the Chips component. I
 
 Example:
 
+<ChipsPlayGround.Colors />
+
 ```tsx showLineNumbers title="Chips.tsx"
-<Chips color="success" variant="solid">
-  Hello
-</Chips>
+<Paper borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+  <Chips color="danger">Hello</Chips>
+  <Chips color="success">Hello</Chips>
+  <Chips color="warning">Hello</Chips>
+  <Chips color="primary">Hello</Chips>
+  <Chips color="secondary">Hello</Chips>
+  <Chips color="surface">Hello</Chips>
+</Paper>
 ```
 
 ### variant
@@ -32,10 +40,20 @@ The variant prop is used to specify the style of the Chips component. It support
 
 Example:
 
+<ChipsPlayGround.Variants />
+
 ```tsx showLineNumbers title="Chips.tsx"
-<Chips color="success" variant="outline">
-  Hello
-</Chips>
+<Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+  <Chips color="success" variant="solid">
+    Hello
+  </Chips>
+  <Chips color="success" variant="outline">
+    Hello
+  </Chips>
+  <Chips color="success" variant="soft">
+    Hello
+  </Chips>
+</Paper>
 ```
 
 ### size
@@ -48,10 +66,18 @@ The size prop is used to specify the size of the Chips component. It supports th
 
 Example:
 
+<ChipsPlayGround.Sizes />
+
 ```tsx showLineNumbers title="Chips.tsx"
-<Chips size="md" variant="outline">
-  Hello
-</Chips>
+<Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+  <Chips size="2xs">Hello</Chips>
+  <Chips size="xs">Hello</Chips>
+  <Chips size="sm">Hello</Chips>
+  <Chips size="md">Hello</Chips>
+  <Chips size="lg">Hello</Chips>
+  <Chips size="xl">Hello</Chips>
+  <Chips size="2xl">Hello</Chips>
+</Paper>
 ```
 
 ### corner
@@ -60,10 +86,17 @@ The corner prop is used to specify the corner style of the Chips component. It s
 
 Example:
 
+<ChipsPlayGround.Corners />
+
 ```tsx showLineNumbers title="Chips.tsx"
-<Chips corner="full" variant="outline">
-  Hello
-</Chips>
+<Chips corner="sharp">Hello</Chips>
+<Chips corner="xs">Hello</Chips>
+<Chips corner="sm">Hello</Chips>
+<Chips corner="md">Hello</Chips>
+<Chips corner="lg">Hello</Chips>
+<Chips corner="xl">Hello</Chips>
+<Chips corner="full">Hello</Chips>
+<Chips corner="circle">Hello</Chips>
 ```
 
 ### prefix and suffix
@@ -72,10 +105,41 @@ The prefix and suffix props are used to add icons or text before or after the Ch
 
 Example:
 
+<ChipsPlayGround.Icon />
+
 ```tsx showLineNumbers title="Chips.tsx"
-<Chips prefix={<Close />} variant="outline">
-  Hello
-</Chips>
+const BadgeIcon = () => {
+  return (
+    <Paper flow="sm">
+      <Flex as={Flex} gap="sm" items="center">
+        <Chips size="xs">Hello</Chips>
+        <Chips size="xs" icon={<Close />}>
+          Hello
+        </Chips>
+        <Chips size="xs" icon={<Close />} iconPosition="end">
+          Hello
+        </Chips>
+      </Flex>
+
+      <Flex as={Flex} gap="sm" items="center">
+        <Chips>Hello</Chips>
+        <Chips icon={<Close />}>Hello</Chips>
+        <Chips icon={<Close />} iconPosition="end">
+          Hello
+        </Chips>
+      </Flex>
+      <Flex as={Flex} gap="sm" items="center">
+        <Chips size="lg">Hello</Chips>
+        <Chips size="lg" icon={<Close />}>
+          Hello
+        </Chips>
+        <Chips size="lg" icon={<Close />} iconPosition="end">
+          Hello
+        </Chips>
+      </Flex>
+    </Paper>
+  )
+}
 ```
 
 ## Use Case

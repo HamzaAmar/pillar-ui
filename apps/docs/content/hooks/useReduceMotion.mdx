@@ -1,8 +1,11 @@
 ---
-title: 'useReducedMotion'
-type: 'Hooks'
+title: useReducedMotion
+type: Hooks
 excerpt: 'The useReducedMotion hook is a custom hook for detecting whether the user has enabled Reduced Motion. It returns a boolean value of either true or false.'
-file: ' hooks'
+file: hooks
+root: hooks
+---
+
 ---
 
 ## Introduction
@@ -27,7 +30,7 @@ Use code with caution. Learn more
 
 To use the useReducedMotion hook in your React components, import it and call it in your functional component like this:
 
-```tsx
+```tsx title='app.ts' showLineNumbers
 import { useReducedMotion } from '@pillar/hooks'
 
 function MyComponent() {

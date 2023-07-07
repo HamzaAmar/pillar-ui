@@ -3,6 +3,7 @@ title: usePreferColorScheme
 type: Hooks
 excerpt: The usePreferColorScheme hook is a custom hook for detecting the user's preferred color scheme. It returns a string value of either "dark" or "light".
 file: hooks
+root: hooks
 ---
 
 ## Introduction
@@ -25,7 +26,7 @@ npm install --dev @pillar/hooks
 
 To use the usePreferColorScheme hook in your React components, import it and call it in your functional component like this:
 
-```tsx
+```tsx title='app.ts' showLineNumbers
 import { usePreferColorScheme } from '@pillar/hooks'
 
 function MyComponent() {

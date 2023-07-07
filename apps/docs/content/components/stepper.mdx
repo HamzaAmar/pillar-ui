@@ -3,7 +3,8 @@ title: Stepper
 type: Components
 excerpt: The Stepper component provides a step-by-step process or progress indicator to guide users through a series of sequential steps or stages. It is commonly used in multi-step forms, onboarding flows, and progress tracking interfaces.
 items: ['Stepper', 'Stepper.Step']
-file: 'core'
+file: core
+root: components
 ---
 
 The Stepper component allows you to create a step-by-step process or progress indicator in your application. It helps users navigate through a series of sequential steps or stages, providing clear visual feedback on their progress. The Stepper component consists of two main parts: the main Stepper component and the Stepper.Step component.
@@ -20,6 +21,8 @@ Options: `purple` | `secondary` | `brown` | `surface` | `primary` | `secondary`
 The color prop determines the color scheme of the Stepper component. It accepts a string value representing the color name or color code. The available options are:
 
 Example usage:
+
+<StepperPlayGround.Colors />
 
 ```tsx
 export const StepperIcon = () => {
@@ -72,6 +75,8 @@ Options: `sharp` | `xs` | `sm` | `md` | `lg` | `xl` | `full`
 The corner prop determines the corner style of the Stepper component. It accepts a string value representing the corner style. The available options are:
 Example usage:
 
+<StepperPlayGround.Corners />
+
 ```tsx
 export const StepperIcon = () => {
   const { currentStep, setCurrentStep, isFirst, isLast, goToNextStep, goToPreviousStep } = useStepper(3)
@@ -121,6 +126,8 @@ Default: `md`
 Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
 The size prop determines the size of the Stepper component. It accepts a string value representing the size. The available options are:
 Example usage:
+
+<StepperPlayGround.Sizes />
 
 ```tsx
 export const StepperIcon = () => {

@@ -1,23 +1,24 @@
 ---
-title: 'is'
-type: 'Utilities'
+title: is
+type: Utils
 excerpt: 'The is collection consists of utility functions that are used to check if a given value satisfies certain conditions or criteria, returning either true or false based on the result. These functions are designed to provide type checking and validation capabilities in JavaScript or TypeScript applications.'
-file: 'utils'
+file: utils
+root: utils
 ---
 
 This documentation provides an overview and usage information for a set of utility functions. These functions are used for type checking and validation purposes in JavaScript or TypeScript applications. The functions are designed to determine the type or nature of a given value.
 
 ## isBrowser
 
-```bash
-export {isBrowser} from '@pillar/utils'
+```tsx
+export { isBrowser } from '@pillar/utils'
 ```
 
 This function checks whether the code is executing in a browser environment. It returns true if the current runtime environment is a browser, and false otherwise.
 
-### usage
+**usage**
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { isBrowser } from '@pillar/utils'
 
 if (isBrowser) {
@@ -27,15 +28,15 @@ if (isBrowser) {
 
 ## isServer
 
-```bash
+```tsx
 export { isServer } from '@pillar/utils'
 ```
 
 This function checks whether the code is executing in a server or non-browser environment. It returns true if the current runtime environment is a non-browser environment (such as server-side JavaScript or Node.js), and false otherwise.
 
-### usage
+**usage**
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { isServer } from '@pillar/utils'
 
 if (isServer) {
@@ -47,20 +48,20 @@ if (isServer) {
 
 ## isBoolean
 
-```bash
+```tsx
 export { isBoolean } from '@pillar/utils'
 ```
 
 This function checks whether the code is executing in a server or non-browser environment. It returns true if the current runtime environment is a non-browser environment (such as server-side JavaScript or Node.js), and false otherwise.
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { isBoolean } from '@pillar/utils'
 
 const value = 'false'
@@ -70,20 +71,20 @@ const isOpen = isBoolean(value) ? value : !value
 
 ## isFunction
 
-```bash
+```tsx
 export { isFunction } from '@pillar/utils'
 ```
 
 isFunction function is a built-in JavaScript function that checks if the value passed to it is a function. It returns a boolean value of either true or false.
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { useState } from 'react'
 export { isFunction } from '@pillar/utils'
 
@@ -94,20 +95,20 @@ const [open, setOpen] = useState(isFunction(value) ? initialVal() : initialVal)
 
 ## isNumber
 
-```bash
+```tsx
 export { isFunction } from '@pillar/utils'
 ```
 
 isNumber function is a built-in JavaScript function that checks if the value passed to it is a number. It returns a boolean value of either true or false.
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { useState } from 'react'
 export { isFunction } from '@pillar/utils'
 
@@ -118,20 +119,20 @@ const [open, setOpen] = useState(isFunction(value) ? initialVal() : initialVal)
 
 ## isInteger
 
-```bash
+```tsx
 export { isFunction } from '@pillar/utils'
 ```
 
 isInteger function is a built-in JavaScript function that checks if the value passed to it is an integer. It returns a boolean value of either true or false.
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { useState } from 'react'
 export { isFunction } from '@pillar/utils'
 
@@ -142,20 +143,20 @@ const [open, setOpen] = useState(isFunction(value) ? initialVal() : initialVal)
 
 ## isFloat
 
-```bash
+```tsx
 export { isFloat } from '@pillar/utils'
 ```
 
 isFloat function is a built-in JavaScript function that checks if the value passed to it is an float number. It returns a boolean value of either true or false.
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { useState } from 'react'
 export { isFloat } from '@pillar/utils'
 
@@ -166,20 +167,20 @@ const [open, setOpen] = useState(isFloat(value) ? initialVal() : initialVal)
 
 ## isString
 
-```bash
+```tsx
 export { isString } from '@pillar/utils'
 ```
 
 The isString function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { useState } from 'react'
 export { isString } from '@pillar/utils'
 
@@ -190,20 +191,20 @@ const [open, setOpen] = useState(isString(value) ? initialVal : initialVal.toStr
 
 ## isObject
 
-```bash
+```tsx
 export { isObject } from '@pillar/utils'
 ```
 
 The isObject function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { useState } from 'react'
 export { isObject } from '@pillar/utils'
 
@@ -214,20 +215,20 @@ const [open, setOpen] = useState(isObject(value) ? initialVal : initialVal.toStr
 
 ## isArray
 
-```bash
+```tsx
 export { isArray } from '@pillar/utils'
 ```
 
 The isArray function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { useState } from 'react'
 export { isArray } from '@pillar/utils'
 
@@ -238,20 +239,20 @@ const [open, setOpen] = useState(isArray(value) ? initialVal : initialVal.toStri
 
 ## isRef
 
-```bash
+```tsx
 export { isRef } from '@pillar/utils'
 ```
 
 The isRef function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { useState } from 'react'
 export { isRef } from '@pillar/utils'
 
@@ -262,20 +263,20 @@ const [open, setOpen] = useState(isRef(value) ? initialVal : initialVal.toString
 
 ## isWindow
 
-```bash
+```tsx
 export { isWindow } from '@pillar/utils'
 ```
 
 The isWindow function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
 
-### usage
+**usage**
 
 This function checks whether a value is a boolean.
 
 - **Parameters**: val (unknown): The value to be checked.
 - **Returns**: true if the value is a boolean, false otherwise.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { useState } from 'react'
 export { isWindow } from '@pillar/utils'
 
@@ -299,7 +300,7 @@ Use Case: Use this function to determine if a value is an instance of the Date c
 
 ## isPromise(val)
 
-```bash
+```tsx
 export { isPromise } from '@pillar/utils'
 ```
 
@@ -310,7 +311,7 @@ This function checks if a value is a Promise object. A Promise is a JavaScript o
 
 Use Case: Use this function to verify if a value represents a Promise object, allowing you to handle promises in a specific manner in your code.
 
-```bash
+```tsx
 export { isError } from '@pillar/utils'
 ```
 
@@ -325,19 +326,18 @@ Description: Checks if a value is an instance of the Error class.
 
 Use Case: Use this function to determine if a value is an Error object.
 
-```bash
+```tsx
 export { isError } from '@pillar/utils'
 
-if(!isError){
+if (!isError) {
   console.log('Hello World')
 }
 ```
 
 ## isLeapYear(year)
 
-```bash
+```tsx
 export { isLeapYear } from '@pillar/utils'
-
 ```
 
 This function checks if a year is a leap year. A leap year has 366 days instead of the usual 365 days and occurs every four years to account for the extra time it takes for the Earth to complete one orbit around the Sun.
@@ -347,7 +347,7 @@ This function checks if a year is a leap year. A leap year has 366 days instead 
 
 Use Case: Use this function to identify if a specific year is a leap year, which can be useful for handling calendar-related calculations or displaying accurate date information.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { isLeapYear } from '@pillar/utils'
 
 const daysInYear = isLeapYear ? 366 : 365
@@ -355,7 +355,7 @@ const daysInYear = isLeapYear ? 366 : 365
 
 ## isValidDate(dateString)
 
-```bash
+```tsx
 export { isValidDate } from '@pillar/utils'
 ```
 
@@ -366,7 +366,7 @@ This function checks if a string or Date object represents a valid date. It vali
 
 Use Case: Use this function to ensure that a string or Date object contains a valid date before performing further operations or displaying the date information.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { isValidDate, getYear } from '@pillar/utils'
 
 const date = '1993/08/10'
@@ -378,7 +378,7 @@ console.log(isValidDate(date) ? date : dateOfBirth)
 
 ## isEmptyObject(obj)
 
-```bash
+```tsx
 export { isEmptyObject } from '@pillar/utils'
 ```
 
@@ -389,7 +389,7 @@ This function checks if an object is empty, meaning it has no own enumerable pro
 
 Use Case: Use this function to determine if an object is empty, enabling you to handle scenarios where you need to check if an object has any properties or perform logic based on its emptiness.
 
-```ts
+```ts title='app.ts' showLineNumbers
 export { isEmptyObject } from '@pillar/utils'
 
 const date = '1993/08/10'

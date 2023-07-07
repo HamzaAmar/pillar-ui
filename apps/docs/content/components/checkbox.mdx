@@ -4,6 +4,7 @@ type: Components
 excerpt: The Checkbox component is a UI component that provides a visual representation of a binary option. It allows users to select or deselect an option by clicking on the checkbox.
 items: ['Checkbox']
 file: ' core'
+root: 'components'
 ---
 
 ## Props
@@ -15,6 +16,8 @@ The following are the props that can be used with the Checkbox component:
 The label prop is used to specify the text that appears next to the checkbox.
 
 Example:
+
+<CheckboxPlayGround.Label />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 <Checkbox label="Option 1" />
@@ -28,19 +31,21 @@ Example:
 
 The size prop determines the size of the Badge. It accepts the following values:
 
+<CheckboxPlayGround.Sizes />
+
 ```tsx showLineNumbers title="Checkbox.tsx"
 export const BadgeSize = () => {
   return (
     <div className="l_flow__md">
       <Flex items="center" gap="sm">
-        <Checkbox size="3xs" variant="numeric" number={15} max={15} />
-        <Checkbox size="2xs" variant="numeric" number={15} max={15} />
-        <Checkbox size="xs" variant="numeric" number={15} max={15} />
-        <Checkbox size="sm" variant="numeric" number={15} max={15} />
-        <Checkbox size="md" variant="numeric" number={15} max={15} />
-        <Checkbox size="lg" variant="numeric" number={15} max={15} />
-        <Checkbox size="2xl" variant="numeric" number={15} max={15} />
-        <Checkbox size="3xl" variant="numeric" number={15} max={15} />
+        <Checkbox size="3xs" label="Option 1" />
+        <Checkbox size="2xs" label="Option 2" />
+        <Checkbox size="xs" label="Option 3" />
+        <Checkbox size="sm" label="Option 4" />
+        <Checkbox size="md" label="Option 5" />
+        <Checkbox size="lg" label="Option 6" />
+        <Checkbox size="2xl" label="Option 7" />
+        <Checkbox size="3xl" label="Option 8" />
       </Flex>
     </div>
   )
@@ -50,25 +55,26 @@ export const BadgeSize = () => {
 ### color
 
 - Type: string
-- Default: `primary`
+- Default: `undefined`
 - Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
 
 The color prop is used to specify the background color of the Checkbox component. It supports the following color options: danger, warning, success, brown, primary, secondary, purple, and surface.
 
 Example:
 
+<CheckboxPlayGround.Colors />
+
 ```tsx showLineNumbers title="Checkbox.tsx"
 export const CheckboxColor = () => {
   return (
     <Flex gap="sm" items="center">
-      <Checkbox name="hello" label="Hello" color="danger" />
-      <Checkbox name="hello" label="Hello" color="success" />
-      <Checkbox name="hello" label="Hello" color="warning" />
-      <Checkbox name="hello" label="Hello" color="primary" />
-      <Checkbox name="hello" label="Hello" color="secondary" />
-      <Checkbox name="hello" label="Hello" color="purple" />
-      <Checkbox name="hello" label="Hello" color="brown" />
-      <Checkbox name="hello" label="Hello" color="surface" />
+      <Checkbox name="hello" label="Options 1" />
+      <Checkbox name="hello" label="Options 2" color="danger" />
+      <Checkbox name="hello" label="Options 3" color="success" />
+      <Checkbox name="hello" label="Options 4" color="warning" />
+      <Checkbox name="hello" label="Options 5" color="primary" />
+      <Checkbox name="hello" label="Options 6" color="secondary" />
+      <Checkbox name="hello" label="Options 7" color="surface" />
     </Flex>
   )
 }
@@ -78,6 +84,8 @@ export const CheckboxColor = () => {
 
 The disabled state of the Checkbox component is used to indicate that the checkbox cannot be interacted with. It is often used when the user is not allowed to select an option or when the option is not applicable in the current context. In this state, the checkbox appears grayed out and its label may also be grayed out to indicate that it is disabled.
 Example:
+
+<CheckboxPlayGround.Disabled />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 export const CheckboxDisabled = () => {
@@ -114,6 +122,8 @@ The defaultChecked prop in the Checkbox component is used to set the initial che
 
 #### Usage
 
+<CheckboxPlayGround.DefaultCheck />
+
 ```tsx showLineNumbers title="Checkbox.tsx"
 import { Flex, Checkbox } from '@pillar/core'
 
@@ -136,6 +146,8 @@ Here's an example of using the defaultChecked prop with different colors in the 
 ### size:Size
 
 The size prop is used to set the size of the checkbox component. It accepts the following options: 3xs, 2xs, xs, sm, md, lg, xl, 2xl, and 3xl.
+
+<CheckboxPlayGround.Sizes />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 import { Flex, Checkbox } from '@pillar/core'
@@ -167,6 +179,8 @@ By default, when neither checked nor isIndeterminate props are set, the checkbox
 
 Examples
 
+<CheckboxPlayGround.Status />
+
 ```tsx showLineNumbers title="Checkbox.tsx"
 import { Checkbox } from '@pillar/core'
 
@@ -178,6 +192,34 @@ export const CheckboxStatus = () => {
       <Checkbox name="hello" label="Hello" isIndeterminate />
       <Checkbox name="hello" label="Hello" isIndeterminate checked />
     </Flex>
+  )
+}
+```
+
+### isIndeterminate
+
+```tsx
+import {} from '@pillar/core'
+
+const isIndeterminate = ({ children }) => {
+  const { checkedItems, isAllChecked, isIndeterminate, handleToggleAll, handleToggleItem } = useCheckboxGroup(child)
+
+  return (
+    <>
+      <Checkbox
+        label="Parent Checkbox"
+        checked={isAllChecked}
+        isIndeterminate={isIndeterminate}
+        onChange={handleToggleAll}
+      />
+      <ul>
+        <li>
+          <Checkbox label="Child Checkbox 1" name="child1" />
+          <Checkbox label="Child Checkbox 2" name="child2" />
+          <Checkbox label="Child Checkbox 3" name="child3" />
+        </li>
+      </ul>
+    </>
   )
 }
 ```

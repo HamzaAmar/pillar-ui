@@ -4,6 +4,7 @@ type: Components
 excerpt: The Switch component is used to toggle between two states.
 items: ['Switch']
 file: ' core'
+root: 'components'
 ---
 
 ## Props
@@ -21,6 +22,8 @@ The label prop sets the label for the switch.
 - Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
 
 The size prop sets the size of the switch. You can choose from a range of sizes including 3xs, 2xs, xs, sm, md, lg, xl, 2xl and 3xl.
+
+<SwitchPlayGround.Sizes />
 
 ```tsx showLineNumbers title="Switch.tsx"
 import { Flex, Switch } from '@pillar/core'
@@ -50,6 +53,8 @@ export function SwitchSizes() {
 
 The color prop sets the color of the switch. You can choose from a range of colors including red, orange, green, primary, purple, secondary, surface and brown.
 
+<SwitchPlayGround.Colors />
+
 ```tsx showLineNumbers title="Switch.tsx"
 import { Flex, Switch } from '@pillar/core'
 
@@ -70,6 +75,8 @@ export function SwitchSizes() {
 ### defaultPressed
 
 The defaultPressed prop sets the default state of the switch. If set to true, the switch will be in the pressed state by default.
+
+<SwitchPlayGround.DefaultPressed />
 
 ```tsx showLineNumbers title="Switch.tsx"
 import { Flex, Switch } from '@pillar/core'
@@ -92,6 +99,8 @@ export function SwitchDefault() {
 
 The corner prop sets the corner style of the switch. You can choose from a range of corner styles including sharp, xs, sm, md, lg, xl and full.
 
+<SwitchPlayGround.Corners />
+
 ```tsx showLineNumbers title="Switch.tsx"
 import { Flex, Switch } from '@pillar/core'
 
@@ -113,6 +122,8 @@ export function SwitchDefault() {
 ### disabled
 
 The disabled prop disables the switch.
+
+<SwitchPlayGround.Disabled />
 
 ```tsx showLineNumbers title="Switch.tsx"
 import { Flex, Switch } from '@pillar/core'

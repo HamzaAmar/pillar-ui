@@ -1,0 +1,125 @@
+---
+title: Array Utilities
+type: Utils
+excerpt: The Array Utilities module provides a set of convenient and efficient utility functions designed to simplify common array operations, making it easier and more efficient to work with arrays in your projects.
+file: utils
+root: utils
+---
+
+## range
+
+```tsx
+export { range } from '@pillar/utils'
+```
+
+Generates an array of numbers within a specified range. This function takes a start value and an end value, and returns an array containing all the numbers within that range, inclusive.
+
+**use Case**
+
+- creating an array for iterating,
+- rendering components
+- erforming numerical computations
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { range } from '@pillar/utils'
+
+const numbers = range(1, 5)
+console.log(numbers) // Output: [1, 2, 3, 4, 5]
+```
+
+## addToArray
+
+```tsx
+export { addToArray } from '@pillar/utils'
+```
+
+Adds an element to the specified position in the array. This function takes an array (list), an element to add, and a position to insert the element. The position can be either 'first', 'last', or a specific index.
+
+**Parameters:**
+
+- `list (T[])`: The original array.
+- `element (T)`: The element to add.
+- `position (Position)`: The position to insert the element ('first', 'last', or index).
+
+**Returns:**
+
+- `the array T[]`: The updated array with the element added.
+
+**use Case**
+
+- when you need to insert an element into an existing array at a specific position
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { addToArray } from '@pillar/utils'
+
+const originalArray = [1, 2, 3, 4, 5]
+const newArray = addToArray(originalArray, 6, 'first')
+console.log(newArray) // Output: [6, 1, 2, 3, 4, 5]
+```
+
+## removeFromArray
+
+```tsx
+export { removeFromArray } from '@pillar/utils'
+```
+
+Removes an element from the specified position in the array. This function takes an array (list) and a position to remove the element from. The position can be either 'first', 'last', or a specific index.
+
+**Parameters:**
+
+- `list (T[])`: The original array.
+- `position (Position)`: The position to remove the element from
+  ('first', 'last', or index).
+
+**Returns:**
+
+- `the array T[]`: The updated array with the element added.
+
+**use Case**
+
+- when you need to remove an element from an array at a specific position
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { removeFromArray } from '@pillar/utils'
+
+const originalArray = [1, 2, 3, 4, 5]
+const newArray = removeFromArray(originalArray, 2)
+console.log(newArray) // Output: [1, 2, 4, 5]
+```
+
+## arraysEqual
+
+```tsx
+export { arraysEqual } from '@pillar/utils'
+```
+
+Checks if two arrays are equal. This function compares the contents of two arrays (arr1 and arr2) and returns true if they have the same length and all the corresponding elements are equal, and false otherwise.
+
+**Parameters:**
+
+- arr1 (T[]): The first array.
+- arr2 (T[]): The second array.-
+
+**Returns:**
+
+- `boolean`: true if the arrays are equal, false otherwise.
+
+**use Case**
+
+- when you need to compare two arrays to check if they have the same values
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { arraysEqual } from '@pillar/utils'
+
+const array1 = [1, 2, 3]
+const array2 = [1, 2, 3]
+console.log(arraysEqual(array1, array2)) // Output: true
+```

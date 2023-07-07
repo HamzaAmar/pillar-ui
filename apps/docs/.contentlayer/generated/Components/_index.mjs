@@ -13,6 +13,7 @@ import components__flexMdx from './components__flex.mdx.json' assert { type: 'js
 import components__gridMdx from './components__grid.mdx.json' assert { type: 'json' }
 import components__headingMdx from './components__heading.mdx.json' assert { type: 'json' }
 import components__inputMdx from './components__input.mdx.json' assert { type: 'json' }
+import components__inputFileMdx from './components__inputFile.mdx.json' assert { type: 'json' }
 import components__inputNumberMdx from './components__inputNumber.mdx.json' assert { type: 'json' }
 import components__inputPasswordMdx from './components__inputPassword.mdx.json' assert { type: 'json' }
 import components__inputSearchMdx from './components__inputSearch.mdx.json' assert { type: 'json' }
@@ -34,4 +35,4 @@ import components__textMdx from './components__text.mdx.json' assert { type: 'js
 import components__textareaMdx from './components__textarea.mdx.json' assert { type: 'json' }
 import components__timelineMdx from './components__timeline.mdx.json' assert { type: 'json' }
 
-export const allComponents = [components__accordionMdx, components__alertMdx, components__avatarMdx, components__badgeMdx, components__breadcrumbMdx, components__buttonMdx, components__checkboxMdx, components__chipsMdx, components__codeMdx, components__flexMdx, components__gridMdx, components__headingMdx, components__inputMdx, components__inputNumberMdx, components__inputPasswordMdx, components__inputSearchMdx, components__kbdMdx, components__linkMdx, components__paginationMdx, components__paperMdx, components__progressMdx, components__radioMdx, components__ratingMdx, components__selectMdx, components__separatorMdx, components__skeletonMdx, components__spinnerMdx, components__stepperMdx, components__switchMdx, components__tableMdx, components__textMdx, components__textareaMdx, components__timelineMdx]
+export const allComponents = [components__accordionMdx, components__alertMdx, components__avatarMdx, components__badgeMdx, components__breadcrumbMdx, components__buttonMdx, components__checkboxMdx, components__chipsMdx, components__codeMdx, components__flexMdx, components__gridMdx, components__headingMdx, components__inputMdx, components__inputFileMdx, components__inputNumberMdx, components__inputPasswordMdx, components__inputSearchMdx, components__kbdMdx, components__linkMdx, components__paginationMdx, components__paperMdx, components__progressMdx, components__radioMdx, components__ratingMdx, components__selectMdx, components__separatorMdx, components__skeletonMdx, components__spinnerMdx, components__stepperMdx, components__switchMdx, components__tableMdx, components__textMdx, components__textareaMdx, components__timelineMdx]

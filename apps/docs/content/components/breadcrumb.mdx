@@ -4,6 +4,7 @@ type: Components
 excerpt: The Breadcrumb component is a collapsible container that can be used to toggle the visibility of content. It's often used to hide content that may be overwhelming or to group related information together.
 items: ['Breadcrumb', 'Breadcrumb.Item']
 file: ' core'
+root: 'components'
 ---
 
 ## Usage
@@ -33,6 +34,8 @@ function MyComponent() {
 ## Separator
 
 The separator prop allows you to customize the separator between each BreadcrumbItem. You can pass a string, a React element, or a component to use as the separator.
+
+<BreadcrumbPlayGround.Separator />
 
 ```tsx showLineNumbers title="Breadcrumb.tsx"
 <div className="l_flow__md">
@@ -71,6 +74,8 @@ Default: `primary`
 Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
 
 You can customize the color of the breadcrumb by passing a color prop to the Breadcrumb component. The available colors are "red", "orange", "green", "secondary", "purple", "brown", "primary", and "surface". Here are some examples:
+
+<BreadcrumbPlayGround.Colors />
 
 ```tsx showLineNumbers title="Breadcrumb.tsx"
 import { Breadcrumb } from '@pillar/core'
@@ -133,6 +138,8 @@ function BreadcrumbColor() {
 ## Breadcrumb Icons
 
 You can add icons to your breadcrumb by passing an `icon` prop to the `Breadcrumb.Item` component. The icon can be any valid React element. Here are some examples:
+
+<BreadcrumbPlayGround.Icons />
 
 ```tsx showLineNumbers title="Breadcrumb.tsx"
 export function BreadcrumbIcons() {
@@ -217,6 +224,8 @@ The Breadcrumb component supports the following sizes:
 
 You can set the size by passing the size prop to the Breadcrumb component with one of the above values. Here's an example of using the different sizes:
 
+<BreadcrumbPlayGround.Sizes />
+
 ```tsx showLineNumbers title="Breadcrumb.tsx"
 import { Breadcrumb } from 'base-ui'
 
@@ -283,14 +292,6 @@ function BreadcrumbSize() {
   )
 }
 ```
-
-### Accordion
-
-| Prop         | Type   | Default | Description            |
-| ------------ | ------ | ------- | ---------------------- |
-| defaultIndex | number |
-| size         | Size   |
-| color        | Color  |         | Color of the accordion |
 
 ## TypeScript Support
 

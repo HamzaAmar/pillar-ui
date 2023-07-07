@@ -3,10 +3,27 @@ title: Separator
 type: Components
 excerpt: The Separator component is used to create a horizontal or vertical line.
 items: ['Separator']
-file: 'core'
+file: core
+root: components
 ---
 
 ## Props
+
+### title
+
+<SeparatorPlayGround.Title />
+
+```tsx
+export const SeparatorTitle = () => {
+  return (
+    <Paper className="playground" as={Flex} gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+      <Separator title="Login Here" />
+      <Separator title="Login Here" position="center" />
+      <Separator title="Login Here" position="end" />
+    </Paper>
+  )
+}
+```
 
 ### color
 
@@ -16,13 +33,82 @@ file: 'core'
 
 The color prop determines the color of the separator. It accepts a string representing a color name or a color value in hex, rgb, rgba format.
 
+<SeparatorPlayGround.Colors />
+
+```tsx showLineNumbers title='_App.tsx'
+import { Separator, Paper } from '@pillar/core'
+
+export const SeparatorColors = () => {
+  return (
+    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+      <Separator color="success" />
+      <Separator color="danger" />
+      <Separator color="warning" />
+      <Separator color="primary" />
+      <Separator color="secondary" />
+      <Separator color="surface" />
+    </Paper>
+  )
+}
+```
+
 ### thickness
 
 The thickness prop determines the thickness of the separator. It accepts a string representing a length in pixels.
 
-### style
+<SeparatorPlayGround.Thickness />
 
-The style prop is an object that can be used to customize the appearance of the separator. It accepts any valid CSS property.
+```tsx showLineNumbers title='_App.tsx'
+export const SeparatorThickness = () => {
+  return (
+    <Paper
+      className="playground"
+      as={Flex}
+      gap="sm"
+      items="center"
+      borderColor="opacity-6"
+      p="sm"
+      flow="sm"
+      background="surface-3"
+      corner="sm"
+    >
+      <Separator thickness="3xs" />
+      <Separator thickness="2xs" />
+      <Separator thickness="xs" />
+      <Separator thickness="sm" />
+      <Separator thickness="md" />
+      <Separator thickness="lg" />
+      <Separator thickness="xl" />
+      <Separator thickness="2xl" />
+      <Separator thickness="3xl" />
+    </Paper>
+  )
+}
+```
+
+### direction
+
+- direction (optional)
+- Type: string
+
+Specifies the direction of the separator line.
+The `direction` prop is used to control the orientation of the separator line. It accepts two possible values: "horizontal" and "vertical".
+
+Example usage:
+
+<SeparatorPlayGround.Direction />
+
+```tsx
+import { Paper, Separator } from '@pillar/core'
+export const SeparatorDirection = () => {
+  return (
+    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+      <Separator direction="horizontal" />
+      <Separator direction="vertical" />
+    </Paper>
+  )
+}
+```
 
 ## Use Case
 

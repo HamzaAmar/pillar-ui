@@ -4,6 +4,7 @@ type: Components
 excerpt: The Spinner component is used to indicate loading or progress state.
 items: ['Spinner']
 file: ' core'
+root: 'components'
 ---
 
 ## Props
@@ -17,6 +18,8 @@ The Spinner component accepts the following props:
 - Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
 
 The color prop sets the color of the spinner. You can choose from a range of colors including green, red, orange, primary, purple, secondary, brown and surface.
+
+<SpinnerPlayGround.Colors />
 
 ```tsx showLineNumbers title="Spinner.tsx"
 import { Spinner, Flex } from '@pillar/core'
@@ -43,6 +46,8 @@ export function SpinnerColors() {
 
 The size prop sets the size of the spinner. You can choose from a range of sizes including 3xs, 2xs, xs, sm, md, xl, 2xl and 3xl.
 
+<SpinnerPlayGround.Sizes />
+
 ```tsx showLineNumbers title="Spinner.tsx"
 import { Spinner, Flex } from '@pillar/core'
 
@@ -66,20 +71,21 @@ export function SpinnerSizes() {
 
 The thickness prop sets the thickness of the spinner. You can set any thickness value in pixels.
 
+<SpinnerPlayGround.Thickness />
+
 ```tsx showLineNumbers title="Spinner.tsx"
 import { Spinner, Flex } from '@pillar/core'
 
 export function SpinnerThickness() {
   return (
     <Flex gap="sm" items="center">
-      <Spinner size="3xs" thickness="1px" />
-      <Spinner size="2xs" thickness="2px" />
-      <Spinner size="xs" thickness="3px" />
-      <Spinner size="sm" thickness="4px" />
-      <Spinner size="md" thickness="5px" />
-      <Spinner size="xl" thickness="2px" />
-      <Spinner size="2xl" thickness="2px" />
-      <Spinner size="3xl" thickness="200px" />
+      <Spinner thickness="1px" />
+      <Spinner thickness="2px" />
+      <Spinner thickness="3px" />
+      <Spinner thickness="4px" />
+      <Spinner thickness="5px" />
+      <Spinner thickness="6px" />
+      <Spinner thickness="200px" />
     </Flex>
   )
 }
@@ -88,6 +94,8 @@ export function SpinnerThickness() {
 ### invert
 
 The invert prop inverts the color of the spinner, which can be useful when the spinner's default color clashes with the background color.
+
+<SpinnerPlayGround.Invert />
 
 ```tsx showLineNumbers title="Spinner.tsx"
 import { Spinner, Flex } from '@pillar/core'

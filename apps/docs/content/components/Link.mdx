@@ -4,6 +4,7 @@ type: Components
 excerpt: The Link component is used for clickable text that navigates the user to another page or resource. It typically displays as underlined text with a distinct color, and can be customized with various props such as color, size, and so on
 items: ['Link']
 file: ' core'
+root: 'components'
 ---
 
 ## Props
@@ -17,6 +18,8 @@ file: ' core'
 The size prop controls the size of the text. The following values are valid:
 
 Example:
+
+<LinkPlayGround.Sizes />
 
 ```tsx showLineNumbers title="Link.tsx"
 <Link size="xs">Some text.</Link>
@@ -33,6 +36,8 @@ The weight prop controls the weight (boldness) of the text. The following values
 
 Example:
 
+<LinkPlayGround.Weight />
+
 ```tsx showLineNumbers title="Link.tsx"
 <Link weight="thin">Some text.</Link>
 <Link weight="extra-light">Some text.</Link>
@@ -41,21 +46,15 @@ Example:
 <Link weight="extra-bold">Some text.</Link>
 ```
 
-Example:
-
-```tsx showLineNumbers title="Link.tsx"
-<Link size="lg" weight="bold">
-  Some important text.
-</Link>
-```
-
-### weight:`thin` |`extra-light` |`light` |`normal` |`medium` |`bold` |`extra-bold`
+### truncate
 
 The truncate prop with the value of "multiline" will truncate the text if it exceeds the specified numberLine prop value and will display an ellipsis at the end of the last visible line. On the other hand, if the truncate prop value is "singleline", it will truncate the text to fit within a single line and display an ellipsis at the end of the truncated text.
 
 truncate (optional): Determines whether the text should be truncated and how it should be truncated. If the value is "singleline", the text will be truncated to fit within a single line and display an ellipsis at the end of the truncated text. If the value is "multiline", the text will be truncated if it exceeds the specified numberLine prop value and display an ellipsis at the end of the last visible line.
 
 Example:
+
+<LinkPlayGround.Trucates />
 
 ```tsx showLineNumbers title="Link.tsx"
 export function LinkTrucates() {
@@ -110,14 +109,6 @@ export function LinkTrucates() {
 }
 ```
 
-Example:
-
-```tsx showLineNumbers title="Link.tsx"
-<Link size="lg" weight="bold">
-  Some important text.
-</Link>
-```
-
 ### align
 
 This property specifies the horizontal alignment of the text within the parent element. It can take one of the following values:
@@ -127,6 +118,8 @@ This property specifies the horizontal alignment of the text within the parent e
 - end: The text is aligned to the right.
 
 Example:
+
+<LinkPlayGround.Align />
 
 ```tsx showLineNumbers title="Link.tsx"
 export function LinkAligns() {
@@ -167,6 +160,8 @@ export function LinkAligns() {
 The color prop sets the color of the text . The available options are: red, brown, purple, secondary, green, orange, primary, and surfacecece. The contrast prop sets the contrast level between the text and the background color. When contrast is set to "high", the text has a higher contrast with the background, making it easier to read, while when contrast is set to "low", the text has lower contrast with the background, which can make it more difficult to read the default is `high`.
 
 Example:
+
+<LinkPlayGround.Colors />
 
 ```tsx showLineNumbers title="Link.tsx"
 export function LinkColors() {
@@ -220,6 +215,8 @@ you can customize the leading (line height) of your text by using the leading pr
 
 Example
 
+<LinkPlayGround.Leading />
+
 ```tsx showLineNumbers title="Link.tsx"
 <Link leading="normal">
   This text has a normal line height.
@@ -241,6 +238,8 @@ By using the leading prop, you can easily adjust the line height of your text to
 ### dir For RTL language Support
 
 "dir": This prop sets the direction of the text within the component. It accepts the values "rtl" for right-to-left direction or "ltr" for left-to-right direction. This prop is useful when displaying text in languages that are read from right to left, such as Arabic or Hebrew.
+
+<LinkPlayGround.RTL />
 
 ```tsx showLineNumbers title="Link.tsx"
 export function LinkRTL() {

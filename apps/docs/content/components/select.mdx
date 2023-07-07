@@ -3,7 +3,8 @@ title: Select
 type: Components
 excerpt: The Select component is used to create dropdown menus in your UI with various customization options.
 items: ['Select']
-file: 'core'
+file: core
+root: components
 ---
 
 ## Props
@@ -20,7 +21,9 @@ The variant prop is used to customize the appearance of the select component. It
 
 Example:
 
-```tsx
+<SelectPlayGround.Variants />
+
+```tsx showLineNumbers title='App.tsx'
 <Select variant="filled" />
 <Select variant="outline" />
 <Select variant="bordered" />
@@ -34,7 +37,9 @@ Example:
 
 The corner prop is used to specify the corner style of the select component. It supports various options for corner shape customization.
 
-```tsx
+<SelectPlayGround.Corners />
+
+```tsx showLineNumbers title='App.tsx'
 <Select corner="sharp" />
 <Select corner="xs" />
 <Select corner="sm" />
@@ -52,7 +57,9 @@ The corner prop is used to specify the corner style of the select component. It 
 
 The size prop is used to specify the size of the select component. It supports various options You can see them above
 
-```tsx
+<SelectPlayGround.Sizes />
+
+```tsx showLineNumbers title='App.tsx'
 <Select size="2xs" />
 <Select size="xs" />
 <Select size="sm" />

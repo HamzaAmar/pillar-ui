@@ -3,7 +3,8 @@ title: Timeline
 type: Components
 excerpt: The timeline component used to display a list of events in chronological order. It is a flexible component that can be customized to meet the needs of your application.
 items: ['Timeline', 'Timeline.Item']
-file: ' core'
+file: core
+root: components
 ---
 
 ### Size
@@ -15,6 +16,8 @@ file: ' core'
 The size prop determines the size of the Timeline. It accepts any of the Size types defined in your library, including (3xs, 2xs,xs, sm, md, and lg, xl, 2xl, 3xl). If not provided, it defaults to the md size.
 
 Example usage:
+
+<TimelinePlayGround.Sizes />
 
 ```tsx showLineNumbers title="Timeline.tsx"
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
@@ -87,6 +90,8 @@ The color prop determines the color of the Timeline. It accepts a string represe
 
 code Example
 
+<TimelinePlayGround.Colors />
+
 ```tsx
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
   return (
@@ -153,6 +158,8 @@ Options: `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
 The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 The corner prop determines the border radius of the Timeline. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
+
+<TimelinePlayGround.Corners />
 
 ```tsx showLineNumbers title="Timeline.tsx"
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
@@ -225,6 +232,8 @@ The variant property specifies the type of border for a component. The possible 
 
 The default value is solid.
 
+<TimelinePlayGround.Variants />
+
 ```tsx showLineNumbers title="Timeline.tsx"
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
   return (
@@ -277,6 +286,8 @@ export const TimelineVariant = () => {
 ### bullet: ReactElement
 
 The bullet prop can be used to customize the appearance of the bullet. It accepts a React element, which can be used to change the color, size, and style of the bullet.
+
+<TimelinePlayGround.CustomBullet />
 
 ```tsx showLineNumbers title="Timeline.tsx"
 export const TimelineCustomBullet = () => {

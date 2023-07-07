@@ -4,6 +4,7 @@ type: Components
 excerpt: The Pagination component is used to navigate between pages of content.
 items: ['Pagination']
 file: ' core'
+root: 'components'
 ---
 
 ## Props
@@ -17,6 +18,8 @@ The Pagination component accepts the following props:
 - Options: `danger` | `warning` | `success` | `primary` | `surfacece` | `primary` | `secondary`
 
 The color prop sets the color of the pagination buttons. You can choose from a range of colors including red, green, orange, primary, purple, secondary, surfacece and brown.
+
+<PaginationPlayGround.Colors />
 
 ```tsx showLineNumbers title="Pagination.tsx"
 import { Flex, Pagination } from '@pillar/core'
@@ -40,6 +43,8 @@ export function PaginationDefault() {
 
 The variant prop sets the style of the pagination buttons. You can choose from three variants: default, soft and solid.
 
+<PaginationPlayGround.Variants />
+
 ```tsx showLineNumbers title="Pagination.tsx"
 import { Flex, Pagination } from '@pillar/core'
 
@@ -57,6 +62,8 @@ export function PaginationDefault() {
 ### corner
 
 The corner prop sets the corner style of the pagination buttons. You can choose from a range of corner styles including sharp, xs, sm, md, lg, xl and full.
+
+<PaginationPlayGround.Corners />
 
 ```tsx showLineNumbers title="Pagination.tsx"
 import { Flex, Pagination } from '@pillar/core'
@@ -85,6 +92,8 @@ export function PaginationDefault() {
 - Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
 
 The size prop sets the size of the pagination buttons. You can choose from a range of sizes including 3xs, 2xs, xs, sm, md, lg, xl, 2xl and 3xl.
+
+<PaginationPlayGround.Sizes />
 
 ```tsx showLineNumbers title="Pagination.tsx"
 import { Flex, Pagination } from '@pillar/core'

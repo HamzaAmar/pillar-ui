@@ -1,0 +1,73 @@
+---
+title: 'CSS Gradient Variables'
+type: 'Theme'
+excerpt: 'The following CSS variables define font sizes for different breakpoints. These variables are responsive and adjust dynamically based on the viewport size. If you prefer different font sizes for your project, you can customize these values according to your needs.'
+root: themes
+---
+
+## `:root` CSS Selector
+
+The font size variables are defined within the `:root` CSS selector, which ensures that the variables are accessible throughout your CSS stylesheets.
+
+```css
+:root {
+  --font-3xs: var(--custom-font-3xs, clamp(0.55rem, calc(0.52rem + 0.14vw), 0.66rem));
+  --font-2xs: var(--custom-font-2xs, clamp(0.61rem, calc(0.57rem + 0.22vw), 0.8rem));
+  --font-xs: var(--custom-font-xs, clamp(0.69rem, calc(0.63rem + 0.31vw), 0.96rem));
+  --font-sm: var(--custom-font-sm, clamp(0.78rem, calc(0.69rem + 0.44vw), 1.15rem));
+  --font-md: var(--custom-font-md, clamp(0.88rem, calc(0.76rem + 0.6vw), 1.38rem));
+  --font-lg: var(--custom-font-lg, clamp(0.98rem, calc(0.83rem + 0.79vw), 1.65rem));
+  --font-xl: var(--custom-font-xl, clamp(1.11rem, calc(0.9rem + 1.04vw), 1.98rem));
+  --font-2xl: var(--custom-font-2xl, clamp(1.25rem, calc(0.98rem + 1.35vw), 2.38rem));
+  --font-3xl: var(--custom-font-3xl, clamp(1.4rem, calc(1.06rem + 1.73vw), 2.85rem));
+}
+```
+
+## Font Size Variables
+
+The font size variables are designed to be responsive and adapt to different viewport sizes. They utilize the clamp() function along with viewport units (vw) to calculate the font sizes dynamically. The values gradually increase or decrease as the viewport size changes.
+
+- **--font-3xs**: This variable represents the font size for the 3xs breakpoint.
+
+- **--font-2xs**: This variable represents the font size for the 2xs breakpoint.
+
+- **--font-xs**: This variable represents the font size for the xs breakpoint.
+
+- **--font-sm**: This variable represents the font size for the sm breakpoint.
+
+- **--font-md**: This variable represents the font size for the md breakpoint.
+
+- **--font-lg**: This variable represents the font size for the lg breakpoint.
+
+- **--font-xl**: This variable represents the font size for the xl breakpoint.
+
+- **--font-2xl**: This variable represents the font size for the 2xl breakpoint.
+
+- **--font-3xl**: This variable represents the font size for the 3xl breakpoint.
+
+## Customizing the Font Sizes
+
+To customize the font sizes, you can override the default values of the font size variables by assigning new values to the corresponding --custom-\* variables. Here's an example:
+
+```css
+:root {
+  /*  To customize the font sizes, you can customize one or all of the custom variables by assigning new values to them. */
+  --custom-font-md: 18px; /* Customize the font size for the md breakpoint */
+  --custom-font-lg: 24px; /* Customize the font size for the lg breakpoint */
+}
+```
+
+By updating these font size variables, you can achieve a unique typography style and influence the way the Text, Heading, and Link components are rendered.
+
+## Best Practices
+
+- **Stick with the provided font**: We encourage you to use the provided font sizes and leverage the custom properties within the existing Text, Heading, and Link components as much as possible. This promotes design consistency and facilitates adherence to UX/UI best practices.
+- **Consider accessibility**: When using the --font-3xs and --font-2xs variables, exercise caution as smaller font sizes can potentially compromise accessibility. Ensure that the text remains legible and meets the minimum contrast requirements to accommodate users with visual impairments.
+
+## Conclusion
+
+The CSS font size variables allow you to create responsive typography styles for your project. By customizing the font sizes, you can achieve a unique design while maintaining consistency and following best practices. Experiment with different values and breakpoints to find the optimal font sizes that enhance readability and visual harmony.
+
+Remember to test and preview your changes to ensure they align with your design goals. Strive for a balance between aesthetics and accessibility, ensuring that the text remains clear and legible across various screen sizes.
+
+We hope this documentation helps you understand and utilize the font size variables effectively. Enjoy creating a visually appealing and user-friendly experience with customized font sizes!

@@ -4,12 +4,13 @@ type: Components
 excerpt: The Paper component is a versatile container component used to display content. It can be customized with different background colors, text colors, corners, padding, spacing, shadow, and more.
 items: ['Paper']
 file: ' core'
+root: 'components'
 ---
 
 ## Usage
 
 ```tsx showLineNumbers title="Paper.tsx"
-import { Paper } from '@your-library/core'
+import { Paper } from '@pillar/core'
 function(){
     return(
         <Paper
@@ -35,20 +36,49 @@ The Paper component accepts the following props:
 ### background
 
 - Type: string
-- Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `surface` | `primary` | `secondary`
+- Default: none
+- Options: `danger` | `warning` | `success` | `primary` | `surface` | `primary` | `secondary` | `opacity`
 
 The background prop determines the background color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it defaults to the white color.
 
 Example usage:
 
+<PaperPlayGround.Background />
 ```tsx showLineNumbers title="Paper.tsx"
 function PaperBackgrounds(){
     return(
-        <Paper background='danger' />
-        <Paper background='green-5' />
-        <Paper background='primary-12' />
-        <Paper background='surface-1' />
+    <Paper
+      as={Flex}
+      gap="sm"
+      className="playground"
+      borderColor="opacity-6"
+      p="sm"
+      background="surface-3"
+      corner="sm"
+    >
+      <Paper width="60px" height="60px"  />
+      <Paper width="60px" height="60px" background="danger" />
+      <Paper width="60px" height="60px" background="danger-5" />
+      <Paper width="60px" height="60px" background="danger-10" />
+      <Paper width="60px" height="60px" background="success-5" />
+      <Paper width="60px" height="60px" background="success-8" />
+      <Paper width="60px" height="60px" background="success-11" />
+      <Paper width="60px" height="60px" background="primary-12" />
+      <Paper width="60px" height="60px" background="primary-10" />
+      <Paper width="60px" height="60px" background="primary-8" />
+      <Paper width="60px" height="60px" background="surface-1" />
+      <Paper width="60px" height="60px" background="surface-4" />
+      <Paper width="60px" height="60px" background="surface-8" />
+      <Paper width="60px" height="60px" background="warning-4" />
+      <Paper width="60px" height="60px" background="warning-8" />
+      <Paper width="60px" height="60px" background="warning-12" />
+      <Paper width="60px" height="60px" background="secondary-3" />
+      <Paper width="60px" height="60px" background="secondary-8" />
+      <Paper width="60px" height="60px" background="secondary-12" />
+      <Paper width="60px" height="60px" background="opacity-4" />
+      <Paper width="60px" height="60px" background="opacity-7" />
+      <Paper width="60px" height="60px" background="opacity-11" />
+    </Paper>
     )
 }
 ```
@@ -65,13 +95,87 @@ We recommend using the color from step 11 or 12 because it provides high contras
 
 Example usage:
 
+<PaperPlayGround.Colors />
+
 ```tsx showLineNumbers title="Paper.tsx"
-function PaperColors(){
-    return(
-        <Paper color='gray-12' />
-        <Paper color='primary-11' />
-        <Paper color='surface' />
-    )
+function PaperColors() {
+  return (
+    <Paper
+      as={Flex}
+      gap="sm"
+      direction="column"
+      className="playground"
+      borderColor="opacity-6"
+      p="sm"
+      background="surface-3"
+      corner="sm"
+    >
+      <Paper height="60px">Hello</Paper>
+      <Paper height="60px" color="danger">
+        Hello
+      </Paper>
+      <Paper height="60px" color="danger-5">
+        Hello
+      </Paper>
+      <Paper height="60px" color="danger-10">
+        Hello
+      </Paper>
+      <Paper height="60px" color="success-5">
+        Hello
+      </Paper>
+      <Paper height="60px" color="success-8">
+        Hello
+      </Paper>
+      <Paper height="60px" color="success-11">
+        Hello
+      </Paper>
+      <Paper height="60px" color="primary-12">
+        Hello
+      </Paper>
+      <Paper height="60px" color="primary-10">
+        Hello
+      </Paper>
+      <Paper height="60px" color="primary-8">
+        Hello
+      </Paper>
+      <Paper height="60px" color="surface-1">
+        Hello
+      </Paper>
+      <Paper height="60px" color="surface-4">
+        Hello
+      </Paper>
+      <Paper height="60px" color="surface-8">
+        Hello
+      </Paper>
+      <Paper height="60px" color="warning-4">
+        Hello
+      </Paper>
+      <Paper height="60px" color="warning-8">
+        Hello
+      </Paper>
+      <Paper height="60px" color="warning-12">
+        Hello
+      </Paper>
+      <Paper height="60px" color="secondary-3">
+        Hello
+      </Paper>
+      <Paper height="60px" color="secondary-8">
+        Hello
+      </Paper>
+      <Paper height="60px" color="secondary-12">
+        Hello
+      </Paper>
+      <Paper height="60px" color="opacity-4">
+        Hello
+      </Paper>
+      <Paper height="60px" color="opacity-7">
+        Hello
+      </Paper>
+      <Paper height="60px" color="opacity-11">
+        Hello
+      </Paper>
+    </Paper>
+  )
 }
 ```
 
@@ -85,6 +189,8 @@ Options: sharp | xs | sm | md | lg | xl | circle | full
 The corner prop determines the border radius of the Paper component. It accepts any of the Corner types defined in our library, including (sharp, xs, sm, md, lg, xl, circle, full). If not provided, it defaults to the md corner.
 
 Example usage:
+
+<PaperPlayGround.Corners />
 
 ```tsx showLineNumbers title="Paper.tsx"
 function PaperCorners(){
@@ -111,38 +217,115 @@ The padding prop determines the padding size of the Paper component. It accepts 
 
 Example usage:
 
+<PaperPlayGround.Padding />
+
 ```tsx showLineNumbers title="Paper.tsx"
-function PaperPadding(){
-    return(
-        <Paper padding='2xs' />
-        <Paper padding='xs' />
-        <Paper padding='sm' />
-        <Paper padding='md' />
-        <Paper padding='lg' />
-        <Paper padding='xl' />
-    )
+function PaperPadding() {
+  return (
+    <Paper
+      as={Flex}
+      gap="sm"
+      direction="column"
+      className="playground"
+      borderColor="opacity-6"
+      p="sm"
+      background="surface-3"
+      corner="sm"
+    >
+      <Paper width="fit-content" borderColor="opacity-8" p="sm">
+        Hello
+      </Paper>
+      <Paper width="fit-content" borderColor="opacity-8" p="sm" pt="md">
+        Hello
+      </Paper>
+      <Paper width="fit-content" borderColor="opacity-8" ptb="sm" plr="lg">
+        Hello
+      </Paper>
+      <Paper width="fit-content" borderColor="opacity-8" pt="sm" pb="md">
+        Hello
+      </Paper>
+    </Paper>
+  )
 }
 ```
 
-## spacing
+## margin
 
-**spacing**
+**margin**
 Type: string
 Default: md
-Options: xs | sm | md | lg | xl
-The spacing prop determines the space between the Paper and its surrounding elements. It accepts any of the Size types defined in our library, excluding (2xl, 2xs). If not provided, it defaults to the md spacing.
+Options: 2xs | xs | sm | md | lg | xl
+
+The margin prop determines the margin size of the Paper component. It accepts any of the Size types defined in our library. If not provided, it defaults to the md padding.
 
 Example usage:
 
+<PaperPlayGround.Margin />
+
 ```tsx showLineNumbers title="Paper.tsx"
-function PaperSpacing(){
-    return(
-        <Paper spacing='xs' />
-        <Paper spacing='sm' />
-        <Paper spacing='md' />
-        <Paper spacing='lg' />
-        <Paper spacing='xl' />
-    )
+function PaperMargin() {
+  return (
+    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+      <Paper borderColor="opacity-8" m="sm">
+        Hello
+      </Paper>
+      <Paper borderColor="opacity-8" m="sm" mt="md">
+        Hello
+      </Paper>
+      <Paper borderColor="opacity-8" mtb="sm" mlr="lg">
+        Hello
+      </Paper>
+      <Paper borderColor="opacity-8" mt="sm" mb="md">
+        Hello
+      </Paper>
+    </Paper>
+  )
+}
+```
+
+## flow
+
+**flow**
+Type: string
+Default: md
+Options: xs | sm | md | lg | xl
+The flow prop determines the space between the Paper and its surrounding elements. It accepts any of the Size types defined in our library, excluding (2xl, 2xs). If not provided, it defaults to the md spacing.
+
+Example usage:
+
+<PaperPlayGround.Flow />
+
+```tsx showLineNumbers title="Paper.tsx"
+function PaperSpacing() {
+  return (
+    <div>
+      <Paper flow="xs">
+        <div>Hello World</div>
+        <div>Hello World</div>
+        <div>Hello World</div>
+      </Paper>
+      <Paper flow="sm">
+        <div>Hello World</div>
+        <div>Hello World</div>
+        <div>Hello World</div>
+      </Paper>
+      <Paper flow="md">
+        <div>Hello World</div>
+        <div>Hello World</div>
+        <div>Hello World</div>
+      </Paper>
+      <Paper flow="lg">
+        <div>Hello World</div>
+        <div>Hello World</div>
+        <div>Hello World</div>
+      </Paper>
+      <Paper flow="xl">
+        <div>Hello World</div>
+        <div>Hello World</div>
+        <div>Hello World</div>
+      </Paper>
+    </div>
+  )
 }
 ```
 
@@ -156,6 +339,8 @@ The shadow prop determines the shadow of the Paper. It accepts any of the Shadow
 
 Example usage:
 
+<PaperPlayGround.Shadow />
+
 ```tsx showLineNumbers title="Paper.tsx"
 function PaperShadow(){
     return(
@@ -168,7 +353,7 @@ function PaperShadow(){
 }
 ```
 
-## width
+## Size
 
 **width**
 Type: string | number | undefined
@@ -177,36 +362,26 @@ The width prop determines the width of the Paper. It accepts any valid CSS width
 
 Example usage:
 
-```tsx showLineNumbers title="Paper.tsx"
-function PaperWidth(){
-    return(
-        <Paper width={200} />
-        <Paper width='50%' />
-        <Paper width='40ch' />
-        <Paper width='300px' />
-        <Paper width='30rem' />
-    )
-}
-```
-
-## height
-
-**height**
-Type: string | number | undefined
-Default: undefined
-The height prop determines the height of the Paper. It accepts any valid CSS height value.
-
-Example usage:
+<PaperPlayGround.Sizes />
 
 ```tsx showLineNumbers title="Paper.tsx"
-function PaperHeight(){
-    return(
-        <Paper height={200} />
-        <Paper height='50%' />
-        <Paper height='200px' />
-        <Paper height='50vh' />
-        <Paper height='50lvh' />
-    )
+function PaperWidth() {
+  return (
+    <div>
+      <Paper width="fit-content" borderColor="opacity-8" p="sm">
+        Hello
+      </Paper>
+      <Paper width="fit-content" borderColor="opacity-8" p="sm" pt="md">
+        Hello
+      </Paper>
+      <Paper width="fit-content" borderColor="opacity-8" ptb="sm" plr="lg">
+        Hello
+      </Paper>
+      <Paper width="fit-content" borderColor="opacity-8" pt="sm" pb="md">
+        Hello
+      </Paper>
+    </div>
+  )
 }
 ```
 

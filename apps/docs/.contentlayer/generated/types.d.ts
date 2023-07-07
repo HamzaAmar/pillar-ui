@@ -20,6 +20,8 @@ export type Components = {
   items?: string[] | undefined
   /** The directory that handles the import of the component */
   file: string
+  /** The summary url for every doc */
+  root: string
   /** MDX file body */
   body: MDX
   slug: string
@@ -27,17 +29,17 @@ export type Components = {
   headings: json
 }
 
-export type GetStarted = {
+export type GettingStarted = {
   /** File path relative to `contentDirPath` */
   _id: string
   _raw: Local.RawDocumentData
-  type: 'GetStarted'
+  type: 'GettingStarted'
   /** The title of the post */
   title: string
   /** The summary of the post */
   excerpt: string
-  /** The directory that handles the import of the hook. */
-  file: string
+  /** The summary url for every doc */
+  root: string
   /** MDX file body */
   body: MDX
   slug: string
@@ -56,6 +58,8 @@ export type Hooks = {
   excerpt: string
   /** The directory that handles the import of the hook. */
   file: string
+  /** The summary url for every doc */
+  root: string
   /** MDX file body */
   body: MDX
   slug: string
@@ -63,17 +67,37 @@ export type Hooks = {
   headings: json
 }
 
-export type Utilities = {
+export type Theme = {
   /** File path relative to `contentDirPath` */
   _id: string
   _raw: Local.RawDocumentData
-  type: 'Utilities'
+  type: 'Theme'
+  /** The title of the post */
+  title: string
+  /** The summary of the post */
+  excerpt: string
+  /** The summary url for every doc */
+  root: string
+  /** MDX file body */
+  body: MDX
+  slug: string
+  readingTime: json
+  headings: json
+}
+
+export type Utils = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Utils'
   /** The title of the post */
   title: string
   /** The summary of the post */
   excerpt: string
   /** The directory that handles the import of the hook. */
   file: string
+  /** The summary url for every doc */
+  root: string
   /** MDX file body */
   body: MDX
   slug: string
@@ -89,8 +113,8 @@ export type Utilities = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Components | GetStarted | Hooks | Utilities
-export type DocumentTypeNames = 'Components' | 'GetStarted' | 'Hooks' | 'Utilities'
+export type DocumentTypes = Components | GettingStarted | Hooks | Theme | Utils
+export type DocumentTypeNames = 'Components' | 'GettingStarted' | 'Hooks' | 'Theme' | 'Utils'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -99,8 +123,9 @@ export type DataExports = {
   allDocuments: DocumentTypes[]
   allComponents: Components[]
   allHooks: Hooks[]
-  allUtilities: Utilities[]
-  allGetStarteds: GetStarted[]
+  allUtils: Utils[]
+  allThemes: Theme[]
+  allGettingStarteds: GettingStarted[]
 }
 
 
@@ -121,9 +146,10 @@ declare global {
 
 export type DocumentTypeMap = {
   Components: Components
-  GetStarted: GetStarted
+  GettingStarted: GettingStarted
   Hooks: Hooks
-  Utilities: Utilities
+  Theme: Theme
+  Utils: Utils
 }
 
 export type NestedTypeMap = {

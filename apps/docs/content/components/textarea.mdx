@@ -4,6 +4,7 @@ type: Components
 excerpt: A simple text input field that can be used to collect user input.
 items: ['Textarea']
 file: ' core'
+root: 'components'
 ---
 
 ## props
@@ -11,6 +12,8 @@ file: ' core'
 ### variant: filled
 
 A filled input is a type of input field that has a background color. This makes it easy for users to see where they are typing and to distinguish between input fields.
+
+<TextareaPlayGround.Filled />
 
 ```tsx showLineNumbers title="Textarea.tsx"
 export const FilledTextarea = () => {
@@ -38,6 +41,8 @@ export const FilledTextarea = () => {
 ### variant: outline
 
 The outline variant of the input component is a type of input field that has a border around it. This makes it easy for users to see where they are typing and to distinguish between input fields.
+
+<TextareaPlayGround.Outline />
 
 ```tsx showLineNumbers title="Textarea.tsx"
 export const OutlineTextarea = () => {
@@ -79,6 +84,8 @@ export const OutlineTextarea = () => {
 
 The bordered variant of the input component is a type of input field that has a bottom border that visually separates the input from others and shows the edge of the input.
 
+<TextareaPlayGround.Bordered />
+
 ```tsx showLineNumbers title="Input.tsx"
 export const OutlineInput = () => {
   return (
@@ -119,6 +126,8 @@ export const OutlineInput = () => {
 
 The corner prop is a prop that can be used to customize the corner radius of the Input component. Valid values for the corner prop are: `sharp` | `xs` | `sm` | `md` | `lg` | `xl` | `full`
 
+<TextareaPlayGround.Corners />
+
 ```tsx showLineNumbers title="Input.tsx"
 export const CornerInput = () => {
   return (
@@ -142,6 +151,8 @@ export const CornerInput = () => {
 - Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
 
 The color prop can be used to customize the color of the input's border when it is focused. Valid values for the color prop are: `primary` | `purple` | `secondary` | `brown` | `surface`
+
+<TextareaPlayGround.Colors />
 
 ```tsx showLineNumbers title="Input.tsx"
 export const ColorInput = () => {
@@ -178,6 +189,8 @@ export const ColorInput = () => {
 - Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
 
 The size prop of the input component is used to change the size of the input field. The default size is medium `md`. The following values are supported: `sm` ,`lg`
+
+<TextareaPlayGround.Sizes />
 
 ```tsx showLineNumbers title="Input.tsx"
 import { Flex, Input } from '@pillar/core'

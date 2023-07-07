@@ -1,0 +1,275 @@
+---
+title: Date Utilities
+type: Utils
+excerpt: The Date Utilities module provides a set of utility functions for working with dates efficiently and conveniently.
+file: utils
+root: utils
+---
+
+## formatDate
+
+```tsx
+export { formatDate } from '@pillar/utils'
+```
+
+Formats a date object as a string based on the specified format. This function takes a date object, a format string, and an optional options object for customizing the formatting. It uses the Intl.DateTimeFormat API to format the date according to the provided format and options.
+
+**Parameters:**
+
+- `date (Date)`: The date object to format.
+- `format (string)`: The format string specifying the desired format.
+- `options (Intl.DateTimeFormatOptions)`: The options object for customizing the formatting. Default: `Options`.
+
+**Returns:**
+
+- `string`: The formatted date string.
+
+**use **Case
+
+- when you need to convert a date object to a formatted string representation, such as displaying dates in a user-friendly format or generating formatted date strings for data processing.
+
+**usage
+**
+
+```ts title='app.ts' showLineNumbers
+import { formatDate } from '@pillar/utils'
+
+const date = new Date()
+const formattedDate = formatDate(date, 'MM/dd/yyyy HH:mm:ss')
+console.log(formattedDate) // Output: "06/27/2023 10:30:45"
+```
+
+## getDaysInMonth
+
+```tsx
+export { getDaysInMonth } from '@pillar/utils'
+```
+
+Calculates the number of days in a month, given a date. This function takes a date object or a date string and returns the number of days in the month of the given date.
+
+**Parameters:**
+
+- `date (Date | string)`: The date for which to calculate the number of days in the month.
+
+**Returns:**
+
+- `number | null`: The number of days in the month of the given date. Returns null if the input is invalid.
+
+**use **Case
+
+- when you need to determine the number of days in a specific month, such as for generating a calendar, calculating time intervals, or performing date-related calculations.
+
+**usage
+**
+
+```ts title='app.ts' showLineNumbers
+import { getDaysInMonth } from '@pillar/utils'
+
+const date = new Date()
+const daysInMonth = getDaysInMonth(date)
+console.log(daysInMonth) // Output: Number of days in the current mont
+```
+
+## getDaysInYear
+
+```tsx
+export { getDaysInYear } from '@pillar/utils'
+```
+
+Returns the number of days in a year. This function takes a date object or a date string representing the year and returns the number of days in that year (365 or 366 for a leap year).
+
+**Parameters:**
+
+- `date (Date | string)`: The date or date string representing the year.
+
+**Returns:**
+
+- `number | null`: The number of days in the year. Returns null if the input is invalid.
+
+**use **Case
+
+- when you need to determine the number of days in a specific year, such as for calculating durations, handling recurring events, or performing date-related calculations.
+
+**usage
+**
+
+```ts title='app.ts' showLineNumbers
+import { getDaysInYear } from '@pillar/utils'
+
+const date = new Date()
+const daysInYear = getDaysInYear(date)
+console.log(daysInYear) // Output: Number of days in the current year
+```
+
+## getTimeAgo
+
+```tsx
+export { getTimeAgo } from '@pillar/utils'
+```
+
+Calculates the relative time ago from a given timestamp to the current time. This function takes a timestamp object and an optional locale string and returns the relative time ago as a string.
+
+**Parameters:**
+
+- `timestamp (Date)`: The timestamp to calculate the relative time from.
+- `locale (string)`: The locale to use for formatting the relative time. Default: 'en'.
+
+**Returns:**
+
+- `string`: The relative time ago as a string.
+
+**use **Case
+
+- when you need to display the relative time ago for a timestamp, such as showing how long ago an event occurred or providing time-based notifications.
+
+```ts title='app.ts' showLineNumbers
+import { getTimeAgo } from '@pillar/utils'
+
+const timestamp = new Date('2022-12-31T23:59:59')
+const timeAgo = getTimeAgo(timestamp, 'en')
+console.log(timeAgo) // Output: "1 year ago"
+```
+
+## getYear
+
+```tsx
+export { getYear } from '@pillar/utils'
+```
+
+Gets the year component from a date object. This function takes a date object or a date string and returns the year component as a number.
+
+**Parameters:**
+
+- `date (Date | string)`: The date object or date string.
+
+**Returns:**
+
+- `number`: The year component..
+
+**use **Case
+
+- when you need to extract the year from a date object, such as for filtering, sorting, or grouping data based on the year.
+
+```ts title='app.ts' showLineNumbers
+import { getYear } from '@pillar/utils'
+
+const date = new Date()
+const year = getYear(date)
+console.log(year) // Output: Current year
+```
+
+## getMonth
+
+```tsx
+export { getMonth } from '@pillar/utils'
+```
+
+Gets the month component from a date object. This function takes a date object or a date string and returns the month component as a number (0-11).
+
+**Parameters:**
+
+- `date (Date | string)`: The date object or date string.
+
+**Returns:**
+
+- `number`: The month component (0-11).
+
+**use **Case
+
+- when you need to extract the month from a date object, such as for filtering, sorting, or grouping data based on the month.
+
+```ts title='app.ts' showLineNumbers
+import { getMonth } from '@pillar/utils'
+
+const date = new Date()
+const month = getMonth(date)
+console.log(month) // Output: Current month (0-11)
+```
+
+## getDay
+
+```tsx
+export { getDay } from '@pillar/utils'
+```
+
+Gets the day component from a date object. This function takes a date object or a date string and returns the day component as a number (1-31).
+
+**Parameters:**
+
+- `date (Date | string)`: : The day component (1-31).
+
+**Returns:**
+
+- `number`: The year component..
+
+**use **Case
+
+- when you need to extract the day from a date object, such as for filtering, sorting, or grouping data based on the day.
+
+```ts title='app.ts' showLineNumbers
+import { getDay } from '@pillar/utils'
+
+const date = new Date()
+const day = getDay(date)
+console.log(day) // Output: Current day (1-31)
+```
+
+## getDayString
+
+```tsx
+export { getDayString } from '@pillar/utils'
+```
+
+Gets the day of the week as a string from a date object. This function takes a date object or a date string, an optional locale string, and an optional variant string for customizing the formatting of the weekday. It returns the day of the week as a string.
+
+**Parameters:**
+
+- `date (Date | string)`: The date object or date string.
+- `locale (string)`: The locale to use for formatting the day of the week. Default: 'en-US'.
+- `variant (Intl.DateTimeFormatOptions['weekday'])`: The variant string for customizing the formatting of the weekday.
+
+**Returns:**
+
+- `string`: The day of the week as a string.
+
+**use **Case
+
+- when you need to display the day of the week from a date object, such as showing the weekday in a calendar view or providing localized day names.
+
+```ts title='app.ts' showLineNumbers
+import { getDayString } from '@pillar/utils'
+
+const date = new Date()
+const dayString = getDayString(date, 'en-US', 'long')
+console.log(dayString) // Output: Full name of the current day of the week (e.g., "Tuesday")
+```
+
+## getMonthString
+
+```tsx
+export { getMonthString } from '@pillar/utils'
+```
+
+Gets the month of the year as a string from a date object. This function takes a date object or a date string, an optional locale string, and an optional variant string for customizing the formatting of the month. It returns the month of the year as a string.
+
+**Parameters:**
+
+- `date (Date | string)`: The date object or date string.
+- `locale (string)`: The locale to use for formatting the day of the week. Default: 'en-US'.
+- `variant (Intl.DateTimeFormatOptions['weekday'])`: The variant string for customizing the formatting of the weekday.
+
+**Returns:**
+
+- `string`: The day of the week as a string.
+
+**use **Case
+
+- when you need to display the month of the year from a date object, such as showing the month name in a calendar view or providing localized month names.
+
+```ts title='app.ts' showLineNumbers
+import { getMonthString } from '@pillar/utils'
+
+const date = new Date()
+const monthString = getMonthString(date, 'en-US', 'long')
+console.log(monthString) // Output: Full name of the current month (e.g., "June")
+```

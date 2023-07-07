@@ -4,6 +4,7 @@ type: Components
 excerpt: The Alert component is a versatile component used to display messages to the user. It can be customized with different colors, sizes, corners, variants, and more.
 items: ['Alert']
 file: ' core'
+root: 'components'
 ---
 
 ## Usage
@@ -42,6 +43,8 @@ The color prop determines the background color of the Alert. It accepts any of t
 
 Example usage:
 
+<AlertPlayGround.Colors />
+
 ```tsx showLineNumbers title="Alert.tsx"
 function AlertColors(){
     return(
@@ -66,6 +69,8 @@ The size prop determines the size of the Alert. It accepts any of the Size types
 
 Example usage:
 
+<AlertPlayGround.Sizes />
+
 ```tsx showLineNumbers title="Alert.tsx"
 function AlerSizes(){
     return(
@@ -79,7 +84,6 @@ function AlerSizes(){
         <Alert title="Success!" size='3xl' />
     )
 }
-
 ```
 
 ### variant?: Variant
@@ -89,6 +93,8 @@ The variant prop determines the visual style of the alert. The following are the
 Type: string
 Default: `solid`
 Options: `solid` | `outline` | `soft`
+
+<AlertPlayGround.Variants />
 
 ```tsx showLineNumbers title="Alert.tsx"
 export const AlertVariant = () => {
@@ -113,6 +119,8 @@ The corner prop determines the border radius of the Alert. It accepts any of the
 
 Example usage:
 
+<AlertPlayGround.Corners />
+
 ```tsx showLineNumbers title="Alert.tsx"
 function AlerCorners(){
     return(
@@ -134,15 +142,17 @@ The content of the Alert the text displayed as the Alert's title. If not provide
 
 Example usage:
 
+<AlertPlayGround.Content />
+
 ```tsx showLineNumbers title="Alert.tsx"
 function(){
     return(
         <div>
             <Alert title="Success!" />
             <Alert icon={<CheckCircle />}  title="Success!" />
-            <Alert description="Success!" />
-            <Alert title="Success!" description='Your prefered description' />
-            <Alert icon={<CheckCircle />}  title="Success!"  description='Your prefered description' />
+            <Alert message="Success!" />
+            <Alert title="Success!" message='Your prefered description' />
+            <Alert icon={<CheckCircle />}  title="Success!"  message='Your prefered description' />
         </div>
     )
 }
@@ -153,8 +163,14 @@ function(){
 The icon prop allows you to display an icon alongside the Alert. It accepts any ReactNode, such as an icon from the @pillar/icons package. If no icon is provided, no icon will be displayed.
 Example usage:
 
-```tsx title="Alert.tsx"
-<Alert icon={<CheckCircleIcon />} title="Success!" />
+<AlertPlayGround.Icons />
+
+```tsx showLineNumbers title="Alert.tsx"
+<Paper borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+  <Alert icon={<CircleCheck width="32" />} title="Success!" />
+  <Alert icon={<CircleCheck width="32" />} title="Success!" />
+  <Alert icon={<CircleCheck width="48" />} title="Success!" message="Your prefered description" />
+</Paper>
 ```
 
 ### closable?: boolean
@@ -163,8 +179,14 @@ The closable prop determines whether the Alert should be closable by the user. I
 
 Example usage:
 
-```tsx title="Alert.tsx"
-<Alert closable title="Success!" />
+<AlertPlayGround.Closable />
+
+```tsx showLineNumbers title="Alert.tsx"
+<Paper borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+  <Alert closable title="Success!" />
+  <Alert closable title="Success!" message="you have an error in the start of the program" />
+  <Alert closable message="you have an error in the start of the program!" />
+</Paper>
 ```
 
 ### inline?: boolean
@@ -172,22 +194,27 @@ Example usage:
 The inline prop determines how the alert is displayed. If set to true, the alert will be displayed horizontally, which is useful for short alerts that do not take up a lot of space, such as notifications or messages. If not set or set to false, the alert will be displayed as a vertically.
 Example usage:
 
-```tsx title="Alert.tsx"
+<AlertPlayGround.Inline />
+
+```tsx showLineNumbers title="Alert.tsx"
 <Flex direction="column" gap="sm">
-  <Alert title="hello" description="you have an error in the start of the program" inline />
-  <Alert title="hello" description="you have an error in the start of the program" inline />
-  <Alert title="hello" description="you have an error in the start of the program" inline />
-  <Alert title="hello" description="you have an error in the start of the program" inline />
+  <Alert title="hello" message="you have an error in the start of the program" inline />
+  <Alert title="hello" message="you have an error in the start of the program" inline />
   <Alert
     title="hello"
-    description="you have an error in the start of the program"
+    message="you have an error in the start of the program you have an error in the start of the program you have an error in the start of the program  of the program you have an error in the start of the program"
+    inline
+  />
+  <Alert
+    title="hello"
+    message="you have an error in the start of the program"
     inline
     icon={<CircleWarning width="20" />}
   />
-  <Alert title="hello" description="you have an error in the start of the program" inline closable />
+  <Alert title="hello" message="you have an error in the start of the program" inline closable />
   <Alert
     title="hello"
-    description="you have an error in the start of the program"
+    message="you have an error in the start of the program"
     inline
     icon={<CircleWarning width="20" />}
     closable
@@ -201,25 +228,20 @@ The as prop allows you to customize the tag of the alert. The default tag is div
 
 Here is an example of how to display the alert as a span:
 
-```tsx
-<Alert as='span' color="danger" title="hello" style={{ background: 'success' }} />
-<Alert as='article' color="danger" title="hello" style={{ background: 'success' }} />
+```tsx showLineNumbers title="Alert.tsx"
+<Alert as='span' color="danger" title="hello"  />
+<Alert as='article' color="danger" title="hello"  />
 ```
 
 ## custom the style
 
 We know that you may not always like the style of the alerts that we provide in our library. That's why we've given you the ability to customize the style of the alerts to your liking. You can use the style prop to set the background color, font, and other properties of the alert, and you can use the className prop to add custom CSS classes to the alert.
 
-Here is an example of how to use the `style` prop to set the background color of the alert:
+<AlertPlayGround.CustomStyle />
 
-```tsx
-<Alert color="danger" title="hello" style={{ background: 'success' }} />
-```
-
-Here is an example of how to use the `className` prop to add custom CSS classes to the alert:
-
-```tsx
+```tsx showLineNumbers title="Alert.tsx"
 <Alert color="danger" title="hello" className="u_secondary" />
+<Alert color="danger" title="hello" style={{ background: 'success' }} />
 ```
 
 ## accessibility
@@ -276,3 +298,7 @@ If the Alert component is not behaving as expected, it may be due to an incorrec
 The Alert component is a powerful tool for displaying messages to the user in a clear and effective way. By customizing its appearance and behavior using props, the Alert component can be tailored to meet the specific needs of an application.
 
 We hope this documentation helps you understand and use the Alert component in your projects! If you have any questions or need further assistance, don't hesitate to ask.
+
+```
+
+```

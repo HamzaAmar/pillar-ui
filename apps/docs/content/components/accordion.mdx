@@ -3,7 +3,8 @@ title: Accordion
 type: Components
 excerpt: The accordion component allows users to expand and collapse content sections, which can be useful for displaying large amounts of information in a compact and organized manner.
 items: ['Accordion', 'Accordion.Button', 'Accordion.Panel', 'Accordion.Item']
-file: ' core'
+file: core
+root: components
 ---
 
 ## Props
@@ -17,6 +18,8 @@ Default: `single`
 Options: `single` | `multiple`
 
 type: Specifies the type of accordion. It can be either "single" or "multiple". If "single", only one item can be open at a time. If "multiple", multiple items can be open at the same time. By default, the type is "single".
+
+<AccordionPlayGround.Type />
 
 ```tsx showLineNumbers title="Accordion.tsx"
 function AccordionType() {
@@ -73,20 +76,23 @@ function AccordionType() {
 }
 ```
 
-### Collapsible
+### corner?: Corner
 
-Type: boolean
-Default: `false`
-Options: `true` | `false`
+Type: string
+Default: `md`
+Options: `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
+The size prop determines the corners of the Accordion. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
-The "collapsible" prop specifies whether or not all accordion items can be closed. If "collapsible" is set to "true", then all accordion items can be closed even if there is no item still open. If "collapsible" is set to "false", then at least one accordion item must be open at all times.
+The corner prop determines the border radius of the Accordion. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-Here's an example of how to use the "collapsible" prop:
+Example usage:
+
+<AccordionPlayGround.Corners />
 
 ```tsx showLineNumbers title="Accordion.tsx"
-function AccordionType() {
-  return (
-    <Accordion collapsible>
+function AccordionBase(props){
+    return(
+     <Accordion {...props}>
       <Accordion.Item>
         <Accordion.Button title="Hello" />
         <Accordion.Panel>
@@ -110,7 +116,38 @@ function AccordionType() {
         </Accordion.Panel>
       </Accordion.Item>
     </Accordion>
-    <Accordion>
+    )
+}
+
+function CornerCorners(){
+    return(
+       <AccordionBase separate color="surface" variant="solid" corner="sharp" />
+      <AccordionBase separate color="surface" variant="soft" corner="sm" />
+      <AccordionBase separate color="surface" variant="outline" corner="md" />
+      <AccordionBase separate color="surface" variant="solid" corner="lg" />
+      <AccordionBase separate color="surface" variant="soft" corner="xl" />
+      <AccordionBase separate color="surface" variant="outline" corner="full" />
+    )
+}
+
+```
+
+### Collapsible
+
+Type: boolean
+Default: `false`
+Options: `true` | `false`
+
+The "collapsible" prop specifies whether or not all accordion items can be closed. If "collapsible" is set to "true", then all accordion items can be closed even if there is no item still open. If "collapsible" is set to "false", then at least one accordion item must be open at all times.
+
+Here's an example of how to use the "collapsible" prop:
+
+<AccordionPlayGround.Collapsible />
+
+```tsx showLineNumbers title="Accordion.tsx"
+function AccordionCollapsible() {
+  return (
+    <Accordion collapsible>
       <Accordion.Item>
         <Accordion.Button title="Hello" />
         <Accordion.Panel>
@@ -147,6 +184,8 @@ Options: `solid` | `outline` | `soft`
 The Accordion component has four variants available: solid, soft, outline, and the default variant. You can specify the variant using the variant prop.
 
 Example usage:
+
+<AccordionPlayGround.Variants />
 
 ```tsx showLineNumbers title="Accordion.tsx"
 function AccordionType() {
@@ -236,6 +275,8 @@ function AccordionType() {
 The Accordion component supports seven different sizes, ranging from 2xs to 2xl. You can specify the size using the size prop.
 
 Example usage:
+
+<AccordionPlayGround.Sizes />
 
 ```tsx showLineNumbers title="Accordion.tsx"
 function AccordionBase(props){

@@ -1,8 +1,11 @@
 ---
-title: 'useDebounce'
-type: 'Hooks'
+title: useDebounce
+type: Hooks
 excerpt: 'The useDebounce custom hook is a React hook that allows you to debounce a value, reducing the number of times a function is called when a value changes rapidly. This hook is useful for scenarios where you want to delay the execution of a function until a certain amount of time has passed without any further changes to the value.'
-file: 'hooks'
+file: hooks
+root: hooks
+---
+
 ---
 
 # useDebounce
@@ -25,7 +28,7 @@ npm { useDebounce } install '@pillar/hooks'
 
 To use the useDebounce hook, simply import it into your component and call it like any other React hook:
 
-```tsx
+```tsx title='app.ts' showLineNumbers
 import { useState, useEffect } from 'react'
 import useDebounce from '@pillar/hooks'
 

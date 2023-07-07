@@ -1,0 +1,118 @@
+---
+title: Number Utilities
+type: Utils
+excerpt: The Number Utilities module provides a set of utility functions for working with numbers efficiently and conveniently.
+file: utils
+root: utils
+---
+
+## clamp
+
+```tsx
+export { clamp } from '@pillar/utils'
+```
+
+Clamps a value between a minimum and maximum range. This function takes a value and a range defined by a minimum and maximum value. If the value is less than the minimum, it is set to the minimum value. If the value is greater than the maximum, it is set to the maximum value. Otherwise, it remains unchanged.
+
+**Parameters**
+
+- `value (number)`: The value to clamp.
+- `range ([number, number])`: The minimum and maximum values defining the range.\*
+
+**Returns:**
+
+`number`: The clamped value.
+
+**use** Case
+
+- when you need to limit a value within a specific range, such as constraining user input or ensuring a value stays within a valid boundary.
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { clamp } from '@pillar/utils'
+
+const value = 75
+const clampedValue = clamp(value, [0, 100])
+console.log(clampedValue) // Output: 75
+
+const value2 = 150
+const clampedValue2 = clamp(value2, [0, 100])
+console.log(clampedValue2) // Output: 100
+```
+
+## randomNumber
+
+```tsx
+export { randomNumber } from '@pillar/utils'
+```
+
+Generates a random number within a specified range. This function takes an options object with the following properties:
+
+**Parameters:**
+
+- options (RandomNumber): The options object contain the value below.
+  - **`min (number)`**: The minimum value of the range (inclusive). Default: 0.
+  - **`max (number)`**: The maximum value of the range (exclusive).
+  - **`rounded (boolean)`**: Whether to round the generated number to the nearest integer. Default: false.
+
+**Returns:**
+
+- `number`: The generated random number.
+
+**use** Case
+
+- when you need to generate a random number within a specific range
+- simulating randomness in games or simulations
+- generating random data
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { addToArray } from '@pillar/utils'
+
+const options = { min: 1, max: 10, rounded: true }
+const randomNum = randomNumber(options)
+console.log(randomNum) // Output: Random integer between 1 and 10
+
+const options2 = { min: 0, max: 1, rounded: false }
+const randomNum2 = randomNumber(options2)
+console.log(randomNum2) // Output: Random float between 0 and 1
+```
+
+## formatPrice
+
+```tsx
+export { formatPrice } from '@pillar/utils'
+```
+
+Formats a price value as a currency string using the specified locale and currency. This function takes a price value and optionally accepts a locale and currency for formatting customization. It uses the Intl.NumberFormat API to format the price as a currency string based on the provided locale and currency code.
+
+**Parameters:**
+
+- `price (number)`: The price value to format.
+- `locale (string)`: The locale to use for formatting the currency. Default: 'en-US'.
+- `currency (string)`: The currency code to use for formatting the price. Default: 'USD'.
+
+**Returns:**
+
+- `string`: The formatted price as a currency string.
+
+**use** Case
+
+- when you need to display a price value as a formatted currency string such as in e-commerce applications
+- any scenario where price representation is required
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { formatPrice } from '@pillar/utils'
+
+const price = 99.99
+const formattedPrice = formatPrice(price)
+console.log(formattedPrice) // Output: "$99.99"
+
+const price2 = 1500
+const formattedPrice2 = formatPrice(price2, 'de-DE', 'EUR')
+console.log(formattedPrice2) // Output: "€1,500.00"
+```

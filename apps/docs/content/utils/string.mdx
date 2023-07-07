@@ -1,0 +1,99 @@
+---
+title: String Utilities
+type: Utils
+excerpt: The String Utilities module provides a collection of functions for manipulating and transforming strings in various ways, such as slugifying, capitalizing, and converting to kebab case.
+file: utils
+root: utils
+---
+
+## toSlug
+
+```tsx
+export { toSlug } from '@pillar/utils'
+```
+
+Returns a slugified copy of a string. This function takes a str parameter and transforms it into a slug format, which is commonly used in URLs and permalinks. The slugified string is converted to lowercase, trimmed, and special characters are replaced or removed to ensure URL compatibility.
+
+**Parameters**
+
+- `str`: The string to be slugified.
+
+**Returns**
+
+- string: The slugified string.
+
+**use Case**
+
+- when you need to convert a string into a URL-friendly format
+- rendering components
+- erforming numerical computations
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { toSlug } from '@pillar/utils'
+
+const title = 'Hello World! How Are You?'
+const slug = toSlug(title)
+console.log(slug) // Output: "hello-world-how-are-you"
+```
+
+## toCapitalize
+
+```tsx
+export { toCapitalize } from '@pillar/utils'
+```
+
+Returns a copy of a string with the first letter capitalized. This function takes a str parameter and returns a new string with the first letter in uppercase and the rest of the string unchanged.
+
+**Parameters**:
+
+- `str (string)`: The string to be capitalized.
+
+**Returns**:
+
+- `string`: The capitalized string.
+
+**use Case**
+
+- when you want to capitalize the first letter of a string, such as for formatting names, titles, or headings.
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { toCapitalize } from '@pillar/utils'
+
+const text = 'hello world'
+const capitalizedText = toCapitalize(text)
+console.log(capitalizedText) // Output: "Hello world"
+```
+
+## toKebabCase
+
+```tsx
+export { toKebabCase } from '@pillar/utils'
+```
+
+Returns a kebab case version of a string. This function takes a str parameter and converts it to kebab case, where spaces and uppercase letters are replaced with hyphens.
+
+**Parameters**:
+
+- `str (string)`: The string to be converted to kebab case.
+
+**Returns**:
+
+- `string`: The kebab case string.
+
+**use Case**
+
+- when you need to convert a string into kebab case for use in URLs, CSS class names, or file names.
+
+**usage**
+
+```ts title='app.ts' showLineNumbers
+import { removeFromArray } from '@pillar/utils'
+
+const className = 'myComponentClassName'
+const kebabCaseName = toKebabCase(className)
+console.log(kebabCaseName) // Output: "my-component-class-name"
+```

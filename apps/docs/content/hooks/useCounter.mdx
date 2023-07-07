@@ -1,8 +1,11 @@
 ---
-title: 'useCounter'
-type: 'Hooks'
+title: useCounter
+type: Hooks
 excerpt: 'The useCounter hook is a custom hook for managing a counter state value. It returns an object containing the current counter value, a function to increment the counter value, and a function to decrement the counter value.'
-file: ' hooks'
+file: hooks
+root: hooks
+---
+
 ---
 
 ## Why useCounter
@@ -25,7 +28,7 @@ Returned values is An object of the following:
 - **increment**: A function to increment the counter value.
 - **decrement**: A function to decrement the counter value.
 
-```tsx
+```tsx title='app.ts' showLineNumbers
 import { useCounter } from '@pillar/hooks'
 
 function MyComponent() {

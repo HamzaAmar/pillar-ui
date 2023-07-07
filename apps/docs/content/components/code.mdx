@@ -4,6 +4,7 @@ type: Components
 excerpt: The Code component is used to render code to the screen.
 items: ['Code']
 file: 'core'
+root: components
 ---
 
 ## Props
@@ -17,6 +18,8 @@ can be used to customize the corners of the code block. The corner prop accepts 
 - md: The code block will have medium-sized, rounded corners.
 - lg: The code block will have large, rounded corners.
 - full: The code block will have rounded corners that fill the entire block.
+
+<CodePlayGround.Corners />
 
 ```tsx showLineNumbers title="Code.tsx"
 export const CodeCorners = () => {
@@ -40,6 +43,8 @@ export const CodeCorners = () => {
 
 The color prop determines the color of the code. It accepts a string representing a color name or a color value in hex, rgb, rgba format.
 
+<CodePlayGround.Colors />
+
 ```tsx showLineNumbers title="Code.tsx"
 export const CodeColors = () => {
   return (
@@ -62,6 +67,8 @@ export const CodeColors = () => {
 - Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
 
 The size prop determines the size of the code. It accepts a string representing a length in pixels.
+
+<CodePlayGround.Sizes />
 
 ```tsx showLineNumbers title="Code.tsx"
 export const CodeSizes = () => {

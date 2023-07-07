@@ -4,6 +4,7 @@ type: Components
 excerpt: The Avatar component is a UI element that represents a user, usually with a profile picture or initials. It can be used to show the profile image of a user or any image that is relevant to the context in which it is being used. It has several props that allow customization of its appearance, including size, corner radius, color, variant, and animation. The Avatar component can also be used in conjunction with the Avatar.Group component to display multiple avatars in a group.
 items: ['Avatar', 'Avatar.Group']
 file: ' core'
+root: 'components'
 ---
 
 ## Usage
@@ -42,9 +43,20 @@ An optional title to display as an alt to make the avatar accessible.
 
 Example usage:
 
+<AvatarPlayGround.Colors />
+
 ```tsx showLineNumbers title="Avatar.tsx"
 function AvatarColors() {
-  return <Avatar title="John Doe" />
+  return (
+    <Avatar title="John Doe" />
+    <Avatar color="danger" title="John Doe" />
+    <Avatar color="success" title="John Doe" />
+    <Avatar color="warning" title="John Doe" />
+    <Avatar color="secondary" title="John Doe" />
+    <Avatar color="primary" title="John Doe" />
+    <Avatar color="surface" title="John Doe" />
+    <Avatar color="opacity" title="John Doe" />
+   )
 }
 ```
 
@@ -53,6 +65,8 @@ function AvatarColors() {
 The image source to display in the avatar.
 
 Example:
+
+<AvatarPlayGround.Image />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AvatarImage(){
@@ -73,6 +87,8 @@ The icon prop allows you to display an icon alongside the Avatar. It accepts any
 
 Example usage:
 
+<AvatarPlayGround.Icon />
+
 ```tsx showLineNumbers title="Avatar.tsx"
 <Avatar icon={<CheckCircleIcon />} title="Success!" />
 ```
@@ -86,6 +102,8 @@ Example usage:
 The size prop determines the size of the Avatar. It accepts any of the Size types defined in your library, including (3xs, 2xs,xs, sm, md, and lg, xl, 2xl, 3xl). If not provided, it defaults to the md size.
 
 Example usage:
+
+<AvatarPlayGround.Sizes />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlerSizes(){
@@ -114,6 +132,8 @@ The corner prop determines the border radius of the Avatar. It accepts any of th
 
 Example usage:
 
+<AvatarPlayGround.Corners />
+
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlerCorners(){
     return(
@@ -139,12 +159,15 @@ The variant prop specifies the visual style of the Avatar component. It can be s
 
 Example usage:
 
+<AvatarPlayGround.Variants />
+
 ```tsx showLineNumbers title="Avatar.tsx"
-function AlerCorners(){
+function AlerVariants(){
     return(
-        <Avatar varaint='solid' />
-        <Avatar varaint='soft' />
-        <Avatar varaint='outline' />
+      <Avatar variant="solid" />
+      <Avatar variant="soft" />
+      <Avatar variant="outline" />
+      <Avatar variant="dashed" />
     )
 }
 
@@ -159,17 +182,21 @@ The animate prop allows you to apply a predefined animation to the Avatar compon
 
 Example usage:
 
+<AvatarPlayGround.Animate />
+
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlertAnimate(){
     return(
-       <Avatar animate="zoom" title="Success!" />
-       <Avatar animate="jump" title="Success!" />
-       <Avatar animate="zoom" title="Success!" />
+      <Avatar animate="zoom" title="Success!" />
+      <Avatar animate="jump-x" title="Success!" />
+      <Avatar animate="jump-y" title="Success!" />
     )
 }
 ```
 
 ## Avatars Fallback
+
+<AvatarPlayGround.Fallback />
 
 The Avatar component is used to display a fallback image if the main image is not found. The fallback image can be a text string or an image file.
 
@@ -177,15 +204,9 @@ The Avatar component is used to display a fallback image if the main image is no
 export function AvatarsFallback() {
   return (
     <Flex gap="xs" items="center">
-      <Avatar size="3xs" title="Hello" />
-      <Avatar image="hello.s" size="2xs" title="Hello" />
-      <Avatar image="https://pisum" size="xs" title="Hello" />
-      <Avatar size="sm" title="Hello" />
-      <Avatar size="md" title="Hello" />
-      <Avatar size="lg" title="Hello" />
-      <Avatar size="xl" title="Hello" />
-      <Avatar size="2xl" title="Hello" />
-      <Avatar size="3xl" title="Hello" />
+      <Avatar title="Hello" />
+      <Avatar image="hello.s" title="Hello" />
+      <Avatar image="https://pisum" title="Hello" />
     </Flex>
   )
 }
@@ -211,24 +232,26 @@ The maximum number of avatars to display.
 
 Example usage:
 
+<AvatarPlayGround.GroupLimit />
+
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlertGroupLimit() {
   return (
     <div>
-      <Avatar.Group limit="5">
-        <Avatar animate="jump" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
+      <Avatar.Group limit={5}>
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
       </Avatar.Group>
-      <Avatar.Group limit="5">
-        <Avatar animate="jump" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
+      <Avatar.Group limit={5}>
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
       </Avatar.Group>
     </div>
   )
@@ -241,59 +264,69 @@ The layout of the avatars. Can be one of stack or grid.
 
 Example usage:
 
+<AvatarPlayGround.GroupStack />
+
 ```tsx showLineNumbers title="Avatar.tsx"
-function AlertGroupLimit() {
+function AlertGroupStack() {
   return (
     <div>
-      <Avatar.Group stack="stack">
-        <Avatar animate="jump" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
+      <Avatar.Group layout="stack">
+        <Avatar animate="jump-y" title="Success!" />
+        <Avatar animate="jump-y" title="Success!" />
+        <Avatar animate="jump-y" title="Success!" />
+        <Avatar animate="jump-y" title="Success!" />
+        <Avatar animate="jump-y" title="Success!" />
+        <Avatar animate="jump-y" title="Success!" />
+        <Avatar animate="jump-y" title="Success!" />
+        <Avatar animate="jump-y" title="Success!" />
       </Avatar.Group>
-      <Avatar.Group stack="grid">
-        <Avatar animate="jump" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
+      <Avatar.Group layout="grid">
+        <Avatar animate="jump-x" title="Success!" />
+        <Avatar animate="jump-x" title="Success!" />
+        <Avatar animate="jump-x" title="Success!" />
+        <Avatar animate="jump-x" title="Success!" />
+        <Avatar animate="jump-x" title="Success!" />
+        <Avatar animate="jump-x" title="Success!" />
+        <Avatar animate="jump-x" title="Success!" />
+        <Avatar animate="jump-x" title="Success!" />
+        <Avatar animate="jump-x" title="Success!" />
       </Avatar.Group>
     </div>
   )
 }
 ```
 
-### (Variant , Color, Size , Corner) Props
+### Context Props
 
 The Avatar.Group component can be used to group multiple Avatar components together, and set common props such as color, corner, size, and variant for all the avatars in the group, instead of repeating them for each individual Avatar. This can help reduce repetition in your code and make it more efficient.
 
 Example usage:
 
+<AvatarPlayGround.GroupContext />
+
 ```tsx showLineNumbers title="Avatar.tsx"
-function AlertGroupLimit() {
+function AlertGroupContext() {
   return (
     <div>
-      <Avatar.Group variant="outline" stack="stack">
-        <Avatar animate="jump" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
+      <Avatar.Group variant="outline">
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
       </Avatar.Group>
-      <Avatar.Group size="lg" stack="grid">
-        <Avatar animate="jump" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
+      <Avatar.Group size="xs">
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
       </Avatar.Group>
-      <Avatar.Group corner="sharp" stack="grid">
-        <Avatar animate="jump" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
+      <Avatar.Group corner="sharp">
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
       </Avatar.Group>
-      <Avatar.Group color="danger" stack="grid">
-        <Avatar animate="jump" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
-        <Avatar animate="zoom" title="Success!" />
+      <Avatar.Group color="danger">
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
       </Avatar.Group>
     </div>
   )

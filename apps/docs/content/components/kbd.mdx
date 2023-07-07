@@ -3,7 +3,8 @@ title: Kbd
 type: Components
 excerpt: The Kbd component is a UI component that represents a keyboard key. It can be used to display keyboard shortcuts or any other key-related information.
 items: ['Kbd']
-file: 'core'
+file: core
+root: components
 ---
 
 ## Props
@@ -16,6 +17,8 @@ The title prop is used to specify the text or label of the keyboard key.
 
 Example:
 
+<KbdPlayGround.Title />
+
 ```tsx
 <Kbd title="Esc" />
 ```
@@ -27,6 +30,8 @@ Example:
 - Options: `danger` | `warning` | `success` | `primary` | `surfacece` | `primary` | `secondary`
 
 The color prop is used to specify the background color of the Kbd component. It supports various color options.
+
+<KbdPlayGround.Colors />
 
 ```tsx
 <Kbd title="Esc" />
@@ -46,6 +51,8 @@ The color prop is used to specify the background color of the Kbd component. It 
 
 The size prop is used to specify the size of the Kbd component. It supports various size options.
 
+<KbdPlayGround.Sizes />
+
 ```tsx
 <Kbd title="Esc" />
 <Kbd title="Esc" size="2xs" />
@@ -60,6 +67,8 @@ The size prop is used to specify the size of the Kbd component. It supports vari
 ### corner
 
 The corner prop is used to specify the corner style of the Kbd component. It supports various corner options.
+
+<KbdPlayGround.Corners />
 
 ```tsx
 <Kbd title="Esc" corner="sharp" />

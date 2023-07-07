@@ -1,8 +1,11 @@
 ---
-title: 'useBooleanState'
-type: 'Hooks'
+title: useBooleanState
+type: Hooks
 excerpt: 'The useClickOutside hook is a custom hook that listens for clicks outside of a specified element. It returns an object containing the current boolean value and functions for updating it.'
-file: ' hooks'
+file: hooks
+root: hooks
+---
+
 ---
 
 ## Why useClickOutside
@@ -19,7 +22,7 @@ npm install --dev @pillar/hooks
 
 To use the useClickOutside hook in your React components, import it and call it in your functional component like this:
 
-```tsx
+```tsx title='app.tsx' showLineNumbers
 import { useClickOutside } from '@pillar/hooks'
 
 function MyComponent() {

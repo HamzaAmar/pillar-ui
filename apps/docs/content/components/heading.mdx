@@ -4,6 +4,7 @@ type: Components
 excerpt: A heading component is used to display heading as a heading or title. It comes in various sizes and styles to help users quickly identify the most important information on a page.
 items: ['Heading']
 file: ' core'
+root: 'components'
 ---
 
 ## Props
@@ -18,6 +19,8 @@ The size prop controls the size of the heading. The following values are valid:
 
 Example:
 
+<HeadingPlayGround.Sizes />
+
 ```tsx showLineNumbers title="Heading.tsx"
 <Heading size="xs">Some heading.</Heading>
 <Heading size="sm">Some heading.</Heading>
@@ -27,11 +30,13 @@ Example:
 <Heading size="2xl">Some heading.</Heading>
 ```
 
-### weight:`thin` |`extra-light` |`light` |`normal` |`medium` |`bold` |`extra-bold`
+### weight
 
 The weight prop controls the weight (boldness) of the heading. The following values are valid:
 
 Example:
+
+<HeadingPlayGround.Weight />
 
 ```tsx showLineNumbers title="Heading.tsx"
 <Heading weight="thin">Some heading.</Heading>
@@ -41,21 +46,15 @@ Example:
 <Heading weight="extra-bold">Some heading.</Heading>
 ```
 
-Example:
-
-```tsx showLineNumbers title="Heading.tsx"
-<Heading size="lg" weight="bold">
-  Some important heading.
-</Heading>
-```
-
-### weight:`thin` |`extra-light` |`light` |`normal` |`medium` |`bold` |`extra-bold`
+### truncate
 
 The truncate prop with the value of "multiline" will truncate the heading if it exceeds the specified numberLine prop value and will display an ellipsis at the end of the last visible line. On the other hand, if the truncate prop value is "singleline", it will truncate the heading to fit within a single line and display an ellipsis at the end of the truncated heading.
 
 truncate (optional): Determines whether the heading should be truncated and how it should be truncated. If the value is "singleline", the heading will be truncated to fit within a single line and display an ellipsis at the end of the truncated heading. If the value is "multiline", the heading will be truncated if it exceeds the specified numberLine prop value and display an ellipsis at the end of the last visible line.
 
 Example:
+
+<HeadingPlayGround.Trucates />
 
 ```tsx showLineNumbers title="Heading.tsx"
 export function HeadingTrucates() {
@@ -110,14 +109,6 @@ export function HeadingTrucates() {
 }
 ```
 
-Example:
-
-```tsx showLineNumbers title="Heading.tsx"
-<Heading size="lg" weight="bold">
-  Some important heading.
-</Heading>
-```
-
 ### align
 
 This property specifies the horizontal alignment of the heading within the parent element. It can take one of the following values:
@@ -127,6 +118,8 @@ This property specifies the horizontal alignment of the heading within the paren
 - end: The heading is aligned to the right.
 
 Example:
+
+<HeadingPlayGround.Align />
 
 ```tsx showLineNumbers title="Heading.tsx"
 export function HeadingAligns() {
@@ -167,6 +160,8 @@ export function HeadingAligns() {
 The color prop sets the color of the heading . The available options are: red, brown, purple, secondary, green, orange, primary, and surface. The contrast prop sets the contrast level between the heading and the background color. When contrast is set to "high", the heading has a higher contrast with the background, making it easier to read, while when contrast is set to "low", the heading has lower contrast with the background, which can make it more difficult to read the default is `high`.
 
 Example:
+
+<HeadingPlayGround.Colors />
 
 ```tsx showLineNumbers title="Heading.tsx"
 export function HeadingColors() {
@@ -220,6 +215,8 @@ you can customize the leading (line height) of your heading by using the leading
 
 Example
 
+<HeadingPlayGround.Leading />
+
 ```tsx showLineNumbers title="Heading.tsx"
 <Heading leading="normal">
   This heading has a normal line height.
@@ -241,6 +238,8 @@ By using the leading prop, you can easily adjust the line height of your heading
 ### dir For RTL language Support
 
 "dir": This prop sets the direction of the heading within the component. It accepts the values "rtl" for right-to-left direction or "ltr" for left-to-right direction. This prop is useful when displaying heading in languages that are read from right to left, such as Arabic or Hebrew.
+
+<HeadingPlayGround.RTL />
 
 ```tsx showLineNumbers title="Heading.tsx"
 export function HeadingRTL() {

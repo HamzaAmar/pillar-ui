@@ -1,0 +1,111 @@
+---
+title: 'CSS Font Size Variables'
+type: 'Theme'
+excerpt: 'The following CSS variables define gradients for different color combinations. These variables allow you to customize the gradients used in your project. If you prefer different gradient styles, you can override these values according to your needs.'
+root: themes
+---
+
+## `:root` CSS Selector
+
+The font size variables are defined within the `:root` CSS selector, which ensures that the variables are accessible throughout your CSS stylesheets.
+
+```css
+:root {
+  --success-gradient: var(
+    --primary-gradient-custom,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--primary-9), var(--primary-8))
+  );
+  --secondary-gradient: var(
+    --secondary-gradient-custom,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--secondary-9), var(--secondary-8))
+  );
+  --danger-gradient: var(
+    --danger-gradient-custom,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--danger-9), var(--danger-8))
+  );
+  --success-gradient: var(
+    --success-gradient-custom,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--success-9), var(--success-8))
+  );
+  --warning-gradient: var(
+    --warning-gradient-custom,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--warning-9), var(--warning-8))
+  );
+  --surface-gradient: var(
+    --senary-gradient-custom,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--surface-9), var(--surface-8))
+  );
+
+  --mixed1-gradient: var(
+    --mixed-gradient-custom1,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--primary-9), var(--secondary-8))
+  );
+  --mixed2-gradient: var(
+    --mixed-gradient-custom2,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--danger-9), var(--warning-8))
+  );
+  --mixed3-gradient: var(
+    --mixed-gradient-custom3,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--primary-9), var(--success-8))
+  );
+  --mixed4-gradient: var(
+    --mixed-gradient-custom4,
+    linear-gradient(--var(--gradient-degree, 180deg), var(--secondary-9), var(--danger-8))
+  );
+}
+```
+
+Gradient Variables
+The gradient variables define different gradients for various color combinations. Each variable represents a specific gradient style:
+
+- **--success-gradient**: Gradient variable for success-related elements.
+- **--secondary-gradient**: Gradient variable for secondary elements.
+- **--danger-gradient**: Gradient variable for elements associated with danger or errors.
+- **--warning-gradient**: Gradient variable for warning-related elements.
+- **--surface-gradient**: Gradient variable for surface elements.
+- **--mixed1-gradient**: Customizable gradient variable for mixed color combination 1.
+- **--mixed2-gradient**: Customizable gradient variable for mixed color combination 2.
+- **--mixed3-gradient**: Customizable gradient variable for mixed color combination 3.
+- **--mixed4-gradient**: Customizable gradient variable for mixed color combination 4.
+
+## Customizing the Gradients
+
+To customize the gradients, you can override the default values of the gradient variables by assigning new gradient styles to the corresponding --\*-gradient-custom variables. For example:
+
+```css
+:root {
+  /* To customize the gradients, you can override the --\*-gradient-custom variables with your own gradient styles. */
+  --primary-gradient-custom: linear-gradient(--var(--gradient-degree, 180deg), #ff0000, #00ff00);
+  --secondary-gradient-custom: linear-gradient(--var(--gradient-degree, 180deg), #0000ff, #ffff00);
+}
+```
+
+In this example, we're customizing the --primary-gradient-custom and --secondary-gradient-custom properties to define our own gradient styles for primary and secondary elements, respectively.
+
+By updating these gradient variables, you can create unique gradient styles for different components and elements in your project.
+
+### Best Practices for Gradients
+
+Gradients can add visual interest and depth to your designs. However, it's important to use them with caution to maintain color contrast and accessibility. Here are some best practices to keep in mind when using gradients:
+
+1. **Check Contrast**: Gradients can affect color contrast, which is crucial for readability and accessibility. Before finalizing a gradient, ensure that the text or content placed on top of it maintains sufficient contrast for easy legibility. Use contrast-checking tools or manually evaluate the contrast between foreground and background colors.
+
+2. **Consider Accessibility**: Gradients that span across a wide range of colors or have low contrast between adjacent colors may not be accessible for users with visual impairments. Be mindful of accessibility guidelines and strive to create gradients that meet WCAG (Web Content Accessibility Guidelines) standards. Conduct accessibility tests and consider providing alternative color schemes or fallback options for users who may have difficulty perceiving the gradient.
+
+3. **Subtle Gradients**: Consider using subtle gradients that have a gentle transition between colors. Subtle gradients can provide a softer and more pleasing visual effect while maintaining legibility and accessibility. They are less likely to interfere with the readability of text or content.
+
+4. **Test on Different Devices**: Gradients may appear differently on various devices, screens, and browsers. Test your gradients across different devices and screen resolutions to ensure they maintain their intended visual impact and readability.
+
+5. **Iterate and Refine**: Design is an iterative process. Experiment with different gradient styles, color combinations, and contrasts to find the optimal balance between visual appeal and accessibility. Seek feedback from users and stakeholders to refine your gradients and make informed design decisions.
+
+By following these best practices, you can ensure that your gradients enhance the overall visual experience while maintaining accessibility for all users.
+
+Remember, accessibility should always be a priority when designing with gradients or any other visual elements.
+
+## Conclusion
+
+The CSS gradient variables allow you to customize the gradients used in your project. By overriding the default values, you can create unique gradient styles that align with your design requirements. Experiment with different color combinations and gradient directions to achieve the desired visual effect.
+
+Remember to test and preview your changes to ensure they align with your design goals. Use the gradient variables within your CSS stylesheets to apply the customized gradients to various components and elements.
+
+We hope this documentation helps you understand and utilize the gradient variables effectively. Enjoy creating visually appealing gradients that enhance the overall design of your project!

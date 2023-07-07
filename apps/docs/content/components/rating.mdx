@@ -3,7 +3,8 @@ title: Rating
 type: Components
 excerpt: The Rating component is used to display a user's rating of a product, service, or business.
 items: ['Rating']
-file: 'core'
+file: core
+root: components
 ---
 
 ## Props
@@ -11,6 +12,8 @@ file: 'core'
 ### rating
 
 The rating prop determines the number of stars that the user has given the product, service, or business.
+
+<RatingPlayGround.Rating />
 
 ```tsx showLineNumbers title="Rating.tsx"
 export const Ratings = () => {
@@ -33,6 +36,8 @@ export const Ratings = () => {
 - Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
 
 The size prop determines the size of the Rating component. It accepts the following values: `3xs` `2xs` `xs` `sm` `md` `lg` `xl` `2xl` `3xl`
+
+<RatingPlayGround.Sizes />
 
 ```tsx showLineNumbers title="Rating.tsx"
 export const RatingSize = () => {
@@ -60,6 +65,8 @@ export const RatingSize = () => {
 
 The color prop determines the color of the Rating component. It accepts a string representing a color name or a color value in hex, rgb, rgba format.
 
+<RatingPlayGround.Colors />
+
 ```tsx showLineNumbers title="Rating.tsx"
 export const RatingColor = () => {
   return (
@@ -79,6 +86,8 @@ export const RatingColor = () => {
 
 The icon prop determines the icon that will be displayed next to the Rating component. It accepts a React function component that takes a color prop as an input.
 
+<RatingPlayGround.Icon />
+
 ```tsx showLineNumbers title="Rating.tsx"
 export const RatingType = () => {
   return (
@@ -93,6 +102,8 @@ export const RatingType = () => {
 ### title
 
 The title prop determines the title that will be displayed next to the Rating component.
+
+<RatingPlayGround.Title />
 
 ```tsx showLineNumbers title="Rating.tsx"
 export const RatingLabels = () => {
