@@ -58,5 +58,5 @@
 .tab__outline[aria-selected='true'] {
   border: 1px solid var(--opacity-6);
   border-bottom: 0;
-  background: var(--slate-1);
+  background: var(--surface-1);
 }

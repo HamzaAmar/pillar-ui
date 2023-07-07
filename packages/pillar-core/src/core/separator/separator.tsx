@@ -1,16 +1,16 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { SeparatorProps } from './separator.type'
-import { classnames } from '../../utils'
-import { Flex, FlexProps } from '../layout'
+import { classnames } from '@pillar/utils'
+import { Flex, FlexProps } from '../flex'
 
 const separator = forwardRef((props, ref) => {
   const {
-    color = 'slate',
+    color = 'surface',
     direction = 'horizontal',
     position = 'start',
     thickness = 'xs',
-    corner = 'circle',
+    corner,
     as = 'div',
     className,
     title,
@@ -18,15 +18,19 @@ const separator = forwardRef((props, ref) => {
   } = props
 
   const isVertical = direction === 'vertical'
-  const _direction: Partial<FlexProps> = isVertical
-    ? { direction: 'column', items: 'center', justify: position }
-    : { items: 'center', justify: position }
 
-  const _className = classnames(`separator separator__${direction} l_corner-${corner} l_size-${thickness} u_${color}`, {
+  const _direction: Partial<FlexProps> = {
+    items: 'center',
+    justify: position,
+    ...(isVertical && { direction: 'column' }),
+  }
+
+  const classNames = classnames(`separator separator__${direction} u_size-${thickness} u_${color}`, {
     [className!]: !!className,
+    [`u_corner-${corner}`]: !!corner,
   })
   return (
-    <Flex as={as} {..._direction} className={_className} ref={ref} {...rest}>
+    <Flex as={as} {..._direction} className={classNames} ref={ref} {...rest}>
       {title && <span className="separator--text">{title}</span>}
     </Flex>
   )

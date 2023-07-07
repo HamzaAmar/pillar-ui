@@ -1,7 +1,7 @@
 {
   "name": "@pillar/core",
   "version": "0.0.0",
-  "style": "./dist/css/main.min.css",
+  "description": "A collection of reusable UI components for modern web development. These components follow best practices, are highly customizable, and promote a consistent user experience across applications.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,6 +10,13 @@
   "files": [
     "dist/**"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./main.min.css": "./dist/main.css"
+  },
   "keywords": [
     "accessibility",
     "typescript",
@@ -23,9 +30,9 @@
   "scripts": {
     "js-build": "npx tsup",
     "js-build:watch": "npx tsup --watch",
-    "css-build": "postcss src/css/main.css -o css/main.min.css",
-    "css-build:watch": "yarn css-build --watch",
-    "build": "yarn js-build && yarn css-build",
+    "css-build": "postcss --dir dist/ --config postcss.config.js src/css/main.css",
+    "css-build:watch": "yarn css-build -w -c",
+    "build": "npm-run-all -p -r js-build css-build",
     "dev": "npm-run-all -p -r js-build:watch css-build:watch",
     "lint": "eslint \"src/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
@@ -36,12 +43,15 @@
   },
   "devDependencies": {
     "@pillar/tsconfig": "*",
+    "@pillar/icons": "*",
+    "@pillar/hooks": "*",
+    "@pillar/utils": "*",
+    "eslint-config-pillar": "*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "autoprefixer": "^10.4.14",
     "cssnano": "^5.1.15",
     "eslint": "^8.15.0",
-    "eslint-config-pillar": "*",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",

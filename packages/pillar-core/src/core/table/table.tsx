@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { classnames } from '../../utils/classnames'
+import { classnames } from '@pillar/utils'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { TableColumnProps, TableProps, TableRowProps } from './table.type'
 
@@ -35,7 +35,7 @@ export const Row = forwardRef<HTMLTableRowElement, TableRowProps>(
 Row.displayName = 'Pillar-TableRow'
 
 export const Table = ({
-  color = 'slate',
+  color = 'surface',
   variant = 'default',
   showBorder,
   size = 'md',
@@ -46,8 +46,8 @@ export const Table = ({
   return (
     <div className="table--wrapper">
       <table
-        className={classnames(`table l_size-${size} table__${variant}  u_${color}`, {
-          table__border: showBorder,
+        className={classnames(`table u_size-${size} table__${variant}  u_${color}`, {
+          table__border: !!showBorder,
         })}
         {...rest}
       >

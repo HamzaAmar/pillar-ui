@@ -7,25 +7,18 @@ type Size = '3xs' | '2xs' | SharedSize | '2xl' | '3xl'
  * @typedef {Size} Size
  */
 
-type Color =
-  | 'red'
-  | 'danger'
-  | 'green'
-  | 'success'
-  | 'info'
-  | 'indigo'
-  | 'orange'
-  | 'warning'
-  | 'indigo'
-  | 'purple'
-  | 'violet'
-  | 'brown'
-  | 'primary'
-  | 'slate'
+type Color = 'danger' | 'success' | 'secondary' | 'warning' | 'primary' | 'surface' | 'opacity'
 
 /**
  * Represents the color of a component.
- * @typedef {Color} Color
+ * @typedef {Size} Size
+ */
+
+type Gradient = Color | 'mixed1' | 'mixed2' | 'mixed3' | 'mixed4'
+
+/**
+ * Represents the color of a component.
+ * @typedef {Gradient} Gradient
  */
 
 /* The Difference Between circle and full circle use 50% and the other use 1000px */
@@ -43,4 +36,11 @@ type Variant = 'solid' | 'outline' | 'soft' | 'text'
  * @typedef {Variant} Variant
  */
 
-export type { Color, Size, Corner, Variant }
+type Direction = 'horizontal' | 'vertical'
+
+/**
+ * Represents the color of a component.
+ * @typedef {Direction} Direction
+ */
+
+export type { Color, Size, Corner, Variant, Direction, Gradient }
