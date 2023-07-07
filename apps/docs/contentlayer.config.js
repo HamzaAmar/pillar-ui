@@ -59,6 +59,11 @@ export const Components = defineDocumentType(() => ({
       description: 'The directory that handles the import of the component',
       required: true,
     },
+    root: {
+      type: 'string',
+      description: 'The summary url for every doc',
+      required: true,
+    },
   },
   computedFields,
 }))
@@ -83,13 +88,18 @@ export const Hooks = defineDocumentType(() => ({
       description: 'The directory that handles the import of the hook.',
       required: true,
     },
+    root: {
+      type: 'string',
+      description: 'The summary url for every doc',
+      required: true,
+    },
   },
   computedFields,
 }))
 
-export const Utilities = defineDocumentType(() => ({
-  name: 'Utilities',
-  filePathPattern: `utilities/*.mdx`,
+export const Utils = defineDocumentType(() => ({
+  name: 'Utils',
+  filePathPattern: `utils/*.mdx`,
   contentType: 'mdx',
   fields: {
     title: {
@@ -105,6 +115,11 @@ export const Utilities = defineDocumentType(() => ({
     file: {
       type: 'string',
       description: 'The directory that handles the import of the hook.',
+      required: true,
+    },
+    root: {
+      type: 'string',
+      description: 'The summary url for every doc',
       required: true,
     },
   },
@@ -112,8 +127,8 @@ export const Utilities = defineDocumentType(() => ({
 }))
 
 export const Themes = defineDocumentType(() => ({
-  name: 'GetStarted',
-  filePathPattern: `get-started.mdx`,
+  name: 'Theme',
+  filePathPattern: `theme/*.mdx`,
   contentType: 'mdx',
   fields: {
     title: {
@@ -126,9 +141,33 @@ export const Themes = defineDocumentType(() => ({
       description: 'The summary of the post',
       required: true,
     },
-    file: {
+    root: {
       type: 'string',
-      description: 'The directory that handles the import of the hook.',
+      description: 'The summary url for every doc',
+      required: true,
+    },
+  },
+  computedFields,
+}))
+
+export const GetStarted = defineDocumentType(() => ({
+  name: 'GettingStarted',
+  filePathPattern: `getStarted/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+      description: 'The title of the post',
+      required: true,
+    },
+    excerpt: {
+      type: 'string',
+      description: 'The summary of the post',
+      required: true,
+    },
+    root: {
+      type: 'string',
+      description: 'The summary url for every doc',
       required: true,
     },
   },
@@ -174,6 +213,6 @@ const mdx = {
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Components, Hooks, Utilities, Themes],
+  documentTypes: [Components, Hooks, Utils, Themes, GetStarted],
   mdx,
 })
