@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { randomNumber } from '../number'
+import { randomNumber } from '..'
 
 describe('randomNumber', () => {
   test('generates a random number within the specified range', () => {

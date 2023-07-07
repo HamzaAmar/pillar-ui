@@ -1,4 +1,4 @@
-import { clamp } from '../number'
+import { clamp } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('clamp', () => {

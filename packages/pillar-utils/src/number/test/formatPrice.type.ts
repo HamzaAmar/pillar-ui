@@ -1,4 +1,4 @@
-import { formatPrice } from '../number'
+import { formatPrice } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('formatPrice function', () => {
