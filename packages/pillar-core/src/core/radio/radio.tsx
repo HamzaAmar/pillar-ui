@@ -1,8 +1,8 @@
 import { useId } from 'react'
 import { RadioProvider, useRadio } from './context'
 import type { CustomRadioProps, RadioGroupProps, RadioProps } from './radio.type'
-import { Flex } from '../layout'
-import { classnames } from '../../utils'
+import { Flex } from '../flex'
+import { classnames } from '@pillar/utils'
 import { CircleCheck } from '@pillar/icons'
 
 /*
@@ -101,7 +101,7 @@ export const Radio = (props: RadioProps) => {
       // items="center"
       gap="xs"
       as="label"
-      className={`radio-container l_size-${size} u_${color}`}
+      className={`radio-container u_size-${size} u_${color}`}
       htmlFor={idOrLabel}
       aria-disabled={props.disabled}
     >

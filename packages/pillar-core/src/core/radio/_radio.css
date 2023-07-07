@@ -1,23 +1,25 @@
 /* // TODO: LOOKING FOR A WAY TO MAKE FOCUS HAPPEN ONLY FOR KEYBOARD USER FOCUS-VISIBLE WITH FOCUS-WITHIN */
 .radio-container {
   border-radius: 0.5em;
+  font-size: calc(var(--font-size, 1rem) * 0.875);
+
   /* width: fit-content; */
   &:focus-within {
     outline: 2px dashed var(--color-shared-10);
     outline-offset: 2px;
   }
   &[aria-disabled='true'] {
-    color: var(--slate-11);
+    color: var(--surface-11);
     cursor: not-allowed;
   }
 }
 
 .custom-radio {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.375em;
+  height: 1.375em;
   border-radius: 50%;
   position: relative;
-  border: 1px solid var(--slate-7);
+  border: 1px solid var(--surface-7);
   flex: none;
 
   &:hover {
@@ -46,7 +48,7 @@
 
   &:disabled + .custom-radio {
     filter: grayscale(1);
-    background: var(--slate-8);
+    background: var(--surface-8);
   }
 }
 
