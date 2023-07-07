@@ -1,11 +1,15 @@
+import { ReactNode } from 'react'
+
 export interface HeadingProps {
-  level: number
+  level?: number
   text: string
   slug: string
 }
 
-export interface TableItemProps extends HeadingProps {
+export interface TableItemProps extends Omit<HeadingProps, 'slug'> {
   isActive: boolean
+  link?: string
+  children?: ReactNode
 }
 
 export interface MenuItemProps {
@@ -14,4 +18,4 @@ export interface MenuItemProps {
   isActive: boolean
 }
 
-export type MenuItemData = 'get-started' | 'components' | 'hooks' | 'icons' | 'themes'
+export type MenuItemData = 'getting-started' | 'components' | 'hooks' | 'icons' | 'themes' | 'utils'

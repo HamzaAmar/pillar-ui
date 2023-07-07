@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <Flex className="header" as="header" justify="between" items="center" gap="sm">
       <Link className="l_flex-1" href="/">
-        <Logo width="100px" />
+        <Logo width="100px" className="header--logo" />
       </Link>
 
       <Flex
@@ -35,7 +35,7 @@ const Header = () => {
         <IconButton onClick={toggleDirection} icon={<TextRtl />} title={'Go to Pillar Github Page'} />
         <IconButton onClick={toggleMode} icon={isDark ? <Sun /> : <Moon />} title="Turn on light mode" />
         <IconButton className="only-mobile" icon={<Menu />} title="Turn on light mode" />
-        <Button corner="sharp" color="primary" size="sm" icon={<Dollar strokeWidth={2} />}>
+        <Button corner="sharp" color="primary" size="xs" icon={<Dollar strokeWidth={2} />}>
           Donate
         </Button>
       </Flex>

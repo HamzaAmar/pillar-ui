@@ -1,31 +1,24 @@
-import { Star } from '@pillar/icons'
-import { MenuItemData } from './aside.type'
-import { allComponents, allHooks } from 'contentlayer/generated'
-import type { Components, Hooks } from 'contentlayer/generated'
+import type { MenuItemData } from './aside.type'
+import { allComponents, allGettingStarteds, allHooks, allThemes, allUtils } from 'contentlayer/generated'
+import type { Components, GettingStarted, Hooks, Theme, Utils } from 'contentlayer/generated'
 
-const themes = [
-  { slug: 'colors', title: 'Color', icon: <Star width="16" />, link: 'docs/themes/colors' },
-  { slug: 'spacing', title: 'Spacing', icon: <Star width="16" />, link: 'docs/themes/spacing' },
-]
-
-function makeMenuField<T extends Components | Hooks = Components>(list: T[]) {
-  return list.map(({ slug, title, type }) => {
-    const linkType = type.toLocaleLowerCase()
-
+function makeMenuField<T extends Components | Hooks | Theme | Utils | GettingStarted = Components>(list: T[]) {
+  return list.map(({ slug, title, root }) => {
     return {
       slug: slug,
-      title: title,
-      link: `docs/${linkType}/${slug}`,
+      text: title,
+      link: `/docs/${root}/${slug}`,
     }
   })
 }
 
 export const MENU_CONTENT = {
+  'getting-started': makeMenuField(allGettingStarteds),
+  themes: makeMenuField(allThemes),
   components: makeMenuField(allComponents),
   hooks: makeMenuField(allHooks),
+  utils: makeMenuField(allUtils),
   icons: null,
-  getStarted: null,
-  themes,
 }
 
-export const MENU_LIST: MenuItemData[] = ['get-started', 'components', 'hooks', 'icons', 'themes']
+export const MENU_LIST = Object.keys(MENU_CONTENT) as MenuItemData[]

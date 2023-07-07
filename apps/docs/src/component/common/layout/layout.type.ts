@@ -5,6 +5,7 @@ export interface LayoutProps {
   children: ReactNode
 }
 
-export interface DocsLayoutProps extends Omit<Components, 'body'> {
+export interface DocsLayoutProps {
   children: ReactNode
+  headings?: Components['headings']
 }

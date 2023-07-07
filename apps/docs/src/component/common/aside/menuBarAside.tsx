@@ -1,56 +1,64 @@
-import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
-import { Flex, Paper, Text } from '@pillar/core'
+import { Flex } from '@pillar/core'
 import { ChevronDown } from '@pillar/icons'
-import type { MenuItemData, MenuItemProps } from './aside.type'
+import type { MenuItemData } from './aside.type'
 import { MENU_CONTENT, MENU_LIST } from './menuBar.data'
-import { allComponents } from 'contentlayer/generated'
-
-const Item = ({ link, title, icon, isActive }: MenuItemProps) => {
-  return (
-    <li data-active={isActive} className="aside--list-item">
-      <Text size="sm" weight="medium" as={Link} className="aside--list-link" href={`/${link}`}>
-        {title}
-      </Text>
-    </li>
-  )
-}
+import { Item } from './listItem'
 
 const MenuBar = () => {
-  const [current, setCurrent] = useState<MenuItemData | undefined>(MENU_LIST[0])
-  const router = useRouter()
-  const { slug } = router.query
-  const content = current && MENU_CONTENT[current]
+  const { asPath } = useRouter()
 
+  const path = asPath.split('/docs/').join('')
+
+  const [current, setCurrent] = useState<string | null>(path)
+
+  function handleClick(item: MenuItemData) {
+    setCurrent((current) => {
+      const a = item === current || current?.includes(item)
+      return a ? null : item
+    })
+  }
   return (
-    <Flex as="aside" direction="column" className="aside menu-bar l_flow">
+    <Flex as="aside" direction="column" className="aside menu-bar l_flow md-hide custom-scroll">
       <nav>
         <ul>
-          {MENU_LIST.map((item) => (
-            <Paper as="li" padding="2xs" key={item}>
-              <Flex
-                style={{ width: '100%' }}
-                justify="between"
-                items="center"
-                as="button"
-                onClick={() => {
-                  setCurrent((prevItem) => (prevItem === item ? undefined : item))
-                }}
-              >
-                <span> {item}</span>
-                <ChevronDown width="16" />
-              </Flex>
-              {content && (
-                <ul data-active={current === item} className="menu-bar--nested">
-                  {content.map(({ slug: currentSlug, ...rest }) => {
-                    const isActive = currentSlug === slug
-                    return <Item key={currentSlug} {...rest} isActive={isActive} />
-                  })}
-                </ul>
-              )}
-            </Paper>
-          ))}
+          {MENU_LIST.map((item) => {
+            const contents = MENU_CONTENT[item]
+            const itemType = contents
+              ? {
+                  as: 'button',
+                  onClick: () => handleClick(item),
+                }
+              : {
+                  as: Link,
+                  href: `/docs/${item}`,
+                }
+            return (
+              <li className="l_flow__md" key={item}>
+                <Item key={item} level={2} isActive={current === item && !contents} {...itemType} text={item}>
+                  {contents && <ChevronDown width="16" />}
+                </Item>
+                {contents && (
+                  <ul data-active={current?.includes(item) ?? false} className="menu-bar--nested">
+                    {contents.map(({ slug, ...rest }) => {
+                      return (
+                        <Item
+                          as={Link}
+                          href={rest.link}
+                          level={3}
+                          key={slug}
+                          isActive={path === `${item}/${slug}`}
+                          {...rest}
+                        />
+                      )
+                    })}
+                  </ul>
+                )}
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </Flex>
