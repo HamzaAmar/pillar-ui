@@ -12,7 +12,7 @@ export async function getStaticProps() {
 export default function Hooks({ posts }: { posts: Hooks[] }) {
   return (
     <Layout>
-      <Grid columns="repeat(4, 1fr)" gap="sm">
+      <Grid grid="repeat(4, 1fr)" gap="sm">
         {posts.map((post) => (
           <Link href={`hooks/${post.slug}`} key={post.slug}>
             <Paper corner="sm" background="surface-3" padding="xl" className="u_center">

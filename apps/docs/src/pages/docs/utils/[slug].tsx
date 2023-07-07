@@ -1,9 +1,10 @@
 import { ParsedUrlQuery } from 'querystring'
-import { Paper } from '@pillar/core'
+
 import { useMDXComponent } from 'next-contentlayer/hooks'
+import React from 'react'
 import { GetStaticProps } from 'next'
-import { allComponents } from 'contentlayer/generated'
-import type { Components } from 'contentlayer/generated'
+import { allUtils } from 'contentlayer/generated'
+import type { Hooks } from 'contentlayer/generated'
 import { DocsLayout, mdxComponents } from '../../../component/common'
 import { DocHeader } from '../../../component/core'
 
@@ -14,14 +15,14 @@ interface Params extends ParsedUrlQuery {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as Params
 
-  const post = allComponents.find((component) => slug === component.slug)
+  const hook = allUtils.find((component) => slug === component.slug)
 
-  return { props: { post } }
+  return { props: { hook } }
 }
 
 export function getStaticPaths() {
   return {
-    paths: allComponents.map(({ slug }) => ({
+    paths: allUtils.map(({ slug }) => ({
       params: {
         slug,
       },
@@ -31,8 +32,9 @@ export function getStaticPaths() {
   }
 }
 
-export default function Components({ post }: { post: Components }) {
-  const { body, ...rest } = post
+export default function Blog({ hook }: { hook: Hooks }) {
+  const { body, ...rest } = hook
+
   const Component = useMDXComponent(body.code)
 
   return (

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { DocsLayout, Layout } from '../../component/common'
+import { DocsLayout } from '../../component/common'
 import { Button, ButtonProps, Flex, InputSearch, Paper, Text } from '@pillar/core'
 import { ICONS_SECTION, allIcons } from '../../constant/icons'
 import { useCopyToClipboard } from '@pillar/hooks'
@@ -13,7 +13,7 @@ const Icons = () => {
     <DocsLayout>
       <div className="l_flow__lg">
         <InputSearch placeholder="Filter Icons" aria-label="Search Icon" name="search" fluid />
-        <Paper as={Flex} padding="md" style={{ overflow: 'auto hidden' }} gap="sm">
+        <Paper as={Flex} p="md" style={{ overflow: 'auto hidden' }} gap="sm">
           {ICONS_SECTION.map((value) => {
             const isActive = current === value
             const buttonStyle: Partial<ButtonProps> = isActive
@@ -29,7 +29,7 @@ const Icons = () => {
         <Flex gap="sm" wrap>
           {Object.entries(iconList).map(([title, Icon], key) => (
             <div key={key}>
-              <Paper padding="sm" shadow="sm" background="surface-6">
+              <Paper p="sm" shadow="sm" background="surface-6">
                 <Icon width="24" />
               </Paper>
               <Button corner="sharp" size="xs" onClick={() => copyText(`<${title} width='24'/>`)}>

@@ -5,7 +5,8 @@ import React from 'react'
 import { GetStaticProps } from 'next'
 import { allHooks } from 'contentlayer/generated'
 import type { Hooks } from 'contentlayer/generated'
-import { DocsLayout } from '../../../component/common'
+import { DocsLayout, mdxComponents } from '../../../component/common'
+import { DocHeader } from '../../../component/core'
 
 interface Params extends ParsedUrlQuery {
   slug: string
@@ -38,7 +39,8 @@ export default function Blog({ hook }: { hook: Hooks }) {
 
   return (
     <DocsLayout {...rest}>
-      <Component />
+      <DocHeader {...rest} />
+      <Component components={mdxComponents} />
     </DocsLayout>
   )
 }
