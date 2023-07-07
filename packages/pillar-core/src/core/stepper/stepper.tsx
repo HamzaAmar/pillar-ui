@@ -28,7 +28,7 @@ const Step = (props: StepProps) => {
       <button
         type="button"
         onClick={() => setActive(step!)}
-        className={`step--button l_corner-${corner} u_center u_font-medium`}
+        className={`step--button u_corner-${corner} u_center u_font-medium`}
         aria-labelledby={labelledbyID}
         aria-describedby={describedbyID}
       >
@@ -44,7 +44,7 @@ const Step = (props: StepProps) => {
         <Text id={labelledbyID} weight="medium" size="sm">
           {title}
         </Text>
-        <Text id={describedbyID} size="xs" color="slate" contrast="low">
+        <Text id={describedbyID} size="xs" color="surface" contrast="low">
           {description}
         </Text>
       </div>
@@ -52,17 +52,16 @@ const Step = (props: StepProps) => {
   )
 }
 
-const Stepper = ({ children, color = 'slate', active = 1, completeComponent, ...rest }: StepperProps) => {
+const Stepper = ({ children, color = 'surface', active = 0, completeComponent, ...rest }: StepperProps) => {
   let _content: ReactNode[] = []
 
   const _children = Children.map(children, (child, index) => {
     if (isValidElement(child)) {
-      const step = index
-      const state = active === step ? 'current' : active > step ? 'complete' : 'inactive'
+      const state = active === index ? 'current' : active > index ? 'complete' : 'inactive'
 
       const { children, ...props } = child.props
       _content.push(children)
-      return createElement(child.type, { ...props, state, step })
+      return createElement(child.type, { ...props, state, step: index })
     }
     return child
   })

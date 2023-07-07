@@ -34,22 +34,23 @@
     position: absolute;
     left: 0;
     top: 50%;
-    background-color: var(--slate-4);
+    background-color: var(--surface-4);
     z-index: -1;
   }
 }
 
 .step--content {
   padding: 0.5rem 1.5rem;
-  background-color: var(--slate-1);
+  background-color: var(--surface-1);
 }
 
 .step--button {
-  width: 3rem;
-  height: 3rem;
-  background-color: var(--slate-4);
-  border: 2px solid var(--slate-6);
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: var(--surface-4);
+  border: 2px solid var(--surface-6);
   flex: none;
+  border-radius: var(--border-radius);
   & svg {
     width: 20px;
     stroke-width: 2px;
