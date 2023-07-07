@@ -1,5 +1,11 @@
 .typography {
   color: var(--color-text);
+  font-size: var(--font-size, inherit);
+  text-transform: var(--text-transform, inherit);
+}
+
+.heading {
+  font-size: calc(var(--font-size, 1rem) * 1.25);
 }
 
 .link {
