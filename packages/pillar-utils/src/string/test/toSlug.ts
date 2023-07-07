@@ -9,6 +9,10 @@ describe('toSlug', () => {
     expect(toSlug('Special characters & symbols !@#$%^')).toBe('special-characters-and-symbols')
   })
 
+  it('test non alphanumeric input', () => {
+    expect(toSlug('!@#$%^&*()_+')).toBe('')
+  })
+
   it('should return an empty string for empty input', () => {
     expect(toSlug('')).toBe('')
   })
@@ -28,5 +32,9 @@ describe('toSlug', () => {
     expect(toSlug(' test ')).toBe('test')
     expect(toSlug('test    ')).toBe('test')
     expect(toSlug('      test    ')).toBe('test')
+  })
+
+  it('test space input', () => {
+    expect(toSlug('     ')).toBe('')
   })
 })
