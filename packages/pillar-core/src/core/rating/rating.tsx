@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import { Flex } from '..'
-import { classnames } from '../../utils'
+import { classnames } from '@pillar/utils'
 import type { RatingProps } from './rating.type'
 
 const ICONS = {
@@ -13,12 +13,15 @@ const rating = ({
   hideTitle,
   color = 'warning',
   title = `${rating} star${rating > 1 && 's'} out of 5`,
-  size = 'md',
+  size,
   icon = 'star',
   ...props
 }: RatingProps) => {
+  const classNames = classnames(`rating u_${color}`, {
+    [`u_size-${size}`]: !!size,
+  })
   return (
-    <Flex as="figure" gap="sm" items="center" className={`rating l_size-${size} u_${color}`} {...props}>
+    <Flex as="figure" gap="sm" items="center" className={classNames} {...props}>
       <svg viewBox={`0 0 ${24 * 5} 24`} aria-hidden="true" focusable="false">
         {Array(5)
           .fill('')
@@ -31,7 +34,7 @@ const rating = ({
           })}
       </svg>
 
-      <figcaption className={classnames('u_font-medium', { 'u_visually-hidden': hideTitle })}>{title}</figcaption>
+      <figcaption className={classnames('u_font-medium', { 'u_visually-hidden': !!hideTitle })}>{title}</figcaption>
     </Flex>
   )
 }

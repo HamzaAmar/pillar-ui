@@ -1,3 +1,7 @@
+.rating {
+  font-size: var(--font-size, 1rem);
+}
+
 .rating svg {
   width: 7.5em;
 }
