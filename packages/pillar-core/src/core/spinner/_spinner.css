@@ -4,6 +4,7 @@
   width: 1.5em;
   height: 1.5em;
   box-sizing: content-box;
+  font-size: var(--font-size, var(--spinner-size), 1rem);
 }
 
 .spinner::before,
