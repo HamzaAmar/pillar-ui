@@ -7,6 +7,7 @@ import type { Position } from './array.type'
  * @returns {number[]} - An array of numbers within the specified range.
  */
 export function range(start: number, end: number) {
+  if (isNaN(start) || isNaN(end) || !(typeof start === 'number') || !(typeof end === 'number')) return []
   const [min, max] = [Math.round(start), Math.round(end)]
   const length = Math.abs(max - min) + 1
   const step = min > max ? -1 : 1
