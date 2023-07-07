@@ -3,10 +3,10 @@ import { Github, Booking } from '@pillar/icons'
 
 function AccessibleSection() {
   return (
-    <Paper padding="lg" className="l_flow__md">
+    <Paper p="lg" className="l_flow__md">
       <Heading>Fully Accessible</Heading>
-      <Grid className="md_grid-two sm_grid-one" gap="md" columns="1fr 1fr 1fr">
-        <Paper background="surface-3" shadow="xs" corner="sm" padding="sm">
+      <Grid className="md_grid-two sm_grid-one" gap="md" grid="1fr 1fr 1fr">
+        <Paper background="surface-3" shadow="xs" corner="sm" p="sm">
           <Heading>Hello World</Heading>
           <Text color="surface" contrast="low">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempore, dolorum placeat culpa sint,
@@ -14,7 +14,7 @@ function AccessibleSection() {
             quos!
           </Text>
         </Paper>
-        <Paper background="surface-3" shadow="xs" corner="sm" padding="sm">
+        <Paper background="surface-3" shadow="xs" corner="sm" p="sm">
           <Heading>Hello World</Heading>
           <Text color="surface" contrast="low">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempore, dolorum placeat culpa sint,
@@ -22,7 +22,7 @@ function AccessibleSection() {
             quos!
           </Text>
         </Paper>
-        <Paper background="surface-3" shadow="xs" corner="sm" padding="sm">
+        <Paper background="surface-3" shadow="xs" corner="sm" p="sm">
           <Heading>Hello World</Heading>
           <Text color="surface" contrast="low">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempore, dolorum placeat culpa sint,
@@ -30,7 +30,7 @@ function AccessibleSection() {
             quos!
           </Text>
         </Paper>
-        <Paper background="surface-3" shadow="xs" corner="sm" padding="sm">
+        <Paper background="surface-3" shadow="xs" corner="sm" p="sm">
           <Heading>Hello World</Heading>
           <Text color="surface" contrast="low">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempore, dolorum placeat culpa sint,
@@ -38,7 +38,7 @@ function AccessibleSection() {
             quos!
           </Text>
         </Paper>
-        <Paper background="surface-3" shadow="xs" corner="sm" padding="sm">
+        <Paper background="surface-3" shadow="xs" corner="sm" p="sm">
           <Heading>Hello World</Heading>
           <Text color="surface" contrast="low">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempore, dolorum placeat culpa sint,
@@ -46,7 +46,7 @@ function AccessibleSection() {
             quos!
           </Text>
         </Paper>
-        <Paper background="surface-3" shadow="xs" corner="sm" padding="sm">
+        <Paper background="surface-3" shadow="xs" corner="sm" p="sm">
           <Heading>Hello World</Heading>
           <Text color="surface" contrast="low">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempore, dolorum placeat culpa sint,
