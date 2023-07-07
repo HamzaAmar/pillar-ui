@@ -44,7 +44,7 @@ describe('useCounter custom hook', () => {
   })
 
   test('should not increment, decrement count beyond the (min,max) value', () => {
-    const { result } = renderHook(() => useCounter({ value: 5, max: 10, min: 0 }))
+    const { result } = renderHook(() => useCounter({ value: 5, min: 0, max: 10 }))
     act(() => {
       result.current.increment(2)
     })
@@ -57,15 +57,15 @@ describe('useCounter custom hook', () => {
     act(() => {
       result.current.increment(2)
     })
-    expect(result.current.count).toBe(9)
+    expect(result.current.count).toBe(10)
 
     act(() => {
       result.current.decrement(5)
     })
-    expect(result.current.count).toBe(4)
+    expect(result.current.count).toBe(5)
     act(() => {
       result.current.decrement(5)
     })
-    expect(result.current.count).toBe(4)
+    expect(result.current.count).toBe(0)
   })
 })
