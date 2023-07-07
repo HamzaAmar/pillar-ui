@@ -1,6 +1,6 @@
 {
   "name": "@pillar/hooks",
-  "description": "pillar hooks is a collection of reusable React hooks that simplify common tasks and streamline your development workflow. These hooks are designed to be lightweight, easy to use, and fully customizable, making it easier than ever to build robust and scalable React applications.",
+  "description": "A set of React hooks designed to enhance productivity and simplify common tasks during web development. These hooks provide convenient functionality and can be easily integrated into any React project.",
   "keywords": [
     "react",
     "hooks",
