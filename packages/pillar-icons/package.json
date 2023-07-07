@@ -1,7 +1,7 @@
 {
   "name": "@pillar/icons",
   "version": "0.0.0",
-  "description": "pillar icons is an icons package for use in modern web development projects. This package provides a comprehensive set of high-quality, scalable icons that are fully customizable and easy to use in your projects.",
+  "description": "A library of scalable icons suitable for various web development projects. These icons are highly customizable, accessible, and designed to seamlessly integrate into modern user interfaces.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
