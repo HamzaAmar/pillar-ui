@@ -3,41 +3,48 @@ import { useControllableState } from '@pillar/hooks'
 import { SwitchProps } from './switch.type'
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '../../utils'
+import { classnames } from '@pillar/utils'
 
 // TODO: Try to add Switch Variant
 
 const Switch = forwardRef((props, ref) => {
   const {
     color = 'primary',
-    size = 'md',
-    corner = 'full',
+    size,
+    corner,
     label,
     name,
     pressed: pressedProp,
     defaultPressed = false,
     onPressedChange,
-    onClick,
     className,
     ...rest
   } = props
-  const [pressed = false, setPressed] = useControllableState<boolean>({
+  const [pressed, setPressed] = useControllableState<boolean>({
     controlledValue: pressedProp,
-    defaultValue: defaultPressed,
+    defaultValue: defaultPressed ?? false,
   })
 
   function switchPress() {
+    if (pressedProp != undefined && onPressedChange != undefined) {
+      onPressedChange()
+      return
+    }
     setPressed((current) => !current)
   }
 
-  const _className = classnames(`switch l_size-${size} l_corner-${corner} u_${color}`, { [className!]: !!className })
+  const classNames = classnames(`switch u_${color}`, {
+    [className!]: !!className,
+    [`u_corner-${corner}`]: !!corner,
+    [`u_size-${size}`]: !!size,
+  })
 
   return (
     <button
       ref={ref}
       type="button"
       aria-pressed={pressed}
-      className={_className}
+      className={classNames}
       name={name}
       onClick={switchPress}
       {...rest}

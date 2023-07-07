@@ -12,5 +12,5 @@ export interface SwitchProps extends Omit<ComponentPropsWithoutRef<'button'>, 's
   label: string
   pressed?: boolean
   defaultPressed?: boolean
-  onPressedChange?: (x: boolean) => void
+  onPressedChange?: () => void
 }
