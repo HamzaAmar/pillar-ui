@@ -1,6 +1,6 @@
 type ObjectType = Record<string, boolean>
 
-type ClassNamesArg = string | number | ObjectType | Array<string | number> | null | undefined
+type ClassNamesArg = string | number | ObjectType | Array<string | number> | null
 
 function processStringOrNumber(arg: string | number, arr: string[]) {
   arr.push(arg.toString())
@@ -14,7 +14,7 @@ function processObject(arg: ObjectType, arr: string[]) {
   Object.entries(arg).forEach(([key, value]) => value && arr.push(key))
 }
 
-function classnames(...args: ClassNamesArg[]) {
+export function classnames(...args: ClassNamesArg[]) {
   let classNamesArray: string[] = []
 
   args.forEach((arg: ClassNamesArg) => {
@@ -29,5 +29,3 @@ function classnames(...args: ClassNamesArg[]) {
   })
   return classNamesArray.join(' ').trim()
 }
-
-export default classnames

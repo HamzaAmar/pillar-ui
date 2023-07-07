@@ -2,6 +2,7 @@
   "name": "@pillar/utils",
   "version": "0.0.0",
   "sideEffects": false,
+  "description": "A collection of utility functions and tools to assist with common tasks and improve the efficiency of web development. These utilities are carefully crafted to enhance productivity and streamline the development process.",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
