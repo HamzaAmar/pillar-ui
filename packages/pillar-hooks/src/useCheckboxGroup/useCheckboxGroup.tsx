@@ -22,9 +22,9 @@ export function useCheckboxGroup(initialCheckedState: boolean[] = []) {
    * Handles the toggle action for all items in the checkbox group.
    * @param {React.ChangeEvent<HTMLInputElement>} event - The event triggered by the toggle action.
    */
-  function handleToggleAll(event: ChangeEvent<HTMLInputElement>) {
-    const isChecked = event.target.checked
-    const checkAll = checkedItems.map(() => isChecked)
+
+  const handleToggleAll = (event: ChangeEvent<HTMLInputElement>) => {
+    const checkAll = new Array(checkedItems.length).fill(event.target.checked)
     setCheckedItems(checkAll)
   }
 
@@ -33,8 +33,10 @@ export function useCheckboxGroup(initialCheckedState: boolean[] = []) {
    * @param {number} currentIndex - The index of the item to toggle.
    */
   function handleToggleItem(currentIndex: number) {
-    const checkAll = checkedItems.map((val, index) => (index === currentIndex ? !val : val))
-    setCheckedItems(checkAll)
+    const updatedCheckedItems = checkedItems.map((isChecked, index) =>
+      index === currentIndex ? !isChecked : isChecked
+    )
+    setCheckedItems(updatedCheckedItems)
   }
 
   return { checkedItems, setCheckedItems, isIndeterminate, isAllChecked, handleToggleAll, handleToggleItem }
