@@ -12,3 +12,10 @@ server/dist
 public/dist
 storybook-static/
 packages/pillar-core/css
+
+public/sitemap.xml
+public/feed.xml
+.vercel
+
+# Contentlayer
+.contentlayer/

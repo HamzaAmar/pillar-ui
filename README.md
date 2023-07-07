@@ -38,6 +38,8 @@ yarn add @pillar/hooks
 yarn add @pillar/icons
 ```
 
+## How to use it
+
 ```jsx
 import { Button, InputPassword, Input, Checkbox } from 'pillar/core'
 import { useBoolean } from 'pillar/hooks'
@@ -57,7 +59,7 @@ function MyComponent() {
         hint="password must be between 6 to 30 character"
       />
       <Checkbox color="primary" onChange={handleToggle} label="I agree to the terms and conditions" />
-      <Button icon={<Icons.Send name="heart" size={24} color="red" />}>Register</Button>
+      <Button icon={<Icons.Send name="heart" size={24} color="danger" />}>Register</Button>
     </form>
   )
 }
@@ -69,7 +71,70 @@ Please see our [Security Policy](https://github.com/HamzaAmar/pillar-ui/blob/mai
 
 ## Contributing
 
-We welcome contributions to Pillar-ui. To contribute, please follow the guidelines outlined in our CONTRIBUTING.md file.
+We welcome contributions to Pillar-ui, whether that's through reporting issues, submitting feature requests, or contributing code. Here's how you can get involved:
+
+## Reporting Security Vulnerabilities
+
+Pillar-ui takes security very seriously. If you find a security vulnerability in Pillar-ui, please report it as soon as possible. You can report security vulnerabilities by following these steps:
+
+1. Create an issue on the Pillar-ui GitHub repository.
+1. In the issue, provide as much information as possible about the vulnerability, including:
+   - A description of the vulnerability
+   - Steps to reproduce the vulnerability
+   - Any other information that may be helpful in understanding or fixing the vulnerability
+1. Do not share the vulnerability with anyone else until it has been fixed.
+
+We will investigate all security vulnerabilities reported to us and take appropriate action to fix them. We will also work with you to ensure that your report is kept confidential.
+
+Thank you for helping to keep Pillar-ui secure!
+
+Here are some additional tips for reporting security vulnerabilities:
+
+- Be as specific as possible when describing the vulnerability.
+- Provide steps to reproduce the vulnerability, if possible.
+- Do not share the vulnerability with anyone else until it has been fixed.
+- Be patient. It may take some time for the vulnerability to be fixed.
+
+## Submitting Feature Requests
+
+If there's a feature you'd like to see added to Pillar-ui, please open an issue on our GitHub repository and provide as much detail as possible about the feature you're requesting. We'll review your request and consider it for inclusion in a future release.
+
+## Contributing Code
+
+If you'd like to contribute code to Pillar-ui, we'd be thrilled to have your help! Before getting started, please review our contributing guidelines for information on our coding standards, development workflow, and other important details.
+
+Once you're ready to contribute, please fork our GitHub repository and create a new branch for your changes. When you're ready to submit your changes, please create a pull request and provide a clear description of the changes you've made and why they're necessary.
+
+We review all pull requests and will work with you to ensure your changes are merged as smoothly as possible. Thank you for your interest in contributing to Pillar-ui!
+
+## Development and Maintenance
+
+Pillar-ui is an open-source project that welcomes contributions from the community. The project is maintained by a team of dedicated developers who work to ensure that the library is up to date, secure, and easy to use.
+
+## Issue Triage
+
+When issues are reported, they are triaged by the Pillar-ui team to ensure that they are valid and that they have not already been reported. Once an issue has been validated, it is assigned a priority based on its severity and impact. Issues are then added to the project board, which is used to track the progress of the issue and ensure that it is resolved in a timely manner.
+
+## Pull Requests
+
+Pull requests are welcome and should follow the guidelines outlined in the CONTRIBUTING.md file. Once a pull request is submitted, it is reviewed by the Pillar-ui team, who will provide feedback and suggest any necessary changes. Once the pull request is approved, it will be merged into the main branch and included in the next release.
+
+Releases
+Pillar-ui releases are managed using Semantic Versioning. When a new release is ready, the team will create a release branch and begin the process of testing and preparing the release. Once the release has been thoroughly tested and is ready for deployment, it will be merged into the main branch and published to NPM.
+
+## Roadmap
+
+We are constantly working to improve Pillar-ui and add new features to the library. Our roadmap includes plans to improve accessibility, add new components, and improve the documentation. We welcome feedback and suggestions from the community and encourage you to get involved in the development process.
+
+## Sponsor Pillar-ui
+
+If you find Pillar-ui useful and want to support its development and maintenance, you can consider sponsoring the project. Your sponsorship will help cover the costs of development, testing, documentation, and community support. It will also help us allocate more time and resources to improving and expanding the library.
+
+You can sponsor the project on GitHub Sponsors. GitHub Sponsors is a platform that enables you to support open source projects and contributors. You can choose to sponsor us monthly or with a one-time donation. Your sponsorship will be publicly recognized on our GitHub repository and website.
+
+Alternatively, you can also support the project by contributing code, reporting issues, and spreading the word about it. Every little bit helps and we appreciate all contributions, big and small.
+
+Thank you for considering sponsoring Pillar-ui!
 
 ## License
 
