@@ -6,7 +6,8 @@
 @import '../core/checkbox/_checkbox.css';
 @import '../core/chips/_chips.css';
 @import '../core/form/_form.css';
-@import '../core/layout/_layout.css';
+@import '../core/flex/_flex.css';
+@import '../core/grid/_grid.css';
 @import '../core/radio/_radio.css';
 @import '../core/skeleton/_skeleton.css';
 @import '../core/spinner/_spinner.css';

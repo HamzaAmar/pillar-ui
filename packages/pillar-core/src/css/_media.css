@@ -1,22 +1,94 @@
-/* $screen-phone-medium: 30rem;
-$screen-phone-large: 35.5rem;
-$screen-tablet-small: 48rem;
-$screen-desktop-small: 64rem;
-$screen-desktop-medium: 85rem;
-$screen-desktop-large: 90rem; */
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  xxl: 1440px
+/////////////////////////////////////////////////////////////////////////////////////////////////
+*/
 
-/* @media (min-width: $screen-phone-large), screen and (orientation: landscape) {
-} */
-
-@media (max-width: 64rem) {
-  .md_grid-one {
-    grid-template-columns: minmax(0, 1fr);
-    & > * {
-      --column: span 1 !important;
-    }
+@media (max-width: 1440px) {
+  .xxl_grid-columns {
+    grid-template-columns: var(--xxl-grid-columns);
   }
-  .md_grid-two {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .xxl_grid-rows {
+    grid-template-rows: var(--xxl-grid-rows);
+  }
+  .xxl_grid-column {
+    grid-column: var(--xxl-grid-column);
+  }
+  .xxl_grid-row {
+    grid-row: var(--xxl-grid-row);
+  }
+  .xxl-hide {
+    display: none;
+  }
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  xl: 1360px
+/////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media (max-width: 1360px) {
+  .xl_grid-columns {
+    grid-template-columns: var(--xl-grid-columns);
+  }
+  .xl_grid-rows {
+    grid-template-rows: var(--xl-grid-rows);
+  }
+  .xl_grid-column {
+    grid-column: var(--xl-grid-column);
+  }
+  .xl_grid-row {
+    grid-row: var(--xl-grid-row);
+  }
+
+  .xl-hide {
+    display: none;
+  }
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  lg: 1024px
+/////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media (max-width: 1024px) {
+  .lg_grid-columns {
+    grid-template-columns: var(--lg-grid-columns);
+  }
+  .lg_grid-rows {
+    grid-template-rows: var(--lg-grid-rows);
+  }
+  .lg_grid-column {
+    grid-column: var(--lg-grid-column);
+  }
+  .lg_grid-row {
+    grid-row: var(--lg-grid-row);
+  }
+  .lg-hide {
+    display: none;
+  }
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  md: 768px
+/////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media (max-width: 768px) {
+  .md_grid-columns {
+    grid-template-columns: var(--md-grid-columns);
+  }
+  .md_grid-rows {
+    grid-template-rows: var(--md-grid-rows);
+  }
+  .md_grid-column {
+    grid-column: var(--md-grid-column);
+  }
+  .md_grid-row {
+    grid-row: var(--md-grid-row);
   }
 
   .md-hide {
@@ -24,14 +96,49 @@ $screen-desktop-large: 90rem; */
   }
 }
 
-@media (max-width: 35.5rem) {
-  .sm_grid-one {
-    grid-template-columns: minmax(0, 1fr);
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  sm: 568px
+/////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media (max-width: 568px) {
+  .sm_grid-columns {
+    grid-template-columns: var(--sm-grid-columns);
   }
-  .history-trading-container {
-    grid-template-columns: minmax(0, 1fr);
+  .sm_grid-rows {
+    grid-template-rows: var(--sm-grid-rows);
+  }
+  .sm_grid-column {
+    grid-column: var(--sm-grid-column);
+  }
+  .sm_grid-row {
+    grid-row: var(--sm-grid-row);
   }
   .sm-hide {
+    display: none;
+  }
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  xs: 480px
+/////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+@media (max-width: 480px) {
+  .xs_grid-columns {
+    grid-template-columns: var(--xs-grid-columns);
+  }
+  .xs_grid-rows {
+    grid-template-rows: var(--xs-grid-rows);
+  }
+  .xs_grid-column {
+    grid-column: var(--xs-grid-column);
+  }
+  .xs_grid-row {
+    grid-row: var(--xs-grid-row);
+  }
+  .xs-hide {
     display: none;
   }
 }

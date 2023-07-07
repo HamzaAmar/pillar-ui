@@ -1,11 +1,11 @@
 :root {
-  --font-3xs: var(--font-3xs-custom, clamp(0.55rem, calc(0.52rem + 0.14vw), 0.66rem));
-  --font-2xs: var(--font-2xs-custom, clamp(0.61rem, calc(0.57rem + 0.22vw), 0.8rem));
-  --font-xs: var(--font-xs-custom, clamp(0.69rem, calc(0.63rem + 0.31vw), 0.96rem));
-  --font-sm: var(--font-sm-custom, clamp(0.78rem, calc(0.69rem + 0.44vw), 1.15rem));
-  --font-md: var(--font-md-custom, clamp(0.88rem, calc(0.76rem + 0.6vw), 1.38rem));
-  --font-lg: var(--font-lg-custom, clamp(0.98rem, calc(0.83rem + 0.79vw), 1.65rem));
-  --font-xl: var(--font-xl-custom, clamp(1.11rem, calc(0.9rem + 1.04vw), 1.98rem));
-  --font-2xl: var(--font-2xl-custom, clamp(1.25rem, calc(0.98rem + 1.35vw), 2.38rem));
-  --font-3xl: var(--font-3xl-custom, clamp(1.4rem, calc(1.06rem + 1.73vw), 2.85rem));
+  --font-3xs: var(--font-3xs-custom, clamp(0.54rem, calc(0.83rem + -0.28vw), 0.77rem));
+  --font-2xs: var(--font-2xs-custom, clamp(0.65rem, calc(0.86rem + -0.21vw), 0.82rem));
+  --font-xs: var(--font-xs-custom, clamp(0.78rem, calc(0.9rem + -0.12vw), 0.88rem));
+  --font-sm: var(--font-sm-custom, clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem));
+  --font-md: var(--font-md-custom, clamp(1rem, calc(0.97rem + 0.15vw), 1.13rem));
+  --font-lg: var(--font-lg-custom, clamp(1.07rem, calc(1rem + 0.34vw), 1.35rem));
+  --font-xl: var(--font-xl-custom, clamp(1.14rem, calc(1.02rem + 0.58vw), 1.62rem));
+  --font-2xl: var(--font-2xl-custom, clamp(1.22rem, calc(1.04rem + 0.88vw), 1.94rem));
+  --font-3xl: var(--font-3xl-custom, clamp(1.3rem, calc(1.05rem + 1.26vw), 2.33rem));
 }

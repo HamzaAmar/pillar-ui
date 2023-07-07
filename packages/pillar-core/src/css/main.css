@@ -1,12 +1,3 @@
-/* 
-Table Of Content
-    1- Settings
-    2- Base
-    3- Layout
-    4- Components
-    5- Utilities
-*/
-
 @import './settings/_index.css';
 @import './generics/_index.css';
 @import './layout/_index.css';

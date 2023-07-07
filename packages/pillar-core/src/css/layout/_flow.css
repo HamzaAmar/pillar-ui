@@ -1,18 +1,33 @@
+.l_flow__3xs > * + * {
+  margin-top: var(--space-3xs);
+}
+.l_flow__2xs > * + * {
+  margin-top: var(--space-2xs);
+}
+
 .l_flow__xs > * + * {
-  margin-top: 4px;
+  margin-top: var(--space-xs);
 }
 
 .l_flow__sm > * + * {
-  margin-top: 8px;
+  margin-top: var(--space-sm);
 }
 
 .l_flow__md > * + * {
-  margin-top: 12px;
+  margin-top: var(--space-md);
 }
 
 .l_flow__lg > * + * {
-  margin-top: 16px;
+  margin-top: var(--space-lg);
 }
 .l_flow__xl > * + * {
-  margin-top: 24px;
+  margin-top: var(--space-xl);
+}
+
+.l_flow__2xl > * + * {
+  margin-top: var(--space-2xl);
+}
+
+.l_flow__3xl > * + * {
+  margin-top: var(--space-3xl);
 }

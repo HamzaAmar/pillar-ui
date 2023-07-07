@@ -1,5 +1,5 @@
 :root {
-  --success-gradient: var(
+  --primary-gradient: var(
     --primary-gradient-custom,
     linear-gradient(--var(--gradient-degree, 180deg), var(--primary-9), var(--primary-8))
   );

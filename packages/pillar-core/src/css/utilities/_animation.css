@@ -8,8 +8,8 @@
   transform: scale(1.1);
 }
 .u_jump-y:hover {
-  transform: transurfaceY(2px);
+  transform: translateY(2px);
 }
 .u_jump-x:hover {
-  transform: transurfaceX(2px);
+  transform: translateX(2px);
 }
