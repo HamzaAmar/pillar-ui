@@ -2,6 +2,38 @@
 @forward '../component/common/footer/footer.scss';
 @forward '../component/common/aside/aside.scss';
 
+.playground {
+  background-color: red;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.highlight {
+  position: relative;
+  z-index: 0;
+  width: fit-content;
+
+  &::before,
+  &::after {
+    content: '';
+    height: 25px;
+    width: 24px;
+    position: absolute;
+    background-image: url('/pillar.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &::before {
+    top: -0.5rem;
+    left: -1.5rem;
+  }
+
+  &::after {
+    right: -1.75rem;
+    bottom: -0.5rem;
+  }
+}
+
 div[data-rehype-pretty-code-fragment] {
   border-radius: 0.5rem;
   border: 1px solid var(--opacity-6);
@@ -15,6 +47,7 @@ div[data-rehype-pretty-code-fragment] pre {
   max-height: 500px;
   /* stylist preferences */
   font-size: 0.925rem;
+  margin-block: 0.5rem;
 }
 
 div[data-rehype-pretty-code-title] {
@@ -23,7 +56,25 @@ div[data-rehype-pretty-code-title] {
   font-size: 0.75rem;
   line-height: 1.75;
   color: var(--surface-11);
-  background-color: var(--opacity-6);
+  border-bottom: 1px solid var(--opacity-6);
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--danger-9);
+    border-radius: 1rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    background: var(--success-9);
+    right: 1.375rem;
+  }
 }
 
 div[data-rehype-pretty-code-fragment] .line {
