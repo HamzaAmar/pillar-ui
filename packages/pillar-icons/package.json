@@ -41,25 +41,7 @@
     ".": {
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
-    },
-    "./arrows": "./dist/icons/arrows/index.js",
-    "./action": "./dist/icons/action/index.js",
-    "./brand": "./dist/icons/brand/index.js",
-    "./building": "./dist/icons/building/index.js",
-    "./currency": "./dist/icons/currency/index.js",
-    "./food": "./dist/icons/food/index.js",
-    "./hand": "./dist/icons/hand/index.js",
-    "./mail": "./dist/icons/mail/index.js",
-    "./media": "./dist/icons/media/index.js",
-    "./navigation": "./dist/icons/navigation/index.js",
-    "./number": "./dist/icons/number/index.js",
-    "./science": "./dist/icons/science/index.js",
-    "./social": "./dist/icons/social/index.js",
-    "./sport": "./dist/icons/sport/index.js",
-    "./transportation": "./dist/icons/transportation/index.js",
-    "./typography": "./dist/icons/typography/index.js",
-    "./vowel": "./dist/icons/vowel/index.js",
-    "./weather": "./dist/icons/weather/index.js"
+    }
   },
   "scripts": {
     "build": "npx tsup",

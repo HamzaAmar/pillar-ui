@@ -25,7 +25,7 @@
     "icons"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --filter='./packages/*'",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules",
@@ -34,7 +34,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "changeset:version": "changeset version",
-    "changeset:publish": "turbo run build --filter=docs^... && changeset publish",
     "pre-commit": "lint-staged",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
@@ -42,8 +41,8 @@
     "prettier:base": "prettier --parser typescript --write",
     "prettier:check": "yarn prettier:base --list-different \"packages/**/*.{ts,tsx}\"",
     "prettier:write": "yarn prettier:base \"src/**/*.{ts,tsx}\"",
-    "ci": "yarn lint && yarn prettier:check && yarn type:check && yarn test",
-    "publish-packages": "yarn ci && changeset publish"
+    "ci": "yarn lint && yarn prettier:check && yarn type:check && yarn test && yarn build",
+    "release": "yarn ci && changeset publish"
   },
   "devDependencies": {
     "alex": "^11.0.0",
