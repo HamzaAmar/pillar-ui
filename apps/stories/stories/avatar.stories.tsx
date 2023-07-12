@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Avatar, Button, Flex } from '@pillar/core'
-import { Dots, UserInfo, UserOff } from '@pillar/icons'
+import { Dots } from '@pillar/icons'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {

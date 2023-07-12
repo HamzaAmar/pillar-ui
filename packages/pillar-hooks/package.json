@@ -8,6 +8,10 @@
     "reusable",
     "functional programming"
   ],
+  "author": {
+    "name": "Hamza Miloud Amar",
+    "email": "hamzamiloudamar@gmail.com"
+  },
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
@@ -17,6 +21,12 @@
   "files": [
     "dist/**"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HamzaAmar/pillar-ui",
+    "directory": "packages/pillar-hooks"
+  },
+  "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
   "exports": {
     ".": {
       "require": "./dist/index.js",
@@ -29,7 +39,8 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "dev": "yarn build:watch",
-    "test": "vitest --watch"
+    "test": "vitest run",
+    "type:check": "tsc --noEmit"
   },
   "peerDependencies": {
     "react": "^18.0.0"
@@ -37,16 +48,16 @@
   "devDependencies": {
     "@pillar/tsconfig": "*",
     "@pillar/utils": "*",
+    "@pillar/eslint": "*",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "@vitejs/plugin-react": "^4.0.0",
     "eslint": "^8.15.0",
-    "eslint-config-custom": "*",
     "jsdom": "^22.1.0",
     "react": "^18.1.0",
-    "tsup": "^5.10.1",
+    "tsup": "^6.7.0",
     "typescript": "^4.5.3",
     "vite": "^4.3.9",
     "vitest": "^0.31.1"

@@ -1,8 +1,7 @@
-import React, { useRef, useState, CSSProperties } from 'react'
+import { useRef, useState, CSSProperties } from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Chips, Flex } from '@pillar/core'
+import { Chips, Flex, Button } from '@pillar/core'
 import { Dots, Plus } from '@pillar/icons'
-import { Button } from '@pillar/core'
 
 export default {
   title: 'Components/Chips',

@@ -1,10 +1,10 @@
-import { Alien, Anchor, Apple, Check, ChevronDown, Home, LetterSpacing, Link, Minus, Plane, Plus } from '@pillar/icons'
-import { Avatar, Breadcrumb, Flex, Paper } from '@pillar/core'
+import { Anchor, Home, Link, Minus } from '@pillar/icons'
+import { Avatar, Breadcrumb, Paper } from '@pillar/core'
 import React from 'react'
 
 export const BreadcrumbPlayGround = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
+    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />

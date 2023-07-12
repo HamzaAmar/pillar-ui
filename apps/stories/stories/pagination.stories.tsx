@@ -1,5 +1,4 @@
-import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { ComponentMeta } from '@storybook/react'
 import { Pagination } from '@pillar/core'
 
 export default {
@@ -11,31 +10,31 @@ export function PaginationColor() {
   return (
     <div>
       <div className="l_flow__md">
-        <Pagination />
-        <Pagination color="danger" />
-        <Pagination color="success" />
-        <Pagination color="warning" />
-        <Pagination color="primary" />
-        <Pagination color="secondary" />
-        <Pagination color="surface" />
+        <Pagination count={10} />
+        <Pagination count={10} color="danger" />
+        <Pagination count={10} color="success" />
+        <Pagination count={10} color="warning" />
+        <Pagination count={10} color="primary" />
+        <Pagination count={10} color="secondary" />
+        <Pagination count={10} color="surface" />
       </div>
       <div className="l_flow__md">
-        <Pagination variant="soft" />
-        <Pagination variant="soft" color="danger" />
-        <Pagination variant="soft" color="success" />
-        <Pagination variant="soft" color="warning" />
-        <Pagination variant="soft" color="primary" />
-        <Pagination variant="soft" color="secondary" />
-        <Pagination variant="soft" color="surface" />
+        <Pagination count={10} variant="soft" />
+        <Pagination count={10} variant="soft" color="danger" />
+        <Pagination count={10} variant="soft" color="success" />
+        <Pagination count={10} variant="soft" color="warning" />
+        <Pagination count={10} variant="soft" color="primary" />
+        <Pagination count={10} variant="soft" color="secondary" />
+        <Pagination count={10} variant="soft" color="surface" />
       </div>
       <div className="l_flow__md">
-        <Pagination />
-        <Pagination variant="solid" color="danger" />
-        <Pagination variant="solid" color="success" />
-        <Pagination variant="solid" color="warning" />
-        <Pagination variant="solid" color="primary" />
-        <Pagination variant="solid" color="secondary" />
-        <Pagination variant="solid" color="surface" />
+        <Pagination count={10} />
+        <Pagination count={10} variant="solid" color="danger" />
+        <Pagination count={10} variant="solid" color="success" />
+        <Pagination count={10} variant="solid" color="warning" />
+        <Pagination count={10} variant="solid" color="primary" />
+        <Pagination count={10} variant="solid" color="secondary" />
+        <Pagination count={10} variant="solid" color="surface" />
       </div>
     </div>
   )
@@ -44,13 +43,13 @@ export function PaginationColor() {
 export function PaginationVariant() {
   return (
     <div className="l_flow__md">
-      <Pagination />
-      <Pagination color="danger" />
-      <Pagination color="success" />
-      <Pagination color="warning" />
-      <Pagination color="primary" />
-      <Pagination color="secondary" />
-      <Pagination color="surface" />
+      <Pagination count={10} />
+      <Pagination count={10} color="danger" />
+      <Pagination count={10} color="success" />
+      <Pagination count={10} color="warning" />
+      <Pagination count={10} color="primary" />
+      <Pagination count={10} color="secondary" />
+      <Pagination count={10} color="surface" />
     </div>
   )
 }
@@ -58,17 +57,13 @@ export function PaginationVariant() {
 export function PaginationCustomStyle() {
   return (
     <div className="l_flow__md">
-      <Pagination />
-      <Pagination color="danger" />
-      <Pagination color="success" />
-      <Pagination color="warning" />
-      <Pagination color="primary" />
-      <Pagination color="secondary" />
-      <Pagination color="surface" />
+      <Pagination count={10} />
+      <Pagination count={10} color="danger" />
+      <Pagination count={10} color="success" />
+      <Pagination count={10} color="warning" />
+      <Pagination count={10} color="primary" />
+      <Pagination count={10} color="secondary" />
+      <Pagination count={10} color="surface" />
     </div>
   )
 }
-
-const Template: ComponentStory<typeof Pagination> = (args) => <Pagination {...args} />
-
-export const Playground = Template.bind({})

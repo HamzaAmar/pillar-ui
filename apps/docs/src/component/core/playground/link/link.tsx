@@ -147,6 +147,7 @@ export const LinkAlign = () => {
 export const LinkColors = () => {
   return (
     <Paper
+      as={Flex}
       direction="column"
       items="center"
       borderColor="opacity-6"
@@ -187,6 +188,7 @@ export const LinkColors = () => {
 export function LinkTrucates() {
   return (
     <Paper
+      as={Flex}
       direction="column"
       items="center"
       borderColor="opacity-6"

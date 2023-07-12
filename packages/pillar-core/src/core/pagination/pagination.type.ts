@@ -9,12 +9,9 @@ interface PaginationBase {
 }
 
 export interface PaginationProps extends PaginationBase {
-  max?: number
-  current: number
+  current?: number
   count: number
-  pageSize?: number
-  title: string
-  number?: number
+  title?: string
 }
 
 export interface PaginationItem extends PaginationBase {

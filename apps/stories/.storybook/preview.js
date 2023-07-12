@@ -1,5 +1,5 @@
 import '@pillar/core/main.min.css'
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { INITIAL_VIEWPORTS as viewports } from '@storybook/addon-viewport'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -18,6 +18,6 @@ export const parameters = {
     },
   },
   viewport: {
-    viewports: INITIAL_VIEWPORTS,
+    viewports,
   },
 }

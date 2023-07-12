@@ -1,6 +1,7 @@
-import { useState, useRef, useCallback, type Dispatch, type SetStateAction } from 'react'
-import type { UseControllableStateParams } from './useControllableState.type'
+import { useState, useRef, useCallback } from 'react'
 
+import type { Dispatch, SetStateAction } from 'react'
+import type { UseControllableStateParams } from './useControllableState.type'
 /**
  * A hook that creates a state variable that can be either controlled or uncontrolled.
  * If `controlledValue` is defined, the hook returns it and a setter function that updates it.

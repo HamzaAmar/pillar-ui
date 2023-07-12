@@ -26,18 +26,14 @@ const MenuBar = () => {
         <ul>
           {MENU_LIST.map((item) => {
             const contents = MENU_CONTENT[item]
-            const itemType = contents
-              ? {
-                  as: 'button',
-                  onClick: () => handleClick(item),
-                }
-              : {
-                  as: Link,
-                  href: `/docs/${item}`,
-                }
+            // TODO: Determine an appropriate type for this variable
+            const linkOrButtonConfig = contents
+              ? ({ href: `/docs/${item}`, as: Link } as any)
+              : { as: 'button', onClick: () => handleClick(item) }
+
             return (
               <li className="l_flow__md" key={item}>
-                <Item key={item} level={2} isActive={current === item && !contents} {...itemType} text={item}>
+                <Item {...linkOrButtonConfig} key={item} level={2} isActive={current === item && !contents} text={item}>
                   {contents && <ChevronDown width="16" />}
                 </Item>
                 {contents && (

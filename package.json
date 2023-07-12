@@ -1,6 +1,5 @@
 {
-  "name": "pillar-ui",
-  "version": "0.0.0",
+  "name": "pillar-monorepo",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -31,18 +30,20 @@
     "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules",
     "test": "turbo run test",
+    "type:check": "turbo run type:check",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish",
+    "changeset:version": "changeset version",
+    "changeset:publish": "turbo run build --filter=docs^... && changeset publish",
     "pre-commit": "lint-staged",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "lint-language": "alex",
+    "lint-language": "alex .",
     "prettier:base": "prettier --parser typescript --write",
     "prettier:check": "yarn prettier:base --list-different \"packages/**/*.{ts,tsx}\"",
     "prettier:write": "yarn prettier:base \"src/**/*.{ts,tsx}\"",
-    "publish-packages": "turbo run build lint test && changeset version && changeset publish"
+    "ci": "yarn lint && yarn prettier:check && yarn type:check && yarn test",
+    "publish-packages": "yarn ci && changeset publish"
   },
   "devDependencies": {
     "alex": "^11.0.0",

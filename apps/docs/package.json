@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
+    "type:check": "tsc --noEmit"
   },
   "dependencies": {
     "@pillar/core": "*",
@@ -27,13 +28,13 @@
     "shiki": "^0.14.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@pillar/eslint": "*",
     "@pillar/tsconfig": "*",
+    "@babel/core": "^7.0.0",
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "eslint": "7.32.0",
-    "eslint-config-custom": "*",
     "typescript": "^4.5.3"
   }
 }

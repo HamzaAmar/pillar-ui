@@ -3,40 +3,41 @@ import { ListNumber } from '@pillar/icons'
 import React, { useState, useRef, useEffect } from 'react'
 import type { HeadingProps } from './aside.type'
 import { Item } from './listItem'
-
-// const ListItem = ({ text, level, slug, isActive }: TableItemProps) => {
-//   return (
-//     <li data-active={isActive} className="aside--list-item" style={{ '--lvl': level - 1 } as CSSProperties}>
-//       <Text size="sm" color="surface" contrast="low" as={Link} href={`#${slug}`}>
-//         {text}
-//       </Text>
-//     </li>
-//   )
-// }
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const options: IntersectionObserverInit = {
   rootMargin: '0% 0% -70% 0%',
 }
 
 export function useScrollSpy(selectors: string) {
+  const router = useRouter()
   const [activeId, setActiveId] = useState<string>()
   const observer = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
-    const els = Array.from(document.querySelectorAll(selectors))
+    const elements = Array.from(document.querySelectorAll(selectors))
     observer.current?.disconnect()
     observer.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry?.isIntersecting) {
-          setActiveId(entry.target.getAttribute?.('id'), entry)
+          setActiveId(entry.target.getAttribute('id')!)
         }
       })
     }, options)
-    els.forEach((el) => {
-      if (el) observer.current?.observe(el)
+
+    console.log('els', elements)
+    elements.forEach((el) => {
+      if (el) {
+        console.log('el', el, 'el')
+        observer.current?.observe(el)
+      }
     })
-    return () => observer.current?.disconnect()
-  }, [selectors])
+    return () => {
+      console.log('UseEffect Cleanup')
+      return observer.current?.disconnect()
+    }
+  }, [selectors, router.asPath])
 
   return activeId
 }
@@ -53,7 +54,7 @@ const TableOfContent = ({ contents }: { contents: HeadingProps[] | null }) => {
         {contents?.map(({ slug, ...rest }) => {
           const isActive = slug === activeId
 
-          return <Item key={slug} isActive={isActive} {...rest} />
+          return <Item as={Link} href={`#${slug}`} key={slug} isActive={isActive} {...rest} />
         })}
       </ul>
     </nav>

@@ -1,8 +1,7 @@
 import { useId } from 'react'
-import { RadioProvider, useRadio } from './context'
-import type { CustomRadioProps, RadioGroupProps, RadioProps } from './radio.type'
+import type { CustomRadioProps, RadioContextProps, RadioGroupProps, RadioProps } from './radio.type'
 import { Flex } from '../flex'
-import { classnames } from '@pillar/utils'
+import { classnames, createContext } from '@pillar/utils'
 import { CircleCheck } from '@pillar/icons'
 
 /*
@@ -11,14 +10,16 @@ import { CircleCheck } from '@pillar/icons'
 ===================================================================================================
 */
 
+const [AvatarProvider, useAvatarContext] = createContext<RadioContextProps>('Avatar')
+
 export const CustomRadio = (props: CustomRadioProps) => {
-  const provider = useRadio()
+  const provider = useAvatarContext()
   const {
     label,
     id,
-    color = provider.color || 'primary',
-    size = provider.size || 'md',
-    name = provider.name,
+    color = provider?.color ?? 'primary',
+    size = provider?.size ?? 'md',
+    name = provider?.name,
     showLabel = false,
     direction = 'column',
     className,
@@ -68,7 +69,7 @@ export const RadioGroup = ({ direction = 'column', children, label, showLabel, i
       */}
 
       <Flex wrap gap="sm" className="form-group" items="start" direction={direction}>
-        <RadioProvider {...rest}>{children}</RadioProvider>
+        <AvatarProvider {...rest}>{children}</AvatarProvider>
       </Flex>
     </fieldset>
   )
@@ -81,13 +82,13 @@ export const RadioGroup = ({ direction = 'column', children, label, showLabel, i
 */
 
 export const Radio = (props: RadioProps) => {
-  const provider = useRadio()
+  const provider = useAvatarContext()
   const {
     label,
     id,
-    color = provider.color || 'primary',
-    size = provider.size || 'md',
-    name = provider.name,
+    color = provider?.color ?? 'primary',
+    size = provider?.size ?? 'md',
+    name = provider?.name,
     variant = 'solid',
     ...rest
   } = props

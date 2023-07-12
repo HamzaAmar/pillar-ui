@@ -1,4 +1,5 @@
-import { ReactNode } from 'react'
+import Link from 'next/link'
+import { ReactElement, ReactNode } from 'react'
 
 export interface HeadingProps {
   level?: number
@@ -6,9 +7,8 @@ export interface HeadingProps {
   slug: string
 }
 
-export interface TableItemProps extends Omit<HeadingProps, 'slug'> {
+export interface ListItemProps extends Omit<HeadingProps, 'slug'> {
   isActive: boolean
-  link?: string
   children?: ReactNode
 }
 

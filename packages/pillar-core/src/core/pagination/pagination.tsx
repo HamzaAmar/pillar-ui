@@ -43,10 +43,10 @@ const Item = forwardRef((props, forwardedRef) => {
 Item.displayName = 'Pillar-PaginationItem'
 
 export const Pagination = (props: PaginationProps) => {
-  const { pageSize = 10, ...rest } = props
+  const { count = 10, ...rest } = props
 
   const { currentStep, range, goToNextStep, goToPreviousStep, jumpToStep, isFirst, isLast } = usePagination({
-    totalPages: 10,
+    totalPages: count,
   })
 
   return (

@@ -28,7 +28,7 @@ export interface RadioProps extends Omit<ComponentPropsWithoutRef<'input'>, 'siz
 
 export interface RadioGroupProps extends RadioGroup, SharedProps, RadioGroupBase {}
 
-export interface RadioProviderProps extends Omit<RadioGroup, 'id'>, SharedProps {}
+export interface RadioContextProps extends Omit<RadioGroup, 'id' | 'children'>, SharedProps {}
 export interface CustomRadioProps extends RadioProps {
   children: ReactNode
   direction?: 'column' | 'row'

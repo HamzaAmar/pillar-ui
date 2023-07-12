@@ -1,14 +1,13 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  // entry: ['src/index.ts'],
-  entry: ['src/index.ts', 'src/icons/**/*.tsx'],
+  entry: ['src/index.ts'],
   format: ['cjs', 'esm'],
-  treeshake: true,
   splitting: false,
   sourcemap: true,
   clean: true,
   dts: true,
   minify: true,
+  treeshake: true,
   external: ['react', 'react-dom'],
 })

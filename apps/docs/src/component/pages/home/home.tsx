@@ -16,7 +16,7 @@ import {
 import { Github, Booking, Discord, Linkdin, Youtube } from '@pillar/icons'
 import { ACCESSIBILITY, COMING_SUPPORT, SIMPLE_DEVELOPMENT, SUPPORTED } from './home.data'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { CSSProperties, useState } from 'react'
 import Image from 'next/image'
 
 function AccessibleSection() {
@@ -148,7 +148,7 @@ function SimplifyDevelopment() {
 function PillarSupport() {
   return (
     <Paper corner="lg" p="lg" flow="lg">
-      <Heading className="highlight" transform="capitalize" g as="h2" size="2xl">
+      <Heading className="highlight" transform="capitalize" as="h2" size="2xl">
         Integrated Frameworks
       </Heading>
       <Text color="surface" contrast="low" size="lg">
@@ -171,7 +171,6 @@ function PillarSupport() {
           >
             <Flex
               as={Paper}
-              p
               background="surface-5"
               direction="column"
               items="center"
@@ -350,8 +349,8 @@ function DeveloperExperience() {
           <Button>Hello world</Button>
           <Avatar image="https://picsum.photos/id/300/100/100" />
           <Chips>Hello world</Chips>
-          <Badge variant="number" number="30" max="100" />
-          <Switch variant="number" number="30" max="100" />
+          <Badge variant="numeric" number={30} max={100} />
+          <Switch label="Hello" />
           <Alert title="Hello world" message="nice to meet you here you can look at me like" />
         </Flex>
         <Text color="surface" contrast="low" size="md">
@@ -362,7 +361,9 @@ function DeveloperExperience() {
           appearance of individual components while maintaining consistency throughout your application.
         </Text>
         <Flex
-          style={{ '--button-corner': '.25rem', '--badge-corner': '.25rem', '--avatar-corner': '.25rem' }}
+          style={
+            { '--button-corner': '.25rem', '--badge-corner': '.25rem', '--avatar-corner': '.25rem' } as CSSProperties
+          }
           items="center"
           as={Flex}
           wrap
@@ -372,8 +373,8 @@ function DeveloperExperience() {
           <Button>Hello world</Button>
           <Avatar image="https://picsum.photos/id/300/100/100" />
           <Chips>Hello world</Chips>
-          <Badge variant="number" number="30" max="100" />
-          <Switch variant="number" number="30" max="100" />
+          <Badge variant="numeric" number={30} max={100} />
+          <Switch label="Hello" />
           <Alert title="Hello world" message="nice to meet you here you can look at me like" />
         </Flex>
         <Text color="surface" contrast="low" size="md">

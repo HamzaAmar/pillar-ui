@@ -4,13 +4,13 @@ import React from 'react'
 export const PaginationPlayGround = () => {
   return (
     <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
-      <Pagination />
-      <Pagination color="danger" />
-      <Pagination color="success" />
-      <Pagination color="warning" />
-      <Pagination color="primary" />
-      <Pagination color="secondary" />
-      <Pagination color="surface" />
+      <Pagination count={10} />
+      <Pagination count={10} color="danger" />
+      <Pagination count={10} color="success" />
+      <Pagination count={10} color="warning" />
+      <Pagination count={10} color="primary" />
+      <Pagination count={10} color="secondary" />
+      <Pagination count={10} color="surface" />
     </Paper>
   )
 }
@@ -18,14 +18,14 @@ export const PaginationPlayGround = () => {
 export const PaginationSizes = () => {
   return (
     <Paper as={Flex} gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
-      <Pagination />
-      <Pagination size="2xs" />
-      <Pagination size="xs" />
-      <Pagination size="sm" />
-      <Pagination size="md" />
-      <Pagination size="lg" />
-      <Pagination size="xl" />
-      <Pagination size="2xl" />
+      <Pagination count={10} />
+      <Pagination count={10} size="2xs" />
+      <Pagination count={10} size="xs" />
+      <Pagination count={10} size="sm" />
+      <Pagination count={10} size="md" />
+      <Pagination count={10} size="lg" />
+      <Pagination count={10} size="xl" />
+      <Pagination count={10} size="2xl" />
     </Paper>
   )
 }
@@ -33,9 +33,9 @@ export const PaginationSizes = () => {
 export const PaginationVariants = () => {
   return (
     <Paper borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
-      <Pagination variant="soft" />
-      <Pagination variant="solid" />
-      <Pagination variant="outline" />
+      <Pagination count={10} variant="soft" />
+      <Pagination count={10} variant="solid" />
+      <Pagination count={10} variant="outline" />
     </Paper>
   )
 }
@@ -52,12 +52,12 @@ export const PaginationDefaultPressed = () => {
       background="surface-3"
       corner="sm"
     >
-      <Pagination label="Hello" defaultPressed color="danger" />
-      <Pagination label="Hello" defaultPressed color="warning" />
-      <Pagination label="Hello" defaultPressed color="success" />
-      <Pagination label="Hello" defaultPressed color="primary" />
-      <Pagination label="Hello" defaultPressed color="secondary" />
-      <Pagination label="Hello" defaultPressed color="surface" />
+      <Pagination count={10} title="Hello" />
+      <Pagination count={10} title="Hello" />
+      <Pagination count={10} title="Hello" />
+      <Pagination count={10} title="Hello" />
+      <Pagination count={10} title="Hello" />
+      <Pagination count={10} title="Hello" />
     </Paper>
   )
 }
@@ -65,15 +65,15 @@ export const PaginationDefaultPressed = () => {
 export const PaginationCorners = () => {
   return (
     <Paper borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
-      <Pagination />
-      <Pagination corner="full" />
-      <Pagination corner="xs" />
-      <Pagination corner="sm" />
-      <Pagination corner="md" />
-      <Pagination corner="lg" />
-      <Pagination corner="xl" />
-      <Pagination corner="circle" />
-      <Pagination corner="radius" />
+      <Pagination count={10} />
+      <Pagination count={10} corner="full" />
+      <Pagination count={10} corner="xs" />
+      <Pagination count={10} corner="sm" />
+      <Pagination count={10} corner="md" />
+      <Pagination count={10} corner="lg" />
+      <Pagination count={10} corner="xl" />
+      <Pagination count={10} corner="circle" />
+      <Pagination count={10} corner="full" />
     </Paper>
   )
 }
@@ -81,13 +81,13 @@ export const PaginationCorners = () => {
 export const PaginationColors = () => {
   return (
     <Paper borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
-      <Pagination title="Esc" />
-      <Pagination title="Esc" color="danger" />
-      <Pagination title="Esc" color="success" />
-      <Pagination title="Esc" color="warning" />
-      <Pagination title="Esc" color="primary" />
-      <Pagination title="Esc" color="surface" />
-      <Pagination title="Esc" color="secondary" />
+      <Pagination count={10} title="Esc" />
+      <Pagination count={10} title="Esc" color="danger" />
+      <Pagination count={10} title="Esc" color="success" />
+      <Pagination count={10} title="Esc" color="warning" />
+      <Pagination count={10} title="Esc" color="primary" />
+      <Pagination count={10} title="Esc" color="surface" />
+      <Pagination count={10} title="Esc" color="secondary" />
     </Paper>
   )
 }

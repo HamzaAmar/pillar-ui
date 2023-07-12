@@ -1,4 +1,3 @@
-import { Alien, Apple, Check, ChevronDown, LetterSpacing, Plane, Plus } from '@pillar/icons'
 import { Avatar, Kbd, Flex, Paper } from '@pillar/core'
 import React from 'react'
 
@@ -49,46 +48,6 @@ export const KbdSizes = () => {
   )
 }
 
-export const KbdVariants = () => {
-  return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
-      <Kbd variant="dot" color="danger" />
-      <Kbd variant="numeric" number={15} max={15} color="danger" />
-      <Kbd variant="icon" icon={<Check />} color="danger" />
-    </Paper>
-  )
-}
-
-export const KbdDefaultPressed = () => {
-  return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
-      <Kbd label="Hello" defaultPressed color="danger" />
-      <Kbd label="Hello" defaultPressed color="warning" />
-      <Kbd label="Hello" defaultPressed color="success" />
-      <Kbd label="Hello" defaultPressed color="primary" />
-      <Kbd label="Hello" defaultPressed color="secondary" />
-      <Kbd label="Hello" defaultPressed color="surface" />
-    </Paper>
-  )
-}
 export const KbdTitle = () => {
   return (
     <Paper
@@ -146,7 +105,7 @@ export const KbdColors = () => {
       <Kbd title="Esc" color="success" />
       <Kbd title="Esc" color="warning" />
       <Kbd title="Esc" color="primary" />
-      <Kbd title="Esc" color="surfacece" />
+      <Kbd title="Esc" color="surface" />
       <Kbd title="Esc" color="secondary" />
     </Paper>
   )

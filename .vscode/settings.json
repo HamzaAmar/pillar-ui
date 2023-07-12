@@ -13,5 +13,5 @@
     "**/node_modules": true,
     "**/dist": true
   },
-  "cSpell.words": ["Amar", "Miloud", "tsup"]
+  "cSpell.words": ["Amar", "Miloud", "tsup", "treeshake", "shiki", "rehype", "contentlayer"]
 }

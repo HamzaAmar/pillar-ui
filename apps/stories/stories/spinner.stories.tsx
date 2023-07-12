@@ -59,9 +59,7 @@ export function SpinnerInvert() {
         <Spinner color="danger" />
         <Spinner color="warning" />
         <Spinner color="primary" />
-        <Spinner color="purple" />
         <Spinner color="secondary" />
-        <Spinner color="brown" />
         <Spinner color="surface" />
       </Flex>
       <Flex gap="sm" items="center">
@@ -69,9 +67,7 @@ export function SpinnerInvert() {
         <Spinner invert color="danger" />
         <Spinner invert color="warning" />
         <Spinner invert color="primary" />
-        <Spinner invert color="purple" />
         <Spinner invert color="secondary" />
-        <Spinner invert color="brown" />
         <Spinner invert color="surface" />
       </Flex>
     </div>

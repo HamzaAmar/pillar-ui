@@ -11,21 +11,10 @@ module.exports = {
     // 'addon-screen-reader',
   ],
   framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-vite',
+  webpackFinal: async (config) => {
+    return config
   },
-  async viteFinal(config, { configType }) {
-    // customize the Vite config here
-    return {
-      ...config,
-      resolve: {
-        alias: [
-          {
-            find: '@pillar/core',
-            replacement: path.resolve(__dirname, '../../../packages/pillar-core/'),
-          },
-        ],
-      },
-    }
+  core: {
+    builder: '@storybook/builder-webpack5',
   },
 }

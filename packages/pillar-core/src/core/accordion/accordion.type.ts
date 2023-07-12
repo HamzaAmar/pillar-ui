@@ -14,11 +14,11 @@ export interface AccordionProps {
 export interface AccordionButtonProps {
   id?: string
   title: string
-  icon: ReactElement
+  icon?: ReactElement
 }
 export interface AccordionItemProps {
   value: number
-  variant: Variant
+  variant?: Variant
 }
 export interface AccordionPanelProps {
   id?: string

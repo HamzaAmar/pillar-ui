@@ -10,15 +10,15 @@ export default {
 export function AccordionBase(props: any) {
   return (
     <Accordion {...props}>
-      <Accordion.Item>
+      <Accordion.Item value={1}>
         <Accordion.Button title="Hello" />
         <Accordion.Panel>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</Accordion.Panel>
       </Accordion.Item>
-      <Accordion.Item>
+      <Accordion.Item value={2}>
         <Accordion.Button title="Hello" />
         <Accordion.Panel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</Accordion.Panel>
       </Accordion.Item>
-      <Accordion.Item>
+      <Accordion.Item value={3}>
         <Accordion.Button title="Hello" />
         <Accordion.Panel>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error odio
@@ -159,17 +159,17 @@ export const AccordionStyle = () => {
   return (
     <div className="l_flow-md">
       <Accordion>
-        <Accordion.Item>
+        <Accordion.Item value={1}>
           <Accordion.Button className="u_red" title="Hello World" />
           <Accordion.Panel className="u_brown">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </Accordion.Panel>
         </Accordion.Item>
-        <Accordion.Item>
+        <Accordion.Item value={1}>
           <Accordion.Button title="Hello" />
           <Accordion.Panel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</Accordion.Panel>
         </Accordion.Item>
-        <Accordion.Item>
+        <Accordion.Item value={1}>
           <Accordion.Button title="Hello" />
           <Accordion.Panel>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error
@@ -179,15 +179,15 @@ export const AccordionStyle = () => {
       </Accordion>
 
       <Accordion>
-        <Accordion.Item>
+        <Accordion.Item value={1}>
           <Accordion.Button title="Hello WOrld" />
           <Accordion.Panel>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</Accordion.Panel>
         </Accordion.Item>
-        <Accordion.Item>
+        <Accordion.Item value={1}>
           <Accordion.Button title="Hello" />
           <Accordion.Panel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</Accordion.Panel>
         </Accordion.Item>
-        <Accordion.Item>
+        <Accordion.Item value={1}>
           <Accordion.Button title="Hello" />
           <Accordion.Panel>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error

@@ -2,7 +2,7 @@ import { CircleCheck, CircleWarning } from '@pillar/icons'
 import { Alert, Paper } from '@pillar/core'
 import React from 'react'
 
-export const AlertPlayGround = ({ children }: any) => {
+export const AlertPlayGround = () => {
   return (
     <div>
       <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">

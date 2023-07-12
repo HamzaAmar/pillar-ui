@@ -50,6 +50,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-size: var(-- font-sm);
+  color: var(--surface-11);
 }
 
 .aside--list-item::before {

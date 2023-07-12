@@ -4,14 +4,14 @@ import React from 'react'
 function AccordionBase(props: any) {
   return (
     <Accordion {...props}>
-      <Accordion.Item>
+      <Accordion.Item value={1}>
         <Accordion.Button title="Hello" />
         <Accordion.Panel>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt hic debitis, neque accusamus atque
           provident facilis vel ipsa illo officia aliquid dolore veritat iente at cum dolores.
         </Accordion.Panel>
       </Accordion.Item>
-      <Accordion.Item>
+      <Accordion.Item value={2}>
         <Accordion.Button title="Hello" />
         <Accordion.Panel>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos laborum distinctio officiis a eaque
@@ -19,7 +19,7 @@ function AccordionBase(props: any) {
           veniam recusandae.
         </Accordion.Panel>
       </Accordion.Item>
-      <Accordion.Item>
+      <Accordion.Item value={3}>
         <Accordion.Button title="Hello" />
         <Accordion.Panel>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error odio

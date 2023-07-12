@@ -43,7 +43,7 @@ const AvatarImage = () => {
 const AvatarIcon = () => {
   return (
     <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
-      <Avatar icon={<CircleCheck />} title="Success!" />
+      <Avatar fallback={<CircleCheck />} title="Success!" />
     </Paper>
   )
 }
