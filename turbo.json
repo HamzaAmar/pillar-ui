@@ -10,11 +10,9 @@
       "dependsOn": []
     },
     "lint": {
-      "dependsOn": ["^lint"],
       "cache": false
     },
     "type:check": {
-      "dependsOn": ["^type:check"],
       "cache": false
     },
     "dev": {
