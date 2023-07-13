@@ -41,8 +41,9 @@
     "prettier:base": "prettier --parser typescript --write",
     "prettier:check": "yarn prettier:base --list-different \"packages/**/*.{ts,tsx}\"",
     "prettier:write": "yarn prettier:base \"src/**/*.{ts,tsx}\"",
-    "ci": "yarn lint && yarn prettier:check && yarn test",
-    "release": "yarn ci && changeset publish"
+    "ci": "yarn build && yarn lint && yarn test && yarn type:check",
+    "prerelease": "yarn build && yarn lint && yarn test && yarn type:check",
+    "release": "changeset publish"
   },
   "devDependencies": {
     "alex": "^11.0.0",
