@@ -119,13 +119,13 @@ export const SUPPORTED = [
         />
         <defs>
           <linearGradient id="a" x1="6" x2="235" y1="33" y2="344" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#41D1FF" />
-            <stop offset="1" stop-color="#BD34FE" />
+            <stop stopColor="#41D1FF" />
+            <stop offset="1" stopColor="#BD34FE" />
           </linearGradient>
           <linearGradient id="b" x1="194.7" x2="236.1" y1="8.8" y2="293" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FFEA83" />
-            <stop offset=".1" stop-color="#FFDD35" />
-            <stop offset="1" stop-color="#FFA800" />
+            <stop stopColor="#FFEA83" />
+            <stop offset=".1" stopColor="#FFDD35" />
+            <stop offset="1" stopColor="#FFA800" />
           </linearGradient>
         </defs>
       </svg>
@@ -184,15 +184,15 @@ export const SUPPORTED = [
       <svg width="64" fill="none" viewBox="0 0 60 60">
         <path
           fill="var(--surface-5)"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M26.6.8C24.3 2 19.5 4.3 16.9 6c-2.6 1.7-2.3 3.4-3.4 4.5a89.4 89.4 0 0 1-6.8 5.7c-2.3 1.7-1.8 6.2-2.3 8L2 31.4c-.6 1.7 1.1 4 2.3 6.2s4 8.5 5.1 10.8c1.1 2.3 4.5 1.2 7.4 3.4a100.2 100.2 0 0 0 9.7 6.8c2.8 1.7 4 1.7 6.8 0 2.9-1.7 6.8-4.5 9.7-6.8 2.8-2.2 6.2-1.1 7.4-3.4l5.1-10.8c1.1-2.2 2.8-4.5 2.3-6.2L55.6 24c-.6-1.7 0-6.2-2.3-8a84.1 84.1 0 0 1-6.8-5.6c-2-1.8-1.1-2.8-3.4-4.5-2.3-1.7-7.4-4-9.7-5.1a7.3 7.3 0 0 0-6.8 0Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill="#BF4722"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="m18.6 10.1 10.6 7.4c.2.2.5.3.8.3.3 0 .6-.1.8-.3l10.6-7.4a1.5 1.5 0 0 0-.2-2.6L30.6 2.1c-.4-.2-.9-.2-1.3 0L18.9 7.5c-.5.3-.8.7-.8 1.3 0 .5.2 1 .6 1.3Zm15 9.8c0 .5.2.9.6 1.2l8.5 6a1.4 1.4 0 0 0 1.8-.2l7.1-6.5a1.5 1.5 0 0 0 0-2.3l-6.9-5.6a1.4 1.4 0 0 0-1.7 0l-8.8 6.1c-.4.3-.6.8-.6 1.2Zm-21.1 8a1.5 1.5 0 0 1-.3 2.4l-5 3.2a1.4 1.4 0 0 1-1.7-.1 1.5 1.5 0 0 1-.4-1.7l1.8-6c.2-.5.6-.9 1-1 .5-.1 1 0 1.4.3l3.2 3Zm27.5.7-9.2-6.4a1.4 1.4 0 0 0-1.6 0L20 28.6a1.5 1.5 0 0 0-.1 2.3l9.2 8.4a1.4 1.4 0 0 0 1.9 0L40 31c.4-.3.5-.7.5-1.2a1.5 1.5 0 0 0-.6-1.1Zm-24.5-1.7-7-6.5c-.4-.3-.6-.7-.6-1.2 0-.4.2-.8.6-1.1l6.8-5.6c.5-.4 1.2-.5 1.7-.1l8.8 6.2a1.5 1.5 0 0 1 0 2.5l-8.5 6c-.5.3-1.3.3-1.8-.2Zm36.6 9.4L44.8 32a1.4 1.4 0 0 0-1.7.1l-8.8 8.1a1.5 1.5 0 0 0 .4 2.5L47 47.7l.5.2c.6 0 1.1-.4 1.3-1l3.8-8.7a1.5 1.5 0 0 0-.5-1.9Zm1-10.6 1.8 6c.2.5 0 1-.2 1.4a1.4 1.4 0 0 1-1.9.4l-5-3.2c-.5-.2-.7-.6-.8-1a1.5 1.5 0 0 1 .5-1.3l3.2-3a1.4 1.4 0 0 1 1.4-.3c.4.1.8.5 1 1ZM26.2 41.5c.1-.5 0-1-.4-1.4l-8.9-8a1.4 1.4 0 0 0-1.7-.2L8 36.3c-.7.4-1 1.2-.6 2l3.8 8.7a1.4 1.4 0 0 0 1.9.7l12.2-5c.5-.3.8-.7 1-1.2Zm4.4 2.5 9.8 4.1c.5.2.8.7.9 1.2a1.5 1.5 0 0 1-.6 1.4l-9.9 7a1.4 1.4 0 0 1-.8.3c-.3 0-.6-.1-.8-.3l-9.9-7a1.5 1.5 0 0 1 .3-2.6l9.9-4.1h1Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </svg>
     ),
@@ -237,11 +237,10 @@ export const COMING_SUPPORT = [
     icon: (
       <svg viewBox="0 0 24 24" width="64" fill="none">
         <path
-          // stroke="#FF3F00"
           stroke="var(--warning-10)"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m15 8-5 3 .8-.5a4.1 4.1 0 0 1 5.6 1.4 4 4 0 0 1-1.3 5.4l-5 3.1a4 4 0 0 1-6-2.7 4 4 0 0 1 1.8-4l.2-.1M8 17l5-3-.8.5a4.1 4.1 0 0 1-5.6-1.4 4 4 0 0 1 1.3-5.4l5-3.1a4 4 0 0 1 6 2.7 4 4 0 0 1-1.8 4l-.2.1"
         />
       </svg>

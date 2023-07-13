@@ -1,16 +1,5 @@
 {
-  "baseUrl": ".",
   "extends": "@pillar/tsconfig/next.json",
   "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.tsx", ".contentlayer/generated"],
-  "exclude": ["node_modules"],
-  "compilerOptions": {
-    "allowJs": true,
-    "noEmit": true,
-    "incremental": true,
-    "resolveJsonModule": true,
-    "jsx": "preserve",
-    "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"]
-    }
-  }
+  "exclude": ["node_modules"]
 }

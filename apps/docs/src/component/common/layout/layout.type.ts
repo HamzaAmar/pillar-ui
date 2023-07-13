@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import type { Components } from 'contentlayer/generated'
+import type { Components } from '../../../../.contentlayer/generated'
 
 export interface LayoutProps {
   children: ReactNode
