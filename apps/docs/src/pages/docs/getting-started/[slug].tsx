@@ -3,8 +3,8 @@ import { ParsedUrlQuery } from 'querystring'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import React from 'react'
 import { GetStaticProps } from 'next'
-import { allGettingStarteds } from '../../../../.contentlayer/generated'
-import type { GettingStarted } from '../../../../.contentlayer/generated'
+import { allGettingStarteds } from 'contentlayer/generated'
+import type { GettingStarted } from 'contentlayer/generated'
 import { DocsLayout, mdxComponents } from '../../../component/common'
 
 interface Params extends ParsedUrlQuery {

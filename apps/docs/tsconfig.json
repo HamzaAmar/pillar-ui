@@ -1,5 +1,39 @@
 {
-  "extends": "@pillar/tsconfig/next.json",
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.tsx", ".contentlayer/generated"],
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Next 16",
+  "baseUrl": ".",
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": false,
+    "declarationMap": false,
+    "incremental": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    // "resolveJsonModule": true,
+    "target": "es5",
+    "noEmit": true,
+    "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    },
+    "composite": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "resolveJsonModule": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
+// {
+//   "extends": "@pillar/tsconfig/next.json",
+//   "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.tsx", ".contentlayer/generated"],
+//   "exclude": ["node_modules"]
+// }
