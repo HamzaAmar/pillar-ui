@@ -1,6 +1,6 @@
 {
   "name": "@pillar/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A collection of reusable UI components for modern web development. These components follow best practices, are highly customizable, and promote a consistent user experience across applications.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
