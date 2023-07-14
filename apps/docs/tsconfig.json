@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Next 16",
-  "baseUrl": ".",
   "compilerOptions": {
+    "baseUrl": ".",
     "allowJs": true,
     "declaration": false,
     "declarationMap": false,
@@ -10,7 +10,6 @@
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
-    // "resolveJsonModule": true,
     "target": "es5",
     "noEmit": true,
     "composite": false,
