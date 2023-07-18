@@ -57,6 +57,7 @@
     "vitest": "^0.31.2"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.registry.github.com/"
   }
 }

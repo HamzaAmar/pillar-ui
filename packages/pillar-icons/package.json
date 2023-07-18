@@ -57,15 +57,16 @@
   },
   "devDependencies": {
     "@pillar/tsconfig": "*",
+    "@pillar/eslint": "*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "eslint": "^8.15.0",
-    "eslint-config-pillar": "*",
     "react": "^18.1.0",
     "tsup": "^6.7.0",
     "typescript": "^4.5.3"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.registry.github.com/"
   }
 }
