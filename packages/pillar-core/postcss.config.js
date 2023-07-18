@@ -7,4 +7,6 @@ module.exports = {
       preset: 'default',
     }),
   ],
+  map: false,
+  output: 'css/',
 }

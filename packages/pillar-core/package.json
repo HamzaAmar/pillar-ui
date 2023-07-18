@@ -8,7 +8,8 @@
   "sideEffects": false,
   "license": "MIT",
   "files": [
-    "dist/**"
+    "dist/**",
+    "css/main.css"
   ],
   "author": {
     "name": "Hamza Miloud Amar",
@@ -25,7 +26,7 @@
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
     },
-    "./main.min.css": "./dist/main.css"
+    "./style": "./css/main.css"
   },
   "keywords": [
     "accessibility",
@@ -39,10 +40,10 @@
   ],
   "scripts": {
     "js-build": "npx tsup",
-    "css-build": "postcss --dir dist/ --config postcss.config.js src/css/main.css",
+    "css-build": "postcss --config postcss.config.js src/css/main.css --output ./css/main.css",
     "build": "npm-run-all -p css-build js-build",
     "js-build:watch": "npx tsup --watch",
-    "css-build:watch": "yarn css-build -w -c",
+    "css-build:watch": "yarn css-build --watch --verbose",
     "dev": "npm-run-all -p -r js-build:watch css-build:watch",
     "lint": "eslint \"src/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
@@ -53,11 +54,11 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@pillar/tsconfig": "*",
-    "@pillar/icons": "*",
-    "@pillar/hooks": "*",
-    "@pillar/utils": "*",
     "@pillar/eslint": "*",
+    "@pillar/hooks": "*",
+    "@pillar/icons": "*",
+    "@pillar/tsconfig": "*",
+    "@pillar/utils": "*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "autoprefixer": "^10.4.14",
@@ -70,6 +71,7 @@
     "postcss-nested": "^6.0.1",
     "react": "^18.1.0",
     "sass": "^1.59.2",
+    "terser": "^5.19.1",
     "tsup": "^6.7.0",
     "typescript": "^4.5.3"
   },
