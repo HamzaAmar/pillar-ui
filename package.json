@@ -26,6 +26,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:release": "turbo run build --filter=./packages/*",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules",
@@ -41,8 +42,9 @@
     "prettier:base": "prettier --parser typescript --write",
     "prettier:check": "yarn prettier:base --list-different \"packages/**/*.{ts,tsx}\"",
     "prettier:write": "yarn prettier:base \"src/**/*.{ts,tsx}\"",
-    "ci": "yarn build && yarn lint && yarn test && yarn type:check",
-    "prerelease": "yarn build && yarn lint && yarn test && yarn type:check",
+    "validation": "yarn lint && yarn test && yarn type:check",
+    "ci": "yarn build && yarn validation",
+    "prerelease": "yarn build:release && yarn validation",
     "release": "changeset publish"
   },
   "devDependencies": {
@@ -65,5 +67,6 @@
     "@opentelemetry/sdk-trace-base": "1.13.0",
     "@opentelemetry/sdk-trace-node": "1.13.0",
     "@opentelemetry/semantic-conventions": "1.13.0"
-  }
+  },
+  "version": "0.0.0"
 }
