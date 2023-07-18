@@ -32,6 +32,7 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "test": "turbo run test",
     "type:check": "turbo run type:check",
+    "type:check:release": "turbo run type:check --filter=./packages/*",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "changeset:version": "changeset version",
@@ -42,9 +43,9 @@
     "prettier:base": "prettier --parser typescript --write",
     "prettier:check": "yarn prettier:base --list-different \"packages/**/*.{ts,tsx}\"",
     "prettier:write": "yarn prettier:base \"src/**/*.{ts,tsx}\"",
-    "validation": "yarn lint && yarn test && yarn type:check",
-    "ci": "yarn build && yarn validation",
-    "prerelease": "yarn build:release && yarn validation",
+    "validation": "yarn lint && yarn test",
+    "ci": "yarn build && yarn validation && yarn type:check",
+    "prerelease": "yarn build:release && yarn validation && yarn type:check:release",
     "release": "changeset publish"
   },
   "devDependencies": {

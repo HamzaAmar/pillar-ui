@@ -1,6 +1,4 @@
 import type { MenuItemData } from './aside.type'
-// import { allComponents, allGettingStarteds, allHooks, allThemes, allUtils } from 'contentlayer/generated'
-// TODO: Try To fix path alias
 import { allComponents, allGettingStarteds, allHooks, allThemes, allUtils } from 'contentlayer/generated'
 import type { Components, GettingStarted, Hooks, Theme, Utils } from 'contentlayer/generated'
 

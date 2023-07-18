@@ -1,6 +1,6 @@
 import React from 'react'
 import { Logo } from '..'
-import { Text, Grid, Paper, Heading, Flex } from '@pillar/core'
+import { Text, Grid, Paper, Heading } from '@pillar/core'
 import Link from 'next/link'
 
 const footer = () => {
