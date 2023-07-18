@@ -1,5 +1,6 @@
 {
   "name": "@pillar/eslint",
+  "private": true,
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
