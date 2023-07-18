@@ -28,6 +28,7 @@
     "build": "turbo run build",
     "build:release": "turbo run build --filter=./packages/*",
     "dev": "turbo run dev",
+    "info": "turbo run info",
     "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules",
     "test": "turbo run test",
