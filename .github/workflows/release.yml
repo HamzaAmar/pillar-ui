@@ -21,6 +21,10 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
+      - name: Setup npm auth
+        run: |
+          echo "registry=https://registry.npmjs.org" >> ~/.npmrc
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
