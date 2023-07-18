@@ -25,14 +25,10 @@
     "strict": true,
     "resolveJsonModule": true,
     "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "contentlayer/generated": ["./.contentlayer/generated"],
+      "react": ["./node_modules/@types/react"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".contentlayer/generated"],
   "exclude": ["node_modules"]
 }
-// {
-//   "extends": "@pillar/tsconfig/next.json",
-//   "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.tsx", ".contentlayer/generated"],
-//   "exclude": ["node_modules"]
-// }
