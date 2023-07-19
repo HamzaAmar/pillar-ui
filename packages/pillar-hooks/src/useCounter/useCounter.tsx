@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { clamp } from '@pillar/utils'
+import { clamp } from '@pillar-ui/utils'
 import type { UseCounterProps } from './useCounter.type'
 
 /**

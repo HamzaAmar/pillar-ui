@@ -1,5 +1,5 @@
 import React from 'react'
-import type { SvgType } from '@pillar/icons'
+import type { SvgType } from '@pillar-ui/icons'
 
 const logo = (props: SvgType) => {
   return (

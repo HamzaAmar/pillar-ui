@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Alert, Button, Flex } from '@pillar/core'
-import { Check, CircleCheck, CircleInfo, CircleWarning } from '@pillar/icons'
+import { Alert, Button, Flex } from '@pillar-ui/core'
+import { Check, CircleCheck, CircleInfo, CircleWarning } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Alert',

@@ -1,7 +1,7 @@
 import React from 'react'
 import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import { Flex, Paper } from '@pillar/core'
+import { Flex, Paper } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Flex',

@@ -1,7 +1,7 @@
 import React from 'react'
 import { allHooks } from 'contentlayer/generated'
 import type { Hooks } from 'contentlayer/generated'
-import { Paper, Grid, Text } from '@pillar/core'
+import { Paper, Grid, Text } from '@pillar-ui/core'
 import Link from 'next/link'
 import { Layout } from '../../../component/common'
 

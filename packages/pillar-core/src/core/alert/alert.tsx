@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
-import { classnames } from '@pillar/utils'
-import { Close } from '@pillar/icons'
-import { useControllableState } from '@pillar/hooks'
+import { classnames } from '@pillar-ui/utils'
+import { Close } from '@pillar-ui/icons'
+import { useControllableState } from '@pillar-ui/hooks'
 import { Flex, Text, IconButton, FlexProps } from '..'
 
 import type { AlertProps } from './alert.type'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { Spinner, Flex } from '@pillar/core'
+import { Spinner, Flex } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Spinner',

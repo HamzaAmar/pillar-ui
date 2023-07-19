@@ -1,9 +1,9 @@
 import React from 'react'
-import { Cross } from '@pillar/icons'
+import { Cross } from '@pillar-ui/icons'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { Avatar, Flex, Grid, Heading, Text, Timeline } from '@pillar/core'
-import type { TimelineItemProps } from '@pillar/core'
+import { Avatar, Flex, Grid, Heading, Text, Timeline } from '@pillar-ui/core'
+import type { TimelineItemProps } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Timeline',

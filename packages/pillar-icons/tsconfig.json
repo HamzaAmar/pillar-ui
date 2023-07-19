@@ -1,5 +1,5 @@
 {
-  "extends": "@pillar/tsconfig/react-library.json",
+  "extends": "@pillar-ui/tsconfig/react-library.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }

@@ -1,5 +1,5 @@
-import { Flex, Grid, Heading, Paper, Text, Button, Chips } from '@pillar/core'
-import { Github } from '@pillar/icons'
+import { Flex, Grid, Heading, Paper, Text, Button, Chips } from '@pillar-ui/core'
+import { Github } from '@pillar-ui/icons'
 import React from 'react'
 import { DocHeaderProps } from './docHeader.type'
 
@@ -37,7 +37,7 @@ const docHeader = ({ title, type, items, file, excerpt }: DocHeaderProps) => {
         </Text>
         <Flex gap="sm">
           <code>
-            import <b>{`{ ${title} }`}</b> from {`'@pillar/${file}'`}
+            import <b>{`{ ${title} }`}</b> from {`'@pillar-ui/${file}'`}
           </code>
         </Flex>
       </Grid>

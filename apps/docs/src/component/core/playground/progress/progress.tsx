@@ -1,4 +1,4 @@
-import { Paper, ProgressBar, ProgressCircle, Flex, ProgressBarStack } from '@pillar/core'
+import { Paper, ProgressBar, ProgressCircle, Flex, ProgressBarStack } from '@pillar-ui/core'
 
 export const ProgressPlayGround = () => {
   return (

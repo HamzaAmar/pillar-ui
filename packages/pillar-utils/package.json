@@ -1,5 +1,5 @@
 {
-  "name": "@pillar/utils",
+  "name": "@pillar-ui/utils",
   "version": "0.1.0",
   "sideEffects": false,
   "description": "A collection of utility functions and tools to assist with common tasks and improve the efficiency of web development. These utilities are carefully crafted to enhance productivity and streamline the development process.",
@@ -46,8 +46,8 @@
     "type:check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@pillar/tsconfig": "*",
-    "@pillar/eslint": "*",
+    "@pillar-ui/tsconfig": "*",
+    "@pillar-ui/eslint": "*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "eslint": "^8.15.0",
@@ -55,9 +55,5 @@
     "tsup": "^6.7.0",
     "typescript": "^4.5.3",
     "vitest": "^0.31.2"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.registry.github.com/"
   }
 }

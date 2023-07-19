@@ -1,8 +1,8 @@
 import { useId } from 'react'
 import type { CustomRadioProps, RadioContextProps, RadioGroupProps, RadioProps } from './radio.type'
 import { Flex } from '../flex'
-import { classnames, createContext } from '@pillar/utils'
-import { CircleCheck } from '@pillar/icons'
+import { classnames, createContext } from '@pillar-ui/utils'
+import { CircleCheck } from '@pillar-ui/icons'
 
 /*
 ===================================================================================================

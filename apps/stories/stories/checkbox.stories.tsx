@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Checkbox, Flex } from '@pillar/core'
-import { useCheckboxGroup } from '@pillar/hooks'
+import { Checkbox, Flex } from '@pillar-ui/core'
+import { useCheckboxGroup } from '@pillar-ui/hooks'
 
 export default {
   title: 'Components/Checkbox',

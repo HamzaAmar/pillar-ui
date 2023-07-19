@@ -1,6 +1,6 @@
 import React from 'react'
 import { Footer, Header, MenuBar, TableOfContent } from '..'
-import { Flex, Paper } from '@pillar/core'
+import { Flex, Paper } from '@pillar-ui/core'
 import type { DocsLayoutProps, LayoutProps } from './layout.type'
 
 export const Layout = ({ children }: LayoutProps) => {

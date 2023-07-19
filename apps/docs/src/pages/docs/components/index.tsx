@@ -1,7 +1,7 @@
 import React from 'react'
 import { allComponents } from 'contentlayer/generated'
 import type { Components } from 'contentlayer/generated'
-import { Paper, Grid, Text } from '@pillar/core'
+import { Paper, Grid, Text } from '@pillar-ui/core'
 import { DocsLayout } from '../../../component/common'
 
 export async function getStaticProps() {

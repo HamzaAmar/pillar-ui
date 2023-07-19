@@ -1,5 +1,5 @@
-import { InputFile, Paper } from '@pillar/core'
-import { Eye, User } from '@pillar/icons'
+import { InputFile, Paper } from '@pillar-ui/core'
+import { Eye, User } from '@pillar-ui/icons'
 
 export const InputFilePlayGround = () => {
   return <div>hello</div>

@@ -1,5 +1,5 @@
 {
-  "name": "@pillar/core",
+  "name": "@pillar-ui/core",
   "version": "0.1.0",
   "description": "A collection of reusable UI components for modern web development. These components follow best practices, are highly customizable, and promote a consistent user experience across applications.",
   "main": "./dist/index.js",
@@ -54,11 +54,11 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@pillar/eslint": "*",
-    "@pillar/hooks": "*",
-    "@pillar/icons": "*",
-    "@pillar/tsconfig": "*",
-    "@pillar/utils": "*",
+    "@pillar-ui/eslint": "*",
+    "@pillar-ui/hooks": "*",
+    "@pillar-ui/icons": "*",
+    "@pillar-ui/tsconfig": "*",
+    "@pillar-ui/utils": "*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "autoprefixer": "^10.4.14",
@@ -74,9 +74,5 @@
     "terser": "^5.19.1",
     "tsup": "^6.7.0",
     "typescript": "^4.5.3"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.registry.github.com/"
   }
 }

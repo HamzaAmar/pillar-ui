@@ -1,5 +1,5 @@
-import { Flex, Input, Paper } from '@pillar/core'
-import { Eye, User } from '@pillar/icons'
+import { Flex, Input, Paper } from '@pillar-ui/core'
+import { Eye, User } from '@pillar-ui/icons'
 
 export const InputPlayGround = () => {
   return <div>hello</div>

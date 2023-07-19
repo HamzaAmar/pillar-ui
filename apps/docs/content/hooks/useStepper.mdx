@@ -23,13 +23,13 @@ When building multi-step processes, such as forms or wizards, it can be useful t
 ## Installation
 
 ```bash
-npm install --dev '@pillar/hooks'
+npm install --dev '@pillar-ui/hooks'
 ```
 
 ## Usage
 
 ```tsx showLineNumbers title="Stepper.tsx"
-import { useStepper } from '@pillar/hooks'
+import { useStepper } from '@pillar-ui/hooks'
 
 function MyStepper() {
   const { currentStep, goToNextStep, goToPreviousStep } = useStepper(3)

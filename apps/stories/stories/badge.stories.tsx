@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
-import { Check, Plus, Plane, ChevronDown, Apple, Alien, LetterSpacing, SuperScript } from '@pillar/icons'
+import { Check, Plus, Plane, ChevronDown, Apple, Alien, LetterSpacing, SuperScript } from '@pillar-ui/icons'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Badge, Button, Flex } from '@pillar/core'
+import { Badge, Button, Flex } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Badge',

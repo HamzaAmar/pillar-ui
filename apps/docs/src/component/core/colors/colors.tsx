@@ -1,6 +1,6 @@
 import React from 'react'
 import { COLORS } from '../../../constant/colors'
-import { Text, Paper, Grid, Flex } from '@pillar/core'
+import { Text, Paper, Grid, Flex } from '@pillar-ui/core'
 
 const colors = () => {
   return (

@@ -1,4 +1,4 @@
-import { Accordion, Paper } from '@pillar/core'
+import { Accordion, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 function AccordionBase(props: any) {

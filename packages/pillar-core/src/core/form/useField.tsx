@@ -1,4 +1,4 @@
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 
 export function useField({ corner, variant, fluid, isInvalid, readOnly, disabled }: any) {
   const classNames = classnames(

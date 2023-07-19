@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import { Flex } from '..'
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 import type { RatingProps } from './rating.type'
 
 const ICONS = {

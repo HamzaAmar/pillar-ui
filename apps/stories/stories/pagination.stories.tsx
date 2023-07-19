@@ -1,5 +1,5 @@
 import { ComponentMeta } from '@storybook/react'
-import { Pagination } from '@pillar/core'
+import { Pagination } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Pagintaion',

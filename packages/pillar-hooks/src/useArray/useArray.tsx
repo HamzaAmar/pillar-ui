@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { addToArray, removeFromArray } from '@pillar/utils'
-import type { Position } from '@pillar/utils'
+import { addToArray, removeFromArray } from '@pillar-ui/utils'
+import type { Position } from '@pillar-ui/utils'
 
 /**
  * Custom hook for managing an array state with common operations.
@@ -13,8 +13,8 @@ import type { Position } from '@pillar/utils'
  *   isEmpty: boolean,
  *   getElementIndex: (element: T, compareFn?: (a: T) => boolean) => number,
  *   hasElement: (element: T | ((value: T) => boolean)) => boolean,
- *   addElement: (element: T, position: import("@pillar/utils").Position) => void,
- *   removeElement: (position: import("@pillar/utils").Position) => void,
+ *   addElement: (element: T, position: import("@pillar-ui/utils").Position) => void,
+ *   removeElement: (position: import("@pillar-ui/utils").Position) => void,
  *   clear: () => void,
  *   setList: React.Dispatch<React.SetStateAction<T[]>>
  * }}
@@ -51,7 +51,7 @@ export const useArray = <T = unknown,>(initialValue: T[] = []) => {
   /**
    * Adds an element to the array at the specified position.
    * @param {T} element - The element to add.
-   * @param {import("@pillar/utils").Position} position - The position to add the element ('first' or 'last' | index: number).
+   * @param {import("@pillar-ui/utils").Position} position - The position to add the element ('first' or 'last' | index: number).
    */
   const addElement = (element: T, position: Position) => {
     const lists = addToArray(list, element, position)
@@ -60,7 +60,7 @@ export const useArray = <T = unknown,>(initialValue: T[] = []) => {
 
   /**
    * Removes an element from the array at the specified position.
-   * @param {import("@pillar/utils").Position} position - The position to remove the element ('first' or 'last'  | index: number).
+   * @param {import("@pillar-ui/utils").Position} position - The position to remove the element ('first' or 'last'  | index: number).
    */
   const removeElement = (position: Position) => {
     const lists = removeFromArray(list, position)

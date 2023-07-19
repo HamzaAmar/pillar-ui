@@ -12,8 +12,8 @@ import {
   Badge,
   Switch,
   Alert,
-} from '@pillar/core'
-import { Github, Booking, Discord, Linkdin, Youtube } from '@pillar/icons'
+} from '@pillar-ui/core'
+import { Github, Booking, Discord, Linkdin, Youtube } from '@pillar-ui/icons'
 import { ACCESSIBILITY, COMING_SUPPORT, SIMPLE_DEVELOPMENT, SUPPORTED } from './home.data'
 import Link from 'next/link'
 import React, { CSSProperties, useState } from 'react'
@@ -239,11 +239,11 @@ function DarkMode() {
           We understand the importance of dark mode for a comfortable and accessible user experience, which is why our
           library fully supports it. Our customizable components are designed to seamlessly adapt to a dark color
           scheme, creating a cohesive look and feel for your application. Plus, we&#39;ve made it even easier to
-          implement with our custom hook, useDarkMode from @pillar/hooks, which provides all the functionality you need.
-          The best part? It works seamlessly with server-side rendering (SSR) frameworks such as Next.js and Remix, so
-          you don&#39;t have to worry about compatibility issues. Simply import useDarkMode and start creating a dark
-          mode experience for your users. We&#39;ve even included a script that you can easily inject into your head to
-          fix any flickering issues.
+          implement with our custom hook, useDarkMode from @pillar-ui/hooks, which provides all the functionality you
+          need. The best part? It works seamlessly with server-side rendering (SSR) frameworks such as Next.js and
+          Remix, so you don&#39;t have to worry about compatibility issues. Simply import useDarkMode and start creating
+          a dark mode experience for your users. We&#39;ve even included a script that you can easily inject into your
+          head to fix any flickering issues.
         </Text>
       </Paper>
       <Flex direction="column" gap="md">
@@ -399,9 +399,9 @@ function RTLSupport() {
         languages such as Arabic, Hebrew, and Farsi. This means that your website or application can provide a seamless
         experience for users who read and write in RTL languages, with proper text alignment, visual order, and
         navigation. Our RTL support is integrated into all of our components, allowing you to easily create interfaces
-        that meet the needs of diverse audiences. We also have a custom hook called useDirection from @pillar/hooks that
-        can be used to handle the direction of the text and elements based on the language of the user. This hook is
-        especially useful when dealing with dynamic content or when you want to provide additional control over the
+        that meet the needs of diverse audiences. We also have a custom hook called useDirection from @pillar-ui/hooks
+        that can be used to handle the direction of the text and elements based on the language of the user. This hook
+        is especially useful when dealing with dynamic content or when you want to provide additional control over the
         direction of elements. At our core, we are committed to providing a comprehensive solution that empowers you to
         create inclusive and user-friendly designs. Whether you are building a website or an application, oupbrary is
         designed to make your work easier, more efficient, and more accessible for everyone.

@@ -1,7 +1,7 @@
 import { Children, cloneElement, forwardRef, isValidElement, useId } from 'react'
-import { classnames, createContext } from '@pillar/utils'
-import { ChevronDown } from '@pillar/icons'
-// import { useControllableState } from '@pillar/hooks'
+import { classnames, createContext } from '@pillar-ui/utils'
+import { ChevronDown } from '@pillar-ui/icons'
+// import { useControllableState } from '@pillar-ui/hooks'
 
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { Flex } from '../flex'

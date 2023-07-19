@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Alert, Separator, Flex } from '@pillar/core'
+import { Alert, Separator, Flex } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Separator',

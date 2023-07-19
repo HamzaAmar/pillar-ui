@@ -1,4 +1,4 @@
-import { Avatar, Paper, Flex } from '@pillar/core'
+import { Avatar, Paper, Flex } from '@pillar-ui/core'
 import React from 'react'
 
 export const PaperPlayGround = () => {

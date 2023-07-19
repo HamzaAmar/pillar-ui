@@ -1,4 +1,4 @@
-import { Heading, Flex, Paper } from '@pillar/core'
+import { Heading, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const HeadingPlayGround = () => {

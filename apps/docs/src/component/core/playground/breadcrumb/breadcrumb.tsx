@@ -1,5 +1,5 @@
-import { Anchor, Home, Link, Minus } from '@pillar/icons'
-import { Avatar, Breadcrumb, Paper } from '@pillar/core'
+import { Anchor, Home, Link, Minus } from '@pillar-ui/icons'
+import { Avatar, Breadcrumb, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const BreadcrumbPlayGround = () => {

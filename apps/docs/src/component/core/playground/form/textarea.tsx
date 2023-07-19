@@ -1,5 +1,5 @@
-import { Paper, Textarea } from '@pillar/core'
-import { Eye, User } from '@pillar/icons'
+import { Paper, Textarea } from '@pillar-ui/core'
+import { Eye, User } from '@pillar-ui/icons'
 
 export const TextareaPlayGround = () => {
   return <div>hello</div>

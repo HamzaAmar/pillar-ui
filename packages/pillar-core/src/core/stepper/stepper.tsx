@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { Flex, Text } from '..'
 import { StepperProvider, useStepperContext } from './stepper.context'
 import type { StepperProps, StepProps } from './stepper.type'
-import { Check } from '@pillar/icons'
+import { Check } from '@pillar-ui/icons'
 
 const Step = (props: StepProps) => {
   const context = useStepperContext()

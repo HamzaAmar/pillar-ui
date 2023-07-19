@@ -1,5 +1,5 @@
-import { Flex, Input, FormController, FormControllerProps, Paper } from '@pillar/core'
-import { Eye, User } from '@pillar/icons'
+import { Flex, Input, FormController, FormControllerProps, Paper } from '@pillar-ui/core'
+import { Eye, User } from '@pillar-ui/icons'
 
 export const FormControllerPlayGround = () => {
   return <div>hello</div>

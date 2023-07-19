@@ -1,9 +1,9 @@
-import { useControllableState } from '@pillar/hooks'
+import { useControllableState } from '@pillar-ui/hooks'
 
 import { SwitchProps } from './switch.type'
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 
 // TODO: Try to add Switch Variant
 

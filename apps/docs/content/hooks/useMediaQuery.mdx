@@ -21,7 +21,7 @@ Managing media query state can be a common task in React applications, and this 
 To use useMediaQuery in your project, you can install it from npm:
 
 ```bash
-npm install --dev @pillar/hooks
+npm install --dev @pillar-ui/hooks
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ npm install --dev @pillar/hooks
 To use the useMediaQuery hook in your React components, import it and call it in your functional component like this:
 
 ```tsx title='app.ts' showLineNumbers
-import { useMediaQuery } from '@pillar/hooks'
+import { useMediaQuery } from '@pillar-ui/hooks'
 
 function MyComponent() {
   const { matches, setMatches } = useMediaQuery('(min-width: 600px)')

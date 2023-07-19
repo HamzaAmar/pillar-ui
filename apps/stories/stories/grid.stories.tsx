@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import { Grid, Paper, Flex } from '@pillar/core'
+import { Grid, Paper, Flex } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Grid',

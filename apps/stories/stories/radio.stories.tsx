@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Radio, Flex } from '@pillar/core'
+import { Radio, Flex } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Radio',

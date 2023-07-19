@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Heading } from '@pillar/core'
+import { Heading } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Heading',

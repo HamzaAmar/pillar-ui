@@ -1,9 +1,9 @@
 import React from 'react'
 import { Logo } from '..'
-import { Button, Flex, IconButton, InputSearch, Paper } from '@pillar/core'
-import { Github, Sun, TextRtl, Discord, Moon, Menu, ListSearch, Close, Dollar } from '@pillar/icons'
+import { Button, Flex, IconButton, InputSearch, Paper } from '@pillar-ui/core'
+import { Github, Sun, TextRtl, Discord, Moon, Menu, ListSearch, Close, Dollar } from '@pillar-ui/icons'
 import Link from 'next/link'
-import { useBooleanState, useDarkMode, useDirection } from '@pillar/hooks'
+import { useBooleanState, useDarkMode, useDirection } from '@pillar-ui/hooks'
 
 const Header = () => {
   const { isDark, mode, toggleMode } = useDarkMode()

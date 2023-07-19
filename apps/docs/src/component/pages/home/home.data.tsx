@@ -1,4 +1,4 @@
-import { Star, TextIncrease, Space, Code, Mouse, PlayerPause, EyeCheck } from '@pillar/icons'
+import { Star, TextIncrease, Space, Code, Mouse, PlayerPause, EyeCheck } from '@pillar-ui/icons'
 
 export const ACCESSIBILITY = [
   {

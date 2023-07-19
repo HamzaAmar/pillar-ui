@@ -9,7 +9,7 @@ root: utils
 ## toSlug
 
 ```tsx
-export { toSlug } from '@pillar/utils'
+export { toSlug } from '@pillar-ui/utils'
 ```
 
 Returns a slugified copy of a string. This function takes a str parameter and transforms it into a slug format, which is commonly used in URLs and permalinks. The slugified string is converted to lowercase, trimmed, and special characters are replaced or removed to ensure URL compatibility.
@@ -31,7 +31,7 @@ Returns a slugified copy of a string. This function takes a str parameter and tr
 **usage**
 
 ```ts title='app.ts' showLineNumbers
-import { toSlug } from '@pillar/utils'
+import { toSlug } from '@pillar-ui/utils'
 
 const title = 'Hello World! How Are You?'
 const slug = toSlug(title)
@@ -41,7 +41,7 @@ console.log(slug) // Output: "hello-world-how-are-you"
 ## toCapitalize
 
 ```tsx
-export { toCapitalize } from '@pillar/utils'
+export { toCapitalize } from '@pillar-ui/utils'
 ```
 
 Returns a copy of a string with the first letter capitalized. This function takes a str parameter and returns a new string with the first letter in uppercase and the rest of the string unchanged.
@@ -61,7 +61,7 @@ Returns a copy of a string with the first letter capitalized. This function take
 **usage**
 
 ```ts title='app.ts' showLineNumbers
-import { toCapitalize } from '@pillar/utils'
+import { toCapitalize } from '@pillar-ui/utils'
 
 const text = 'hello world'
 const capitalizedText = toCapitalize(text)
@@ -71,7 +71,7 @@ console.log(capitalizedText) // Output: "Hello world"
 ## toKebabCase
 
 ```tsx
-export { toKebabCase } from '@pillar/utils'
+export { toKebabCase } from '@pillar-ui/utils'
 ```
 
 Returns a kebab case version of a string. This function takes a str parameter and converts it to kebab case, where spaces and uppercase letters are replaced with hyphens.
@@ -91,7 +91,7 @@ Returns a kebab case version of a string. This function takes a str parameter an
 **usage**
 
 ```ts title='app.ts' showLineNumbers
-import { removeFromArray } from '@pillar/utils'
+import { removeFromArray } from '@pillar-ui/utils'
 
 const className = 'myComponentClassName'
 const kebabCaseName = toKebabCase(className)

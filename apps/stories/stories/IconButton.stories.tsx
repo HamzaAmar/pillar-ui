@@ -1,7 +1,7 @@
 import React from 'react'
-import { IconButton, Flex } from '@pillar/core'
+import { IconButton, Flex } from '@pillar-ui/core'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { ThumbUp } from '@pillar/icons'
+import { ThumbUp } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/IconButton',

@@ -1,7 +1,7 @@
 // Disabled State Label And Box
 
-import { Check, Minus } from '@pillar/icons'
-import { classnames, composeRef } from '@pillar/utils'
+import { Check, Minus } from '@pillar-ui/icons'
+import { classnames, composeRef } from '@pillar-ui/utils'
 import { useEffect, useRef, forwardRef } from 'react'
 
 import type { CheckboxProps } from './checkbox.type'

@@ -1,4 +1,4 @@
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 import { Flex, Text } from '..'
 import { Children, isValidElement } from 'react'
 import type {

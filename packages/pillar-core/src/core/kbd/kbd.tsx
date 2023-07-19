@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 import type { KbdProps } from './kbd.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 

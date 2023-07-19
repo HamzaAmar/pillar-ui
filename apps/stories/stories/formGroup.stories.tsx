@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormGroup, InputNumber, Input, InputPassword, InputSearch, Textarea, InputFile, Select } from '@pillar/core'
+import { FormGroup, InputNumber, Input, InputPassword, InputSearch, Textarea, InputFile, Select } from '@pillar-ui/core'
 
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 

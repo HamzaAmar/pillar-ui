@@ -1,4 +1,4 @@
-import { Flex, Input, FormGroup, FormControllerProps, FormController, Paper } from '@pillar/core'
+import { Flex, Input, FormGroup, FormControllerProps, FormController, Paper } from '@pillar-ui/core'
 
 export const FormGroupPlayGround = () => {
   return <div>hello</div>

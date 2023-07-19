@@ -2,8 +2,8 @@
 // import { ForwardRefComponent } from '../../types/polymorphic.type'
 // import type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProps } from './tabs.type'
 // import { Flex } from '../flex'
-// import { createContext } from '@pillar/utils'
-// import { useRovingIndex } from '@pillar/hooks'
+// import { createContext } from '@pillar-ui/utils'
+// import { useRovingIndex } from '@pillar-ui/hooks'
 
 // /*
 // ===============================================================================================

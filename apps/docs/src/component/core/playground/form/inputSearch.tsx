@@ -1,5 +1,5 @@
-import { Paper, InputSearch } from '@pillar/core'
-import { Eye, User } from '@pillar/icons'
+import { Paper, InputSearch } from '@pillar-ui/core'
+import { Eye, User } from '@pillar-ui/icons'
 
 export const InputSearchPlayGround = () => {
   return <div>hello</div>

@@ -1,5 +1,5 @@
-import { Heading, Flex, Paper } from '@pillar/core'
-import { ListNumber } from '@pillar/icons'
+import { Heading, Flex, Paper } from '@pillar-ui/core'
+import { ListNumber } from '@pillar-ui/icons'
 import React, { useState, useRef, useEffect } from 'react'
 import type { HeadingProps } from './aside.type'
 import { Item } from './listItem'

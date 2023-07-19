@@ -9,7 +9,7 @@ root: utils
 ## clamp
 
 ```tsx
-export { clamp } from '@pillar/utils'
+export { clamp } from '@pillar-ui/utils'
 ```
 
 Clamps a value between a minimum and maximum range. This function takes a value and a range defined by a minimum and maximum value. If the value is less than the minimum, it is set to the minimum value. If the value is greater than the maximum, it is set to the maximum value. Otherwise, it remains unchanged.
@@ -30,7 +30,7 @@ Clamps a value between a minimum and maximum range. This function takes a value 
 **usage**
 
 ```ts title='app.ts' showLineNumbers
-import { clamp } from '@pillar/utils'
+import { clamp } from '@pillar-ui/utils'
 
 const value = 75
 const clampedValue = clamp(value, [0, 100])
@@ -44,7 +44,7 @@ console.log(clampedValue2) // Output: 100
 ## randomNumber
 
 ```tsx
-export { randomNumber } from '@pillar/utils'
+export { randomNumber } from '@pillar-ui/utils'
 ```
 
 Generates a random number within a specified range. This function takes an options object with the following properties:
@@ -69,7 +69,7 @@ Generates a random number within a specified range. This function takes an optio
 **usage**
 
 ```ts title='app.ts' showLineNumbers
-import { addToArray } from '@pillar/utils'
+import { addToArray } from '@pillar-ui/utils'
 
 const options = { min: 1, max: 10, rounded: true }
 const randomNum = randomNumber(options)
@@ -83,7 +83,7 @@ console.log(randomNum2) // Output: Random float between 0 and 1
 ## formatPrice
 
 ```tsx
-export { formatPrice } from '@pillar/utils'
+export { formatPrice } from '@pillar-ui/utils'
 ```
 
 Formats a price value as a currency string using the specified locale and currency. This function takes a price value and optionally accepts a locale and currency for formatting customization. It uses the Intl.NumberFormat API to format the price as a currency string based on the provided locale and currency code.
@@ -106,7 +106,7 @@ Formats a price value as a currency string using the specified locale and curren
 **usage**
 
 ```ts title='app.ts' showLineNumbers
-import { formatPrice } from '@pillar/utils'
+import { formatPrice } from '@pillar-ui/utils'
 
 const price = 99.99
 const formattedPrice = formatPrice(price)

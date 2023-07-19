@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react'
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 import { SpinnerProps } from './spinner.type'
 
 const spinner = ({ color = 'primary', size, thickness = '2px', invert = false, ...rest }: SpinnerProps) => {

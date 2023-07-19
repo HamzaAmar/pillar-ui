@@ -1,6 +1,6 @@
-import { Separator, Flex, Paper, Stepper, Heading, Text, Button, StepperProps } from '@pillar/core'
-import { useStepper } from '@pillar/hooks'
-import { Home, Settings, User } from '@pillar/icons'
+import { Separator, Flex, Paper, Stepper, Heading, Text, Button, StepperProps } from '@pillar-ui/core'
+import { useStepper } from '@pillar-ui/hooks'
+import { Home, Settings, User } from '@pillar-ui/icons'
 import React from 'react'
 
 const CompleteComponent = () => {

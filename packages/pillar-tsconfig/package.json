@@ -1,5 +1,5 @@
 {
-  "name": "@pillar/tsconfig",
+  "name": "@pillar-ui/tsconfig",
   "version": "0.0.0",
   "private": true,
   "license": "MIT"

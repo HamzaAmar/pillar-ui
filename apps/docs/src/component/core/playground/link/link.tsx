@@ -1,4 +1,4 @@
-import { Link, Flex, Paper } from '@pillar/core'
+import { Link, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const LinkPlayGround = () => {

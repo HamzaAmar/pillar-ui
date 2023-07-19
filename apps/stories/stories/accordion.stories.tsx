@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta } from '@storybook/react'
-import { Accordion, Flex, Grid } from '@pillar/core'
+import { Accordion, Flex, Grid } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Accordion',

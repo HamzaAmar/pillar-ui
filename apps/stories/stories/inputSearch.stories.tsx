@@ -1,7 +1,7 @@
 import React from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { User } from '@pillar/icons'
-import { Flex, InputSearch } from '@pillar/core'
+import { User } from '@pillar-ui/icons'
+import { Flex, InputSearch } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Form/InputSearch',

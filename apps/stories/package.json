@@ -1,5 +1,5 @@
 {
-  "name": "@pillar/stories",
+  "name": "@pillar-ui/stories",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@pillar/core": "*",
+    "@pillar-ui/core": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -18,7 +18,7 @@
     "@babel/plugin-transform-react-jsx": "^7.22.5",
     "@babel/preset-env": "^7.22.7",
     "@babel/preset-react": "^7.22.5",
-    "@pillar/tsconfig": "*",
+    "@pillar-ui/tsconfig": "*",
     "@storybook/addon-a11y": "^6.5.14",
     "@storybook/addon-actions": "^6.5.14",
     "@storybook/addon-docs": "^6.5.14",

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Breadcrumb } from '@pillar/core'
-import { Home, Link, Minus, Anchor } from '@pillar/icons'
+import { Breadcrumb } from '@pillar-ui/core'
+import { Home, Link, Minus, Anchor } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Breadcrumb',

@@ -2,8 +2,8 @@ import { forwardRef } from 'react'
 import { Flex } from '..'
 import type { BreadcrumbProps, BreadcrumbItemProps, BreadcrumbContextProps } from './breadcrumb.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '@pillar/utils'
-import { createContext } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
+import { createContext } from '@pillar-ui/utils'
 
 /* 
 //////////////////////////////////////////////////////////////////////////////////////////////////

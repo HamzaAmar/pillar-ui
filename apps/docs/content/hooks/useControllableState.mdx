@@ -21,14 +21,14 @@ This hook is useful for creating stateful components that need to handle control
 ## Installation
 
 ```bash
-npm install @pillar/hooks
-yarn add @pillar/hooks
+npm install @pillar-ui/hooks
+yarn add @pillar-ui/hooks
 ```
 
 ## Usage
 
 ```tsx showLineNumbers title="Alert.tsx"
-import { useControllableState } from '@pillar/hooks'
+import { useControllableState } from '@pillar-ui/hooks'
 
 function MyComponent({ controlledValue, defaultValue }) {
   const [value, setValue] = useControllableState({ controlledValue, defaultValue })

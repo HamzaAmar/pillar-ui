@@ -1,5 +1,5 @@
-import { Button, Heading, Text, Flex, Paper, Grid } from '@pillar/core'
-import { Github, Booking } from '@pillar/icons'
+import { Button, Heading, Text, Flex, Paper, Grid } from '@pillar-ui/core'
+import { Github, Booking } from '@pillar-ui/icons'
 
 function AccessibleSection() {
   return (

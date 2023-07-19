@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Flex, ProgressBar, ProgressBarStack, ProgressCircle } from '@pillar/core'
+import { Flex, ProgressBar, ProgressBarStack, ProgressCircle } from '@pillar-ui/core'
 
 export default {
   title: 'Components/ProgressBar',

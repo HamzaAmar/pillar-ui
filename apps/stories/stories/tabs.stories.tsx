@@ -1,8 +1,8 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Button, Flex, Heading, Tabs, Grid } from '@pillar/core'
-import type { TabProps } from '@pillar/core'
-import { ArrowDown } from '@pillar/icons'
+import { Button, Flex, Heading, Tabs, Grid } from '@pillar-ui/core'
+import type { TabProps } from '@pillar-ui/core'
+import { ArrowDown } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Tabs',

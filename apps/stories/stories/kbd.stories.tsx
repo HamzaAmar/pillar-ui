@@ -1,6 +1,6 @@
 import React from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Flex, Kbd } from '@pillar/core'
+import { Flex, Kbd } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Kbd',

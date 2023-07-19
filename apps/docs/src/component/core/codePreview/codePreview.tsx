@@ -1,6 +1,6 @@
 // import React from 'react'
 // import { CodePreviewProps } from './codePreview.type'
-// import { Flex, Paper } from '@pillar/core'
+// import { Flex, Paper } from '@pillar-ui/core'
 // import type { Highlighter, Lang, Theme } from 'shiki'
 // import { renderToHtml, getHighlighter } from 'shiki'
 

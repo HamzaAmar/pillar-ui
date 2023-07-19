@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Flex, InputNumber } from '@pillar/core'
+import { Flex, InputNumber } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Form/InputNumber',

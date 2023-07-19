@@ -1,5 +1,5 @@
-import { CircleCheck } from '@pillar/icons'
-import { Avatar, Flex, Paper } from '@pillar/core'
+import { CircleCheck } from '@pillar-ui/icons'
+import { Avatar, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const AvatarPlayGround = () => {

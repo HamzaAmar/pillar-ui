@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 import { Flex } from '../flex'
 import { Spinner } from '../spinner'
 import type { ButtonProps, IconButtonProps } from './button.type'

@@ -1,7 +1,7 @@
 // import { useMemo } from "react";
 import type { UsePaginationProps } from './usePagination.type'
 import { useStepper } from '../useStepper'
-import { range } from '@pillar/utils'
+import { range } from '@pillar-ui/utils'
 
 export function usePagination({ currentPage = 1, totalPages, maxPerView = 5 }: UsePaginationProps) {
   const { currentStep, ...rest } = useStepper(totalPages, currentPage)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Text } from '@pillar/core'
+import { Text } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Text',

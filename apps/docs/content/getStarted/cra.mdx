@@ -16,25 +16,25 @@ To start using Pillar in your project, follow these simple steps:
 1. Install one or more of Pillar Packages by running the following command:
 
 ```bash
-npm install @pillar/core
+npm install @pillar-ui/core
 ```
 
 or You prefer Yarn
 
 ```bash
-yarn add @pillar/core
+yarn add @pillar-ui/core
 ```
 
 1. You can also install the other packages that Pillar support to make the proccess for making you site faster and simple
 
 ```bash
-npm install @pillar/hooks @pillar/utilities @pillar/icons
+npm install @pillar-ui/hooks @pillar-ui/utilities @pillar-ui/icons
 ```
 
 or You prefer Yarn
 
 ```bash
-yarn add @pillar/hooks @pillar/utilities @pillar/icons
+yarn add @pillar-ui/hooks @pillar-ui/utilities @pillar-ui/icons
 ```
 
 ## Adding Styles
@@ -48,7 +48,7 @@ To enhance the appearance and maintain visual consistency of your Vite React app
 - Import the Pillar CSS file by adding the following import statement at the top of the file:
 
 ```tsx
-import '@pillar/core/main.min.css'
+import '@pillar-ui/core/main.min.css'
 ```
 
 ## Customize the theming
@@ -84,10 +84,10 @@ To change the primary color of your UI, follow these simple steps:
 
 1. Save the theme.css file.
 
-1. Import the theme.css file in your project, making sure to import it after the `@pillar/core/main.min.css` import. This ensures that your custom styles override the default styles provided by Pillar UI. For example:
+1. Import the theme.css file in your project, making sure to import it after the `@pillar-ui/core/main.min.css` import. This ensures that your custom styles override the default styles provided by Pillar UI. For example:
 
 ```tsx
-import '@pillar/core/main.min.css'
+import '@pillar-ui/core/main.min.css'
 import './theme.css'
 ```
 
@@ -132,16 +132,16 @@ Set `--button-corner`, `--avatar-corner`, and `--badge-corner` to 0 for sharp co
 Once you have customized your Pillar UI theme and set the desired variables, you are ready to import the necessary components, icons, utilities, or hooks and start developing your application.
 
 ```tsx
-import { Button } from '@pillar/core'
+import { Button } from '@pillar-ui/core'
 ```
 
 Similarly, you can import icons, utilities, or hooks based on your requirements. Here are some examples:
 
 ```tsx
-import { Button, Paper, Flex, InputPassword, FormController } from '@pillar/core'
-import { Envelop } from '@pillar/icons'
-import { toCapitalize } from '@pillar/utilities'
-import { useDarkMode } from '@pillar/hooks'
+import { Button, Paper, Flex, InputPassword, FormController } from '@pillar-ui/core'
+import { Envelop } from '@pillar-ui/icons'
+import { toCapitalize } from '@pillar-ui/utilities'
+import { useDarkMode } from '@pillar-ui/hooks'
 
 interface FormValues {
   email: string

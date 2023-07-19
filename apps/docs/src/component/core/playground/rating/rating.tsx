@@ -1,5 +1,4 @@
-import { Alien, Apple, Check, ChevronDown, LetterSpacing, Plane, Plus } from '@pillar/icons'
-import { Rating, Flex, Paper } from '@pillar/core'
+import { Rating, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const RatingPlayGround = () => {

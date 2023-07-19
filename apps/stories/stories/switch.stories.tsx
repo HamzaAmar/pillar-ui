@@ -1,6 +1,6 @@
 import React, { CSSProperties, useState } from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Switch, Flex, Button, Heading } from '@pillar/core'
+import { Switch, Flex, Button, Heading } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Switch',

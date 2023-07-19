@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react'
-import { Button, Flex } from '@pillar/core'
+import { Button, Flex } from '@pillar-ui/core'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Eye, Github, Plus, ThumbDown, ThumbUp } from '@pillar/icons'
+import { Eye, Github, Plus, ThumbDown, ThumbUp } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Button',

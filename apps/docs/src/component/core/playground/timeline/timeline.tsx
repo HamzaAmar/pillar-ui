@@ -1,5 +1,5 @@
-import { Timeline, Paper, TimelineProps, Heading, Text, Avatar } from '@pillar/core'
-import { Cross } from '@pillar/icons'
+import { Timeline, Paper, TimelineProps, Heading, Text, Avatar } from '@pillar-ui/core'
+import { Cross } from '@pillar-ui/icons'
 import React from 'react'
 
 const TimelineBase = (props: Omit<TimelineProps, 'children'>) => {

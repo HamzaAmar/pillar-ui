@@ -1,8 +1,8 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Button, Flex, Heading, Table } from '@pillar/core'
-import type { TableProps } from '@pillar/core'
-import { ArrowDown } from '@pillar/icons'
+import { Button, Flex, Heading, Table } from '@pillar-ui/core'
+import type { TableProps } from '@pillar-ui/core'
+import { ArrowDown } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Table',

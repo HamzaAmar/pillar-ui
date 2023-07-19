@@ -1,5 +1,5 @@
-import { Alien, Apple, Check, ChevronDown, LetterSpacing, Plane, Plus } from '@pillar/icons'
-import { Separator, Flex, Paper } from '@pillar/core'
+import { Alien, Apple, Check, ChevronDown, LetterSpacing, Plane, Plus } from '@pillar-ui/icons'
+import { Separator, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const SeparatorPlayGround = () => {

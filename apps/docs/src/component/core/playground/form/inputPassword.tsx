@@ -1,5 +1,5 @@
-import { Paper, InputPassword } from '@pillar/core'
-import { Close, Eye, Lock, LockOff, OpenSource, User } from '@pillar/icons'
+import { Paper, InputPassword } from '@pillar-ui/core'
+import { Close, Eye, Lock, LockOff, OpenSource, User } from '@pillar-ui/icons'
 
 export const InputPasswordPlayGround = () => {
   return <div>hello</div>

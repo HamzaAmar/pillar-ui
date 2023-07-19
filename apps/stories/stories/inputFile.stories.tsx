@@ -1,6 +1,6 @@
 import React from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Flex, InputFile } from '@pillar/core'
+import { Flex, InputFile } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Form/InputFile',

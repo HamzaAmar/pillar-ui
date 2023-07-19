@@ -1,5 +1,5 @@
-import { Close, Maximize, Minimize, Plus, ZoomPlus } from '@pillar/icons'
-import { Button, IconButton, Flex, Paper } from '@pillar/core'
+import { Close, Maximize, Minimize, Plus, ZoomPlus } from '@pillar-ui/icons'
+import { Button, IconButton, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export function ButtonPlayGround() {

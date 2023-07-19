@@ -1,5 +1,5 @@
-import { Avatar, Button, Flex, Skeleton, Text, Grid } from '@pillar/core'
-import { useBooleanState } from '@pillar/hooks'
+import { Avatar, Button, Flex, Skeleton, Text, Grid } from '@pillar-ui/core'
+import { useBooleanState } from '@pillar-ui/hooks'
 import { ComponentMeta } from '@storybook/react'
 import React, { useEffect, useRef } from 'react'
 

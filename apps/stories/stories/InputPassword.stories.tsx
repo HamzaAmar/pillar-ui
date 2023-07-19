@@ -1,7 +1,7 @@
 import React from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Close, OpenSource, Lock, LockOff } from '@pillar/icons'
-import { Flex, InputPassword } from '@pillar/core'
+import { Close, OpenSource, Lock, LockOff } from '@pillar-ui/icons'
+import { Flex, InputPassword } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Form/InputPassword',

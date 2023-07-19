@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Flex, Rating } from '@pillar/core'
+import { Flex, Rating } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Rating',

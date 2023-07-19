@@ -2,7 +2,7 @@
 import { CSSProperties, forwardRef } from 'react'
 import type { TypographyProps } from './typography.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 
 export const Text = forwardRef((props, forwardedRef) => {
   const {

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { ChipsProps } from './chips.type'
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 
 const chips = forwardRef((props, ref) => {
   const {

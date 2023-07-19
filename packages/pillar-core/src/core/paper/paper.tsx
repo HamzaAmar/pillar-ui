@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import type { CSSProperties } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { PaperProps } from './paper.type'
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 
 const direction = ['Top', 'Right', 'Bottom', 'Left']
 

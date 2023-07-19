@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Children, forwardRef } from 'react'
-import { User } from '@pillar/icons'
+import { User } from '@pillar-ui/icons'
 import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
-import { classnames, createContext } from '@pillar/utils'
-import { useBooleanState } from '@pillar/hooks'
+import { classnames, createContext } from '@pillar-ui/utils'
+import { useBooleanState } from '@pillar-ui/hooks'
 // import { AvatarProvider, useAvatarContext } from './context'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { Text } from '../typography'

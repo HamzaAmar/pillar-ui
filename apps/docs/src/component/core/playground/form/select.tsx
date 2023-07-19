@@ -1,5 +1,5 @@
-import { Paper, Select } from '@pillar/core'
-import { Eye, User } from '@pillar/icons'
+import { Paper, Select } from '@pillar-ui/core'
+import { Eye, User } from '@pillar-ui/icons'
 
 export const SelectPlayGround = () => {
   return <div>hello</div>

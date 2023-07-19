@@ -1,6 +1,6 @@
 import { CSSProperties, forwardRef } from 'react'
 import type * as SkeletonType from './skeleton.type'
-import { classnames } from '@pillar/utils'
+import { classnames } from '@pillar-ui/utils'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 
 /*
