@@ -23,13 +23,13 @@ To start using Pillar Hooks in your project, follow these simple steps:
 1. Install the Pillar Hooks package by running the following command:
 
 ```bash
-npm install @pillar/hooks
+npm install @hooks
 ```
 
 Or Yarn
 
 ```bash
-yarn add @pillar/hooks
+yarn add @hooks
 
 ```
 
@@ -38,7 +38,7 @@ yarn add @pillar/hooks
 Pillar Hooks can be imported and used in your React components as follows:
 
 ```tsx
-import { useBoolean } from '@pillar/hooks'
+import { useBoolean } from '@hooks'
 
 function MyComponent() {
   const { state, handleToggle } = useBoolean()

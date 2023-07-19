@@ -24,26 +24,26 @@ Before You Install we need to let you know that pillar divided to three packages
 # you can install all of them or only what you need
 
 #NPM
-npm i @pillar/core
+npm i @core
 # (or | and)
-npm i @pillar/hooks
+npm i @hooks
 # (or | and)
-npm i @pillar/icons
+npm i @icons
 
 #Yarn
-yarn add @pillar/core
+yarn add @core
 # (or | and)
-yarn add @pillar/hooks
+yarn add @hooks
 # (or | and)
-yarn add @pillar/icons
+yarn add @icons
 ```
 
 ## How to use it
 
 ```jsx
-import { Button, InputPassword, Input, Checkbox } from 'pillar/core'
-import { useBoolean } from 'pillar/hooks'
-import * as Icons from 'pillar/icons'
+import { Button, InputPassword, Input, Checkbox } from 'core'
+import { useBoolean } from 'hooks'
+import * as Icons from 'icons'
 
 function MyComponent() {
   const { state, handleToggle } = useBoolean()

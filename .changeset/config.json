@@ -6,6 +6,6 @@
   "linked": [],
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["@pillar/docs", "@pillar/stories"],
+  "ignore": ["@pillar-ui/docs", "@pillar-ui/stories"],
   "baseBranch": "main"
 }

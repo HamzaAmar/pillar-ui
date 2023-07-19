@@ -23,7 +23,7 @@ To start using Pillar Utils in your project, follow these simple steps:
 1. Install the Pillar Utils package by running the following command:
 
 ```bash
-npm install @pillar/utils
+npm install @utils
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ npm install @pillar/utils
 Pillar Utils provides a variety of utility functions and tools that can be imported and used in your projects. Here's an example of how to use some of the utility functions:
 
 ```ts
-import { formatDate, capitalize } from '@pillar/utils'
+import { formatDate, capitalize } from '@utils'
 
 const formattedDate = formatDate(new Date())
 console.log(formattedDate) // Output: "July 15, 2023"

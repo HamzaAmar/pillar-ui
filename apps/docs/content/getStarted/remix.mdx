@@ -90,10 +90,10 @@ To change the primary color of your UI, follow these simple steps:
 
 1. Save the theme.css file.
 
-1. Import the theme.css file in your project, making sure to import it after the `@pillar-ui/core/main.min.css` import. This ensures that your custom styles override the default styles provided by Pillar UI. For example:
+1. Import the theme.css file in your project, making sure to import it after the `@pillar-ui/core/style` import. This ensures that your custom styles override the default styles provided by Pillar UI. For example:
 
 ```tsx title="app/root.tsx"
-import globals from '@pillar-ui/core/main.min.css'
+import globals from '@pillar-ui/core/style'
 import themes from './theme.css'
 
 export function links() {
