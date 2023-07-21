@@ -1,7 +1,7 @@
 import React from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 import { User } from '@pillar-ui/icons'
-import { Flex, Input } from '@pillar-ui/core'
+import { Flex, Input, Button } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Form/Input',
@@ -28,6 +28,12 @@ export const FilledInput = () => {
         aria-label="hello"
         prefixInput={'https://'}
         suffixInput=".com"
+        defaultValue="Default Value"
+        variant="filled"
+      />
+      <Input
+        aria-label="hello"
+        suffixInput={<Button corner="sharp">Connect</Button>}
         defaultValue="Default Value"
         variant="filled"
       />

@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
-import type { Color, Size, Corner, Variant } from '../../types'
+import type { Color, Size, Corner, Variant, Direction } from '../../types'
 
 // type VariantUnion = Variant | 'link' | 'text'
 type Position = 'start' | 'end'
@@ -37,4 +37,9 @@ export interface ButtonProps extends BaseButton {
 
 export interface IconButtonProps extends BaseButton {
   title: string
+}
+
+export interface ButtonGroupProps extends BaseButton {
+  direction?: Direction
+  gap?: Size
 }

@@ -1,0 +1,279 @@
+---
+title: PinInput
+type: Components
+excerpt: The PinInput component allows users to input a PIN or security code using individual input fields, typically used for authentication or verification purposes.
+items: ['PinInput']
+file: core
+root: components
+---
+
+## Usage
+
+To use the PinInput component, import it from `@pillar-ui/core`. Then, create the PinInput with the desired props:
+
+```tsx
+import React from 'react'
+import { PinInput } from '@pillar-ui/core'
+
+const MyComponent: React.FC = () => {
+  return <PinInput size="md" variant="outline" corner="sm" color="primary" fluid={false} placeholder="○" length={4} />
+}
+```
+
+## Props
+
+The PinInput component supports the following props:
+
+### variant: 'filled'
+
+A filled input is a type of PinInput field that has a background color. This makes it easy for users to see where they are typing and to distinguish between input fields.
+
+<PinInputPlayGround.Filled />
+
+```tsx showLineNumbers title="Input.tsx"
+export const FilledInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <PinInput autoFocus variant="filled" />
+      <PinInput disabled variant="filled" />
+      <PinInput readOnly variant="filled" />
+      <PinInput isInvalid variant="filled" />
+    </Flex>
+  )
+}
+```
+
+### variant: 'outline'
+
+The outline variant of the PinInput component is a type of input field that has a border around it. This makes it easy for users to see where they are typing and to distinguish between input fields.
+
+<PinInputPlayGround.Outline />
+
+```tsx showLineNumbers title="Input.tsx"
+export const OutlineInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <PinInput autoFocus variant="outline" />
+      <PinInput disabled variant="outline" />
+      <PinInput readOnly variant="outline" />
+      <PinInput isInvalid variant="outline" />
+    </Flex>
+  )
+}
+```
+
+### variant: 'bordered'
+
+The bordered variant of the PinInput component is a type of input field that has a bottom border that visually separates the input from others and shows the edge of the input.
+
+<PinInputPlayGround.Bordered />
+
+```tsx showLineNumbers title="Input.tsx"
+export const BorderedInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <PinInput autoFocus variant="bordered" />
+      <PinInput disabled variant="bordered" />
+      <PinInput readOnly variant="bordered" />
+      <PinInput isInvalid variant="bordered" />
+    </Flex>
+  )
+}
+```
+
+#### `size?: Size`
+
+- Type: string
+- Default: `md`
+- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+The size prop determines the overall size of the PinInput. It accepts any of the Size types defined in our library (2xs to 2xl). If not provided, it defaults to the `md` size.
+
+<PinInputPlayGround.Sizes />
+
+```tsx
+import { Flex, PinInput } from '@pillar-ui/core'
+
+export const SizePinInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <PinInput size="xs" />
+      <PinInput size="sm" />
+      <PinInput size="md" />
+      <PinInput size="lg" />
+      <PinInput size="xl" />
+    </Flex>
+  )
+}
+```
+
+#### `corner?: Corner`
+
+- Type: string
+- Default: `sm`
+- Options: `sharp` | `xs` | `sm` | `md` | `lg` | `xl` | `full` | `circle`
+
+The corner prop determines the border radius of the PinInput. It accepts any of the Corner types defined in our library (sharp, xs, sm, md, lg, xl, full, circle). If not provided, it defaults to the `sm` corner.
+
+<PinInputPlayGround.Corners />
+
+```tsx
+import { Flex, PinInput } from '@pillar-ui/core'
+
+export const CornerPinInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <PinInput corner="sharp" />
+      <PinInput corner="xs" />
+      <PinInput corner="sm" />
+      <PinInput corner="md" />
+      <PinInput corner="lg" />
+      <PinInput corner="xl" />
+      <PinInput corner="full" />
+    </Flex>
+  )
+}
+```
+
+#### `color?: Color`
+
+- Type: string
+- Default: `primary`
+- Options: `primary` | `secondary` | `surface` | `warning`
+
+The color prop determines the color scheme of the PinInput. It accepts any of the Color types defined in our library (primary, secondary, surface, warning). If not provided, it defaults to the `primary` color.
+
+<PinInputPlayGround.Colors />
+
+```tsx
+import { Flex, PinInput } from '@pillar-ui/core'
+
+export const ColorPinInput = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <PinInput color="primary" />
+      <PinInput color="warning" />
+      <PinInput color="secondary" />
+      <PinInput color="surface" />
+    </Flex>
+  )
+}
+```
+
+#### `placeholder?: string`
+
+- Type: string
+- Default: `○`
+
+The placeholder prop sets the default placeholder character displayed in each input field of the PinInput. It can be any single character or symbol.
+
+<PinInputPlayGround.Placeholder />
+
+```tsx
+import { Flex, PinInput } from '@pillar-ui/core'
+
+export const ColorPinPlaceholder = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <PinInput length={10} />
+      <PinInput placeholder="◊" />
+      <PinInput placeholder="◉" />
+      <PinInput placeholder="●" />
+      <PinInput placeholder="◯" />
+      <PinInput placeholder="◵" />
+      <PinInput placeholder="◬" />
+    </Flex>
+  )
+}
+```
+
+#### `length?: number`
+
+- Type: number
+- Default: `4`
+
+The length prop specifies the number of input fields in the PinInput. Each input field will hold a single character of the PIN or security code. If not provided, it defaults to `4`.
+
+<PinInputPlayGround.Length />
+
+```tsx
+import { Flex, PinInput } from '@pillar-ui/core'
+
+export const PinInputLength = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <PinInput />
+      <PinInput length={5} />
+      <PinInput length={6} />
+      <PinInput length={7} />
+      <PinInput length={8} />
+      <PinInput length={10} />
+    </Flex>
+  )
+}
+```
+
+### Types
+
+- Type: string
+- Default: `text`
+- Options: `number` | `text` | `password`
+
+The `ColorPinType` component story demonstrates how to use different input types with the PinInput component.
+
+<PinInputPlayGround.Type />
+
+```tsx
+import { PinInput, Flex } from '@pillar-ui/core'
+
+export const ColorPinType = () => {
+  return (
+    <Flex gap="sm" direction="column">
+      <PinInput type="number" />
+      <PinInput type="text" />
+      <PinInput type="password" />
+    </Flex>
+  )
+}
+```
+
+## TypeScript Support
+
+If you're using TypeScript in your project, you can define interfaces for the data used by the PinInput and ensure that the correct types are passed to the component props.
+
+## Use Case
+
+The PinInput component is useful when you need to gather user input for a PIN or security code in a secure and organized manner. This can be useful in scenarios like:
+
+- User authentication
+- OTP verification
+- Transaction confirmations
+
+## Accessibility
+
+When implementing the PinInput, it's essential to ensure accessibility for users with disabilities. Make sure that the PinInput can be easily navigated using the keyboard, and provide appropriate ARIA attributes for screen readers.
+
+### Troubleshooting
+
+In this section, we provide guidance on troubleshooting common issues that may arise when using the `PinInput` component.
+
+1. **PinInput not working properly:** Ensure that you've properly installed the required dependencies and that the `PinInput` component is imported correctly. Check the console for any error messages that might indicate issues with dependencies or component imports.
+
+2. **PinInput not rendering as expected:** Double-check the props you've passed to the `PinInput` component, such as size, variant, corner, color, and length. Verify that they match the intended visual style and behavior.
+
+3. **PinInput not accessible:** Ensure that the `PinInput` component is accessible to all users, including those with disabilities. Verify that appropriate ARIA attributes are provided and that the component can be navigated using keyboard controls.
+
+### Conclusion
+
+In this document, we covered the `PinInput` component, a versatile input field that allows users to enter PIN or security codes. It can be used for various purposes, such as authentication, OTP verification, and transaction confirmations.
+
+Key Features:
+
+- Customizable size, variant, corner, and color.
+- Supports different input types, such as number, text, and password.
+- Offers multiple visual styles, including filled, outline, and bordered.
+- Handles pasting data into the input fields.
+
+Get started with the `PinInput` component by importing it into your project and configuring the props based on your requirements. If you encounter any issues or have questions, refer to the Troubleshooting section or seek help from the community.
+
+Happy coding!

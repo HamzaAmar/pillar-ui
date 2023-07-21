@@ -3,7 +3,7 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { classnames } from '@pillar-ui/utils'
 import { Flex } from '../flex'
 import { Spinner } from '../spinner'
-import type { ButtonProps, IconButtonProps } from './button.type'
+import type { ButtonGroupProps, ButtonProps, IconButtonProps } from './button.type'
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -104,3 +104,40 @@ export const IconButton = forwardRef(
 ) as ForwardRefComponent<'button', IconButtonProps>
 
 IconButton.displayName = 'Pillar-IconButton'
+
+/*
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Icon Button Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+export const ButtonGroup = forwardRef(
+  (
+    {
+      icon,
+      title,
+      corner = 'sharp',
+      color = 'primary',
+      size = 'md',
+      variant = 'transparent',
+      className,
+      as: Tag = 'div',
+      ...rest
+    },
+    forwardedRef
+  ) => {
+    const iconButtonClassName = classnames(`icon-button btn btn__${variant} u_${color} u_center`, {
+      [className!]: !!className,
+      [`u_size-${size}`]: !!size,
+      [`u_corner-${corner}`]: !!corner,
+    })
+
+    return (
+      <Tag role="group" className={iconButtonClassName} ref={forwardedRef} {...rest}>
+        {icon}
+      </Tag>
+    )
+  }
+) as ForwardRefComponent<'div', ButtonGroupProps>
+
+ButtonGroup.displayName = 'Pillar-IconButton'

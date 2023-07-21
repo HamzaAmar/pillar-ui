@@ -2,7 +2,7 @@ import { ChevronDown, Eye, EyeOff, ListSearch } from '@pillar-ui/icons'
 import { useBooleanState, useControllableState } from '@pillar-ui/hooks'
 import { Flex, Text, Grid } from '..'
 import { classnames, composeRef, createContext } from '@pillar-ui/utils'
-import { ChangeEvent, forwardRef, useId, useRef } from 'react'
+import { ChangeEvent, forwardRef, useId, useRef, useState } from 'react'
 
 import type {
   FormControllerProps,
@@ -13,6 +13,7 @@ import type {
   TextareaProps,
   FormControllerContextProps,
   FormGroupContextProps,
+  PinInputProps,
 } from './form.type'
 
 const [FormControllerProvider, useFormController] = createContext<FormControllerContextProps>('FormController')
@@ -41,9 +42,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
     ...restProps
   } = props
 
-  const prefixInputElement = !!prefixInput && (
-    <span className="input-field--prefix u_flex-inline u_items-center u_justify-center">{prefixInput}</span>
-  )
+  const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
   const suffixInputElement = !!suffixInput && <span className="input-field--suffix u_center">{suffixInput}</span>
 
   const wrapperClassName = classnames(
@@ -355,6 +354,93 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
 })
 
 Select.displayName = 'Pillar-Select'
+
+/*
+===================================================================================================
+   Input File Section
+===================================================================================================
+*/
+
+export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forwardedRef) => {
+  // const ctx = useFormController()
+  const formGroupContext = useFormGroup()
+  const {
+    size = formGroupContext?.size ?? 'md',
+    variant = formGroupContext?.variant ?? 'outline',
+    corner = formGroupContext?.corner ?? 'sm',
+    color = formGroupContext?.color ?? 'primary',
+    fluid = formGroupContext?.fluid,
+    placeholder = '○',
+    length = 4,
+    children,
+    ...restProps
+  } = props
+  const wrapperClassName = classnames(
+    `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
+    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+  )
+
+  const [pin, setPin] = useState<string[]>(Array(length).fill(''))
+  const inputRefs = useRef<HTMLInputElement[]>([])
+
+  const handleInputChange = (value: string, index: number) => {
+    const newPin = [...pin]
+    const val = newPin[index] !== '' ? value[1] : value
+    newPin[index] = val
+    setPin(newPin)
+
+    // Move focus to the next input when the current input is filled
+    if (value && index < length - 1) {
+      inputRefs.current[index + 1].focus()
+    }
+  }
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>, index: number) => {
+    if (event.key === 'Backspace' && !pin[index] && index > 0) {
+      inputRefs.current[index - 1].focus()
+    }
+  }
+
+  console.log(forwardedRef)
+
+  const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
+    event.preventDefault()
+    const pastedData = event.clipboardData.getData('text')
+    const newPin = [...pin]
+
+    for (let i = 0; i < length; i++) {
+      newPin[i] = pastedData[i] || ''
+    }
+
+    setPin(newPin)
+  }
+
+  return (
+    <Flex gap="xs" items="center">
+      {Array.from({ length }, (_, index) => (
+        <div className={wrapperClassName} key={index}>
+          <input
+            placeholder={placeholder}
+            className="pin-input form-field"
+            value={pin[index]}
+            onChange={(e) => handleInputChange(e.target.value, index)}
+            onKeyDown={(e) => handleKeyDown(e, index)}
+            onPaste={handlePaste}
+            aria-label={`Pin Input Number ${index + 1} of ${length}`}
+            autoComplete="off"
+            autoCapitalize="none"
+            ref={(input) => {
+              inputRefs.current[index] = input!
+            }}
+            {...restProps}
+          />
+        </div>
+      ))}
+    </Flex>
+  )
+})
+
+PinInput.displayName = 'Pillar-PinInput'
 
 /*
 ===================================================================================================

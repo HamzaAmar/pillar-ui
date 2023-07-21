@@ -8,6 +8,7 @@ export {
   InputFile,
   FormGroup,
   FormController,
+  PinInput,
 } from './formField'
 export type {
   FormControllerProps,
@@ -21,4 +22,5 @@ export type {
   TextFormFieldProps,
   FormControllerContextProps,
   InputPasswordProps,
+  PinInputProps,
 } from './form.type'

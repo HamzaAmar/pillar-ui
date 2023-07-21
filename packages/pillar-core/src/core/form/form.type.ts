@@ -38,6 +38,10 @@ export interface SelectProps extends Omit<ComponentPropsWithRef<'select'>, 'size
   status?: Status
 }
 
+export interface PinInputProps extends Omit<ComponentPropsWithRef<'input'>, 'size' | 'color'>, FormFieldSharedProps {
+  length?: number
+}
+
 export interface InputProps extends FormFieldSharedProps, Omit<ComponentPropsWithRef<'input'>, 'size' | 'color'> {
   status?: Status
   className?: string
