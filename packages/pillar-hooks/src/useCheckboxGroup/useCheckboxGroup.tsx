@@ -1,16 +1,61 @@
 import { ChangeEvent, useState } from 'react'
 
 /**
- * Custom hook for managing a checkbox group state with helper functions for toggling and checking items.
- * @param {boolean[]} [initialCheckedState=[]] - The initial state of the checkbox group as an array of boolean values.
+ * A custom React hook to manage a group of checkboxes with their checked state.
+ *
+ * @param {boolean[]} initialCheckedState - The initial checked state for each checkbox (default is an empty array []).
+ *
  * @returns {{
  *   checkedItems: boolean[],
  *   setCheckedItems: React.Dispatch<React.SetStateAction<boolean[]>>,
- *   isIndeterminate: boolean,
  *   isAllChecked: boolean,
+ *   isIndeterminate: boolean,
  *   handleToggleAll: (event: React.ChangeEvent<HTMLInputElement>) => void,
  *   handleToggleItem: (currentIndex: number) => void
  * }}
+ *   An object containing the checked state of checkboxes and utility functions.
+ *   - **checkedItems**: An array of booleans representing the checked state of each checkbox.
+ *   - **setCheckedItems**: A setter function to update the checked state of checkboxes.
+ *   - **isAllChecked**: A boolean indicating whether all checkboxes are checked.
+ *   - **isIndeterminate**: A boolean indicating whether some checkboxes are checked (but not all).
+ *   - **handleToggleAll**: A function to handle the toggle action for all items in the checkbox group.
+ *   - **handleToggleItem**: A function to handle the toggle action for a specific item in the checkbox group.
+ *
+ * @example
+ * // Example usage in a functional component:
+ * function CheckboxGroupComponent() {
+ *   const { checkedItems, isAllChecked, isIndeterminate, handleToggleAll, handleToggleItem } = useCheckboxGroup([false, false, true]);
+ *
+ *   return (
+ *     <div>
+ *       {checkedItems.map((isChecked, index) => (
+ *         <label key={index}>
+ *           <input
+ *             type="checkbox"
+ *             checked={isChecked}
+ *             onChange={() => handleToggleItem(index)}
+ *           />
+ *           Checkbox {index + 1}
+ *         </label>
+ *       ))}
+ *       <br />
+ *       <label>
+ *         <input
+ *           type="checkbox"
+ *           checked={isAllChecked}
+ *           onChange={handleToggleAll}
+ *           ref={(input) => {
+ *             // Set the indeterminate state of the "Select All" checkbox
+ *             if (input) {
+ *               input.indeterminate = isIndeterminate;
+ *             }
+ *           }}
+ *         />
+ *         Select All
+ *       </label>
+ *     </div>
+ *   );
+ * }
  */
 export function useCheckboxGroup(initialCheckedState: boolean[] = []) {
   const [checkedItems, setCheckedItems] = useState(initialCheckedState)

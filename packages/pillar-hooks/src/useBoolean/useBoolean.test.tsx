@@ -28,9 +28,7 @@ describe('useBooleanState', () => {
 
   test('should set the boolean value to false when the setFalse function is called', () => {
     const { result } = renderHook(() => useBooleanState())
-
     act(() => result.current.setFalse())
-
     expect(result.current.booleanValue).toBe(false)
   })
 

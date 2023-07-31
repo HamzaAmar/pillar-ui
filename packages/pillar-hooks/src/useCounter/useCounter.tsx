@@ -3,24 +3,43 @@ import { clamp } from '@pillar-ui/utils'
 import type { UseCounterProps } from './useCounter.type'
 
 /**
- * Custom hook for managing a counter value with increment, decrement, and reset functionality.
- * @param {number} [value = 0] - The initial value of the counter (default: 0).
- * @param {number} [min= -Infinity] - The minimum value allowed for the counter (default: -Infinity).
- * @param {number} [max= Infinity] - The maximum value allowed for the counter (default: Infinity).
+ * A custom React hook to manage a counter with increment, decrement, and reset functions.
+ *
+ * @param {UseCounterProps} options - The options object containing configuration for the counter.
+ *
  * @returns {{
  *   count: number,
- *   increment: () => void,
- *   decrement: () => void,
- *   reset: () => void
- *   setCount: () => React.Dispatch<React.SetStateAction<number>>
+ *   increment: (amount?: number) => void,
+ *   decrement: (amount?: number) => void,
+ *   reset: () => void,
+ *   setCount: React.Dispatch<React.SetStateAction<number>>
  * }}
+ *   An object containing the counter state and utility functions.
+ *   - **count**: The current value of the counter.
+ *   - **increment**: A function to increment the counter by a specified amount (default is 1).
+ *   - **decrement**: A function to decrement the counter by a specified amount (default is 1).
+ *   - **reset**: A function to reset the counter to its initial value or the minimum value.
+ *   - **setCount**: A setter function to update the counter value.
+ *
+ * @example
+ * // Example usage in a functional component:
+ * function CounterComponent() {
+ *   const { count, increment, decrement, reset } = useCounter({ value: 0, min: 0, max: 10, step: 1 });
+ *
+ *   return (
+ *     <div>
+ *       <p>Count: {count}</p>
+ *       <button onClick={() => increment(1)}>Increment</button>
+ *       <button onClick={() => decrement(1)}>Decrement</button>
+ *       <button onClick={reset}>Reset</button>
+ *     </div>
+ *   );
+ * }
  */
-
 export function useCounter({ value = 0, min = -Infinity, max = Infinity, step = 1 }: UseCounterProps) {
-  min = Math.min(min, max)
-  max = Math.max(min, max)
+  const [minValue, maxValue] = [Math.min(min, max), Math.max(min, max)]
 
-  const initialValue = clamp(value, [min, max])
+  const initialValue = clamp(value, [minValue, maxValue])
 
   const [count, setCount] = useState(initialValue)
 
@@ -35,7 +54,7 @@ export function useCounter({ value = 0, min = -Infinity, max = Infinity, step = 
     */
     const newAmount = amount || 1
     if (!Number.isInteger(amount)) return
-    setCount((x) => clamp(x + newAmount, [min, max]))
+    setCount((x) => clamp(x + newAmount, [minValue, maxValue]))
   }
   /**
    * Decrement the counter value amount a specified amount.
@@ -48,7 +67,7 @@ export function useCounter({ value = 0, min = -Infinity, max = Infinity, step = 
     */
     const newAmount = amount || 1
     if (!Number.isInteger(amount)) return
-    setCount((x) => clamp(x - newAmount, [min, max]))
+    setCount((x) => clamp(x - newAmount, [minValue, maxValue]))
   }
 
   /**
