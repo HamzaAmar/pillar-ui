@@ -1,9 +1,9 @@
 import React from 'react'
-import { describe, it, expect } from 'vitest'
+import { describe, test, expect } from 'vitest'
 import { isReactElement } from '../is'
 
 describe('isReactElement', () => {
-  it('should return true for valid React elements', () => {
+  test('should return true for valid React elements', () => {
     const element = <div>Hello, World!</div>
     expect(isReactElement(element)).toBe(true)
     const element2 = React.cloneElement(element, { size: 'sm', style: { backgroundColor: 'danger' } })
@@ -12,7 +12,7 @@ describe('isReactElement', () => {
     expect(isReactElement(element3)).toBe(true)
   })
 
-  it('should return false for non-React elements', () => {
+  test('should return false for non-React elements', () => {
     expect(isReactElement(null)).toBe(false)
     expect(isReactElement(undefined)).toBe(false)
     expect(isReactElement({})).toBe(false)
@@ -21,12 +21,12 @@ describe('isReactElement', () => {
     expect(isReactElement(42)).toBe(false)
   })
 
-  it('should return false for React.Fragment', () => {
+  test('should return false for React.Fragment', () => {
     const fragment = <React.Fragment></React.Fragment>
     expect(isReactElement(fragment)).toBe(false)
   })
 
-  it('should return false for React elements without children', () => {
+  test('should return false for React elements without children', () => {
     const elementWithoutChildren = <div />
     expect(isReactElement(elementWithoutChildren)).toBe(false)
   })

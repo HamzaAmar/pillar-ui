@@ -1,8 +1,8 @@
-import { describe, it, expect } from 'vitest'
+import { describe, test, expect } from 'vitest'
 import { isNumber } from '../is'
 
 describe('isNumber', () => {
-  it('should return true for number values', () => {
+  test('should return true for number values', () => {
     expect(isNumber(0)).toBe(true)
     expect(isNumber(42)).toBe(true)
     expect(isNumber(3.14)).toBe(true)
@@ -11,7 +11,7 @@ describe('isNumber', () => {
     expect(isNumber(+'23')).toBe(true)
   })
 
-  it('should return false for non-number values', () => {
+  test('should return false for non-number values', () => {
     expect(isNumber('42')).toBe(false)
     expect(isNumber(true)).toBe(false)
     expect(isNumber(null)).toBe(false)

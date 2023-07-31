@@ -1,13 +1,13 @@
-import { describe, it, expect } from 'vitest'
+import { describe, test, expect } from 'vitest'
 import { isRef } from '../is'
 
 describe('isRef', () => {
-  it('should return true for Ref objects', () => {
+  test('should return true for Ref objects', () => {
     const ref = { current: null }
     expect(isRef(ref)).toBe(true)
   })
 
-  it('should return false for non-Ref values', () => {
+  test('should return false for non-Ref values', () => {
     expect(isRef(null)).toBe(false)
     expect(isRef(undefined)).toBe(false)
     expect(isRef({})).toBe(false)

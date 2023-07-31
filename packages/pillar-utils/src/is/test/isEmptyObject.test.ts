@@ -33,4 +33,9 @@ describe('isEmptyObject', () => {
   test('should return false for an object with null property', () => {
     expect(isEmptyObject({ key: null })).toBe(false)
   })
+
+  test('should return false for an object with null property', () => {
+    // @ts-ignore
+    expect(isEmptyObject(null)).toBe(false)
+  })
 })

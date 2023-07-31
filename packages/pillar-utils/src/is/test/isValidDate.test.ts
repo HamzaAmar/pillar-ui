@@ -1,8 +1,8 @@
-import { describe, it, expect } from 'vitest'
+import { describe, test, expect } from 'vitest'
 import { isValidDate } from '../is' // Replace "your-file" with the actual file path
 
 describe('isValidDate', () => {
-  it('should return true for valid date strings', () => {
+  test('should return true for valid date strings', () => {
     expect(isValidDate('2023-05-30T12:34:56Z')).toBe(true)
     expect(isValidDate('2023-05-30')).toBe(true)
     expect(isValidDate('2023/05/30')).toBe(true)
@@ -15,7 +15,7 @@ describe('isValidDate', () => {
     expect(isValidDate('2023.05.30')).toBe(true)
   })
 
-  it('should return false for invalid date strings', () => {
+  test('should return false for invalid date strings', () => {
     expect(isValidDate('Invalid Date')).toBe(false)
     expect(isValidDate('2023-13-45')).toBe(false)
     expect(isValidDate('random string')).toBe(false)
@@ -23,7 +23,7 @@ describe('isValidDate', () => {
     // expect(isValidDate('2023/02/30')).toBe(false)
   })
 
-  it('should return false for date strings with invalid formats', () => {
+  test('should return false for date strings with invalid formats', () => {
     expect(isValidDate('30/05/2023')).toBe(false)
     expect(isValidDate('20230530')).toBe(false)
   })
