@@ -1,3 +1,4 @@
+import React from 'react'
 import { ComponentMeta } from '@storybook/react'
 import { Pagination } from '@pillar-ui/core'
 

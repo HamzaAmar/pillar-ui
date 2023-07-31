@@ -11,25 +11,17 @@ export default {
   },
 } as ComponentMeta<typeof Paper>
 
-// function PaperBase(props) {
-//   return (
-//     <Paper
-//       {...props}
-//       title="hello"
-//       message="hello world my name is hamza miloud amar iam a full stack javascript developer"
-//     />
-//   )
-// }
-
 export function PaperBackground() {
   return (
     <div className="l_flow__md">
       <Paper>Hello</Paper>
       <Paper background="danger">Hello</Paper>
+      <Paper background="danger-8">Hello</Paper>
       <Paper background="warning">Hello</Paper>
       <Paper background="success">Hello</Paper>
       <Paper background="secondary">Hello</Paper>
       <Paper background="primary">Hello</Paper>
+      <Paper background="surface">Hello</Paper>
       <Paper background="surface">Hello</Paper>
     </div>
   )
