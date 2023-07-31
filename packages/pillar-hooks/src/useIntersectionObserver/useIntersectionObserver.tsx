@@ -1,26 +1,42 @@
-import { useCallback, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
-export function useIntersectionObserver<T extends HTMLElement = HTMLElement>(options?: IntersectionObserverInit) {
-  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null)
+type IntersectionObserverOptions = IntersectionObserverInit & {
+  root?: React.RefObject<HTMLElement> | null
+}
 
+const useIntersectionObserver = (
+  ref: React.RefObject<HTMLElement> | Array<React.RefObject<HTMLElement>>,
+  options: IntersectionObserverOptions,
+  callback: IntersectionObserverCallback
+) => {
   const observer = useRef<IntersectionObserver | null>(null)
 
-  const ref = useCallback(
-    (element: T | null) => {
-      if (observer.current) {
-        observer.current.disconnect()
-        observer.current = null
-      }
-      if (element) {
-        observer.current = new IntersectionObserver(([entry]) => {
-          setEntry(entry)
-        }, options)
+  useEffect(() => {
+    const observerOptions = {
+      ...options,
+      root: options.root?.current || null,
+    }
 
-        observer.current.observe(element)
-      }
-    },
-    [options]
-  )
+    observer.current = new IntersectionObserver((entries) => {
+      callback(entries, observer.current!)
+    }, observerOptions)
 
-  return { ref, entry }
+    if (Array.isArray(ref)) {
+      ref.forEach((r) => {
+        if (r.current) {
+          observer.current?.observe(r.current)
+        }
+      })
+    } else {
+      if (ref.current) {
+        observer.current?.observe(ref.current)
+      }
+    }
+
+    return () => {
+      observer.current?.disconnect()
+    }
+  }, [ref, options, callback])
 }
+
+export default useIntersectionObserver
