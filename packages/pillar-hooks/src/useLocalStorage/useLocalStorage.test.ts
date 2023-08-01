@@ -1,4 +1,4 @@
-import { renderHook, act, fireEvent } from '@testing-library/react'
+import { renderHook, act } from '@testing-library/react'
 import useLocalStorage from './useLocalStorage'
 import { storageService } from './storageService'
 

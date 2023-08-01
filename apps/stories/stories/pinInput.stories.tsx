@@ -15,7 +15,7 @@ const Template: ComponentStory<typeof PinInput> = (args) => <PinInput {...args} 
 export const FilledPinInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <PinInput aria-label="hello" autoFocus variant="filled" />
+      <PinInput aria-label="hello" variant="filled" />
       <PinInput aria-label="hello" variant="filled" />
       <PinInput aria-label="hello" disabled variant="filled" />
       <PinInput aria-label="hello" readOnly variant="filled" />
@@ -25,7 +25,7 @@ export const FilledPinInput = () => {
 export const OutlinePinInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <PinInput autoFocus />
+      <PinInput />
       <PinInput />
       <PinInput disabled />
       <PinInput readOnly />
@@ -35,7 +35,7 @@ export const OutlinePinInput = () => {
 export const BorderedPinInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <PinInput variant="bordered" autoFocus />
+      <PinInput variant="bordered" />
       <PinInput variant="bordered" />
       <PinInput variant="bordered" disabled />
       <PinInput variant="bordered" readOnly />
@@ -72,22 +72,22 @@ export const SizePinInput = () => {
 export const ColorPinInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <PinInput color="primary" variant="bordered" autoFocus />
-      <PinInput color="warning" variant="bordered" autoFocus />
-      <PinInput color="secondary" variant="outline" autoFocus />
-      <PinInput color="surface" variant="filled" autoFocus />
+      <PinInput color="primary" variant="bordered" />
+      <PinInput color="warning" variant="bordered" />
+      <PinInput color="secondary" variant="outline" />
+      <PinInput color="surface" variant="filled" />
     </Flex>
   )
 }
 export const ColorPinLength = () => {
   return (
     <Flex gap="sm" direction="column">
-      <PinInput length={10} color="primary" variant="bordered" autoFocus />
-      <PinInput color="surface" variant="filled" autoFocus />
-      <PinInput length={5} color="primary" variant="bordered" autoFocus />
-      <PinInput length={6} color="warning" variant="bordered" autoFocus />
-      <PinInput length={7} color="secondary" variant="outline" autoFocus />
-      <PinInput length={8} color="surface" variant="filled" autoFocus />
+      <PinInput length={10} color="primary" variant="bordered" />
+      <PinInput color="surface" variant="filled" />
+      <PinInput length={5} color="primary" variant="bordered" />
+      <PinInput length={6} color="warning" variant="bordered" />
+      <PinInput length={7} color="secondary" variant="outline" />
+      <PinInput length={8} color="surface" variant="filled" />
     </Flex>
   )
 }
@@ -95,13 +95,13 @@ export const ColorPinLength = () => {
 export const ColorPinPlaceholder = () => {
   return (
     <Flex gap="sm" direction="column">
-      <PinInput length={10} color="primary" variant="bordered" autoFocus />
-      <PinInput placeholder="◊" length={10} color="primary" variant="bordered" autoFocus />
-      <PinInput placeholder="◉" color="surface" variant="filled" autoFocus />
-      <PinInput placeholder="●" length={5} color="primary" variant="bordered" autoFocus />
-      <PinInput placeholder="◯" length={6} color="warning" variant="bordered" autoFocus />
-      <PinInput placeholder="◵" length={7} color="secondary" variant="outline" autoFocus />
-      <PinInput placeholder="◬" length={8} color="surface" variant="filled" autoFocus />
+      <PinInput length={10} color="primary" variant="bordered" />
+      <PinInput placeholder="◊" length={10} color="primary" variant="bordered" />
+      <PinInput placeholder="◉" color="surface" variant="filled" />
+      <PinInput placeholder="●" length={5} color="primary" variant="bordered" />
+      <PinInput placeholder="◯" length={6} color="warning" variant="bordered" />
+      <PinInput placeholder="◵" length={7} color="secondary" variant="outline" />
+      <PinInput placeholder="◬" length={8} color="surface" variant="filled" />
     </Flex>
   )
 }

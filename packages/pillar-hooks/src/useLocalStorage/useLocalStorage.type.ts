@@ -1,4 +1,4 @@
-interface UseLocalStorageParams<T> {
+export interface UseLocalStorageParams<T> {
   key: string
   initialValue: T
   serialize?: (value: T) => string

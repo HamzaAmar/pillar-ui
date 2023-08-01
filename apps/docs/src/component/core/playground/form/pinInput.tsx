@@ -11,7 +11,6 @@ const FilledPinInput = () => {
       <PinInput autoFocus variant="filled" />
       <PinInput disabled variant="filled" />
       <PinInput readOnly variant="filled" />
-      <PinInput isInvalid variant="filled" />
     </Paper>
   )
 }
@@ -22,7 +21,6 @@ const OutlinePinInput = () => {
       <PinInput autoFocus variant="outline" />
       <PinInput disabled variant="outline" />
       <PinInput readOnly variant="outline" />
-      <PinInput isInvalid variant="outline" />
     </Paper>
   )
 }
@@ -33,7 +31,6 @@ const BorderedPinInput = () => {
       <PinInput autoFocus variant="bordered" />
       <PinInput disabled variant="bordered" />
       <PinInput readOnly variant="bordered" />
-      <PinInput isInvalid variant="bordered" />
     </Paper>
   )
 }

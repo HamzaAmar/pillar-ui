@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { isBrowser, isFunction } from '@pillar-ui/utils'
 import { storageService } from './storageService'
+import { UseLocalStorageParams } from './useLocalStorage.type'
 
 // Define a custom hook that supports SSR and uses local storage
 function useLocalStorage<T>({

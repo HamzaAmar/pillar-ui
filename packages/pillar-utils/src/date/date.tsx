@@ -11,8 +11,9 @@ const Options: Intl.DateTimeFormatOptions = {
   hour12: false,
 }
 
-export function formatDate(date: Date, format: string, options: Intl.DateTimeFormatOptions = Options): string {
+export function formatDate(date: Date | string, format: string, options: Intl.DateTimeFormatOptions = Options): string {
   if (!isValidDate(date)) return ''
+  date = new Date(date)
   return new Intl.DateTimeFormat('en-US', options)
     .format(date)
     .replace(/(\d+)\/(\d+)\/(\d+), (\d+):(\d+):(\d+)/, (_, month, day, year, hour, minute, second) => {
@@ -67,7 +68,7 @@ export function getDaysInMonth(date: Date | string): number | null {
  * @returns {number} The number of days in the year (365 or 366).
  */
 export function getDaysInYear(date: Date | string) {
-  if (!isValidDate(date)) {
+  if (typeof date === 'string' && !isValidDate(date)) {
     return null
   }
   let realDate = new Date(date)

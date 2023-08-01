@@ -1,12 +1,14 @@
-import React from 'react'
-import { ComponentMeta } from '@storybook/react'
 import { Pagination } from '@pillar-ui/core'
 
-export default {
-  title: 'Components/Pagintaion',
-  component: Pagination,
-} as ComponentMeta<typeof Pagination>
+import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
+export default {
+  title: 'Components/Pagination',
+  component: Pagination,
+  args: {
+    children: 'Nice To Meet You',
+  },
+} as ComponentMeta<typeof Pagination>
 export function PaginationColor() {
   return (
     <div>
@@ -68,3 +70,7 @@ export function PaginationCustomStyle() {
     </div>
   )
 }
+
+const Template: ComponentStory<typeof Pagination> = (args) => <Pagination {...args} />
+
+export const Playground = Template.bind({})
