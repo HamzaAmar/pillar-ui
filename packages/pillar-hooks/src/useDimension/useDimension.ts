@@ -2,9 +2,28 @@ import { useState, useEffect, useRef } from 'react'
 import { ElementSize } from './useDimension.type'
 
 /**
- * Custom hook for tracking the dimensions of an HTML element.
- * @param {React.RefObject<HTMLElement>} elementRef - Ref object for the HTML element to track.
- * @returns {ElementSize} - Object containing the dimensions and related properties of the tracked element.
+ * Custom hook for tracking the dimensions of an HTMLElement using the ResizeObserver API in React components.
+ *
+ * @param {React.RefObject<HTMLElement>} elementRef - A ref object pointing to the target HTMLElement.
+ *
+ * @returns {ElementSize} - An object containing various dimension properties of the element.
+ *
+ * @example
+ * // Example usage in a functional component:
+ * import { useRef } from 'react';
+ * import { useDimension } from './path-to-hooks/useDimension'; // Adjust the path accordingly
+ *
+ * function DimensionComponent() {
+ *   const elementRef = useRef(null);
+ *   const size = useDimension(elementRef);
+ *
+ *   return (
+ *     <div ref={elementRef}>
+ *       <p>Element Width: {size.width}px</p>
+ *       <p>Element Height: {size.height}px</p>
+ *     </div>
+ *   );
+ * }
  */
 
 export const useDimension = (elementRef: React.RefObject<HTMLElement>): ElementSize => {

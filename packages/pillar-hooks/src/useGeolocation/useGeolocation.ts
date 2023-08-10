@@ -1,6 +1,36 @@
 import { useState, useRef, useEffect } from 'react'
 import type { GeolocationState } from './useGeolocation.type'
 
+/**
+ * Custom hook for retrieving and monitoring the user's geolocation.
+ *
+ * @param {PositionOptions} [options] - Options for geolocation retrieval.
+ * @returns {GeolocationState} - An object containing geolocation data and loading/error states.
+ *
+ * @example
+ * // Example usage in a functional component:
+ * import { useGeolocation } from './path-to-hooks/useGeolocation'; // Adjust the path accordingly
+ *
+ * function GeolocationComponent() {
+ *   const geolocation = useGeolocation();
+ *
+ *   if (geolocation.loading) {
+ *     return <div>Loading...</div>;
+ *   }
+ *
+ *   if (geolocation.error) {
+ *     return <div>Error: {geolocation.error}</div>;
+ *   }
+ *
+ *   return (
+ *     <div>
+ *       <p>Latitude: {geolocation.latitude}</p>
+ *       <p>Longitude: {geolocation.longitude}</p>
+ *       <p>Accuracy: {geolocation.accuracy} meters</p>
+ *     </div>
+ *   );
+ * }
+ */
 export function useGeolocation(options: PositionOptions = {}) {
   const [state, setState] = useState<GeolocationState>({
     loading: true,

@@ -5,18 +5,45 @@ type CopyFn = (text: string) => Promise<boolean>
 
 /**
  * Custom hook for copying text to the clipboard with optional timeout.
- * @param {number} [timeout] - The timeout duration in milliseconds.
+ *
+ * @param {number} [timeout=300] - The timeout duration in milliseconds.
+ *
  * @returns {{
  *   text: CopiedValue,
  *   copy: CopyFn,
  *   copied: boolean
  * }} - An object containing the current copied text, the copy function, and the copied state.
+ *
+ * @example
+ * // Example usage in a functional component:
+ * import { useCopyToClipboard } from './path-to-hooks/useCopyToClipboard'; // Adjust the path accordingly
+ *
+ * function CopyToClipboardComponent() {
+ *   const { text, copy, copied } = useCopyToClipboard(500);
+ *
+ *   const handleCopyClick = () => {
+ *     copy('Text to copy');
+ *   };
+ *
+ *   return (
+ *     <div>
+ *       <button onClick={handleCopyClick}>Copy to Clipboard</button>
+ *       {copied ? <p>Copied: {text}</p> : null}
+ *     </div>
+ *   );
+ * }
  */
 
 export function useCopyToClipboard(timeout: number = 300) {
   const [text, setText] = useState<CopiedValue>(null)
   const [copied, setCopied] = useState<boolean>(false)
 
+  /**
+   * The copy function.
+   *
+   * @param {string} text - The text to copy to the clipboard.
+   * @returns {Promise<boolean>} - A promise indicating whether the copy operation was successful.
+   */
   const copy: CopyFn = async (text) => {
     if (!navigator?.clipboard) {
       console.warn('Clipboard not supported')

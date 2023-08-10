@@ -3,16 +3,33 @@ import { useState, useRef, useCallback } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
 import type { UseControllableStateParams } from './useControllableState.type'
 /**
- * A hook that creates a state variable that can be either controlled or uncontrolled.
- * If `controlledValue` is defined, the hook returns it and a setter function that updates it.
- * If `controlledValue` is not defined, the hook returns a state variable initialized to
- * `defaultValue` and a setter function that updates it.
+ * Custom hook for managing a state that can be controlled by an external value.
  *
- * @template T - The type of the state variable.
- * @param {UseControllableStateParams<T>} options - The options object.
- * @param {T} options.controlledValue - The controlled value.
- * @param {T | (() => T)} options.defaultValue - The default value or a function that returns the default value.
- * @returns {[T, Dispatch<SetStateAction<T>>]} - An array containing the current value and a setter function.
+ * @template T - The type of the state value.
+ *
+ * @param {UseControllableStateParams<T>} params - The parameters for the hook.
+ *
+ * @returns {[T, React.Dispatch<React.SetStateAction<T>>]} - A tuple containing the current state value and the state setter function.
+ *
+ * @example
+ * // Example usage in a functional component:
+ * import { useState } from 'react';
+ * import { useControllableState } from './path-to-hooks/useControllableState'; // Adjust the path accordingly
+ *
+ * function ControllableStateComponent() {
+ *   const [controlledValue, setControlledValue] = useState('Controlled Value');
+ *   const [state, setState] = useControllableState({
+ *     controlledValue,
+ *     defaultValue: 'Default Value',
+ *   });
+ *
+ *   return (
+ *     <div>
+ *       <p>State Value: {state}</p>
+ *       <button onClick={() => setState('New Value')}>Change State</button>
+ *     </div>
+ *   );
+ * }
  */
 export function useControllableState<T>({
   controlledValue,

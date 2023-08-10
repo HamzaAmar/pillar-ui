@@ -5,22 +5,39 @@ const DIRECTION = 'direction'
 
 const codeToRunOnHead = `function(){alert('Hello')}`
 
-/**
- * Custom hook for managing the direction (LTR/RTL) of the document or a specified HTML element.
- * @param {HTMLElement} [element] - Optional HTML element to track the direction for. If not provided, the direction of the document's root element will be used.
- * @returns {{
- *  isLtr {boolean} - Indicates whether the current direction is LTR (true) or RTL (false).
- *  direction {Direction} - The current direction ('ltr', 'rtl', or undefined).
- *  directionScript {ReactElement} - React element containing the code to run on the head.
- *  toggleDirection {function} - Toggles the direction between LTR and RTL.
- * }}
- */
-
 export function getDirectionInitial(element: HTMLElement): Direction {
   const rootDirection = window.getComputedStyle(element).direction as Direction
   const localStorageMode = localStorage.getItem?.(DIRECTION) as Direction
   return localStorageMode ?? rootDirection
 }
+
+/**
+ * Custom hook for managing text direction (LTR/RTL) state and toggling between them.
+ *
+ * @param {HTMLElement} [element] - The optional element to apply direction changes.
+ * @returns {{
+ *   isLtr: boolean,
+ *   direction: Direction,
+ *   directionScript: JSX.Element,
+ *   toggleDirection: () => void
+ * }} - An object containing text direction state, direction toggling function, and direction script element.
+ *
+ * @example
+ * // Example usage in a functional component:
+ * import { useDirection } from './path-to-hooks/useDirection'; // Adjust the path accordingly
+ *
+ * function DirectionComponent() {
+ *   const { isLtr, toggleDirection, directionScript } = useDirection();
+ *
+ *   return (
+ *     <div>
+ *       <button onClick={toggleDirection}>Toggle Direction</button>
+ *       <p>Current direction: {isLtr ? 'LTR' : 'RTL'}</p>
+ *       {directionScript}
+ *     </div>
+ *   );
+ * }
+ */
 
 export function useDirection(element?: HTMLElement) {
   const [direction, setDirection] = useState<Direction | undefined>(undefined)
