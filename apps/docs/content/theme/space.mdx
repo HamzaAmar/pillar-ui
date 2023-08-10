@@ -1,0 +1,81 @@
+---
+title: Spacing
+type: Theme
+excerpt: 'The following CSS variables define spacing values for different breakpoints. These variables are responsive and adjust dynamically based on the viewport size. If you prefer different spacing for your project, you can customize these values according to your needs.'
+root: themes
+---
+
+# CSS Spacing Variables
+
+The spacing variables, defined within the `:root` CSS selector, ensure consistent spacing throughout your CSS stylesheets.
+
+> :warning: **Caution:** Customizing spacing using the `--space-*` variables may impact the responsive layout. Default values utilize the `clamp` function to adapt spacing based on viewport size, maintaining proportions and alignment. Modifying these values might result in spacing inconsistencies.
+
+<Table>
+  <Table.Row type='head'>
+      <Table.Column as='th'>Variable</Table.Column>
+      <Table.Column as='th'>Description</Table.Column>
+  </Table.Row>
+  <Table.Row>
+  <Table.Row>
+    <Table.Column>`--success-gradient`</Table.Column>
+    <Table.Column>Gradient variable for success-related elements.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--secondary-gradient`</Table.Column>
+    <Table.Column>Gradient variable for secondary elements.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--danger-gradient`</Table.Column>
+    <Table.Column>Gradient variable for elements associated with danger or errors.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--warning-gradient`</Table.Column>
+    <Table.Column>Gradient variable for warning-related elements.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--surface-gradient`</Table.Column>
+    <Table.Column>Gradient variable for surface elements.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--mixed1-gradient`</Table.Column>
+    <Table.Column>Customizable gradient variable for mixed color combination 1.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--mixed2-gradient`</Table.Column>
+    <Table.Column>Customizable gradient variable for mixed color combination 2.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--mixed3-gradient`</Table.Column>
+    <Table.Column>Customizable gradient variable for mixed color combination 3.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--mixed4-gradient`</Table.Column>
+    <Table.Column>Customizable gradient variable for mixed color combination 4.</Table.Column>
+  </Table.Row>
+</Table>
+## Customizing the Spacing
+
+To customize the spacing, you can override the default values of the spacing variables by assigning new values to the corresponding --space-\* variables. For example:
+
+```css showLineNumbers title="themes.css"
+:root {
+  /* To customize the spacing, you can assign new values to the --space-* variables. */
+  --space-md-custom: 20px; /* Customize the spacing for the md breakpoint */
+  --space-lg-custom: 30px; /* Customize the spacing for the lg breakpoint */
+  /* ETC */
+}
+```
+
+By updating these spacing variables, you can achieve a unique layout and spacing style within your project.
+
+## Best Practices
+
+- **Use consistent spacing:** We recommend using the provided spacing values and leveraging the custom properties within the existing components to maintain design consistency and alignment.
+- **Responsive design:** Be cautious when adjusting spacing, as it may affect the responsive layout. The default values adapt well to various screen sizes, ensuring harmonious proportions.
+
+## Conclusion
+
+The CSS spacing variables allow you to create consistent and responsive spacing within your project. By customizing the spacing, you can achieve a unique design while adhering to best practices for layout and alignment. Experiment with different values to find the optimal spacing that enhances visual harmony and readability.
+
+Remember to test and preview your changes across various screen sizes to ensure they align with your design goals. Strive for a balanced layout that maintains proportions and alignment for a visually appealing experience.

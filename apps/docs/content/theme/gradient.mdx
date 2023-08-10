@@ -1,61 +1,63 @@
 ---
-title: 'CSS Font Size Variables'
-type: 'Theme'
+title: Gradient
+type: Theme
 excerpt: 'The following CSS variables define gradients for different color combinations. These variables allow you to customize the gradients used in your project. If you prefer different gradient styles, you can override these values according to your needs.'
 root: themes
 ---
 
-## `:root` CSS Selector
+# CSS Gradient Color Theme
 
-The font size variables are defined within the `:root` CSS selector, which ensures that the variables are accessible throughout your CSS stylesheets.
+Enhance your project's visual appeal with customizable CSS gradient variables in Pillar UI. These variables enable you to create stunning gradient styles for various color combinations, elevating your design to new heights.
 
-```css
-:root {
-  --success-gradient: var(
-    --primary-gradient-custom,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--primary-9), var(--primary-8))
-  );
-  --secondary-gradient: var(
-    --secondary-gradient-custom,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--secondary-9), var(--secondary-8))
-  );
-  --danger-gradient: var(
-    --danger-gradient-custom,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--danger-9), var(--danger-8))
-  );
-  --success-gradient: var(
-    --success-gradient-custom,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--success-9), var(--success-8))
-  );
-  --warning-gradient: var(
-    --warning-gradient-custom,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--warning-9), var(--warning-8))
-  );
-  --surface-gradient: var(
-    --senary-gradient-custom,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--surface-9), var(--surface-8))
-  );
+## Usage Gradient Variables
 
-  --mixed1-gradient: var(
-    --mixed-gradient-custom1,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--primary-9), var(--secondary-8))
-  );
-  --mixed2-gradient: var(
-    --mixed-gradient-custom2,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--danger-9), var(--warning-8))
-  );
-  --mixed3-gradient: var(
-    --mixed-gradient-custom3,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--primary-9), var(--success-8))
-  );
-  --mixed4-gradient: var(
-    --mixed-gradient-custom4,
-    linear-gradient(--var(--gradient-degree, 180deg), var(--secondary-9), var(--danger-8))
-  );
-}
-```
+These gradient variables are available for usage when applying themes to your CSS. Some of our components utilize these variables to support gradients under the hood, so you don't need to worry about them. However, if you want to use gradients in your custom components, you can reference these variables using the following names, for example: `var(--success-gradient)`.
 
-Gradient Variables
+<Table>
+  <Table.Row type="head">
+    <Table.Column as="th">Variable</Table.Column>
+    <Table.Column as="th">Description</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--success-gradient`</Table.Column>
+    <Table.Column>Gradient variable for success-related elements.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--secondary-gradient`</Table.Column>
+    <Table.Column>Gradient variable for secondary elements.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--danger-gradient`</Table.Column>
+    <Table.Column>Gradient variable for elements associated with danger or errors.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--warning-gradient`</Table.Column>
+    <Table.Column>Gradient variable for warning-related elements.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--surface-gradient`</Table.Column>
+    <Table.Column>Gradient variable for surface elements.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--mixed1-gradient`</Table.Column>
+    <Table.Column>Customizable gradient variable for mixed color combination 1.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--mixed2-gradient`</Table.Column>
+    <Table.Column>Customizable gradient variable for mixed color combination 2.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--mixed3-gradient`</Table.Column>
+    <Table.Column>Customizable gradient variable for mixed color combination 3.</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--mixed4-gradient`</Table.Column>
+    <Table.Column>Customizable gradient variable for mixed color combination 4.</Table.Column>
+  </Table.Row>
+</Table>
+
+## Gradient Variables
+
 The gradient variables define different gradients for various color combinations. Each variable represents a specific gradient style:
 
 - **--success-gradient**: Gradient variable for success-related elements.
@@ -68,15 +70,15 @@ The gradient variables define different gradients for various color combinations
 - **--mixed3-gradient**: Customizable gradient variable for mixed color combination 3.
 - **--mixed4-gradient**: Customizable gradient variable for mixed color combination 4.
 
-## Customizing the Gradients
+## Customizing Gradients
 
-To customize the gradients, you can override the default values of the gradient variables by assigning new gradient styles to the corresponding --\*-gradient-custom variables. For example:
+If you'd like to customize the gradient styles beyond the default values, you have the flexibility to do so. Simply override the existing gradient variables with your preferred gradient styles.
 
-```css
+For instance, if you want to modify the gradient colors for the `--success-gradient`, you can achieve this by assigning a new `linear-gradient` value to the `--success-gradient-custom` variable:
+
+```css showLineNumbers title="themes.css"
 :root {
-  /* To customize the gradients, you can override the --\*-gradient-custom variables with your own gradient styles. */
-  --primary-gradient-custom: linear-gradient(--var(--gradient-degree, 180deg), #ff0000, #00ff00);
-  --secondary-gradient-custom: linear-gradient(--var(--gradient-degree, 180deg), #0000ff, #ffff00);
+  --success-gradient-custom: linear-gradient(to right, #00ff00, #ff0000);
 }
 ```
 
@@ -101,6 +103,17 @@ Gradients can add visual interest and depth to your designs. However, it's impor
 By following these best practices, you can ensure that your gradients enhance the overall visual experience while maintaining accessibility for all users.
 
 Remember, accessibility should always be a priority when designing with gradients or any other visual elements.
+
+### Frequently Asked Questions
+
+**Q1: How do I apply gradients to my UI components?**
+If you want to add a gradient to a component that supports it, you can do so by using the gradient prop. For example, if you have a component that supports gradient styling and you want to apply a success-related gradient, you can use the gradient prop like this: gradient="success". This will automatically apply the predefined success gradient style to the component.
+
+**Q2: Can I create my own custom gradient styles?**
+Yes, you can! Pillar UI allows you to customize gradient styles by overriding the default gradient variables with your preferred gradient definitions. Use the --\*-gradient-custom variables to apply your custom gradient styles.
+
+**Q3: Are there any tools to help ensure contrast and accessibility with gradients?**
+Absolutely. There are various online tools available that can help you check the contrast between different gradient colors and ensure accessibility compliance. These tools can assist you in maintaining readability for users with varying visual abilities.
 
 ## Conclusion
 

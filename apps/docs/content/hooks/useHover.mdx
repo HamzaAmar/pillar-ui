@@ -1,0 +1,54 @@
+---
+title: useHover
+type: Hooks
+excerpt: 'The useHover hook is a custom hook for tracking the hover state of an element. It provides event handlers for onMouseEnter and onMouseLeave, and a boolean value representing the current hover state.'
+file: hooks
+root: hooks
+---
+
+## Why useHover
+
+The useHover hook simplifies the process of tracking the hover state of an element in a React application. It provides an easy-to-use interface for handling hover events and accessing the current hover state.
+
+## Installation
+
+To use the useHover hook, simply import it into your React component:
+
+```ts
+import { useHover } from '@pillar-ui/hooks'
+```
+
+## Returned Values
+
+The useHover hook returns an object with the following properties:
+
+- `hoverHandlers`: An object containing the event handlers for `onMouseEnter` and `onMouseLeave` events. These event handlers should be spread onto the element you want to track the hover state for.
+- `isHovered`: A boolean value representing the current hover state of the element. It will be `true` when the element is being hovered, and `false` otherwise.
+
+## Usage
+
+To use the useHover hook, call it inside your functional component like so:
+
+```tsx
+import { useHover } from '@pillar-ui/hooks'
+
+function MyComponent() {
+  const { hoverHandlers, isHovered } = useHover()
+
+  return <div {...hoverHandlers}> {isHovered ? 'Hovered' : 'Not Hovered'} </div>
+}
+```
+
+In the example above, the `useHover` hook is used to track the hover state of a `div` element. The `hoverHandlers` object is spread onto the `div` element to attach the `onMouseEnter` and `onMouseLeave` event handlers. The `isHovered` variable is used to conditionally render the text based on the current hover state.
+
+## Implementation details
+
+The useHover hook uses the `useState` and `useCallback` hooks from React to manage the hover state and handle hover events. It updates the hover state based on the `onMouseEnter` and `onMouseLeave` events triggered by the element.
+
+## TypeScript Support
+
+The useHover hook is written in TypeScript and provides type definitions for its return values.
+
+## Conclusion
+
+The useHover hook simplifies the process of tracking the hover state of an element in a React application. By handling the complex work of managing the hover state and providing event handlers, this hook allows you to easily add interactivity based on hover events.

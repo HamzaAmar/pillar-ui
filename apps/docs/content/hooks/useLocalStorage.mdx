@@ -1,0 +1,77 @@
+---
+title: useLocalStorage
+type: Hooks
+excerpt: 'The useLocalStorage hook is a custom React hook that provides an interface for working with local storage while supporting Server-Side Rendering (SSR).'
+file: hooks
+root: hooks
+---
+
+## Why useLocalStorage
+
+The useLocalStorage hook allows you to easily manage data in local storage within your React application. It provides a simple API for setting, getting, and removing values from local storage, while also supporting Server-Side Rendering (SSR).
+
+## Installation
+
+To use the useLocalStorage hook, simply import it into your React component:
+
+```ts
+import useLocalStorage from '@pillar-ui/hooks/useLocalStorage'
+```
+
+## Parameters
+
+The useLocalStorage hook takes an object with the following parameters:
+
+- `key: string`: The key under which the value will be stored in local storage.
+- `initialValue: T`: The initial value to use when the value is not found in local storage.
+- `serialize?: (value: T) => string`: A serialization function to convert the value to a string before storing it in local storage. Defaults to `JSON.stringify`.
+- `deserialize?: (value: string) => T`: A deserialization function to convert the stored string value back to its original format. Defaults to `JSON.parse`.
+
+## Returned Values
+
+The useLocalStorage hook returns an object with the following properties and methods:
+
+- `value: T`: The current value stored in local storage.
+- `setValue: (value: T) => void`: A function to set the value in local storage.
+- `removeValue: () => void`: A function to remove the value from local storage.
+
+## Usage
+
+To use the useLocalStorage hook, call it inside your functional component:
+
+```tsx
+import useLocalStorage from '@pillar-ui/hooks/useLocalStorage'
+
+function MyComponent() {
+  const { value, setValue, removeValue } = useLocalStorage({ key: 'myKey', initialValue: 'myDefaultValue' })
+
+  // Access the value stored in local storage console.log('Stored value:', value)
+
+  // Set a new value in local storage const handleClick = () => { setValue('newValue') }
+
+  // Remove the value from local storage const handleRemove = () => { removeValue() }
+
+  return (
+    <div>
+      {' '}
+      <p>Stored value: {value}</p> <button onClick={handleClick}>Set Value</button> <button onClick={handleRemove}>
+        Remove Value
+      </button>{' '}
+    </div>
+  )
+}
+```
+
+In the example above, the `useLocalStorage` hook is used to manage a value stored in local storage. The `value` property contains the current value, `setValue` can be used to set a new value, and `removeValue` removes the value from local storage.
+
+## Implementation details
+
+The useLocalStorage hook uses the `useState` and `useEffect` hooks from React to manage the state and handle updates. It conditionally retrieves and sets values in local storage using the `storageService` object, which can be replaced with a custom implementation if needed.
+
+## TypeScript Support
+
+The useLocalStorage hook is written in TypeScript and provides type definitions for its parameters and returned values.
+
+## Conclusion
+
+The useLocalStorage hook simplifies working with local storage in your React application. By providing an easy-to-use interface and supporting SSR, this hook allows you to manage and persist data across multiple sessions and devices.
