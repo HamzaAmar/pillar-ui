@@ -30,7 +30,7 @@ const Header = () => {
         <IconButton className="only-mobile" corner="sm" onClick={setFalse} icon={<Close />} title={'Hide Search '} />
       </Flex>
 
-      <Flex className="l_flex-1" justify="end" gap="xs">
+      <Flex className="l_flex-1" items="center" justify="end" gap="xs">
         <IconButton onClick={setTrue} className="only-mobile" icon={<ListSearch />} title={'Show Search'} />
         <IconButton onClick={toggleDirection} icon={<TextRtl />} title={'Go to Pillar Github Page'} />
         <IconButton onClick={toggleMode} icon={isDark ? <Sun /> : <Moon />} title="Turn on light mode" />

@@ -27,8 +27,7 @@ const colors = () => {
                 ))}
                 {light.map((color) => (
                   <Paper
-                    borderWidth="3px"
-                    borderColor="opacity-10"
+                    b="1px solid var(--opacity-10)"
                     corner="xs"
                     style={{ background: `hsl(${color})` }}
                     key={color}
@@ -36,9 +35,7 @@ const colors = () => {
                 ))}
                 {dark.map((color) => (
                   <Paper
-                    borderWidth="3px"
-                    borderColor="opacity-10"
-                    borderStyle="solid"
+                    b="1px solid var(--opacity-10)"
                     corner="xs"
                     style={{ height: '30px', background: `hsl(${color})` }}
                     key={color}
