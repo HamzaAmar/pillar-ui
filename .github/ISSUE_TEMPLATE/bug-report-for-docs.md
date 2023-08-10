@@ -1,38 +1,58 @@
 ---
-name: Bug report For Docs
-about: Create a report for docs to help us improve
-title: ''
-labels: ''
+name: 📚 Doc: Bug Report
+about: Identify and detail an issue specifically related to our Doc section
+title: 'Docs Bug: '
+labels: 'docs, bug'
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Bug Description 🐛
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+Start with a brief sentence summarizing the issue, then provide a complete description of the problem. Be as specific as possible.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Page Link 🌐
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+Give us the URL where you encountered the issue in the documentation.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Reproduction Steps 🔄
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+Provide a detailed step by step guide of how to replicate your issue. If possible, include code snippets, error messages or screenshots:
 
-**Additional context**
-Add any other context about the problem here.
+1. Step 1
+2. Step 2
+3. ...
+4. The problem
+
+## Expected Content ⭐
+
+A clear and concise description of the information you expected to see in the docs which is currently missing or incorrect.
+
+## Screenshots 📸
+
+If possible, add screenshots highlighting the problematic text/section. This can greatly help us diagnose and solve the issue quickly.
+
+## Your Environment: Web Browser 💻
+
+Include relevant details about the environment you experienced the bug in:
+
+- OS: [e.g., iOS, Windows]
+- Browser [e.g., Chrome, Safari]
+- Version [e.g., 22]
+
+## Your Environment: Mobile Browser 📱
+
+If applicable, include relevant details about the environment you experienced the bug in:
+
+- Device: [e.g., iPhone13]
+- OS: [e.g., iOS15.2]
+- Browser: [e.g., Safari]
+- Version: [e.g., 15]
+
+## Possible Solutions 🤔
+
+If you have any insight into what might be wrong, please share that here. If not, that's perfectly fine—our team will look into the issue soon!
+
+## Additional Context 💡
+
+Add any other information about the problem here. The more context we have, the more efficiently we can solve your request!
