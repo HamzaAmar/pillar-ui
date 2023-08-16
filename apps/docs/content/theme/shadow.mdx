@@ -1,0 +1,39 @@
+---
+title: Shadow
+type: Theme
+excerpt: Customize shadow styles for different components using responsive CSS variables. Adjust the shadow size, spread, and color based on your project's design requirements."
+root: themes
+---
+
+# CSS Shadow Variables
+
+The following CSS variables define shadow styles for different components. These variables allow you to customize shadow properties such as size, spread, and color. The default values employ the `var()` function to provide a flexible and customizable shadow experience.
+
+## Default Shadow Variables
+
+The default shadow variables, defined within the `:root` CSS selector, provide a balanced and responsive shadow experience. Each variable corresponds to a different level of shadow intensity.
+
+## Customizing Shadow Styles
+
+To customize the shadow styles, you can override the default values of the shadow variables by assigning new values to the corresponding --custom-\* variables. Here's an example:
+
+```css showLineNumbers title="themes.css"
+:root {
+  /* Customize the shadow styles by assigning new values to the --custom-* variables. */
+  --shadow-md-custom: 0 10px 20px -10px rgba(0, 0, 0, 0.5); /* Customize the shadow for the md breakpoint */
+  --shadow-lg-custom: 0 12px 24px -12px rgba(0, 0, 0, 0.6); /* Customize the shadow for the lg breakpoint */
+}
+```
+
+By updating these shadow variables, you can achieve a distinctive shadow style and influence the way components are rendered on the screen.
+
+## Best Practices
+
+- **Maintain consistency:** While you have the freedom to customize shadow styles, we recommend sticking with the provided shadow variables as much as possible. This ensures a consistent and visually harmonious design across different components.
+- **Test for clarity:** When customizing shadow intensity, ensure that the shadows do not compromise the clarity and readability of the content. Shadows that are too intense might negatively impact the user experience.
+
+## Conclusion
+
+The CSS shadow variables provide you with the flexibility to create unique and visually appealing shadow styles for your components. By customizing the shadow variables, you can achieve a distinctive design while adhering to design consistency and best practices. Experiment with different shadow values and breakpoints to find the optimal shadow styles that enhance the user interface.
+
+As you make changes to shadow styles, remember to test and preview them across various components and screen sizes to ensure they align with your design goals. Strive for a balance between aesthetics and usability, ensuring that the shadow styles enhance the overall visual experience.

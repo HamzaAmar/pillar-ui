@@ -9,7 +9,7 @@ root: components
 
 ## Props
 
-### size
+### Size
 
 - Type: string
 - Default: `md`
@@ -30,7 +30,7 @@ Example:
 <Heading size="2xl">Some heading.</Heading>
 ```
 
-### weight
+### Weight
 
 The weight prop controls the weight (boldness) of the heading. The following values are valid:
 
@@ -46,7 +46,7 @@ Example:
 <Heading weight="extra-bold">Some heading.</Heading>
 ```
 
-### truncate
+### Truncate
 
 The truncate prop with the value of "multiline" will truncate the heading if it exceeds the specified numberLine prop value and will display an ellipsis at the end of the last visible line. On the other hand, if the truncate prop value is "singleline", it will truncate the heading to fit within a single line and display an ellipsis at the end of the truncated heading.
 
@@ -109,7 +109,7 @@ export function HeadingTrucates() {
 }
 ```
 
-### align
+### Align
 
 This property specifies the horizontal alignment of the heading within the parent element. It can take one of the following values:
 
@@ -209,7 +209,7 @@ export function HeadingColors() {
 }
 ```
 
-### leading
+### Leading
 
 you can customize the leading (line height) of your heading by using the leading prop. This prop accepts four different values: "normal", "sm", "md", and "lg"
 
@@ -235,7 +235,7 @@ Example
 
 By using the leading prop, you can easily adjust the line height of your heading to create a more visually appealing design.
 
-### dir For RTL language Support
+### dir RTL language
 
 "dir": This prop sets the direction of the heading within the component. It accepts the values "rtl" for right-to-left direction or "ltr" for left-to-right direction. This prop is useful when displaying heading in languages that are read from right to left, such as Arabic or Hebrew.
 
@@ -261,18 +261,6 @@ export function HeadingRTL() {
 ## Use Case
 
 The Heading component can be used to display heading in various sizes and weights.
-
-## Implementation details
-
-The Heading component is implemented using JSX and styled with CSS.
-
-## Accessibility
-
-The Heading component uses semantic HTML elements and provides an aria-label attribute when necessary to ensure accessibility.
-
-## TypeScript Support
-
-The Heading component has full TypeScript support.
 
 ## Troubleshooting
 

@@ -9,7 +9,7 @@ root: components
 
 ## props
 
-### size
+### Size
 
 - Type: string
 - Default: `md`
@@ -58,7 +58,7 @@ export const BadgeSize = () => {
 }
 ```
 
-### corner
+### Corner
 
 Type: string
 Default: `md`
@@ -108,7 +108,7 @@ export const BadgeSize = () => {
 }
 ```
 
-### variant
+### Variant
 
 The variant prop determines the type of Badge to render. It accepts the following values:
 
@@ -132,7 +132,7 @@ export const BadgeVariants = () => {
 }
 ```
 
-### number?: number
+### Number
 
 The number prop is required for the numeric variant. It determines the numeric value to display.
 
@@ -156,7 +156,7 @@ export const BadgeNumericMaxValue = () => {
 }
 ```
 
-### max?: number
+### Max
 
 The max prop is required for the numeric variant. It determines the maximum value that can be displayed. If the number prop is greater than max, the badge will display max+.
 
@@ -180,7 +180,7 @@ export const BadgeNumericMaxValue = () => {
 }
 ```
 
-### color?: string
+### Color
 
 Type: Color (string)
 Default: `primary`
@@ -228,18 +228,6 @@ export const BadgeDotColor = () => {
 ## Use Case
 
 Badges are often used to highlight important or urgent information, such as unread messages, new notifications, or error messages. They can also be used to display a user's status, such as "online" or "away."
-
-## Implementation details
-
-The Badge component typically consists of a small shape, such as a circle or square, with a number or text inside. The number or text is often used to indicate the quantity of items or the specific type of notification. The Badge component can be implemented using HTML and CSS, or with a UI framework or library such as React, Angular, or Vue.
-
-## Accessibility
-
-When implementing the Badge component, it's important to ensure that it is accessible to all users, including those with disabilities. This can include using appropriate colors and contrast ratios, providing alternative text for screen readers, and ensuring that the component is keyboard accessible.
-
-## TypeScript Support
-
-Many UI frameworks and libraries, including React, Angular, and Vue, have built-in TypeScript support, which can be useful when implementing the Badge component. Using TypeScript can help catch errors early in the development process and make it easier to maintain and scale the component over time.
 
 ## Troubleshooting
 

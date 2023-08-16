@@ -11,7 +11,7 @@ This documentation provides an overview and usage information for a set of utili
 ## isBrowser
 
 ```tsx
-export { isBrowser } from '@pillar-ui/utils'
+import { isBrowser } from '@pillar-ui/utils'
 ```
 
 This function checks whether the code is executing in a browser environment. It returns true if the current runtime environment is a browser, and false otherwise.
@@ -19,7 +19,7 @@ This function checks whether the code is executing in a browser environment. It 
 **usage**
 
 ```ts title='app.ts' showLineNumbers
-export { isBrowser } from '@pillar-ui/utils'
+import { isBrowser } from '@pillar-ui/utils'
 
 if (isBrowser) {
   window.localStorage.get('card')
@@ -29,7 +29,7 @@ if (isBrowser) {
 ## isServer
 
 ```tsx
-export { isServer } from '@pillar-ui/utils'
+import { isServer } from '@pillar-ui/utils'
 ```
 
 This function checks whether the code is executing in a server or non-browser environment. It returns true if the current runtime environment is a non-browser environment (such as server-side JavaScript or Node.js), and false otherwise.
@@ -37,7 +37,7 @@ This function checks whether the code is executing in a server or non-browser en
 **usage**
 
 ```ts title='app.ts' showLineNumbers
-export { isServer } from '@pillar-ui/utils'
+import { isServer } from '@pillar-ui/utils'
 
 if (isServer) {
   try{
@@ -49,7 +49,7 @@ if (isServer) {
 ## isBoolean
 
 ```tsx
-export { isBoolean } from '@pillar-ui/utils'
+import { isBoolean } from '@pillar-ui/utils'
 ```
 
 This function checks whether the code is executing in a server or non-browser environment. It returns true if the current runtime environment is a non-browser environment (such as server-side JavaScript or Node.js), and false otherwise.
@@ -62,7 +62,7 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { isBoolean } from '@pillar-ui/utils'
+import { isBoolean } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -72,7 +72,7 @@ const isOpen = isBoolean(value) ? value : !value
 ## isFunction
 
 ```tsx
-export { isFunction } from '@pillar-ui/utils'
+import { isFunction } from '@pillar-ui/utils'
 ```
 
 isFunction function is a built-in JavaScript function that checks if the value passed to it is a function. It returns a boolean value of either true or false.
@@ -85,8 +85,8 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { useState } from 'react'
-export { isFunction } from '@pillar-ui/utils'
+import { useState } from 'react'
+import { isFunction } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -96,7 +96,7 @@ const [open, setOpen] = useState(isFunction(value) ? initialVal() : initialVal)
 ## isNumber
 
 ```tsx
-export { isFunction } from '@pillar-ui/utils'
+import { isFunction } from '@pillar-ui/utils'
 ```
 
 isNumber function is a built-in JavaScript function that checks if the value passed to it is a number. It returns a boolean value of either true or false.
@@ -109,8 +109,8 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { useState } from 'react'
-export { isFunction } from '@pillar-ui/utils'
+import { useState } from 'react'
+import { isFunction } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -120,7 +120,7 @@ const [open, setOpen] = useState(isFunction(value) ? initialVal() : initialVal)
 ## isInteger
 
 ```tsx
-export { isFunction } from '@pillar-ui/utils'
+import { isFunction } from '@pillar-ui/utils'
 ```
 
 isInteger function is a built-in JavaScript function that checks if the value passed to it is an integer. It returns a boolean value of either true or false.
@@ -133,8 +133,8 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { useState } from 'react'
-export { isFunction } from '@pillar-ui/utils'
+import { useState } from 'react'
+import { isFunction } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -144,7 +144,7 @@ const [open, setOpen] = useState(isFunction(value) ? initialVal() : initialVal)
 ## isFloat
 
 ```tsx
-export { isFloat } from '@pillar-ui/utils'
+import { isFloat } from '@pillar-ui/utils'
 ```
 
 isFloat function is a built-in JavaScript function that checks if the value passed to it is an float number. It returns a boolean value of either true or false.
@@ -157,8 +157,8 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { useState } from 'react'
-export { isFloat } from '@pillar-ui/utils'
+import { useState } from 'react'
+import { isFloat } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -168,7 +168,7 @@ const [open, setOpen] = useState(isFloat(value) ? initialVal() : initialVal)
 ## isString
 
 ```tsx
-export { isString } from '@pillar-ui/utils'
+import { isString } from '@pillar-ui/utils'
 ```
 
 The isString function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
@@ -181,8 +181,8 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { useState } from 'react'
-export { isString } from '@pillar-ui/utils'
+import { useState } from 'react'
+import { isString } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -192,7 +192,7 @@ const [open, setOpen] = useState(isString(value) ? initialVal : initialVal.toStr
 ## isObject
 
 ```tsx
-export { isObject } from '@pillar-ui/utils'
+import { isObject } from '@pillar-ui/utils'
 ```
 
 The isObject function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
@@ -205,8 +205,8 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { useState } from 'react'
-export { isObject } from '@pillar-ui/utils'
+import { useState } from 'react'
+import { isObject } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -216,7 +216,7 @@ const [open, setOpen] = useState(isObject(value) ? initialVal : initialVal.toStr
 ## isArray
 
 ```tsx
-export { isArray } from '@pillar-ui/utils'
+import { isArray } from '@pillar-ui/utils'
 ```
 
 The isArray function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
@@ -229,8 +229,8 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { useState } from 'react'
-export { isArray } from '@pillar-ui/utils'
+import { useState } from 'react'
+import { isArray } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -240,7 +240,7 @@ const [open, setOpen] = useState(isArray(value) ? initialVal : initialVal.toStri
 ## isRef
 
 ```tsx
-export { isRef } from '@pillar-ui/utils'
+import { isRef } from '@pillar-ui/utils'
 ```
 
 The isRef function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
@@ -253,8 +253,8 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { useState } from 'react'
-export { isRef } from '@pillar-ui/utils'
+import { useState } from 'react'
+import { isRef } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -264,7 +264,7 @@ const [open, setOpen] = useState(isRef(value) ? initialVal : initialVal.toString
 ## isWindow
 
 ```tsx
-export { isWindow } from '@pillar-ui/utils'
+import { isWindow } from '@pillar-ui/utils'
 ```
 
 The isWindow function is a built-in JavaScript function that checks if the value passed to it is a string. It returns a boolean value of either true or false
@@ -277,8 +277,8 @@ This function checks whether a value is a boolean.
 - **Returns**: true if the value is a boolean, false otherwise.
 
 ```ts title='app.ts' showLineNumbers
-export { useState } from 'react'
-export { isWindow } from '@pillar-ui/utils'
+import { useState } from 'react'
+import { isWindow } from '@pillar-ui/utils'
 
 const value = 'false'
 
@@ -301,7 +301,7 @@ Use Case: Use this function to determine if a value is an instance of the Date c
 ## isPromise(val)
 
 ```tsx
-export { isPromise } from '@pillar-ui/utils'
+import { isPromise } from '@pillar-ui/utils'
 ```
 
 This function checks if a value is a Promise object. A Promise is a JavaScript object used for asynchronous operations, providing a way to handle and chain the results of asynchronous operations.
@@ -312,7 +312,7 @@ This function checks if a value is a Promise object. A Promise is a JavaScript o
 Use Case: Use this function to verify if a value represents a Promise object, allowing you to handle promises in a specific manner in your code.
 
 ```tsx
-export { isError } from '@pillar-ui/utils'
+import { isError } from '@pillar-ui/utils'
 ```
 
 ## isError(val)
@@ -327,7 +327,7 @@ Description: Checks if a value is an instance of the Error class.
 Use Case: Use this function to determine if a value is an Error object.
 
 ```tsx
-export { isError } from '@pillar-ui/utils'
+import { isError } from '@pillar-ui/utils'
 
 if (!isError) {
   console.log('Hello World')
@@ -337,7 +337,7 @@ if (!isError) {
 ## isLeapYear(year)
 
 ```tsx
-export { isLeapYear } from '@pillar-ui/utils'
+import { isLeapYear } from '@pillar-ui/utils'
 ```
 
 This function checks if a year is a leap year. A leap year has 366 days instead of the usual 365 days and occurs every four years to account for the extra time it takes for the Earth to complete one orbit around the Sun.
@@ -348,7 +348,7 @@ This function checks if a year is a leap year. A leap year has 366 days instead 
 Use Case: Use this function to identify if a specific year is a leap year, which can be useful for handling calendar-related calculations or displaying accurate date information.
 
 ```ts title='app.ts' showLineNumbers
-export { isLeapYear } from '@pillar-ui/utils'
+import { isLeapYear } from '@pillar-ui/utils'
 
 const daysInYear = isLeapYear ? 366 : 365
 ```
@@ -356,7 +356,7 @@ const daysInYear = isLeapYear ? 366 : 365
 ## isValidDate(dateString)
 
 ```tsx
-export { isValidDate } from '@pillar-ui/utils'
+import { isValidDate } from '@pillar-ui/utils'
 ```
 
 - **Parameters**: dateString (Date|string): The string or Date object to check.
@@ -367,7 +367,7 @@ This function checks if a string or Date object represents a valid date. It vali
 Use Case: Use this function to ensure that a string or Date object contains a valid date before performing further operations or displaying the date information.
 
 ```ts title='app.ts' showLineNumbers
-export { isValidDate, getYear } from '@pillar-ui/utils'
+import { isValidDate, getYear } from '@pillar-ui/utils'
 
 const date = '1993/08/10'
 const age = 24
@@ -379,7 +379,7 @@ console.log(isValidDate(date) ? date : dateOfBirth)
 ## isEmptyObject(obj)
 
 ```tsx
-export { isEmptyObject } from '@pillar-ui/utils'
+import { isEmptyObject } from '@pillar-ui/utils'
 ```
 
 This function checks if an object is empty, meaning it has no own enumerable properties. It verifies whether the provided object does not have any properties defined directly on it.
@@ -390,11 +390,106 @@ This function checks if an object is empty, meaning it has no own enumerable pro
 Use Case: Use this function to determine if an object is empty, enabling you to handle scenarios where you need to check if an object has any properties or perform logic based on its emptiness.
 
 ```ts title='app.ts' showLineNumbers
-export { isEmptyObject } from '@pillar-ui/utils'
+import { isEmptyObject } from '@pillar-ui/utils'
 
 const date = '1993/08/10'
 const age = 24
 const isEmptyArray = isEmptyObject([])
 const isEmptyObj = isEmptyObject({})
 const isNotEmptyObj = isEmptyObject({ key: 'hello' })
+```
+
+## isValidIPAddress(string)
+
+```tsx
+import { isValidIPAddress } from '@pillar-ui/utils'
+```
+
+This function checks if a string is a valid IP address. It returns true if the IP address is valid, false otherwise.
+
+```ts title='app.ts' showLineNumbers
+import { isValidIPAddress } from '@pillar-ui/utils'
+
+const ipAddress = '192.168.1.1'
+if (isValidIPAddress(ipAddress)) {
+  console.log('The IP address is valid!')
+} else {
+  console.log('The IP address is not valid!')
+}
+```
+
+## isInRange(obj)
+
+```tsx
+import { isInRange } from '@pillar-ui/utils'
+```
+
+This function checks if a number is within a specified range (inclusive). It returns true if the number is within the range, false otherwise.
+
+```ts title='app.ts' showLineNumbers
+import { isInRange } from '@pillar-ui/utils'
+
+const num = 5
+if (isInRange({ num, min: 1, max: 10 })) {
+  console.log('The number is in range!')
+} else {
+  console.log('The number is not in range!')
+}
+```
+
+## isValidCreditCardNumber(string)
+
+```tsx
+import { isValidCreditCardNumber } from '@pillar-ui/utils'
+```
+
+This function checks if a credit card number is valid using the Luhn algorithm. It returns true if the credit card number is valid, false otherwise.
+
+```ts title='app.ts' showLineNumbers
+import { isValidCreditCardNumber } from '@pillar-ui/utils'
+
+const cardNumber = '4111111111111111'
+if (isValidCreditCardNumber(cardNumber)) {
+  console.log('The credit card number is valid!')
+} else {
+  console.log('The credit card number is not valid!')
+}
+```
+
+## isValidAlphanumeric(string)
+
+```tsx
+import { isValidAlphanumeric } from '@pillar-ui/utils'
+```
+
+This function checks if a string contains only alphanumeric characters (letters and numbers). It returns true if the string contains only alphanumeric characters, false otherwise.
+
+```ts title='app.ts' showLineNumbers
+import { isValidAlphanumeric } from '@pillar-ui/utils'
+
+const str = 'Hello123'
+if (isValidAlphanumeric(str)) {
+  console.log('The string is alphanumeric!')
+} else {
+  console.log('The string is not alphanumeric!')
+}
+```
+
+## isValidAlphanumeric(string)
+
+```tsx
+import { isValidAlphanumeric } from '@pillar-ui/utils'
+```
+
+This function checks if a string contains only alphanumeric characters (letters and numbers). It returns true if the string contains only alphanumeric characters, false otherwise.
+
+```ts title='app.ts' showLineNumbers
+import { isValidAlphanumeric } from '@pillar-ui/utils'
+
+const str = 'Hello123'
+if (isValidAlphanumeric(str)) {
+  console.log('The string is alphanumeric!')
+} else {
+  console.log('The string is not alphanumeric!')
+}
 ```

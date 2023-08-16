@@ -9,61 +9,64 @@ root: themes
 
 The font size variables, defined within the `:root` CSS selector, ensure accessibility throughout your CSS stylesheets.
 
-> :warning: **Caution:** If you opt to customize font sizes using the `--custom-font-*` variables, be mindful that altering these values might lead to non-responsive typography. The default values employ the `clamp` function to dynamically adjust font size based on viewport size, ensuring a consistent and responsive experience. However, customizing these values could impact typography responsiveness.
+<Alert
+  color="warning"
+  title="Caution"
+  message="Customizing spacing using the `--space-*` variables may impact the responsive layout. Default values utilize the `clamp` function to adapt spacing based on viewport size, maintaining proportions and alignment. Modifying these values might result in spacing inconsistencies."
+/>
 
 <Table>
-
-      <Table.Row type='head'>
-       <Table.Column as='th'>Variable</Table.Column>
-       <Table.Column as='th'>Description</Table.Column>
-       <Table.Column as='th'>Default value</Table.Column>
-      </Table.Row>
-      <Table.Row>
-        <Table.Column>`--font-3xs`</Table.Column>
-        <Table.Column>Font size variable for 3 extra small text.</Table.Column>
-        <Table.Column>`clamp(0.55rem, calc(0.52rem + 0.14vw), 0.66rem)`</Table.Column>
-      </Table.Row>
-      <Table.Row>
-        <Table.Column>`--font-2xs`</Table.Column>
-        <Table.Column>Font size variable for 2 extra small text.</Table.Column>
-        <Table.Column>`clamp(0.61rem, calc(0.57rem + 0.22vw), 0.8rem)`</Table.Column>
-      </Table.Row>
-      <Table.Row>
-        <Table.Column>`--font-xs`</Table.Column>
-        <Table.Column>Font size variable for extra small text.</Table.Column>
-        <Table.Column>`clamp(0.69rem, calc(0.63rem + 0.31vw), 0.96rem)`</Table.Column>
-      </Table.Row>
-      <Table.Row>
-        <Table.Column>`--font-sm`</Table.Column>
-        <Table.Column>Font size variable for small text.</Table.Column>
-        <Table.Column>`clamp(0.78rem, calc(0.69rem + 0.44vw), 1.15rem)`</Table.Column>
-      </Table.Row>
-      <Table.Row>
-        <Table.Column>`--font-md`</Table.Column>
-        <Table.Column>Font size variable for medium text.</Table.Column>
-        <Table.Column>`clamp(0.88rem, calc(0.76rem + 0.6vw), 1.38rem)`</Table.Column>
-      </Table.Row>
-      <Table.Row>
-        <Table.Column>`--font-lg`</Table.Column>
-        <Table.Column>Font size variable for large text.</Table.Column>
-        <Table.Column>`clamp(0.98rem, calc(0.83rem + 0.79vw), 1.65rem)`</Table.Column>
-      </Table.Row>
-      <Table.Row>
-        <Table.Column>`--font-xl`</Table.Column>
-        <Table.Column>Font size variable for extra large text.</Table.Column>
-        <Table.Column>`clamp(1.11rem, calc(0.9rem + 1.04vw), 1.98rem)`</Table.Column>
-      </Table.Row>
-      <Table.Row>
-        <Table.Column>`--font-2xl`</Table.Column>
-        <Table.Column>Font size variable for 2 extra large text.</Table.Column>
-        <Table.Column>`clamp(1.25rem, calc(0.98rem + 1.35vw), 2.38rem)`</Table.Column>
-      </Table.Row>
-      <Table.Row>
-        <Table.Column>`--font-3xl`</Table.Column>
-        <Table.Column>Font size variable for 3 extra large text.</Table.Column>
-        <Table.Column>`clamp(1.4rem, calc(1.06rem + 1.73vw), 2.85rem)`</Table.Column>
-      </Table.Row>
-    </Table>
+  <Table.Row type="head">
+    <Table.Column as="th">Variable</Table.Column>
+    <Table.Column as="th">Description</Table.Column>
+    <Table.Column as="th">Default value</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-3xs`</Table.Column>
+    <Table.Column>Font size variable for 3 extra small text.</Table.Column>
+    <Table.Column>`clamp(0.55rem, calc(0.52rem + 0.14vw), 0.66rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-2xs`</Table.Column>
+    <Table.Column>Font size variable for 2 extra small text.</Table.Column>
+    <Table.Column>`clamp(0.61rem, calc(0.57rem + 0.22vw), 0.8rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-xs`</Table.Column>
+    <Table.Column>Font size variable for extra small text.</Table.Column>
+    <Table.Column>`clamp(0.69rem, calc(0.63rem + 0.31vw), 0.96rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-sm`</Table.Column>
+    <Table.Column>Font size variable for small text.</Table.Column>
+    <Table.Column>`clamp(0.78rem, calc(0.69rem + 0.44vw), 1.15rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-md`</Table.Column>
+    <Table.Column>Font size variable for medium text.</Table.Column>
+    <Table.Column>`clamp(0.88rem, calc(0.76rem + 0.6vw), 1.38rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-lg`</Table.Column>
+    <Table.Column>Font size variable for large text.</Table.Column>
+    <Table.Column>`clamp(0.98rem, calc(0.83rem + 0.79vw), 1.65rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-xl`</Table.Column>
+    <Table.Column>Font size variable for extra large text.</Table.Column>
+    <Table.Column>`clamp(1.11rem, calc(0.9rem + 1.04vw), 1.98rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-2xl`</Table.Column>
+    <Table.Column>Font size variable for 2 extra large text.</Table.Column>
+    <Table.Column>`clamp(1.25rem, calc(0.98rem + 1.35vw), 2.38rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-3xl`</Table.Column>
+    <Table.Column>Font size variable for 3 extra large text.</Table.Column>
+    <Table.Column>`clamp(1.4rem, calc(1.06rem + 1.73vw), 2.85rem)`</Table.Column>
+  </Table.Row>
+</Table>
 
 ## Customizing the Font Sizes
 

@@ -12,7 +12,7 @@ root: hooks
 
 ## Introduction
 
-The useBooleanState hook is a custom hook for managing a boolean state value. It returns an object containing the current boolean value and functions for updating it.
+is a custom React hook designed to provide an easy to use interface for managing boolean states in your components. It not only allows you to get the current state and set a new state but also offers handy utility functions to directly set the state to true or false, or to toggle the state.
 
 ## Why useBooleanState
 
@@ -28,29 +28,29 @@ npm install --dev '@pillar-ui/hooks'
 
 ## Usage
 
-To use the useBooleanState hook in your React components, import it and call it in your functional component like this:
+```tsx showLineNumbers title="Alert.tsx"
+const { booleanValue, setTrue, setFalse, setToggle } = useBooleanState(true)
+```
+
+## Examples
+
+Here's an example of how you can use useBooleanState in a functional component:
 
 ```tsx showLineNumbers title="Alert.tsx"
-import { useBooleanState } from '@pillar-ui/hooks'
+import { useBooleanState } from 'path-to-useBooleanState'
 
-function MyComponent() {
-  const { booleanValue, setTrue, setFalse, setToggle } = useBooleanState()
+function BooleanComponent() {
+  const { booleanValue, setTrue, setFalse, setToggle } = useBooleanState(true)
 
   return (
     <div>
-      <p>Current value: {booleanValue.toString()}</p>
-      <button onClick={setTrue}>Set true</button>
-      <button onClick={setFalse}>Set false</button>
-      <button onClick={setToggle}>Toggle value</button>
+      <p>Boolean Value: {booleanValue ? 'True' : 'False'}</p>
+      <button onClick={setTrue}>Set True</button>
+      <button onClick={setFalse}>Set False</button>
+      <button onClick={setToggle}>Toggle</button>
     </div>
   )
 }
-```
-
-You can optionally pass in a boolean value as the default value when calling the useBooleanState hook:
-
-```tsx showLineNumbers title="Alert.tsx"
-const { booleanValue, setTrue, setFalse, setToggle } = useBooleanState(true)
 ```
 
 ## Use Case
@@ -69,9 +69,37 @@ const { booleanValue, setTrue, setFalse, setToggle } = useBooleanState(true)
 
 The useBooleanState hook uses the useState and useCallback hooks from the React library to manage the boolean state value and update functions respectively.
 
+## API Reference
+
+useBooleanState takes a single optional argument:
+
+- `defaultValue`: boolean (optional): The initial state of the boolean. Default is false.
+
+And returns an object with the following keys:
+
+- `booleanValue: boolean:` The current boolean state.
+- `setBooleanValue: function:` A setter function to update the boolean state.
+- `setTrue: function:` A function to set the boolean state to true.
+- `setFalse: function:` A function to set the boolean state to false.
+- `setToggle: function:` A function to toggle the boolean state.
+
 ## TypeScript Support
 
 This hook is written in TypeScript and provides type definitions for its usage
+
+## FAQs
+
+**Q: Can I use useBooleanState in a class component?**
+
+`Answer:` useBooleanState, like all hooks, can only be used in functional components, not class components. Hooks are a feature introduced in React 16.8 that lets you use state and other React features without writing a class.
+
+**Q: What is the advantage of using useBooleanState over traditional useState?**
+
+`Answer:` useBooleanState provides an abstraction over the useState hook and comes bundled with utility functions (setTrue, setFalse, setToggle) that directly set the boolean state to desired values. This not only makes your code simpler and more intuitive but also helps reduce the size of your code by eliminating the need for additional logic to handle boolean state changes.
+
+**Q: Are the utility functions (setTrue, setFalse, setToggle) always the same between renders?**
+
+`Answer:` Yes, the useCallback hook is used to memoize these functions, which ensures they have a stable identity across renders unless their dependencies change.
 
 ## Troubleshooting
 

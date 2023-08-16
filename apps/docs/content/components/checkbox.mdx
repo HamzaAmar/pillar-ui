@@ -11,7 +11,7 @@ root: components
 
 The following are the props that can be used with the Checkbox component:
 
-### label
+### Label
 
 The label prop is used to specify the text that appears next to the checkbox.
 
@@ -23,7 +23,7 @@ Example:
 <Checkbox label="Option 1" />
 ```
 
-### size
+### Size
 
 - Type: string
 - Default: `md`
@@ -52,7 +52,7 @@ export const BadgeSize = () => {
 }
 ```
 
-### color
+### Color
 
 - Type: string
 - Default: `undefined`
@@ -80,7 +80,7 @@ export const CheckboxColor = () => {
 }
 ```
 
-### disabled: boolean
+### Disabled
 
 The disabled state of the Checkbox component is used to indicate that the checkbox cannot be interacted with. It is often used when the user is not allowed to select an option or when the option is not applicable in the current context. In this state, the checkbox appears grayed out and its label may also be grayed out to indicate that it is disabled.
 Example:
@@ -116,7 +116,7 @@ export const CheckboxDisabled = () => {
 }
 ```
 
-### defaultChecked:boolean
+### DefaultChecked
 
 The defaultChecked prop in the Checkbox component is used to set the initial checked state of the checkbox when it is first rendered. This prop can be used when you want the checkbox to be checked by default when the user first loads the page.
 
@@ -143,7 +143,7 @@ export const CheckboxDefaultCheckedColor = () => {
 
 Here's an example of using the defaultChecked prop with different colors in the Checkbox component:
 
-### size:Size
+### Size:Size
 
 The size prop is used to set the size of the checkbox component. It accepts the following options: 3xs, 2xs, xs, sm, md, lg, xl, 2xl, and 3xl.
 
@@ -227,23 +227,6 @@ const isIndeterminate = ({ children }) => {
 ## Use Case
 
 The Checkbox component is commonly used in forms to allow users to select or deselect options. It can be used to represent binary options, such as yes/no or agree/disagree.
-
-## Implementation Details
-
-The Checkbox component is implemented using React and styled with CSS. The component is designed to be flexible and customizable, with options for changing the label, color, size, and state of the component.
-
-## Accessibility
-
-The Checkbox component is designed to be accessible and meets the following criteria:
-
-The component can be operated using the keyboard.
-The component has a visible focus indicator.
-The component has an accessible name and role.
-The component is labeled with the associated text label.
-
-## TypeScript Support
-
-The Checkbox component has TypeScript support and includes type definitions for its props.
 
 ## Troubleshooting
 

@@ -24,7 +24,7 @@ const MyComponent: React.FC = () => {
 
 The PinInput component supports the following props:
 
-### variant: 'filled'
+### Filled
 
 A filled input is a type of PinInput field that has a background color. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
@@ -43,7 +43,7 @@ export const FilledInput = () => {
 }
 ```
 
-### variant: 'outline'
+### Outline
 
 The outline variant of the PinInput component is a type of input field that has a border around it. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
@@ -62,7 +62,7 @@ export const OutlineInput = () => {
 }
 ```
 
-### variant: 'bordered'
+### Bordered
 
 The bordered variant of the PinInput component is a type of input field that has a bottom border that visually separates the input from others and shows the edge of the input.
 
@@ -81,7 +81,7 @@ export const BorderedInput = () => {
 }
 ```
 
-#### `size?: Size`
+### Size
 
 - Type: string
 - Default: `md`
@@ -107,7 +107,7 @@ export const SizePinInput = () => {
 }
 ```
 
-#### `corner?: Corner`
+### Corner
 
 - Type: string
 - Default: `sm`
@@ -135,7 +135,7 @@ export const CornerPinInput = () => {
 }
 ```
 
-#### `color?: Color`
+### Color
 
 - Type: string
 - Default: `primary`
@@ -160,7 +160,7 @@ export const ColorPinInput = () => {
 }
 ```
 
-#### `placeholder?: string`
+### Placeholder
 
 - Type: string
 - Default: `○`
@@ -187,7 +187,7 @@ export const ColorPinPlaceholder = () => {
 }
 ```
 
-#### `length?: number`
+### Length
 
 - Type: number
 - Default: `4`
@@ -237,10 +237,6 @@ export const ColorPinType = () => {
 }
 ```
 
-## TypeScript Support
-
-If you're using TypeScript in your project, you can define interfaces for the data used by the PinInput and ensure that the correct types are passed to the component props.
-
 ## Use Case
 
 The PinInput component is useful when you need to gather user input for a PIN or security code in a secure and organized manner. This can be useful in scenarios like:
@@ -248,10 +244,6 @@ The PinInput component is useful when you need to gather user input for a PIN or
 - User authentication
 - OTP verification
 - Transaction confirmations
-
-## Accessibility
-
-When implementing the PinInput, it's essential to ensure accessibility for users with disabilities. Make sure that the PinInput can be easily navigated using the keyboard, and provide appropriate ARIA attributes for screen readers.
 
 ### Troubleshooting
 

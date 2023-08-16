@@ -1,0 +1,61 @@
+---
+title: RTL Support
+type: Features
+excerpt: 'Welcome to the Pillar project! This Library houses a comprehensive collection of reusable UI components, React hooks, Icons, and other tools designed to enhance modern web development. With a focus on accessibility, scalability, and best practices, Pillar streamlines the development process and empowers you to build robust, high-quality web applications.'
+root: features
+---
+
+## RTL Support
+
+We understand the importance of providing a seamless experience for users who prefer right-to-left (RTL) languages. Pillar UI now includes RTL support, allowing you to easily create applications that cater to RTL language users.
+
+### User Preference Detection
+
+Pillar UI includes a user preference detection mechanism that automatically detects the user's preference for RTL mode based on their system or browser settings. If the user has set their preference to RTL mode, Pillar UI will make RTL mode the default appearance when the application loads.
+
+### Enabling RTL Mode
+
+To enable RTL mode in your Pillar UI application, you can use the `useDirection` custom hook from the `pillar-ui/hooks` library. This hook provides a simple way to toggle between RTL and LTR modes. Here's how you can add the RTL mode toggle functionality:
+
+1. Install the `pillar-ui/hooks` library:
+
+```bash
+npm install @pillar-ui/hooks
+```
+
+2. Import the `useDirection` hook in your component:
+
+```javascript
+import React from 'react'
+import { useDirection } from '@pillar-ui/hooks'
+import { Button } from '@pillar-ui/core'
+
+const App = () => {
+  const { isRtl, toggleDirection } = useDirection()
+
+  return (
+    <div>
+      <Button onClick={toggleDirection}>Toggle RTL Mode</Button>
+      <p>Current mode: {isRtl ? 'RTL' : 'LTR'}</p>
+    </div>
+  )
+}
+
+export default App
+```
+
+In the code above, we import the `useDirection` hook from the `pillar-ui/hooks` library. We then use this hook to set the `isRtl` state variable and `toggleDirection` function in our component. The `isRtl` state variable holds the current mode (RTL or LTR), and the `toggleDirection` function allows us to toggle between RTL and LTR modes.
+
+By using the `useDirection` custom hook from the `pillar-ui/hooks` library, you can easily add RTL mode functionality to your Pillar UI application. The hook handles the toggling of the mode, and you can customize the appearance of your components in RTL mode by modifying the CSS styles.
+
+Please note that the compatibility of RTL mode in Pillar UI depends on the browser's support for CSS variables and media queries. It is recommended to test RTL mode in different browsers to ensure consistent behavior and appearance.
+
+With Pillar UI's RTL support and the `useDirection` custom hook, you can provide a seamless experience for users who prefer RTL languages in your web applications.
+
+For more information on RTL support in web applications, you can refer to the following resources:
+
+- [Right-to-Left (RTL) Support in CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/RTL_support)
+- [Building RTL-Aware Web Applications & Websites](https://www.smashingmagazine.com/2015/01/building-rtl-aware-web-applications/)
+- [RTL Styling with CSS Variables](https://css-tricks.com/rtl-styling-css-variables/)
+
+Start using RTL support in Pillar UI today and enhance the accessibility and usability of your web applications.
