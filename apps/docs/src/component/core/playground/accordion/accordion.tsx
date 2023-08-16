@@ -52,6 +52,15 @@ const AccordionSizes = () => {
   )
 }
 
+const AccordionSeparate = () => {
+  return (
+    <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+      <AccordionBase />
+      <AccordionBase separate />
+    </Paper>
+  )
+}
+
 const AccordionVariants = () => {
   return (
     <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
@@ -98,3 +107,4 @@ AccordionPlayGround.Variants = AccordionVariants
 AccordionPlayGround.Corners = AccordionCorners
 AccordionPlayGround.Type = AccordionType
 AccordionPlayGround.Collapsible = AccordionCollapsible
+AccordionPlayGround.Separate = AccordionSeparate

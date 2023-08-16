@@ -1,18 +1,18 @@
-import { Blockquote } from '@pillar-ui/core'
+import { Blockquote, Paper } from '@pillar-ui/core'
 import React from 'react'
 
-export const BlockquotePlayground = () => {
+export const BlockquotePlayGround = () => {
   return (
-    <div className="l_flow__md">
+    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm" flow="sm">
       <Blockquote corner="sharp" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-    </div>
+    </Paper>
   )
 }
 const BlockquoteCorner = () => {
   return (
-    <div className="l_flow__md">
+    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm" flow="sm">
       <Blockquote corner="sharp" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -25,7 +25,6 @@ const BlockquoteCorner = () => {
       <Blockquote corner="md" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      sd
       <Blockquote corner="lg" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -35,13 +34,13 @@ const BlockquoteCorner = () => {
       <Blockquote corner="full" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-    </div>
+    </Paper>
   )
 }
 
 const BlockquoteColor = () => {
   return (
-    <div className="l_flow__md">
+    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm" flow="sm">
       <Blockquote color="danger" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -61,13 +60,13 @@ const BlockquoteColor = () => {
       <Blockquote color="surface" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-    </div>
+    </Paper>
   )
 }
 
 const BlockquoteSize = () => {
   return (
-    <div className="l_flow__md">
+    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm" flow="sm">
       <Blockquote size="2xs" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -90,10 +89,10 @@ const BlockquoteSize = () => {
       <Blockquote size="2xl" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-    </div>
+    </Paper>
   )
 }
 
-BlockquotePlayground.BlockquoteCorner = BlockquoteCorner
-BlockquotePlayground.BlockquoteColor = BlockquoteColor
-BlockquotePlayground.BlockquoteSize = BlockquoteSize
+BlockquotePlayGround.Corners = BlockquoteCorner
+BlockquotePlayGround.Colors = BlockquoteColor
+BlockquotePlayGround.Sizes = BlockquoteSize
