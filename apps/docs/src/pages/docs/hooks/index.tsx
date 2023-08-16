@@ -6,21 +6,23 @@ import Link from 'next/link'
 import { Layout } from '../../../component/common'
 
 export async function getStaticProps() {
-  return { props: { posts: allHooks } }
+  return { props: { hooks: allHooks } }
 }
 
-export default function Hooks({ posts }: { posts: Hooks[] }) {
+export default function Hooks({ hooks }: { hooks: Hooks[] }) {
   return (
     <Layout>
-      <Grid grid="repeat(4, 1fr)" gap="sm">
-        {posts.map((post) => (
-          <Link href={`hooks/${post.slug}`} key={post.slug}>
-            <Paper corner="sm" background="surface-3" padding="xl" className="u_center">
-              <Text>{post.title}</Text>
+      <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
+        {hooks.map((hook) => (
+          <Link href={`utils/${hook.slug}`} key={hook.slug}>
+            <Paper height="5rem" corner="sm" background="surface-3" padding="xl" className="u_center">
+              <Text size="lg" weight="medium" color="surface">
+                {hook.title}
+              </Text>
             </Paper>
           </Link>
         ))}
-      </Grid>
+      </Paper>
     </Layout>
   )
 }

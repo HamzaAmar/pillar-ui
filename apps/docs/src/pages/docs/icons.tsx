@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
-import { DocsLayout, Layout } from 'src/component/common'
+import React, { ReactElement, ReactNode, useState } from 'react'
+import { DocsLayout } from 'src/component/common'
 import * as ICONS from '@pillar-ui/icons'
 import { Button, Flex, Grid, Paper, Text } from '@pillar-ui/core'
 import { useCopyToClipboard } from '@pillar-ui/hooks'
-import a from '../../constant/icons/icons.json'
+import iconJson from '../../constant/icons/index.json'
 
-const CATEGORIES: string[] = ['all', ...Object.keys(a)]
+interface ItemProps {
+  name: string
+  Icon: ReactElement
+}
 
-const IconsList = ({ lists }: { lists: [string, Function][] }) => {
+const CATEGORIES: string[] = ['all', ...Object.keys(iconJson)]
+
+const IconsItem = ({ item }: { item: ItemProps[] }) => {
   const { copied, copy } = useCopyToClipboard(5000)
 
-  console.log(lists)
+  const [name, Icon] = item
 
-  return lists.map(([name, Icon]) => (
+  return (
     <Flex style={{ background: 'var(--surface-5)' }} direction="column" items="center" key={name}>
       <Flex as={Paper} p="xs" direction="column" items="center">
         <Icon width="30" />
@@ -24,7 +29,7 @@ const IconsList = ({ lists }: { lists: [string, Function][] }) => {
         {copied ? 'Copied' : 'Copy'}
       </Button>
     </Flex>
-  ))
+  )
 }
 
 const Icons = () => {
@@ -35,11 +40,12 @@ const Icons = () => {
   if (current === 'all') {
     lists = Object.entries(ICONS)
   } else {
-    const ab = a[current.toLowerCase() as keyof typeof a]
-    lists = ab.map((val) => [val, ICONS[val]])
+    const selectedIcons = iconJson[current.toLowerCase() as keyof typeof iconJson]
+    const spreadIcon = { ...ICONS }
+    lists = selectedIcons.map((icon) => {
+      return [icon, spreadIcon[icon]]
+    })
   }
-
-  console.log(lists)
 
   return (
     <DocsLayout>
@@ -52,9 +58,10 @@ const Icons = () => {
           ))}
         </Flex>
         <div>
-          <Text size="md">Icons</Text>
           <Grid gap="sm" grid="repeat(auto-fit, minmax(150px, 1fr)">
-            <IconsList lists={lists} />
+            {lists.map((item) => (
+              <IconsItem item={item} />
+            ))}
           </Grid>
         </div>
       </div>
