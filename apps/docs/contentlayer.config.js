@@ -68,6 +68,35 @@ export const Components = defineDocumentType(() => ({
   computedFields,
 }))
 
+// export const Features = defineDocumentType(() => ({
+//   name: 'Features',
+//   filePathPattern: `features/*.mdx`,
+//   contentType: 'mdx',
+//   fields: {
+//     title: {
+//       type: 'string',
+//       description: 'The title of the post',
+//       required: true,
+//     },
+//     excerpt: {
+//       type: 'string',
+//       description: 'The summary of the post',
+//       required: true,
+//     },
+//     file: {
+//       type: 'string',
+//       description: 'The directory that handles the import of the component',
+//       required: true,
+//     },
+//     root: {
+//       type: 'string',
+//       description: 'The summary url for every doc',
+//       required: true,
+//     },
+//   },
+//   computedFields,
+// }))
+
 export const Hooks = defineDocumentType(() => ({
   name: 'Hooks',
   filePathPattern: `hooks/*.mdx`,
@@ -174,6 +203,54 @@ export const GetStarted = defineDocumentType(() => ({
   computedFields,
 }))
 
+export const Features = defineDocumentType(() => ({
+  name: 'Features',
+  filePathPattern: `features/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+      description: 'The title of the post',
+      required: true,
+    },
+    excerpt: {
+      type: 'string',
+      description: 'The summary of the post',
+      required: true,
+    },
+    root: {
+      type: 'string',
+      description: 'The summary url for every doc',
+      required: true,
+    },
+  },
+  computedFields,
+}))
+
+export const Tutorials = defineDocumentType(() => ({
+  name: 'Tutorials',
+  filePathPattern: `tutorials/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+      description: 'The title of the post',
+      required: true,
+    },
+    excerpt: {
+      type: 'string',
+      description: 'The summary of the post',
+      required: true,
+    },
+    root: {
+      type: 'string',
+      description: 'The summary url for every doc',
+      required: true,
+    },
+  },
+  computedFields,
+}))
+
 const mdx = {
   remarkPlugins: [remarkGfm],
   rehypePlugins: [
@@ -213,6 +290,6 @@ const mdx = {
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Components, Hooks, Utils, Themes, GetStarted],
+  documentTypes: [Components, Hooks, Utils, Themes, GetStarted, Features, Tutorials],
   mdx,
 })

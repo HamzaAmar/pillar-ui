@@ -1,8 +1,10 @@
 import type { MenuItemData } from './aside.type'
-import { allComponents, allGettingStarteds, allHooks, allThemes, allUtils } from 'contentlayer/generated'
-import type { Components, GettingStarted, Hooks, Theme, Utils } from 'contentlayer/generated'
+import { allComponents, allFeatures, allGettingStarteds, allHooks, allThemes, allUtils } from 'contentlayer/generated'
+import type { Components, GettingStarted, Hooks, Theme, Utils, Features } from 'contentlayer/generated'
 
-function makeMenuField<T extends Components | Hooks | Theme | Utils | GettingStarted = Components>(list: T[]) {
+function makeMenuField<T extends Components | Hooks | Features | Theme | Utils | GettingStarted = Components>(
+  list: T[]
+) {
   return list.map(({ slug, title, root }) => {
     return {
       slug: slug,
@@ -14,6 +16,7 @@ function makeMenuField<T extends Components | Hooks | Theme | Utils | GettingSta
 
 export const MENU_CONTENT = {
   'getting-started': makeMenuField(allGettingStarteds),
+  features: makeMenuField(allFeatures),
   themes: makeMenuField(allThemes),
   components: makeMenuField(allComponents),
   hooks: makeMenuField(allHooks),

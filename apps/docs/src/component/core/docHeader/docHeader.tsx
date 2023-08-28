@@ -4,7 +4,6 @@ import React from 'react'
 import { DocHeaderProps } from './docHeader.type'
 
 const docHeader = ({ title, type, items, file, excerpt, slug, ...rest }: DocHeaderProps) => {
-  console.log(rest)
   return (
     <Paper pb="sm" flow="lg" borderStyle="solid" borderColor="opacity-6" borderPosition="bottom" padding="sm">
       <Heading size="2xl">
@@ -46,7 +45,7 @@ const docHeader = ({ title, type, items, file, excerpt, slug, ...rest }: DocHead
       <Flex gap="sm" wrap>
         <Button
           as="a"
-          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/pillar-core/src/${file}/${slug}/${slug}.tsx`}
+          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/pillar-${file}/src/${slug}/${slug}.tsx`}
           target="_blank"
           color="surface"
           icon={<Github strokeWidth={2} />}
