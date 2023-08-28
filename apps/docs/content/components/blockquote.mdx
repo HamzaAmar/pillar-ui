@@ -1,0 +1,147 @@
+---
+title: Blockquote
+type: Components
+excerpt: The accordion component allows users to expand and collapse content sections, which can be useful for displaying large amounts of information in a compact and organized manner.
+items: ['Blockquote', 'Blockquote.Cite']
+file: core
+root: components
+---
+
+## Props
+
+The Blockquote component is a versatile component used to display quoted text with an optional citation. It allows you to customize various aspects of the blockquote, including color, size, corner style, and more.
+
+### Corner
+
+Type: string
+Default: `md`
+Options: `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
+The size prop determines the corners of the Blockquote. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
+
+The corner prop determines the border radius of the Blockquote. It accepts any of the Corner types defined in your library, including (sharp, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
+
+Example usage:
+
+<BlockquotePlayGround.Corners />
+
+```tsx showLineNumbers title="Accordion.tsx"
+function CornerCorners() {
+  return (
+    <div className="l_flow__md">
+      <Blockquote corner="sharp" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote corner="xs" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote corner="sm" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote corner="md" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      sd
+      <Blockquote corner="lg" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote corner="xl" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote corner="full" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+    </div>
+  )
+}
+```
+
+## Color
+
+Type: Color (string)
+Default: `primary`
+Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+
+You can customize the color of the blockquote by passing a color prop to the Blockquote component.
+
+<BlockquotePlayGround.Colors />
+
+```tsx showLineNumbers title="Blockquote.tsx"
+import { Blockquote } from '@pillar-ui/core'
+
+function BlockquoteColor() {
+  return (
+    <div className="l_flow__md">
+      <Blockquote color="danger" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote color="warning" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote color="success" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote color="primary" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      sd
+      <Blockquote color="secondary" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote color="surface" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+    </div>
+  )
+}
+```
+
+## Size
+
+Type: Size (string)
+Default: `md`
+Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+
+You can customize the size of the blockquote by passing a size prop to the Blockquote component.
+
+<BlockquotePlayGround.Sizes />
+
+```tsx showLineNumbers title="Blockquote.tsx"
+import { Blockquote } from '@pillar-ui/core'
+
+function BlockquoteSize() {
+  return (
+    <div className="l_flow__md">
+      <Blockquote size="2xs" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote size="xs" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote size="sm" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote size="md" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      sd
+      <Blockquote size="lg" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote size="xl" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+      <Blockquote size="2xl" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
+    </div>
+  )
+}
+```
+
+## Use Case
+
+The `blockquote` component is designed to create stylish and customizable blockquote elements in your web applications. It's useful for emphasizing quoted content in an elegant manner.
+
+## Troubleshooting
+
+If you encounter any issues or have questions related to the `blockquote` component, please refer to the documentation or seek assistance on the project's GitHub repository.

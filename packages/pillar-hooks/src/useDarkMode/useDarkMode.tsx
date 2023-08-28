@@ -26,13 +26,30 @@ function ejectClassNameMode(mode: Mode = 'light') {
 }
 
 /**
- * Custom hook for managing dark mode state and functionality.
+ * Custom hook for managing dark mode state and toggling between light and dark modes.
+ *
  * @returns {{
  *   isDark: boolean,
  *   mode: Mode,
  *   toggleMode: () => void,
- *   modeScript: ReactElement
- * }} - Object containing dark mode related properties and functions.
+ *   modeScript: JSX.Element
+ * }} - An object containing dark mode state, mode toggling function, and mode script element.
+ *
+ * @example
+ * // Example usage in a functional component:
+ * import { useDarkMode } from './path-to-hooks/useDarkMode'; // Adjust the path accordingly
+ *
+ * function DarkModeComponent() {
+ *   const { isDark, toggleMode, modeScript } = useDarkMode();
+ *
+ *   return (
+ *     <div>
+ *       <button onClick={toggleMode}>Toggle Dark Mode</button>
+ *       <p>Current mode: {isDark ? 'Dark' : 'Light'}</p>
+ *       {modeScript}
+ *     </div>
+ *   );
+ * }
  */
 
 export function useDarkMode() {
@@ -58,6 +75,7 @@ export function useDarkMode() {
       return nextMode
     })
   }
+
   const modeScript = <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
   return { isDark, mode, toggleMode, modeScript }
 }

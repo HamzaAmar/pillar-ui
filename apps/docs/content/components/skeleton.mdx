@@ -11,7 +11,7 @@ root: components
 
 The following are the props that can be used with the Skeleton component:
 
-### isLoading
+### IsLoading
 
 - Type: `boolean`
 - Default: `true`
@@ -25,7 +25,7 @@ Example:
 
 ```
 
-### size
+### Size
 
 - Type: `string`
 - default: `md`
@@ -39,7 +39,7 @@ Example:
 
 ```
 
-### lines
+### Lines
 
 Type: number
 Default: 2.5
@@ -50,21 +50,6 @@ Specifies the number of lines to display for the skeleton text Only Exist for Sk
 ## Use Case
 
 The Skeleton component is typically used in scenarios where content is being fetched asynchronously and there is a delay in loading the actual data. It provides a visual cue to the user that content is being loaded.
-
-## Implementation Details
-
-The Skeleton component is implemented using React and CSS. It creates a placeholder effect by using animated gradients . The size, shape, and animation of the skeleton can be customized using CSS styles.
-
-## Accessibility
-
-The Skeleton component is designed to be accessible and meets the following criteria:
-
-- The component has proper ARIA attributes to convey that it represents a loading state.
-- The component has sufficient color contrast to meet accessibility standards.
-- The component has sufficient color contrast to meet accessibility standards.
-- The component respects the user's preference for reducing motion, if enabled in their operating system or browser settings.
-
-By respecting the reduce motion preference, the Skeleton component ensures a more comfortable experience for users who may have motion sensitivity or prefer reduced animation effects.
 
 ## Troubleshooting
 

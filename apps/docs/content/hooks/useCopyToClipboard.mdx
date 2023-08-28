@@ -6,14 +6,6 @@ file: hooks
 root: hooks
 ---
 
----
-
-# useCopyToClipboard
-
-## Introduction
-
-The useCopyToClipboard hook is a custom hook for copying text to the clipboard. It returns an array containing the copied text value and a function for copying text to the clipboard.
-
 ## Why useCopyToClipboard
 
 The useCopyToClipboard hook simplifies the process of copying text to the clipboard for users. It handles the complexities of interacting with the browser's Clipboard API and provides an easy-to-use function for copying text.
@@ -33,18 +25,42 @@ yarn add '@pillar-ui/hooks'
 import { useCopyToClipboard } from '@pillar-ui/hooks'
 ```
 
+## Parameters
+
+- **timeout (optional):** The timeout duration in milliseconds after which the copied state will be reset. Defaults to 300 milliseconds.
+
+## Returned Values
+
+The useCopyToClipboard hook returns an object with the following properties:
+
+- **text:** The currently copied text or null if no text is copied.
+- **copy:** A function that allows you to copy text to the clipboard. Returns a promise indicating whether the copy operation was successful.
+- **copied:** A boolean indicating whether the last copy operation was successful.
+
 ## Usage
 
 To use the useCopyToClipboard hook, call it inside your functional component like so:
 
 ```tsx showLineNumbers title="Alert.tsx"
-function MyComponent() {
-  const [copiedText, copyToClipboard] = useCopyToClipboard()
+import { useCopyToClipboard } from '@pillar-ui/hooks' // Adjust the path accordingly
+
+function App() {
+  const { text, copy, copied } = useCopyToClipboard(650)
+
+  const handleCopy = () => {
+    copy('Text to be copied').then((success) => {
+      if (success) {
+        console.log('Text copied successfully')
+      } else {
+        console.log('Copy operation failed')
+      }
+    })
+  }
 
   return (
     <div>
-      <button onClick={() => copyToClipboard('Text to copy')}>Copy text to clipboard</button>
-      <p>Copied text: {copiedText}</p>
+      {copied && <p>Copied: {text}</p>}
+      <button onClick={handleCopy}>{copied ? 'Copied' : 'Copy'}</button>
     </div>
   )
 }

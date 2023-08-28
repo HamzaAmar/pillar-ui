@@ -37,7 +37,7 @@ Example:
 
 The Avatar component accepts the following props:
 
-### title?: string
+### Title
 
 An optional title to display as an alt to make the avatar accessible.
 
@@ -60,7 +60,7 @@ function AvatarColors() {
 }
 ```
 
-### image?: string
+### Image
 
 The image source to display in the avatar.
 
@@ -81,7 +81,7 @@ function AvatarImage(){
 
 ```
 
-### icon?: ReactNode
+### Icon
 
 The icon prop allows you to display an icon alongside the Avatar. It accepts any ReactNode. If not provided, no icon will be displayed.
 
@@ -93,7 +93,7 @@ Example usage:
 <Avatar icon={<CheckCircleIcon />} title="Success!" />
 ```
 
-### size?: Size
+### Size
 
 - Type: string
 - Default: `md`
@@ -121,7 +121,7 @@ function AlerSizes(){
 
 ```
 
-### corner?: Corner
+### Corner
 
 Type: string
 Default: `md`
@@ -149,7 +149,7 @@ function AlerCorners(){
 
 ```
 
-### variant?: Variant
+### Variant
 
 Type: string
 Default: `solid`
@@ -173,7 +173,7 @@ function AlerVariants(){
 
 ```
 
-### animate?: Animate
+### Animate
 
 Type: string
 Default: `undefined`
@@ -226,7 +226,7 @@ AvatarGroup is a component that groups multiple Avatar components with an option
 
 ## Props
 
-### limit?: number
+### limit
 
 The maximum number of avatars to display.
 
@@ -258,7 +258,7 @@ function AlertGroupLimit() {
 }
 ```
 
-### layout?: 'stack' | 'grid'
+### layoutstack' | 'grid'
 
 The layout of the avatars. Can be one of stack or grid.
 
@@ -333,14 +333,6 @@ function AlertGroupContext() {
 }
 ```
 
-## Accessibility:
-
-When using the Avatar component, it is important to add the title prop to the avatar images. This is because the title prop is used as an alternative text (alt text) that describes the content of the image. This is important for users who rely on screen readers to access the content on your website or application.
-
-However, if the avatar is only for decoration or the information is redundant (i.e., the same information is already provided elsewhere on the section), then you can omit the title prop.
-
-The Avatar component supports the prefers-reduced-motion media feature. This means that if a user has enabled the reduce motion preference in their browser, the animation of the avatar will be disabled. This is useful for users who have motion sensitivities or who prefer a more static user interface.
-
 ## Troubleshooting:
 
 - If the Avatar component is not displaying properly, there may be an issue with the image source or size. Make sure that the image source is valid and accessible, and that the dimensions of the image are appropriate for the Avatar component.
@@ -365,10 +357,6 @@ The Avatar component can be used in a variety of applications where users need t
 - Social features: Avatar components are often used in social features such as chat or messaging systems, where users can see each other's avatars to identify who they are communicating with. This can make social interactions more engaging and memorable.
 
 - Comment sections: Avatar components can also be used in comment sections or discussion forums to represent the user who is leaving the comment. This can help to create a sense of community and make it easier to follow conversations.
-
-## TypeScript Support
-
-The Avatar component is fully typed with TypeScript, providing type definitions for all of its props.
 
 ## Conclusion
 

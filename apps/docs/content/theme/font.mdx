@@ -1,55 +1,78 @@
 ---
-title: 'CSS Gradient Variables'
-type: 'Theme'
+title: Font
+type: Theme
 excerpt: 'The following CSS variables define font sizes for different breakpoints. These variables are responsive and adjust dynamically based on the viewport size. If you prefer different font sizes for your project, you can customize these values according to your needs.'
 root: themes
 ---
 
-## `:root` CSS Selector
+# CSS Font Size Variables
 
-The font size variables are defined within the `:root` CSS selector, which ensures that the variables are accessible throughout your CSS stylesheets.
+The font size variables, defined within the `:root` CSS selector, ensure accessibility throughout your CSS stylesheets.
 
-```css
-:root {
-  --font-3xs: var(--custom-font-3xs, clamp(0.55rem, calc(0.52rem + 0.14vw), 0.66rem));
-  --font-2xs: var(--custom-font-2xs, clamp(0.61rem, calc(0.57rem + 0.22vw), 0.8rem));
-  --font-xs: var(--custom-font-xs, clamp(0.69rem, calc(0.63rem + 0.31vw), 0.96rem));
-  --font-sm: var(--custom-font-sm, clamp(0.78rem, calc(0.69rem + 0.44vw), 1.15rem));
-  --font-md: var(--custom-font-md, clamp(0.88rem, calc(0.76rem + 0.6vw), 1.38rem));
-  --font-lg: var(--custom-font-lg, clamp(0.98rem, calc(0.83rem + 0.79vw), 1.65rem));
-  --font-xl: var(--custom-font-xl, clamp(1.11rem, calc(0.9rem + 1.04vw), 1.98rem));
-  --font-2xl: var(--custom-font-2xl, clamp(1.25rem, calc(0.98rem + 1.35vw), 2.38rem));
-  --font-3xl: var(--custom-font-3xl, clamp(1.4rem, calc(1.06rem + 1.73vw), 2.85rem));
-}
-```
+<Alert
+  color="warning"
+  title="Caution"
+  message="Customizing spacing using the `--space-*` variables may impact the responsive layout. Default values utilize the `clamp` function to adapt spacing based on viewport size, maintaining proportions and alignment. Modifying these values might result in spacing inconsistencies."
+/>
 
-## Font Size Variables
-
-The font size variables are designed to be responsive and adapt to different viewport sizes. They utilize the clamp() function along with viewport units (vw) to calculate the font sizes dynamically. The values gradually increase or decrease as the viewport size changes.
-
-- **--font-3xs**: This variable represents the font size for the 3xs breakpoint.
-
-- **--font-2xs**: This variable represents the font size for the 2xs breakpoint.
-
-- **--font-xs**: This variable represents the font size for the xs breakpoint.
-
-- **--font-sm**: This variable represents the font size for the sm breakpoint.
-
-- **--font-md**: This variable represents the font size for the md breakpoint.
-
-- **--font-lg**: This variable represents the font size for the lg breakpoint.
-
-- **--font-xl**: This variable represents the font size for the xl breakpoint.
-
-- **--font-2xl**: This variable represents the font size for the 2xl breakpoint.
-
-- **--font-3xl**: This variable represents the font size for the 3xl breakpoint.
+<Table>
+  <Table.Row type="head">
+    <Table.Column as="th">Variable</Table.Column>
+    <Table.Column as="th">Description</Table.Column>
+    <Table.Column as="th">Default value</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-3xs`</Table.Column>
+    <Table.Column>Font size variable for 3 extra small text.</Table.Column>
+    <Table.Column>`clamp(0.55rem, calc(0.52rem + 0.14vw), 0.66rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-2xs`</Table.Column>
+    <Table.Column>Font size variable for 2 extra small text.</Table.Column>
+    <Table.Column>`clamp(0.61rem, calc(0.57rem + 0.22vw), 0.8rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-xs`</Table.Column>
+    <Table.Column>Font size variable for extra small text.</Table.Column>
+    <Table.Column>`clamp(0.69rem, calc(0.63rem + 0.31vw), 0.96rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-sm`</Table.Column>
+    <Table.Column>Font size variable for small text.</Table.Column>
+    <Table.Column>`clamp(0.78rem, calc(0.69rem + 0.44vw), 1.15rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-md`</Table.Column>
+    <Table.Column>Font size variable for medium text.</Table.Column>
+    <Table.Column>`clamp(0.88rem, calc(0.76rem + 0.6vw), 1.38rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-lg`</Table.Column>
+    <Table.Column>Font size variable for large text.</Table.Column>
+    <Table.Column>`clamp(0.98rem, calc(0.83rem + 0.79vw), 1.65rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-xl`</Table.Column>
+    <Table.Column>Font size variable for extra large text.</Table.Column>
+    <Table.Column>`clamp(1.11rem, calc(0.9rem + 1.04vw), 1.98rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-2xl`</Table.Column>
+    <Table.Column>Font size variable for 2 extra large text.</Table.Column>
+    <Table.Column>`clamp(1.25rem, calc(0.98rem + 1.35vw), 2.38rem)`</Table.Column>
+  </Table.Row>
+  <Table.Row>
+    <Table.Column>`--font-3xl`</Table.Column>
+    <Table.Column>Font size variable for 3 extra large text.</Table.Column>
+    <Table.Column>`clamp(1.4rem, calc(1.06rem + 1.73vw), 2.85rem)`</Table.Column>
+  </Table.Row>
+</Table>
 
 ## Customizing the Font Sizes
 
 To customize the font sizes, you can override the default values of the font size variables by assigning new values to the corresponding --custom-\* variables. Here's an example:
 
-```css
+```css showLineNumbers title="themes.css"
 :root {
   /*  To customize the font sizes, you can customize one or all of the custom variables by assigning new values to them. */
   --custom-font-md: 18px; /* Customize the font size for the md breakpoint */

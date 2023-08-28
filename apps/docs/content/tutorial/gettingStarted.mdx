@@ -1,0 +1,123 @@
+---
+title: Setting Up Your E-Commerce Project with pillar-ui
+excerpt: 'Discover how to set up your e-commerce project using pillar-ui. This guide covers creating a CRA project, installing pillar-ui, and building a powerful e-commerce website with reusable components, utility functions, icons, and React hooks. Get started on your journey to a stunning and functional online store.'
+root: Tutorial
+---
+
+# Setting Up the Project
+
+In this section, we will guide you through setting up a new Create React App (CRA) project to build your e-commerce website using the `pillar-ui` library. By the end of this section, you'll have a project environment ready for development.
+
+## Prerequisites
+
+Before you start with this guide, ensure you have the following:
+
+1. **Node.js and npm:** You need Node.js and npm installed on your local machine. If you don't have Node.js and npm installed, you can download and install them from the [official Node.js website](https://nodejs.org/). The npm package manager comes bundled with Node.js.
+
+2. **Basic knowledge of React:** This guide assumes that you have a basic understanding of React concepts, such as JSX, components, props, and state. If you're new to React, you might find the [official React documentation](https://reactjs.org/docs/getting-started.html) helpful.
+
+3. **A text editor:** You'll need a text editor to write and edit your code. Some popular text editors include [VSCode](https://code.visualstudio.com/), [Sublime Text](https://www.sublimetext.com/), and [Atom](https://atom.io/).
+
+4. **A web browser:** You'll need a web browser to view your React application. This guide assumes you're using a modern web browser like Chrome, Firefox, Safari, or Edge.
+
+Once you've ensured that you have all the prerequisites, you can proceed with the rest of the guide. [digitalocean.com](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-react-project-with-create-react-app-fr), [openclassrooms.com](https://openclassrooms.com/fr/courses/7008001-debutez-avec-react/7135204-prenez-en-main-create-react-app)
+
+## Step 1: Create a New CRA Project
+
+If you don't have `create-react-app` installed, you can install it globally using the following command:
+
+```bash
+npm install -g create-react-app
+```
+
+Now, create a new CRA project by running:
+
+```bash
+npx create-react-app pillar-ecommerce
+```
+
+Replace `pillar-ecommerce` with your desired project name.
+
+## Step 2: Navigate to the Project Directory
+
+Navigate to your project directory:
+
+```bash
+cd pillar-ecommerce
+```
+
+## Step 3: Install the pillar-ui Library
+
+The `pillar-ui` library consists of several packages, each serving a specific purpose to enhance your web development process. These packages include:
+
+- `@pillar-ui/core`: This package provides a collection of reusable UI components designed for modern web development, adhering to best practices and offering a highly customizable experience.
+
+- `@pillar-ui/utils`: Here, you'll find utility functions and tools that assist with common tasks, streamlining your development workflow and increasing efficiency.
+
+- `@pillar-ui/icons`: Need a variety of icons for your project? This package offers a library of scalable icons suitable for different use cases, all designed to seamlessly integrate into modern user interfaces.
+
+- `@pillar-ui/hooks`: This package offers a set of React hooks that you can easily incorporate into your applications to enhance functionality and interactivity.
+
+For the purposes of this tutorial, you'll need to install all of these packages to access the full range of `pillar-ui` functionalities. To do this, simply run the following command:
+
+```bash
+npm install @pillar-ui/core @pillar-ui/utils @pillar-ui/icons @pillar-ui/hooks
+```
+
+With the packages installed, you're ready to start incorporating the powerful features of the `pillar-ui` library into your project. Continue with the upcoming sections to learn how to create core components and add advanced features to your e-commerce website.
+
+## Step 4: Project Structure
+
+Your project's directory structure should look like this:
+
+```plaintext
+pillar-ecommerce/
+├── node_modules/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── package.json
+└── ...
+```
+
+## Adding Styles
+
+To enhance the appearance and maintain visual consistency of your Vite React app using Pillar components, follow these steps to add the necessary styles. Pillar provides a CSS file that not only enhances the styling but also introduces additional features such as dark mode support and right-to-left (RTL) language support.
+
+- Open the root file of your Vite React app project.
+
+- Locate the file where your app is initialized, typically named App.(ts, tsx, js,jsx).
+
+- Import the Pillar CSS file by adding the following import statement at the top of the file:
+
+```tsx
+import '@pillar-ui/core/style'
+```
+
+## Step 6: Start the Development Server
+
+Now, start the development server and see your CRA app in action:
+
+```bash
+npm start
+```
+
+Your CRA app will open in your default web browser. You can access it at `http://localhost:3000`.
+
+With your project environment set up, you're ready to start building your e-commerce website using the `pillar-ui` library. In the upcoming sections, we'll guide you through creating the core components of the website.
+
+Continue with the rest of the tutorial to explore how to use `pillar-ui` components to build a fully functional e-commerce website.
+
+If you're interested in exploring how to build the same e-commerce website using other popular starters, you have options! Choose one of the following links to see examples:
+
+- Next.js: [Example]()
+- Remix.js: [Example]()
+- vite: [Example]()
+
+These examples will show you how to set up the project using different starters while using the `pillar-ui` library to create the e-commerce website. Feel free to choose the starter that aligns with your preferences or learning goals.
+
+With your project environment set up, you're ready to start building your e-commerce website using the `pillar-ui` library. In the upcoming sections, we'll guide you through creating the core components of the website.

@@ -26,15 +26,12 @@ export function useScrollSpy(selectors: string) {
       })
     }, options)
 
-    console.log('els', elements)
     elements.forEach((el) => {
       if (el) {
-        console.log('el', el, 'el')
         observer.current?.observe(el)
       }
     })
     return () => {
-      console.log('UseEffect Cleanup')
       return observer.current?.disconnect()
     }
   }, [selectors, router.asPath])

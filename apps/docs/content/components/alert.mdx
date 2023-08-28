@@ -33,7 +33,7 @@ function(){
 
 The Alert component accepts the following props:
 
-### color
+### Color
 
 - Type: string
 - Default: `primary`
@@ -59,7 +59,7 @@ function AlertColors(){
 
 ```
 
-### size?: Size
+### Size
 
 - Type: string
 - Default: `md`
@@ -86,7 +86,7 @@ function AlerSizes(){
 }
 ```
 
-### variant?: Variant
+### Variant
 
 The variant prop determines the visual style of the alert. The following are the descriptions of the different variants:
 
@@ -108,7 +108,7 @@ export const AlertVariant = () => {
 }
 ```
 
-### corner?: Corner
+### Corner
 
 Type: string
 Default: `md`
@@ -158,7 +158,7 @@ function(){
 }
 ```
 
-### icon?: ReactNode
+### Icon
 
 The icon prop allows you to display an icon alongside the Alert. It accepts any ReactNode, such as an icon from the @pillar-ui/icons package. If no icon is provided, no icon will be displayed.
 Example usage:
@@ -173,7 +173,7 @@ Example usage:
 </Paper>
 ```
 
-### closable?: boolean
+### Closable
 
 The closable prop determines whether the Alert should be closable by the user. If set to true, a close button will be displayed on the Alert. If not provided, it defaults to false.
 
@@ -189,7 +189,7 @@ Example usage:
 </Paper>
 ```
 
-### inline?: boolean
+### Inline
 
 The inline prop determines how the alert is displayed. If set to true, the alert will be displayed horizontally, which is useful for short alerts that do not take up a lot of space, such as notifications or messages. If not set or set to false, the alert will be displayed as a vertically.
 Example usage:
@@ -233,7 +233,7 @@ Here is an example of how to display the alert as a span:
 <Alert as='article' color="danger" title="hello"  />
 ```
 
-## custom the style
+## Custom the style
 
 We know that you may not always like the style of the alerts that we provide in our library. That's why we've given you the ability to customize the style of the alerts to your liking. You can use the style prop to set the background color, font, and other properties of the alert, and you can use the className prop to add custom CSS classes to the alert.
 
@@ -244,17 +244,14 @@ We know that you may not always like the style of the alerts that we provide in 
 <Alert color="danger" title="hello" style={{ background: 'success' }} />
 ```
 
-## accessibility
+## Accessibility
 
-Accessibility is an important consideration for any web component, including the Alert component. Here are some accessibility best practices to follow when using the Alert component:
+Accessibility is a core feature of Pillar UI, extending to components like the Alert. Here's a guide on ensuring accessibility when employing the Alert component:
 
-- Use clear and concise language in the title and message of the Alert. Avoid using jargon, technical terms, or words with multiple meanings that could cause confusion.
-- Ensure that the color of the Alert provides sufficient contrast with the background color to ensure that it is readable for people with color vision deficiencies or low vision.
-- Provide a text alternative for any icons used in the Alert component for users who rely on screen readers or have other disabilities.
-- If the Alert component is closable, ensure that it can be closed using the keyboard as well as the mouse or touch screen. For example, users should be able to close the Alert using the Escape key.
-- Use ARIA roles and attributes to help assistive technologies interpret the Alert component correctly. For example, the role="alert" attribute can be used to indicate that the component contains important information that the user should be aware of.
-
-By following these accessibility best practices, you can ensure that the Alert component is usable and accessible for all users, including those with disabilities or impairments.
+- **Clarity in Language:** Opt for straightforward wording in the Alert's title and message, sidestepping jargon or multi-meaning terms that could confuse users.
+- **Contrast Considerations:** Guarantee that the Alert's color sharply contrasts the background, ensuring readability for those with color vision impairments or limited sight.
+- **ARIA Roles and Attributes:** Leverage ARIA roles and attributes for accurate interpretation by assistive tech. For example, role="alert" signifies crucial user information.
+- **Support for Reduced Motion and Forced Colors:** Our components also accommodate users with "Reduced Motion" preferences, ensuring a comfortable experience. Additionally, we ensure that our components remain readable and usable for users relying on the "Forced Colors" feature.
 
 ## Best Practice
 
@@ -273,16 +270,6 @@ The Alert component can be used in a variety of situations, such as:
 - Notifying the user of important information or updates
 - Asking for confirmation before performing a critical action
 
-## Implementation details:
-
-The Alert component in this documentation is an example of a React functional component. It can be imported from the @pillar-ui/core library and used in a JSX file.
-
-The Alert component takes in several optional props that can be used to customize its appearance and behavior, such as type, message, dismissible, onClose, and more. It also includes default styles for different types of alerts, such as success, warning, and error.
-
-## TypeScript support:
-
-The Alert component includes TypeScript support for type checking and better code editor tooling. TypeScript definitions are included in the @pillar-ui/core library, making it easier to develop and maintain large-scale applications with the Alert component.
-
 ## Troubleshooting:
 
 If the Alert component is not behaving as expected, it may be due to an incorrect usage of the component or the props passed to it. Some common issues to check for include:
@@ -298,7 +285,3 @@ If the Alert component is not behaving as expected, it may be due to an incorrec
 The Alert component is a powerful tool for displaying messages to the user in a clear and effective way. By customizing its appearance and behavior using props, the Alert component can be tailored to meet the specific needs of an application.
 
 We hope this documentation helps you understand and use the Alert component in your projects! If you have any questions or need further assistance, don't hesitate to ask.
-
-```
-
-```

@@ -9,7 +9,7 @@ root: components
 
 ## Props
 
-### size
+### Size
 
 - Type: string
 - Default: `md`
@@ -30,7 +30,7 @@ Example:
 <Link size="2xl">Some text.</Link>
 ```
 
-### weight
+### Weight
 
 The weight prop controls the weight (boldness) of the text. The following values are valid:
 
@@ -46,7 +46,7 @@ Example:
 <Link weight="extra-bold">Some text.</Link>
 ```
 
-### truncate
+### Truncate
 
 The truncate prop with the value of "multiline" will truncate the text if it exceeds the specified numberLine prop value and will display an ellipsis at the end of the last visible line. On the other hand, if the truncate prop value is "singleline", it will truncate the text to fit within a single line and display an ellipsis at the end of the truncated text.
 
@@ -109,7 +109,7 @@ export function LinkTrucates() {
 }
 ```
 
-### align
+### Align
 
 This property specifies the horizontal alignment of the text within the parent element. It can take one of the following values:
 
@@ -209,7 +209,7 @@ export function LinkColors() {
 }
 ```
 
-### leading
+### Leading
 
 you can customize the leading (line height) of your text by using the leading prop. This prop accepts four different values: "normal", "sm", "md", and "lg"
 
@@ -235,7 +235,7 @@ Example
 
 By using the leading prop, you can easily adjust the line height of your text to create a more visually appealing design.
 
-### dir For RTL language Support
+### dir RTL language
 
 "dir": This prop sets the direction of the text within the component. It accepts the values "rtl" for right-to-left direction or "ltr" for left-to-right direction. This prop is useful when displaying text in languages that are read from right to left, such as Arabic or Hebrew.
 
@@ -261,18 +261,6 @@ export function LinkRTL() {
 ## Use Case
 
 The Link component can be used to display text in various sizes and weights.
-
-## Implementation details
-
-The Link component is implemented using JSX and styled with CSS.
-
-## Accessibility
-
-The Link component uses semantic HTML elements and provides an aria-label attribute when necessary to ensure accessibility.
-
-## TypeScript Support
-
-The Link component has full TypeScript support.
 
 ## Troubleshooting
 

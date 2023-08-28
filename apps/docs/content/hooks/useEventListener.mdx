@@ -1,0 +1,73 @@
+---
+title: useEventListener
+type: Hooks
+excerpt: 'The useEventListener hook is a custom hook for adding event listeners to DOM elements. It ensures the created event listener is a persistent function that does not change with each render.'
+file: hooks
+root: hooks
+---
+
+## Why useEventListener
+
+The `useEventListener` hook facilitates the management of event listeners in a functional React component. By using this custom hook, you can ensure the persistency of your event handlers: they do not change on each render. This helps avoid potential unnecessary re-renders and performance issues.
+
+## Installation
+
+You can import the `useEventListener` hook into your React component this way:
+
+```tsx
+// With NPM
+npm install --dev '@pillar-ui/hooks'
+
+// With YARN
+yarn add '@pillar-ui/hooks'
+
+// Uses
+import { useEventListener } from '@pillar-ui/hooks'
+
+```
+
+## Parameters
+
+`useEventListener` accepts the following parameters:
+
+- **eventName:** Name of the event you want to listen to.
+- **handler:** A function to execute when the event occurs.
+- **options **(optional): An options object that specifies characteristics about the event listener.
+
+## Usage
+
+You can utilize the `useEventListener` hook in your functional component as follows:
+
+```tsx
+import { useEventListener } from '@pillar-ui/hooks' // Adjust the path accordingly
+
+function MyComponent() {
+  useEventListener(
+    'scroll',
+    (event) => {
+      console.log(event)
+    },
+    false
+  )
+
+  return <div>Scroll me!</div>
+}
+```
+
+In the above example, the `useEventListener` hook listens for the 'scroll' event. When a scroll event occurs, the handler function logs the event object to the console.
+
+## Implementation details
+
+The `useEventListener` hook leverages the in-built addEventListener and removeEventListener methods to add and clean up event listeners in a useEffect hook. It employs the usePersistentCallback hook to ensure the handler function persists across renders, which prevents unnecessary re-renders and improves performance.
+
+## TypeScript Support
+
+The `useEventListener` hook is written in TypeScript and includes type definitions for its parameters and return value.
+
+## Troubleshooting
+
+If you encounter any issues when using the `useEventListener` hook, ensure you provide all the necessary parameters (eventName, handler) and that you add the event listener to an existing DOM element.
+
+## Conclusion
+
+The `useEventListener` hook provides a simplified and efficient way to manage event listeners in functional React components. It takes care of adding and removing listeners, and ensures the persistence of the handler function to avoid potential performance issues.

@@ -4,4 +4,5 @@ export interface DocHeaderProps {
   excerpt: string
   items?: string[] | undefined
   file: string
+  slug: string
 }

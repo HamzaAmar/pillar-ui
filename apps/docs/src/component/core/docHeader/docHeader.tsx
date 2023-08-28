@@ -3,7 +3,7 @@ import { Github } from '@pillar-ui/icons'
 import React from 'react'
 import { DocHeaderProps } from './docHeader.type'
 
-const docHeader = ({ title, type, items, file, excerpt }: DocHeaderProps) => {
+const docHeader = ({ title, type, items, file, excerpt, slug, ...rest }: DocHeaderProps) => {
   return (
     <Paper pb="sm" flow="lg" borderStyle="solid" borderColor="opacity-6" borderPosition="bottom" padding="sm">
       <Heading size="2xl">
@@ -43,13 +43,36 @@ const docHeader = ({ title, type, items, file, excerpt }: DocHeaderProps) => {
       </Grid>
 
       <Flex gap="sm" wrap>
-        <Button color="surface" icon={<Github strokeWidth={2} />} size="xs">
-          Source Code
+        <Button
+          as="a"
+          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/pillar-${file}/src/${slug}/${slug}.tsx`}
+          target="_blank"
+          color="surface"
+          icon={<Github strokeWidth={2} />}
+          size="xs"
+        >
+          Go To {slug} Source Code
         </Button>
-        <Button variant="soft" color="surface" icon={<Github strokeWidth={2} />} size="xs">
+        <Button
+          as="a"
+          href="https://github.com/HamzaAmar/pillar-ui/issues"
+          target="_blank"
+          variant="soft"
+          color="surface"
+          icon={<Github strokeWidth={2} />}
+          size="xs"
+        >
           Issues
         </Button>
-        <Button variant="soft" color="surface" icon={<Github strokeWidth={2} />} size="xs">
+        <Button
+          as="a"
+          href="https://github.com/HamzaAmar/pillar-ui/discussions"
+          target="_blank"
+          variant="soft"
+          color="surface"
+          icon={<Github strokeWidth={2} />}
+          size="xs"
+        >
           discussions
         </Button>
       </Flex>

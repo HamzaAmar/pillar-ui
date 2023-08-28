@@ -7,4 +7,6 @@ const adjustments = (props: SvgType) => (
   </svg>
 )
 
+adjustments.displayName = 'action-adjustments'
+
 export default adjustments

@@ -32,7 +32,7 @@ Example:
 <ProgressBar size="xs" value={50} label="hello" />
 ```
 
-### label
+### Label
 
 The label prop is used to provide a descriptive label or text for the Progress. It is typically used to indicate the task or operation being represented by the Progress.
 
@@ -48,7 +48,7 @@ The label prop is used to provide a descriptive label or text for the Progress. 
 <ProgressBar value={90} label="Download percentage" />
 ```
 
-### size
+### Size
 
 - Type: string
 - Default: `md`
@@ -100,7 +100,7 @@ Example:
 </ProgressBarStack>
 ```
 
-### color
+### Color
 
 - Type: string
 - Default: `primary`
@@ -151,7 +151,7 @@ Example:
 
 ```
 
-### min
+### Min
 
 The min prop is used to specify the minimum value of the range for the ProgressBar. It should be a number.
 
@@ -171,7 +171,7 @@ Example:
 <ProgressCircle value={250} min={-100}  label="hello" />
 ```
 
-### max
+### Max
 
 The max prop is used to specify the maximum value of the range for the ProgressBar. It should be a number.
 
@@ -196,22 +196,6 @@ Example:
 ## Use Case
 
 The Progress component can be used to visually represent the progress of a task or operation. It provides a clear indication of the completion percentage and can be used in various contexts such as file uploads, form submissions, or any process that requires tracking progress.
-
-## Implementation Details
-
-The Progress component is implemented using React and styled with CSS. It uses the value prop to calculate the visual representation of the progress and updates accordingly.
-
-## Accessibility
-
-The Progress component is designed to be accessible and meets the following criteria:
-
-- The component has a descriptive label or text.
-- The component has an accessible name and role.
-- The component provides a visual indication of progress.
-
-## TypeScript Support
-
-The Progress component has TypeScript support and includes type definitions for its props.
 
 ## Troubleshooting
 

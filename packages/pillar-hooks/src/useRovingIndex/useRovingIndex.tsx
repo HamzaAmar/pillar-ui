@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useDirection } from '../useDirection'
 import type { UseRovingIndexOptions } from './useRovingIndex.type'
 
@@ -20,10 +20,23 @@ export const useRovingIndex = (
   itemCount: number,
   { loop = true, defaultIndex = 0, direction = 'both' }: UseRovingIndexOptions = {}
 ) => {
-  // Keep track of the focused index and whether an item has focus
+  const elementRef = useRef<HTMLElement>(null)
   const [focusedIndex, setFocusedIndex] = useState(defaultIndex)
-
   const { isLtr } = useDirection()
+
+  // Validate input parameters
+  if (itemCount <= 0) {
+    throw new Error('useRovingIndex: itemCount must be a positive number.')
+  }
+
+  if (defaultIndex < 0) {
+    throw new Error('useRovingIndex: defaultIndex must be a non-negative number.')
+  }
+
+  if (defaultIndex >= itemCount) {
+    throw new Error('useRovingIndex: defaultIndex is out of range.')
+  }
+
   // Update the focused index
   const handleIndexChange = useCallback((index: number) => {
     setFocusedIndex(index)
@@ -64,13 +77,18 @@ export const useRovingIndex = (
     [handleIndexChange, focusedIndex, itemCount, loop, direction, isLtr]
   )
 
-  // Add keyboard event listener
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyEvent)
+    const currentRef = elementRef.current
+
+    if (currentRef) {
+      currentRef.addEventListener('keydown', handleKeyEvent)
+    }
     return () => {
-      document.removeEventListener('keydown', handleKeyEvent)
+      if (currentRef) {
+        currentRef.removeEventListener('keydown', handleKeyEvent)
+      }
     }
   }, [handleKeyEvent])
 
-  return { focusedIndex, handleIndexChange, handleKeyEvent }
+  return { focusedIndex, handleIndexChange, handleKeyEvent, elementRef }
 }

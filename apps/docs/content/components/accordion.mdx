@@ -11,7 +11,7 @@ root: components
 
 The Accordion component is a reusable component that allows you to create a collapsible accordion interface.
 
-### type?: Type
+### Type
 
 Type: string
 Default: `single`
@@ -76,23 +76,34 @@ function AccordionType() {
 }
 ```
 
-### corner?: Corner
+Certainly! Here's the updated separation of the props into different sections and the removal of the `separate` prop from the `corner` section:
 
-Type: string
-Default: `md`
-Options: `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
-The size prop determines the corners of the Accordion. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
+### Corner Props
 
-The corner prop determines the border radius of the Accordion. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
+#### `Type`
 
-Example usage:
+- Type: string
+
+#### `Default`
+
+- Default: `md`
+
+#### `Options`
+
+- Options: `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
+
+#### `Description`
+
+The size prop determines the corners of the Accordion. It accepts any of the Size types defined in your library. If not provided, it defaults to the `md` size.
 
 <AccordionPlayGround.Corners />
 
-```tsx showLineNumbers title="Accordion.tsx"
-function AccordionBase(props){
-    return(
-     <Accordion {...props}>
+**Example Usage**
+
+```tsx
+function AccordionBase(props) {
+  return (
+    <Accordion {...props}>
       <Accordion.Item>
         <Accordion.Button title="Hello" />
         <Accordion.Panel>
@@ -116,27 +127,91 @@ function AccordionBase(props){
         </Accordion.Panel>
       </Accordion.Item>
     </Accordion>
-    )
+  )
 }
 
-function CornerCorners(){
-    return(
-       <AccordionBase separate color="surface" variant="solid" corner="sharp" />
-      <AccordionBase separate color="surface" variant="soft" corner="sm" />
-      <AccordionBase separate color="surface" variant="outline" corner="md" />
-      <AccordionBase separate color="surface" variant="solid" corner="lg" />
-      <AccordionBase separate color="surface" variant="soft" corner="xl" />
-      <AccordionBase separate color="surface" variant="outline" corner="full" />
-    )
+function CornerCorners() {
+  return (
+    <div>
+      <AccordionBase color="surface" variant="solid" corner="sharp" />
+      <AccordionBase color="surface" variant="soft" corner="sm" />
+      <AccordionBase color="surface" variant="outline" corner="md" />
+      <AccordionBase color="surface" variant="solid" corner="lg" />
+      <AccordionBase color="surface" variant="soft" corner="xl" />
+      <AccordionBase color="surface" variant="outline" corner="full" />
+    </div>
+  )
 }
-
 ```
+
+### Separate Props
+
+#### `Type`
+
+- Type: boolean
+
+#### `Default`
+
+- Default: `false`
+
+#### `Description`
+
+The separate prop determines whether to separate the accordion items or not. If set to `true`, it separates the accordion items with a border. If not provided, it defaults to `false`.
+
+#### `Example Usage`
+
+<AccordionPlayGround.Separate />
+
+### Example Usage
+
+```tsx showLineNumbers title="Accordion.tsx"
+function AccordionBase(props) {
+  return (
+    <Accordion {...props}>
+      <Accordion.Item>
+        <Accordion.Button title="Hello" />
+        <Accordion.Panel>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt hic debitis, neque accusamus atque
+          provident facilis vel ipsa illo officia aliquid dolore veritat iente at cum dolores.
+        </Accordion.Panel>
+      </Accordion.Item>
+      <Accordion.Item>
+        <Accordion.Button title="Hello" />
+        <Accordion.Panel>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos laborum distinctio officiis a eaque
+          perspiciatis itaque, fugiat quaerat! Natus beatae eius ullam sed repellendus aliquam provident quod fugiat
+          veniam recusandae.
+        </Accordion.Panel>
+      </Accordion.Item>
+      <Accordion.Item>
+        <Accordion.Button title="Hello" />
+        <Accordion.Panel>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error odio
+          animi mollitia? Blanditiis
+        </Accordion.Panel>
+      </Accordion.Item>
+    </Accordion>
+  )
+}
+
+function SeparateExample() {
+  return (
+    <div>
+      <AccordionBase separate color="surface" variant="solid" corner="md" />
+      <AccordionBase separate color="surface" variant="soft" corner="md" />
+      <AccordionBase separate color="surface" variant="outline" corner="md" />
+    </div>
+  )
+}
+```
+
+I've added a new section for the `Separate` props and an example usage for it. The `separate` prop has been removed from the `corner` section and is now included in the `Separate` section.
 
 ### Collapsible
 
-Type: boolean
-Default: `false`
-Options: `true` | `false`
+- **Type:** boolean
+- **Default:** `false`
+- **Options:** `true` | `false`
 
 The "collapsible" prop specifies whether or not all accordion items can be closed. If "collapsible" is set to "true", then all accordion items can be closed even if there is no item still open. If "collapsible" is set to "false", then at least one accordion item must be open at all times.
 
@@ -177,9 +252,9 @@ function AccordionCollapsible() {
 
 ### Variants
 
-Type: string
-Default: `undefined`
-Options: `solid` | `outline` | `soft`
+- **Type:** string
+- **Default:** `undefined`
+- **Options:** `solid` | `outline` | `soft`
 
 The Accordion component has four variants available: solid, soft, outline, and the default variant. You can specify the variant using the variant prop.
 
@@ -327,18 +402,6 @@ The AccordionBase component is useful when you need to display a list of items w
 - FAQ pages
 - Product pages with detailed descriptions
 - Tutorials with multiple steps
-
-## Implementation Details
-
-To implement an accordion, you will need to use HTML, CSS, and JavaScript. The HTML structure should consist of a container element with multiple child elements, each representing a section of content. Each section should have a header element that the user can click to expand or collapse the content within that section. You can use CSS to style the accordion and JavaScript to handle the click events and toggle the visibility of the content.
-
-## Accessibility
-
-When implementing an accordion, it's important to consider accessibility for users with disabilities. Some users may have difficulty using a mouse or touch screen, so it's important to ensure that the accordion can be navigated using the keyboard. Additionally, screen readers may have difficulty with dynamically hidden content, so it's important to provide appropriate ARIA attributes to make the accordion accessible to all users.
-
-## TypeScript Support
-
-If you're using TypeScript in your project, you can define interfaces for the data used by the accordion and ensure that the correct types are passed to the component props.
 
 ## Troubleshooting
 
