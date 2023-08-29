@@ -35,12 +35,12 @@ import * as React from 'react'
 import { useEffect, useRef } from 'react'
 import * as shiki from 'shiki'
 
-interface CodePreviewProps {
-  children: string
-  language: string
-}
+// interface CodePreviewProps {
+//   children: string
+//   language: string
+// }
 
-export const CodePreview: React.FC<CodePreviewProps> = () => {
+export const CodePreview = () => {
   const ref = useRef<HTMLDivElement>(null)
   const theme = require('shiki/themes/github-light.json')
 

@@ -1,5 +1,4 @@
 import { ParsedUrlQuery } from 'querystring'
-import { Paper } from '@pillar-ui/core'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { GetStaticProps } from 'next'
 import { allComponents } from 'contentlayer/generated'

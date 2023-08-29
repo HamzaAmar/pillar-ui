@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import { ReactElement, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 export interface HeadingProps {
   level?: number

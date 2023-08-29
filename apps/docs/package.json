@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
-    "type:check": "tsc --noEmit"
+    "type:check": "tsc --noEmit",
+    "validation": "yarn build && yarn lint && yarn type:check"
   },
   "dependencies": {
     "@pillar-ui/core": "*",

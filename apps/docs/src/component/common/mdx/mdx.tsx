@@ -3,7 +3,7 @@ import { Table, Alert } from '@pillar-ui/core'
 import * as playground from '../../core/playground'
 
 export const mdxComponents = {
-  CodePreview: CodePreview,
+  CodePreview,
   Colors,
   Table,
   Alert,
