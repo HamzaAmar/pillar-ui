@@ -1,7 +1,30 @@
-import { forwardRef } from 'react'
-import type { FlexProps } from './flex.type'
+import { CSSProperties, forwardRef } from 'react'
+import type { FlexItemProps, FlexProps } from './flex.type'
 import { classnames } from '@pillar-ui/utils'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
+
+/*
+===============================================================================================
+    Flex Item Core Component
+===============================================================================================
+*/
+
+const Item = forwardRef(({ children, grow = 0, shrink = 1, basis = 'auto', order, as: Tag = 'div', ...rest }, ref) => {
+  const classNames = classnames()
+
+  return (
+    <Tag
+      style={{ '--flex': `${grow} ${shrink} ${basis}`, order } as CSSProperties}
+      ref={ref}
+      className={classNames}
+      {...rest}
+    >
+      {children}
+    </Tag>
+  )
+}) as ForwardRefComponent<'div', FlexItemProps>
+
+Item.displayName = 'Pillar-FlexItem'
 
 /*
 ===============================================================================================
@@ -28,6 +51,8 @@ export const Flex = forwardRef((props, forwardedRef) => {
       {children}
     </Tag>
   )
-}) as ForwardRefComponent<'div', FlexProps>
+}) as ForwardRefComponent<'div', FlexProps> & { Item: typeof Item }
 
 Flex.displayName = 'Pillar-Flex'
+
+Flex.Item = Item

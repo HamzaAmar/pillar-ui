@@ -11,6 +11,7 @@ const chips = forwardRef((props, ref) => {
     icon,
     iconPosition = 'start',
     variant = 'solid',
+    transform,
     corner,
     className,
     children,
@@ -19,6 +20,7 @@ const chips = forwardRef((props, ref) => {
   const classNames = classnames(`chips chips__${variant} u_${color} u_singleline`, {
     [className!]: !!className,
     [`u_size-${size}`]: !!size,
+    [`u_transform__${transform}`]: !!transform,
     [`u_corner-${corner}`]: !!corner,
   })
 

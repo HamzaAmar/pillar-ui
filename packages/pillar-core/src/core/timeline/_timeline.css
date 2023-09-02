@@ -1,6 +1,6 @@
 .timeline {
   position: relative;
-  font-size: var(--font-size, 1rem);
+  font-size: var(--timeline-size, 1rem);
 }
 
 .timeline--line {

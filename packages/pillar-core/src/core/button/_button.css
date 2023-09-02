@@ -8,9 +8,9 @@
   min-width: 0;
   transition: transform 50ms cubic-bezier(0.68, 0.55, 0.265, -2);
   text-decoration: none;
-  text-transform: var(--text-transform, var(--button-transform, uppercase));
+  /* text-transform: var(--text-transform, var(--button-transform, uppercase));
   border-radius: var(--border-radius, var(--button-corner, 0.25rem));
-  font-size: var(--font-size, var(--button-size, 0.875rem));
+  font-size: var(--font-size, var(--button-size, 0.875rem)); */
   flex: none;
   &:hover {
     background-color: var(--color-shared-4);
@@ -32,6 +32,15 @@
     font-size: 1em;
     width: max(1em, 10px);
   }
+
+  /*
+    These properties serve as fallbacks. If the corresponding utility functions are
+    unavailable, these properties take priority. However, if specific props related to
+    avatars are provided, they will override these properties.
+  */
+  border-radius: var(--button-corner, 10em);
+  font-size: var(--button-size, 0.875rem);
+  text-transform: var(--button-transform, uppercase);
 }
 
 .btn--text {
@@ -88,7 +97,7 @@
 */
 
 .icon-button {
-  padding: 0.25em;
+  padding: 0.375em;
   line-height: 0;
   width: fit-content;
   border-width: 1px;

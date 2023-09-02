@@ -1,5 +1,10 @@
 .rating {
-  font-size: var(--font-size, 1rem);
+  /*
+    These properties serve as fallbacks. If the corresponding utility functions are
+    unavailable, these properties take priority. However, if specific props related to
+    avatars are provided, they will override these properties.
+  */
+  font-size: var(--rating-size, 0.875rem);
 }
 
 .rating svg {

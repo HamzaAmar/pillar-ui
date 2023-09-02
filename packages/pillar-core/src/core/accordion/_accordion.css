@@ -27,9 +27,15 @@
 
 .accordion--item {
   border-block-end: 1px solid var(--surface-6);
-  font-size: clamp(0.65rem, 0.9em, 1.5rem);
-  border-radius: var(--border-radius, 0);
   overflow: hidden;
+
+  /*
+    These properties serve as fallbacks. If the corresponding utility functions are
+    unavailable, these properties take priority. However, if specific props related to
+    avatars are provided, they will override these properties.
+  */
+  border-radius: var(--accordion-corner, 0);
+  font-size: var(--accordion-size, 1rem);
 }
 
 .accordion--item__solid {

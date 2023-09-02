@@ -5,15 +5,7 @@ import { classnames } from '@pillar-ui/utils'
 import type { BadgeProps } from './badge.type'
 
 const badge = forwardRef((props, ref) => {
-  let {
-    color = 'primary',
-    size = 'md',
-    as: Tag = 'div',
-    variant = 'numeric',
-    corner = 'full',
-    className,
-    ...rest
-  } = props
+  let { color = 'primary', size = 'md', as: Tag = 'div', variant = 'numeric', corner, className, ...rest } = props
 
   const classNames = classnames(`badge u_center u_${color} `, {
     badge__dot: variant === 'dot',

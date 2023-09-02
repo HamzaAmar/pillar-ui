@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
-import type { Color, Corner, Size, Variant } from '../../types'
+import type { Color, Corner, Size, Variant, Transform } from '../../types'
 
 export interface ChipsProps {
   variant?: Variant
@@ -9,4 +9,5 @@ export interface ChipsProps {
   children: ReactNode
   icon?: ReactElement
   iconPosition?: 'start' | 'end'
+  transform?: Transform
 }

@@ -30,9 +30,10 @@ export const Button = forwardRef((props, forwardedRef) => {
   } = props
   const startIcon = iconPosition === 'start' && icon
   const endIcon = iconPosition === 'end' && icon
-  const classNames = classnames(`btn  btn__${variant} u_${color} u_singleline`, {
+  const classNames = classnames(`btn btn__${variant} u_${color} u_singleline`, {
     [className!]: !!className,
     btn__fluid: !!fluid,
+
     [`u_transform__${transform}`]: !!transform,
     [`u_size-${size}`]: !!size,
     [`u_corner-${corner}`]: !!corner,
@@ -79,7 +80,7 @@ export const IconButton = forwardRef(
     {
       icon,
       title,
-      corner = 'sharp',
+      corner,
       color = 'primary',
       size = 'md',
       variant = 'transparent',

@@ -33,6 +33,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner,
     color = formGroupContext?.color ?? 'primary',
+    transform,
     fluid = formGroupContext?.fluid,
     isInvalid,
     id,
@@ -47,7 +48,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
 
   const wrapperClassName = classnames(
     `form-field-wrapper u_corner-${corner} form-field-wrapper__${variant} u_flex u_items-start u_spacing-xs u_${color}`,
-    { 'form-field-wrapper__fluid': !!fluid }
+    { [`u_transform__${transform}`]: !!transform, 'form-field-wrapper__fluid': !!fluid }
   )
 
   return (
@@ -89,6 +90,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
     color = formGroupContext?.color ?? 'primary',
+    transform,
     fluid = formGroupContext?.fluid,
     prefixInput,
     suffixInput,
@@ -102,6 +104,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
   const wrapperClassName = classnames(
     `form-field-wrapper  u_corner-${corner} form-field-wrapper__${variant} u_flex u_${color}`,
     {
+      [`u_transform__${transform}`]: !!transform,
       'form-field-wrapper__fluid': !!fluid,
     }
   )
@@ -146,6 +149,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
     color = formGroupContext?.color ?? 'primary',
+    transform,
     fluid = formGroupContext?.fluid,
     prefixInput,
     suffixInput,
@@ -159,7 +163,12 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
 
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
-    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+    {
+      'form-field-wrapper__fluid': !!fluid,
+      [`u_corner-${corner}`]: !!corner,
+      [`u_transform__${transform}`]: !!transform,
+      [`u_size-${size}`]: !!size,
+    }
   )
 
   return (
@@ -224,6 +233,7 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
     color = formGroupContext?.color ?? 'primary',
+    transform,
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
@@ -236,7 +246,12 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
   const type = showPassword ? 'text' : 'password'
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
-    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+    {
+      'form-field-wrapper__fluid': !!fluid,
+      [`u_corner-${corner}`]: !!corner,
+      [`u_transform__${transform}`]: !!transform,
+      [`u_size-${size}`]: !!size,
+    }
   )
   const label = showPassword ? 'Hide Password' : 'Show Password'
   return (
@@ -279,6 +294,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
     color = formGroupContext?.color ?? 'primary',
+    transform,
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
@@ -286,7 +302,12 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
   } = props
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
-    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+    {
+      'form-field-wrapper__fluid': !!fluid,
+      [`u_corner-${corner}`]: !!corner,
+      [`u_transform__${transform}`]: !!transform,
+      [`u_size-${size}`]: !!size,
+    }
   )
   return (
     <Flex justify="between" className={wrapperClassName}>
@@ -324,6 +345,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
     color = formGroupContext?.color ?? 'primary',
+    transform,
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
@@ -331,7 +353,12 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
   } = props
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
-    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+    {
+      'form-field-wrapper__fluid': !!fluid,
+      [`u_corner-${corner}`]: !!corner,
+      [`u_transform__${transform}`]: !!transform,
+      [`u_size-${size}`]: !!size,
+    }
   )
 
   return (
@@ -369,6 +396,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
     color = formGroupContext?.color ?? 'primary',
+    transform,
     fluid = formGroupContext?.fluid,
     placeholder = '○',
     length = 4,
@@ -377,7 +405,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
   } = props
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
-    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+    { [`u_corner-${corner}`]: !!corner, [`u_transform__${transform}`]: !!transform, [`u_size-${size}`]: !!size }
   )
 
   const [pin, setPin] = useState<string[]>(Array(length).fill(''))
@@ -456,6 +484,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
     variant = formGroupContext?.variant ?? 'outline',
     corner = formGroupContext?.corner ?? 'sm',
     color = formGroupContext?.color ?? 'primary',
+    transform,
     fluid = formGroupContext?.fluid,
     value,
     title = 'Select File',
@@ -467,7 +496,12 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
   const composedRef = composeRef(inputRef, forwardedRef)
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
-    { [`u_corner-${corner}`]: !!corner, [`u_size-${size}`]: !!size }
+    {
+      'form-field-wrapper__fluid': !!fluid,
+      [`u_corner-${corner}`]: !!corner,
+      [`u_transform__${transform}`]: !!transform,
+      [`u_size-${size}`]: !!size,
+    }
   )
   const [_value, setValue] = useControllableState({ controlledValue: value, defaultValue: null })
   const hasValue = Array.isArray(_value) ? _value.length !== 0 : !!_value

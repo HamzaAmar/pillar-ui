@@ -1,8 +1,14 @@
 .alert {
   width: 100%;
   padding: 0.5rem 1rem;
-  border-radius: var(--border-radius, var(--alert-corner, 0));
-  font-size: var(--font-size, var(--alert-size, 1rem));
+
+  /*
+    These properties serve as fallbacks. If the corresponding utility functions are
+    unavailable, these properties take priority. However, if specific props related to
+    avatars are provided, they will override these properties.
+  */
+  border-radius: var(--alert-corner, 0.25em);
+  font-size: var(--alert-size, 1rem);
 }
 
 .alert-close {

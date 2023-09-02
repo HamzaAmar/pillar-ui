@@ -5,11 +5,17 @@
   border: 2px solid var(--surface-1);
   background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(var(--surface-1), var(--surface-1));
   background-clip: content-box, padding-box;
-  border-radius: var(--border-radius, var(--avatar-corner, 10em));
-  font-size: var(--font-size, 1rem);
   & > * {
     border-radius: inherit;
   }
+
+  /*
+    These properties serve as fallbacks. If the corresponding utility functions are
+    unavailable, these properties take priority. However, if specific props related to
+    avatars are provided, they will override these properties.
+  */
+  border-radius: var(--avatar-corner, 10em);
+  font-size: var(--avatar-size, 1rem);
 }
 
 .avatar__size {

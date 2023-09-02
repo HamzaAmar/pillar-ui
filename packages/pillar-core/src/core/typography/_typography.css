@@ -1,11 +1,11 @@
 .typography {
   color: var(--color-text);
-  font-size: var(--font-size, inherit);
-  text-transform: var(--text-transform, inherit);
+  font-size: var(--typophraphy-size, inherit);
+  text-transform: var(--typophraphy-transform, inherit);
 }
 
 .heading {
-  font-size: calc(var(--font-size, 1rem) * 1.25);
+  font-size: calc(var(--typophraphy-size, 1rem) * 1.25);
 }
 
 .link {

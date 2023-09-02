@@ -10,8 +10,6 @@
   position: relative;
   overflow: hidden;
   height: fit-content;
-  font-size: max(16px, var(--font-size, var(--input-size, 1rem)));
-  border-radius: var(--border-radius, var(--input-corner, 0.25rem));
   align-items: center;
   &:focus-within {
     outline: 2px solid var(--color-shared-9, var(--primary-9));
@@ -29,6 +27,14 @@
     background-color: var(--surface-7);
     cursor: not-allowed;
   }
+  /*
+    These properties serve as fallbacks. If the corresponding utility functions are
+    unavailable, these properties take priority. However, if specific props related to
+    avatars are provided, they will override these properties.
+  */
+  font-size: max(16px, var(--form-controller-size, 1rem));
+  border-radius: var(--form-controller-corner, 0.25rem);
+  text-transform: var(--form-controller-transform);
 }
 
 /* .form-field-wrapper .form-field-wrapper__fluid { */

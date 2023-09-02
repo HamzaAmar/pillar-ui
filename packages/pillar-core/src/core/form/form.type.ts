@@ -1,4 +1,4 @@
-import type { Color, Corner, Size } from '../../types'
+import type { Color, Corner, Size, Transform } from '../../types'
 import type { ComponentPropsWithRef, ReactNode, ReactElement, AriaAttributes } from 'react'
 import type { TypographyProps } from '..'
 
@@ -12,6 +12,7 @@ interface FormFieldSharedProps {
   fluid?: boolean
   variant?: Variant
   color?: Color
+  transform?: Transform
 }
 
 interface SharedProps {

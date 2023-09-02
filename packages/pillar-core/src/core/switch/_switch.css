@@ -6,8 +6,15 @@
   max-width: 2.5em;
   flex: none;
   height: 1.25em;
-  font-size: var(--font-size, var(--switch-size, 1rem));
-  border-radius: var(--border-radius, var(--switch-corner, 2em));
+
+  /*
+    These properties serve as fallbacks. If the corresponding utility functions are
+    unavailable, these properties take priority. However, if specific props related to
+    avatars are provided, they will override these properties.
+  */
+  border-radius: var(--switch-corner, 2em);
+  font-size: var(--switch-size, 1rem);
+  text-transform: var(--switch-transform);
 
   &:focus-visible {
     outline: 2px dashed var(--color-shared-9);

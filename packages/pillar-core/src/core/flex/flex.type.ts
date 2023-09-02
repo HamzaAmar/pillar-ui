@@ -24,3 +24,10 @@ export interface BoxProps {
   content?: string
   className?: string
 }
+
+export interface FlexItemProps {
+  grow: number
+  shrink: number
+  basis: number
+  order: number
+}

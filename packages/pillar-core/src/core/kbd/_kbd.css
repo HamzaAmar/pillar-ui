@@ -7,7 +7,14 @@
   width: fit-content;
   box-shadow: inset 1px 1px 0.175em var(--color-shared-6, var(--surface-6));
   line-height: 1;
-  font-size: var(--font-size, var(--kbd-size, 0.75rem));
-  border-radius: var(--border-radius, var(--code-corner, 0.25rem));
   height: fit-content;
+
+  /*
+    These properties serve as fallbacks. If the corresponding utility functions are
+    unavailable, these properties take priority. However, if specific props related to
+    avatars are provided, they will override these properties.
+  */
+  border-radius: var(--kdb-corner, 0.25em);
+  font-size: var(--kdb-size, 0.875rem);
+  text-transform: var(--kdb-transform, capitalize);
 }
