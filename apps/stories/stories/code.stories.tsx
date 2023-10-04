@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Flex, Code } from '@pillar-ui/core'
+import { Flex, Code, Paper } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Code',
@@ -99,5 +99,74 @@ export const CodeLong = () => {
             </html>`}
       </Code>
     </Flex>
+  )
+}
+
+export function ButtonCornerDefaults() {
+  return (
+    <div className="l_flow__sm">
+      <Flex gap="sm" direction="column">
+        <Paper corner="sharp">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="sm">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="md">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="lg">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+      </Flex>
+
+      <Flex gap="sm" direction="column" style={{ '--code-corner': '1px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="sm">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="md">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="lg">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+      </Flex>
+      <Flex gap="sm" direction="column" style={{ '--code-corner': '10px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="sm">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="md">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="lg">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+      </Flex>
+
+      <Flex gap="sm" direction="column" style={{ '--code-corner': '20px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="sm">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="md">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Paper corner="lg">
+          <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+        </Paper>
+        <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
+      </Flex>
+    </div>
   )
 }

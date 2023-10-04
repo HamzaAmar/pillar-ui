@@ -2,6 +2,10 @@
   font-weight: 100;
 }
 
+.u_font-small {
+  font-weight: var(--font-sm);
+}
+
 .u_font-extra-light {
   font-weight: 200;
 }
@@ -40,4 +44,34 @@
 
 .u_style__oblique {
   font-style: oblique;
+}
+
+/* Font size section */
+
+.u_font-3xs {
+  font-size: var(--font-3xs);
+}
+.u_font-2xs {
+  font-size: var(--font-2xs);
+}
+.u_font-xs {
+  font-size: var(--font-xs);
+}
+.u_font-sm {
+  font-size: var(--font-sm);
+}
+.u_font-md {
+  font-size: var(--font-md);
+}
+.u_font-lg {
+  font-size: var(--font-lg);
+}
+.u_font-xl {
+  font-size: var(--font-xl);
+}
+.u_font-2xl {
+  font-size: var(--font-2xl);
+}
+.u_font-3xl {
+  font-size: var(--font-3xl);
 }

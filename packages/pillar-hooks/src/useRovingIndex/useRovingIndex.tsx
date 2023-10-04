@@ -90,5 +90,5 @@ export const useRovingIndex = (
     }
   }, [handleKeyEvent])
 
-  return { focusedIndex, handleIndexChange, handleKeyEvent, elementRef }
+  return { focusedIndex, handleIndexChange, handleKeyEvent }
 }

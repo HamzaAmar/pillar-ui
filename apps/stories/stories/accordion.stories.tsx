@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import { ComponentMeta } from '@storybook/react'
-import { Accordion, Flex, Grid } from '@pillar-ui/core'
+import { Accordion, Flex, Grid, Paper } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Accordion',
@@ -195,6 +195,28 @@ export const AccordionStyle = () => {
           </Accordion.Panel>
         </Accordion.Item>
       </Accordion>
+    </div>
+  )
+}
+
+export function AlertSizeDefaults() {
+  return (
+    <div className="l_flow__sm">
+      <Flex direction="column" gap="sm">
+        <AccordionBase />
+        <Paper style={{ '--accordion-size': '2rem' } as CSSProperties}>
+          <AccordionBase />
+        </Paper>
+        <Paper style={{ '--accordion-size': '3rem' } as CSSProperties}>
+          <AccordionBase />
+        </Paper>
+        <Paper style={{ '--accordion-size': '1.5rem' } as CSSProperties}>
+          <AccordionBase />
+          <Paper style={{ '--accordion-size': '5rem' } as CSSProperties}>
+            <AccordionBase />
+          </Paper>
+        </Paper>
+      </Flex>
     </div>
   )
 }

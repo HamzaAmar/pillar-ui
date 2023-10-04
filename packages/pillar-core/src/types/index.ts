@@ -1,4 +1,4 @@
-type SharedSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+type SharedSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | undefined
 
 type Size = '3xs' | '2xs' | SharedSize | '2xl' | '3xl'
 
@@ -7,14 +7,14 @@ type Size = '3xs' | '2xs' | SharedSize | '2xl' | '3xl'
  * @typedef {Size} Size
  */
 
-type Color = 'danger' | 'success' | 'secondary' | 'warning' | 'primary' | 'surface' | 'opacity'
+type Color = 'danger' | 'success' | 'secondary' | 'warning' | 'primary' | 'surface' | 'opacity' | undefined
 
 /**
  * Represents the color of a component.
  * @typedef {Size} Size
  */
 
-type Gradient = Color | 'mixed1' | 'mixed2' | 'mixed3' | 'mixed4'
+type Gradient = Color | 'mixed1' | 'mixed2' | 'mixed3' | 'mixed4' | undefined
 
 /**
  * Represents the color of a component.
@@ -22,25 +22,27 @@ type Gradient = Color | 'mixed1' | 'mixed2' | 'mixed3' | 'mixed4'
  */
 
 /* The Difference Between circle and full circle use 50% and the other use 1000px */
-type Corner = 'sharp' | SharedSize | 'circle' | 'full'
+type Corner = 'sharp' | SharedSize | 'circle' | 'full' | undefined
 
 /**
  * Represents the color of a component.
  * @typedef {Corner} Corner
  */
 
-type Variant = 'solid' | 'outline' | 'soft' | 'text'
+type Variant = 'solid' | 'outline' | 'soft' | 'text' | undefined
 
 /**
  * Represents the color of a component.
  * @typedef {Variant} Variant
  */
 
-type Direction = 'horizontal' | 'vertical'
+type Direction = 'horizontal' | 'vertical' | undefined
 
 /**
  * Represents the color of a component.
  * @typedef {Direction} Direction
  */
 
-export type { Color, Size, Corner, Variant, Direction, Gradient }
+type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'first-letter-only'
+
+export type { Color, Size, Corner, Variant, Direction, Gradient, Transform }

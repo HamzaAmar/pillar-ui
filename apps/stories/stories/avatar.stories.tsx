@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react'
-import { Avatar, Button, Flex } from '@pillar-ui/core'
+import React, { CSSProperties, useRef, useState } from 'react'
+import { Avatar, Button, Flex, Paper } from '@pillar-ui/core'
 import { Dots } from '@pillar-ui/icons'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
@@ -233,6 +233,75 @@ export function AvatarCustomStyle() {
     <div className="l_flow__md">
       <Avatar title="Hello" className="u_brown" />
       <Avatar title="Hello" style={{ background: 'danger', color: 'white' }} />
+    </div>
+  )
+}
+
+export function AvatarCornerDefaults() {
+  return (
+    <div className="l_flow__sm">
+      <Flex gap="sm">
+        <Paper corner="sharp">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="sm">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="md">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="lg">
+          <Avatar title="Hello" />
+        </Paper>
+        <Avatar title="Hello" />
+      </Flex>
+
+      <Flex gap="sm" style={{ '--avatar-corner': '5px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="sm">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="md">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="lg">
+          <Avatar title="Hello" />
+        </Paper>
+        <Avatar title="Hello" />
+      </Flex>
+      <Flex gap="sm" style={{ '--avatar-corner': '10px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="sm">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="md">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="lg">
+          <Avatar title="Hello" />
+        </Paper>
+        <Avatar title="Hello" />
+      </Flex>
+
+      <Flex gap="sm" style={{ '--avatar-corner': '20px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="sm">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="md">
+          <Avatar title="Hello" />
+        </Paper>
+        <Paper corner="lg">
+          <Avatar title="Hello" />
+        </Paper>
+        <Avatar title="Hello" />
+      </Flex>
     </div>
   )
 }

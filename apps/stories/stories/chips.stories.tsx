@@ -1,6 +1,6 @@
-import { useRef, useState, CSSProperties } from 'react'
+import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Chips, Flex, Button } from '@pillar-ui/core'
+import { Chips, Flex, Button, Paper } from '@pillar-ui/core'
 import { Dots, Plus } from '@pillar-ui/icons'
 
 export default {
@@ -133,7 +133,7 @@ export const ChipsSize = () => (
       </Chips>
     </Flex>
     <h1>With 2rem</h1>
-    <Flex gap="xs" style={{ '--chip-size': '2rem' } as CSSProperties}>
+    <Flex gap="xs" style={{ '--chip-size': '2rem' } as React.CSSProperties}>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
@@ -144,7 +144,7 @@ export const ChipsSize = () => (
       <Chips variant="outline">Hello</Chips>
     </Flex>
     <h1>With 1em</h1>
-    <Flex gap="xs" style={{ '--chip-size': '1em' } as CSSProperties}>
+    <Flex gap="xs" style={{ '--chip-size': '1em' } as React.CSSProperties}>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
@@ -187,7 +187,7 @@ export const ChipsCorner = () => (
       </Chips>
     </Flex>
     <h1>With 1rem radius</h1>
-    <Flex gap="xs" style={{ '--chip-corner': '1rem' } as CSSProperties}>
+    <Flex gap="xs" style={{ '--chip-corner': '1rem' } as React.CSSProperties}>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
@@ -198,7 +198,7 @@ export const ChipsCorner = () => (
       <Chips variant="outline">Hello</Chips>
     </Flex>
     <h1>With Sharp</h1>
-    <Flex gap="xs" style={{ '--chip-corner': '0' } as CSSProperties}>
+    <Flex gap="xs" style={{ '--chip-corner': '0' } as React.CSSProperties}>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
@@ -255,9 +255,9 @@ export const ChipsStrange = () => (
   </Flex>
 )
 
-export const BadgeRefForwarded = () => {
-  const chipsRef = useRef<HTMLDivElement>(null)
-  const [count, setCount] = useState(1)
+export const ChipsRefForwarded = () => {
+  const chipsRef = React.useRef<HTMLDivElement>(null)
+  const [count, setCount] = React.useState(1)
 
   const handleClick = () => {
     setCount((count) => count + 1)
@@ -283,5 +283,74 @@ export const BadgeRefForwarded = () => {
       </Chips>
       <Button onClick={handleClick}>Number {count}</Button>
     </Flex>
+  )
+}
+
+export function ChipsCornerDefaults() {
+  return (
+    <div className="l_flow__sm">
+      <Flex gap="sm">
+        <Paper corner="sharp">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="sm">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="md">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="lg">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Chips>Hello</Chips>
+      </Flex>
+
+      <Flex gap="sm" style={{ '--chip-corner': '1px' } as React.CSSProperties}>
+        <Paper corner="sharp">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="sm">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="md">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="lg">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Chips>Hello</Chips>
+      </Flex>
+      <Flex gap="sm" style={{ '--chip-corner': '8px' } as React.CSSProperties}>
+        <Paper corner="sharp">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="sm">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="md">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="lg">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Chips>Hello</Chips>
+      </Flex>
+
+      <Flex gap="sm" style={{ '--chip-corner': '20px' } as React.CSSProperties}>
+        <Paper corner="sharp">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="sm">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="md">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Paper corner="lg">
+          <Chips>Hello</Chips>
+        </Paper>
+        <Chips>Hello</Chips>
+      </Flex>
+    </div>
   )
 }

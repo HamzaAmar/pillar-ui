@@ -1,5 +1,6 @@
-import { isLeapYear, isString, isValidDate } from '../is'
-import type { TimeUnits } from './date.type'
+import { range } from '../array'
+import { isLeapYear, isString, isValidDate, isValidLocale } from '../is'
+import type { CalendarDate, TimeUnits } from './date.type'
 
 const Options: Intl.DateTimeFormatOptions = {
   year: 'numeric',
@@ -53,7 +54,7 @@ export function formatDate(date: Date | string, format: string, options: Intl.Da
  */
 
 export function getDaysInMonth(date: Date | string): number | null {
-  if (typeof date === 'string') date = new Date(date)
+  if (isString(date)) date = new Date(date)
   const year: number = date.getFullYear()
   const month: number = date.getMonth()
   // Create a new Date object for the first day of the next month,
@@ -68,7 +69,7 @@ export function getDaysInMonth(date: Date | string): number | null {
  * @returns {number} The number of days in the year (365 or 366).
  */
 export function getDaysInYear(date: Date | string) {
-  if (typeof date === 'string' && !isValidDate(date)) {
+  if (isString(date) && !isValidDate(date)) {
     return null
   }
   let realDate = new Date(date)
@@ -162,4 +163,285 @@ export function getMonthString(
   const options: Intl.DateTimeFormatOptions = { month: variant ?? 'long' }
   if (isString(date)) date = new Date(date)
   return new Intl.DateTimeFormat(locale, options).format(date)
+}
+
+/**
+ * Gets the start of the year for a given date.
+ *
+ * @param {Date | string} date - The date for which to get the start of the year.
+ * @param {string} [locale='en-US'] - The locale to use for formatting the day and month names.
+ * @returns {Object} An object containing the day, month, and year of the start of the year.
+ * @throws {TypeError} If the input date is not a valid Date object or a valid date string.
+ *
+ * @example
+ * const result = getStartOfYear('2023-04-15', 'en-US');
+ * // Output: { day: 'Saturday', month: 'January', year: 2023 }
+ *
+ * @example
+ * const date = new Date('2022-09-25');
+ * const result = getStartOfYear(date, 'en-US');
+ * // Output: { day: 'Saturday', month: 'January', year: 2022 }
+ */
+export function getStartOfYear(date: Date | string, locale = 'en-US'): CalendarDate {
+  if (!isValidLocale(locale)) {
+    console.log(`"${locale}" is not a valid locale. Converting to "en-US".`)
+    locale = 'en-US'
+  }
+  if (isString(date)) {
+    date = new Date(date)
+  }
+  const startOfYear = new Date(date.getFullYear(), 0, 1)
+  const day = startOfYear.toLocaleString(locale, { weekday: 'long' })
+  const month = startOfYear.toLocaleString(locale, { month: 'long' })
+  const year = startOfYear.getFullYear()
+  return {
+    day: day,
+    month: month,
+    year: year,
+  }
+}
+
+/**
+ * Gets the end of the year for a given date.
+ *
+ * @param {Date | string} date - The date for which to get the end of the year.
+ * @param {string} [locale='en-US'] - The locale to use for formatting the day and month names.
+ * @returns {Object} An object containing the day, month, and year of the end of the year.
+ * @throws {TypeError} If the input date is not a valid Date object or a valid date string.
+ *
+ * @example
+ * const result = getEndOfYear('2023-04-15', 'en-US');
+ * // Output: { day: 'Sunday', month: 'December', year: 2023 }
+ *
+ * @example
+ * const date = new Date('2022-09-25');
+ * const result = getEndOfYear(date, 'en-US');
+ * // Output: { day: 'Saturday', month: 'December', year: 2022 }
+ */
+
+export function getEndOfYear(date: Date | string, locale = 'en-US'): CalendarDate {
+  if (!isValidLocale(locale)) {
+    console.log(`"${locale}" is not a valid locale. Converting to "en-US".`)
+    locale = 'en-US'
+  }
+  if (isString(date)) {
+    date = new Date(date)
+  }
+  const endOfYear = new Date(date.getFullYear(), 11, 31)
+  const day = endOfYear.toLocaleString(locale, { weekday: 'long' })
+  const month = endOfYear.toLocaleString(locale, { month: 'long' })
+  const year = endOfYear.getFullYear()
+  return {
+    day: day,
+    month: month,
+    year: year,
+  }
+}
+
+/**
+ * Gets the start of the month for a given date.
+ *
+ * @param {Date | string} date - The date for which to get the start of the month.
+ * @param {string} [locale='en-US'] - The locale to use for formatting the day and month names.
+ * @returns {Object} An object containing the day, month, and year of the start of the month.
+ * @throws {TypeError} If the input date is not a valid Date object or a valid date string.
+ *
+ * @example
+ * const result = getStartOfMonth('2023-04-15', 'en-US');
+ * // Output: { day: 'Saturday', month: 'April', year: 2023 }
+ *
+ * @example
+ * const date = new Date('2022-09-25');
+ * const result = getStartOfMonth(date, 'en-US');
+ * // Output: { day: 'Friday', month: 'September', year: 2022 }
+ */
+export function getStartOfMonth(date: Date | string, locale = 'en-US'): CalendarDate {
+  if (isString(date)) {
+    date = new Date(date)
+  }
+  if (!(date instanceof Date && !isNaN(date.getTime()))) {
+    throw new TypeError('Invalid date. Please provide a valid Date object or a valid date string.')
+  }
+
+  // Validate the locale and set it to 'en-US' if it's not valid
+  if (!isValidLocale(locale)) {
+    console.log(`"${locale}" is not a valid locale. Converting to "en-US".`)
+    locale = 'en-US'
+  }
+
+  const startOfMonth = new Date(date.getFullYear(), date.getMonth(), 1)
+  const day = startOfMonth.toLocaleString(locale, { weekday: 'long' })
+  const month = startOfMonth.toLocaleString(locale, { month: 'long' })
+  const year = startOfMonth.getFullYear()
+
+  return {
+    day: day,
+    month: month,
+    year: year,
+  }
+}
+
+/**
+ * Gets the end of the month for a given date.
+ *
+ * @param {Date | string} date - The date for which to get the end of the month.
+ * @param {string} [locale='en-US'] - The locale to use for formatting the day and month names.
+ * @returns {Object} An object containing the day, month, and year of the end of the month.
+ * @throws {TypeError} If the input date is not a valid Date object or a valid date string.
+ *
+ * @example
+ * const result = getEndOfMonth('2023-04-15', 'en-US');
+ * // Output: { day: 'Sunday', month: 'April', year: 2023 }
+ *
+ * @example
+ * const date = new Date('2022-09-25');
+ * const result = getEndOfMonth(date, 'en-US');
+ * // Output: { day: 'Saturday', month: 'September', year: 2022 }
+ */
+export function getEndOfMonth(date: Date | string, locale = 'en-US'): CalendarDate {
+  if (isString(date)) date = new Date(date)
+
+  if (!(date instanceof Date && !isNaN(date.getTime()))) {
+    throw new TypeError('Invalid date. Please provide a valid Date object or a valid date string.')
+  }
+
+  // Validate the locale and set it to 'en-US' if it's not valid
+  if (!isValidLocale(locale)) {
+    console.log(`"${locale}" is not a valid locale. Converting to "en-US".`)
+    locale = 'en-US'
+  }
+
+  const endOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0)
+  const day = endOfMonth.toLocaleString(locale, { weekday: 'long' })
+  const month = endOfMonth.toLocaleString(locale, { month: 'long' })
+  const year = endOfMonth.getFullYear()
+
+  return {
+    day: day,
+    month: month,
+    year: year,
+  }
+}
+
+/**
+ * Gets the start of the week for a given date.
+ *
+ * @param {Date | string} date - The date for which to get the start of the week.
+ * @param {string} [locale='en-US'] - The locale to use for formatting the day and month names.
+ * @returns {CalendarDate} An object containing the day, month, and year of the start of the week.
+ * @throws {TypeError} If the input date is not a valid Date object or a valid date string.
+ *
+ * @example
+ * const result = getStartOfWeek('2023-04-15', 'en-US');
+ * // Output: { day: 'Sunday', month: 'April', year: 2023 }
+ *
+ * @example
+ * const date = new Date('2022-09-25');
+ * const result = getStartOfWeek(date, 'en-US');
+ * // Output: { day: 'Sunday', month: 'September', year: 2022 }
+ */
+
+export function getStartOfWeek(date: Date | string, locale = 'en-US'): CalendarDate {
+  if (isValidLocale(locale)) {
+    console.log(`This is not a valid locale: ${locale}. Changing it to 'en-US'.`)
+    locale = 'en-US'
+  }
+  if (isString(date)) {
+    date = new Date(date)
+  }
+  const startOfWeek = new Date(date)
+  const dayIndex = startOfWeek.getDay()
+
+  startOfWeek.setDate(startOfWeek.getDate() - dayIndex)
+  const day = startOfWeek.toLocaleString(locale, { weekday: 'long' })
+  const month = startOfWeek.toLocaleString(locale, { month: 'long' })
+  const year = startOfWeek.getFullYear()
+
+  return {
+    day: day,
+    month: month,
+    year: year,
+  }
+}
+
+/**
+ * Gets the end of the week for a given date.
+ *
+ * @param {Date | string} date - The date for which to get the end of the week.
+ * @param {string} [locale='en-US'] - The locale to use for formatting the day and month names.
+ * @returns {CalendarDate} An object containing the day, month, and year of the end of the week.
+ * @throws {TypeError} If the input date is not a valid Date object or a valid date string.
+ *
+ * @example
+ * const result = getEndOfWeek('2023-04-15', 'en-US');
+ * // Output: { day: 'Saturday', month: 'April', year: 2023 }
+ *
+ * @example
+ * const date = new Date('2022-09-25');
+ * const result = getEndOfWeek(date, 'en-US');
+ * // Output: { day: 'Saturday', month: 'September', year: 2022 }
+ */
+
+export function getEndOfWeek(date: Date | string, locale = 'en-US'): CalendarDate {
+  if (isValidLocale(locale)) {
+    console.log(`This is not a valid locale: ${locale}. Changing it to 'en-US'.`)
+    locale = 'en-US'
+  }
+  if (isString(date)) {
+    date = new Date(date)
+  }
+  const endOfWeek = new Date(date)
+  const dayIndex = endOfWeek.getDay()
+
+  endOfWeek.setDate(endOfWeek.getDate() + (6 - dayIndex))
+  const day = endOfWeek.toLocaleString(locale, { weekday: 'long' })
+  const month = endOfWeek.toLocaleString(locale, { month: 'long' })
+  const year = endOfWeek.getFullYear()
+
+  return {
+    day: day,
+    month: month,
+    year: year,
+  }
+}
+
+/**
+ * Returns an array of years within the specified range (inclusive).
+ *
+ * @param {number} startYear - The starting year of the range.
+ * @param {number} endYear - The ending year of the range.
+ * @returns {number[]} An array of years within the specified range.
+ *
+ * @example
+ * const years = getYearsInRange(2020, 2025);
+ * // Output: [2020, 2021, 2022, 2023, 2024, 2025]
+ */
+export function getYearsInRange(startYear: number, endYear: number): number[] {
+  return range(startYear, endYear)
+}
+
+/**
+ * Returns an array of localized weekday names for a given locale and type.
+ *
+ * @param {string} [locale='en-US'] - The locale for which to get the weekday names.
+ * @param {'long' | 'short' | 'narrow'} [type='long'] - The type of weekday name to retrieve.
+ * @returns {string[]} An array of weekday names based on the provided locale and type.
+ *
+ * @example
+ * const weekdaysEnLong = getWeekdays('en-US', 'long');
+ * // Output: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+ *
+ * @example
+ * const weekdaysEnShort = getWeekdays('en-US', 'short');
+ * // Output: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+ *
+ * @example
+ * const weekdaysFrNarrow = getWeekdays('fr-FR', 'narrow');
+ * // Output: ["D", "L", "M", "M", "J", "V", "S"]
+ *
+ */
+export function getWeekdays(locale = 'en-US', type: 'long' | 'short' | 'narrow' = 'long'): string[] {
+  return Array.from({ length: 7 }, (_, i) =>
+    new Intl.DateTimeFormat(locale, { weekday: type }).format(new Date(Date.UTC(2022, 0, i + 1)))
+  )
 }

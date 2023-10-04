@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { CSSProperties, useState } from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Alert, Button, Flex } from '@pillar-ui/core'
+import { Alert, Button, Flex, Paper } from '@pillar-ui/core'
 import { Check, CircleCheck, CircleInfo, CircleWarning } from '@pillar-ui/icons'
 
 export default {
@@ -189,6 +189,75 @@ export const AlertIsomerphic = () => {
       <AlertBase as="span" />
       <AlertBase as="article" />
     </Flex>
+  )
+}
+
+export function AlertCornerDefaults() {
+  return (
+    <div className="l_flow__sm">
+      <Flex direction="column" gap="sm">
+        <Paper corner="sharp">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="sm">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="md">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="lg">
+          <AlertBase variant="solid" />
+        </Paper>
+        <AlertBase variant="solid" />
+      </Flex>
+
+      <Flex direction="column" gap="sm" style={{ '--alert-corner': '5px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="sm">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="md">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="lg">
+          <AlertBase variant="solid" />
+        </Paper>
+        <AlertBase variant="solid" />
+      </Flex>
+      <Flex direction="column" gap="sm" style={{ '--alert-corner': '10px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="sm">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="md">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="lg">
+          <AlertBase variant="solid" />
+        </Paper>
+        <AlertBase variant="solid" />
+      </Flex>
+
+      <Flex direction="column" gap="sm" style={{ '--alert-corner': '20px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="sm">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="md">
+          <AlertBase variant="solid" />
+        </Paper>
+        <Paper corner="lg">
+          <AlertBase variant="solid" />
+        </Paper>
+        <AlertBase variant="solid" />
+      </Flex>
+    </div>
   )
 }
 

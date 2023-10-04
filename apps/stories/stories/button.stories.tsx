@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react'
-import { Button, Flex } from '@pillar-ui/core'
+import { Button, Flex, Paper } from '@pillar-ui/core'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Eye, Github, Plus, ThumbDown, ThumbUp } from '@pillar-ui/icons'
 
@@ -345,5 +345,126 @@ export function ButtonsLongText() {
         Hello world
       </Button>
     </Flex>
+  )
+}
+
+export function ButtonCornerDefaults() {
+  return (
+    <div className="l_flow__sm">
+      <Flex gap="sm">
+        <Paper corner="sharp">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="sm">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="md">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="lg">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Button color="success">Green</Button>
+      </Flex>
+
+      <Flex gap="sm" style={{ '--button-corner': '5px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="sm">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="md">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="lg">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Button color="success">Green</Button>
+      </Flex>
+      <Flex gap="sm" style={{ '--button-corner': '10px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="sm">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="md">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="lg">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Button color="success">Green</Button>
+      </Flex>
+
+      <Flex gap="sm" style={{ '--button-corner': '20px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="sm">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="md">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Paper corner="lg">
+          <Button color="success">Green</Button>
+        </Paper>
+        <Button color="success">Green</Button>
+      </Flex>
+    </div>
+  )
+}
+
+export function ButtonTransformDefaults() {
+  return (
+    <div className="l_flow__sm">
+      <Flex gap="sm" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
+        <Button transform="uppercase" color="success">
+          green
+        </Button>
+        <Button transform="first-letter-only" color="success">
+          green
+        </Button>
+        <Button transform="lowercase" color="success">
+          green
+        </Button>
+        <Button color="success">Green</Button>
+      </Flex>
+      <Button color="success">Green</Button>
+    </div>
+  )
+}
+export function ButtonSizeDefaults() {
+  return (
+    <div className="l_flow__sm">
+      <Flex gap="sm" style={{ '--button-size': '8px' } as CSSProperties}>
+        <Button size="2xs" color="success">
+          green
+        </Button>
+        <Button size="xs" color="success">
+          green
+        </Button>
+        <Button size="sm" color="success">
+          green
+        </Button>
+        <Button size="md" color="success">
+          green
+        </Button>
+        <Button size="lg" color="success">
+          green
+        </Button>
+        <Button size="xl" color="success">
+          green
+        </Button>
+        <Button size="2xl" color="success">
+          green
+        </Button>
+        <Button color="success">Green</Button>
+      </Flex>
+
+      <Button color="success">Green</Button>
+    </div>
   )
 }

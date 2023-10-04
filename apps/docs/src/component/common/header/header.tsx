@@ -16,7 +16,7 @@ const Header = () => {
         <Logo width="100px" className="header--logo" />
       </Link>
 
-      <Flex
+      {/* <Flex
         as={Paper}
         padding="sm"
         data-show={booleanValue}
@@ -28,6 +28,12 @@ const Header = () => {
           <InputSearch fluid name="search" placeholder="Search" aria-label="search" />
         </div>
         <IconButton className="only-mobile" corner="sm" onClick={setFalse} icon={<Close />} title={'Hide Search '} />
+      </Flex> */}
+
+      <Flex>
+        <div>sdfsdf</div>
+        <div>sdfsdfsdf</div>
+        <div>sdfsdf</div>
       </Flex>
 
       <Flex className="l_flex-1" items="center" justify="end" gap="xs">

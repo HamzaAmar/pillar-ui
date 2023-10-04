@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { CSSProperties, useRef, useState } from 'react'
 import { Check, Plus, Plane, ChevronDown, Apple, Alien, LetterSpacing, SuperScript } from '@pillar-ui/icons'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Badge, Button, Flex } from '@pillar-ui/core'
+import { Badge, Button, Flex, Paper } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Badge',
@@ -192,6 +192,75 @@ export const BadgePolymorphic = () => {
         style={{ background: 'success', color: 'white', border: '4px solid darkred' }}
       />
     </Flex>
+  )
+}
+
+export function ButtonCornerDefaults() {
+  return (
+    <div className="l_flow__sm">
+      <Flex gap="sm">
+        <Paper corner="sharp">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="sm">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="md">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="lg">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Badge variant="numeric" number={15} max={15} />
+      </Flex>
+
+      <Flex gap="sm" style={{ '--badge-corner': '1px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="sm">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="md">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="lg">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Badge variant="numeric" number={15} max={15} />
+      </Flex>
+      <Flex gap="sm" style={{ '--badge-corner': '10px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="sm">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="md">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="lg">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Badge variant="numeric" number={15} max={15} />
+      </Flex>
+
+      <Flex gap="sm" style={{ '--badge-corner': '20px' } as CSSProperties}>
+        <Paper corner="sharp">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="sm">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="md">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Paper corner="lg">
+          <Badge variant="numeric" number={15} max={15} />
+        </Paper>
+        <Badge variant="numeric" number={15} max={15} />
+      </Flex>
+    </div>
   )
 }
 

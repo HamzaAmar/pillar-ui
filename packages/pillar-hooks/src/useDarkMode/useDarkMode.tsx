@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 
 type Mode = 'light' | 'dark' | undefined
 
-const codeToRunOnClient = `function(){alert('Hello')}`
-
 function getOppositeMode(mode: Mode) {
   return mode === 'dark' ? 'light' : 'dark'
 }
@@ -76,6 +74,5 @@ export function useDarkMode() {
     })
   }
 
-  const modeScript = <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
-  return { isDark, mode, toggleMode, modeScript }
+  return { isDark, mode, toggleMode }
 }
