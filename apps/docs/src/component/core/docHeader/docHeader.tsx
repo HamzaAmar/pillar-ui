@@ -3,7 +3,7 @@ import { Github } from '@pillar-ui/icons'
 import React from 'react'
 import { DocHeaderProps } from './docHeader.type'
 
-const docHeader = ({ title, type, items, file, excerpt, slug, ...rest }: DocHeaderProps) => {
+const docHeader = ({ title, type, items, file, excerpt, slug }: DocHeaderProps) => {
   return (
     <Paper pb="sm" flow="lg" borderStyle="solid" borderColor="opacity-6" borderPosition="bottom" padding="sm">
       <Heading size="2xl">
@@ -32,14 +32,18 @@ const docHeader = ({ title, type, items, file, excerpt, slug, ...rest }: DocHead
         <Flex gap="sm">
           <Chips>{type}</Chips>
         </Flex>
-        <Text weight="medium" size="sm" color="surface" contrast="low">
-          import
-        </Text>
-        <Flex gap="sm">
-          <code>
-            import <b>{`{ ${title} }`}</b> from {`'@pillar-ui/${file}'`}
-          </code>
-        </Flex>
+        {file ? (
+          <>
+            <Text weight="medium" size="sm" color="surface" contrast="low">
+              import
+            </Text>
+            <Flex gap="sm">
+              <code>
+                import <b>{`{ ${title} }`}</b> from {`'@pillar-ui/${file}'`}
+              </code>
+            </Flex>
+          </>
+        ) : null}
       </Grid>
 
       <Flex gap="sm" wrap>
