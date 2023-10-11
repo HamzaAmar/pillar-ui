@@ -5,11 +5,37 @@ excerpt: 'Welcome to the Pillar project! This Library houses a comprehensive col
 root: getting-started
 ---
 
-# Installation
+# Overview
+
+Before diving into the installation, let's provide a brief overview of what this page will cover. In this guide, you'll learn how to get started with Pillar, a comprehensive library for building modern web applications. We'll walk you through the installation process, adding styles, customizing the theming, and enhancing your developer experience. By the end, you'll be ready to use Pillar's components, icons, utilities, and hooks to create stunning web user interfaces.
+
+## Table of Contents
+
+- [Installation](#installation)
+  - [Step 1: Install Node.js and npm](#step-1-install-nodejs-and-npm)
+  - [Step 2: Install Pillar Packages](#step-2-install-pillar-packages)
+  - [Step 3: Adding Styles](#step-3-adding-styles)
+  - [Step 4: Customize the Theming](#step-4-customize-the-theming)
+- [Developer Experience](#developer-experience)
+  - [Responsive Variables](#responsive-variables)
+  - [Preventing Repetition](#preventing-repetition)
+  - [Customization and Extensibility](#customization-and-extensibility)
+- [Get Ready](#get-ready)
+- [Next Steps](#next-steps)
+  - [Explore Component Documentation](#explore-component-documentation)
+  - [Dive into Utilities, Hooks, and Icons](#dive-into-utilities-hooks-and-icons)
+  - [Build Real-world Projects](#build-real-world-projects)
+  - [Contribute and Give Feedback](#contribute-and-give-feedback)
+  - [Stay Updated](#stay-updated)
+- [Troubleshooting](#troubleshooting)
+  - [Troubleshooting Section](#troubleshooting-section)
+  - [Further Assistance](#further-assistance)
+
+## Installation
 
 To start using Pillar in your project, follow these simple steps:
 
-1. Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
+1. Make sure you have [Node.js](https://nodejs.org/en) and [npm (Node Package Manager)](https://www.npmjs.com/) installed on your machine.
 
 1. Create a new project or navigate to your existing project directory in the terminal.
 
@@ -19,7 +45,7 @@ To start using Pillar in your project, follow these simple steps:
 npm install @pillar-ui/core
 ```
 
-or You prefer Yarn
+or you prefer Yarn
 
 ```bash
 yarn add @pillar-ui/core
@@ -31,7 +57,7 @@ yarn add @pillar-ui/core
 npm install @pillar-ui/hooks @pillar-ui/utilities @pillar-ui/icons
 ```
 
-or You prefer Yarn
+or you prefer Yarn
 
 ```bash
 yarn add @pillar-ui/hooks @pillar-ui/utilities @pillar-ui/icons
@@ -39,7 +65,7 @@ yarn add @pillar-ui/hooks @pillar-ui/utilities @pillar-ui/icons
 
 ## Adding Styles
 
-To enhance the appearance and maintain visual consistency of your Vite React app using Pillar components, follow these steps to add the necessary styles. Pillar provides a CSS file that not only enhances the styling but also introduces additional features such as dark mode support and right-to-left (RTL) language support.
+To enhance the appearance and maintain visual consistency of your create react app using Pillar components, follow these steps to add the necessary styles. Pillar provides a CSS file that not only enhances the styling but also introduces additional features such as dark mode support and right-to-left (RTL) language support.
 
 - Open the root file of your Vite React app project.
 
@@ -53,7 +79,7 @@ import '@pillar-ui/core/style'
 
 ## Customize the theming
 
-With Pillar UI, you can easily customize the appearance of your user interface (UI) to match your preferences. By modifying the predefined custom properties, you can control colors, typography, spacing, and more.
+With Pillar UI, you can easily customize the appearance of your user interface (UI) to match your preferences. By modifying the predefined [custom properties](https://css-tricks.com/a-complete-guide-to-custom-properties/), you can control colors, typography, spacing, and more.
 
 To change the primary color of your UI, follow these simple steps:
 
@@ -64,21 +90,17 @@ To change the primary color of your UI, follow these simple steps:
 :root {
   --primary-1: hsl(225deg 60% 99.4%);
   --primary-2: hsl(223deg 100% 98.6%);
-    /* ... from 1 to 12
-       ... from 1 to 12
-    */
+  /* ... */
   --primary-11: hsl(226deg 55% 45%);
-  --primary-12: hsl(226dg 62% 17%));
+  --primary-12: hsl(226dg 62% 17%);
 }
 
 .dark {
   --primary-1: hsl(229deg 24% 10%);
   --primary-2: hsl(230deg 36.4% 12.9%);
-   /* ... from 1 to 12
-      ... from 1 to 12
-   */
+  /* ... */
   --primary-11: hsl(228deg 100% 75.9%);
-  --primary-12: hsl(226deg 8% 96.3%));
+  --primary-12: hsl(226deg 8% 96.3%);
 }
 ```
 
@@ -110,7 +132,7 @@ Pillar UI enhances your development experience (DX) with simple workflows for co
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-/*  DO the theme here */
+/*  Define custom theme styles here  */
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -131,14 +153,10 @@ Set `--button-corner`, `--avatar-corner`, and `--badge-corner` to 0 for sharp co
 
 Once you have customized your Pillar UI theme and set the desired variables, you are ready to import the necessary components, icons, utilities, or hooks and start developing your application.
 
-```tsx
-import { Button } from '@pillar-ui/core'
-```
-
-Similarly, you can import icons, utilities, or hooks based on your requirements. Here are some examples:
+you can import icons, utilities, or hooks based on your requirements. Here are some examples:
 
 ```tsx
-import { Button, Paper, Flex, InputPassword, FormController } from '@pillar-ui/core'
+import { Button, Paper, Flex, InputPassword, FormController, Input } from '@pillar-ui/core'
 import { Envelop } from '@pillar-ui/icons'
 import { toCapitalize } from '@pillar-ui/utilities'
 import { useDarkMode } from '@pillar-ui/hooks'
@@ -153,11 +171,12 @@ function App() {
     email: '',
     password: '',
   })
+  const [error, setError] = useState({})
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target
     const newValue = name === 'email' ? toCapitalize(value) : value
-    FormData((prevFormValues) => ({ ...prevFormValues, [name]: newValue }))
+    setFormData((prevFormValues) => ({ ...prevFormValues, [name]: newValue }))
   }
 
   function handleSubmit(e: React.FormEvent) {
@@ -233,7 +252,7 @@ Remember, your journey with Pillar UI is a continuous process of learning and gr
 
 ## Troubleshooting
 
-If you encounter any issues while integrating Pillar UI, refer to the (Troubleshooting)[http://localhost:3001/docs/troubleshooting] section for solutions to common problems.
+If you encounter any issues while integrating Pillar UI, refer to the [Troubleshooting](http://localhost:3001/docs/troubleshooting) section for solutions to common problems.
 
 ### Further Assistance
 
@@ -246,3 +265,9 @@ _Community Discord:_ Join our community Discord server to seek help from other u
 _GitHub Issues:_ Visit our [GitHub Issues page](https://github.com/HamzaAmar/pillar-ui/issues) to report problems or find solutions to known issues.
 
 Remember, troubleshooting can vary depending on individual projects and setups. These are general guidelines, so adapt them to fit your users' needs and your UI library's peculiarities.
+
+## Feedback
+
+We value your feedback! If you have any suggestions, questions, or encounter any issues while using Pillar, please don't hesitate to provide feedback. Your input is invaluable for continuous improvement. You can share your thoughts and report any documentation-related issues by [submitting feedback here](link-to-feedback-form).
+
+Thank you for helping us make Pillar better!

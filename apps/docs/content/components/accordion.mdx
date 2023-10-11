@@ -13,9 +13,9 @@ The Accordion component is a reusable component that allows you to create a coll
 
 ### Type
 
-Type: string
-Default: `single`
-Options: `single` | `multiple`
+- Type: string
+- Default: `single`
+- Options: `single` | `multiple`
 
 type: Specifies the type of accordion. It can be either "single" or "multiple". If "single", only one item can be open at a time. If "multiple", multiple items can be open at the same time. By default, the type is "single".
 
@@ -80,21 +80,11 @@ Certainly! Here's the updated separation of the props into different sections an
 
 ### Corner Props
 
-#### `Type`
-
-- Type: string
-
-#### `Default`
-
-- Default: `md`
-
-#### `Options`
-
-- Options: `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
-
-#### `Description`
-
 The size prop determines the corners of the Accordion. It accepts any of the Size types defined in your library. If not provided, it defaults to the `md` size.
+
+- **Type:** string
+- **Default:** `md`
+- **Options:** `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
 
 <AccordionPlayGround.Corners />
 
@@ -146,19 +136,13 @@ function CornerCorners() {
 
 ### Separate Props
 
-#### `Type`
-
-- Type: boolean
-
-#### `Default`
-
-- Default: `false`
-
-#### `Description`
-
 The separate prop determines whether to separate the accordion items or not. If set to `true`, it separates the accordion items with a border. If not provided, it defaults to `false`.
 
-#### `Example Usage`
+- **Type:** boolean
+- **Default:** `false`
+- **Options:** `true` | `false`
+
+**Example Usage**
 
 <AccordionPlayGround.Separate />
 

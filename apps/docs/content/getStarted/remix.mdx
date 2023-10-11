@@ -5,11 +5,37 @@ excerpt: 'Welcome to the Pillar project! This Library houses a comprehensive col
 root: getting-started
 ---
 
+# Overview
+
+Before diving into the installation, let's provide a brief overview of what this page will cover. In this guide, you'll learn how to get started with Pillar, a comprehensive library for building modern web applications. We'll walk you through the installation process, adding styles, customizing the theming, and enhancing your developer experience. By the end, you'll be ready to use Pillar's components, icons, utilities, and hooks to create stunning web user interfaces.
+
+## Table of Contents
+
+- [Installation](#installation)
+  - [Step 1: Install Node.js and npm](#step-1-install-nodejs-and-npm)
+  - [Step 2: Install Pillar Packages](#step-2-install-pillar-packages)
+  - [Step 3: Adding Styles](#step-3-adding-styles)
+  - [Step 4: Customize the Theming](#step-4-customize-the-theming)
+- [Developer Experience](#developer-experience)
+  - [Responsive Variables](#responsive-variables)
+  - [Preventing Repetition](#preventing-repetition)
+  - [Customization and Extensibility](#customization-and-extensibility)
+- [Get Ready](#get-ready)
+- [Next Steps](#next-steps)
+  - [Explore Component Documentation](#explore-component-documentation)
+  - [Dive into Utilities, Hooks, and Icons](#dive-into-utilities-hooks-and-icons)
+  - [Build Real-world Projects](#build-real-world-projects)
+  - [Contribute and Give Feedback](#contribute-and-give-feedback)
+  - [Stay Updated](#stay-updated)
+- [Troubleshooting](#troubleshooting)
+  - [Troubleshooting Section](#troubleshooting-section)
+  - [Further Assistance](#further-assistance)
+
 ## Installation
 
 To start using Pillar in your project, follow these simple steps:
 
-1. Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
+1. Make sure you have [Node.js](https://nodejs.org/en) and [npm (Node Package Manager)](https://www.npmjs.com/) installed on your machine.
 
 1. Create a new project or navigate to your existing project directory in the terminal.
 
@@ -19,7 +45,7 @@ To start using Pillar in your project, follow these simple steps:
 npm install @pillar-ui/core
 ```
 
-or You prefer Yarn
+or you prefer Yarn
 
 ```bash
 yarn add @pillar-ui/core
@@ -70,21 +96,17 @@ To change the primary color of your UI, follow these simple steps:
 :root {
   --primary-1: hsl(225deg 60% 99.4%);
   --primary-2: hsl(223deg 100% 98.6%);
-    /* ... from 1 to 12
-       ... from 1 to 12
-    */
+  /* ... */
   --primary-11: hsl(226deg 55% 45%);
-  --primary-12: hsl(226dg 62% 17%));
+  --primary-12: hsl(226dg 62% 17%);
 }
 
 .dark {
   --primary-1: hsl(229deg 24% 10%);
   --primary-2: hsl(230deg 36.4% 12.9%);
-   /* ... from 1 to 12
-      ... from 1 to 12
-   */
+  /* ... */
   --primary-11: hsl(228deg 100% 75.9%);
-  --primary-12: hsl(226deg 8% 96.3%));
+  --primary-12: hsl(226deg 8% 96.3%);
 }
 ```
 
@@ -123,7 +145,7 @@ Pillar UI enhances your development experience (DX) with simple workflows for co
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-/*  DO the theme here */
+/*  Define custom theme styles here */
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -151,51 +173,54 @@ import { Button } from '@pillar-ui/core'
 Similarly, you can import icons, utilities, or hooks based on your requirements. Here are some examples:
 
 ```tsx title="app/routes/_index.tsx"
-import { Form } from '@remix-run/react'
-import { json, redirect } from '@remix-run/node'
-import { Button, Paper, Flex, InputPassword, FormController } from '@pillar-ui/core'
+import { Button, Paper, Flex, InputPassword, FormController, Input } from '@pillar-ui/core'
 import { Envelop } from '@pillar-ui/icons'
 import { toCapitalize } from '@pillar-ui/utilities'
 import { useDarkMode } from '@pillar-ui/hooks'
-
-import type { ActionArgs } from '@remix-run/node'
 
 interface FormValues {
   email: string
   password: string
 }
 
-export async function createPost(post) {
-  return console.log(post)
-}
-
-export const action = async ({ request }: ActionArgs) => {
-  const formData = await request.formData()
-
-  const email = formData.get('email')
-  const password = formData.get('password')
-
-  const errors = {
-    email: email ? null : 'Title is required',
-    password: email ? null : 'Slug is required',
-  }
-  const hasErrors = Object.values(errors).some((errorMessage) => errorMessage)
-  if (hasErrors) {
-    return json(errors)
-  }
-
-  await createPost({ email, password })
-
-  return redirect('/posts/admin')
-}
-
 function App() {
-  const errors = useActionData<typeof action>()
+  const [formData, setFormData] = useState<FormValues>({
+    email: '',
+    password: '',
+  })
+  const [error, setError] = useState({})
+
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    const { name, value } = event.target
+    const newValue = name === 'email' ? toCapitalize(value) : value
+    setFormData((prevFormValues) => ({ ...prevFormValues, [name]: newValue }))
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+
+    const form = e.target as HTMLFormElement
+
+    if (form.checkValidity()) {
+      setErrors({})
+    } else {
+      const validationErrors: { [key: string]: string } = {}
+
+      for (let i = 0; i < form.elements.length; i++) {
+        const field = form.elements[i] as HTMLInputElement
+        if (!field.checkValidity()) {
+          validationErrors[field.name] = field.validationMessage
+        }
+      }
+
+      setErrors(validationErrors)
+    }
+  }
 
   return (
     <Paper as={Flex} width="100vw" height="100vh" justify="center" items="center" p="sm">
-      <Paper as={Form} method="post" width="min(320px , 60vw)" borderColor="opacity-6" p="sm">
-        <FormController error={errors.email} required label="Email">
+      <Paper as="form" onSubmit={handleSubmit} width="min(320px , 60vw)" borderColor="opacity-6" p="sm">
+        <FormController required label="Email">
           <Input
             value={formData.email}
             name="email"
@@ -205,9 +230,9 @@ function App() {
           />
         </FormController>
         <FormController required minLength={7} label="Email" hint="Enter your password (at least 7 characters)">
-          <InputPassword error={errors.password} value={formData.password} name="password" onChange={handleChange} />
+          <InputPassword value={formData.password} name="password" onChange={handleChange} />
         </FormController>
-        <Button type="submit"> Login </Button>
+        <Button> Login </Button>
       </Paper>
     </Paper>
   )

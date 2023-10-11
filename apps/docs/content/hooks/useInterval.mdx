@@ -1,15 +1,83 @@
 ---
 title: useInterval
 type: Hooks
-excerpt: 'The useInterval hook is a custom hook for creating and managing an interval in a React application. It provides an easy-to-use interface for starting, stopping, and toggling an interval.'
+excerpt: 'A custom React hook for creating and managing intervals.'
 file: hooks
 root: hooks
 ---
 
-## Why useInterval
+# Table of Contents
 
-The useInterval hook simplifies the process of creating and managing an interval in a React application. It provides an easy-to-use interface for controlling the interval and keeping track of its active state.
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Parameters](#parameters)
+- [Returned Value](#returned-value)
+- [Usage](#usage)
+- [Implementation Details](#implementation-details)
+- [Error Handling](#error-handling)
+- [Conclusion](#conclusion)
+
+A custom React hook for creating and managing intervals.
+
+## Introduction
+
+The `useInterval` hook is a custom React hook that allows you to create and manage intervals in your React components. It provides functions for starting, stopping, and toggling intervals, as well as a state variable to track the interval's status.
 
 ## Installation
 
-To use the useInterval hook, simply import it into your React component:
+```bash
+npm install  '@pillar-ui/hooks'
+```
+
+## Parameters
+
+The `useInterval` hook takes the following parameters:
+
+- `callback: () => void`: The function to be called on each interval tick.
+- `interval: number (optional, default: 150)`: The interval duration in milliseconds. This parameter is optional, and the default interval is set to 150 milliseconds.
+
+## Returned Value
+
+The `useInterval` hook returns an object with the following properties and methods:
+
+- **start()**: Start the interval.
+- **stop()**: Stop the interval.
+- **toggle()**: Toggle the interval (start if inactive, stop if active).
+- **active**: A boolean indicating whether the interval is currently active.
+
+## Usage
+
+To use the `useInterval` hook, call it inside your functional component:
+
+```tsx
+import { useInterval } from '@pillar-ui/hooks'
+
+function IntervalComponent() {
+  const { start, stop, toggle, active } = useInterval(() => {
+    console.log('Interval tick')
+  }, 1000)
+
+  return (
+    <div>
+      <p>Interval is {active ? 'active' : 'inactive'}</p>
+      <button onClick={start}>Start Interval</button>
+      <button onClick={stop}>Stop Interval</button>
+      <button onClick={toggle}>Toggle Interval</button>
+    </div>
+  )
+}
+```
+
+In the example above, the `useInterval` hook is used to create and manage an interval. The `start` function starts the interval, the `stop` function stops the interval, and the `toggle` function toggles the interval between active and inactive states. The `active` variable is used to display the current status of the interval.
+
+## Implementation Details
+
+The `useInterval` hook internally uses the `useState`, `useRef`, and `useCallback` hooks from React to manage the interval and its state. It also utilizes the `usePersistentCallback` hook to ensure the callback function remains stable across renders.
+
+## Error Handling
+
+The `useInterval` hook performs some basic error checking on the input parameters to ensure they are valid. It logs an error message to the console if the `interval` is smaller than 0 or if it's `NaN`.
+
+## Conclusion
+
+The `useInterval` hook simplifies the process of creating and managing intervals in your React components. Whether you need to implement periodic actions, animations, or any other timed functionality, this hook provides an easy-to-use solution.

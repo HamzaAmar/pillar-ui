@@ -6,6 +6,18 @@ file: hooks
 root: hooks
 ---
 
+# Table of Contents
+
+- [Why useArray](#why-usearray)
+- [Usage](#usage)
+- [Parameters](#parameters)
+- [Returned values](#returned-values)
+- [Use Case](#use-case)
+- [Implementation details](#implementation-details)
+- [TypeScript Support](#typescript-support)
+- [Troubleshooting](#troubleshooting)
+- [Conclusion](#conclusion)
+
 ## Why useArray
 
 Managing array state values can be a common task in React applications, and this hook provides an easy way to handle it in a consistent and reusable way.
@@ -22,7 +34,7 @@ function MyComponent() {
 
   return (
     <div>
-      <p>Current array: {array}</p>
+      <p>Current array: {list}</p>
       <button onClick={addElement(4)}>Add Element</button>
       <button onClick={removeElement(2)}>Remove Element</button>
     </div>
@@ -71,7 +83,7 @@ The useArray hook can be used for a variety of purposes, including:
 
 - Building a social media feed: The useArray hook could be used to keep track of the posts in the feed and their timestamps.
 
-- Creating a list of bookmarks: The useArray hook could be used to keep trackof the bookmarks in a web browser and their URLs.
+- Creating a list of bookmarks: The useArray hook could be used to keep track of the bookmarks in a web browser and their URLs.
 
 - Implementing a filterable list: The useArray hook could be used to keep track of the items in a list that match a certain criteria and update the list dynamically as the filter changes.
 
