@@ -1,12 +1,12 @@
 import React from 'react'
 import { Logo } from '..'
 import { Button, Flex, IconButton, InputSearch, Paper } from '@pillar-ui/core'
-import { Github, Sun, TextRtl, Discord, Moon, Menu, ListSearch, Close, Dollar } from '@pillar-ui/icons'
+import { Sun, TextRtl, Moon, Menu, ListSearch, Dollar, Close } from '@pillar-ui/icons'
 import Link from 'next/link'
 import { useBooleanState, useDarkMode, useDirection } from '@pillar-ui/hooks'
 
 const Header = () => {
-  const { isDark, mode, toggleMode } = useDarkMode()
+  const { isDark, toggleMode } = useDarkMode()
   const { booleanValue, setTrue, setFalse } = useBooleanState(false)
   const { toggleDirection } = useDirection()
 
@@ -16,7 +16,7 @@ const Header = () => {
         <Logo width="100px" className="header--logo" />
       </Link>
 
-      {/* <Flex
+      <Flex
         as={Paper}
         padding="sm"
         data-show={booleanValue}
@@ -28,12 +28,6 @@ const Header = () => {
           <InputSearch fluid name="search" placeholder="Search" aria-label="search" />
         </div>
         <IconButton className="only-mobile" corner="sm" onClick={setFalse} icon={<Close />} title={'Hide Search '} />
-      </Flex> */}
-
-      <Flex>
-        <div>sdfsdf</div>
-        <div>sdfsdfsdf</div>
-        <div>sdfsdf</div>
       </Flex>
 
       <Flex className="l_flex-1" items="center" justify="end" gap="xs">
