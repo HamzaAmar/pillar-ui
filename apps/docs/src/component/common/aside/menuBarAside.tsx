@@ -7,7 +7,7 @@ import type { MenuItemData } from './aside.type'
 import { MENU_CONTENT, MENU_LIST } from './menuBar.data'
 import { Item } from './listItem'
 
-const MenuBar = () => {
+const MenuBar = ({ open }: { open: boolean }) => {
   const { asPath } = useRouter()
   const path = asPath.split('/docs/').join('')
   const [current, setCurrent] = useState<string | null>(path)
@@ -20,7 +20,7 @@ const MenuBar = () => {
   }
 
   return (
-    <Flex as="aside" direction="column" className="aside menu-bar l_flow md-hide custom-scroll">
+    <Flex as="aside" data-mobile-open={open} direction="column" className="aside menu-bar l_flow custom-scroll">
       <nav>
         <ul>
           {MENU_LIST.map((item) => {

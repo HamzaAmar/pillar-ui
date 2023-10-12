@@ -5,9 +5,10 @@ import { Sun, TextRtl, Moon, Menu, ListSearch, Dollar, Close } from '@pillar-ui/
 import Link from 'next/link'
 import { useBooleanState, useDarkMode, useDirection } from '@pillar-ui/hooks'
 
-const Header = () => {
+const Header = ({ handleToggle }) => {
   const { isDark, toggleMode } = useDarkMode()
   const { booleanValue, setTrue, setFalse } = useBooleanState(false)
+  const menu = useBooleanState(false)
   const { toggleDirection } = useDirection()
 
   return (
@@ -18,7 +19,7 @@ const Header = () => {
 
       <Flex
         as={Paper}
-        padding="sm"
+        p="sm"
         data-show={booleanValue}
         justify="between"
         gap="sm"
@@ -27,17 +28,27 @@ const Header = () => {
         <div className="l_flex-1">
           <InputSearch fluid name="search" placeholder="Search" aria-label="search" />
         </div>
-        <IconButton className="only-mobile" corner="sm" onClick={setFalse} icon={<Close />} title={'Hide Search '} />
+        <IconButton
+          size="sm"
+          className="only-mobile"
+          corner="sm"
+          onClick={setFalse}
+          icon={<Close />}
+          title={'Hide Search '}
+        />
       </Flex>
 
       <Flex className="l_flex-1" items="center" justify="end" gap="xs">
-        <IconButton onClick={setTrue} className="only-mobile" icon={<ListSearch />} title={'Show Search'} />
-        <IconButton onClick={toggleDirection} icon={<TextRtl />} title={'Go to Pillar Github Page'} />
-        <IconButton onClick={toggleMode} icon={isDark ? <Sun /> : <Moon />} title="Turn on light mode" />
-        <IconButton className="only-mobile" icon={<Menu />} title="Turn on light mode" />
-        <Button corner="sharp" color="primary" size="xs" icon={<Dollar strokeWidth={2} />}>
-          Donate
-        </Button>
+        <IconButton size="sm" onClick={setTrue} className="only-mobile" icon={<ListSearch />} title={'Show Search'} />
+        <IconButton size="sm" onClick={toggleDirection} icon={<TextRtl />} title={'Go to Pillar Github Page'} />
+        <IconButton size="sm" onClick={toggleMode} icon={isDark ? <Sun /> : <Moon />} title="Turn on light mode" />
+        <IconButton
+          size="sm"
+          onClick={handleToggle}
+          className="only-mobile"
+          icon={<Menu />}
+          title="Turn on light mode"
+        />
       </Flex>
     </Flex>
   )

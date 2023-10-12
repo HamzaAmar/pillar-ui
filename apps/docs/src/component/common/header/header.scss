@@ -13,7 +13,7 @@
   display: none;
 }
 
-@media (max-width: 468px) {
+@media (max-width: 768px) {
   .only-mobile {
     display: flex;
   }
@@ -38,3 +38,14 @@
     width: 60px;
   }
 }
+
+// .menu {
+//   background-color: red;
+//   height: 100%;
+//   width: 100%;
+//   max-width: 360px;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 10000000000;
+// }
