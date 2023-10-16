@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { Children, forwardRef } from 'react'
+import { Children, forwardRef, useState } from 'react'
 import { User } from '@pillar-ui/icons'
 import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
 import { classnames, createContext } from '@pillar-ui/utils'
-import { useBooleanState } from '@pillar-ui/hooks'
 // import { AvatarProvider, useAvatarContext } from './context'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { Text } from '../typography'
@@ -73,7 +72,6 @@ Avatar Component
 */
 
 export const Avatar = forwardRef((props, ref) => {
-  const { booleanValue: isError, setTrue } = useBooleanState(false)
   const context = useAvatarContext()
   const {
     as: Tag = 'div',
@@ -86,13 +84,27 @@ export const Avatar = forwardRef((props, ref) => {
     image = '',
     className,
     title,
+    onError,
     ...rest
   } = props
+
+  const [isError, setIsError] = useState(!image)
 
   const content = isError ? (
     <span className="avatar--fallback u_center">{fallback}</span>
   ) : (
-    <img className="avatar--img" src={image} onError={setTrue} alt={title} />
+    <img
+      className="avatar--img"
+      ref={(node) => {
+        if (node) {
+          node.src = image
+          node.onerror = () => {
+            setIsError(true)
+          }
+        }
+      }}
+      alt={title}
+    />
   )
 
   const classNames = classnames(`avatar avatar__size avatar__${variant} u_${color} u_center`, {

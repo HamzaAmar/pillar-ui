@@ -5,6 +5,7 @@
   border: 2px solid var(--surface-1);
   background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(var(--surface-1), var(--surface-1));
   background-clip: content-box, padding-box;
+  flex-shrink: 0;
   & > * {
     border-radius: inherit;
   }
