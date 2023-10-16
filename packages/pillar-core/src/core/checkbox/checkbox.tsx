@@ -1,7 +1,8 @@
 // Disabled State Label And Box
 
 import { Check, Minus } from '@pillar-ui/icons'
-import { classnames, composeRef } from '@pillar-ui/utils'
+import { classnames } from '@pillar-ui/utils'
+import { useComposedRefs } from '@pillar-ui/hooks'
 import { useEffect, useRef, forwardRef } from 'react'
 
 import type { CheckboxProps } from './checkbox.type'
@@ -30,7 +31,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRe
     }
   }, [isIndeterminate])
 
-  const ref = composeRef(forwardedRef, checkboxRef)
+  const ref = useComposedRefs(forwardedRef, checkboxRef)
   const classNamesRoot = classnames(`checkbox`, { [`u_size-${size}`]: !!size, [`u_${color}`]: !!color })
   const classNames = classnames('checkbox--label', { 'u_visually-hidden': !!showLabel })
 

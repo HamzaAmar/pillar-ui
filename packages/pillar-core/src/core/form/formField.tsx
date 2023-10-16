@@ -1,7 +1,7 @@
 import { ChevronDown, Eye, EyeOff, ListSearch } from '@pillar-ui/icons'
-import { useBooleanState, useControllableState } from '@pillar-ui/hooks'
+import { useBooleanState, useControllableState, useComposedRefs } from '@pillar-ui/hooks'
 import { Flex, Text, Grid } from '..'
-import { classnames, composeRef, createContext } from '@pillar-ui/utils'
+import { classnames, createContext } from '@pillar-ui/utils'
 import { ChangeEvent, forwardRef, useId, useRef, useState } from 'react'
 
 import type {
@@ -159,7 +159,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
 
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const composedRef = composeRef(inputRef, forwardedRef)
+  const composedRef = useComposedRefs(inputRef, forwardedRef)
 
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
@@ -493,7 +493,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
     ...rest
   } = props
   const inputRef = useRef<HTMLInputElement>(null)
-  const composedRef = composeRef(inputRef, forwardedRef)
+  const composedRef = useComposedRefs(inputRef, forwardedRef)
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
     {
