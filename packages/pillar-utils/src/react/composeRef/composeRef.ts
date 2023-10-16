@@ -1,3 +1,7 @@
+import * as React from 'react'
+
+type RefType<T> = React.Ref<T> | undefined
+
 /**
  * To put multiple refs on a single element.
  *
@@ -8,18 +12,16 @@
  * @returns {function} A function that updates each ref
  */
 
-export const composeRef =
-  <T extends HTMLElement = HTMLDivElement>(
-    ...refs: (React.MutableRefObject<T> | React.ForwardedRef<T> | React.RefCallback<T> | null | undefined)[]
-  ) =>
-  (element: T | null): void => {
+function composeRefs<T>(...refs: RefType<T>[]) {
+  return (node: T) => {
     refs.forEach((ref) => {
-      if (ref) {
-        if (typeof ref === 'function') {
-          ref(element)
-        } else if ('current' in ref) {
-          ref.current = element
-        }
+      if (typeof ref === 'function') {
+        ref(node)
+      } else if (ref != null) {
+        ;(ref as React.MutableRefObject<T>).current = node
       }
     })
   }
+}
+
+export { composeRefs }

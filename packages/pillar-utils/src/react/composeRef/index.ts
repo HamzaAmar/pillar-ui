@@ -1,1 +1,1 @@
-export { composeRef } from './composeRef'
+export { composeRefs } from './composeRef'
