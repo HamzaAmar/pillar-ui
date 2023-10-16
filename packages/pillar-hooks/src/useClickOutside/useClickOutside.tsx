@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useEffect, RefObject } from 'react'
 
 /**
  * A custom React hook to listen for clicks outside a specified DOM element.
@@ -35,9 +35,10 @@ import { useRef, useEffect } from 'react'
  * }
  */
 
-export const useClickOutside = <T extends HTMLElement = HTMLElement>(handler: (event: Event) => void) => {
-  const ref = useRef<T>()
-
+export const useClickOutside = <T extends HTMLElement = HTMLElement>(
+  ref: RefObject<T>,
+  handler: (event: Event) => void
+) => {
   useEffect(() => {
     const listener = (event: MouseEvent) => {
       const { target } = event ?? {}
@@ -52,7 +53,7 @@ export const useClickOutside = <T extends HTMLElement = HTMLElement>(handler: (e
     return () => {
       document.removeEventListener('click', listener)
     }
-  }, [handler])
+  }, [handler, ref])
 
   return ref
 }
