@@ -1,0 +1,16 @@
+.popover {
+  border: 1px solid var(--surface-6);
+  background: var(--surface-1);
+  font-size: 1em;
+  padding: 0.5em;
+  position: absolute;
+  z-index: 1000000000000000000000000000;
+}
+
+.popover--full {
+  width: 100%;
+}
+
+.popover--auto {
+  width: fit-content;
+}
