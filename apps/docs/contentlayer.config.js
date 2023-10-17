@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource, defineNestedType } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import readingTime from 'reading-time'
 import remarkGfm from 'remark-gfm'
 import rehypePrettyCode from 'rehype-pretty-code'
@@ -237,14 +237,19 @@ export const Tutorials = defineDocumentType(() => ({
       description: 'The title of the post',
       required: true,
     },
+    type: {
+      type: 'string',
+      description: 'The type of the tutorial is Required',
+      required: true,
+    },
     excerpt: {
       type: 'string',
-      description: 'The summary of the post',
+      description: 'The excerpt of the tutorial is RequiredThe type of the tutorial is Required',
       required: true,
     },
     root: {
       type: 'string',
-      description: 'The summary url for every doc',
+      description: 'The root of the tutorial is Required',
       required: true,
     },
   },
