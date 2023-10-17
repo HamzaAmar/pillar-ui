@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Footer, Header, MenuBar, TableOfContent } from '..'
 import { Flex, Paper } from '@pillar-ui/core'
 import type { DocsLayoutProps, LayoutProps } from './layout.type'
@@ -14,11 +14,18 @@ export const Layout = ({ children }: LayoutProps) => {
 }
 
 export const DocsLayout = ({ children, headings }: DocsLayoutProps) => {
+  const [open, setOpen] = useState(false)
+
+  function handleToggle() {
+    console.log('Hello this is the value of open', open)
+    setOpen((open) => !open)
+  }
+
   return (
     <>
-      <Header />
+      <Header handleToggle={handleToggle} />
       <Flex>
-        <MenuBar />
+        <MenuBar open={open} />
         <main style={{ minWidth: 0 }}>
           <Paper p="md" flow="sm">
             {children}

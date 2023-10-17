@@ -4,8 +4,9 @@ import { Button, Flex, IconButton, InputSearch, Paper } from '@pillar-ui/core'
 import { Sun, TextRtl, Moon, Menu, ListSearch, Dollar, Close } from '@pillar-ui/icons'
 import Link from 'next/link'
 import { useBooleanState, useDarkMode, useDirection } from '@pillar-ui/hooks'
+import { HeaderProps } from './header.type'
 
-const Header = ({ handleToggle }) => {
+const Header = ({ handleToggle }: HeaderProps) => {
   const { isDark, toggleMode } = useDarkMode()
   const { booleanValue, setTrue, setFalse } = useBooleanState(false)
   const menu = useBooleanState(false)
