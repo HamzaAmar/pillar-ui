@@ -1,7 +1,7 @@
 ---
-title: useDebounce
+title: useDarkMode
 type: Hooks
-excerpt: 'The useDebounce custom hook is a React hook that allows you to debounce a value, reducing the number of times a function is called when a value changes rapidly. This hook is useful for scenarios where you want to delay the execution of a function until a certain amount of time has passed without any further changes to the value.'
+excerpt: "The useDarkMode custom hook is a React hook that provides functionalities to manage and toggle between light and dark modes in your application. It respects the user's system preference and can be easily integrated into any React project."
 file: hooks
 root: hooks
 ---
@@ -19,66 +19,62 @@ root: hooks
 
 ## Introduction
 
-The useDebounce custom hook is a React hook that allows you to debounce a value, reducing the number of times a function is called when a value changes rapidly. This hook is useful for scenarios where you want to delay the execution of a function until a certain amount of time has passed without any further changes to the value.
-
-Debouncing is a technique that helps optimize performance by preventing unnecessary computations or API calls when a value is rapidly changing. With the useDebounce hook, you can control the delay period and ensure that the function is only invoked after a specified time has elapsed since the last value change.
+The `useDarkMode` custom hook is a React hook designed to manage and toggle between light and dark modes in your application. It automatically detects the user's system preference and provides an easy way to switch between modes. By using this hook, you can enhance the user experience by offering a dark mode option in your application.
 
 ## Installation
 
-To use the useDebounce hook in your React project, you can install it from NPM:
+To use the `useDarkMode` hook in your React project, ensure that it's properly exported and imported from its location:
 
 ```shell
-npm { useDebounce } install '@pillar-ui/hooks'
+import { useDarkMode } from './path-to-hooks/useDarkMode';
 ```
 
 ## Usage
 
-To use the useDebounce hook, simply import it into your component and call it like any other React hook:
+To utilize the `useDarkMode` hook, simply import it into your component and call it:
 
-```tsx title='app.ts' showLineNumbers
-import { useState, useEffect } from 'react'
-import useDebounce from '@pillar-ui/hooks'
+```tsx title='DarkModeComponent.tsx' showLineNumbers
+import React from 'react'
+import { useDarkMode } from './path-to-hooks/useDarkMode' // Adjust the path accordingly
 
-function App() {
-  const [value, setValue] = useState('')
-  const [debouncedValue] = useDebounce(value, 500)
+function DarkModeComponent() {
+  const { isDark, toggleMode } = useDarkMode()
 
-  useEffect(() => {
-    // Perform some action with the debounced value
-    // you can do an api call or fetch something
-    console.log('Debounced value:', debouncedValue)
-  }, [debouncedValue])
-
-  return <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Type something..." />
+  return (
+    <div>
+      <button onClick={toggleMode}>Toggle Dark Mode</button>
+      <p>Current mode: {isDark ? 'Dark' : 'Light'}</p>
+    </div>
+  )
 }
-```
 
-The useDebounce hook takes two arguments: the value you want to debounce and the delay in milliseconds. It returns an array containing the debounced value. You can use the debounced value in your component logic, such as performing API requests or triggering computations.
+export default DarkModeComponent
+```
 
 ## Use Cases
 
-- **Autosuggest/Search**: When building an autosuggest or search feature, you can use the useDebounce hook to delay the API call for search results until the user has finished typing. This prevents excessive API requests while the user is still typing and provides a smoother user experience.
-- **Form Validation**: When performing form validation that requires API requests or computationally expensive operations, the useDebounce hook can be used to delay the validation until the user has finished typing or modifying the input, reducing unnecessary validations and improving performance.
-- **Window Resize Events**: In situations where you need to handle window resize events, using the useDebounce hook can help prevent excessive updates and improve performance. Instead of handling the resize event on every pixel change, you can debounce the event handling to trigger only after a certain delay once the user has finished resizing the window.
+- **User Preference**: Respect the user's system preference for light or dark mode and automatically set the appropriate mode when the application loads.
+- **Theme Switcher**: Provide a toggle in your application's settings or navbar that allows users to switch between light and dark themes on demand.
+- **Accessibility**: Improve accessibility and readability for users who prefer a darker theme, especially in low-light environments.
 
 ## Implementation details
 
-The useDebounce hook internally uses the useState and useEffect hooks provided by React. It maintains a debounced value state that gets updated whenever the original value changes. The debounce delay is achieved by utilizing the setTimeout function to trigger the update after the specified delay.
-
-By using the useEffect hook with the debounced value as a dependency, you can ensure that the effect callback is executed only when the debounced value changes.
+The `useDarkMode` hook uses the `useState` and `useEffect` hooks from React. It checks the user's system preference using the `window.matchMedia` method and also considers any saved preference in the local storage. The hook provides a `toggleMode` function to switch between light and dark modes, and it ensures that the appropriate CSS class is applied to the `document.documentElement` to reflect the current mode.
 
 ## TypeScript Support
 
-The useDebounce hook has built-in support for TypeScript and provides typechecking and autocompletion when used in TypeScript projects.
+The `useDarkMode` hook comes with built-in TypeScript support, offering type safety, type checking, and autocompletion benefits when used in TypeScript projects.
 
 ## Troubleshooting
 
-The debounced value is not updating as expected
+**The mode doesn't reflect the user's system preference**
 
-If the debounced value is not updating as expected, ensure that you are correctly passing the value and delay arguments to the useDebounce hook. Verify that the dependencies of the useEffect hook are set correctly to trigger the desired behavior.
+Ensure that the hook is being called and rendered properly in your component. Also, check if there are any conflicts with other CSS or JavaScript that might be overriding the mode.
 
-Additionally, make sure that the component where you are using the useDebounce hook is mounted and rendered properly.
+**The mode doesn't persist across page reloads**
+
+The hook uses local storage to save the user's mode preference. Ensure that local storage is accessible and not being cleared or overridden by other scripts or browser settings.
 
 ## Conclusion
 
-The useDebounce custom hook is a powerful tool for optimizing performance by debouncing values in React applications. It allows you to control the delay period and reduces unnecessary computations or API calls triggered by rapid value changes. By incorporating the useDebounce hook into your
+The `useDarkMode` custom hook offers a streamlined way to integrate dark mode functionality into your React applications. By respecting user preferences and providing an easy toggle mechanism, you can enhance user experience and accessibility in your projects.
