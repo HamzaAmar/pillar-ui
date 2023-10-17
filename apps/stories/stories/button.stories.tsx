@@ -40,19 +40,19 @@ export function ButtonsTransforms() {
         </Button>
       </Flex>
       <h1>with Global Capitalize</h1>
-      <Flex gap="sm" style={{ '--button-transform': 'capitalize' }}>
+      <Flex gap="sm" style={{ '--button-transform': 'capitalize' } as CSSProperties}>
         <Button color="success">Green</Button>
         <Button color="warning">Orange</Button>
         <Button color="danger">Red</Button>
       </Flex>
       <h1>with Global lowercase</h1>
-      <Flex gap="sm" style={{ '--button-transform': 'lowercase' }}>
+      <Flex gap="sm" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
         <Button color="success">Green</Button>
         <Button color="warning">Orange</Button>
         <Button color="danger">Red</Button>
       </Flex>
       <h1>with Global uppercase</h1>
-      <Flex gap="sm" style={{ '--button-transform': 'uppercase' }}>
+      <Flex gap="sm" style={{ '--button-transform': 'uppercase' } as CSSProperties}>
         <Button color="success">Green</Button>
         <Button color="warning">Orange</Button>
         <Button color="danger">Red</Button>

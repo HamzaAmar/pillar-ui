@@ -1,7 +1,7 @@
 import React, { CSSProperties, useRef, useState } from 'react'
-import { Avatar, Button, Flex, Paper } from '@pillar-ui/core'
-import { Dots } from '@pillar-ui/icons'
+import { Avatar, Flex, Paper, Button } from '@pillar-ui/core'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Dots } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Avatar',
