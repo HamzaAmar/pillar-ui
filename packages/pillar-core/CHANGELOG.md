@@ -1,5 +1,60 @@
 # @pillar/core
 
+## 0.3.0
+
+### Minor Changes
+
+- # 🚀 Release Notes: Pillar UI Library Update
+
+  We're excited to roll out a series of enhancements and new features in this minor release that will supercharge your development workflow with the Pillar UI library!
+
+  ## 🌐 Global Updates
+
+  - Minor version bumps across multiple packages to ensure you’re working with the most refined and updated tools.
+
+  ## 🧱 `@pillar-ui/core`
+
+  ### New Components
+
+  - 🌐 Tooltip and Popover: Elevate your UI with our newly added interactive components.
+  - 📜 Blockquote: Seamlessly incorporate quotes into your text with our styled component.
+  - 📝 List: Managing and rendering lists got a lot easier.
+
+  ### Bug Fixes
+
+  - 🐛 Improved the Avatar component’s error handling for enhanced reliability.
+
+  ### Refactoring
+
+  - 🔄 Renamed `composeRef` to `useComposeRefs` for improved readability and consistency.
+
+  ## 🪝 `@pillar-ui/hooks`
+
+  ### New Custom Hooks
+
+  - 🧰 Introduced `useComposeRefs` to simplify and optimize reference composition.
+
+  ### Enhancements
+
+  - 📦 Enhanced `useClickOutside` to accept a ref, allowing for a more flexible usage.
+
+  ## 🧰 `@pillar-ui/utils`
+
+  ### Organizational Improvements
+
+  - 🗂 Reorganized the structure of utility functions for easier navigation and usage.
+  - 🔄 Shifted `useComposeRefs` from `utils` to `hooks` for logical categorization.
+
+  ## 📚 Pillar Docs
+
+  ### Documentation Improvements
+
+  - 📱 Optimized the documentation header’s responsiveness for improved navigation on various devices.
+  - 🚀 Added a dynamic Tutorial page to expedite users' proficiency with the library.
+  - 🔍 Incorporated a search functionality, streamlining access to documentation contents.
+
+  🙏 Thank you for choosing Pillar UI. We're committed to enhancing your development experience and eagerly look forward to your feedback on these latest updates!
+
 ## 0.2.0
 
 ### Minor Changes
