@@ -24,18 +24,18 @@ Before You Install we need to let you know that pillar divided to three packages
 # you can install all of them or only what you need
 
 #NPM
-npm i @core
+npm i @pillar-ui/core
 # (or | and)
-npm i @hooks
+npm i @pillar-ui/hooks
 # (or | and)
-npm i @icons
+npm i @pillar-ui/icons
 
 #Yarn
-yarn add @core
+yarn add @pillar-ui/core
 # (or | and)
-yarn add @hooks
+yarn add @pillar-ui/hooks
 # (or | and)
-yarn add @icons
+yarn add @pillar-ui/icons
 ```
 
 ## How to use it
