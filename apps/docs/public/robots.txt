@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.pillar-ui.com
+
+# Sitemaps
+Sitemap: https://www.pillar-ui.com/sitemap.xml
