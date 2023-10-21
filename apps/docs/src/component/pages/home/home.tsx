@@ -13,7 +13,7 @@ import {
   Switch,
   Alert,
 } from '@pillar-ui/core'
-import { Github, Booking, Discord, Linkdin, Youtube } from '@pillar-ui/icons'
+import { Github, Booking, Discord, Linkdin, Youtube, Dollar } from '@pillar-ui/icons'
 import { ACCESSIBILITY, COMING_SUPPORT, SIMPLE_DEVELOPMENT, SUPPORTED } from './home.data'
 import Link from 'next/link'
 import React, { CSSProperties, useState } from 'react'
@@ -60,12 +60,12 @@ function HeroSection() {
       </div>
 
       <Flex gap="sm">
-        <Button as={Link} href="/docs/components/accordion" icon={<Booking />}>
+        <Button as={Link} href="/docs/getting-started/cra" icon={<Booking />}>
           Get Started
         </Button>
 
-        <Button color="surface" variant="outline" as={Link} href="/docs/get-started/accordion" icon={<Booking />}>
-          Generate Theme
+        <Button color="surface" variant="outline" icon={<Dollar />}>
+          Donation
         </Button>
       </Flex>
 
