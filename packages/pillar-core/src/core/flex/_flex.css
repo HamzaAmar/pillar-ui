@@ -1,4 +1,7 @@
 .flex {
   display: flex;
+}
+
+.flex--gap {
   gap: var(--spacing);
 }

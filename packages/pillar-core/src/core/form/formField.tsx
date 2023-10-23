@@ -88,7 +88,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
   const {
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
-    corner = formGroupContext?.corner ?? 'sm',
+    corner = formGroupContext?.corner,
     color = formGroupContext?.color ?? 'primary',
     transform,
     fluid = formGroupContext?.fluid,
@@ -147,7 +147,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
   const {
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
-    corner = formGroupContext?.corner ?? 'sm',
+    corner = formGroupContext?.corner,
     color = formGroupContext?.color ?? 'primary',
     transform,
     fluid = formGroupContext?.fluid,
@@ -231,7 +231,7 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
   const {
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
-    corner = formGroupContext?.corner ?? 'sm',
+    corner = formGroupContext?.corner,
     color = formGroupContext?.color ?? 'primary',
     transform,
     fluid = formGroupContext?.fluid,
@@ -292,7 +292,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
   const {
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
-    corner = formGroupContext?.corner ?? 'sm',
+    corner = formGroupContext?.corner,
     color = formGroupContext?.color ?? 'primary',
     transform,
     fluid = formGroupContext?.fluid,
@@ -343,7 +343,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
   const {
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
-    corner = formGroupContext?.corner ?? 'sm',
+    corner = formGroupContext?.corner,
     color = formGroupContext?.color ?? 'primary',
     transform,
     fluid = formGroupContext?.fluid,
@@ -394,7 +394,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
   const {
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
-    corner = formGroupContext?.corner ?? 'sm',
+    corner = formGroupContext?.corner,
     color = formGroupContext?.color ?? 'primary',
     transform,
     fluid = formGroupContext?.fluid,
@@ -482,7 +482,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
   const {
     size = formGroupContext?.size ?? 'md',
     variant = formGroupContext?.variant ?? 'outline',
-    corner = formGroupContext?.corner ?? 'sm',
+    corner = formGroupContext?.corner,
     color = formGroupContext?.color ?? 'primary',
     transform,
     fluid = formGroupContext?.fluid,

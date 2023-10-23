@@ -43,6 +43,7 @@ export const Flex = forwardRef((props, forwardedRef) => {
     'l_flex-wrap': !!wrap,
     'u_flex-inline': !!inline,
     [`u_spacing-${gap}`]: !!gap,
+    [`flex--gap`]: !!gap,
     [`${className}`!]: !!className,
   })
 
