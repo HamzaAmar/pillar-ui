@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <meta name="google-site-verification" content={`${process.env.NEXT_PUBLIC_G_SITE_VERIFICATION}`} />
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />

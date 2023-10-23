@@ -44,7 +44,7 @@ function AccessibleSection() {
 
 function HeroSection() {
   return (
-    <Flex as="section" direction="column" justify="evenly" className="hero">
+    <Flex as="section" direction="column" gap="xl" justify="center" className="hero">
       <h1 className="hero--heading">
         Pillar Your Comprehensive, Accessible UI Toolkit with Hooks, Icons, and Utilities
       </h1>
@@ -83,41 +83,28 @@ function HeroSection() {
 
 function CustomThemeSection() {
   return (
-    <Paper corner="lg" p="lg" flow="lg">
-      <Heading className="highlight" as="h2" size="3xl" transform="capitalize">
-        Customize You Theme
-      </Heading>
-      <div className="l_flow__sm">
-        <Text color="surface" contrast="low" size="lg">
-          We understand that everyone has different needs and preferences. That&#39;s why we offer a wide range of
-          customization options for our project. You can change the colors, fonts, and layout to match your brand or
-          style.
-        </Text>
-        <Text color="surface" contrast="low" size="lg">
-          We believe in providing a seamless customization experience for our users. To change the theme of your
-          project, simply click on the `Change Theme` button located at the top of the page. This button is designed to
-          provide you with quick access to a variety of themes, allowing you to choose the one that best suits your
-          preferences and brand.
-        </Text>
-        <Text color="surface" contrast="low" size="lg">
-          Once you click on the &#34;Change Theme&#34; button, a pop-up or dropdown menu will appear, showcasing a
-          selection of different themes to choose from. These themes are carefully crafted to offer a diverse range of
-          color schemes, fonts, and layouts that can be easily applied to your project.
-        </Text>
-
-        <Text color="surface" contrast="low" size="lg">
-          To select a new theme, you can browse through the available options and click on the one that catches your
-          eye. The changes will be applied instantly, allowing you to see the new theme in action right away. If you
-          decide that the new theme isn&#39;t quite what you were looking for, you can easily revert back to the
-          previous theme or explore other options until you find the perfect fit.
-        </Text>
-      </div>
+    <Paper corner="lg" p="lg" flow="xl" className="section">
       <div>
-        <Text color="surface" contrast="low" size="lg">
-          We understand that everyone has different needs and preferences. That&#39;s why we offer a wide range of
-          customization options for our project. You can change the colors, fonts, and layout to match your brand or
-          style.
-        </Text>
+        <Heading className="highlight" as="h2" size="3xl" transform="capitalize">
+          Customize You Theme
+        </Heading>
+        <div className="l_flow__sm">
+          <Text color="surface" contrast="low" size="lg">
+            We understand that everyone has different needs and preferences. That&#39;s why we offer a wide range of
+            customization options for our project. You can change the colors, fonts, and layout to match your brand or
+            style.
+          </Text>
+          <Text color="surface" contrast="low" size="lg">
+            We recognize the uniqueness of every user. With our easy-to-use customization features, tailor your project
+            to fit your brand&apos;s look and feel. Click on the Change Theme button at the page&apos;s top to access a
+            variety of themes, each with distinct colors, fonts, and layouts. Simply select your desired theme to see
+            the changes in real time. If it&apos;s not quite right, feel free to explore more options or revert as
+            needed. Your perfect theme awaits!
+          </Text>
+        </div>
+      </div>
+      <div className="h_image-container">
+        <img className="h_image" src="/themeChange.png" alt="theme change" />
       </div>
     </Paper>
   )
@@ -175,6 +162,7 @@ function PillarSupport() {
               direction="column"
               items="center"
               justify="center"
+              p="sm"
               className="l_flex-1"
             >
               {icon}
@@ -230,23 +218,21 @@ function DarkMode() {
   const [state, setState] = useState<'default' | 'light' | 'dark'>('default')
 
   return (
-    <Grid grid="1fr 1fr" className="md_grid-one">
-      <Paper corner="lg" p="lg" flow="lg">
+    <Paper corner="lg" p="lg" flow="lg" className="section">
+      <div>
         <Heading className="highlight" size="2xl" transform="capitalize" as="h2">
           Support Dark Mode
         </Heading>
         <Text color="surface" contrast="low" size="lg">
-          We understand the importance of dark mode for a comfortable and accessible user experience, which is why our
-          library fully supports it. Our customizable components are designed to seamlessly adapt to a dark color
-          scheme, creating a cohesive look and feel for your application. Plus, we&#39;ve made it even easier to
-          implement with our custom hook, useDarkMode from @pillar-ui/hooks, which provides all the functionality you
-          need. The best part? It works seamlessly with server-side rendering (SSR) frameworks such as Next.js and
-          Remix, so you don&#39;t have to worry about compatibility issues. Simply import useDarkMode and start creating
-          a dark mode experience for your users. We&#39;ve even included a script that you can easily inject into your
-          head to fix any flickering issues.
+          Our library prioritizes user comfort and accessibility by fully supporting dark mode. It effortlessly
+          integrates customizable components that adapt to a dark color scheme, ensuring a unified application
+          appearance. Implementation is simplified with our custom hook, useDarkMode from @pillar-ui/hooks, offering
+          essential functionalities. It’s compatible with server-side rendering frameworks like Next.js and Remix,
+          eliminating compatibility concerns. Import useDarkMode for an enhanced dark mode user experience, complete
+          with a script to resolve any flickering issues.
         </Text>
-      </Paper>
-      <Flex direction="column" gap="md">
+      </div>
+      <div className="l_flow__sm">
         <Flex gap="sm" wrap>
           <Button
             color={state === 'dark' ? 'primary' : 'surface'}
@@ -276,7 +262,7 @@ function DarkMode() {
             Mixed
           </Button>
         </Flex>
-        <div className="switch--home-mode--container">
+        <div className="h_image-container switch--home-mode--container">
           <Image
             src="/lightHero.png"
             className="switch--home-mode--image switch--home-mode--image__light"
@@ -291,8 +277,8 @@ function DarkMode() {
             fill
           />
         </div>
-      </Flex>
-    </Grid>
+      </div>
+    </Paper>
   )
 }
 
@@ -362,7 +348,15 @@ function DeveloperExperience() {
         </Text>
         <Flex
           style={
-            { '--button-corner': '.25rem', '--badge-corner': '.25rem', '--avatar-corner': '.25rem' } as CSSProperties
+            {
+              '--form-controller-corner': '0',
+              '--button-corner': '0',
+              '--switch-corner': '0',
+              '--chip-corner': '0',
+              '--badge-corner': '0',
+              '--avatar-corner': '0',
+              '--alert-corner': '0',
+            } as CSSProperties
           }
           items="center"
           as={Flex}
@@ -388,24 +382,33 @@ function DeveloperExperience() {
 }
 
 function RTLSupport() {
-  const [state, setState] = useState('ltr')
   return (
-    <Paper p="lg" flow="lg">
-      <Heading className="highlight" size="3xl" transform="capitalize" as="h2">
-        Right to left support
-      </Heading>
-      <Text color="surface" contrast="low" size="lg">
-        Accessibility for all users is important to us, which is why our UI library fully supports right-to-left (RTL)
-        languages such as Arabic, Hebrew, and Farsi. This means that your website or application can provide a seamless
-        experience for users who read and write in RTL languages, with proper text alignment, visual order, and
-        navigation. Our RTL support is integrated into all of our components, allowing you to easily create interfaces
-        that meet the needs of diverse audiences. We also have a custom hook called useDirection from @pillar-ui/hooks
-        that can be used to handle the direction of the text and elements based on the language of the user. This hook
-        is especially useful when dealing with dynamic content or when you want to provide additional control over the
-        direction of elements. At our core, we are committed to providing a comprehensive solution that empowers you to
-        create inclusive and user-friendly designs. Whether you are building a website or an application, oupbrary is
-        designed to make your work easier, more efficient, and more accessible for everyone.
-      </Text>
+    <Paper corner="lg" p="lg" flow="xl" className="section">
+      <div>
+        <Heading className="highlight" size="3xl" transform="capitalize" as="h2">
+          Right to left support
+        </Heading>
+        <Text color="surface" contrast="low" size="lg">
+          Accessibility for all users is important to us, which is why our UI library fully supports right-to-left (RTL)
+          languages such as Arabic, Hebrew, and Farsi. This means that your website or application can provide a
+          seamless experience for users who read and write in RTL languages, with proper text alignment, visual order,
+          and navigation. Our RTL support is integrated into all of our components, allowing you to easily create
+          interfaces that meet the needs of diverse audiences. We also have a custom hook called useDirection from
+          @pillar-ui/hooks that can be used to handle the direction of the text and elements based on the language of
+          the user. This hook is especially useful when dealing with dynamic content or when you want to provide
+          additional control over the direction of elements. At our core, we are committed to providing a comprehensive
+          solution that empowers you to create inclusive and user-friendly designs. Whether you are building a website
+          or an application, oupbrary is designed to make your work easier, more efficient, and more accessible for
+          everyone.
+        </Text>
+      </div>
+      <div className="h_image-container ">
+        <img
+          className="h_image"
+          src="/rtl-support.png"
+          alt="Illustration of a laptop with split screens: the left half displays a beautifully designed website in English (LTR) and the right half mirrors the same content in Arabic (RTL). Above the laptop, bold letters spell 'Universal UI Support'. Floating around the laptop are icons of diverse users, emphasizing the inclusivity of the UI library for both LTR and RTL users."
+        />
+      </div>
     </Paper>
   )
 }

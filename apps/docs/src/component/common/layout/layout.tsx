@@ -20,23 +20,30 @@ export const Layout = ({ children, title, image = '/darkHero.png', description, 
     <>
       <Head>
         <title>{meta.title}</title>
-        <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`${DOMAIN}${router.asPath}`} />
+
+        <meta name="robots" content="follow, index" />
+        <meta name="googlebot" content="noindex,nofollow" />
+
         <link rel="canonical" href={`${DOMAIN}${router.asPath}`} />
 
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Hamza Miloud Amar" />
-        <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:url" content={`${DOMAIN}${router.asPath}`} />
+        <meta property="og:site_name" content="Hamza Miloud Amar" />
         <meta property="og:image" content={meta.image} />
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@pillar_ui" />
+        <meta name="twitter:creator" content="@pillar_ui" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
-
         {meta.date && <meta property="article:published_time" content={meta.date} />}
+
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(226deg 70% 55.5%)" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(226deg 70% 55.5%)" />
       </Head>
       <Header />
       <main className="l_flex-1">{children}</main>
