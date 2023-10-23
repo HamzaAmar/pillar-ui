@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://pillar-ui.com/404</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/accordion</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/alert</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/avatar</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/badge</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/blockquote</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/breadcrumb</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/button</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/checkbox</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/chips</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/code</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/flex</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/grid</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/heading</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/input</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/inputFile</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/inputNumber</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/inputPassword</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/inputSearch</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/kbd</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/Link</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/pagination</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/paper</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/pinInput</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/progress</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/radio</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/rating</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/select</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/separator</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/skeleton</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/spinner</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/stepper</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/switch</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/table</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/text</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/textarea</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/timeline</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/components/tooltip</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/features/accessibility</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/features/darkMode</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/features/dx</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/features/rtl</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/getStarted/cra</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/getStarted/next</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/getStarted/remix</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/getStarted/vite</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useArray</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useBooleanState</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useCheckboxGroup</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useClickOutside copy</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useClickOutside</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useControllableState</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useCopyToClipboard</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useCounter</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useDarkMode</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useDebounce</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useDimension</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useDirection</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useEventListener</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useFullscreen</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useGeolocation</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useHover</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useIntersectionObserver</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useInterval</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useIsomorphicLayoutEffect</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useLocalStorage</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useMediaQuery</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useMouseMove</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/usePagination</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/usePersistentCallback</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/usePreferColorScheme</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useReduceMotion</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useStepper</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/hooks/useTimeout</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/theme/breakpoint</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/theme/color</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/theme/font</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/theme/gradient</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/theme/shadow</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/theme/space</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/tutorials/gettingStarted</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/tutorials/introduction</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/tutorials/theming</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/utils/array</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/utils/date</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/utils/is</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/utils/number</loc>
+  </url>
+
+  <url>
+    <loc>http://pillar-ui.com/docs/utils/string</loc>
+  </url>
+</urlset>
