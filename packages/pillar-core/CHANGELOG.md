@@ -1,5 +1,25 @@
 # @pillar/core
 
+## 0.3.1
+
+### Patch Changes
+
+- # Core Enhancements and Fixes:
+
+  - Fixed form corner defaults and improved gap separation (commit: #df335a2).
+  - Added custom fonts to Project 3 (commit: #62af24e).
+
+  # Documentation and SEO:
+
+  - Enhanced SEO with title and description tags (commit: #f5b4b0f).
+  - Added Globby to the site (commit: #88b7989).
+  - Refactored page SCSS files (commit: #9dfa9a8).
+  - Added RSS and sitemap to the project (commit: #a6cce57).
+  - Included robots.txt and sitemap.xml (commit: #b6c8391).
+  - Added SEO meta information to the project (commit: #892f15a).
+
+  This release focuses on improving SEO, enhancing appearance, and organizing resources for an optimized user experience.
+
 ## 0.3.0
 
 ### Minor Changes
