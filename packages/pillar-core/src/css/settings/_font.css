@@ -1,4 +1,12 @@
 :root {
+  /* Font Family  */
+  --body-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu,
+    Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Lucida Grande', Helvetica, Arial, sans-serif;
+  --heading-font: var(--custom-heading-font, var(--body-font));
+  --mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  /* Font Size varaibles */
   --font-3xs: var(--font-3xs-custom, clamp(0.54rem, calc(0.83rem + -0.28vw), 0.77rem));
   --font-2xs: var(--font-2xs-custom, clamp(0.65rem, calc(0.86rem + -0.21vw), 0.82rem));
   --font-xs: var(--font-xs-custom, clamp(0.78rem, calc(0.9rem + -0.12vw), 0.88rem));
