@@ -4,7 +4,10 @@ import { Layout } from 'src/component/common'
 
 const troubleshooting = () => {
   return (
-    <Layout>
+    <Layout
+      title="Troubleshooting"
+      description="Encounter an issue with Pillar UI? Find solutions and guidance to common problems, and get back to smooth development."
+    >
       <Paper flow="md" p="sm">
         <Heading size="xl">Troubleshooting</Heading>
         <Text>

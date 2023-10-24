@@ -12,7 +12,10 @@ export async function getStaticProps() {
 export default function Blog({ components }: { components: Components[] }) {
   // components.forEach((com) => console.log(com.slug, com.title))
   return (
-    <Layout>
+    <Layout
+      title="Component Library"
+      description="Discover the comprehensive list of components in the Pillar UI library. Each component is meticulously designed to enhance functionality and improve user experience in your applications."
+    >
       <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
         {components.map((component) => (
           <Link href={`utils/${component.slug}`} key={component.slug}>

@@ -11,7 +11,10 @@ export async function getStaticProps() {
 
 export default function utils({ utils }: { utils: Tutorials[] }) {
   return (
-    <Layout>
+    <Layout
+      title="Utilities Library"
+      description="Browse through a wide array of utilities in the Pillar UI library, designed to make your development workflow more efficient and streamlined."
+    >
       <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
         {utils.map((util) => (
           <Link href={`utils/${util.slug}`} key={util.slug}>

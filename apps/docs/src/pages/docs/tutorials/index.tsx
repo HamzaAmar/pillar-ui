@@ -12,7 +12,10 @@ export async function getStaticProps() {
 export default function Blog({ tutorials }: { tutorials: Tutorials[] }) {
   // components.forEach((com) => console.log(com.slug, com.title))
   return (
-    <Layout>
+    <Layout
+      title="Learn to Utilize Pillar UI Effectively"
+      description="Dive into extensive tutorials that guide you through the effective use of Pillar UI components, hooks, and utilities, enhancing your development workflow and project outcomes."
+    >
       <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
         {tutorials.map((tutorial) => (
           <Link href={`utils/${tutorial.slug}`} key={tutorial.slug}>

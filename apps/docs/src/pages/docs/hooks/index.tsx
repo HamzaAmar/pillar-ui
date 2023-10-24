@@ -11,7 +11,10 @@ export async function getStaticProps() {
 
 export default function Hooks({ hooks }: { hooks: Hooks[] }) {
   return (
-    <Layout>
+    <Layout
+      title="Hooks Library"
+      description="Explore a robust collection of hooks in the Pillar UI library, each designed to simplify and optimize your development process."
+    >
       <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
         {hooks.map((hook) => (
           <Link href={`utils/${hook.slug}`} key={hook.slug}>

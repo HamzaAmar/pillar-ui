@@ -5,7 +5,10 @@ import { Button, Flex, Heading, Text } from '@pillar-ui/core'
 
 export default function Custom404() {
   return (
-    <Layout>
+    <Layout
+      title="404: Page Not Found"
+      description="Oops! The page you’re looking for doesn’t exist. Navigate back to our homepage or explore other sections of Pillar UI."
+    >
       <Flex style={{ maxWidth: '680px' }} justify="center" direction="column" items="center" gap="md" className="hero">
         <Heading size="3xl" weight="bold">
           404 - Page Not Found
