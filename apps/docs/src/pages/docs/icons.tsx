@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement, ReactNode, useState } from 'react'
+import React, { CSSProperties, useState } from 'react'
 import { DocsLayout } from 'src/component/common'
 import * as ICONS from '@pillar-ui/icons'
 import { Button, Flex, Grid, Paper, Text } from '@pillar-ui/core'
@@ -45,7 +45,10 @@ const Icons = () => {
   }
 
   return (
-    <DocsLayout>
+    <DocsLayout
+      excerpt="Explore a diverse library of icons available in Pillar UI. Perfectly crafted icons suited to enhance your design projects and applications."
+      title="Icon Library"
+    >
       <div className="l_flow__sm icons">
         <Flex className="icons-scroll" as={Paper} p="sm" gap="sm">
           {CATEGORIES.map((category) => (
