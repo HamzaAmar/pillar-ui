@@ -73,6 +73,21 @@
   --color-shared-12: var(--danger-12);
 }
 
+.u_info {
+  --color-shared-1: var(--info-1);
+  --color-shared-2: var(--info-2);
+  --color-shared-3: var(--info-3);
+  --color-shared-4: var(--info-4);
+  --color-shared-5: var(--info-5);
+  --color-shared-6: var(--info-6);
+  --color-shared-7: var(--info-7);
+  --color-shared-8: var(--info-8);
+  --color-shared-9: var(--info-9);
+  --color-shared-10: var(--info-10);
+  --color-shared-11: var(--info-11);
+  --color-shared-12: var(--info-12);
+}
+
 .u_surface {
   --color-shared-1: var(--surface-1);
   --color-shared-2: var(--surface-2);

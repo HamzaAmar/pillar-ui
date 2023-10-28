@@ -91,6 +91,19 @@
   --success-10: var(--success-light-10, hsl(152deg 57.5% 37.6%));
   --success-11: var(--success-light-11, hsl(153deg 67% 28.5%));
   --success-12: var(--success-light-12, hsl(155deg 40% 14%));
+
+  --info-1: var(--info-light-1, hsl(210, 100%, 99%));
+  --info-2: var(--info-light-2, hsl(207, 100%, 98%));
+  --info-3: var(--info-light-3, hsl(205, 92%, 95%));
+  --info-4: var(--info-light-4, hsl(203, 100%, 92%));
+  --info-5: var(--info-light-5, hsl(206, 100%, 88%));
+  --info-6: var(--info-light-6, hsl(207, 93%, 83%));
+  --info-7: var(--info-light-7, hsl(207, 85%, 76%));
+  --info-8: var(--info-light-8, hsl(206, 82%, 65%));
+  --info-9: var(--info-light-9, hsl(206, 100%, 50%));
+  --info-10: var(--info-light-10, hsl(207, 96%, 48%));
+  --info-11: var(--info-light-11, hsl(208, 88%, 43%));
+  --info-12: var(--info-light-12, hsl(216, 71%, 23%));
 }
 
 .dark {
@@ -186,4 +199,17 @@
   --warning-10: var(--warning-dark-10, hsl(24deg 100% 58.5%));
   --warning-11: var(--warning-dark-11, hsl(24deg 100% 62.2%));
   --warning-12: var(--warning-dark-12, hsl(24deg 97% 93.2%));
+
+  --info-1: var(--info-dark-1, hsl(215, 42%, 9%));
+  --info-2: var(--info-dark-2, hsl(218, 39%, 11%));
+  --info-3: var(--info-dark-3, hsl(212, 69%, 16%));
+  --info-4: var(--info-dark-4, hsl(209, 100%, 19%));
+  --info-5: var(--info-dark-5, hsl(207, 100%, 23%));
+  --info-6: var(--info-dark-6, hsl(209, 79%, 30%));
+  --info-7: var(--info-dark-7, hsl(211, 66%, 37%));
+  --info-8: var(--info-dark-8, hsl(211, 65%, 45%));
+  --info-9: var(--info-dark-9, hsl(206, 100%, 50%));
+  --info-10: var(--info-dark-10, hsl(210, 100%, 62%));
+  --info-11: var(--info-dark-11, hsl(210, 100%, 72%));
+  --info-12: var(--info-dark-12, hsl(205, 100%, 88%));
 }
