@@ -17,7 +17,7 @@ export interface AccordionButtonProps {
   icon?: ReactElement
 }
 export interface AccordionItemProps {
-  value: number
+  value: number | string
   variant?: Variant
 }
 export interface AccordionPanelProps {
