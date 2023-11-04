@@ -32,6 +32,7 @@ export interface ButtonProps extends BaseButton {
   iconPosition?: Position
   fluid?: boolean
   children: ReactNode
+  highContrast?: boolean
 }
 
 export interface IconButtonProps extends BaseButton {

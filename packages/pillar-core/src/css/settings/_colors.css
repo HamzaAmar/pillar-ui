@@ -14,18 +14,18 @@
   --primary-11: var(--primary-light-11, hsl(226deg 55% 45%));
   --primary-12: var(--primary-light-12, hsl(226deg 62% 17%));
 
-  --secondary-1: var(--secondary-light-1, hsl(322deg 100% 99.4%));
-  --secondary-2: var(--secondary-light-2, hsl(323deg 100% 98.4%));
-  --secondary-3: var(--secondary-light-3, hsl(323deg 86.3% 96.5%));
-  --secondary-4: var(--secondary-light-4, hsl(323deg 78.7% 94.2%));
-  --secondary-5: var(--secondary-light-5, hsl(323deg 72.2% 91.1%));
-  --secondary-6: var(--secondary-light-6, hsl(323deg 66.3% 86.6%));
-  --secondary-7: var(--secondary-light-7, hsl(323deg 62% 80.1%));
-  --secondary-8: var(--secondary-light-8, hsl(323deg 60.3% 72.4%));
-  --secondary-9: var(--secondary-light-9, hsl(322deg 65% 54.5%));
-  --secondary-10: var(--secondary-light-10, hsl(322deg 63.9% 50.7%));
-  --secondary-11: var(--secondary-light-11, hsl(322deg 75% 46%));
-  --secondary-12: var(--secondary-light-12, hsl(320deg 70% 13.5%));
+  --secondary-1: var(--secondary-light-1, #fffcfe);
+  --secondary-2: var(--secondary-light-2, #fef7fb);
+  --secondary-3: var(--secondary-light-3, #fee9f5);
+  --secondary-4: var(--secondary-light-4, #fbdcef);
+  --secondary-5: var(--secondary-light-5, #f6cee7);
+  --secondary-6: var(--secondary-light-6, #efbfdd);
+  --secondary-7: var(--secondary-light-7, #e7acd0);
+  --secondary-8: var(--secondary-light-8, #dd93c2);
+  --secondary-9: var(--secondary-light-9, #d6409f);
+  --secondary-10: var(--secondary-light-10, #cf3897);
+  --secondary-11: var(--secondary-light-11, #c2298a);
+  --secondary-12: var(--secondary-light-12, #651249);
 
   --opacity-1: var(--opacity-light-1, hsl(0deg 0% 0% / 1.2%));
   --opacity-2: var(--opacity-light-2, hsl(0deg 0% 0% / 2.7%));
@@ -109,18 +109,18 @@
 .dark {
   color-scheme: dark;
 
-  --secondary-1: -dark var(--secondary-1, hsl(318 25% 9.6%));
-  --secondary-2: var(--secondary-dark-2, hsl(319deg 32.2% 11.6%));
-  --secondary-3: var(--secondary-dark-3, hsl(319deg 41% 16%));
-  --secondary-4: var(--secondary-dark-4, hsl(320deg 45.4% 18.7%));
-  --secondary-5: var(--secondary-dark-5, hsl(320deg 49% 21.1%));
-  --secondary-6: var(--secondary-dark-6, hsl(321deg 53.6% 24.4%));
-  --secondary-7: var(--secondary-dark-7, hsl(321deg 61.1% 29.7%));
-  --secondary-8: var(--secondary-dark-8, hsl(322deg 74.9% 37.5%));
-  --secondary-9: var(--secondary-dark-9, hsl(322deg 65% 54.5%));
-  --secondary-10: var(--secondary-dark-10, hsl(323deg 72.8% 59.2%));
-  --secondary-11: var(--secondary-dark-11, hsl(325deg 90% 66.4%));
-  --secondary-12: var(--secondary-dark-12, hsl(322deg 90% 95.8%));
+  --secondary-1: var(--secondary-1, #191117);
+  --secondary-2: var(--secondary-dark-2, #21121d);
+  --secondary-3: var(--secondary-dark-3, #37172f);
+  --secondary-4: var(--secondary-dark-4, #4b143d);
+  --secondary-5: var(--secondary-dark-5, #591c47);
+  --secondary-6: var(--secondary-dark-6, #692955);
+  --secondary-7: var(--secondary-dark-7, #833869);
+  --secondary-8: var(--secondary-dark-8, #a84885);
+  --secondary-9: var(--secondary-dark-9, #d6409f);
+  --secondary-10: var(--secondary-dark-10, #de51a8);
+  --secondary-11: var(--secondary-dark-11, #ff8dcc);
+  --secondary-12: var(--secondary-dark-12, #fdd1ea);
 
   --surface-1: var(--surface-dark-1, hsl(200deg 7% 8.8%));
   --surface-2: var(--surface-dark-2, hsl(195deg 7.1% 11%));

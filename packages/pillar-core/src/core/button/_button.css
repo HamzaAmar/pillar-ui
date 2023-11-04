@@ -8,6 +8,7 @@
   min-width: 0;
   transition: transform 50ms cubic-bezier(0.68, 0.55, 0.265, -2);
   text-decoration: none;
+  letter-spacing: 0.5px;
   /* text-transform: var(--text-transform, var(--button-transform, uppercase));
   border-radius: var(--border-radius, var(--button-corner, 0.25rem));
   font-size: var(--font-size, var(--button-size, 0.875rem)); */
@@ -48,22 +49,31 @@
 }
 
 .btn__solid {
-  background-color: var(--color-shared-8);
-  color: var(--color-shared-12);
-  &:hover {
-    background-color: var(--color-shared-9);
-    color: white;
-  }
-}
+  background-color: var(--color-shared-9);
+  /* color: var(--color-shared-12); */
+  color: white;
 
-.btn__gradient {
-  background-image: linear-gradient(to left, red, green);
+  &.btn__high-contrast {
+    background-color: var(--color-shared-12);
+    color: var(--color-shared-1);
+  }
+
+  &:hover {
+    background-color: var(--color-shared-10);
+  }
 }
 
 .btn__outline {
   color: var(--color-shared-11);
   border-color: var(--color-shared-11);
   background-color: var(--color-shared-1);
+
+  &.btn__high-contrast {
+    color: var(--color-shared-12);
+    border-color: var(--color-shared-12);
+    background-color: var(--color-shared-3);
+  }
+
   &:hover {
     background-color: var(--color-shared-4);
   }
@@ -73,16 +83,30 @@
   color: var(--color-shared-11);
   background-color: var(--color-shared-3);
   border-color: var(--color-shared-5);
+
+  &.btn__high-contrast {
+    color: var(--color-shared-12);
+    background-color: var(--color-shared-5);
+    border-color: var(--color-shared-12);
+  }
 }
 
 .btn__text {
   color: var(--color-shared-11);
   border-color: transparent;
+
+  &.btn__high-contrast {
+    color: var(--color-shared-12);
+  }
 }
 
 .btn__link {
   color: var(--color-shared-11);
   text-decoration: underline 1.5px;
+}
+
+.btn__gradient {
+  background-image: linear-gradient(to left, red, green);
 }
 
 .btn__fluid {

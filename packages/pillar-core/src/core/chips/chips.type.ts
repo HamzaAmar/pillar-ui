@@ -10,4 +10,5 @@ export interface ChipsProps {
   icon?: ReactElement
   iconPosition?: 'start' | 'end'
   transform?: Transform
+  highContrast?: boolean
 }

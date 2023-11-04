@@ -62,6 +62,29 @@ export const BadgeNumericColor = () => {
   )
 }
 
+export const BadgeHighContrastColor = () => {
+  return (
+    <div className="l_flow__sm">
+      <Flex gap="sm">
+        <Badge variant="numeric" number={15} max={15} color="danger" />
+        <Badge variant="numeric" number={15} max={15} color="success" />
+        <Badge variant="numeric" number={15} max={15} color="warning" />
+        <Badge variant="numeric" number={15} max={15} color="primary" />
+        <Badge variant="numeric" number={15} max={15} color="secondary" />
+        <Badge variant="numeric" number={15} max={15} color="surface" />
+      </Flex>
+      <Flex gap="sm">
+        <Badge variant="numeric" highContrast number={15} max={15} color="danger" />
+        <Badge variant="numeric" highContrast number={15} max={15} color="success" />
+        <Badge variant="numeric" highContrast number={15} max={15} color="warning" />
+        <Badge variant="numeric" highContrast number={15} max={15} color="primary" />
+        <Badge variant="numeric" highContrast number={15} max={15} color="secondary" />
+        <Badge variant="numeric" highContrast number={15} max={15} color="surface" />
+      </Flex>
+    </div>
+  )
+}
+
 export const BadgeCorner = () => {
   return (
     <div className="l_flow__md">

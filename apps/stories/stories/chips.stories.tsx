@@ -354,3 +354,144 @@ export function ChipsCornerDefaults() {
     </div>
   )
 }
+
+export const ChipsHighContrastSolid = () => (
+  <div className="l_flow__md">
+    <Flex gap="xs">
+      <Chips color="danger" variant="solid">
+        Hello
+      </Chips>
+      <Chips color="warning" variant="solid">
+        Hello
+      </Chips>
+      <Chips color="success" variant="solid">
+        Hello
+      </Chips>
+
+      <Chips color="primary" variant="solid">
+        Hello
+      </Chips>
+      <Chips color="secondary" variant="solid">
+        Hello
+      </Chips>
+      <Chips color="surface" variant="solid">
+        Hello
+      </Chips>
+    </Flex>
+    <Flex gap="xs">
+      <Chips color="danger" variant="solid" highContrast>
+        Hello
+      </Chips>
+      <Chips color="warning" variant="solid" highContrast>
+        Hello
+      </Chips>
+      <Chips color="success" variant="solid" highContrast>
+        Hello
+      </Chips>
+
+      <Chips color="primary" variant="solid" highContrast>
+        Hello
+      </Chips>
+      <Chips color="secondary" variant="solid" highContrast>
+        Hello
+      </Chips>
+      <Chips color="surface" variant="solid" highContrast>
+        Hello
+      </Chips>
+    </Flex>
+  </div>
+)
+
+export const ChipsHighContrastOutline = () => (
+  <div className="l_flow__md">
+    <Flex gap="xs">
+      <Chips color="danger" variant="outline">
+        Hello
+      </Chips>
+      <Chips color="warning" variant="outline">
+        Hello
+      </Chips>
+      <Chips color="success" variant="outline">
+        Hello
+      </Chips>
+
+      <Chips color="primary" variant="outline">
+        Hello
+      </Chips>
+      <Chips color="secondary" variant="outline">
+        Hello
+      </Chips>
+      <Chips color="surface" variant="outline">
+        Hello
+      </Chips>
+    </Flex>
+    <Flex gap="xs">
+      <Chips color="danger" variant="outline" highContrast>
+        Hello
+      </Chips>
+      <Chips color="warning" variant="outline" highContrast>
+        Hello
+      </Chips>
+      <Chips color="success" variant="outline" highContrast>
+        Hello
+      </Chips>
+
+      <Chips color="primary" variant="outline" highContrast>
+        Hello
+      </Chips>
+      <Chips color="secondary" variant="outline" highContrast>
+        Hello
+      </Chips>
+      <Chips color="surface" variant="outline" highContrast>
+        Hello
+      </Chips>
+    </Flex>
+  </div>
+)
+
+export const ChipsHighContrastSoft = () => (
+  <div className="l_flow__md">
+    <Flex gap="xs">
+      <Chips color="danger" variant="soft">
+        Hello
+      </Chips>
+      <Chips color="warning" variant="soft">
+        Hello
+      </Chips>
+      <Chips color="success" variant="soft">
+        Hello
+      </Chips>
+
+      <Chips color="primary" variant="soft">
+        Hello
+      </Chips>
+      <Chips color="secondary" variant="soft">
+        Hello
+      </Chips>
+      <Chips color="surface" variant="soft">
+        Hello
+      </Chips>
+    </Flex>
+    <Flex gap="xs">
+      <Chips color="danger" variant="soft" highContrast>
+        Hello
+      </Chips>
+      <Chips color="warning" variant="soft" highContrast>
+        Hello
+      </Chips>
+      <Chips color="success" variant="soft" highContrast>
+        Hello
+      </Chips>
+
+      <Chips color="primary" variant="soft" highContrast>
+        Hello
+      </Chips>
+      <Chips color="secondary" variant="soft" highContrast>
+        Hello
+      </Chips>
+      <Chips color="surface" variant="soft" highContrast>
+        Hello
+      </Chips>
+    </Flex>
+  </div>
+)

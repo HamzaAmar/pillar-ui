@@ -5,6 +5,7 @@ interface BadgeBaseProps {
   size?: Size
   color?: Color
   corner?: Corner
+  highContrast?: boolean
 }
 
 interface BadgeNumericProps extends BadgeBaseProps {

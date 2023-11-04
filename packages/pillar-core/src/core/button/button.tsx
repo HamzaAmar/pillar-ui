@@ -25,6 +25,7 @@ export const Button = forwardRef((props, forwardedRef) => {
     disabled,
     transform,
     fluid,
+    highContrast = false,
     as = 'button',
     ...rest
   } = props
@@ -37,6 +38,7 @@ export const Button = forwardRef((props, forwardedRef) => {
     [`u_transform__${transform}`]: !!transform,
     [`u_size-${size}`]: !!size,
     [`u_corner-${corner}`]: !!corner,
+    [`btn__high-contrast`]: highContrast,
   })
   const _disabled = disabled || state === 'loading'
 

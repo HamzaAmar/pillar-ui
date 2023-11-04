@@ -29,15 +29,31 @@
 .chips__solid {
   background-color: var(--color-shared-8);
   color: var(--color-shared-12);
+
+  &.chips__high-contrast {
+    background-color: var(--color-shared-12);
+    color: var(--color-shared-1);
+  }
 }
 
 .chips__outline {
   color: var(--color-shared-11);
   border-color: var(--color-shared-11);
+
+  &.chips__high-contrast {
+    color: var(--color-shared-12);
+    border-color: var(--color-shared-12);
+  }
 }
 
 .chips__soft {
   border-color: var(--color-shared-7);
   background-color: var(--color-shared-3);
   color: var(--color-shared-11);
+
+  &.chips__high-contrast {
+    border-color: var(--color-shared-11);
+    background-color: var(--color-shared-5);
+    color: var(--color-shared-12);
+  }
 }
