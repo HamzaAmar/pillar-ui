@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import type { AccordionProps } from './accordion.type'
+import type { AccordionProps, Value } from './accordion.type'
 
 export function useAccordion({ type, collapsible }: AccordionProps) {
-  const [activeItems, setActiveItems] = useState<number | number[]>(type === 'multiple' ? [] : -1)
+  const [activeItems, setActiveItems] = useState<Value | Value[]>(type === 'multiple' ? [] : -1)
 
-  function isItemOpen(index: number) {
-    return typeof activeItems === 'number' ? activeItems === index : activeItems.includes(index)
+  function isItemOpen(index: Value) {
+    return Array.isArray(activeItems) ? activeItems.includes(index) : activeItems === index
   }
 
-  function toggleAccordion(currentIndex: number) {
+  function toggleAccordion(currentIndex: Value) {
     if (isItemOpen(currentIndex) && !collapsible) {
       if (Array.isArray(activeItems) && activeItems.length === 1) return
       if (activeItems === currentIndex) return

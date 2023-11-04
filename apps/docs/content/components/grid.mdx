@@ -1,39 +1,154 @@
 ---
 title: Grid
 type: Components
-excerpt: The Grid component is a versatile component that can be used to display a variety of content, such as books, articles, images, and videos. The Grid component can be customized to fit your specific needs, such as the number of columns, the layout of the grid, and the styling of the grid.
-items: ['Grid', 'Grid.Item']
+excerpt: The Grid component is a powerful layout tool that allows for the creation of responsive and complex layouts with ease. It facilitates the arrangement of components or elements into rows and columns, offering various customization options such as alignment, spacing, and placement.
+items: ['Grid', 'GridItem']
 file: core
 root: components
 ---
 
+## Usage
+
+```tsx showLineNumbers title="Grid.tsx"
+import { Grid, GridItem } from '@pillar-ui/core'
+
+function App() {
+  return (
+    <Grid grid="1fr 1fr 1fr" gap="md" items="center" justify="between">
+      <GridItem placement="1 / 2 x span 2 / span 3">{/* Your content here */}</GridItem>
+      <GridItem placement="auto / auto x auto / span 2">{/* Your content here */}</GridItem>
+    </Grid>
+  )
+}
+```
+
 ## Props
 
-The following are the props that can be used with the Grid component:
+### Grid
 
-### columns
+The Grid component accepts the following props:
 
-The columns prop is used to specify the number of columns in the grid.
+#### Grid Size Breakpoints
 
-### gap
+- `xs`, `sm`, `md`, `lg`, `xl`: string
+  - These props define the grid's layout for different screen sizes. They set the grid template based on the screen width.
 
-The gap prop is used to specify the gap between columns.
+<GridPlayGround.Gap />
 
-## Use Case
+```tsx showLineNumbers title="Code.tsx"
+export const GridGap = () => {
+  return (
+    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+      <Grid grid="repeat(5, 1fr)" gap="2xs">
+        {boxes}
+      </Grid>
+      <Grid grid="repeat(5, 1fr)" gap="xs">
+        {boxes}
+      </Grid>
+      <Grid grid="repeat(5, 1fr)" gap="sm">
+        {boxes}
+      </Grid>
+      <Grid grid="repeat(5, 1fr)" gap="md">
+        {boxes}
+      </Grid>
+      <Grid grid="repeat(5, 1fr)" gap="lg">
+        {boxes}
+      </Grid>
+      <Grid grid="repeat(5, 1fr)" gap="xl">
+        {boxes}
+      </Grid>
+      <Grid grid="repeat(5, 1fr)" gap="2xl">
+        {boxes}
+      </Grid>
+    </Paper>
+  )
+}
+```
 
-The Grid component is a versatile component that can be used to display a variety of content, such as books, articles, images, and videos. It can be used to create a layout that is both visually appealing and easy to use.
+#### Grid
 
-Here are some examples of how the Grid component can be used:
+- Type: string
+- The prop that defines the number of columns in the grid.
 
-- To display a list of books, the Grid component can be used to create a grid with a fixed number of columns. This will ensure that the books are displayed in a consistent layout, regardless of the screen size.
-- To display a list of articles, the Grid component can be used to create a grid with a variable number of columns. This will allow the articles to be displayed in a way that takes up the most amount of space possible on the screen.
-- To display a list of images, the Grid component can be used to create a grid with a fixed or variable number of columns. The images can be arranged in a grid with a fixed or variable number of rows.
-- To display a list of videos, the Grid component can be used to create a grid with a fixed or variable number of columns. The videos can be arranged in a grid with a fixed or variable number of rows.
+<GridPlayGround.Grid />
+
+```tsx showLineNumbers title="Code.tsx"
+import { Grid } from '@pillar-ui/core'
+
+const GridGrid = () => {
+  return (
+    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+      <Grid grid="repeat(5, 1fr)" gap="sm">
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+        <div style="height:40px" />
+      </Grid>
+    </Paper>
+  )
+}
+```
+
+### GridItem
+
+The GridItem component accepts the following props:
+
+<GridPlayGround.Items />
+
+```tsx showLineNumbers title="Code.tsx"
+import { Grid } from '@pillar-ui/core'
+
+const GridItems = () => {
+  return (
+    <Grid grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="sm">
+      <Grid.Item placement="2/4" style={{ background: 'var(--interface-8)' }}>
+        Header
+      </Grid.Item>
+      <Grid.Item placement="span 1 x 1 / span 3" style={{ background: 'var(--interface-8)' }}>
+        sidebar
+      </Grid.Item>
+      <Grid.Item placement="2 / 3" style={{ background: 'var(--interface-8)' }}>
+        main
+      </Grid.Item>
+      <Grid.Item placement="3 / 4" style={{ background: 'var(--interface-8)' }}>
+        sidebar
+      </Grid.Item>
+      <Grid.Item placement="2 / span 2" style={{ background: 'var(--interface-8)' }}>
+        Footer
+      </Grid.Item>
+    </Grid>
+  )
+}
+```
+
+## Best Practices
+
+- Utilize the Grid component to create responsive layouts, adjusting the design based on the screen size.
+- Use the `placement` prop in the GridItem for exact positioning within the Grid.
+- Apply the `gap` prop in the Grid component to manage the spacing between GridItems without needing external styles or spacing components.
+- Utilize `justify` and `items` props to align and justify content, enhancing the layout's flexibility and responsiveness.
+
+## Use Cases
+
+- Crafting complex, responsive layouts for web applications.
+- Aligning and distributing space between items within a layout.
+- Precise positioning of components or elements in a grid system for various screen sizes.
 
 ## Troubleshooting
 
-If you encounter any issues with the Grid component, make sure that you have correctly passed the props and values. If you are still having issues, check the console for any error messages.
+- Ensure that the GridItems are direct children of the Grid component.
+- Check the values of the `placement`, `grid`, `gap`, and size breakpoints props for validity and compatibility.
+- For issues with alignment or justification, validate the values of the `items` and `justify` props.
 
 ## Conclusion
 
-The Grid component is a versatile component that can be used to display a variety of content. It is flexible, customizable, accessible, and has TypeScript support, making it a great addition to any UI design.
+The Grid component serves as a robust solution for creating adaptable and organized layouts in your applications. It provides a range of options to design responsive, precise, and aesthetically pleasing interfaces, ensuring an enhanced user experience.

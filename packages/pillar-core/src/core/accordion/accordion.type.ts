@@ -11,23 +11,25 @@ export interface AccordionProps {
   separate?: boolean
 }
 
+export type Value = number | string
+
 export interface AccordionButtonProps {
   id?: string
   title: string
   icon?: ReactElement
 }
 export interface AccordionItemProps {
-  value: number | string
+  value: Value
   variant?: Variant
 }
 export interface AccordionPanelProps {
   id?: string
 }
 export interface UseAccordionReturns {
-  state: number | number[]
-  setState: Dispatch<SetStateAction<number | number[]>>
-  toggleAccordion: (currentIndex: number) => void
-  isItemOpen: (value: number) => boolean
+  state: Value | Value[]
+  setState: Dispatch<SetStateAction<Value | Value[]>>
+  toggleAccordion: (currentIndex: Value) => void
+  isItemOpen: (value: Value) => boolean
 }
 
 export interface AccordionContextProps extends Partial<UseAccordionReturns> {
@@ -37,5 +39,5 @@ export interface AccordionContextProps extends Partial<UseAccordionReturns> {
 }
 export interface AccordionItemContextProps {
   id?: string
-  value: number
+  value: Value
 }

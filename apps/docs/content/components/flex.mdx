@@ -19,6 +19,12 @@ This property provides you with the ability to manage and adjust the amount of s
 <FlexPlayGround.Gap />
 
 ```tsx showLineNumbers title="Flex.tsx"
+const Box = (props: any) => {
+  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+}
+
+const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+
 export const FlexGap = () => {
   return (
     <div className="l_flow__sm">
@@ -44,38 +50,24 @@ This option lets you decide if items inside a container should wrap to the next 
 <FlexPlayGround.Wrap />
 
 ```tsx showLineNumbers title="Flex.tsx"
+const Box = (props: any) => {
+  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+}
+
+const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+
 export const FlexWrap = () => {
   return (
-    <div className="l_flow__sm">
-      <Flex gap="2xs" wrap>
+    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+      <Flex wrap gap="sm">
+        {boxes}
+        {boxes}
+        {boxes}
+        {boxes}
         {boxes}
         {boxes}
       </Flex>
-      <Flex gap="xs" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="sm" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="md" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="lg" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="xl" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="2xl" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-    </div>
+    </Paper>
   )
 }
 ```
@@ -91,6 +83,12 @@ This attribute defines the orientation in which the flexible items within a Flex
 <FlexPlayGround.Direction />
 
 ```tsx showLineNumbers title="Flex.tsx"
+const Box = (props: any) => {
+  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+}
+
+const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+
 export const FlexDirection = () => {
   return (
     <div className="l_flow__sm">
@@ -114,6 +112,12 @@ This property governs the positioning of child elements within a container along
 <FlexPlayGround.Justify />
 
 ```tsx showLineNumbers title="Flex.tsx"
+const Box = (props: any) => {
+  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+}
+
+const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+
 export const FlexJustify = () => {
   return (
     <div className="l_flow__lg">
@@ -149,6 +153,12 @@ This property allows you to determine the positioning of child elements along th
 <FlexPlayGround.Items />
 
 ```tsx showLineNumbers title="Flex.tsx"
+const Box = (props: any) => {
+  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+}
+
+const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+
 export const FlexItems = () => {
   return (
     <div className="l_flow__sm">
@@ -165,3 +175,14 @@ export const FlexItems = () => {
   )
 }
 ```
+
+### Best Practices
+
+- Use the `gap` property to maintain consistent spacing between child elements without adding additional styles.
+- Employ the `wrap` property to ensure your layout remains responsive and adaptable to various screen sizes.
+- Utilize the `direction` property to manage the orientation of child elements, aiding in creating intuitive and well-structured layouts.
+- Leverage the `justify` and `items` properties to easily align content, enhancing the visual appeal and readability of your layouts.
+
+### Conclusion
+
+The Flex component is a versatile tool designed to simplify the creation of well-aligned and responsive layouts. Its wide array of properties allows for detailed customization, ensuring your content is displayed in a polished and organized manner.

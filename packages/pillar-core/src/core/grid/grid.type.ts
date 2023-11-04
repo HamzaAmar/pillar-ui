@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
-import { Size } from '../../types'
+// import { Size } from '../../types'
+
+type Size = '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
 
 type Items = 'center' | 'end' | 'start'
 type Justify = 'start' | 'around' | 'between' | 'evenly' | 'end' | 'center'

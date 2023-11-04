@@ -1,17 +1,15 @@
-import { Avatar, Code, Flex, Paper } from '@pillar-ui/core'
+import { Avatar, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 const Box = (props: any) => {
-  return (
-    <Paper as={Flex} justify="center" items="center" height="100px" background="surface-6" corner="sm" {...props} />
-  )
+  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box width="100px" key={index} />)
+const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
 
 export const FlexPlayGround = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
@@ -24,7 +22,7 @@ export const FlexPlayGround = () => {
 
 export const FlexGap = () => {
   return (
-    <div className="l_flow__sm">
+    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
       <Flex gap="2xs">{boxes}</Flex>
       <Flex gap="xs">{boxes}</Flex>
       <Flex gap="sm">{boxes}</Flex>
@@ -32,59 +30,39 @@ export const FlexGap = () => {
       <Flex gap="lg">{boxes}</Flex>
       <Flex gap="xl">{boxes}</Flex>
       <Flex gap="2xl">{boxes}</Flex>
-    </div>
+    </Paper>
   )
 }
 
 export const FlexWrap = () => {
   return (
-    <div className="l_flow__sm">
-      <Flex gap="2xs" wrap>
+    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+      <Flex wrap gap="sm">
+        {boxes}
+        {boxes}
+        {boxes}
+        {boxes}
         {boxes}
         {boxes}
       </Flex>
-      <Flex gap="xs" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="sm" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="md" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="lg" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="xl" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-      <Flex gap="2xl" wrap>
-        {boxes}
-        {boxes}
-      </Flex>
-    </div>
+    </Paper>
   )
 }
 
 export const FlexDirection = () => {
   return (
-    <div className="l_flow__sm">
+    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm">{boxes}</Flex>
       <Flex gap="sm" direction="column">
         {boxes}
       </Flex>
-    </div>
+    </Paper>
   )
 }
 
 export const FlexJustify = () => {
   return (
-    <div className="l_flow__lg">
+    <Paper className="playground" flow="xl" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm">{boxes}</Flex>
       <Flex gap="sm" justify="center">
         {boxes}
@@ -101,13 +79,13 @@ export const FlexJustify = () => {
       <Flex gap="sm" justify="evenly">
         {boxes}
       </Flex>
-    </div>
+    </Paper>
   )
 }
 
 export const FlexItems = () => {
   return (
-    <div className="l_flow__sm">
+    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
       <Flex as={Paper} height="100px" background="surface-5" gap="sm" items="center">
         Hello
       </Flex>
@@ -117,21 +95,23 @@ export const FlexItems = () => {
       <Flex as={Paper} height="100px" background="surface-5" gap="sm">
         Hello
       </Flex>
-    </div>
+    </Paper>
   )
 }
 
 export const FlexNested = () => {
   return (
-    <Flex gap="sm" direction="column">
-      <Box className="l_flex-1">header</Box>
-      <Flex gap="sm">
-        <Box className="l_flex-1">sidebar</Box>
-        <Box className="l_flex-2">main</Box>
-        <Box className="l_flex-1">sidebar</Box>
+    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+      <Flex gap="sm" direction="column">
+        <Box className="l_flex-1">header</Box>
+        <Flex gap="sm">
+          <Box className="l_flex-1">sidebar</Box>
+          <Box className="l_flex-2">main</Box>
+          <Box className="l_flex-1">sidebar</Box>
+        </Flex>
+        <Box className="l_flex-1">footer</Box>
       </Flex>
-      <Box className="l_flex-1">footer</Box>
-    </Flex>
+    </Paper>
   )
 }
 
