@@ -4,7 +4,6 @@ Pillar Core is a collection of reusable UI components for modern web development
 
 ## Features
 
-- **Reusable Components**: A comprehensive library of UI components covering various use cases in web development.
 - **Best Practices**: Components adhere to industry best practices, ensuring optimal performance, maintainability, and accessibility.
 - **Customizable**: Components are highly customizable, allowing you to adapt them to your application's unique visual and branding requirements.
 - **Responsive Design**: All components are designed to be responsive and work seamlessly across different screen sizes and devices.
@@ -23,14 +22,14 @@ To start using Pillar Core in your project, follow these simple steps:
 1. Install the Pillar Core package by running the following command:
 
 ```bash
-npm install @core
+npm install @pillar-ui/core
 
 ```
 
 Or Yarn
 
 ```bash
-yarn add @core
+yarn add @pillar-ui/core
 ```
 
 ## Adding Styles
@@ -44,7 +43,7 @@ To enhance the appearance and maintain visual consistency of your application us
 1. Import the Pillar CSS file by adding the following import statement at the top of the file:
 
 ```tsx
-import '@core/style'
+import '@pillar-ui/core/style'
 ```
 
 This import statement ensures that the necessary styles are applied to the Pillar components used in your application.
@@ -69,10 +68,10 @@ You can customize other aspects of the theme by modifying additional custom prop
 
 1. Save the `theme.css` file.
 
-1. Import the `theme.css` file in your project, making sure to import it after the `@core/style` import. This ensures that your custom styles override the default styles provided by Pillar Core. For example:
+1. Import the `theme.css` file in your project, making sure to import it after the `@pillar-ui/core/style` import. This ensures that your custom styles override the default styles provided by Pillar Core. For example:
 
 ```tsx
-import '@core/style'
+import '@pillar-ui/core/style'
 import './theme.css'
 ```
 
@@ -95,7 +94,7 @@ Refer to the Pillar Core documentation for more details on utilizing the respons
 Once you have customized your Pillar Core theme and set the desired variables, you are ready to import the necessary components, icons, utilities, or hooks and start developing your application.
 
 ```tsx
-import { Button } from '@core'
+import { Button } from '@pillar-ui/core'
 ```
 
 ## Contributing

@@ -22,7 +22,7 @@ To start using Pillar Icons in your project, follow these simple steps:
 1. Install the Pillar Icons package by running the following command:
 
 ```bash
-npm install @icons
+npm install @pillar-ui/icons
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ npm install @icons
 Pillar Icons can be imported and used in your projects. Here's an example of how to use the icons:
 
 ```tsx
-import { Eye, ArrowDown, Minimize } from '@icons'
+import { Eye, ArrowDown, Minimize } from '@pillar-ui/icons'
 
 function MyComponent() {
   return (
