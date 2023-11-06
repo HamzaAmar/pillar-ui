@@ -11,12 +11,16 @@ export function getOppositeMode(mode: Mode) {
 }
 
 export function ejectModeClassName() {
-  const mode: Mode = getInitMode() ?? 'light'
-  const element = document.documentElement
-  const prevMode = getOppositeMode(mode)
-  const isPrevExist = element.classList.contains(prevMode)
-  if (isPrevExist) {
-    element.classList.remove(prevMode)
-  }
-  element.classList.add(mode)
+  // const mode: Mode = getInitMode() ?? 'light'
+  // console.log(mode)
+  // const element = document.documentElement
+  // const prevMode = getOppositeMode(mode)
+  // const isPrevExist = element.classList.contains(prevMode)
+  // console.log('mode', mode, 'prevMode', prevMode, 'IsPrevExist', isPrevExist)
+  // if (isPrevExist) {
+  //   element.classList.remove(prevMode)
+  // }
+  // element.classList.add(mode)
+
+  console.log('Hello')
 }
