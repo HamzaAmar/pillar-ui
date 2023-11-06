@@ -80,9 +80,9 @@ const troubleshooting = () => {
             <Text weight="medium" as="span">
               Solution:
             </Text>
-            Ensure that you`&apos;`ve imported the Pillar CSS file (<code>@pillar-ui/core/style</code>) in the correct
-            place, usually at the entry point of your application (e.g., <code>App.js</code>). Check for any typos in
-            the import statement.
+            Ensure that you`&apos;`ve imported the Pillar CSS file (<code>@pillar-ui/core/main.css</code>) in the
+            correct place, usually at the entry point of your application (e.g., <code>App.js</code>). Check for any
+            typos in the import statement.
           </Text>
 
           <Text>

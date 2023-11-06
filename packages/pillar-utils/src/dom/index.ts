@@ -10,7 +10,8 @@ export function getOppositeMode(mode: Mode) {
   return mode === 'dark' ? 'light' : 'dark'
 }
 
-export function ejectClassNameMode(mode: Mode = 'light') {
+export function ejectModeClassName() {
+  const mode: Mode = getInitMode() ?? 'light'
   const element = document.documentElement
   const prevMode = getOppositeMode(mode)
   const isPrevExist = element.classList.contains(prevMode)

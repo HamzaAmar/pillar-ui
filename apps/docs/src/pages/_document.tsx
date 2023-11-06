@@ -1,3 +1,4 @@
+import { ejectModeClassName } from '@pillar-ui/utils'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -22,6 +23,7 @@ export default function Document() {
       </Head>
 
       <body className="custom-scroll">
+        <script dangerouslySetInnerHTML={{ __html: `${ejectModeClassName()}` }} />
         <Main />
         <NextScript />
       </body>

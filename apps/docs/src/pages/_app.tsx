@@ -1,6 +1,6 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
-import '@pillar-ui/core/style'
+import '@pillar-ui/core/main.css'
 import '../scss/main.scss'
 import '../scss/theme.scss'
 

@@ -43,7 +43,7 @@ To enhance the appearance and maintain visual consistency of your application us
 1. Import the Pillar CSS file by adding the following import statement at the top of the file:
 
 ```tsx
-import '@pillar-ui/core/style'
+import '@pillar-ui/core/main.css'
 ```
 
 This import statement ensures that the necessary styles are applied to the Pillar components used in your application.
@@ -68,7 +68,7 @@ You can customize other aspects of the theme by modifying additional custom prop
 
 1. Save the `theme.css` file.
 
-1. Import the `theme.css` file in your project, making sure to import it after the `@pillar-ui/core/style` import. This ensures that your custom styles override the default styles provided by Pillar Core. For example:
+1. Import the `theme.css` file in your project, making sure to import it after the `@pillar-ui/core/main.css` import. This ensures that your custom styles override the default styles provided by Pillar Core. For example:
 
 ```tsx
 import '@pillar-ui/core/style'
