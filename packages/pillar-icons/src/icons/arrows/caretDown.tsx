@@ -1,10 +1,10 @@
 import { ROTATION, svgProps } from '../../shared'
 import { SvgWithDirection } from '../../type'
 
-const ChevronsDown = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
+const CaretDown = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
   <svg {...svgProps} transform={`rotate(${ROTATION[direction]})`} {...rest}>
-    <path d="m7 7 5 5 5-5M7 13l5 5 5-5" />
+    <path d="m6 9 6 6 6-6H6Z" />
   </svg>
 )
 
-export default ChevronsDown
+export default CaretDown

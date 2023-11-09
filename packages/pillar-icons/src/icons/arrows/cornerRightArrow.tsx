@@ -1,5 +1,5 @@
 import { ROTATION, svgProps } from '../../shared'
-import { SvgType, SvgWithDirection } from '../../type'
+import { SvgWithDirection } from '../../type'
 
 const CornerRightArrow = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
   <svg {...svgProps} transform={`rotate(${ROTATION[direction]})`} {...rest}>
@@ -7,8 +7,4 @@ const CornerRightArrow = ({ direction = 'bottom', ...rest }: SvgWithDirection) =
   </svg>
 )
 
-const CornerLeft = ({ direction, ...rest }: SvgType) => <CornerRightArrow direction="left" {...rest} />
-const CornerRight = ({ direction, ...rest }: SvgType) => <CornerRightArrow direction="right" {...rest} />
-const CornerTop = ({ direction, ...rest }: SvgType) => <CornerRightArrow direction="top" {...rest} />
-
-export { CornerRightArrow, CornerLeft, CornerRight, CornerTop }
+export default CornerRightArrow
