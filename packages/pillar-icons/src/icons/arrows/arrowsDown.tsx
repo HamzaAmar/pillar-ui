@@ -1,5 +1,5 @@
 import { ROTATION, svgProps } from '../../shared'
-import { SvgType, SvgWithDirection } from '../../type'
+import { SvgWithDirection } from '../../type'
 
 const ArrowsDown = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
   <svg {...svgProps} transform={`rotate(${ROTATION[direction]})`} {...rest}>
@@ -7,8 +7,4 @@ const ArrowsDown = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
   </svg>
 )
 
-const ArrowsLeft = ({ direction, ...rest }: SvgType) => <ArrowsDown direction="left" {...rest} />
-const ArrowsRight = ({ direction, ...rest }: SvgType) => <ArrowsDown direction="right" {...rest} />
-const ArrowsTop = ({ direction, ...rest }: SvgType) => <ArrowsDown direction="top" {...rest} />
-
-export { ArrowsDown, ArrowsLeft, ArrowsRight, ArrowsTop }
+export default ArrowsDown

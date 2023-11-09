@@ -3,7 +3,7 @@ import { DocsLayout } from 'src/component/common'
 import * as ICONS from '@pillar-ui/icons'
 import { Button, Flex, Grid, Paper, Text } from '@pillar-ui/core'
 import { useCopyToClipboard } from '@pillar-ui/hooks'
-import iconJson from '../../constant/icons/index.json'
+import iconJson from '../../constant/icons/icons.json'
 
 const CATEGORIES: string[] = ['all', ...Object.keys(iconJson)]
 
@@ -61,8 +61,8 @@ const Icons = () => {
             </Button>
           ))}
         </Flex>
-        <div>
-          <Grid style={{ '--button-corner': 0 } as CSSProperties} gap="sm" grid="repeat(auto-fit, minmax(150px, 1fr)">
+        <div style={{ '--button-corner': 0 } as CSSProperties}>
+          <Grid gap="sm" grid="repeat(auto-fit, minmax(130px, 1fr)">
             {lists.map((item) => (
               <IconsItem item={item} />
             ))}

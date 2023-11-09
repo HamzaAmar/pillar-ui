@@ -1,5 +1,5 @@
 import { ROTATION, svgProps } from '../../shared'
-import { SvgType, SvgWithDirection } from '../../type'
+import { SvgWithDirection } from '../../type'
 
 const ChevronDown = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
   <svg {...svgProps} transform={`rotate(${ROTATION[direction]})`} {...rest}>
@@ -7,8 +7,4 @@ const ChevronDown = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
   </svg>
 )
 
-const ChevronLeft = ({ direction, ...rest }: SvgType) => <ChevronDown direction="left" {...rest} />
-const ChevronRight = ({ direction, ...rest }: SvgType) => <ChevronDown direction="right" {...rest} />
-const ChevronTop = ({ direction, ...rest }: SvgType) => <ChevronDown direction="top" {...rest} />
-
-export { ChevronDown, ChevronLeft, ChevronRight, ChevronTop }
+export default ChevronDown
