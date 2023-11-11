@@ -1,5 +1,26 @@
 # @pillar/icons
 
+## 0.5.1
+
+### Patch Changes
+
+- Here's a simpler version of the message:
+
+  ***
+
+  🌟 **New Update: Better Icons!**
+
+  We're excited to share our newest update! It makes our website even better with some new features and important fixes.
+
+  **Here's What's New and Improved:**
+
+  1. **New and Easier Icons (Commit 5470355):** We've added new icons to our site. They look great and are easier to understand, matching our modern style.
+  2. **Updated Main Icons (Commit 293fbc6):** The main icons, which show our key features, are now better and easier to use.
+  3. **Icons Look More Alike (Commit df2bd10):** We've changed the 'dots' icon to 'dotHorizontal'. This makes our icons more consistent and clear.
+
+  **Why This Matters:**
+  These updates make our platform look nicer and easier to use. We've worked on our icons so you can have a better and more straightforward experience.
+
 ## 0.5.0
 
 ### Minor Changes
