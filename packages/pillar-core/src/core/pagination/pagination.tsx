@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { Button, Flex } from '..'
-import { ChevronDown, Dots } from '@pillar-ui/icons'
+import { ChevronDown, DotsHorizontal } from '@pillar-ui/icons'
 import { usePagination } from '@pillar-ui/hooks'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 
@@ -65,7 +65,7 @@ export const Pagination = (props: PaginationProps) => {
                 key={index}
                 className="pagination-item--link u_flex u_items-center u_justify-center"
               >
-                <Dots width={16} />
+                <DotsHorizontal width={16} />
               </Flex>
             ) : (
               <Item key={index} active={currentStep} onClick={() => jumpToStep(item)} number={item}>
