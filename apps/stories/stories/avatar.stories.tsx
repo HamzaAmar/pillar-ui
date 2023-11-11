@@ -1,7 +1,7 @@
 import React, { CSSProperties, useRef, useState } from 'react'
 import { Avatar, Flex, Paper, Button } from '@pillar-ui/core'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Dots } from '@pillar-ui/icons'
+import { DotsHorizontal } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Avatar',
@@ -204,10 +204,10 @@ export function AvatarGroupVariants() {
 export function AvatarGroupCustom() {
   return (
     <div className="l_flow__md">
-      <Avatar.Group limit={6} layout="stack" color="danger" variant="outline" fallback={<Dots width="20" />}>
+      <Avatar.Group limit={6} layout="stack" color="danger" variant="outline" fallback={<DotsHorizontal width="20" />}>
         <Avatar title="Hello" />
         <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
-        <Avatar fallback={<Dots width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
+        <Avatar fallback={<DotsHorizontal width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
@@ -223,7 +223,7 @@ export function AvatarPolymorphic() {
     <div className="l_flow__md">
       <Avatar title="Hello" as="button" onClick={() => alert('Hello world my name is hazma')} />
       <Avatar as="a" href="#" image="https://picsum.photos/id/128/100/100" title="Hello" />
-      <Avatar fallback={<Dots width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
+      <Avatar fallback={<DotsHorizontal width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
     </div>
   )
 }

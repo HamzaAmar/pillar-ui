@@ -1,7 +1,7 @@
 import React, { CSSProperties, useState } from 'react'
 import { DocsLayout } from 'src/component/common'
 import * as ICONS from '@pillar-ui/icons'
-import { Button, Flex, Grid, Paper, Text } from '@pillar-ui/core'
+import { Button, Flex, Grid, Heading, Paper, Text } from '@pillar-ui/core'
 import { useCopyToClipboard } from '@pillar-ui/hooks'
 import iconJson from '../../constant/icons/icons.json'
 
@@ -61,7 +61,10 @@ const Icons = () => {
             </Button>
           ))}
         </Flex>
-        <div style={{ '--button-corner': 0 } as CSSProperties}>
+        <div className="l_flow__sm" style={{ '--button-corner': 0 } as CSSProperties}>
+          <Heading as="h2">
+            Number of Icons In {current}: {lists.length}
+          </Heading>
           <Grid gap="sm" grid="repeat(auto-fit, minmax(130px, 1fr)">
             {lists.map((item) => (
               <IconsItem item={item} />
