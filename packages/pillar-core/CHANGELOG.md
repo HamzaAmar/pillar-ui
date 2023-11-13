@@ -1,5 +1,13 @@
 # @pillar/core
 
+## 0.5.2
+
+### Patch Changes
+
+- feat: remove unused icons
+  d81cd7f fix: add new forgotten icons
+  4ecabda fix: icon error that prevented build"
+
 ## 0.5.1
 
 ### Patch Changes
