@@ -23,8 +23,8 @@
 
 .alert__solid {
   background-color: var(--color-shared-8);
-  color: var(--color-shared-12);
   border-inline-start: 6px solid var(--opacity-8);
+  color: var(--color-shared-12);
 }
 
 .alert__outline {
@@ -35,6 +35,6 @@
 
 .alert__soft {
   background-color: var(--color-shared-5);
-  color: var(--color-shared-12);
   border: 1px solid var(--color-shared-7);
+  color: var(--color-shared-12);
 }
