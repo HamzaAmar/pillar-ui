@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Chips, Flex, Button, Paper } from '@pillar-ui/core'
-import { Dots, Plus } from '@pillar-ui/icons'
+import { DotsHorizontal, Plus } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Chips',
@@ -239,7 +239,7 @@ export const ChipsIcons = () => (
     </Chips>
     <Chips size="2xl" variant="outline">
       Hello
-      <Dots />
+      <DotsHorizontal />
     </Chips>
   </Flex>
 )
