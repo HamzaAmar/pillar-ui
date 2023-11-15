@@ -1,5 +1,18 @@
 # @pillar/icons
 
+## 0.5.3
+
+### Patch Changes
+
+- Subject: 🛠️ Bug Fix: Updated Forgotten Icons and Fixed Existing Ones
+
+  In this commit, we addressed a bug related to missing icons and corrected existing ones that were not displaying correctly. Here are the details of the changes made:
+
+  - Added new icons that were previously overlooked and missing.
+  - Fixed existing icons that were not rendering properly, ensuring they now display correctly.
+
+  This update enhances the overall user experience by ensuring that all icons are in their rightful places and appear as intended.
+
 ## 0.5.2
 
 ### Patch Changes
