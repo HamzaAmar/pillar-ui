@@ -1,0 +1,21 @@
+.slider-track,
+.slider-filled-track {
+  height: 4px;
+  position: relative;
+}
+
+.slider-track {
+  background-color: #ddd;
+}
+
+.slider-filled-track {
+  background-color: blue;
+}
+
+.slider-thumb {
+  /* Styles for your slider thumb */
+}
+
+.slider-mark {
+  /* Styles for your slider marks */
+}
