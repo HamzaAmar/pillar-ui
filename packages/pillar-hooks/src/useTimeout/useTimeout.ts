@@ -1,6 +1,8 @@
 import { useEffect, useRef, useCallback } from 'react'
 import { usePersistentCallback } from '../usePersistentCallback'
 
+import type { TimeoutType } from './useTimeout.type'
+
 type TimeoutHandler = () => void
 
 const validateParameters = (callback: TimeoutHandler | undefined, delay: number) => {
@@ -18,7 +20,7 @@ const validateParameters = (callback: TimeoutHandler | undefined, delay: number)
 
 export const useTimeout = (callback: TimeoutHandler, delay: number = 150) => {
   const savedCallback = useRef<TimeoutHandler>()
-  const timerRef = useRef<NodeJS.Timer | null>(null)
+  const timerRef = useRef<TimeoutType>(null)
   const persistedCallback = usePersistentCallback(callback)
 
   validateParameters(persistedCallback, delay)
