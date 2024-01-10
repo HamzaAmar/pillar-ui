@@ -3,14 +3,14 @@ import { useCounter } from './useCounter'
 import { test, describe, expect } from 'vitest'
 
 describe('useCounter custom hook', () => {
-  test('useCounter work with initial value of increment and decrement', () => {
+  test('useCounter works with initial value of increment and decrement', () => {
     const { result } = renderHook(() => useCounter({ value: 10 }))
     expect(result.current.count).toBe(10)
 
     act(() => {
       result.current.increment()
     })
-
+    // console.log('this is the value of count to be 11', 'but it get', result.current.count)
     expect(result.current.count).toBe(11)
 
     act(() => {
@@ -43,12 +43,14 @@ describe('useCounter custom hook', () => {
     expect(result.current.count).toBe(7)
   })
 
-  test('should not increment, decrement count beyond the (min,max) value', () => {
-    const { result } = renderHook(() => useCounter({ value: 5, min: 0, max: 10 }))
+  test('should not increment, decrement count beyond the (min,max) value to equal the value', () => {
+    const { result } = renderHook(() => useCounter({ value: 5, min: 0, max: 10, goToMaxOnExceed: true }))
+
     act(() => {
       result.current.increment(2)
     })
     expect(result.current.count).toBe(7)
+
     act(() => {
       result.current.increment(2)
     })
@@ -63,9 +65,39 @@ describe('useCounter custom hook', () => {
       result.current.decrement(5)
     })
     expect(result.current.count).toBe(5)
+
     act(() => {
       result.current.decrement(5)
     })
     expect(result.current.count).toBe(0)
+  })
+
+  test('should not increment, decrement count beyond the (min,max) value', () => {
+    const { result } = renderHook(() => useCounter({ value: 5, min: 0, max: 10 }))
+
+    act(() => {
+      result.current.increment(2)
+    })
+    expect(result.current.count).toBe(7)
+
+    act(() => {
+      result.current.increment(2)
+    })
+    expect(result.current.count).toBe(9)
+
+    act(() => {
+      result.current.increment(2)
+    })
+    expect(result.current.count).toBe(9)
+
+    act(() => {
+      result.current.decrement(5)
+    })
+    expect(result.current.count).toBe(4)
+
+    act(() => {
+      result.current.decrement(5)
+    })
+    expect(result.current.count).toBe(4)
   })
 })

@@ -3,4 +3,5 @@ export interface UseCounterProps {
   max?: number
   min?: number
   step?: number
+  goToMaxOnExceed?: boolean
 }

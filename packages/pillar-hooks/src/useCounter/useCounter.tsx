@@ -6,6 +6,13 @@ import type { UseCounterProps } from './useCounter.type'
  * A custom React hook to manage a counter with increment, decrement, and reset functions.
  *
  * @param {UseCounterProps} options - The options object containing configuration for the counter.
+ * @param {number} options.value - The initial value of the counter.
+ * @param {number} [options.min=-Infinity] - The minimum value allowed for the counter.
+ * @param {number} [options.max=Infinity] - The maximum value allowed for the counter.
+ * @param {number} [options.step=1] - The amount by which the counter should be incremented or decremented.
+ * @param {boolean} [options.goToMaxOnExceed=false] - If true, the counter will go to the maximum value when it exceeds it.
+ * @see **Pillar:site** {@link https://www.pillar-ui.com/docs/hooks/useCounter}
+ * @see **Github:site** {@link https://github.com/HamzaAmar/pillar-ui/blob/main/packages/pillar-hooks/src/useCounter/useCounter.tsx}
  *
  * @returns {{
  *   count: number,
@@ -36,9 +43,8 @@ import type { UseCounterProps } from './useCounter.type'
  *   );
  * }
  */
-
-export function useCounter(params?: UseCounterProps) {
-  const { value = 0, min = -Infinity, max = Infinity, step = 1 } = params ?? {}
+export function useCounter(options?: UseCounterProps) {
+  const { value = 0, min = -Infinity, max = Infinity, step = 1, goToMaxOnExceed = false } = options ?? {}
   const [minValue, maxValue] = [Math.min(min, max), Math.max(min, max)]
 
   const initialValue = clamp(value, [minValue, maxValue])
@@ -46,34 +52,27 @@ export function useCounter(params?: UseCounterProps) {
   const [count, setCount] = useState(initialValue)
 
   /**
-   * increment function that increments a count amount a specified amount, until it reaches a maximum value.
-   * @param {number } [amount = 1] - The amount to increment the counter amount (default: 1).
+   * Increment the counter value by a specified amount.
+   * @param {number} [amount = 1] - The amount to increment the counter (default: 1).
    */
-  const increment = (amount?: number) => {
-    /*
-      I use this to prevent 0 because 0 is a falsy value is better than
-      initial value from function because those prevent 0
-    */
-
-    amount = amount ?? step
-    const newAmount = amount || 1
-    if (!Number.isInteger(amount)) return
-    setCount((x) => clamp(x + newAmount, [minValue, maxValue]))
+  const increment = (amount: number = step) => {
+    setCount((x) => {
+      const count = x + amount
+      if (!goToMaxOnExceed && count > maxValue) return x
+      return clamp(count, [minValue, maxValue])
+    })
   }
-  /**
-   * Decrement the counter value amount a specified amount.
-   * @param {number} [amount = 1] - The amount to decrement the counter amount (default: 1).
-   */
-  const decrement = (amount?: number) => {
-    /*
-      I use this to prevent 0 because 0 is a falsy value is better than
-      initial value from function because those prevent 0
-    */
 
-    amount = amount ?? step
-    const newAmount = amount || 1
-    if (!Number.isInteger(amount)) return
-    setCount((x) => clamp(x - newAmount, [minValue, maxValue]))
+  /**
+   * Decrement the counter value by a specified amount.
+   * @param {number} [amount = 1] - The amount to decrement the counter (default: 1).
+   */
+  const decrement = (amount: number = step) => {
+    setCount((x) => {
+      const count = x - amount
+      if (!goToMaxOnExceed && count < min) return x
+      return clamp(count, [minValue, maxValue])
+    })
   }
 
   /**
