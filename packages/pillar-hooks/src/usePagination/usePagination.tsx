@@ -1,4 +1,3 @@
-// import { useMemo } from "react";
 import type { UsePaginationProps } from './usePagination.type'
 import { useStepper } from '../useStepper'
 import { range } from '@pillar-ui/utils'

@@ -36,7 +36,9 @@ import type { UseCounterProps } from './useCounter.type'
  *   );
  * }
  */
-export function useCounter({ value = 0, min = -Infinity, max = Infinity, step = 1 }: UseCounterProps) {
+
+export function useCounter(params?: UseCounterProps) {
+  const { value = 0, min = -Infinity, max = Infinity, step = 1 } = params ?? {}
   const [minValue, maxValue] = [Math.min(min, max), Math.max(min, max)]
 
   const initialValue = clamp(value, [minValue, maxValue])
@@ -47,11 +49,13 @@ export function useCounter({ value = 0, min = -Infinity, max = Infinity, step = 
    * increment function that increments a count amount a specified amount, until it reaches a maximum value.
    * @param {number } [amount = 1] - The amount to increment the counter amount (default: 1).
    */
-  const increment = (amount: number = step) => {
+  const increment = (amount?: number) => {
     /*
       I use this to prevent 0 because 0 is a falsy value is better than
       initial value from function because those prevent 0
     */
+
+    amount = amount ?? step
     const newAmount = amount || 1
     if (!Number.isInteger(amount)) return
     setCount((x) => clamp(x + newAmount, [minValue, maxValue]))
@@ -60,11 +64,13 @@ export function useCounter({ value = 0, min = -Infinity, max = Infinity, step = 
    * Decrement the counter value amount a specified amount.
    * @param {number} [amount = 1] - The amount to decrement the counter amount (default: 1).
    */
-  const decrement = (amount: number = step) => {
+  const decrement = (amount?: number) => {
     /*
       I use this to prevent 0 because 0 is a falsy value is better than
       initial value from function because those prevent 0
     */
+
+    amount = amount ?? step
     const newAmount = amount || 1
     if (!Number.isInteger(amount)) return
     setCount((x) => clamp(x - newAmount, [minValue, maxValue]))

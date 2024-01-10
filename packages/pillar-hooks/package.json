@@ -35,8 +35,8 @@
     }
   },
   "scripts": {
-    "build": "npx tsup",
-    "build:watch": "npx tsup --watch",
+    "build": "tsup",
+    "build:watch": "tsup --watch",
     "lint": "eslint \"src/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "dev": "yarn build:watch",
