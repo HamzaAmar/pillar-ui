@@ -1,4 +1,4 @@
-import '@pillar-ui/core/style'
+import '@pillar-ui/core/main.css'
 import { INITIAL_VIEWPORTS as viewports } from '@storybook/addon-viewport'
 
 export const parameters = {
