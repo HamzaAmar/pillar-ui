@@ -1,0 +1,32 @@
+.counter-button--container {
+  width: fit-content;
+}
+.counter--input {
+  appearance: none;
+  background: none;
+  border: 1px solid var(--opacity-6);
+  border-radius: inherit;
+  padding: 0.25rem 1rem;
+}
+
+.counter-button {
+  background: var(--surface-1);
+  border: 1px solid var(--opacity-6);
+  border-radius: inherit;
+
+  &:hover {
+    background: var(--surface-4);
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+.counter--input::-webkit-outer-spin-button,
+.counter--input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.counter--input[type='number'] {
+  -moz-appearance: textfield;
+}

@@ -30,8 +30,9 @@
     border-color: var(--surface-5);
   }
   & svg {
-    font-size: 1em;
-    width: max(1em, 10px);
+    /* font-size: 1em; */
+    width: max(1.25em, 16px);
+    stroke-width: 2px;
   }
 
   /*

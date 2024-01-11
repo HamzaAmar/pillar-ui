@@ -10,7 +10,6 @@
   position: relative;
   overflow: hidden;
   height: fit-content;
-  align-items: center;
   &:focus-within {
     outline: 2px solid var(--color-shared-9, var(--primary-9));
     outline-offset: -1px;
@@ -26,6 +25,7 @@
   &[data-disabled='true'] {
     background-color: var(--surface-7);
     cursor: not-allowed;
+    border-color: var(--opacity-1);
   }
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -47,14 +47,14 @@
   border-color: var(--surface-7);
 }
 .form-field-wrapper__filled {
-  border-color: var(--opacity-5);
-  background-color: var(--opacity-4);
+  border-color: var(--opacity-11);
+  background-color: var(--surface-1);
 }
 
 .form-field-wrapper__bordered {
   border: none;
   outline: 2px solid transparent;
-  background-color: var(--opacity-3);
+  background-color: var(--opacity-2);
 
   &::before,
   &::after {
@@ -108,13 +108,13 @@
   appearance: none;
   flex: 1;
   min-width: 0;
-  height: 100%;
   background-color: transparent;
   outline: none;
   cursor: inherit;
-  padding-inline: 0.5em;
-  min-height: 2em;
+  padding-inline: 1rem;
+  min-height: 2.375em;
   resize: none;
+  display: inline-block;
 
   &[type='color'] {
     padding: 0;
@@ -187,7 +187,8 @@
 
 .password-input--button {
   line-height: 0;
-
+  min-height: 100%;
+  padding: 0 0.5em;
   &:focus {
     outline: 2px solid var(--color-shared-11, var(--primary-11));
     outline-offset: -2px;
@@ -233,7 +234,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 .form-controller--required {
-  color: var(--red-11);
+  color: var(--danger-11);
   margin-inline-start: 0.25em;
   line-height: 0;
   font-weight: bold;
@@ -247,6 +248,7 @@
 
 .select-field {
   background-color: var(--surface-1);
+  width: 100%;
 }
 .select-chevron {
   position: absolute;

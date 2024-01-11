@@ -40,10 +40,10 @@
     "storybook"
   ],
   "scripts": {
-    "js-build": "npx tsup",
+    "js-build": "tsup",
     "css-build": "postcss --config postcss.config.js src/css/main.css --output ./css/main.css",
     "build": "npm-run-all -p css-build js-build",
-    "js-build:watch": "npx tsup --watch",
+    "js-build:watch": "tsup --watch",
     "css-build:watch": "yarn css-build --watch --verbose",
     "dev": "npm-run-all -p -r js-build:watch css-build:watch",
     "lint": "eslint \"src/**/*.ts*\"",
@@ -73,7 +73,7 @@
     "react": "^18.1.0",
     "sass": "^1.59.2",
     "terser": "^5.19.1",
-    "tsup": "^6.7.0",
+    "tsup": "^8.0.1",
     "typescript": "^4.5.3"
   }
 }

@@ -188,6 +188,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
       />
       <div className="input-number--counter-wrapper">
         <button
+          type="button"
           onClick={() => {
             inputRef.current?.focus()
             inputRef.current?.stepUp()
@@ -201,6 +202,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
         </button>
 
         <button
+          type="button"
           onClick={() => {
             inputRef.current?.focus()
             inputRef.current?.stepDown()
@@ -237,8 +239,8 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
-    visibleIcon = <Eye height="16" />,
-    hiddenIcon = <EyeOff height="16" />,
+    visibleIcon = <Eye width="16" />,
+    hiddenIcon = <EyeOff width="16" />,
     ...restProps
   } = props
 
