@@ -1,0 +1,66 @@
+.menu-select {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-select-button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333; /* Change text color for better readability */
+  cursor: pointer;
+  &:focus {
+    background: red;
+  }
+}
+.menu {
+  position: absolute;
+  z-index: 1000;
+  /* background-color: #fff; */
+  background-color: red;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px; /* Add max-height to enable scrolling if menu items exceed */
+  overflow-y: auto; /* Add overflow-y auto to enable scrolling */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: #f0f0f0; /* Change background color on hover/focus for better feedback */
+    outline: none; /* Remove default outline on focus */
+  }
+}
+
+.menu-item.focused {
+  background-color: #f0f0f0; /* Change background color for focused item */
+}
+
+/* Style for the menu instructions */
+#menu-instructions {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.menu.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add more styles as needed to enhance the user experience */
