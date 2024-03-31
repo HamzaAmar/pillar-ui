@@ -40,7 +40,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
     prefixInput,
     suffixInput,
     children,
-    ...restProps
+    ...rest
   } = props
 
   const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
@@ -56,16 +56,16 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
       justify="between"
       gap="xs"
       className={wrapperClassName}
-      data-disabled={restProps.disabled}
+      data-disabled={rest.disabled}
       data-invalid={hasError || isInvalid}
-      data-readonly={restProps.readOnly}
+      data-readonly={rest.readOnly}
     >
       {prefixInputElement}
 
       <textarea
         aria-describedby={describedby}
         ref={forwardedRef}
-        {...restProps}
+        {...rest}
         {...ctx}
         className={`form-field textarea__${size}`}
       ></textarea>
@@ -95,7 +95,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
     prefixInput,
     suffixInput,
     isInvalid,
-    ...restProps
+    ...rest
   } = props
 
   const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
@@ -114,9 +114,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
       justify="between"
       gap="xs"
       className={wrapperClassName}
-      data-disabled={restProps.disabled}
+      data-disabled={rest.disabled}
       data-invalid={hasError || isInvalid}
-      data-readonly={restProps.readOnly}
+      data-readonly={rest.readOnly}
     >
       {prefixInputElement}
       <input
@@ -124,7 +124,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
         type="text"
         ref={forwardedRef}
         aria-invalid={isInvalid}
-        {...restProps}
+        {...rest}
         {...ctx}
         className={`form-field u_size-${size}`}
       />
@@ -234,7 +234,7 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
     children,
     visibleIcon = <Eye width="16" />,
     hiddenIcon = <EyeOff width="16" />,
-    ...restProps
+    ...rest
   } = props
 
   const { booleanValue: showPassword, setToggle } = useBooleanState(false)
@@ -253,18 +253,11 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
     <Flex
       justify="between"
       className={wrapperClassName}
-      data-disabled={restProps.disabled}
+      data-disabled={rest.disabled}
       data-invalid={hasError || isInvalid}
-      data-readonly={restProps.readOnly}
+      data-readonly={rest.readOnly}
     >
-      <input
-        aria-describedby={describedby}
-        type={type}
-        ref={forwardedRef}
-        {...restProps}
-        {...ctx}
-        className="form-field"
-      />
+      <input aria-describedby={describedby} type={type} ref={forwardedRef} {...rest} {...ctx} className="form-field" />
 
       <button aria-label={label} type="button" onClick={setToggle} className="password-input--button u_center">
         {showPassword ? hiddenIcon : visibleIcon}
@@ -293,7 +286,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
-    ...restProps
+    ...rest
   } = props
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
@@ -305,12 +298,12 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
     }
   )
   return (
-    <Flex justify="between" data-disabled={restProps.disabled} className={wrapperClassName}>
+    <Flex justify="between" data-disabled={rest.disabled} className={wrapperClassName}>
       <input
         type="search"
         aria-describedby={describedby}
         ref={forwardedRef}
-        {...restProps}
+        {...rest}
         {...ctx}
         className="form-field form-field__search"
       />
@@ -344,7 +337,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
-    ...restProps
+    ...rest
   } = props
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
@@ -357,14 +350,8 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
   )
 
   return (
-    <div className={wrapperClassName} data-disabled={restProps.disabled} data-invalid={hasError || isInvalid}>
-      <select
-        aria-describedby={describedby}
-        ref={forwardedRef}
-        {...restProps}
-        {...ctx}
-        className="form-field select-field"
-      >
+    <div className={wrapperClassName} data-disabled={rest.disabled} data-invalid={hasError || isInvalid}>
+      <select aria-describedby={describedby} ref={forwardedRef} {...rest} {...ctx} className="form-field select-field">
         {children}
       </select>
 
@@ -396,7 +383,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     placeholder = '○',
     length = 4,
     children,
-    ...restProps
+    ...rest
   } = props
   const wrapperClassName = classnames(
     `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
@@ -455,7 +442,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
             ref={(input) => {
               inputRefs.current[index] = input!
             }}
-            {...restProps}
+            {...rest}
           />
         </div>
       ))}

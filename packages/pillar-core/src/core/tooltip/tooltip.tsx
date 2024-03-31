@@ -88,6 +88,7 @@ const Trigger = forwardRef(({ children, as: Tag = 'button', ...rest }, forwarded
       onMouseEnter={showTooltip}
       onMouseLeave={hideTooltip}
       aria-describedby={ctx!.id}
+      type="button"
       ref={ref}
       {...rest}
     >

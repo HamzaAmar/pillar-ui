@@ -60,6 +60,7 @@ const AccordionButton = forwardRef((props, ref) => {
       justify="between"
       items="center"
       as="button"
+      type="button"
       aria-expanded={accordionContext?.isItemOpen?.(itemContext?.value!)}
       aria-controls={id}
       className={classNames}
