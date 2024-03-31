@@ -1,5 +1,27 @@
 # @pillar/hooks
 
+## 0.5.0
+
+### Minor Changes
+
+- ✨ **Refactor:** Add New Release with Modifications
+
+  This commit introduces a fresh release to the library, encompassing a range of enhancements and fixes across various files:
+
+  🔍 **Updated Checkbox Story:** Implemented tests for the Checkbox component within a form context.
+
+  🎨 **Added CSS for Side Effects:** Included CSS styling for side effects in the package.json file.
+
+  🔄 **Improved RTL Language Support:** Fixed issues related to right-to-left language support in the CSS.
+
+  🛠️ **Enhanced Form Field Functionality:** Modified the FormField component and resolved the describedBy problem.
+
+  ⚙️ **Adjusted Tsup Configuration:** Made modifications to the Tsup configuration file.
+
+  🖌️ **Updated Tooltip Styling:** Revamped the styling of tooltips and introduced size variations.
+
+  These changes elevate the functionality and user experience of the library.
+
 ## 0.4.0
 
 ### Minor Changes
