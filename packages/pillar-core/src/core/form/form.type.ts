@@ -77,6 +77,7 @@ export interface TextFormFieldProps extends Omit<SharedProps, 'id'> {
 
 export interface FormControllerContextProps extends Omit<SharedProps, 'children'> {
   describedby: AriaAttributes['aria-describedby']
+  hasError: boolean
 }
 export interface FormGroupContextProps extends FormFieldSharedProps {}
 

@@ -36,15 +36,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRe
   const classNames = classnames('checkbox--label', { 'u_visually-hidden': !!showLabel })
 
   return (
-    <Flex
-      gap="2xs"
-      items="center"
-      justify="center"
-      inline
-      as="label"
-      className={classNamesRoot}
-      data-disabled={props.disabled}
-    >
+    <Flex gap="2xs" items="center" inline as="label" className={classNamesRoot} data-disabled={props.disabled}>
       <input
         type="checkbox"
         ref={ref}

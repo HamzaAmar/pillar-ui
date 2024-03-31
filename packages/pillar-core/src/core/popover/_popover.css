@@ -1,10 +1,13 @@
 .popover {
   border: 1px solid var(--surface-6);
   background: var(--surface-1);
-  font-size: 1em;
-  padding: 0.5em;
   position: absolute;
   z-index: 1000000000000000000000000000;
+}
+
+.popover--content {
+  font-size: clamp(0.75rem, 0.825em, 1rem);
+  padding: 0.25em 1em;
 }
 
 .popover--full {

@@ -4,7 +4,7 @@
 }
 
 .timeline--line {
-  border-left: var(--color-shared-9) 0.15em var(--timeline-variant);
+  border-inline-start: var(--color-shared-9) 0.15em var(--timeline-variant);
   width: 0.15em;
 }
 

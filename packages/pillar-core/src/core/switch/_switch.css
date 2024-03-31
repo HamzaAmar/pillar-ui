@@ -30,7 +30,7 @@
     border-radius: inherit;
     background-color: var(--surface-2);
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     top: 50%;
     transform: translate(0, -50%);
     transition: transform 0.3s, width 0.3s;

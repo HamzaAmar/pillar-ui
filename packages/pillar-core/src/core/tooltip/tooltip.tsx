@@ -13,7 +13,7 @@ import { Popover } from '../popover'
 
 const [TooltipProvider, useTooltipContext] = createContext<TooltipContext>('TooltipRoot')
 
-const tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, ...rest }, forwardedRef) => {
+const tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, size = 'sm', ...rest }, forwardedRef) => {
   const [open, setOpen] = useState(false)
   const triggerRef = useRef<HTMLButtonElement>(null)
   const id = useId()
@@ -30,7 +30,7 @@ const tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, ...rest },
     setOpen(true)
   }
 
-  const context = { open, setOpen, handleOpen, handleClose, handleToggle, triggerRef, id, delay }
+  const context = { open, setOpen, handleOpen, handleClose, handleToggle, triggerRef, id, delay, size }
   return (
     <TooltipProvider {...context}>
       <div role="tooltip" ref={forwardedRef} {...rest}>
@@ -105,20 +105,21 @@ Trigger.displayName = 'Pillar/TooltipTrigger'
 */
 
 const Content = forwardRef(({ children, as: Tag = 'div', ...rest }, forwardedRef) => {
-  const ctx = useTooltipContext()
+  const { open, handleClose, id, triggerRef, size } = useTooltipContext() ?? {}
 
   return (
     <Popover
-      isOpen={ctx!.open}
-      onClose={ctx!.handleClose}
-      triggerElement={ctx!.triggerRef}
+      isOpen={open!}
+      onClose={handleClose!}
+      triggerElement={triggerRef!}
       ref={forwardedRef}
-      id={ctx!.id}
+      id={id}
       width="auto"
       role="tooltip"
       {...rest}
       position="top"
       align="start"
+      size={size}
     >
       {children}
     </Popover>

@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Paper, Flex } from '@pillar-ui/core'
 
 export default {
-  title: 'Components/Paper',
+  title: 'Components/popover',
   component: Paper,
   args: {
     message:

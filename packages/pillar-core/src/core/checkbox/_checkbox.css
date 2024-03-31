@@ -1,5 +1,6 @@
 .checkbox {
   cursor: pointer;
+  width: fit-content;
   &:hover > .checkbox--indicator {
     box-shadow: 0 0 0 0.125em var(--color-shared-7, var(--primary-7));
   }
@@ -29,7 +30,7 @@
   &:checked + .checkbox--indicator,
   &:indeterminate + .checkbox--indicator {
     background-color: var(--color-shared-9, none);
-    color: white; /* Responsible For The Color Of The Check Icon stroke  white in checked state */
+    color: var(--color-shared-1); /* Responsible For The Color Of The Check Icon stroke  white in checked state */
   }
 
   &:disabled + .checkbox--indicator {
@@ -45,6 +46,8 @@
 
 .checkbox--indicator {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 1.25em;
   height: 1.25em;
   border: 1px solid var(--opacity-6);

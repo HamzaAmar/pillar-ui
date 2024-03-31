@@ -32,7 +32,7 @@
     height: 3px;
     border-radius: 1000px;
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     top: 50%;
     background-color: var(--surface-4);
     z-index: -1;

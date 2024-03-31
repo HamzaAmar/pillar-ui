@@ -1,3 +1,4 @@
+import React from 'react'
 import { Pagination } from '@pillar-ui/core'
 
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
@@ -74,3 +75,12 @@ export function PaginationCustomStyle() {
 const Template: ComponentStory<typeof Pagination> = (args) => <Pagination {...args} />
 
 export const Playground = Template.bind({})
+
+export function Nice() {
+  const [open, setOpen] = React.useState(false)
+  return (
+    <button onClick={() => setOpen(true)} className="l_flow__md">
+      {open ? 'Open' : 'CLose'}
+    </button>
+  )
+}

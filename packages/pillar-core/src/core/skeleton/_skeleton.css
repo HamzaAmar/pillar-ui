@@ -9,7 +9,7 @@
     width: 40%;
     height: 100%;
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     top: 0;
     animation: skeleton-animation 1s infinite;
   }

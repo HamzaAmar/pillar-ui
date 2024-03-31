@@ -75,23 +75,23 @@ export function LinkWeights() {
     </div>
   )
 }
-export function LinkTrucates() {
+export function LinkTruncates() {
   return (
     <div className="l_flow__md">
-      <Link href="#" size="3xl" truncate="multiline" numberLine={1}>
+      <Link href="#" size="3xl" truncate={1}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl" truncate="multiline" numberLine={2}>
+      <Link href="#" size="3xl" truncate={2}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl" truncate="multiline" numberLine={3}>
+      <Link href="#" size="3xl" truncate={3}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl" truncate="multiline" numberLine={4}>
+      <Link href="#" size="3xl" truncate={4}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
 
-      <Link href="#" size="3xl" truncate="multiline" numberLine={5}>
+      <Link href="#" size="3xl" truncate={5}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
 

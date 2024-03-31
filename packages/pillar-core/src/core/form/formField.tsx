@@ -26,7 +26,7 @@ const [FormGroupProvider, useFormGroup] = createContext<FormGroupContextProps>('
 */
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, forwardedRef) => {
-  const ctx = useFormController()
+  const { hasError, describedby, ...ctx } = useFormController() ?? {}
   const formGroupContext = useFormGroup()
   const {
     size = formGroupContext?.size,
@@ -57,13 +57,13 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
       gap="xs"
       className={wrapperClassName}
       data-disabled={restProps.disabled}
-      data-invalid={isInvalid}
+      data-invalid={hasError || isInvalid}
       data-readonly={restProps.readOnly}
     >
       {prefixInputElement}
 
       <textarea
-        aria-describedby={ctx?.describedby}
+        aria-describedby={describedby}
         ref={forwardedRef}
         {...restProps}
         {...ctx}
@@ -83,7 +83,7 @@ Textarea.displayName = 'Pillar-Textarea'
 */
 
 export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
-  const ctx = useFormController()
+  const { hasError, describedby, ...ctx } = useFormController() ?? {}
   const formGroupContext = useFormGroup()
   const {
     size = formGroupContext?.size ?? 'md',
@@ -115,12 +115,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
       gap="xs"
       className={wrapperClassName}
       data-disabled={restProps.disabled}
-      data-invalid={isInvalid}
+      data-invalid={hasError || isInvalid}
       data-readonly={restProps.readOnly}
     >
       {prefixInputElement}
       <input
-        aria-describedby={ctx?.describedby}
+        aria-describedby={describedby}
         type="text"
         ref={forwardedRef}
         aria-invalid={isInvalid}
@@ -142,7 +142,7 @@ Input.displayName = 'Pillar-Input'
 */
 
 export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
-  const ctx = useFormController()
+  const { hasError, describedby, ...ctx } = useFormController() ?? {}
   const formGroupContext = useFormGroup()
   const {
     size = formGroupContext?.size ?? 'md',
@@ -175,17 +175,10 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
     <div
       className={wrapperClassName}
       data-disabled={rest.disabled}
-      data-invalid={isInvalid}
+      data-invalid={hasError || isInvalid}
       data-readonly={rest.readOnly}
     >
-      <input
-        aria-describedby={ctx?.describedby}
-        type="number"
-        ref={composedRef}
-        {...rest}
-        {...ctx}
-        className="form-field"
-      />
+      <input aria-describedby={describedby} type="number" ref={composedRef} {...rest} {...ctx} className="form-field" />
       <div className="input-number--counter-wrapper">
         <button
           type="button"
@@ -228,7 +221,7 @@ InputNumber.displayName = 'Pillar-InputNumber'
 */
 
 export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((props, forwardedRef) => {
-  const ctx = useFormController()
+  const { hasError, describedby, ...ctx } = useFormController() ?? {}
   const formGroupContext = useFormGroup()
   const {
     size = formGroupContext?.size ?? 'md',
@@ -261,11 +254,11 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
       justify="between"
       className={wrapperClassName}
       data-disabled={restProps.disabled}
-      data-invalid={isInvalid}
+      data-invalid={hasError || isInvalid}
       data-readonly={restProps.readOnly}
     >
       <input
-        aria-describedby={ctx?.describedby}
+        aria-describedby={describedby}
         type={type}
         ref={forwardedRef}
         {...restProps}
@@ -289,7 +282,7 @@ InputPassword.displayName = 'Pillar-InputPassword'
 */
 
 export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
-  const ctx = useFormController()
+  const { hasError, describedby, ...ctx } = useFormController() ?? {}
   const formGroupContext = useFormGroup()
   const {
     size = formGroupContext?.size ?? 'md',
@@ -312,10 +305,10 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
     }
   )
   return (
-    <Flex justify="between" className={wrapperClassName}>
+    <Flex justify="between" data-disabled={restProps.disabled} className={wrapperClassName}>
       <input
         type="search"
-        aria-describedby={ctx?.describedby}
+        aria-describedby={describedby}
         ref={forwardedRef}
         {...restProps}
         {...ctx}
@@ -340,7 +333,7 @@ InputSearch.displayName = 'Pillar/InputSearch'
 */
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forwardedRef) => {
-  const ctx = useFormController()
+  const { hasError, describedby, ...ctx } = useFormController() ?? {}
   const formGroupContext = useFormGroup()
   const {
     size = formGroupContext?.size ?? 'md',
@@ -364,9 +357,9 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
   )
 
   return (
-    <div className={wrapperClassName} data-disabled={restProps.disabled} data-invalid={isInvalid}>
+    <div className={wrapperClassName} data-disabled={restProps.disabled} data-invalid={hasError || isInvalid}>
       <select
-        aria-describedby={ctx?.describedby}
+        aria-describedby={describedby}
         ref={forwardedRef}
         {...restProps}
         {...ctx}
@@ -479,7 +472,7 @@ PinInput.displayName = 'Pillar-PinInput'
 */
 
 export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
-  const ctx = useFormController()
+  const { hasError, describedby, ...ctx } = useFormController() ?? {}
   const formGroupContext = useFormGroup()
   const {
     size = formGroupContext?.size ?? 'md',
@@ -528,13 +521,13 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
       gap="xs"
       className={wrapperClassName}
       data-disabled={rest.disabled}
-      data-invalid={isInvalid}
+      data-invalid={hasError || isInvalid}
       data-readonly={rest.readOnly}
       onClick={() => inputRef.current?.click()}
     >
       <input
         type="file"
-        aria-describedby={ctx?.describedby}
+        aria-describedby={describedby}
         ref={composedRef}
         {...rest}
         {...ctx}
@@ -561,8 +554,9 @@ export const FormController = (props: FormControllerProps) => {
   const messageID = `${id}-message`
   const hintID = `${id}-hint`
   let describedby = ''
+  const hasError = !!error
 
-  if (!!error) describedby += ` ${messageID}`
+  if (hasError) describedby += ` ${messageID}`
   if (!!hint) describedby += ` ${hintID}`
 
   const ariaDescribedby = describedby ? describedby.trim() : undefined
@@ -571,6 +565,7 @@ export const FormController = (props: FormControllerProps) => {
     ...rest,
     id,
     describedby: ariaDescribedby,
+    hasError,
   }
 
   const fieldLabel = `${label} ${rest.required ? '*' : ''}`

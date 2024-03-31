@@ -44,7 +44,7 @@
   content: '';
   height: 100%;
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   background-image: linear-gradient(to right, var(--color-shared-9), var(--color-shared-8));
   border-radius: inherit;

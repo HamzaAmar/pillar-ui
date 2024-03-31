@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useLayoutEffect, useCallback } from 'react'
 import ReactDOM from 'react-dom'
-
-import { Align, PopoverProps } from './popover.type'
 import { useClickOutside } from '@pillar-ui/hooks'
+
+import type { Align, PopoverProps } from './popover.type'
 
 function calculateSpaceAroundElement(rect: DOMRect) {
   const viewportHeight = window.innerHeight || document.documentElement.clientHeight
@@ -16,7 +16,7 @@ function calculateSpaceAroundElement(rect: DOMRect) {
   }
 }
 
-function calculateLeftPosition(triggerRect: DOMRect, popoverRect: DOMRect, align: Align) {
+function calculateInlinePosition(triggerRect: DOMRect, popoverRect: DOMRect, align: Align) {
   if (align === 'start') {
     return triggerRect.left + window.scrollX
   } else if (align === 'center') {
@@ -26,7 +26,7 @@ function calculateLeftPosition(triggerRect: DOMRect, popoverRect: DOMRect, align
   }
 }
 
-function calculateTopPosition(triggerRect: DOMRect, popoverRect: DOMRect, align: Align) {
+function calculateBlockPosition(triggerRect: DOMRect, popoverRect: DOMRect, align: Align) {
   if (align === 'start') {
     return triggerRect.top + window.scrollY
   } else if (align === 'center') {
@@ -91,18 +91,18 @@ function Popover({
     switch (position) {
       case 'top':
         top = !isCollapsibleAbove ? top - offset : bottom + offset
-        left = calculateLeftPosition(triggerRect, popoverRect, align)
+        left = calculateInlinePosition(triggerRect, popoverRect, align)
         break
       case 'left':
-        top = calculateTopPosition(triggerRect, popoverRect, align)
+        top = calculateBlockPosition(triggerRect, popoverRect, align)
         left = isCollapsibleLeft ? right + offset : left - offset
         break
       case 'bottom':
         top = isCollapsibleBelow ? top - offset : bottom + offset
-        left = calculateLeftPosition(triggerRect, popoverRect, align)
+        left = calculateInlinePosition(triggerRect, popoverRect, align)
         break
       case 'right':
-        top = calculateTopPosition(triggerRect, popoverRect, align)
+        top = calculateBlockPosition(triggerRect, popoverRect, align)
         left = isCollapsibleRight ? left - offset : right + offset
         break
       default:
@@ -114,7 +114,7 @@ function Popover({
 
     setPopoverStyle({
       top: `${top}px`,
-      left: `${left}px`,
+      insetInlineStart: `${left}px`,
     })
   }, [isOpen, position, triggerElement, align, offset])
 
@@ -140,7 +140,7 @@ function Popover({
             className={`popover popover--${width} u_font-${size} u_corner-${corner}`}
             style={{ ...popoverStyle, ...positionStyle }}
           >
-            {children}
+            <div className="popover--content">{children}</div>
           </div>,
           document.body
         )}

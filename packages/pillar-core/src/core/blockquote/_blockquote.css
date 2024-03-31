@@ -1,5 +1,5 @@
 .blockquote {
-  border-left: 4px solid var(--color-shared-9);
+  border-inline-start: 4px solid var(--color-shared-9);
   background-clip: padding-box;
   padding: 1.5em;
   background-color: var(--surface-3);
@@ -17,14 +17,14 @@
 
 /* .quote-outside {
   position: absolute;
-  left: -50%;
+  inset-inline-start: -50%;
   top: -50%;
   background: red;
 } */
 
 .quote {
   position: absolute;
-  left: 0.25em;
+  inset-inline-start: 0.25em;
   top: 0.25em;
   & svg {
     width: 1.25em;

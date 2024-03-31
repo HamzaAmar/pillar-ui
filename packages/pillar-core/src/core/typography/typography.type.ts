@@ -9,7 +9,22 @@ type Leading = 'normal' | 'sm' | 'md' | 'lg'
 type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'first-letter-only'
 type Weight = 'thin' | 'extra-light' | 'light' | 'normal' | 'medium' | 'semi-bold' | 'bold' | 'extra-bold' | 'black'
 
-interface TypographyBaseProps {
+// interface TypographyBaseProps {
+//   size?: Size
+//   className?: string
+//   align?: Align
+//   transform?: Transform
+//   children?: ReactNode
+//   weight?: Weight
+//   color?: Color
+//   contrast?: Contrast
+//   fontStyle?: FontStyle
+//   decoration?: Decoration
+//   leading?: Leading
+//   truncate?: number
+// }
+
+export interface TypographyProps {
   size?: Size
   className?: string
   align?: Align
@@ -21,15 +36,16 @@ interface TypographyBaseProps {
   fontStyle?: FontStyle
   decoration?: Decoration
   leading?: Leading
+  truncate?: number
 }
 
-interface MultiLineTypographyTruncate extends TypographyBaseProps {
-  truncate?: 'multiline'
-  numberLine: number
-}
+// interface MultiLineTypographyTruncate extends TypographyBaseProps {
+//   truncate?: 'multiline'
+//   numberLine: number
+// }
 
-interface SingleLineTypographyTruncate extends TypographyBaseProps {
-  truncate?: 'singleline'
-}
+// interface SingleLineTypographyTruncate extends TypographyBaseProps {
+//   truncate?: 'singleline'
+// }
 
-export type TypographyProps = MultiLineTypographyTruncate | SingleLineTypographyTruncate
+// export type TypographyProps = MultiLineTypographyTruncate | SingleLineTypographyTruncate

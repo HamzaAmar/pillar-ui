@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Checkbox, Flex } from '@pillar-ui/core'
+import { Checkbox, Flex, FormController, Input } from '@pillar-ui/core'
 import { useCheckboxGroup } from '@pillar-ui/hooks'
 
 export default {
@@ -120,6 +120,17 @@ export const CheckboxIsIndeterminate = () => (
     <Checkbox label="Child Checkbox 2" name="child2" />
     <Checkbox label="Child Checkbox 3" name="child3" />
   </ParentCheckbox>
+)
+
+export const CheckboxInAForm = () => (
+  <form className="l_flow__sm">
+    <FormController label="Hello">
+      <Input name="hello" />
+    </FormController>
+    <Checkbox label="Child Checkbox 1" name="child1" />
+    <Checkbox label="Child Checkbox 2" name="child2" />
+    <Checkbox label="Child Checkbox 3" name="child3" />
+  </form>
 )
 
 const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />

@@ -52,7 +52,7 @@ export const Pagination = (props: PaginationProps) => {
   return (
     <nav className={`pagination u_${rest.color}`} aria-label="Pagination">
       <PaginationProvider {...rest}>
-        <Flex as="ul" gap="xs">
+        <Flex as="ul" gap="sm">
           <Item disabled={isFirst} onClick={goToPreviousStep} active={currentStep} number={currentStep - 1}>
             <ChevronDown width="20" direction="left" />
           </Item>

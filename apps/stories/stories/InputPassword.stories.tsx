@@ -1,7 +1,7 @@
 import React from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Close, OpenSource, Lock, LockOff } from '@pillar-ui/icons'
-import { Flex, InputPassword } from '@pillar-ui/core'
+import { Flex, FormController, InputPassword } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Form/InputPassword',
@@ -109,6 +109,15 @@ export const InputPasswordCustomIcon = () => {
         visibleIcon={<OpenSource />}
         hiddenIcon={<Close />}
       />
+
+      <FormController label="Hello world" hint="The password need to be between 5 and 15" error="Nice Error Here">
+        <InputPassword
+          placeholder="enter your password"
+          color="warning"
+          visibleIcon={<OpenSource />}
+          hiddenIcon={<Close />}
+        />
+      </FormController>
     </Flex>
   )
 }

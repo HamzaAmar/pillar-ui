@@ -24,7 +24,7 @@ export const Text = forwardRef((props, forwardedRef) => {
 
   const classNames = classnames(`typography`, {
     [`u_size-${size}`]: !!size,
-    [`u_${truncate}`]: !!truncate,
+    [`u_truncate`]: !!truncate,
     [`${className}`]: !!className,
     [`u_transform__${transform}`]: !!transform,
     [`u_align__${align}`]: !!align,
@@ -35,14 +35,13 @@ export const Text = forwardRef((props, forwardedRef) => {
     [`u_${color}`]: !!color,
   })
   const contrastLvl = contrast === 'high' ? 12 : 11
-  const isMultiline = truncate === 'multiline'
   const _style = {
-    ...(isMultiline && { '--line-numbers': props.numberLine }),
+    ...(truncate && { '--line-numbers': props.truncate }),
     ...(color && { '--color-text': `var(--${color}-${contrastLvl})` }),
   } as CSSProperties
 
   return (
-    <Tag style={_style} className={`${classNames}`} ref={forwardedRef} {...rest}>
+    <Tag style={_style} className={classNames} ref={forwardedRef} {...rest}>
       {children}
     </Tag>
   )
