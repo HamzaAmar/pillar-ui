@@ -23,7 +23,7 @@
   color: var(--color-shared-10);
   border: min(var(--border), 0.5em) solid transparent;
   border-top-color: currentcolor;
-  border-left-color: currentcolor;
+  border-inline-start-color: currentcolor;
   border-radius: 50%;
   transform: rotate(-45deg);
   animation: spinner-move 0.85s infinite linear;
