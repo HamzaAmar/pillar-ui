@@ -10,7 +10,7 @@
   text-decoration: none;
   letter-spacing: 0.5px;
   transform-origin: bottom center;
-  line-height: 1.2;
+  line-height: 1.3;
   /* flex: none; */
   &:hover {
     background-color: var(--color-shared-4);

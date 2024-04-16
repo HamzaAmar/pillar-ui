@@ -92,7 +92,7 @@ The variant prop determines the visual style of the alert. The following are the
 
 Type: string
 Default: `solid`
-Options: `solid` | `outline` | `soft`
+Options: `solid` | `outline` | `soft` | `mixed`
 
 <AlertPlayGround.Variants />
 
@@ -103,6 +103,7 @@ export const AlertVariant = () => {
       <AlertBase variant="solid" />
       <AlertBase variant="outline" />
       <AlertBase variant="soft" />
+      <AlertBase variant="mixed" />
     </Flex>
   )
 }

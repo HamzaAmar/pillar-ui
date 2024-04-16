@@ -80,6 +80,31 @@ The corner prop is used to specify the corner style of the Kbd component. It sup
 <Kbd title="Esc" corner="circle" />
 ```
 
+### Variant
+
+The variant prop is used to specify the style of the KDB component. It supports the following style options: solid, outline, and soft.
+
+Example:
+
+<ChipsPlayGround.Variants />
+
+```tsx showLineNumbers title="Chips.tsx"
+<Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+  <Chips color="success" variant="solid">
+    Hello
+  </Chips>
+  <Chips color="success" variant="outline">
+    Hello
+  </Chips>
+  <Chips color="success" variant="soft">
+    Hello
+  </Chips>
+  <Chips color="success" variant="mixed">
+    Hello
+  </Chips>
+</Paper>
+```
+
 ## Use Case
 
 The Kbd component can be used to represent keyboard keys or shortcuts in a user interface. It can be used in documentation, tutorials, or any other context where keyboard-related information needs to be displayed.

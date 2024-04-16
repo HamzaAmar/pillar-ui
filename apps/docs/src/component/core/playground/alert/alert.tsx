@@ -50,6 +50,7 @@ const AlertVariants = () => {
       <Alert title="Danger Here" variant="solid" />
       <Alert title="Danger Here" variant="outline" />
       <Alert title="Danger Here" variant="soft" />
+      <Alert title="Danger Here" variant="mixed" />
     </Paper>
   )
 }

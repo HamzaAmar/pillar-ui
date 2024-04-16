@@ -111,6 +111,28 @@ export const KbdColors = () => {
   )
 }
 
+export const KbdVariants = () => {
+  return (
+    <Paper
+      className="playground"
+      as={Flex}
+      gap="sm"
+      items="center"
+      borderColor="opacity-6"
+      p="sm"
+      background="surface-3"
+      corner="sm"
+    >
+      <Kbd title="Esc" />
+      <Kbd title="Esc" variant="solid" color="danger" />
+      <Kbd title="Esc" variant="mixed" color="danger" />
+      <Kbd title="Esc" variant="soft" color="danger" />
+      <Kbd title="Esc" variant="outline" color="danger" />
+    </Paper>
+  )
+}
+
+KbdPlayGround.Variants = KbdVariants
 KbdPlayGround.Colors = KbdColors
 KbdPlayGround.Sizes = KbdSizes
 KbdPlayGround.Corners = KbdCorners
