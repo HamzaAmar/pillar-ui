@@ -14,6 +14,7 @@ import type {
   FormControllerContextProps,
   FormGroupContextProps,
   PinInputProps,
+  InputSearchProps,
 } from './form.type'
 
 const [FormControllerProvider, useFormController] = createContext<FormControllerContextProps>('FormController')
@@ -51,10 +52,14 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
     { [`u_transform__${transform}`]: !!transform, 'form-field-wrapper__fluid': !!fluid }
   )
 
+  const textareaClassName = classnames(`form-field textarea__${size}`, {
+    'field-has-start-padding': !prefixInput,
+    'field-has-end-padding': !suffixInput,
+  })
+
   return (
     <Flex
       justify="between"
-      gap="xs"
       className={wrapperClassName}
       data-disabled={rest.disabled}
       data-invalid={hasError || isInvalid}
@@ -67,7 +72,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
         ref={forwardedRef}
         {...rest}
         {...ctx}
-        className={`form-field textarea__${size}`}
+        className={textareaClassName}
       ></textarea>
       {suffixInputElement}
     </Flex>
@@ -109,10 +114,14 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
     }
   )
 
+  const inputClassName = classnames(`form-field u_size-${size}`, {
+    'field-has-start-padding': !prefixInput,
+    'field-has-end-padding': !suffixInput,
+  })
+
   return (
     <Flex
       justify="between"
-      gap="xs"
       className={wrapperClassName}
       data-disabled={rest.disabled}
       data-invalid={hasError || isInvalid}
@@ -126,7 +135,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
         aria-invalid={isInvalid}
         {...rest}
         {...ctx}
-        className={`form-field u_size-${size}`}
+        className={inputClassName}
       />
       {suffixInputElement}
     </Flex>
@@ -171,6 +180,11 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
     }
   )
 
+  const inputClassName = classnames(`form-field u_size-${size}`, {
+    'field-has-start-padding': !prefixInput,
+    'field-has-end-padding': !suffixInput,
+  })
+
   return (
     <div
       className={wrapperClassName}
@@ -178,7 +192,14 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
       data-invalid={hasError || isInvalid}
       data-readonly={rest.readOnly}
     >
-      <input aria-describedby={describedby} type="number" ref={composedRef} {...rest} {...ctx} className="form-field" />
+      <input
+        aria-describedby={describedby}
+        type="number"
+        ref={composedRef}
+        {...rest}
+        {...ctx}
+        className={inputClassName}
+      />
       <div className="input-number--counter-wrapper">
         <button
           type="button"
@@ -234,6 +255,7 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
     children,
     visibleIcon = <Eye width="16" />,
     hiddenIcon = <EyeOff width="16" />,
+    prefixInput,
     ...rest
   } = props
 
@@ -248,6 +270,13 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
       [`u_size-${size}`]: !!size,
     }
   )
+
+  const inputClassName = classnames(`form-field textarea__${size} field-has-end-padding`, {
+    'field-has-start-padding': !prefixInput,
+  })
+
+  const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
+
   const label = showPassword ? 'Hide Password' : 'Show Password'
   return (
     <Flex
@@ -257,7 +286,15 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
       data-invalid={hasError || isInvalid}
       data-readonly={rest.readOnly}
     >
-      <input aria-describedby={describedby} type={type} ref={forwardedRef} {...rest} {...ctx} className="form-field" />
+      {prefixInputElement}
+      <input
+        aria-describedby={describedby}
+        type={type}
+        ref={forwardedRef}
+        {...rest}
+        {...ctx}
+        className={inputClassName}
+      />
 
       <button aria-label={label} type="button" onClick={setToggle} className="password-input--button u_center">
         {showPassword ? hiddenIcon : visibleIcon}
@@ -274,7 +311,7 @@ InputPassword.displayName = 'Pillar-InputPassword'
 ===================================================================================================
 */
 
-export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
+export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props, forwardedRef) => {
   const { hasError, describedby, ...ctx } = useFormController() ?? {}
   const formGroupContext = useFormGroup()
   const {
@@ -286,6 +323,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
     fluid = formGroupContext?.fluid,
     isInvalid,
     children,
+    prefixInput,
     ...rest
   } = props
   const wrapperClassName = classnames(
@@ -297,15 +335,23 @@ export const InputSearch = forwardRef<HTMLInputElement, InputProps>((props, forw
       [`u_size-${size}`]: !!size,
     }
   )
+
+  const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
+
+  const inputClassName = classnames(`form-field textarea__${size} form-field__search field-has-end-padding`, {
+    'field-has-start-padding': !prefixInput,
+  })
+
   return (
     <Flex justify="between" data-disabled={rest.disabled} className={wrapperClassName}>
+      {prefixInputElement}
       <input
         type="search"
         aria-describedby={describedby}
         ref={forwardedRef}
         {...rest}
         {...ctx}
-        className="form-field form-field__search"
+        className={inputClassName}
       />
       <ListSearch
         className="search-field--icon"
@@ -426,7 +472,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
   }
 
   return (
-    <Flex gap="xs" items="center">
+    <Flex gap="sm" items="center">
       {Array.from({ length }, (_, index) => (
         <div className={wrapperClassName} key={index}>
           <input
@@ -505,7 +551,6 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
   return (
     <Grid
       grid="auto 1fr"
-      gap="xs"
       className={wrapperClassName}
       data-disabled={rest.disabled}
       data-invalid={hasError || isInvalid}
@@ -558,7 +603,7 @@ export const FormController = (props: FormControllerProps) => {
   const fieldLabel = `${label} ${rest.required ? '*' : ''}`
   return (
     <FormControllerProvider {...values}>
-      <Flex direction="column" gap="2xs" className={classnames('text-field--root', { [className!]: !!className })}>
+      <Flex direction="column" className={classnames('text-field--root', { [className!]: !!className })}>
         <Text
           className={classnames({
             'u_visually-hidden': !!hideLabel,
@@ -577,7 +622,7 @@ export const FormController = (props: FormControllerProps) => {
         )}
         {children}
         {error && (
-          <Text as={Flex} gap="xs" items="center" id={messageID} color="danger" size="xs" contrast="low" role="alert">
+          <Text as={Flex} items="center" id={messageID} color="danger" size="xs" contrast="low" role="alert">
             <span>{/* <Alert type="circle" width="20" /> */}</span>
             <span> {error}</span>
           </Text>

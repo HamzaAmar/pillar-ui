@@ -1,8 +1,10 @@
+/* Chips Variants */
+
 .kdb {
-  padding: 0.25em 0.375em;
-  background: var(--color-shared-8, var(--surface-1));
-  color: var(--color-shared-12, var(--surface-12));
-  border: 0.075em solid var(--color-shared-9, var(--surface-12));
+  padding: 0.125em 0.25em;
+  /* background: var(--color-shared-8, var(--surface-1)); */
+  /* color: var(--color-shared-12, var(--surface-12)); */
+  border: 0.075em solid transparent;
   border-bottom-width: 0.175em;
   width: fit-content;
   box-shadow: inset 1px 1px 0.175em var(--color-shared-6, var(--surface-6));
@@ -17,4 +19,25 @@
   border-radius: var(--kdb-corner, 0.25em);
   font-size: var(--kdb-size, 0.875rem);
   text-transform: var(--kdb-transform, capitalize);
+}
+
+.kdb__solid {
+  background-color: var(--color-shared-9);
+  color: white;
+}
+
+.kdb__outline {
+  color: var(--color-shared-11);
+  border-color: var(--color-shared-11);
+}
+
+.kdb__soft {
+  background-color: var(--color-shared-3);
+  color: var(--color-shared-11);
+}
+
+.kdb__mixed {
+  border-color: var(--color-shared-7);
+  background-color: var(--color-shared-3);
+  color: var(--color-shared-11);
 }

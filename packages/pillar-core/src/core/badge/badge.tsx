@@ -3,6 +3,7 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { classnames } from '@pillar-ui/utils'
 
 import type { BadgeProps } from './badge.type'
+import { Flex } from '../flex'
 
 const badge = forwardRef((props, ref) => {
   let {
@@ -43,7 +44,9 @@ const badge = forwardRef((props, ref) => {
 
   return (
     <Tag ref={ref} className={classNames} {...rest}>
-      {displayValue}
+      <Flex as="span" items="center" className="badge--content">
+        {displayValue}
+      </Flex>
     </Tag>
   )
 }) as ForwardRefComponent<'div', BadgeProps>

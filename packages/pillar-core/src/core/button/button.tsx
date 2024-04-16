@@ -4,6 +4,7 @@ import { classnames } from '@pillar-ui/utils'
 import { Flex } from '../flex'
 import { Spinner } from '../spinner'
 import type { ButtonGroupProps, ButtonProps, IconButtonProps } from './button.type'
+import { Text } from '../typography'
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,7 +26,6 @@ export const Button = forwardRef((props, forwardedRef) => {
     disabled,
     transform,
     fluid,
-    highContrast = false,
     as = 'button',
     ...rest
   } = props
@@ -38,14 +38,13 @@ export const Button = forwardRef((props, forwardedRef) => {
     [`u_transform__${transform}`]: !!transform,
     [`u_size-${size}`]: !!size,
     [`u_corner-${corner}`]: !!corner,
-    [`btn__high-contrast`]: highContrast,
   })
   const _disabled = disabled || state === 'loading'
 
   return (
     <Flex
       as={as}
-      gap="xs"
+      gap="2xs"
       items="center"
       justify="center"
       disabled={_disabled}
@@ -55,13 +54,15 @@ export const Button = forwardRef((props, forwardedRef) => {
     >
       {state === 'loading' ? (
         <>
-          <span> Loading </span>
-          <Spinner size={size} />
+          <span> Loading... </span>
+          <Spinner color="surface" size={size} />
         </>
       ) : (
         <>
           {startIcon}
-          <span className="btn--text">{children}</span>
+          <Text truncate={1} className="btn--text">
+            {children}
+          </Text>
           {endIcon}
         </>
       )}

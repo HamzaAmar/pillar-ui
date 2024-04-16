@@ -22,15 +22,7 @@ export const FilledInput = () => {
       <InputSearch aria-label="hello" disabled placeholder="Disabled" variant="filled" />
       <InputSearch aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
       <InputSearch aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <InputSearch aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" variant="filled" />
       <InputSearch aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" variant="filled" />
-      <InputSearch
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
     </Flex>
   )
 }
@@ -42,9 +34,7 @@ export const OutlineInput = () => {
       <InputSearch disabled placeholder="Disabled" />
       <InputSearch readOnly placeholder="readOnly" />
       <InputSearch isInvalid placeholder="isInvalid" />
-      <InputSearch suffixInput={<User width="16" />} placeholder="Error" />
       <InputSearch prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <InputSearch prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
     </Flex>
   )
 }
@@ -56,9 +46,7 @@ export const BorderedInput = () => {
       <InputSearch variant="bordered" disabled placeholder="Disabled" />
       <InputSearch variant="bordered" readOnly placeholder="readOnly" />
       <InputSearch variant="bordered" isInvalid placeholder="isInvalid" />
-      <InputSearch variant="bordered" suffixInput={<User width="16" />} placeholder="Error" />
       <InputSearch variant="bordered" prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <InputSearch variant="bordered" prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
     </Flex>
   )
 }
@@ -101,14 +89,7 @@ export const ColorInput = () => {
         prefixInput={<User width="16" />}
         placeholder="Placeholder"
       />
-      <InputSearch
-        color="danger"
-        variant="bordered"
-        autoFocus
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
+      <InputSearch color="danger" variant="bordered" autoFocus prefixInput={'https://'} defaultValue="Default Value" />
     </Flex>
   )
 }

@@ -48,42 +48,21 @@ export function IconButtonsCorners() {
     </Flex>
   )
 }
+const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text'] as const
 
 export function IconButtonsVariants() {
   return (
     <div className="l_flow__md">
-      <Flex gap="sm">
-        <IconButton title="Hello world" icon={<ThumbUp />} color="success" />
-        <IconButton title="Hello world" icon={<ThumbUp />} color="warning" />
-        <IconButton title="Hello world" icon={<ThumbUp />} color="danger" />
-        <IconButton title="Hello world" icon={<ThumbUp />} color="secondary" />
-        <IconButton title="Hello world" icon={<ThumbUp />} color="surface" />
-        <IconButton title="Hello world" icon={<ThumbUp />} color="primary" />
-      </Flex>
-      <Flex gap="sm">
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="outline" color="success" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="outline" color="warning" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="outline" color="danger" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="outline" color="secondary" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="outline" color="surface" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="outline" color="primary" />
-      </Flex>
-      <Flex gap="sm">
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="soft" color="success" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="soft" color="warning" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="soft" color="danger" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="soft" color="secondary" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="soft" color="surface" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="soft" color="primary" />
-      </Flex>
-      <Flex gap="sm">
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="link" color="success" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="link" color="warning" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="link" color="danger" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="link" color="secondary" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="link" color="surface" />
-        <IconButton title="Hello world" icon={<ThumbUp />} variant="link" color="primary" />
-      </Flex>
+      {VARIANTS.map((variant) => (
+        <Flex key={variant} gap="sm">
+          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="success" />
+          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="warning" />
+          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="danger" />
+          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="secondary" />
+          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="surface" />
+          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="primary" />
+        </Flex>
+      ))}
     </div>
   )
 }

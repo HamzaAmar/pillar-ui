@@ -1,6 +1,6 @@
 import React from 'react'
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Close, OpenSource, Lock, LockOff } from '@pillar-ui/icons'
+import { Close, OpenSource, Lock, LockOff, User } from '@pillar-ui/icons'
 import { Flex, FormController, InputPassword } from '@pillar-ui/core'
 
 export default {
@@ -25,6 +25,7 @@ export const FilledInput = () => {
       <InputPassword aria-label="hello" placeholder="Error" variant="filled" />
       <InputPassword aria-label="hello" placeholder="Placeholder" variant="filled" />
       <InputPassword aria-label="hello" defaultValue="Default Value" variant="filled" />
+      <InputPassword variant="filled" prefixInput={<User width="16" />} placeholder="Placeholder" />
     </Flex>
   )
 }
@@ -39,6 +40,7 @@ export const OutlineInput = () => {
       <InputPassword placeholder="Error" />
       <InputPassword placeholder="Placeholder" />
       <InputPassword defaultValue="Default Value" />
+      <InputPassword prefixInput={<User width="16" />} placeholder="Placeholder" />
     </Flex>
   )
 }

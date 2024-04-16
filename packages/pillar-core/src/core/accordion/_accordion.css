@@ -14,11 +14,6 @@
   display: none;
 }
 
-.accordion--button:focus-visible {
-  outline: 2px dashed var(--color-shared-11);
-  outline-offset: -2px;
-}
-
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
   Accdordion Item Section
@@ -63,8 +58,13 @@
 */
 
 .accordion--panel {
-  padding: 1rem 0.5rem;
+  padding: 0.5rem;
   color: var(--surface-12);
+}
+
+.accordion--panel-content {
+  font-size: 0.85em;
+  color: var(--surface-11);
 }
 /*713
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -79,8 +79,21 @@
   padding: 0.75em 0.5em;
   cursor: pointer;
   color: currentColor;
-}
+  transform: none;
 
-.accordion--button:hover {
-  background-color: var(--opacity-3);
+  &:hover {
+    background-color: var(--opacity-3);
+  }
+  &::focus-visible {
+    outline: 2px dashed var(--color-shared-11, var(--primary-9));
+    outline-offset: -2px;
+  }
+  &[aria-expanded='true'] svg {
+    transition: transform 0.25s;
+    transform: rotate(180deg);
+  }
+
+  &[aria-expanded='false'] svg {
+    transition: transform 0.25s;
+  }
 }

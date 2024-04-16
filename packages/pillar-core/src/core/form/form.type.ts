@@ -51,10 +51,12 @@ export interface InputProps extends FormFieldSharedProps, Omit<ComponentPropsWit
   isInvalid?: boolean
 }
 
-export interface InputPasswordProps extends InputProps {
+export interface InputPasswordProps extends Omit<InputProps, 'suffixInput'> {
   visibleIcon?: ReactElement
   hiddenIcon?: ReactElement
 }
+
+export interface InputSearchProps extends Omit<InputProps, 'suffixInput'> {}
 
 export interface TextareaProps extends Omit<ComponentPropsWithRef<'textarea'>, 'size' | 'color'>, FormFieldSharedProps {
   prefixInput?: ReactNode | string

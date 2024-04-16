@@ -5,7 +5,7 @@ import type { Color, Size, Corner, Variant, Direction, Transform } from '../../t
 type Position = 'start' | 'end'
 type State = 'idle' | 'loading'
 
-type ButtonVariant = Variant | 'link' | 'gradient'
+type ButtonVariant = Variant | 'link' | 'shadow'
 
 interface BaseButton {
   color?: Color
@@ -32,7 +32,7 @@ export interface ButtonProps extends BaseButton {
   iconPosition?: Position
   fluid?: boolean
   children: ReactNode
-  highContrast?: boolean
+  shadow?: boolean
 }
 
 export interface IconButtonProps extends BaseButton {

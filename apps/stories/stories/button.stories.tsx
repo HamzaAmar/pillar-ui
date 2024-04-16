@@ -1,11 +1,13 @@
 import React, { CSSProperties } from 'react'
-import { Button, Flex, Paper } from '@pillar-ui/core'
+import { Button, Flex, Paper, Text } from '@pillar-ui/core'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Eye, Github, Plus, ThumbDown, ThumbUp } from '@pillar-ui/icons'
+import { Ballon, Bluetooth, Eight, Eye, Facebook, Github, Plus, ThumbDown, ThumbUp, X } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Button',
 } as ComponentMeta<typeof Button>
+
+const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text'] as const
 
 const Hello: ComponentStory<typeof Button> = ({ ...args }) => <Button {...args} />
 
@@ -21,6 +23,56 @@ export function ButtonsColors() {
       <Button color="surface">Surface</Button>
       <Button color="primary">Primary</Button>
     </Flex>
+  )
+}
+
+export function ButtonsAsInline() {
+  return (
+    <Flex gap="sm">
+      <Button as="span">Inline Button</Button>
+      <Button as="b">Inline Button</Button>
+      <Button icon={<X />} as="a" href="#">
+        Inline Button
+      </Button>
+      <Button iconPosition="end" icon={<X />} as="a" href="#">
+        Inline Button
+      </Button>
+    </Flex>
+  )
+}
+
+const SIZES = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'] as const
+
+export function ButtonsIcons() {
+  return (
+    <div className="l_flow__xl">
+      {SIZES.map((size) => (
+        <div key={size}>
+          <Text size="lg">{size} Button</Text>
+          <Flex gap="sm">
+            <Button size={size}>No Icon Button</Button>
+            <Button size={size} icon={<X />}>
+              Icon Button
+            </Button>
+            <Button size={size} icon={<Eight />}>
+              Icon Button
+            </Button>
+
+            <Button size={size} icon={<Ballon />}>
+              Icon Button
+            </Button>
+
+            <Button size={size} icon={<Bluetooth />}>
+              Icon Button
+            </Button>
+
+            <Button size={size} icon={<Facebook />}>
+              Icon Button
+            </Button>
+          </Flex>
+        </div>
+      ))}
+    </div>
   )
 }
 
@@ -70,94 +122,28 @@ export function ButtonsTransforms() {
 export function ButtonsVariants() {
   return (
     <div className="l_flow__md">
-      <Flex gap="sm">
-        <Button color="success">Green</Button>
-        <Button color="warning">Orange</Button>
-        <Button color="danger">Red</Button>
-        <Button color="secondary">Secondary</Button>
-        <Button color="surface">Surface</Button>
-        <Button color="primary">Primary</Button>
-      </Flex>
-      <Flex gap="sm">
-        <Button variant="outline" color="success">
-          Green
-        </Button>
-        <Button variant="outline" color="warning">
-          Orange
-        </Button>
-        <Button variant="outline" color="danger">
-          Red
-        </Button>
-        <Button variant="outline" color="secondary">
-          Secondary
-        </Button>
-        <Button variant="outline" color="surface">
-          Surface
-        </Button>
-        <Button variant="outline" color="primary">
-          Primary
-        </Button>
-      </Flex>
-      <Flex gap="sm">
-        <Button variant="soft" color="success">
-          Green
-        </Button>
-        <Button variant="soft" color="warning">
-          Orange
-        </Button>
-        <Button variant="soft" color="danger">
-          Red
-        </Button>
-        <Button variant="soft" color="secondary">
-          Secondary
-        </Button>
-        <Button variant="soft" color="surface">
-          Surface
-        </Button>
-        <Button variant="soft" color="primary">
-          Primary
-        </Button>
-      </Flex>
-      <Flex gap="sm">
-        <Button variant="link" color="success">
-          Green
-        </Button>
-        <Button variant="link" color="warning">
-          Orange
-        </Button>
-        <Button variant="link" color="danger">
-          Red
-        </Button>
-        <Button variant="link" color="secondary">
-          Secondary
-        </Button>
-        <Button variant="link" color="surface">
-          Surface
-        </Button>
-        <Button variant="link" color="primary">
-          Primary
-        </Button>
-      </Flex>
-      <Flex gap="sm">
-        <Button variant="text" color="success">
-          Green
-        </Button>
-        <Button variant="text" color="warning">
-          Orange
-        </Button>
-        <Button variant="text" color="danger">
-          Red
-        </Button>
-        <Button variant="text" color="secondary">
-          Secondary
-        </Button>
-        <Button variant="text" color="surface">
-          Surface
-        </Button>
-        <Button variant="text" color="primary">
-          Primary
-        </Button>
-      </Flex>
+      {VARIANTS.map((variant) => (
+        <Flex key={variant} gap="sm">
+          <Button color="success" variant={variant}>
+            Green
+          </Button>
+          <Button color="warning" variant={variant}>
+            Orange
+          </Button>
+          <Button color="danger" variant={variant}>
+            Red
+          </Button>
+          <Button color="secondary" variant={variant}>
+            Secondary
+          </Button>
+          <Button color="surface" variant={variant}>
+            Surface
+          </Button>
+          <Button color="primary" variant={variant}>
+            Primary
+          </Button>
+        </Flex>
+      ))}
     </div>
   )
 }
@@ -465,258 +451,6 @@ export function ButtonSizeDefaults() {
       </Flex>
 
       <Button color="success">Green</Button>
-    </div>
-  )
-}
-
-export function ButtonHighContrastSolid() {
-  return (
-    <div>
-      <div>
-        <h1>High Contrast</h1>
-        <Flex gap="sm">
-          <Button variant="solid" highContrast color="success">
-            green
-          </Button>
-          <Button variant="solid" highContrast color="danger">
-            green
-          </Button>
-          <Button variant="solid" highContrast color="info">
-            green
-          </Button>
-          <Button variant="solid" highContrast color="warning">
-            green
-          </Button>
-          <Button variant="solid" highContrast color="primary">
-            green
-          </Button>
-          <Button variant="solid" highContrast color="secondary">
-            green
-          </Button>
-          <Button variant="solid" highContrast color="surface">
-            green
-          </Button>
-          <Button variant="solid" highContrast>
-            Green
-          </Button>
-        </Flex>
-      </div>
-      <div>
-        <h1>Low Contrast</h1>
-        <Flex gap="sm">
-          <Button variant="solid" color="success">
-            green
-          </Button>
-          <Button variant="solid" color="danger">
-            green
-          </Button>
-          <Button variant="solid" color="info">
-            green
-          </Button>
-          <Button variant="solid" color="warning">
-            green
-          </Button>
-          <Button variant="solid" color="primary">
-            green
-          </Button>
-          <Button variant="solid" color="secondary">
-            green
-          </Button>
-          <Button variant="solid" color="surface">
-            green
-          </Button>
-          <Button variant="solid">Green</Button>
-        </Flex>
-      </div>
-    </div>
-  )
-}
-
-export function ButtonHighContrastOutline() {
-  return (
-    <div>
-      <div>
-        <h1>High Contrast</h1>
-        <Flex gap="sm">
-          <Button variant="outline" highContrast color="success">
-            green
-          </Button>
-          <Button variant="outline" highContrast color="danger">
-            green
-          </Button>
-          <Button variant="outline" highContrast color="info">
-            green
-          </Button>
-          <Button variant="outline" highContrast color="warning">
-            green
-          </Button>
-          <Button variant="outline" highContrast color="primary">
-            green
-          </Button>
-          <Button variant="outline" highContrast color="secondary">
-            green
-          </Button>
-          <Button variant="outline" highContrast color="surface">
-            green
-          </Button>
-          <Button variant="outline" highContrast>
-            Green
-          </Button>
-        </Flex>
-      </div>
-      <div>
-        <h1>Low Contrast</h1>
-        <Flex gap="sm">
-          <Button variant="outline" color="success">
-            green
-          </Button>
-          <Button variant="outline" color="danger">
-            green
-          </Button>
-          <Button variant="outline" color="info">
-            green
-          </Button>
-          <Button variant="outline" color="warning">
-            green
-          </Button>
-          <Button variant="outline" color="primary">
-            green
-          </Button>
-          <Button variant="outline" color="secondary">
-            green
-          </Button>
-          <Button variant="outline" color="surface">
-            green
-          </Button>
-          <Button variant="outline">Green</Button>
-        </Flex>
-      </div>
-    </div>
-  )
-}
-
-export function ButtonHighContrastSoft() {
-  return (
-    <div>
-      <div>
-        <h1>High Contrast</h1>
-        <Flex gap="sm">
-          <Button variant="soft" highContrast color="success">
-            green
-          </Button>
-          <Button variant="soft" highContrast color="danger">
-            green
-          </Button>
-          <Button variant="soft" highContrast color="info">
-            green
-          </Button>
-          <Button variant="soft" highContrast color="warning">
-            green
-          </Button>
-          <Button variant="soft" highContrast color="primary">
-            green
-          </Button>
-          <Button variant="soft" highContrast color="secondary">
-            green
-          </Button>
-          <Button variant="soft" highContrast color="surface">
-            green
-          </Button>
-          <Button variant="soft" highContrast>
-            Green
-          </Button>
-        </Flex>
-      </div>
-      <div>
-        <h1>Low Contrast</h1>
-        <Flex gap="sm">
-          <Button variant="soft" color="success">
-            green
-          </Button>
-          <Button variant="soft" color="danger">
-            green
-          </Button>
-          <Button variant="soft" color="info">
-            green
-          </Button>
-          <Button variant="soft" color="warning">
-            green
-          </Button>
-          <Button variant="soft" color="primary">
-            green
-          </Button>
-          <Button variant="soft" color="secondary">
-            green
-          </Button>
-          <Button variant="soft" color="surface">
-            green
-          </Button>
-          <Button variant="soft">Green</Button>
-        </Flex>
-      </div>
-    </div>
-  )
-}
-
-export function ButtonHighContrastText() {
-  return (
-    <div>
-      <div>
-        <h1>High Contrast</h1>
-        <Flex gap="sm">
-          <Button variant="text" highContrast color="success">
-            green
-          </Button>
-          <Button variant="text" highContrast color="danger">
-            green
-          </Button>
-          <Button variant="text" highContrast color="info">
-            green
-          </Button>
-          <Button variant="text" highContrast color="warning">
-            green
-          </Button>
-          <Button variant="text" highContrast color="primary">
-            green
-          </Button>
-          <Button variant="text" highContrast color="secondary">
-            green
-          </Button>
-          <Button variant="text" highContrast color="surface">
-            green
-          </Button>
-          <Button variant="text" highContrast>
-            Green
-          </Button>
-        </Flex>
-      </div>
-      <div>
-        <h1>Low Contrast</h1>
-        <Flex gap="sm">
-          <Button variant="text" color="success">
-            green
-          </Button>
-          <Button variant="text" color="danger">
-            green
-          </Button>
-          <Button variant="text" color="info">
-            green
-          </Button>
-          <Button variant="text" color="warning">
-            green
-          </Button>
-          <Button variant="text" color="primary">
-            green
-          </Button>
-          <Button variant="text" color="secondary">
-            green
-          </Button>
-          <Button variant="text" color="surface">
-            green
-          </Button>
-          <Button variant="text">Green</Button>
-        </Flex>
-      </div>
     </div>
   )
 }

@@ -15,6 +15,7 @@ import type {
   AccordionProps,
 } from './accordion.type'
 import { useAccordion } from './useAccordion'
+import { Text } from '../typography'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -68,7 +69,9 @@ const AccordionButton = forwardRef((props, ref) => {
       ref={ref}
       {...rest}
     >
-      <span> {title}</span>
+      <Text weight="medium" as="span">
+        {title}
+      </Text>
       {icon}
     </Flex>
   )
@@ -93,7 +96,7 @@ const AccordionPanel = forwardRef((props, ref) => {
   })
   return (
     <div id={context?.id} className={classNames} ref={ref} {...rest}>
-      {children}
+      <span className="accordion--panel-content"> {children}</span>
     </div>
   )
 }) as ForwardRefComponent<'div', AccordionPanelProps>
@@ -120,7 +123,7 @@ export const Accordion = forwardRef((props, ref) => {
     ...rest
   } = props
   const context = useAccordion(props)
-  const classNames = classnames(`accordion l_flow__sm`, {
+  const classNames = classnames(`accordion l_flow__3xs`, {
     [`u_${color}`]: !!color,
     [`u_size-${size}`]: !!size,
     l_flow: !!separate,

@@ -39,69 +39,33 @@ export const ChipsColor = () => (
   </Flex>
 )
 
+const VARIANTS = ['solid', 'mixed', 'soft', 'outline'] as const
+
 export const ChipsVariants = () => (
   <div className="l_flow__md">
-    <Flex gap="xs">
-      <Chips color="danger" variant="outline">
-        Hello
-      </Chips>
-      <Chips color="warning" variant="outline">
-        Hello
-      </Chips>
-      <Chips color="success" variant="outline">
-        Hello
-      </Chips>
+    {VARIANTS.map((variant) => (
+      <Flex key={variant} gap="xs">
+        <Chips color="danger" variant={variant}>
+          Hello
+        </Chips>
+        <Chips color="warning" variant={variant}>
+          Hello
+        </Chips>
+        <Chips color="success" variant={variant}>
+          Hello
+        </Chips>
 
-      <Chips color="primary" variant="outline">
-        Hello
-      </Chips>
-      <Chips color="secondary" variant="outline">
-        Hello
-      </Chips>
-      <Chips color="surface" variant="outline">
-        Hello
-      </Chips>
-    </Flex>
-    <Flex gap="xs">
-      <Chips color="danger" variant="soft">
-        Hello
-      </Chips>
-      <Chips color="warning" variant="soft">
-        Hello
-      </Chips>
-      <Chips color="success" variant="soft">
-        Hello
-      </Chips>
-      <Chips color="primary" variant="soft">
-        Hello
-      </Chips>
-      <Chips color="secondary" variant="soft">
-        Hello
-      </Chips>
-      <Chips color="surface" variant="soft">
-        Hello
-      </Chips>
-    </Flex>
-    <Flex gap="xs">
-      <Chips color="danger" variant="solid">
-        Hello
-      </Chips>
-      <Chips color="warning" variant="solid">
-        Hello
-      </Chips>
-      <Chips color="success" variant="solid">
-        Hello
-      </Chips>
-      <Chips color="primary" variant="solid">
-        Hello
-      </Chips>
-      <Chips color="secondary" variant="solid">
-        Hello
-      </Chips>
-      <Chips color="surface" variant="solid">
-        Hello
-      </Chips>
-    </Flex>
+        <Chips color="primary" variant={variant}>
+          Hello
+        </Chips>
+        <Chips color="secondary" variant={variant}>
+          Hello
+        </Chips>
+        <Chips color="surface" variant={variant}>
+          Hello
+        </Chips>
+      </Flex>
+    ))}
   </div>
 )
 

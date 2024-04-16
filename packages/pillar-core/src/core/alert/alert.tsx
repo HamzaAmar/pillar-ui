@@ -63,7 +63,7 @@ const Alert = forwardRef((props, forwardedRef) => {
   )
 
   return (
-    <Flex ref={forwardedRef} gap="sm" items="start" className={classNames} role="alert" {...rest}>
+    <Flex ref={forwardedRef} gap="xs" items="start" className={classNames} role="alert" {...rest}>
       {icon && <span className="u_items-self u_leading__normal">{icon}</span>}
       <Flex {...inlineText} gap="xs" justify="center">
         {_title}

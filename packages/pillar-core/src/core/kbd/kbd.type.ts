@@ -1,4 +1,4 @@
-import type { Color, Corner, Size, Transform } from '../../types'
+import type { Color, Corner, Size, Transform, Variant } from '../../types'
 
 export interface KbdProps {
   title: string
@@ -6,4 +6,5 @@ export interface KbdProps {
   color?: Color
   corner?: Corner
   transform?: Transform
+  variant?: Variant
 }

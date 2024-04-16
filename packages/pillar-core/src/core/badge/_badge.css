@@ -6,7 +6,7 @@
   max-width: fit-content;
   height: var(--badge-size, 1.75em);
   line-height: 1;
-  padding: 0.125rem;
+  padding: 0.125em;
   background-color: var(--color-shared-9);
   color: white;
 
@@ -29,5 +29,9 @@
 }
 
 .badge svg {
-  width: 1.25em;
+  width: 1.125em;
+}
+
+.badge--content {
+  font-size: clamp(0.5rem, 0.825em, 1.25rem);
 }

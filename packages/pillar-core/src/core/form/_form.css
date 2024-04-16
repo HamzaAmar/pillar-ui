@@ -20,6 +20,9 @@
     border-color: var(--danger-9);
     outline-color: var(--danger-9);
     background-color: var(--danger-3);
+    input::placeholder {
+      color: var(--danger-11);
+    }
   }
 
   &[data-disabled='true'] {
@@ -111,8 +114,7 @@
   background-color: transparent;
   outline: none;
   cursor: inherit;
-  padding-inline: 1rem;
-  min-height: 2.375em;
+  min-height: 2em;
   resize: none;
   display: inline-block;
 
@@ -123,6 +125,13 @@
   &:disabled {
     pointer-events: none;
   }
+}
+
+.field-has-start-padding {
+  padding-inline-start: 1rem;
+}
+.field-has-end-padding {
+  padding-inline-end: 1rem;
 }
 
 .form-field[type='number'] {
@@ -144,7 +153,7 @@
 .input-field--suffix {
   font-size: 0.75rem;
   min-width: 2rem;
-  padding: 0.5em;
+  padding: 0.25em 0.5em;
 }
 
 /*
@@ -248,6 +257,7 @@
 .select-field {
   background-color: var(--surface-1);
   width: 100%;
+  padding-inline: 0.75rem;
 }
 .select-chevron {
   position: absolute;

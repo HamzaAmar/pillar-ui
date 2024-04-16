@@ -10,10 +10,10 @@ import { CircleCheck } from '@pillar-ui/icons'
 ===================================================================================================
 */
 
-const [AvatarProvider, useAvatarContext] = createContext<RadioContextProps>('Avatar')
+const [RadioProvider, useRadioContext] = createContext<RadioContextProps>('Radio')
 
 export const CustomRadio = (props: CustomRadioProps) => {
-  const provider = useAvatarContext()
+  const provider = useRadioContext()
   const {
     label,
     id,
@@ -69,7 +69,7 @@ export const RadioGroup = ({ direction = 'column', children, label, showLabel, i
       */}
 
       <Flex wrap gap="sm" className="form-group" items="start" direction={direction}>
-        <AvatarProvider {...rest}>{children}</AvatarProvider>
+        <RadioProvider {...rest}>{children}</RadioProvider>
       </Flex>
     </fieldset>
   )
@@ -82,7 +82,7 @@ export const RadioGroup = ({ direction = 'column', children, label, showLabel, i
 */
 
 export const Radio = (props: RadioProps) => {
-  const provider = useAvatarContext()
+  const provider = useRadioContext()
   const {
     label,
     id,
@@ -99,7 +99,6 @@ export const Radio = (props: RadioProps) => {
   return (
     <Flex
       inline
-      // items="center"
       gap="xs"
       as="label"
       className={`radio-container u_size-${size} u_${color}`}

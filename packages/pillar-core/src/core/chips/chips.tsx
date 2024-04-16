@@ -1,7 +1,8 @@
-import { forwardRef } from 'react'
+import { CSSProperties, forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { ChipsProps } from './chips.type'
 import { classnames } from '@pillar-ui/utils'
+import { Flex } from '../flex'
 
 const chips = forwardRef((props, ref) => {
   const {
@@ -18,7 +19,7 @@ const chips = forwardRef((props, ref) => {
     highContrast = false,
     ...rest
   } = props
-  const classNames = classnames(`chips chips__${variant} u_${color} u_singleline`, {
+  const classNames = classnames(`chips u_truncate chips__${variant} u_${color} u_singleline`, {
     [className!]: !!className,
     [`u_size-${size}`]: !!size,
     [`u_transform__${transform}`]: !!transform,
@@ -31,9 +32,11 @@ const chips = forwardRef((props, ref) => {
 
   return (
     <Tag ref={ref} className={classNames} {...rest}>
-      {startIcon}
-      {children}
-      {endIcon}
+      <Flex items="center" gap="2xs" style={{ '--line-numbers': 1 } as CSSProperties} className="chips--content">
+        {startIcon}
+        {children}
+        {endIcon}
+      </Flex>
     </Tag>
   )
 }) as ForwardRefComponent<'span', ChipsProps>

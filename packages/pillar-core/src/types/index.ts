@@ -29,7 +29,7 @@ type Corner = 'sharp' | SharedSize | 'circle' | 'full' | undefined
  * @typedef {Corner} Corner
  */
 
-type Variant = 'solid' | 'outline' | 'soft' | 'text' | undefined
+type Variant = 'solid' | 'outline' | 'soft' | 'text' | 'mixed' | undefined
 
 /**
  * Represents the color of a component.

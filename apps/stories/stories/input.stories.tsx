@@ -40,18 +40,22 @@ export const FilledInput = () => {
     </Flex>
   )
 }
+
+/* ; */
 export const OutlineInput = () => {
   return (
-    <Flex gap="sm" direction="column">
-      <Input autoFocus placeholder="Focus" />
-      <Input placeholder="Normal" />
-      <Input disabled placeholder="Disabled" />
-      <Input readOnly placeholder="readOnly" />
-      <Input isInvalid placeholder="isInvalid" />
-      <Input suffixInput={<User width="16" />} placeholder="Error" />
-      <Input prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <Input prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
-    </Flex>
+    <div className="l_flow__lg">
+      <Flex gap="sm" direction="column">
+        <Input autoFocus placeholder="Focus" />
+        <Input placeholder="Normal" />
+        <Input disabled placeholder="Disabled" />
+        <Input readOnly placeholder="readOnly" />
+        <Input isInvalid placeholder="isInvalid" />
+        <Input suffixInput={<User width="16" />} placeholder="Error" />
+        <Input prefixInput={<User width="16" />} placeholder="Placeholder" />
+        <Input prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
+      </Flex>
+    </div>
   )
 }
 export const BorderedInput = () => {

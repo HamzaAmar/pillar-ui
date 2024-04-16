@@ -21,11 +21,12 @@
 }
 
 .custom-radio {
-  width: 1.375em;
-  height: 1.375em;
+  width: 1.25em;
+  height: 1.25em;
   border-radius: 50%;
   position: relative;
   border: 1px solid var(--surface-7);
+  margin-top: 2px;
   flex: none;
 
   &:hover {
@@ -61,6 +62,7 @@
 .radio__label {
   max-width: 55ch;
   color: var(--text-8);
+  font-size: 0.875em;
 }
 
 /* Radio Group Section Style Start */

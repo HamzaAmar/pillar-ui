@@ -3,13 +3,15 @@
   display: inline-flex;
   align-items: center;
   gap: 0.125em;
-  padding: 0 0.375em;
+  padding: 0.125em 0.375em;
   width: fit-content;
   max-width: 25ch;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   font-weight: 500;
   line-height: 1.2;
   justify-content: safe left;
+  line-height: 1;
+
   & svg {
     width: 1em;
   }
@@ -19,7 +21,7 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--chip-corner, 1em);
+  border-radius: var(--chip-corner, 0.25em);
   font-size: var(--chip-size, 0.875rem);
   text-transform: var(--chip-transform, capitalize);
 }
@@ -27,33 +29,26 @@
 /* Chips Variants */
 
 .chips__solid {
-  background-color: var(--color-shared-8);
-  color: var(--color-shared-12);
-
-  &.chips__high-contrast {
-    background-color: var(--color-shared-12);
-    color: var(--color-shared-1);
-  }
+  background-color: var(--color-shared-9);
+  color: white;
 }
 
 .chips__outline {
   color: var(--color-shared-11);
   border-color: var(--color-shared-11);
-
-  &.chips__high-contrast {
-    color: var(--color-shared-12);
-    border-color: var(--color-shared-12);
-  }
 }
 
 .chips__soft {
+  background-color: var(--color-shared-3);
+  color: var(--color-shared-11);
+}
+
+.chips__mixed {
   border-color: var(--color-shared-7);
   background-color: var(--color-shared-3);
   color: var(--color-shared-11);
+}
 
-  &.chips__high-contrast {
-    border-color: var(--color-shared-11);
-    background-color: var(--color-shared-5);
-    color: var(--color-shared-12);
-  }
+.chips--content {
+  font-size: 0.875em;
 }

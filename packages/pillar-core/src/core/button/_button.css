@@ -1,23 +1,22 @@
 .btn {
   height: fit-content;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   font-weight: 500;
   transition: transform 0.15s;
-  padding: 0.375em 1.25em;
-  max-width: 100vw;
+  padding: 0.5em 1.25em;
+  max-width: 100%;
   min-width: 0;
   transition: transform 50ms cubic-bezier(0.68, 0.55, 0.265, -2);
   text-decoration: none;
   letter-spacing: 0.5px;
-  /* text-transform: var(--text-transform, var(--button-transform, uppercase));
-  border-radius: var(--border-radius, var(--button-corner, 0.25rem));
-  font-size: var(--font-size, var(--button-size, 0.875rem)); */
-  flex: none;
+  transform-origin: bottom center;
+  line-height: 1.2;
+  /* flex: none; */
   &:hover {
     background-color: var(--color-shared-4);
   }
   &:active {
-    transform: translateY(-2px);
+    transform: translateY(-1px) scale(1.01);
   }
   &:focus-visible {
     outline: 2px dashed var(--color-shared-9);
@@ -30,9 +29,9 @@
     border-color: var(--surface-5);
   }
   & svg {
-    /* font-size: 1em; */
-    width: max(1.25em, 16px);
-    stroke-width: 2px;
+    width: 1.1em;
+    /* width: max(1.25em, 16px); */
+    stroke-width: 1.5px;
   }
 
   /*
@@ -40,24 +39,19 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--button-corner, 10em);
+  border-radius: var(--button-corner, var(--corner-sm));
   font-size: var(--button-size, 0.875rem);
-  text-transform: var(--button-transform, uppercase);
+  text-transform: var(--button-transform, capitalize);
 }
 
 .btn--text {
   font-size: 0.9em;
 }
 
-.btn__solid {
+.btn__solid,
+.btn__shadow {
   background-color: var(--color-shared-9);
-  /* color: var(--color-shared-12); */
   color: white;
-
-  &.btn__high-contrast {
-    background-color: var(--color-shared-12);
-    color: var(--color-shared-1);
-  }
 
   &:hover {
     background-color: var(--color-shared-10);
@@ -69,41 +63,35 @@
   border-color: var(--color-shared-11);
   background-color: var(--color-shared-1);
 
-  &.btn__high-contrast {
-    color: var(--color-shared-12);
-    border-color: var(--color-shared-12);
-    background-color: var(--color-shared-3);
-  }
-
   &:hover {
     background-color: var(--color-shared-4);
   }
 }
 
-.btn__soft {
+.btn__shadow {
+  box-shadow: 0px 4px 12px -4px var(--color-shared-8);
+}
+
+.btn__mixed {
   color: var(--color-shared-11);
   background-color: var(--color-shared-3);
   border-color: var(--color-shared-5);
+}
 
-  &.btn__high-contrast {
-    color: var(--color-shared-12);
-    background-color: var(--color-shared-5);
-    border-color: var(--color-shared-12);
-  }
+.btn__soft {
+  color: var(--color-shared-11);
+  background-color: var(--color-shared-3);
 }
 
 .btn__text {
   color: var(--color-shared-11);
   border-color: transparent;
-
-  &.btn__high-contrast {
-    color: var(--color-shared-12);
-  }
 }
 
 .btn__link {
   color: var(--color-shared-11);
-  text-decoration: underline 1.5px;
+  text-decoration: underline 1.25px;
+  text-underline-offset: 1.5px;
 }
 
 .btn__gradient {

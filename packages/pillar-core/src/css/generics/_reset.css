@@ -52,6 +52,11 @@ select {
   appearance: none;
   border: none;
 }
+input,
+textarea,
+select {
+  font-family: var(--mono-font);
+}
 
 button {
   background-color: transparent;
