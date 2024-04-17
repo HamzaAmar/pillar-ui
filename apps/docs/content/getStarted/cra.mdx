@@ -51,23 +51,23 @@ or you prefer Yarn
 yarn add @pillar-ui/core
 ```
 
-1. You can also install the other packages that Pillar support to make the proccess for making you site faster and simple
+1. You can also install the other packages that Pillar-ui contains to make the process of building your site faster and simpler.
 
 ```bash
-npm install @pillar-ui/hooks @pillar-ui/utilities @pillar-ui/icons
+npm install @pillar-ui/hooks @pillar-ui/utils @pillar-ui/icons
 ```
 
 or you prefer Yarn
 
 ```bash
-yarn add @pillar-ui/hooks @pillar-ui/utilities @pillar-ui/icons
+yarn add @pillar-ui/hooks @pillar-ui/utils @pillar-ui/icons
 ```
 
 ## Adding Styles
 
 To enhance the appearance and maintain visual consistency of your create react app using Pillar components, follow these steps to add the necessary styles. Pillar provides a CSS file that not only enhances the styling but also introduces additional features such as dark mode support and right-to-left (RTL) language support.
 
-- Open the root file of your Vite React app project.
+- Open the root file of your CRA React app project.
 
 - Locate the file where your app is initialized, typically named App.(ts, tsx, js,jsx).
 
@@ -115,7 +115,7 @@ import './theme.css'
 
 By following these steps, you can easily personalize the primary color of your UI to your preferred choice. Feel free to explore other customization options such as font size, shadows, gradients, and spacing, which can be adjusted using similar custom properties.
 
-Pillar UI empowers you to create a visually appealing UI that aligns with your project requirements and brand identity. Enjoy the flexibility and control over your UI's appearance with Pillar UI's customization capabilities.
+Pillar UI empowers you to create a visually appealing UI that aligns with your project requirements and brand identity. Enjoy the flexibility and control over your UI's appearance with Pillar UI's customization capabilities [More info about the theme](http://localhost:3001/docs/themes/font).
 
 ## Developer experience
 
@@ -158,7 +158,7 @@ you can import icons, utilities, or hooks based on your requirements. Here are s
 ```tsx
 import { Button, Paper, Flex, InputPassword, FormController, Input } from '@pillar-ui/core'
 import { Envelop } from '@pillar-ui/icons'
-import { toCapitalize } from '@pillar-ui/utilities'
+import { toCapitalize } from '@pillar-ui/utils'
 import { useDarkMode } from '@pillar-ui/hooks'
 
 interface FormValues {

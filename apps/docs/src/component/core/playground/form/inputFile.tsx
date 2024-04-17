@@ -59,7 +59,6 @@ const ColorInputFile = () => {
       <InputFile color="warning" variant="bordered" autoFocus />
       <InputFile color="secondary" variant="outline" autoFocus />
       <InputFile color="surface" variant="filled" autoFocus />
-      <InputFile color="success" variant="bordered" autoFocus prefixInput={<User width="16" />} />
     </Paper>
   )
 }

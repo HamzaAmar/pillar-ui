@@ -13,15 +13,7 @@ const FilledInputPassword = () => {
       <InputSearch aria-label="hello" disabled placeholder="Disabled" variant="filled" />
       <InputSearch aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
       <InputSearch aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <InputSearch aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" variant="filled" />
       <InputSearch aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" variant="filled" />
-      <InputSearch
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
     </Paper>
   )
 }
@@ -34,15 +26,7 @@ const OutlineInputPassword = () => {
       <InputSearch variant="outline" aria-label="hello" disabled placeholder="Disabled" />
       <InputSearch variant="outline" aria-label="hello" readOnly placeholder="readOnly" />
       <InputSearch variant="outline" aria-label="hello" isInvalid placeholder="Error" />
-      <InputSearch variant="outline" aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" />
       <InputSearch variant="outline" aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <InputSearch
-        variant="outline"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
     </Paper>
   )
 }
@@ -55,15 +39,7 @@ const BorderedInputPassword = () => {
       <InputSearch variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
       <InputSearch variant="bordered" aria-label="hello" readOnly placeholder="readOnly" />
       <InputSearch variant="bordered" aria-label="hello" isInvalid placeholder="Error" />
-      <InputSearch variant="bordered" aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" />
       <InputSearch variant="bordered" aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <InputSearch
-        variant="bordered"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
     </Paper>
   )
 }
@@ -96,14 +72,6 @@ const ColorInputPassword = () => {
         prefixInput={<User width="16" />}
         placeholder="Placeholder"
       />
-      <InputSearch
-        color="danger"
-        variant="bordered"
-        autoFocus
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
     </Paper>
   )
 }
@@ -123,9 +91,7 @@ export const SizeInputPassword = () => {
 export const SizeIcons = () => {
   return (
     <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
-      <InputSearch placeholder="Medium" suffixInput={<User width="16" />} />
       <InputSearch placeholder="Medium" prefixInput={<User width="16" />} />
-      <InputSearch placeholder="Medium" prefixInput={<User width="16" />} suffixInput={<Eye width="16" />} />
     </Paper>
   )
 }

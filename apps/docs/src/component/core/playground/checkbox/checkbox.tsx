@@ -1,6 +1,7 @@
 import { Alien, Apple, Check, ChevronDown, LetterSpacing, Plane, Plus } from '@pillar-ui/icons'
 import { Avatar, Checkbox, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
+import { useCheckboxGroup } from '@pillar-ui/hooks'
 
 export const CheckboxPlayGround = () => {
   return (
@@ -153,6 +154,43 @@ export const CheckboxStatus = () => {
   )
 }
 
+const ParentCheckbox = ({ children }: any) => {
+  const child = Array.from({ length: React.Children.count(children) }, () => false)
+  const { checkedItems, isAllChecked, isIndeterminate, handleToggleAll, handleToggleItem } = useCheckboxGroup(child)
+
+  return (
+    <>
+      <Checkbox
+        label="Parent Checkbox"
+        checked={isAllChecked}
+        isIndeterminate={isIndeterminate}
+        onChange={handleToggleAll}
+      />
+      <ul style={{ listStyle: 'none' }} className="l_flow__3xs">
+        {React.Children.map(children, (child, index) => (
+          <li>
+            {React.cloneElement(child, {
+              checked: checkedItems[index],
+              onChange: () => handleToggleItem(index),
+            })}
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+}
+
+export const CheckboxIsIndeterminate = () => (
+  <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <ParentCheckbox>
+      <Checkbox label="Child Checkbox 1" name="child1" />
+      <Checkbox label="Child Checkbox 2" name="child2" />
+      <Checkbox label="Child Checkbox 3" name="child3" />
+    </ParentCheckbox>
+  </Paper>
+)
+
+CheckboxPlayGround.IsIndeterminate = CheckboxIsIndeterminate
 CheckboxPlayGround.Colors = CheckboxColors
 CheckboxPlayGround.Sizes = CheckboxSizes
 CheckboxPlayGround.DefaultCheck = CheckboxDefaultCheck

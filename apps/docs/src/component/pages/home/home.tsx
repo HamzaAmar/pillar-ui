@@ -14,28 +14,36 @@ import {
   Switch,
   Alert,
 } from '@pillar-ui/core'
-import { Github, Booking, Discord, Linkdin, Youtube, Dollar } from '@pillar-ui/icons'
+import { useDarkMode } from '@pillar-ui/hooks'
+
+import { Github, Booking, Discord, Linkdin, Youtube, Dollar, Moon, Sun } from '@pillar-ui/icons'
 import { ACCESSIBILITY, COMING_SUPPORT, SIMPLE_DEVELOPMENT, SUPPORTED } from './home.data'
 import Link from 'next/link'
 import React, { CSSProperties, useState } from 'react'
-import Image from 'next/image'
 
 function AccessibleSection() {
   return (
     <Paper corner="lg" p="lg" flow="xl">
-      <Heading className="highlight" as="h2" size="3xl" transform="capitalize">
-        Fully Accessible
-      </Heading>
-      <Grid gap="xl" grid="1fr 1fr" md="1fr">
+      <div>
+        <Text color="primary" contrast="low" size="lg">
+          Our Commitment
+        </Text>
+        <Heading transform="uppercase" className="highlight" as="h2" size="2xl">
+          Building Accessible Experiences
+        </Heading>
+      </div>
+      <Grid gap="md" grid="1fr 1fr 1fr" md="1fr 1fr" sm="1fr">
         {ACCESSIBILITY.map(({ id, title, description, icon }) => (
-          <Paper key={id} flow="sm">
+          <Paper className="accessibility--item" key={id} flow="2xs">
             {icon}
-            <Heading as="h3" size="lg">
-              {title}
-            </Heading>
-            <Text color="surface" contrast="low">
-              {description}!
-            </Text>
+            <div className="l_flow__3xs">
+              <Heading as="h3" size="lg">
+                {title}
+              </Heading>
+              <Text color="surface" contrast="low">
+                {description}!
+              </Text>
+            </div>
           </Paper>
         ))}
       </Grid>
@@ -47,7 +55,22 @@ function HeroSection() {
   return (
     <Flex as="section" direction="column" gap="xl" justify="center" className="hero">
       <h1 className="hero--heading">
-        Pillar Your Comprehensive, Accessible UI Toolkit with Hooks, Icons, and Utilities
+        <Text as="span" className="pillar--title">
+          <svg
+            className="pillar--title-container"
+            stroke="#000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-miterlimit="1.5"
+            stroke-width="4.1"
+            viewBox="0 0 458 152"
+            fill="none"
+          >
+            <path d="M448 132c3-35 9-83 2-116-104-3-207-4-311-2-40 1-83 8-122 4l3 92c0 13 5 27 4 39 116 0 233-11 349-7 23 0 45-3 68 0-59-5-120-1-179 0-39 0-79-6-118-5-38 0-75 7-112 7C23 99 11 54 5 9c24-1 48-4 71-4 127-1 253 0 380 6-1 40-10 78-13 118-3-41 6-83 3-124-15-3-34-1-49-1-42-1-83-2-125 0-53 1-105 4-157 6-36 2-77-1-112 7l12 131" />
+          </svg>
+          Pillar-ui
+        </Text>
+        Your Comprehensive, Accessible UI Toolkit with Hooks, Icons, and Utilities
       </h1>
       <div className="l_flow__md">
         <p className="hero--text">
@@ -114,9 +137,14 @@ function CustomThemeSection() {
 function SimplifyDevelopment() {
   return (
     <Paper corner="lg" p="lg" flow="lg">
-      <Heading className="highlight" as="h2" size="3xl" transform="capitalize">
-        Simplify Development
-      </Heading>
+      <div>
+        <Text color="primary" contrast="low" size="lg">
+          Deliver Projects Faster
+        </Text>
+        <Heading className="highlight" as="h2" size="3xl" transform="capitalize">
+          Effortless UI with Pillar UI
+        </Heading>
+      </div>
       <Grid grid="1fr 1fr 1fr" lg="1fr 1fr" md="1fr" gap="md">
         {SIMPLE_DEVELOPMENT.map(({ title, id, description }) => (
           <Paper borderColor="opacity-6" key={id} background="surface-3" shadow="xs" corner="sm" p="sm" flow="sm">
@@ -216,207 +244,183 @@ function PillarSupport() {
 }
 
 function DarkMode() {
-  const [state, setState] = useState<'default' | 'light' | 'dark'>('default')
+  const { isDark, mode, toggleMode } = useDarkMode()
 
   return (
-    <Paper corner="lg" p="lg" flow="lg" className="section">
-      <div>
-        <Heading className="highlight" size="2xl" transform="capitalize" as="h2">
-          Support Dark Mode
-        </Heading>
-        <Text color="surface" contrast="low" size="lg">
-          Our library prioritizes user comfort and accessibility by fully supporting dark mode. It effortlessly
-          integrates customizable components that adapt to a dark color scheme, ensuring a unified application
-          appearance. Implementation is simplified with our custom hook, useDarkMode from @pillar-ui/hooks, offering
-          essential functionalities. It’s compatible with server-side rendering frameworks like Next.js and Remix,
-          eliminating compatibility concerns. Import useDarkMode for an enhanced dark mode user experience, complete
-          with a script to resolve any flickering issues.
-        </Text>
-      </div>
-      <div className="l_flow__sm">
+    <Paper items="center" justify="center" as={Flex} corner="lg" p="lg" flow="lg" className={`${mode} section`}>
+      <div className="l_flow__lg">
+        <div className="l_flow__md">
+          <div className="l_flow__2xs">
+            <Text size="lg" color="primary" contrast="low">
+              Subtle, Soothing, Smart
+            </Text>
+            <Heading className="highlight" size="3xl" transform="uppercase" as="h2">
+              Night Mode: Effortless Elegance
+            </Heading>
+          </div>
+          <Text className="dark--description" color="surface" contrast="low" size="xl">
+            Switch to dark mode with ease. Our useDarkMode hook ensures a smooth, flicker-free experience, compatible
+            with major frameworks.
+          </Text>
+          <Text className="dark--description" color="surface" contrast="low" size="xl">
+            Our styles are dark mode-ready from the start. Simply add <code>class=&quot;dark&quot;</code> to your
+            elements, and watch them transform.
+          </Text>
+        </div>
         <Flex gap="sm" wrap>
           <Button
-            color={state === 'dark' ? 'primary' : 'surface'}
-            variant={state === 'dark' ? 'solid' : 'outline'}
-            onClick={() => setState('dark')}
-            size="xs"
-            data-mode={state}
+            color={isDark ? 'primary' : 'surface'}
+            variant={isDark ? 'solid' : 'outline'}
+            onClick={toggleMode}
+            size="md"
+            icon={isDark ? <Sun /> : <Moon />}
+            data-mode={mode}
           >
-            Dark
-          </Button>
-          <Button
-            color={state === 'light' ? 'primary' : 'surface'}
-            variant={state === 'light' ? 'solid' : 'outline'}
-            onClick={() => setState('light')}
-            size="xs"
-            data-mode={state}
-          >
-            Light
-          </Button>
-          <Button
-            color={state === 'default' ? 'primary' : 'surface'}
-            variant={state === 'default' ? 'solid' : 'outline'}
-            onClick={() => setState('default')}
-            size="xs"
-            data-mode={state}
-          >
-            Mixed
+            {isDark ? 'light' : 'dark'}
           </Button>
         </Flex>
-        <div className="h_image-container switch--home-mode--container">
-          <Image
-            src="/lightHero.png"
-            className="switch--home-mode--image switch--home-mode--image__light"
-            alt="shelo"
-            fill
-          />
-          <Image
-            data-mode={state}
-            src="/darkHero.png"
-            className="switch--home-mode--image switch--home-mode--image__dark"
-            alt="shelo"
-            fill
-          />
-        </div>
       </div>
+
+      <svg
+        className="under top--start"
+        stroke={isDark ? 'var(--warning-11)' : 'var(--surface-8)'}
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-miterlimit="1.5"
+        stroke-width="12"
+        viewBox="0 0 265 265"
+        fill="none"
+      >
+        <path d="M181 104c-22-43-93-33-103 13-7 29 19 48 23 75h59l8-21c5-11 13-18 15-30 3-11 3-27-2-37Z" />
+        <path
+          d="m100 228-1-25c0-3 0-7 3-9 4-4 10-4 15-4h28c5 0 11-1 15 1s5 8 5 12c1 7 3 23-3 28-4 4-10 5-15 5-13 2-47 1-47-8Z"
+          clip-rule="evenodd"
+        />
+        <path d="m135 237-1 13M31 169l14-7M31 74l16 10M134 35V15M214 79l20-12M203 168l15 14" />
+      </svg>
+      <svg
+        className="under under--end"
+        stroke={isDark ? 'var(--warning-11)' : 'var(--surface-8)'}
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-miterlimit="1.5"
+        stroke-width="12"
+        viewBox="0 0 265 265"
+        fill="none"
+      >
+        <path d="M181 104c-22-43-93-33-103 13-7 29 19 48 23 75h59l8-21c5-11 13-18 15-30 3-11 3-27-2-37Z" />
+        <path
+          d="m100 228-1-25c0-3 0-7 3-9 4-4 10-4 15-4h28c5 0 11-1 15 1s5 8 5 12c1 7 3 23-3 28-4 4-10 5-15 5-13 2-47 1-47-8Z"
+          clip-rule="evenodd"
+        />
+        <path d="m135 237-1 13M31 169l14-7M31 74l16 10M134 35V15M214 79l20-12M203 168l15 14" />
+      </svg>
     </Paper>
   )
 }
 
-function DeveloperExperience() {
-  return (
-    <Grid grid="1fr 1fr" md="1fr" justify="start">
-      <Paper p="lg" flow="sm">
-        <Heading className="highlight" size="3xl" transform="capitalize" as="h2">
-          Developer Experience
-        </Heading>
-        <Text color="surface" contrast="low" size="lg">
-          Pillar UI enhances developer experience (DX) by providing efficient workflows for implementing and customizing
-          components. It offers intuitive responsive variables to customize component appearance and prevent repetitive
-          styling code.
-        </Text>
-        <Heading size="xl" transform="capitalize" as="h2">
-          Responsive Variables
-        </Heading>
-        <Text color="surface" contrast="low" size="lg">
-          Each component includes responsive variables for easy control over appearance. Override global defaults, such
-          as the corner radius of buttons, for a consistent look.
-        </Text>
-        <Text color="surface" contrast="low" size="lg">
-          Pillar UI eliminates repetitive styling by providing predefined styles and variables. Apply consistent design
-          elements across the application without duplication, saving time and effort.{' '}
-        </Text>
-        <Heading size="xl" transform="capitalize" as="h2">
-          Preventing Repetition
-        </Heading>
-        <Text color="surface" contrast="low" size="lg">
-          With Pillar UI&apos;s design system, you can eliminate the need for repetitive styling code. By utilizing the
-          provided variables and predefined styles, developers can easily apply consistent design elements across their
-          application without duplicating effort.
-        </Text>
-        <Heading size="xl" transform="capitalize" as="h2">
-          Customization and Extensibility
-        </Heading>
-        <Text color="surface" contrast="low" size="lg">
-          Customize and extend Pillar UI to align with project requirements. Override default styles, extend components,
-          and create new variations to adapt to design languages and branding guidelines.
-        </Text>
-        <Text color="surface" contrast="low" size="lg">
-          Pillar UI&apos;s DX-focused approach empowers developers to efficiently create visually appealing and
-          consistent interfaces, resulting in a productive development experience.
-        </Text>
-      </Paper>
-      <Paper p="sm" flow="sm">
-        <Text color="surface" contrast="low" size="md">
-          Before updating the variables, the components utilize the default styles provided under the hood. These
-          default styles serve as the starting point for the components appearance.
-        </Text>
-        <Flex items="center" as={Flex} wrap gap="sm">
-          <Input fluid placeholder="Search You best movies" name="hello" />
-          <Button>Hello world</Button>
-          <Avatar image="https://picsum.photos/id/300/100/100" />
-          <Chips>Hello world</Chips>
-          <Badge variant="numeric" number={30} max={100} />
-          <Switch label="Hello" />
-          <Alert title="Hello world" message="nice to meet you here you can look at me like" />
-        </Flex>
-        <Text color="surface" contrast="low" size="md">
-          However, if you wish to customize the appearance of a specific component, you can explore the variables
-          associated with that component. Each component has its own set of variables that control different aspects of
-          its appearance. By checking and modifying these variables, you have the flexibility to tailor the components
-          visual style according to your specific requirements. This empowers you to have fine-grained control over the
-          appearance of individual components while maintaining consistency throughout your application.
-        </Text>
-        <Flex
-          style={
-            {
-              '--form-controller-corner': '0',
-              '--button-corner': '0',
-              '--switch-corner': '0',
-              '--chip-corner': '0',
-              '--badge-corner': '0',
-              '--avatar-corner': '0',
-              '--alert-corner': '0',
-            } as CSSProperties
-          }
-          items="center"
-          as={Flex}
-          wrap
-          gap="sm"
-        >
-          <Input fluid placeholder="Search You best movies" name="hello" />
-          <Button>Hello world</Button>
-          <Avatar image="https://picsum.photos/id/300/100/100" />
-          <Chips>Hello world</Chips>
-          <Badge variant="numeric" number={30} max={100} />
-          <Switch label="Hello" />
-          <Alert title="Hello world" message="nice to meet you here you can look at me like" />
-        </Flex>
-        <Text color="surface" contrast="low" size="md">
-          After updating the variables, you have two options to apply the changes. You can either update the variable
-          globally, ensuring the same design is shared across the entire site. Alternatively, you can update the
-          variables within a specific tree of elements, making changes only to the elements within that particular tree.
-        </Text>
-      </Paper>
-    </Grid>
-  )
-}
+const FEATURES = [
+  {
+    id: '1',
+    title: 'Inclusive Experiences:',
+    description: 'Seamless support for any RTL language.',
+    icon: '🌐',
+  },
+  {
+    id: '2',
+    title: 'Intuitive Design:',
+    description: 'Automatic text alignment and visual order for a natural feel.',
+    icon: '✨',
+  },
+  {
+    id: '3',
+    title: 'Pre-Built RTL Components:',
+    description: 'Effortlessly create interfaces that work across languages.',
+    icon: '🔨',
+  },
+  {
+    id: '4',
+    title: 'Flexible Customization:',
+    description: "Add `dir='rtl'` to target specific areas for complete control.",
+    icon: '🎯',
+  },
+  {
+    id: '5',
+    title: 'Accessibility Focused:',
+    description: 'Design for everyone with RTL optimization at the core.',
+    icon: '🤝',
+  },
+]
 
 function RTLSupport() {
   return (
-    <Paper corner="lg" p="lg" flow="xl" className="section">
-      <div>
-        <Heading className="highlight" size="3xl" transform="capitalize" as="h2">
-          Right to left support
-        </Heading>
-        <Text color="surface" contrast="low" size="lg">
-          Accessibility for all users is important to us, which is why our UI library fully supports right-to-left (RTL)
-          languages such as Arabic, Hebrew, and Farsi. This means that your website or application can provide a
-          seamless experience for users who read and write in RTL languages, with proper text alignment, visual order,
-          and navigation. Our RTL support is integrated into all of our components, allowing you to easily create
-          interfaces that meet the needs of diverse audiences. We also have a custom hook called useDirection from
-          @pillar-ui/hooks that can be used to handle the direction of the text and elements based on the language of
-          the user. This hook is especially useful when dealing with dynamic content or when you want to provide
-          additional control over the direction of elements. At our core, we are committed to providing a comprehensive
-          solution that empowers you to create inclusive and user-friendly designs. Whether you are building a website
-          or an application, oupbrary is designed to make your work easier, more efficient, and more accessible for
-          everyone.
-        </Text>
+    <Paper as={Flex} items="center" justify="center" corner="lg" p="lg" className="section rtl--support">
+      <div className="l_flow__xl">
+        <div className="l_flow__sm">
+          <div>
+            <Text size="lg" as="span" color="primary" contrast="low">
+              Effortless RTL Experiences:
+            </Text>
+            <Heading as="h2" size="3xl" transform="uppercase">
+              Right-to-Left Support Built Right In
+            </Heading>
+          </div>
+
+          <Text size="xl" color="surface" contrast="low">
+            Our UI library ensures a welcoming experience for users worldwide.
+          </Text>
+        </div>
+
+        <Grid grid="1fr 1fr" gap="sm" className="feature-list">
+          {FEATURES.map(({ id, title, description, icon }) => (
+            <Flex key={id} as="li" gap="sm" className="feature--item">
+              <span className="feature-icon">{icon}</span>
+              <div>
+                <Heading>{title}</Heading>
+                <Text contrast="low" color="surface">
+                  {description}
+                </Text>
+              </div>
+            </Flex>
+          ))}
+        </Grid>
       </div>
-      <div className="h_image-container ">
-        <img
-          className="h_image"
-          src="/rtl-support.png"
-          alt="Illustration of a laptop with split screens: the left half displays a beautifully designed website in English (LTR) and the right half mirrors the same content in Arabic (RTL). Above the laptop, bold letters spell 'Universal UI Support'. Floating around the laptop are icons of diverse users, emphasizing the inclusivity of the UI library for both LTR and RTL users."
-        />
-      </div>
+      <svg
+        className="under top--start"
+        stroke="var(--surface-6)"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-miterlimit="1.5"
+        stroke-width="6.8"
+        viewBox="0 0 284 284"
+        width="500"
+        fill="none"
+      >
+        <path d="M131 129c13 4 47 19 30 38-18 21-64 8-53-23 4-12 25-15 36-16 32-5 63 2 95 7m-108-6c-27-7-57-1-83 10" />
+        <path d="M45 111c0 13-9 27-17 36 18 1 29 5 39 20M234 107c6 11 14 19 23 28-13 4-23 15-30 26" />
+      </svg>
+
+      <svg
+        className="under under--end"
+        stroke="var(--surface-6)"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-miterlimit="1.5"
+        stroke-width="6.8"
+        viewBox="0 0 284 284"
+        width="500"
+        fill="none"
+      >
+        <path d="M131 129c13 4 47 19 30 38-18 21-64 8-53-23 4-12 25-15 36-16 32-5 63 2 95 7m-108-6c-27-7-57-1-83 10" />
+        <path d="M45 111c0 13-9 27-17 36 18 1 29 5 39 20M234 107c6 11 14 19 23 28-13 4-23 15-30 26" />
+      </svg>
     </Paper>
   )
 }
 
-export default function HomePage() {
+function Home() {
   return (
-    <div className="l_flow__xl">
+    <div>
       <HeroSection />
       <AccessibleSection />
       <SimplifyDevelopment />
@@ -424,7 +428,8 @@ export default function HomePage() {
       <RTLSupport />
       <CustomThemeSection />
       <PillarSupport />
-      <DeveloperExperience />
     </div>
   )
 }
+
+export default Home

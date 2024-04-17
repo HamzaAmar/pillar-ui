@@ -13,15 +13,7 @@ const FilledInputPassword = () => {
       <InputPassword aria-label="hello" disabled placeholder="Disabled" variant="filled" />
       <InputPassword aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
       <InputPassword aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <InputPassword aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" variant="filled" />
       <InputPassword aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" variant="filled" />
-      <InputPassword
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
     </Paper>
   )
 }
@@ -34,15 +26,7 @@ const OutlineInputPassword = () => {
       <InputPassword variant="outline" aria-label="hello" disabled placeholder="Disabled" />
       <InputPassword variant="outline" aria-label="hello" readOnly placeholder="readOnly" />
       <InputPassword variant="outline" aria-label="hello" isInvalid placeholder="Error" />
-      <InputPassword variant="outline" aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" />
       <InputPassword variant="outline" aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <InputPassword
-        variant="outline"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
     </Paper>
   )
 }
@@ -55,19 +39,11 @@ const BorderedInputPassword = () => {
       <InputPassword variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
       <InputPassword variant="bordered" aria-label="hello" readOnly placeholder="readOnly" />
       <InputPassword variant="bordered" aria-label="hello" isInvalid placeholder="Error" />
-      <InputPassword variant="bordered" aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" />
       <InputPassword
         variant="bordered"
         aria-label="hello"
         prefixInput={<User width="16" />}
         placeholder="Placeholder"
-      />
-      <InputPassword
-        variant="bordered"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
       />
     </Paper>
   )
@@ -101,14 +77,6 @@ const ColorInputPassword = () => {
         prefixInput={<User width="16" />}
         placeholder="Placeholder"
       />
-      <InputPassword
-        color="danger"
-        variant="bordered"
-        autoFocus
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
     </Paper>
   )
 }
@@ -128,9 +96,7 @@ export const SizeInputPassword = () => {
 export const SizeIcons = () => {
   return (
     <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
-      <InputPassword placeholder="Medium" suffixInput={<User width="16" />} />
       <InputPassword placeholder="Medium" prefixInput={<User width="16" />} />
-      <InputPassword placeholder="Medium" prefixInput={<User width="16" />} suffixInput={<Eye width="16" />} />
     </Paper>
   )
 }

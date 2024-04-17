@@ -13,15 +13,7 @@ const FilledInputNumber = () => {
       <InputNumber aria-label="hello" disabled placeholder="Disabled" variant="filled" />
       <InputNumber aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
       <InputNumber aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <InputNumber aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" variant="filled" />
       <InputNumber aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" variant="filled" />
-      <InputNumber
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
     </Paper>
   )
 }
@@ -34,15 +26,7 @@ const OutlineInputNumber = () => {
       <InputNumber variant="outline" aria-label="hello" disabled placeholder="Disabled" />
       <InputNumber variant="outline" aria-label="hello" readOnly placeholder="readOnly" />
       <InputNumber variant="outline" aria-label="hello" isInvalid placeholder="Error" />
-      <InputNumber variant="outline" aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" />
       <InputNumber variant="outline" aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <InputNumber
-        variant="outline"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
     </Paper>
   )
 }
@@ -55,15 +39,7 @@ const BorderedInputNumber = () => {
       <InputNumber variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
       <InputNumber variant="bordered" aria-label="hello" readOnly placeholder="readOnly" />
       <InputNumber variant="bordered" aria-label="hello" isInvalid placeholder="Error" />
-      <InputNumber variant="bordered" aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" />
       <InputNumber variant="bordered" aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <InputNumber
-        variant="bordered"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
     </Paper>
   )
 }
@@ -96,14 +72,6 @@ const ColorInputNumber = () => {
         prefixInput={<User width="16" />}
         placeholder="Placeholder"
       />
-      <InputNumber
-        color="danger"
-        variant="bordered"
-        autoFocus
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
     </Paper>
   )
 }
@@ -123,9 +91,7 @@ export const SizeInputNumber = () => {
 export const SizeIcons = () => {
   return (
     <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
-      <InputNumber placeholder="Medium" suffixInput={<User width="16" />} />
       <InputNumber placeholder="Medium" prefixInput={<User width="16" />} />
-      <InputNumber placeholder="Medium" prefixInput={<User width="16" />} suffixInput={<Eye width="16" />} />
     </Paper>
   )
 }
