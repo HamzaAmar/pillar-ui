@@ -26,7 +26,7 @@ The useLocalStorage hook allows you to easily manage data in local storage withi
 To use the useLocalStorage hook, simply import it into your React component:
 
 ```ts
-import useLocalStorage from '@pillar-ui/hooks/useLocalStorage'
+import { useLocalStorage } from '@pillar-ui/hooks'
 ```
 
 ## Parameters
@@ -51,7 +51,7 @@ The useLocalStorage hook returns an object with the following properties and met
 To use the useLocalStorage hook, call it inside your functional component:
 
 ```tsx
-import useLocalStorage from '@pillar-ui/hooks/useLocalStorage'
+import { useLocalStorage } from '@pillar-ui/hooks'
 
 function MyComponent() {
   const { value, setValue, removeValue } = useLocalStorage({ key: 'myKey', initialValue: 'myDefaultValue' })

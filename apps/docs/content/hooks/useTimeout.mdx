@@ -26,7 +26,7 @@ The useTimeout hook provides a simple way to execute a callback function after a
 To use the useTimeout hook, simply import it into your React component:
 
 ```ts
-import useTimeout from '@pillar-ui/hooks/useTimeout'
+import { useTimeout } from '@pillar-ui/hooks'
 ```
 
 ## Parameters
@@ -45,13 +45,17 @@ The useTimeout hook does not return any value. Instead, it sets up a timer to ex
 To use the useTimeout hook, call it inside your functional component:
 
 ```tsx
-mport useTimeout from '@pillar-ui/hooks/useTimeout'
+import { useTimeout } from '@pillar-ui/hooks'
 
-function MyComponent() { const handleTimeout = () => { console.log('Timeout executed') }
+function MyComponent() {
+  const handleTimeout = () => {
+    console.log('Timeout executed')
+  }
 
-useTimeout(handleTimeout, 2000)
+  useTimeout(handleTimeout, 2000)
 
-return ( <div>Check the console after 2 seconds.</div> ) }
+  return <div>Check the console after 2 seconds.</div>
+}
 ```
 
 In the example above, the `useTimeout` hook is used to execute the `handleTimeout` function after a delay of 2000 milliseconds (2 seconds). The message "Timeout executed" will be logged to the console after the specified delay.

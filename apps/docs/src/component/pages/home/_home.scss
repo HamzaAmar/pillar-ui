@@ -199,10 +199,13 @@
 .user--article {
   animation: move 2s infinite alternate;
 }
-.get-started {
+
+.support--second {
   position: sticky;
   top: 6rem;
+  height: fit-content;
 }
+
 .rtl--support--content {
-  max-width: 768px;
+  max-width: 868px;
 }

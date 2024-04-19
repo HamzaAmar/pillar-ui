@@ -26,7 +26,7 @@ The `useDarkMode` custom hook is a React hook designed to manage and toggle betw
 To use the `useDarkMode` hook in your React project, ensure that it's properly exported and imported from its location:
 
 ```shell
-import { useDarkMode } from './path-to-hooks/useDarkMode';
+import { useDarkMode } from '@pillar-ui/hooks';
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ To utilize the `useDarkMode` hook, simply import it into your component and call
 
 ```tsx title='DarkModeComponent.tsx' showLineNumbers
 import React from 'react'
-import { useDarkMode } from './path-to-hooks/useDarkMode' // Adjust the path accordingly
+import { useDarkMode } from '@pillar-ui/hooks' // Adjust the path accordingly
 
 function DarkModeComponent() {
   const { isDark, toggleMode } = useDarkMode()
