@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const footer = () => {
   return (
-    <footer className="l_flow__sm">
+    <footer>
       <Paper background="surface-3" as={Grid} p="lg" gap="sm" grid="repeat(4, 1fr)" xs="1fr" lg="1fr 1fr">
         <div>
           <Logo width={100} />
@@ -179,7 +179,7 @@ const footer = () => {
           </ul>
         </nav>
       </Paper>
-      <Paper className="u_center" p="md">
+      <Paper className="u_center" p="xs">
         Pillar UI · Made by Hamza Miloud Amar
       </Paper>
     </footer>

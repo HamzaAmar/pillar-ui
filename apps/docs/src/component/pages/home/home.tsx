@@ -1,29 +1,52 @@
-/* eslint-disable @next/next/no-img-element */
-import {
-  Button,
-  Heading,
-  Text,
-  Flex,
-  Paper,
-  Grid,
-  IconButton,
-  Avatar,
-  Input,
-  Chips,
-  Badge,
-  Switch,
-  Alert,
-} from '@pillar-ui/core'
+import { Button, Heading, Text, Flex, Paper, Grid, IconButton, Avatar } from '@pillar-ui/core'
 import { useDarkMode } from '@pillar-ui/hooks'
-
 import { Github, Booking, Discord, Linkdin, Youtube, Dollar, Moon, Sun } from '@pillar-ui/icons'
-import { ACCESSIBILITY, COMING_SUPPORT, SIMPLE_DEVELOPMENT, SUPPORTED } from './home.data'
+import { ACCESSIBILITY, COMING_SUPPORT, FEATURES, SIMPLE_DEVELOPMENT, SUPPORTED, USER_DATA } from './home.data'
 import Link from 'next/link'
-import React, { CSSProperties, useState } from 'react'
+import React from 'react'
+
+function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
+  const { jobTitle, description, followers, fullName, likes } = USER_DATA[type].user
+  return (
+    <article dir={type === 'ar' ? 'rtl' : 'ltr'} className="user--article l_flow__sm">
+      <Flex items="center" justify="between" gap="xs">
+        <Flex gap="sm">
+          <Avatar variant="dashed" />
+          <div>
+            <Text>{fullName}</Text>
+            <Text color="surface" contrast="low" size="xs">
+              {jobTitle}
+            </Text>
+          </div>
+        </Flex>
+        <Button> {type === 'ar' ? 'تابع' : 'Follow'}</Button>
+      </Flex>
+      <div>
+        <Text className="article--description" color="surface" contrast="low" size="sm">
+          {description}
+        </Text>
+      </div>
+      <Flex gap="md">
+        <Text size="sm">
+          <Text as="span" weight="medium">
+            {likes}
+          </Text>{' '}
+          {type === 'ar' ? 'الإعجابات' : 'Likes'}
+        </Text>
+        <Text size="sm">
+          <Text as="span" weight="medium">
+            {followers}
+          </Text>{' '}
+          {type === 'ar' ? 'المتابعون' : 'Followers'}
+        </Text>
+      </Flex>
+    </article>
+  )
+}
 
 function AccessibleSection() {
   return (
-    <Paper corner="lg" p="lg" flow="xl">
+    <Paper className="section" flow="xl">
       <div>
         <Text color="primary" contrast="low" size="lg">
           Our Commitment
@@ -32,14 +55,16 @@ function AccessibleSection() {
           Building Accessible Experiences
         </Heading>
       </div>
-      <Grid gap="md" grid="1fr 1fr 1fr" md="1fr 1fr" sm="1fr">
+      <Grid gap="md" grid="1fr 1fr 1fr" lg="1fr 1fr" sm="1fr">
         {ACCESSIBILITY.map(({ id, title, description, icon }) => (
-          <Paper className="accessibility--item" key={id} flow="2xs">
-            {icon}
+          <Paper className="article--item" key={id} flow="2xs">
             <div className="l_flow__3xs">
-              <Heading as="h3" size="lg">
-                {title}
-              </Heading>
+              <Flex gap="sm" items="center">
+                <div className="article--icon-container u_center">{icon}</div>
+                <Heading as="h3" size="lg">
+                  {title}
+                </Heading>
+              </Flex>
               <Text color="surface" contrast="low">
                 {description}!
               </Text>
@@ -53,12 +78,12 @@ function AccessibleSection() {
 
 function HeroSection() {
   return (
-    <Flex as="section" direction="column" gap="xl" justify="center" className="hero">
+    <Flex as="section" direction="column" gap="xl" justify="center" className="section hero">
       <h1 className="hero--heading">
         <Text as="span" className="pillar--title">
           <svg
             className="pillar--title-container"
-            stroke="#000"
+            stroke="var(--surface-9)"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-miterlimit="1.5"
@@ -100,146 +125,208 @@ function HeroSection() {
         <IconButton color="surface" variant="soft" title="Go to Youtube" icon={<Youtube />} />
         <IconButton color="surface" variant="soft" title="Go to Linkdin" icon={<Linkdin />} />
       </Flex>
-      <div></div>
     </Flex>
   )
 }
 
 function CustomThemeSection() {
   return (
-    <Paper corner="lg" p="lg" flow="xl" className="section">
-      <div>
-        <Heading className="highlight" as="h2" size="3xl" transform="capitalize">
-          Customize You Theme
-        </Heading>
-        <div className="l_flow__sm">
-          <Text color="surface" contrast="low" size="lg">
-            We understand that everyone has different needs and preferences. That&#39;s why we offer a wide range of
-            customization options for our project. You can change the colors, fonts, and layout to match your brand or
-            style.
+    <Paper as={Flex} items="center" justify="center" flow="xl" className="section hello-world">
+      <div className="l_flow__md">
+        <div>
+          <Text size="lg" as="span" color="primary" contrast="low">
+            Change Theme
           </Text>
-          <Text color="surface" contrast="low" size="lg">
-            We recognize the uniqueness of every user. With our easy-to-use customization features, tailor your project
-            to fit your brand&apos;s look and feel. Click on the Change Theme button at the page&apos;s top to access a
-            variety of themes, each with distinct colors, fonts, and layouts. Simply select your desired theme to see
-            the changes in real time. If it&apos;s not quite right, feel free to explore more options or revert as
-            needed. Your perfect theme awaits!
+          <Heading as="h2" size="3xl" transform="uppercase">
+            Custom your perfect look in seconds!
+          </Heading>
+        </div>
+        <div className="l_flow__sm">
+          <Text className="dark--description" color="surface" contrast="low" size="xl">
+            Customize your interface to showcase your personal flair. Adjust CSS variables for colors, fonts, and
+            layouts to craft a design that’s unmistakably your own.
           </Text>
         </div>
       </div>
-      <div className="h_image-container">
-        <img className="h_image" src="/themeChange.png" alt="theme change" />
-      </div>
+      <svg className="under top--start" viewBox="0 0 490 490" height="491" fill="none">
+        <path
+          fill="var(--surface-1)"
+          fill-rule="evenodd"
+          d="m381 112-13-7c-19-7-43-2-62-1l-86 3c-17 1-35 0-52 2-19 3-39-3-57 6-26 13-25 33-25 60l1 108c0 17 1 41 3 58 4 24 25 49 53 48 52 1 109-2 159-4 22 0 49-1 71-7 35-11 32-67 31-95 0-8-4-113-9-142-1-5-2-13-5-18"
+          clip-rule="evenodd"
+        />
+        <g
+          stroke="var(--surface-8)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="10.2"
+        >
+          <path d="m381 112-13-7c-19-7-43-2-62-1l-86 3c-17 1-35 0-52 2-19 3-39-3-57 6-26 13-25 33-25 60l1 108c0 17 1 41 3 58 4 24 25 49 53 48 52 1 109-2 159-4 22 0 49-1 71-7 35-11 32-67 31-95 0-8-4-113-9-142-1-5-2-13-5-18" />
+          <path d="M349 133c-13-2-29 0-38 0-26-1-52 2-78 2-23 1-47 0-69 2-19 3-47-2-47 22l1 86c0 18-4 37-1 55 2 10 6 19 16 21s21 1 31 0l36-1c30-1 140-6 156-8 15-4 18-28 18-40-2-36-3-76-7-123" />
+          <path d="M178 165c-13-5-22 9-24 20-1 10 7 20 16 23 5 2 12 3 17 1 21-7 20-37-1-43M133 316c3-10 9-20 16-28 7-9 14-19 25-24 42-21 83 13 102 49" />
+          <path d="M228 263c-1-12 9-25 15-35 9-13 21-28 37-35 33-13 73 5 90 35" />
+        </g>
+      </svg>
+      <svg className="under under--end" viewBox="0 0 490 490" height="491" fill="none">
+        <path
+          fill="var(--surface-1)"
+          fill-rule="evenodd"
+          d="m381 112-13-7c-19-7-43-2-62-1l-86 3c-17 1-35 0-52 2-19 3-39-3-57 6-26 13-25 33-25 60l1 108c0 17 1 41 3 58 4 24 25 49 53 48 52 1 109-2 159-4 22 0 49-1 71-7 35-11 32-67 31-95 0-8-4-113-9-142-1-5-2-13-5-18"
+          clip-rule="evenodd"
+        />
+        <g
+          stroke="var(--surface-8)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="10.2"
+        >
+          <path d="m381 112-13-7c-19-7-43-2-62-1l-86 3c-17 1-35 0-52 2-19 3-39-3-57 6-26 13-25 33-25 60l1 108c0 17 1 41 3 58 4 24 25 49 53 48 52 1 109-2 159-4 22 0 49-1 71-7 35-11 32-67 31-95 0-8-4-113-9-142-1-5-2-13-5-18" />
+          <path d="M349 133c-13-2-29 0-38 0-26-1-52 2-78 2-23 1-47 0-69 2-19 3-47-2-47 22l1 86c0 18-4 37-1 55 2 10 6 19 16 21s21 1 31 0l36-1c30-1 140-6 156-8 15-4 18-28 18-40-2-36-3-76-7-123" />
+          <path d="M178 165c-13-5-22 9-24 20-1 10 7 20 16 23 5 2 12 3 17 1 21-7 20-37-1-43M133 316c3-10 9-20 16-28 7-9 14-19 25-24 42-21 83 13 102 49" />
+          <path d="M228 263c-1-12 9-25 15-35 9-13 21-28 37-35 33-13 73 5 90 35" />
+        </g>
+      </svg>
     </Paper>
   )
 }
 
 function SimplifyDevelopment() {
   return (
-    <Paper corner="lg" p="lg" flow="lg">
-      <div>
-        <Text color="primary" contrast="low" size="lg">
-          Deliver Projects Faster
-        </Text>
-        <Heading className="highlight" as="h2" size="3xl" transform="capitalize">
-          Effortless UI with Pillar UI
-        </Heading>
+    <Paper as={Flex} items="center" gap="lg" className="section">
+      <div className="simplify-dev--container l_flow__xl">
+        <div>
+          <Text color="primary" contrast="low" size="lg">
+            Deliver Projects Faster
+          </Text>
+          <Heading className="highlight" as="h2" size="3xl" transform="capitalize">
+            Effortless UI with Pillar UI
+          </Heading>
+        </div>
+        <Grid grid="1fr 1fr" md="1fr" gap="md">
+          {SIMPLE_DEVELOPMENT.map(({ title, id, description }) => (
+            <div className="article--item l_flow__2xs" key={id}>
+              <Heading as="h3">{title}</Heading>
+              <Text transform="capitalize" color="surface" contrast="low">
+                {description}
+              </Text>
+            </div>
+          ))}
+        </Grid>
       </div>
-      <Grid grid="1fr 1fr 1fr" lg="1fr 1fr" md="1fr" gap="md">
-        {SIMPLE_DEVELOPMENT.map(({ title, id, description }) => (
-          <Paper borderColor="opacity-6" key={id} background="surface-3" shadow="xs" corner="sm" p="sm" flow="sm">
-            <Heading as="h3" size="lg">
-              {title}
-            </Heading>
-            <Text transform="capitalize" color="surface" contrast="low">
-              {description}
-            </Text>
-          </Paper>
-        ))}
-      </Grid>
+
+      <svg className="simple--develope" viewBox="0 0 490 491" width="300" fill="none">
+        <path
+          fill="var(--surface-1)"
+          fill-rule="evenodd"
+          d="M224 283c-11-8-23-14-35-21-7-5-14-12-21-16-29 50-58 100-81 153 17-7 39-15 54-25 4 19 11 37 16 56 19-52 49-98 68-149"
+          clip-rule="evenodd"
+        />
+        <path
+          stroke="var(--surface-9)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="10.2"
+          d="M224 283c-11-8-23-14-35-21-7-5-14-12-21-16-29 50-58 100-81 153 17-7 39-15 54-25 4 19 11 37 16 56 19-52 49-98 68-149"
+        />
+        <path
+          fill="var(--surface-1)"
+          fill-rule="evenodd"
+          stroke="var(--surface-9)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="10.2"
+          d="M321 256c-13 9-36 23-51 30 7 25 48 120 60 140l12-63c21 10 39 18 62 32-5-10-67-115-83-139Z"
+          clip-rule="evenodd"
+        />
+        <path
+          fill="var(--surface-1)"
+          fill-rule="evenodd"
+          d="M311 93c-9-1-18 2-24 9 5-13-6-30-17-36-18-10-49 3-51 25-18-32-65-17-63 20l-10-5c-30-10-49 35-28 56-27 7-37 53-8 63-31 17-10 77 26 65-2 10-3 23 3 32 10 16 34 22 49 10-1 32 47 36 60 11 21 28 64 17 67-19 7 2 15 5 23 3 24-6 35-35 23-56 28-4 45-53 4-71 15-12 17-33 4-52-7-10-24-12-33-10 4-11 4-23-3-33"
+          clip-rule="evenodd"
+        />
+        <path
+          stroke="var(--surface-9)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="10.2"
+          d="M311 93c-9-1-18 2-24 9 5-13-6-30-17-36-18-10-49 3-51 25-18-32-65-17-63 20l-10-5c-30-10-49 35-28 56-27 7-37 53-8 63-31 17-10 77 26 65-2 10-3 23 3 32 10 16 34 22 49 10-1 32 47 36 60 11 21 28 64 17 67-19 7 2 15 5 23 3 24-6 35-35 23-56 28-4 45-53 4-71 15-12 17-33 4-52-7-10-24-12-33-10 4-11 4-23-3-33"
+        />
+        <path
+          stroke="var(--surface-9)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="10.2"
+          d="M265 120c-43-20-103 8-119 53-18 53-5 108 49 133 40 19 92 13 123-19a96 96 0 0 0-26-155"
+        />
+        <path
+          stroke="var(--surface-9)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="10.2"
+          d="M210 195c13-10 24-21 30-35"
+        />
+        <path fill="var(--surface-1)" fill-rule="evenodd" d="M241 161c-1 31 2 63 0 94v-94Z" clip-rule="evenodd" />
+        <path
+          stroke="var(--surface-9)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="10.2"
+          d="M241 161c-1 31 2 63 0 94"
+        />
+        <path fill="var(--surface-1)" fill-rule="evenodd" d="M207 257c24-3 47-1 70-4l-70 4Z" clip-rule="evenodd" />
+        <path
+          stroke="var(--surface-9)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="10.2"
+          d="M207 257c24-3 47-1 70-4"
+        />
+      </svg>
     </Paper>
   )
 }
 
 function PillarSupport() {
   return (
-    <Paper corner="lg" p="lg" flow="lg">
-      <Heading className="highlight" transform="capitalize" as="h2" size="2xl">
-        Integrated Frameworks
-      </Heading>
-      <Text color="surface" contrast="low" size="lg">
-        At Pillar UI, we believe in providing a seamless development experience by offering compatibility with a wide
-        range of popular frameworks. Our UI library can be effortlessly integrated into your projects, whether
-        you&#39;re using Vite, Create React App, Next.js, Remix, or Gatsby. In the future, we plan to add support for
-        Vite, Qwik, and Svelte JS. Stay tuned!
-      </Text>
-      <Grid gap="md" grid="repeat(4, 1fr)" md="repeat(3, 1fr)" sm="1fr 1fr">
-        {SUPPORTED.map(({ slug, title, icon }) => (
-          <Paper
-            as={Flex}
-            direction="column"
-            borderColor="opacity-6"
-            justify="between"
-            key={slug}
-            corner="lg"
-            background="surface-5"
-            className="supported-item"
-          >
-            <Flex
-              as={Paper}
-              background="surface-5"
-              direction="column"
-              items="center"
-              justify="center"
-              p="sm"
-              className="l_flex-1"
-            >
-              {icon}
-            </Flex>
-            <Paper align="center" as={Text} weight="medium" transform="uppercase" className="supported-title" p="xs">
-              {title}
-            </Paper>
-          </Paper>
-        ))}
-      </Grid>
-      <Heading className="highlight" transform="capitalize" as="h3" size="2xl">
-        Expanding Our Reach
-      </Heading>
-      <Text color="surface" contrast="low" size="lg">
-        Looking towards the future, we are committed to expanding the reach of our design system to support additional
-        frameworks, ensuring that developers using Svelte, Vue, and Qwik can also benefit from our comprehensive set of
-        UI components and design principles.
-      </Text>
-      <Grid gap="md" grid="repeat(4, 1fr)" md="repeat(3, 1fr)" sm="1fr 1fr">
-        {COMING_SUPPORT.map(({ slug, title, icon }) => (
-          <Paper
-            as={Flex}
-            direction="column"
-            borderColor="opacity-6"
-            justify="between"
-            key={slug}
-            corner="lg"
-            background="surface-5"
-            className="supported-item"
-          >
-            <Flex
-              as={Paper}
-              p="sm"
-              background="surface-5"
-              direction="column"
-              items="center"
-              justify="center"
-              className="l_flex-1"
-            >
-              {icon}
-            </Flex>
-            <Paper align="center" as={Text} weight="medium" transform="uppercase" className="supported-title" p="xs">
-              {title}
-            </Paper>
-          </Paper>
-        ))}
-      </Grid>
-    </Paper>
+    <Flex gap="xl" justify="evenly" className="simplify-dev--container section">
+      <div className="l_flow__2xl">
+        <div className="l_flow__md">
+          <div className="l_flow__2xs">
+            <Text color="primary" contrast="low" size="lg">
+              Framework Harmony:
+            </Text>
+            <Heading className="highlight" transform="uppercase" as="h2" size="3xl">
+              Effortless Integration with Pillar UI
+            </Heading>
+          </div>
+          <Text color="surface" contrast="low" size="xl" className="dark--description">
+            Pillar UI adapts to your workflow, enhancing your projects with ease. Stay ahead of the curve with support
+            for emerging technologies.
+          </Text>
+        </div>
+        <Grid items="center" gap="xl" grid="repeat(auto-fit, minmax(180px, 1fr))">
+          {SUPPORTED.map(({ slug, icon }) => (
+            <div key={slug}>{icon}</div>
+          ))}
+        </Grid>
+      </div>
+      <div className="get-started l_flow__sm">
+        <Heading>Lets Getting Start</Heading>
+        <Text size="sm" color="surface" contrast="low">
+          Build faster and lighter. Experience the power of our streamlined design system.
+        </Text>
+        <Button>Get Started</Button>
+      </div>
+    </Flex>
   )
 }
 
@@ -247,7 +334,7 @@ function DarkMode() {
   const { isDark, mode, toggleMode } = useDarkMode()
 
   return (
-    <Paper items="center" justify="center" as={Flex} corner="lg" p="lg" flow="lg" className={`${mode} section`}>
+    <Paper items="center" justify="between" as={Flex} flow="lg" className={`${mode} section`}>
       <div className="l_flow__lg">
         <div className="l_flow__md">
           <div className="l_flow__2xs">
@@ -282,30 +369,13 @@ function DarkMode() {
       </div>
 
       <svg
-        className="under top--start"
         stroke={isDark ? 'var(--warning-11)' : 'var(--surface-8)'}
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-miterlimit="1.5"
         stroke-width="12"
         viewBox="0 0 265 265"
-        fill="none"
-      >
-        <path d="M181 104c-22-43-93-33-103 13-7 29 19 48 23 75h59l8-21c5-11 13-18 15-30 3-11 3-27-2-37Z" />
-        <path
-          d="m100 228-1-25c0-3 0-7 3-9 4-4 10-4 15-4h28c5 0 11-1 15 1s5 8 5 12c1 7 3 23-3 28-4 4-10 5-15 5-13 2-47 1-47-8Z"
-          clip-rule="evenodd"
-        />
-        <path d="m135 237-1 13M31 169l14-7M31 74l16 10M134 35V15M214 79l20-12M203 168l15 14" />
-      </svg>
-      <svg
-        className="under under--end"
-        stroke={isDark ? 'var(--warning-11)' : 'var(--surface-8)'}
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-miterlimit="1.5"
-        stroke-width="12"
-        viewBox="0 0 265 265"
+        width="265"
         fill="none"
       >
         <path d="M181 104c-22-43-93-33-103 13-7 29 19 48 23 75h59l8-21c5-11 13-18 15-30 3-11 3-27-2-37Z" />
@@ -319,101 +389,61 @@ function DarkMode() {
   )
 }
 
-const FEATURES = [
-  {
-    id: '1',
-    title: 'Inclusive Experiences:',
-    description: 'Seamless support for any RTL language.',
-    icon: '🌐',
-  },
-  {
-    id: '2',
-    title: 'Intuitive Design:',
-    description: 'Automatic text alignment and visual order for a natural feel.',
-    icon: '✨',
-  },
-  {
-    id: '3',
-    title: 'Pre-Built RTL Components:',
-    description: 'Effortlessly create interfaces that work across languages.',
-    icon: '🔨',
-  },
-  {
-    id: '4',
-    title: 'Flexible Customization:',
-    description: "Add `dir='rtl'` to target specific areas for complete control.",
-    icon: '🎯',
-  },
-  {
-    id: '5',
-    title: 'Accessibility Focused:',
-    description: 'Design for everyone with RTL optimization at the core.',
-    icon: '🤝',
-  },
-]
-
 function RTLSupport() {
   return (
-    <Paper as={Flex} items="center" justify="center" corner="lg" p="lg" className="section rtl--support">
-      <div className="l_flow__xl">
-        <div className="l_flow__sm">
-          <div>
-            <Text size="lg" as="span" color="primary" contrast="low">
-              Effortless RTL Experiences:
+    <Paper as={Flex} items="center" justify="between" gap="md" className="section rtl--support">
+      <div className="rtl--support--content">
+        <div className="l_flow__lg">
+          <div className="l_flow__xs">
+            <div>
+              <Text size="lg" as="span" color="primary" contrast="low">
+                Effortless RTL Experiences:
+              </Text>
+              <Heading as="h2" size="3xl" transform="uppercase">
+                Right-to-Left Support Built Right In
+              </Heading>
+            </div>
+
+            <Text size="xl" color="surface" contrast="low">
+              Our UI library ensures a welcoming experience for users worldwide.
             </Text>
-            <Heading as="h2" size="3xl" transform="uppercase">
-              Right-to-Left Support Built Right In
-            </Heading>
           </div>
 
-          <Text size="xl" color="surface" contrast="low">
-            Our UI library ensures a welcoming experience for users worldwide.
-          </Text>
+          <Grid grid="1fr 1fr" gap="sm" className="feature-list">
+            {FEATURES.map(({ id, title, description, icon }) => (
+              <Flex key={id} as="li" gap="sm" className="feature--item">
+                <span className="feature-icon">{icon}</span>
+                <div>
+                  <Heading>{title}</Heading>
+                  <Text contrast="low" color="surface">
+                    {description}
+                  </Text>
+                </div>
+              </Flex>
+            ))}
+          </Grid>
         </div>
 
-        <Grid grid="1fr 1fr" gap="sm" className="feature-list">
-          {FEATURES.map(({ id, title, description, icon }) => (
-            <Flex key={id} as="li" gap="sm" className="feature--item">
-              <span className="feature-icon">{icon}</span>
-              <div>
-                <Heading>{title}</Heading>
-                <Text contrast="low" color="surface">
-                  {description}
-                </Text>
-              </div>
-            </Flex>
-          ))}
-        </Grid>
+        <svg
+          className="direction-item--small"
+          stroke="var(--surface-6)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="1.5"
+          stroke-width="6.8"
+          viewBox="0 0 284 284"
+          width="500"
+          fill="none"
+        >
+          <path d="M131 129c13 4 47 19 30 38-18 21-64 8-53-23 4-12 25-15 36-16 32-5 63 2 95 7m-108-6c-27-7-57-1-83 10" />
+          <path d="M45 111c0 13-9 27-17 36 18 1 29 5 39 20M234 107c6 11 14 19 23 28-13 4-23 15-30 26" />
+        </svg>
       </div>
-      <svg
-        className="under top--start"
-        stroke="var(--surface-6)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-miterlimit="1.5"
-        stroke-width="6.8"
-        viewBox="0 0 284 284"
-        width="500"
-        fill="none"
-      >
-        <path d="M131 129c13 4 47 19 30 38-18 21-64 8-53-23 4-12 25-15 36-16 32-5 63 2 95 7m-108-6c-27-7-57-1-83 10" />
-        <path d="M45 111c0 13-9 27-17 36 18 1 29 5 39 20M234 107c6 11 14 19 23 28-13 4-23 15-30 26" />
-      </svg>
 
-      <svg
-        className="under under--end"
-        stroke="var(--surface-6)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-miterlimit="1.5"
-        stroke-width="6.8"
-        viewBox="0 0 284 284"
-        width="500"
-        fill="none"
-      >
-        <path d="M131 129c13 4 47 19 30 38-18 21-64 8-53-23 4-12 25-15 36-16 32-5 63 2 95 7m-108-6c-27-7-57-1-83 10" />
-        <path d="M45 111c0 13-9 27-17 36 18 1 29 5 39 20M234 107c6 11 14 19 23 28-13 4-23 15-30 26" />
-      </svg>
+      <div className="l_flow__sm">
+        <Article type="ar" />
+        <Article />
+      </div>
     </Paper>
   )
 }
