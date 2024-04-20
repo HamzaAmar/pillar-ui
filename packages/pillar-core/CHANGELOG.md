@@ -1,5 +1,32 @@
 # @pillar/core
 
+## 0.7.0
+
+### Minor Changes
+
+- **_Features_**
+
+  - **Enhanced 'Change Theme' and 'RTL Experiences' Section:**
+    - Redesigned color palette selection with improved previews
+    - Streamlined RTL layout switching for smoother transitions
+  - **Site Design Improvements:**
+    - Optimized spacing and typography for better readability
+    - Added visual hierarchy to guide user flow
+  - **Documentation Updates:**
+    - Fixed broken links and outdated examples
+    - Added comprehensive guides for new `customColorPicker` and `rtlMode` props
+
+  **_Fixes_**
+
+  - **Design Issues Resolved:**
+    - Fixed inconsistent button sizing across themes
+    - Addressed overlapping elements in RTL mode
+
+  **_Chore_**
+
+  - **Documentation Updates for New Props:**
+    - Clear explanation of `customColorPicker` and `rtlMode` props with usage examples.
+
 ## 0.6.0
 
 ### Minor Changes
