@@ -1,10 +1,26 @@
+// const direction = ['Top', 'Right', 'Bottom', 'Left']
+
+// function generatedProperties(arr: (string | undefined)[], prefix: string) {
+//   let result = {}
+//   const [shortProperty, ...rest] = arr
+//   if (!!shortProperty) {
+//     result = { [prefix]: `var(--space-${shortProperty})` }
+//   }
+//   rest.forEach((val, index) => {
+//     if (!!val) {
+//       const property = `${prefix}${direction[index]}`
+//       result = { ...result, [property]: `var(--space-${val})` }
+//     }
+//   })
+
+//   return result
+// }
+
 import { forwardRef } from 'react'
 import type { CSSProperties } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { PaperProps } from './paper.type'
 import { classnames } from '@pillar-ui/utils'
-
-const direction = ['Top', 'Right', 'Bottom', 'Left']
 
 // Helper function to generate CSS variable
 function getCSSVariable(value: string | undefined, initial: number = 9) {
@@ -13,77 +29,40 @@ function getCSSVariable(value: string | undefined, initial: number = 9) {
   return `var(--${color}-${degree}, none)`
 }
 
-function generatedProperties(arr: (string | undefined)[], prefix: string) {
-  let result = {}
-  const [shortProperty, ...rest] = arr
-  if (!!shortProperty) {
-    result = { [prefix]: `var(--space-${shortProperty})` }
-  }
-  rest.forEach((val, index) => {
-    if (!!val) {
-      const property = `${prefix}${direction[index]}`
-      result = { ...result, [property]: `var(--space-${val})` }
-    }
-  })
-
-  return result
-}
-
 const paper = forwardRef((props, ref) => {
   let {
+    as: Tag = 'div',
     background,
     color,
     p,
-    plr,
-    ptb,
-    pb = ptb,
-    pt = ptb,
-    pr = plr,
-    pl = plr,
     m,
-    mlr,
-    mtb,
-    mb = mtb,
-    mt = mtb,
-    mr = mlr,
-    ml = mlr,
     b,
-    blr,
-    btb,
-    bb = btb,
-    bt = btb,
-    br = blr,
-    bl = blr,
     shadow,
     width,
     height,
     corner,
-    as: Tag = 'div',
     flow,
+    ratio,
     children,
-    className,
     style = {},
+    className,
     ...rest
   } = props
-  const paddingProperties = generatedProperties([p, pt, pr, pb, pl], 'padding')
-  const marginProperties = generatedProperties([m, mt, mr, mb, ml], 'margin')
-  const borderProperties = generatedProperties([b, bt, br, bb, bl], 'border')
 
   const classNames = classnames(`paper`, {
     [`u_shadow-${shadow}`]: !!shadow,
     [`l_flow__${flow}`]: !!flow,
     [`u_corner-${corner}`]: !!corner,
+    [`u_padding-${p}`]: !!p,
+    [`u_margin-${m}`]: !!m,
+    [`u_width-${width}`]: !!width,
+    [`u_${ratio}`]: !!ratio,
     [className!]: !!className,
   })
 
   const _style: CSSProperties = {
     background: getCSSVariable(background),
     color: getCSSVariable(color, 12),
-    width: `${width}`,
-    height: `${height}`,
-    ...paddingProperties,
-    ...marginProperties,
-    ...borderProperties,
     ...style,
   }
 

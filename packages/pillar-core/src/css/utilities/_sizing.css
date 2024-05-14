@@ -1,0 +1,59 @@
+.u_square {
+  aspect-ratio: 1;
+}
+
+.u_landscape {
+  aspect-ratio: 4/3;
+}
+
+.u_portrait {
+  aspect-ratio: 3/4;
+}
+
+.u_widescreen {
+  aspect-ratio: 16/9;
+}
+
+.u_ultrawide {
+  aspect-ratio: 18/5;
+}
+
+.u_golden {
+  aspect-ratio: 1.618/1;
+}
+
+.u_width-30-char {
+  width: min(30ch, 100%);
+}
+
+.u_width-45-char {
+  width: min(45ch, 100%);
+}
+
+.u_width-60-char {
+  width: min(60ch, 100%);
+}
+
+.u_width-75-char {
+  width: min(75ch, 100%);
+}
+
+.u_width-90-char {
+  width: min(90ch, 100%);
+}
+
+.u_width-half {
+  width: 50%;
+}
+
+.u_width-one-third {
+  width: 33.3%;
+}
+
+.u_width-full {
+  width: 100%;
+}
+
+.u_width-fit-content {
+  width: fit-content;
+}

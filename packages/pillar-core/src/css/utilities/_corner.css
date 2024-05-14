@@ -29,3 +29,47 @@
 .u_corner-full {
   border-radius: var(--corner-full);
 }
+
+.u_corner-hand-1 {
+  border-radius: var(---hand-);
+}
+
+.u_corner-hand-2 {
+  border-radius: var(--corner-hand-2);
+}
+
+.u_corner-hand-3 {
+  border-radius: var(--corner-hand-3);
+}
+
+.u_corner-hand-4 {
+  border-radius: var(--corner-hand-4);
+}
+
+.u_corner-hand-5 {
+  border-radius: var(--corner-hand-5);
+}
+
+.u_corner-hand-6 {
+  border-radius: var(--corner-hand-6);
+}
+
+.u_corner-blob-1 {
+  border-radius: var(--corner-blob-1);
+}
+
+.u_corner-blob-2 {
+  border-radius: var(--corner-blob-2);
+}
+
+.u_corner-blob-3 {
+  border-radius: var(--corner-blob-3);
+}
+
+.u_corner-blob-4 {
+  border-radius: var(--corner-blob-4);
+}
+
+.u_corner-blob-5 {
+  border-radius: var(--corner-blob-5);
+}

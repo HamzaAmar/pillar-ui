@@ -1,30 +1,92 @@
 /* //Spacing Style Section Start */
 .u_spacing-2xs {
-  --spacing: clamp(2px, calc(1.2px + 0.27vw), 4px);
+  --spacing: clamp(2px, 1.2px + 0.27vw, 4px);
 }
 .u_spacing-xs {
-  --spacing: clamp(4px, calc(2.4px + 0.49vw), 8px);
+  --spacing: clamp(4px, 2.4px + 0.49vw, 8px);
 }
 .u_spacing-sm {
-  --spacing: clamp(6px, calc(3.68px + 0.73vw), 12px);
+  --spacing: clamp(6px, 3.68px + 0.73vw, 12px);
 }
 .u_spacing-md {
-  --spacing: clamp(8px, calc(4.8px + 0.98vw), 16px);
+  --spacing: clamp(8px, 4.8px + 0.98vw, 16px);
 }
 .u_spacing-lg {
-  --spacing: clamp(12px, calc(7.3px + 1.46vw), 24px);
+  --spacing: clamp(12px, 7.3px + 1.46vw, 24px);
 }
 .u_spacing-xl {
-  --spacing: clamp(16px, calc(9.76px + 1.95vw), 32px);
+  --spacing: clamp(16px, 9.76px + 1.95vw, 32px);
 }
 .u_spacing-2xl {
-  --spacing: clamp(24px, calc(14.5px + 2.93vw), 48px);
+  --spacing: clamp(24px, 14.5px + 2.93vw, 48px);
 }
 
 .u_spacing-3xl {
-  --spacing: clamp(32px, calc(19.52px + 3.9vw), 64px);
+  --spacing: clamp(32px, 19.52px + 3.9vw, 64px);
 }
 /* //Spacing Style Section End */
+
+/* Padding Utilities */
+.u_padding-2xs {
+  padding: clamp(2px, 1.2px + 0.27vw, 4px);
+}
+
+.u_padding-xs {
+  padding: clamp(4px, 2.4px + 0.49vw, 8px);
+}
+
+.u_padding-sm {
+  padding: clamp(6px, 3.68px + 0.73vw, 12px);
+}
+
+.u_padding-md {
+  padding: clamp(8px, 4.8px + 0.98vw, 16px);
+}
+
+.u_padding-lg {
+  padding: clamp(12px, 7.3px + 1.46vw, 24px);
+}
+
+.u_padding-xl {
+  padding: clamp(16px, 9.76px + 1.95vw, 32px);
+}
+
+.u_padding-2xl {
+  padding: clamp(24px, 14.5px + 2.93vw, 48px);
+}
+
+.u_padding-3xl {
+  padding: clamp(32px, 19.52px + 3.9vw, 64px);
+}
+
+/* Margin Utilities */
+.u_margin-2xs {
+  margin: clamp(2px, 1.2px + 0.27vw, 4px);
+}
+
+.u_margin-xs {
+  margin: clamp(4px, 2.4px + 0.49vw, 8px);
+}
+
+.u_margin-sm {
+  margin: clamp(6px, 3.68px + 0.73vw, 12px);
+}
+
+.u_margin-md {
+  margin: clamp(8px, 4.8px + 0.98vw, 16px);
+}
+
+.u_margin-lg {
+  margin: clamp(12px, 7.3px + 1.46vw, 24px);
+}
+
+.u_margin-xl {
+  margin: clamp(16px, 9.76px + 1.95vw, 32px);
+}
+
+.u_margin-2xl {
+  margin: clamp(24px, 14.5px + 2.93vw, 48px);
+}
 
 .u_mt-auto {
   margin-top: auto;

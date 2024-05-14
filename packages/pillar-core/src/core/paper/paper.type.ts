@@ -1,6 +1,6 @@
 // import type { CSSProperties } from 'react'
 import { CSSProperties } from 'react'
-import type { Color, Corner, Size } from '../../types'
+import type { Color, Corner, Size, Width } from '../../types'
 
 type Step = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12'
 type ColorShade = Color | `${Color}-${Step}`
@@ -35,6 +35,8 @@ export interface Border {
   btb?: string
   blr?: string
 }
+
+export type Ratio = 'square' | 'landscape' | 'portrait' | 'widescreen' | 'ultrawide' | 'golden'
 export interface PaperProps extends Padding, Margin, Border {
   background?: ColorShade
   // color : 'danger' | 'danger' | 'success' | 'success' | 'orange' | 'warning' | 'primary'
@@ -45,10 +47,11 @@ export interface PaperProps extends Padding, Margin, Border {
   padding?: Size
   flow?: Size
   shadow?: Shadow
-  width?: CSSProperties['width']
+  width?: Width
   height?: CSSProperties['height']
   borderPosition?: 'left' | 'right' | 'top' | 'bottom' | 'block' | 'inline' | 'all'
   borderStyle?: CSSProperties['borderStyle']
   borderColor?: ColorShade
   borderWidth?: CSSProperties['borderStyle']
+  ratio?: Ratio
 }
