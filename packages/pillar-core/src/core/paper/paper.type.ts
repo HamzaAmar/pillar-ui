@@ -1,6 +1,6 @@
 // import type { CSSProperties } from 'react'
 import { CSSProperties } from 'react'
-import type { Color, Corner, Size, Width } from '../../types'
+import type { Color, Corner, CornerBlob, CornerHand, Size, Width } from '../../types'
 
 type Step = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12'
 type ColorShade = Color | `${Color}-${Step}`
@@ -42,7 +42,7 @@ export interface PaperProps extends Padding, Margin, Border {
   // color : 'danger' | 'danger' | 'success' | 'success' | 'orange' | 'warning' | 'primary'
   color?: ColorShade
   // corner types 'sharp' | 'xs' | 'sm'  | 'md' | 'lg' | 'xl'| 'circle' | 'full'
-  corner?: Corner
+  corner?: Corner | CornerBlob | CornerHand
   // size types '2xs' | 'xs' | 'sm'  | 'md' | 'lg' | 'xl'| '2xl'
   padding?: Size
   flow?: Size

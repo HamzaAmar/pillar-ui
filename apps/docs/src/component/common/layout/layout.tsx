@@ -56,7 +56,6 @@ export const DocsLayout = ({ children, headings, title, image, ...rest }: DocsLa
   const [open, setOpen] = useState(false)
 
   function handleToggle() {
-    console.log('Hello this is the value of open', open)
     setOpen((open) => !open)
   }
   const router = useRouter()

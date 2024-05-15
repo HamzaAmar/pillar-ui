@@ -2,10 +2,22 @@ import { Avatar, Grid, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 const Box = (props: any) => {
-  return <Paper as={Grid} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+  return (
+    <Paper
+      as={Grid}
+      justify="center"
+      items="center"
+      style={{ height: '30px' }}
+      background="surface-6"
+      corner="sm"
+      {...props}
+    />
+  )
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+const boxes = Array.from({ length: 5 }, (_, index) => (
+  <Box style={{ minHeight: '50px', minWidth: '50px' }} key={index} />
+))
 
 export const GridPlayGround = () => {
   return (

@@ -111,6 +111,8 @@ export const KbdColors = () => {
   )
 }
 
+const Variants = ['solid', 'mixed', 'soft', 'outline'] as const
+
 export const KbdVariants = () => {
   return (
     <Paper
@@ -123,11 +125,17 @@ export const KbdVariants = () => {
       background="surface-3"
       corner="sm"
     >
-      <Kbd title="Esc" />
-      <Kbd title="Esc" variant="solid" color="danger" />
-      <Kbd title="Esc" variant="mixed" color="danger" />
-      <Kbd title="Esc" variant="soft" color="danger" />
-      <Kbd title="Esc" variant="outline" color="danger" />
+      {Variants.map((variant) => (
+        <Flex key={variant} gap="sm">
+          <Kbd title="Esc" variant={variant} />
+          <Kbd title="Esc" variant={variant} color="danger" />
+          <Kbd title="Esc" variant={variant} color="success" />
+          <Kbd title="Esc" variant={variant} color="warning" />
+          <Kbd title="Esc" variant={variant} color="primary" />
+          <Kbd title="Esc" variant={variant} color="surface" />
+          <Kbd title="Esc" variant={variant} color="secondary" />
+        </Flex>
+      ))}
     </Paper>
   )
 }

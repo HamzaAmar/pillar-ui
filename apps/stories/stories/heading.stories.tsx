@@ -307,6 +307,43 @@ export function HeadingRTL() {
   )
 }
 
+export function HeadingWidth() {
+  return (
+    <div className="l_flow__lg">
+      <Heading width="25-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Heading>
+      <Heading width="30-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Heading>
+      <Heading width="45-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Heading>
+      <Heading width="60-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Heading>
+      <Heading width="75-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Heading>
+      <Heading width="90-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Heading>
+    </div>
+  )
+}
+
 const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />
 
 export const Playground = Template.bind({})

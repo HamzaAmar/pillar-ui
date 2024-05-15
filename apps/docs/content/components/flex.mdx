@@ -20,10 +20,20 @@ This property provides you with the ability to manage and adjust the amount of s
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+  return (
+    <Paper
+      as={Flex}
+      justify="center"
+      items="center"
+      style={{ width: '30px', height: '30px' }}
+      background="surface-6"
+      corner="sm"
+      {...props}
+    />
+  )
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
 
 export const FlexGap = () => {
   return (
@@ -51,10 +61,20 @@ This option lets you decide if items inside a container should wrap to the next 
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+  return (
+    <Paper
+      as={Flex}
+      justify="center"
+      items="center"
+      style={{ width: '30px', height: '30px' }}
+      background="surface-6"
+      corner="sm"
+      {...props}
+    />
+  )
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
 
 export const FlexWrap = () => {
   return (
@@ -84,10 +104,20 @@ This attribute defines the orientation in which the flexible items within a Flex
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+  return (
+    <Paper
+      as={Flex}
+      justify="center"
+      items="center"
+      style={{ width: '30px', height: '30px' }}
+      background="surface-6"
+      corner="sm"
+      {...props}
+    />
+  )
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
 
 export const FlexDirection = () => {
   return (
@@ -113,10 +143,20 @@ This property governs the positioning of child elements within a container along
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+  return (
+    <Paper
+      as={Flex}
+      justify="center"
+      items="center"
+      style={{ width: '30px', height: '30px' }}
+      background="surface-6"
+      corner="sm"
+      {...props}
+    />
+  )
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
 
 export const FlexJustify = () => {
   return (
@@ -154,10 +194,20 @@ This property allows you to determine the positioning of child elements along th
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+  return (
+    <Paper
+      as={Flex}
+      justify="center"
+      items="center"
+      style={{ width: '30px', height: '30px' }}
+      background="surface-6"
+      corner="sm"
+      {...props}
+    />
+  )
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
 
 export const FlexItems = () => {
   return (

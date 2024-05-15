@@ -24,7 +24,7 @@ const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   const classNames = classnames(`breadcrumb--link`, { [className!]: !!className })
 
   return (
-    <Flex as="li" gap="2xs" className={`breadcrumb--item`}>
+    <Flex as="li" gap="sm" className={`breadcrumb--item`}>
       <Flex as={as} ref={forwardedRef} gap="2xs" items="center" {...currentPage} className={classNames} {...rest}>
         {children}
       </Flex>
@@ -55,7 +55,7 @@ export const Breadcrumb = forwardRef((props, ref) => {
 
   return (
     <Tag ref={ref} aria-label="Breadcrumb" {...rest}>
-      <Flex className={classNames} as="ol" wrap gap="2xs">
+      <Flex className={classNames} as="ol" wrap gap="sm">
         <BreadcrumbProvider {...breadcrumbContext}>{children}</BreadcrumbProvider>
       </Flex>
     </Tag>

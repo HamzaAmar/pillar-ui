@@ -28,8 +28,6 @@ function ColorItem({ item, value }: ColorItem) {
     copy(colors)
   }
 
-  console.log(item)
-
   return (
     <Grid
       as={Paper}

@@ -22,6 +22,10 @@
   aspect-ratio: 1.618/1;
 }
 
+.u_width-25-char {
+  width: min(25ch, 100%);
+}
+
 .u_width-30-char {
   width: min(30ch, 100%);
 }

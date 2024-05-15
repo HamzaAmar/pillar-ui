@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import type { Color, Size } from '../../types'
+import type { CharWidth, Color, Size } from '../../types'
 
 type Contrast = 'low' | 'high'
 type FontStyle = 'italic' | 'oblique'
@@ -37,6 +37,7 @@ export interface TypographyProps {
   decoration?: Decoration
   leading?: Leading
   truncate?: number
+  width?: CharWidth
 }
 
 // interface MultiLineTypographyTruncate extends TypographyBaseProps {

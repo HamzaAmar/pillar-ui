@@ -74,16 +74,61 @@ const AvatarVariants = () => {
   )
 }
 
+const image = 'https://picsum.photos/id/25/100/100'
+
 const AvatarCorners = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
-      <Avatar image="https://picsum.photos/id/120/100/100" corner="sharp" />
-      <Avatar image="https://picsum.photos/id/120/100/100" corner="xs" />
-      <Avatar image="https://picsum.photos/id/120/100/100" corner="md" />
-      <Avatar image="https://picsum.photos/id/120/100/100" corner="lg" />
-      <Avatar image="https://picsum.photos/id/120/100/100" corner="xl" />
-      <Avatar image="https://picsum.photos/id/120/100/100" corner="circle" />
-      <Avatar image="https://picsum.photos/id/120/100/100" corner="full" />
+    <Paper
+      as={Flex}
+      flow="md"
+      wrap
+      gap="sm"
+      borderColor="opacity-6"
+      p="sm"
+      background="surface-3"
+      corner="sm"
+      items="center"
+    >
+      <Flex gap="xs" items="center">
+        <Avatar corner="sharp" title="Hello" />
+        <Avatar corner="xs" title="Hello" />
+        <Avatar corner="sm" title="Hello" />
+        <Avatar corner="md" title="Hello" />
+        <Avatar corner="lg" title="Hello" />
+        <Avatar corner="xl" title="Hello" />
+        <Avatar corner="full" title="Hello" />
+        <Avatar corner="blob-1" title="Hello" />
+        <Avatar corner="blob-2" title="Hello" />
+        <Avatar corner="blob-3" title="Hello" />
+        <Avatar corner="blob-4" title="Hello" />
+        <Avatar corner="blob-5" title="Hello" />
+        <Avatar corner="hand-1" title="Hello" />
+        <Avatar corner="hand-2" title="Hello" />
+        <Avatar corner="hand-3" title="Hello" />
+        <Avatar corner="hand-4" title="Hello" />
+        <Avatar corner="hand-5" title="Hello" />
+        <Avatar corner="hand-6" title="Hello" />
+      </Flex>
+      <Flex gap="xs" items="center">
+        <Avatar corner="sharp" image={image} title="Hello" />
+        <Avatar corner="xs" image={image} title="Hello" />
+        <Avatar corner="sm" image={image} title="Hello" />
+        <Avatar corner="md" image={image} title="Hello" />
+        <Avatar corner="lg" image={image} title="Hello" />
+        <Avatar corner="xl" image={image} title="Hello" />
+        <Avatar corner="full" image={image} title="Hello" />
+        <Avatar corner="blob-1" image={image} title="Hello" />
+        <Avatar corner="blob-2" image={image} title="Hello" />
+        <Avatar corner="blob-3" image={image} title="Hello" />
+        <Avatar corner="blob-4" image={image} title="Hello" />
+        <Avatar corner="blob-5" image={image} title="Hello" />
+        <Avatar corner="hand-1" image={image} title="Hello" />
+        <Avatar corner="hand-2" image={image} title="Hello" />
+        <Avatar corner="hand-3" image={image} title="Hello" />
+        <Avatar corner="hand-4" image={image} title="Hello" />
+        <Avatar corner="hand-5" image={image} title="Hello" />
+        <Avatar corner="hand-6" image={image} title="Hello" />
+      </Flex>
     </Paper>
   )
 }

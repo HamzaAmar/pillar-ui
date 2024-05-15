@@ -46,7 +46,7 @@ function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
 
 function AccessibleSection() {
   return (
-    <Paper className="section" flow="xl">
+    <Flex direction="column" justify="center" className="section" gap="2xl">
       <div>
         <Text color="primary" contrast="low" size="lg">
           Our Commitment
@@ -58,7 +58,7 @@ function AccessibleSection() {
       <Grid gap="md" grid="1fr 1fr 1fr" lg="1fr 1fr" sm="1fr">
         {ACCESSIBILITY.map(({ id, title, description, icon }) => (
           <Paper className="article--item" key={id} flow="2xs">
-            <div className="l_flow__3xs">
+            <div className="l_flow__xs">
               <Flex gap="sm" items="center">
                 <div className="article--icon-container u_center">{icon}</div>
                 <Heading as="h3" size="lg">
@@ -72,7 +72,7 @@ function AccessibleSection() {
           </Paper>
         ))}
       </Grid>
-    </Paper>
+    </Flex>
   )
 }
 
@@ -302,7 +302,12 @@ function PillarSupport() {
             for emerging technologies.
           </Text>
         </div>
-        <Grid items="center" gap="xl" grid="repeat(auto-fit, minmax(180px, 1fr))">
+        <Grid
+          style={{ position: 'sticky', top: '8rem' }}
+          items="center"
+          gap="xl"
+          grid="repeat(auto-fit, minmax(180px, 1fr))"
+        >
           {SUPPORTED.map(({ slug, icon }) => (
             <div key={slug}>{icon}</div>
           ))}

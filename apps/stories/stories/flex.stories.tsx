@@ -12,11 +12,19 @@ export default {
 } as ComponentMeta<typeof Flex>
 const Box = (props: any) => {
   return (
-    <Paper as={Flex} justify="center" items="center" height="100px" background="surface-6" corner="sm" {...props} />
+    <Paper
+      as={Flex}
+      justify="center"
+      items="center"
+      style={{ height: '100px' }}
+      background="surface-6"
+      corner="sm"
+      {...props}
+    />
   )
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box width="100px" key={index} />)
+const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
 
 export const FlexGap = () => {
   return (

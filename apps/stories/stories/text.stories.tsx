@@ -302,8 +302,44 @@ export function TextRTL() {
         ميل) جنوب شرق العاصمة المغربية الرباط، 239 كم (149 ميل) جنوب شرق الدار البيضاء، و 246 كم (153 ميل) شمال شرق
         أكادير.
       </Text>
-      <Text dir="rtl">ללמוד לקוד זה אחד הדברים הכי טובים שאני עושה כל חיי</Text>
       <Text dir="rtl">ކޯޑް ކުރަން ދަސްކުރުމަކީ އަހަރެންގެ މުޅި އުމުރުގައި ވެސް ކުރި އެންމެ ރަނގަޅު ކަމެކެވެ</Text>
+    </div>
+  )
+}
+
+export function TextWidth() {
+  return (
+    <div className="l_flow__lg">
+      <Text width="25-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Text>
+      <Text width="30-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Text>
+      <Text width="45-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Text>
+      <Text width="60-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Text>
+      <Text width="75-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Text>
+      <Text width="90-char">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
+        cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque
+        ad quae repudiandae quam!
+      </Text>
     </div>
   )
 }

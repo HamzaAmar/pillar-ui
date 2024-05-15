@@ -19,13 +19,13 @@ export const Text = forwardRef((props, forwardedRef) => {
     fontStyle,
     contrast = 'high',
     children,
+    width,
     ...rest
   } = props
 
   const classNames = classnames(`typography`, {
     [`u_size-${size}`]: !!size,
     [`u_truncate`]: !!truncate,
-    [`${className}`]: !!className,
     [`u_transform__${transform}`]: !!transform,
     [`u_align__${align}`]: !!align,
     [`u_font-${weight}`]: !!weight,
@@ -33,6 +33,8 @@ export const Text = forwardRef((props, forwardedRef) => {
     [`u_leading__${leading}`]: !!leading,
     [`u_style__${fontStyle}`]: !!fontStyle,
     [`u_${color}`]: !!color,
+    [`u_width-${width}`]: !!width,
+    [`${className}`]: !!className,
   })
   const contrastLvl = contrast === 'high' ? 12 : 11
   const _style = {

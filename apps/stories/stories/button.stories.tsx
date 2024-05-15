@@ -152,7 +152,7 @@ export function ButtonsCorners() {
   return (
     <div className="l_flow__md">
       <h1>Regular</h1>
-      <Flex gap="sm">
+      <Flex gap="sm" wrap>
         <Button corner="sharp" color="success">
           Green
         </Button>
@@ -169,6 +169,25 @@ export function ButtonsCorners() {
           Surface
         </Button>
         <Button corner="xl" color="primary">
+          Primary
+        </Button>
+        <Button corner="hand-1" color="primary">
+          Primary
+        </Button>
+        <Button corner="hand-2" color="primary">
+          Primary
+        </Button>
+        <Button corner="hand-3" color="primary">
+          Primary
+        </Button>
+
+        <Button corner="hand-4" color="primary">
+          Primary
+        </Button>
+        <Button corner="hand-5" color="primary">
+          Primary
+        </Button>
+        <Button corner="hand-6" color="primary">
           Primary
         </Button>
       </Flex>

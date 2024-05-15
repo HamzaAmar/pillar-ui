@@ -1,11 +1,11 @@
 import { ReactElement, ReactNode } from 'react'
-import type { Color, Corner, Size, Variant } from '../../types'
+import type { Color, Corner, CornerBlob, CornerHand, Size, Variant } from '../../types'
 
 type Animate = 'zoom' | 'jump-y' | 'jump-x'
 
 interface AvatarBase {
   size?: Size
-  corner?: Corner
+  corner?: Corner | CornerBlob | CornerHand
   color?: Color
   variant?: Omit<Variant, 'text'> | 'dashed'
   animate?: Animate

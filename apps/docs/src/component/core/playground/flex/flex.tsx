@@ -2,10 +2,20 @@ import { Avatar, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" height="30px" background="surface-6" corner="sm" {...props} />
+  return (
+    <Paper
+      as={Flex}
+      justify="center"
+      items="center"
+      style={{ width: '30px', height: '30px' }}
+      background="surface-6"
+      corner="sm"
+      {...props}
+    />
+  )
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box width="30px" key={index} />)
+const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
 
 export const FlexPlayGround = () => {
   return (
@@ -86,13 +96,13 @@ export const FlexJustify = () => {
 export const FlexItems = () => {
   return (
     <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
-      <Flex as={Paper} height="100px" background="surface-5" gap="sm" items="center">
+      <Flex as={Paper} style={{ height: '100px' }} background="surface-5" gap="sm" items="center">
         Hello
       </Flex>
-      <Flex as={Paper} height="100px" background="surface-5" gap="sm" items="end">
+      <Flex as={Paper} style={{ height: '100px' }} background="surface-5" gap="sm" items="end">
         Hello
       </Flex>
-      <Flex as={Paper} height="100px" background="surface-5" gap="sm">
+      <Flex as={Paper} style={{ height: '100px' }} background="surface-5" gap="sm">
         Hello
       </Flex>
     </Paper>

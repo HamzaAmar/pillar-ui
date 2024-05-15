@@ -19,7 +19,7 @@ Example:
 
 <KbdPlayGround.Title />
 
-```tsx
+```tsx showLineNumbers title="Home.tsx"
 <Kbd title="Esc" />
 ```
 
@@ -33,7 +33,7 @@ The color prop is used to specify the background color of the Kbd component. It 
 
 <KbdPlayGround.Colors />
 
-```tsx
+```tsx showLineNumbers title="Home.tsx"
 <Kbd title="Esc" />
 <Kbd title="Esc" color="danger" />
 <Kbd title="Esc" color="success" />
@@ -53,7 +53,7 @@ The size prop is used to specify the size of the Kbd component. It supports vari
 
 <KbdPlayGround.Sizes />
 
-```tsx
+```tsx showLineNumbers title="Home.tsx"
 <Kbd title="Esc" />
 <Kbd title="Esc" size="2xs" />
 <Kbd title="Esc" size="xs" />
@@ -70,7 +70,7 @@ The corner prop is used to specify the corner style of the Kbd component. It sup
 
 <KbdPlayGround.Corners />
 
-```tsx
+```tsx showLineNumbers title="Home.tsx"
 <Kbd title="Esc" corner="sharp" />
 <Kbd title="Esc" />
 <Kbd title="Esc" corner="xs" />
@@ -86,22 +86,46 @@ The variant prop is used to specify the style of the KDB component. It supports 
 
 Example:
 
-<ChipsPlayGround.Variants />
+<KbdPlayGround.Variants />
 
-```tsx showLineNumbers title="Chips.tsx"
+```tsx showLineNumbers title="Home.tsx" showLineNumbers title="Chips.tsx"
 <Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
-  <Chips color="success" variant="solid">
-    Hello
-  </Chips>
-  <Chips color="success" variant="outline">
-    Hello
-  </Chips>
-  <Chips color="success" variant="soft">
-    Hello
-  </Chips>
-  <Chips color="success" variant="mixed">
-    Hello
-  </Chips>
+  <Flex gap="sm">
+    <Kbd title="Esc" variant="solid" />
+    <Kbd title="Esc" variant="solid" color="danger" />
+    <Kbd title="Esc" variant="solid" color="success" />
+    <Kbd title="Esc" variant="solid" color="warning" />
+    <Kbd title="Esc" variant="solid" color="primary" />
+    <Kbd title="Esc" variant="solid" color="surface" />
+    <Kbd title="Esc" variant="solid" color="secondary" />
+  </Flex>
+  <Flex gap="sm">
+    <Kbd title="Esc" variant="outline" />
+    <Kbd title="Esc" variant="outline" color="danger" />
+    <Kbd title="Esc" variant="outline" color="success" />
+    <Kbd title="Esc" variant="outline" color="warning" />
+    <Kbd title="Esc" variant="outline" color="primary" />
+    <Kbd title="Esc" variant="outline" color="surface" />
+    <Kbd title="Esc" variant="outline" color="secondary" />
+  </Flex>
+  <Flex gap="sm">
+    <Kbd title="Esc" variant="mixed" />
+    <Kbd title="Esc" variant="mixed" color="danger" />
+    <Kbd title="Esc" variant="mixed" color="success" />
+    <Kbd title="Esc" variant="mixed" color="warning" />
+    <Kbd title="Esc" variant="mixed" color="primary" />
+    <Kbd title="Esc" variant="mixed" color="surface" />
+    <Kbd title="Esc" variant="mixed" color="secondary" />
+  </Flex>
+  <Flex gap="sm">
+    <Kbd title="Esc" variant="soft" />
+    <Kbd title="Esc" variant="soft" color="danger" />
+    <Kbd title="Esc" variant="soft" color="success" />
+    <Kbd title="Esc" variant="soft" color="warning" />
+    <Kbd title="Esc" variant="soft" color="primary" />
+    <Kbd title="Esc" variant="soft" color="surface" />
+    <Kbd title="Esc" variant="soft" color="secondary" />
+  </Flex>
 </Paper>
 ```
 

@@ -3,7 +3,7 @@ import React from 'react'
 
 export const BlockquotePlayGround = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm" flow="sm">
+    <Paper p="sm" background="surface-2" corner="sm" flow="sm">
       <Blockquote corner="sharp" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -12,7 +12,7 @@ export const BlockquotePlayGround = () => {
 }
 const BlockquoteCorner = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm" flow="sm">
+    <Paper p="sm" background="surface-2" corner="sm" flow="sm">
       <Blockquote corner="sharp" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -40,7 +40,7 @@ const BlockquoteCorner = () => {
 
 const BlockquoteColor = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm" flow="sm">
+    <Paper p="sm" background="surface-2" corner="sm" flow="sm">
       <Blockquote color="danger" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -53,7 +53,6 @@ const BlockquoteColor = () => {
       <Blockquote color="primary" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      sd
       <Blockquote color="secondary" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -66,7 +65,7 @@ const BlockquoteColor = () => {
 
 const BlockquoteSize = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm" flow="sm">
+    <Paper p="sm" background="surface-2" corner="sm" flow="sm">
       <Blockquote size="2xs" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -79,7 +78,6 @@ const BlockquoteSize = () => {
       <Blockquote size="md" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      sd
       <Blockquote size="lg" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -93,6 +91,34 @@ const BlockquoteSize = () => {
   )
 }
 
+export const BlockquoteCite = () => {
+  return (
+    <div className="l_flow__md">
+      <Blockquote color="danger">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
+        exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
+        Repellat libero quibusdam repellendus quisquam?
+        <Blockquote.Cite title="Hello world" />
+      </Blockquote>
+
+      <Blockquote color="danger">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
+        exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
+        Repellat libero quibusdam repellendus quisquam?
+        <Blockquote.Cite title="Hello world" align="end" />
+      </Blockquote>
+
+      <Blockquote color="danger">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
+        exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
+        Repellat libero quibusdam repellendus quisquam?
+        <Blockquote.Cite title="Hello world" align="center" />
+      </Blockquote>
+    </div>
+  )
+}
+
 BlockquotePlayGround.Corners = BlockquoteCorner
 BlockquotePlayGround.Colors = BlockquoteColor
 BlockquotePlayGround.Sizes = BlockquoteSize
+BlockquotePlayGround.Cite = BlockquoteCite

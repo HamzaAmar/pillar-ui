@@ -122,3 +122,22 @@ html.dark [data-rehype-pretty-code-fragment] [data-theme='light'] {
 html.light [data-rehype-pretty-code-fragment] [data-theme='dark'] {
   display: none;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--surface-6);
+}
+
+td {
+  padding: 0.75rem;
+}
+
+th {
+  padding: 0.5rem;
+}

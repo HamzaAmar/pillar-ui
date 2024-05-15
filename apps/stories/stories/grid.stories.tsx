@@ -19,7 +19,7 @@ export const EqualColumns = () => {
   return (
     <Grid gap="xs" grid="repeat(20, 1fr)">
       {Array.from({ length: 288 }, (_, index) => (
-        <Box height="30px" key={index}>
+        <Box style={{ height: '30px' }} key={index}>
           {index}
         </Box>
       ))}

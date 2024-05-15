@@ -34,7 +34,6 @@ export const Button = forwardRef((props, forwardedRef) => {
   const classNames = classnames(`btn btn__${variant} u_${color} u_singleline`, {
     [className!]: !!className,
     btn__fluid: !!fluid,
-
     [`u_transform__${transform}`]: !!transform,
     [`u_size-${size}`]: !!size,
     [`u_corner-${corner}`]: !!corner,

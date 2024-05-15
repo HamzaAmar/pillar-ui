@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
-import type { Color, Size, Corner, Variant, Direction, Transform } from '../../types'
+import type { Color, Size, Corner, Variant, Direction, Transform, CornerHand } from '../../types'
 
 // type VariantUnion = Variant | 'link' | 'text'
 type Position = 'start' | 'end'
@@ -28,11 +28,12 @@ interface BaseButton {
  * @param {ReactElement} [props.icon]  - The icon of the button.
  * @param {Position} [props.iconPosition = 'start'] - The icon of the button.
  */
-export interface ButtonProps extends BaseButton {
+export interface ButtonProps extends Omit<BaseButton, 'corner'> {
   iconPosition?: Position
   fluid?: boolean
   children: ReactNode
   shadow?: boolean
+  corner?: Corner | CornerHand
 }
 
 export interface IconButtonProps extends BaseButton {

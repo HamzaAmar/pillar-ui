@@ -6,9 +6,11 @@ export function ButtonPlayGround() {
   return <div>Hello</div>
 }
 
+const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text'] as const
+
 function ButtonColors() {
   return (
-    <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" borderColor="opacity-6" flow="md" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
         <Button color="danger">Hello World</Button>
         <Button color="warning">Hello World</Button>
@@ -85,23 +87,29 @@ function ButtonCorners() {
 
 function ButtonVariants() {
   return (
-    <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
-      <Flex gap="sm" items="center" wrap>
-        <Button variant="solid">Hello World</Button>
-        <Button variant="mixed">Hello World</Button>
-        <Button variant="soft">Hello World</Button>
-        <Button variant="outline">Hello World</Button>
-        <Button variant="text">Hello World</Button>
-        <Button variant="link">Hello World</Button>
-      </Flex>
-
-      <Flex gap="sm" items="center" wrap>
-        <IconButton title="Heelo" icon={<ZoomPlus />} variant="text" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} variant="solid" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} variant="mixed" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} variant="soft" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} variant="outline" />
-      </Flex>
+    <Paper className="playground" flow="xl" p="sm" background="surface-3" corner="sm">
+      {VARIANTS.map((variant) => (
+        <Flex key={variant} gap="sm">
+          <Button color="success" variant={variant}>
+            Green
+          </Button>
+          <Button color="warning" variant={variant}>
+            Orange
+          </Button>
+          <Button color="danger" variant={variant}>
+            Red
+          </Button>
+          <Button color="secondary" variant={variant}>
+            Secondary
+          </Button>
+          <Button color="surface" variant={variant}>
+            Surface
+          </Button>
+          <Button color="primary" variant={variant}>
+            Primary
+          </Button>
+        </Flex>
+      ))}
     </Paper>
   )
 }

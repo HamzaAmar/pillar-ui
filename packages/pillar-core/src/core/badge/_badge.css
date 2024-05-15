@@ -10,11 +10,6 @@
   background-color: var(--color-shared-9);
   color: white;
 
-  &.badge--high-contrast {
-    background-color: var(--color-shared-12);
-    color: var(--surface-1);
-    border: 2px solid var(--color-shared-11);
-  }
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to

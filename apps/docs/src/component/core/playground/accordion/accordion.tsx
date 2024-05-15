@@ -1,4 +1,4 @@
-import { Accordion, Paper } from '@pillar-ui/core'
+import { Accordion, Heading, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 function AccordionBase(props: any) {
@@ -86,9 +86,16 @@ const AccordionCorners = () => {
 
 const AccordionType = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
-      <AccordionBase type="single" />
-      <AccordionBase type="multiple" />
+    <Paper className="playground" borderColor="opacity-6" flow="xl" p="sm" background="surface-3" corner="sm">
+      <div className="l_flow__sm">
+        <Heading>Accordion Type Single</Heading>
+        <AccordionBase type="single" />
+      </div>
+
+      <div className="l_flow__sm">
+        <Heading>Accordion Type Multiple</Heading>
+        <AccordionBase type="multiple" />
+      </div>
     </Paper>
   )
 }

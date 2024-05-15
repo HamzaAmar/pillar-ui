@@ -65,7 +65,6 @@ export const HeadingRTL = () => {
         ميل) جنوب شرق العاصمة المغربية الرباط، 239 كم (149 ميل) جنوب شرق الدار البيضاء، و 246 كم (153 ميل) شمال شرق
         أكادير.
       </Heading>
-      <Heading dir="rtl">ללמוד לקוד זה אחד הדברים הכי טובים שאני עושה כל חיי</Heading>
       <Heading dir="rtl">ކޯޑް ކުރަން ދަސްކުރުމަކީ އަހަރެންގެ މުޅި އުމުރުގައި ވެސް ކުރި އެންމެ ރަނގަޅު ކަމެކެވެ</Heading>
     </Paper>
   )
@@ -74,27 +73,9 @@ export const HeadingRTL = () => {
 export const HeadingAlign = () => {
   return (
     <Paper className="playground" borderColor="opacity-6" p="sm" flow="md" background="surface-3" corner="sm">
-      <Heading align="start">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-      <Heading align="center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-      <Heading align="end">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
+      <Heading align="start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe,</Heading>
+      <Heading align="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe,</Heading>
+      <Heading align="end">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe,</Heading>
     </Paper>
   )
 }

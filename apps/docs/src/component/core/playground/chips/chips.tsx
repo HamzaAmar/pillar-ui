@@ -28,13 +28,34 @@ export const BadgeSizes = () => {
     </Paper>
   )
 }
+const VARIANTS = ['solid', 'mixed', 'soft', 'outline'] as const
 
 export const BadgeVariants = () => {
   return (
-    <Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
-      <Chips variant="solid">Hello</Chips>
-      <Chips variant="outline">Hello</Chips>
-      <Chips variant="soft">Hello</Chips>
+    <Paper as={Flex} direction="column" gap="xl" p="sm" background="surface-2" corner="sm">
+      {VARIANTS.map((variant) => (
+        <Flex key={variant} gap="xs">
+          <Chips color="danger" variant={variant}>
+            Hello
+          </Chips>
+          <Chips color="warning" variant={variant}>
+            Hello
+          </Chips>
+          <Chips color="success" variant={variant}>
+            Hello
+          </Chips>
+
+          <Chips color="primary" variant={variant}>
+            Hello
+          </Chips>
+          <Chips color="secondary" variant={variant}>
+            Hello
+          </Chips>
+          <Chips color="surface" variant={variant}>
+            Hello
+          </Chips>
+        </Flex>
+      ))}
     </Paper>
   )
 }
