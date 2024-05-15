@@ -11,7 +11,10 @@ import { Popover } from '../popover'
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const [TooltipProvider, useTooltipContext] = createContext<TooltipContext>('TooltipRoot')
+const [TooltipProvider, useTooltipContext] = createContext<TooltipContext>({
+  name: 'TooltipRoot',
+  isContextRequired: true,
+})
 
 const tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, size = 'sm', ...rest }, forwardedRef) => {
   const [open, setOpen] = useState(false)

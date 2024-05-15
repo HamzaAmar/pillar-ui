@@ -23,8 +23,14 @@ import { Text } from '../typography'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const [AccordionItemProvider, useAccordionItemContext] = createContext<AccordionItemContextProps>('AccordionItem')
-const [AccordionProvider, useAccordionContext] = createContext<AccordionContextProps>('Accordion')
+const [AccordionItemProvider, useAccordionItemContext] = createContext<AccordionItemContextProps>({
+  name: 'AccordionItem',
+  isContextRequired: true,
+})
+const [AccordionProvider, useAccordionContext] = createContext<AccordionContextProps>({
+  name: 'Accordion',
+  isContextRequired: true,
+})
 
 const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) => {
   const id = useId()

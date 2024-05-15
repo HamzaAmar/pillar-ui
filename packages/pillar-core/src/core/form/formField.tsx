@@ -17,8 +17,10 @@ import type {
   InputSearchProps,
 } from './form.type'
 
-const [FormControllerProvider, useFormController] = createContext<FormControllerContextProps>('FormController')
-const [FormGroupProvider, useFormGroup] = createContext<FormGroupContextProps>('FormGroup')
+const [FormControllerProvider, useFormController] = createContext<FormControllerContextProps>({
+  name: 'FormController',
+})
+const [FormGroupProvider, useFormGroup] = createContext<FormGroupContextProps>({ name: 'FormGroup' })
 
 /*
 ===================================================================================================

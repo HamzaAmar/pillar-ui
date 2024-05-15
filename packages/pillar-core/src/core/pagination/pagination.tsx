@@ -4,7 +4,10 @@ import { ChevronDown, DotsHorizontal } from '@pillar-ui/icons'
 import { usePagination } from '@pillar-ui/hooks'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 
-const [PaginationProvider, usePaginationContext] = createContext<PaginationContextProps>('Pagination')
+const [PaginationProvider, usePaginationContext] = createContext<PaginationContextProps>({
+  name: 'Pagination',
+  isContextRequired: true,
+})
 
 import type { PaginationContextProps, PaginationItem, PaginationProps } from './pagination.type'
 import { createContext } from '@pillar-ui/utils'

@@ -7,7 +7,7 @@ import { classnames, createContext } from '@pillar-ui/utils'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { Text } from '../typography'
 
-const [AvatarProvider, useAvatarContext] = createContext<AvatarGroupContextProps>('Avatar')
+const [AvatarProvider, useAvatarContext] = createContext<AvatarGroupContextProps>({ name: 'Avatar' })
 
 /*  
 =================================================================================

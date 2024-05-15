@@ -11,7 +11,10 @@ import { createContext } from '@pillar-ui/utils'
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const [BreadcrumbProvider, useBreadcrumbContext] = createContext<BreadcrumbContextProps>('Breadcrumb')
+const [BreadcrumbProvider, useBreadcrumbContext] = createContext<BreadcrumbContextProps>({
+  name: 'Breadcrumb',
+  isContextRequired: true,
+})
 
 interface CurrentPage {
   'aria-current'?: 'page'

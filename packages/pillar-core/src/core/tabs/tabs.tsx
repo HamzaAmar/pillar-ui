@@ -43,8 +43,6 @@
 //   const context = useTabsContext()
 //   const id = `${context?.id}-panel`
 
-//   console.log(context?.selected, value, context?.selected === value)
-
 //   return (
 //     <button
 //       onClick={() => context?.handleSelect(value)}

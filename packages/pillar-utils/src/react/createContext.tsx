@@ -1,12 +1,20 @@
 import { ReactElement, createContext as createContextReact, useContext } from 'react'
 import type { ReactNode } from 'react'
 
-export function createContext<T extends object | null>(
-  componentName: string,
-  initialVal?: T,
-  error: string = 'useContext must be used within a Provider.'
-) {
-  const Context = createContextReact<T | undefined>(initialVal)
+interface CreateContextParams<T> {
+  name: string
+  initValue?: T
+  error?: string
+  isContextRequired?: boolean
+}
+
+export function createContext<T extends object | null>({
+  name,
+  initValue,
+  error = 'useContext must be used within a Provider.',
+  isContextRequired = false,
+}: CreateContextParams<T>) {
+  const Context = createContextReact<T | undefined>(initValue)
 
   function Provider({ children, ...rest }: T & { children: ReactNode }): ReactElement {
     return <Context.Provider value={rest as T}>{children}</Context.Provider>
@@ -14,13 +22,13 @@ export function createContext<T extends object | null>(
 
   function useContextCustom() {
     const context = useContext(Context)
-    if (!context) {
+    if (!context && !!isContextRequired) {
       console.warn(error)
     }
     return context
   }
 
-  Provider.displayName = `${componentName}-Context`
+  Provider.displayName = `${name}-Context`
 
   return [Provider, useContextCustom] as const
 }

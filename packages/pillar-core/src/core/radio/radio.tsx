@@ -10,7 +10,7 @@ import { CircleCheck } from '@pillar-ui/icons'
 ===================================================================================================
 */
 
-const [RadioProvider, useRadioContext] = createContext<RadioContextProps>('Radio')
+const [RadioProvider, useRadioContext] = createContext<RadioContextProps>({ name: 'Radio' })
 
 export const CustomRadio = (props: CustomRadioProps) => {
   const provider = useRadioContext()

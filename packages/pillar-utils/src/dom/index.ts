@@ -21,6 +21,4 @@ export function ejectModeClassName() {
   //   element.classList.remove(prevMode)
   // }
   // element.classList.add(mode)
-
-  console.log('Hello')
 }

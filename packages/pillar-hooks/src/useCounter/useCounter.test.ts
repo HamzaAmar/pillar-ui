@@ -10,7 +10,6 @@ describe('useCounter custom hook', () => {
     act(() => {
       result.current.increment()
     })
-    // console.log('this is the value of count to be 11', 'but it get', result.current.count)
     expect(result.current.count).toBe(11)
 
     act(() => {
