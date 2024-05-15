@@ -21,7 +21,7 @@
 */
 
 .accordion--item {
-  border-block-end: 1px solid var(--surface-6);
+  border-block-end: 1px solid var(--opacity-6);
   overflow: hidden;
 
   /*
@@ -33,19 +33,12 @@
   font-size: var(--accordion-size, 1rem);
 }
 
-.accordion--item__solid {
-  background-color: var(--color-shared-8);
+.u_solid {
   border-color: var(--color-shared-9);
-  color: var(--color-shared-12);
 }
-.accordion--item__soft {
-  border-color: var(--color-shared-11);
-  color: var(--color-shared-11);
-}
-.accordion--item__outline {
+
+.u_outline {
   background-color: var(--color-shared-2);
-  color: var(--color-shared-11);
-  border: 1px solid var(--color-shared-6);
 }
 .accordion--item__outline:not(:first-child) {
   border-top: none;

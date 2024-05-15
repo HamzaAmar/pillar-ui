@@ -5,7 +5,7 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 
 const kbd = forwardRef(
   ({ title, variant = 'solid', color = 'primary', size, corner, className, transform, ...rest }, ref) => {
-    const classNames = classnames(`kdb kdb__${variant} u_${color}`, {
+    const classNames = classnames(`kdb u_${variant} u_${color}`, {
       [`u_transform__${transform}`]: !!transform,
       [`u_size-${size}`]: !!size,
       [`u_corner-${corner}`]: !!corner,

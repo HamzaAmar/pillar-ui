@@ -1,10 +1,8 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { classnames } from '@pillar-ui/utils'
-import { Flex } from '../flex'
 import { Spinner } from '../spinner'
 import type { ButtonGroupProps, ButtonProps, IconButtonProps } from './button.type'
-import { Text } from '../typography'
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,46 +24,39 @@ export const Button = forwardRef((props, forwardedRef) => {
     disabled,
     transform,
     fluid,
-    as = 'button',
+    as: Tag = 'button',
     ...rest
   } = props
-  const startIcon = iconPosition === 'start' && icon
-  const endIcon = iconPosition === 'end' && icon
-  const classNames = classnames(`btn btn__${variant} u_${color} u_singleline`, {
+
+  const classNames = classnames(`btn u_${variant} u_${color} u_center`, {
     [className!]: !!className,
     btn__fluid: !!fluid,
     [`u_transform__${transform}`]: !!transform,
     [`u_size-${size}`]: !!size,
     [`u_corner-${corner}`]: !!corner,
   })
+
   const _disabled = disabled || state === 'loading'
 
+  const content = (
+    <>
+      {iconPosition === 'start' && icon}
+      <span className="btn--text u_truncate">{children}</span>
+      {iconPosition === 'end' && icon}
+    </>
+  )
+
+  const loadingContent = (
+    <>
+      <span> Loading... </span>
+      <Spinner color="surface" size={size} />
+    </>
+  )
+
   return (
-    <Flex
-      as={as}
-      gap="2xs"
-      items="center"
-      justify="center"
-      disabled={_disabled}
-      ref={forwardedRef}
-      className={classNames}
-      {...rest}
-    >
-      {state === 'loading' ? (
-        <>
-          <span> Loading... </span>
-          <Spinner color="surface" size={size} />
-        </>
-      ) : (
-        <>
-          {startIcon}
-          <Text truncate={1} className="btn--text">
-            {children}
-          </Text>
-          {endIcon}
-        </>
-      )}
-    </Flex>
+    <Tag disabled={_disabled} ref={forwardedRef} className={classNames} {...rest}>
+      {state === 'loading' ? loadingContent : content}
+    </Tag>
   )
 }) as ForwardRefComponent<'button', ButtonProps>
 
@@ -92,7 +83,7 @@ export const IconButton = forwardRef(
     },
     forwardedRef
   ) => {
-    const iconButtonClassName = classnames(`icon-button btn btn__${variant} u_${color} u_center`, {
+    const iconButtonClassName = classnames(`icon-button btn u_${variant} u_${color} u_center`, {
       [className!]: !!className,
       [`u_size-${size}`]: !!size,
       [`u_corner-${corner}`]: !!corner,

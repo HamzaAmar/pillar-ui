@@ -6,22 +6,23 @@ interface BadgeBaseProps {
   color?: Color
   corner?: Corner
   highContrast?: boolean
+  variant?: 'solid' | 'mixed'
 }
 
 interface BadgeNumericProps extends BadgeBaseProps {
-  variant: 'numeric'
+  type: 'numeric'
   number: number
   max?: number
   showZero?: boolean
 }
 
 interface IconBadgeProps extends BadgeBaseProps {
-  variant: 'icon'
+  type: 'icon'
   icon: ReactElement
 }
 
 interface BadgeDotProps extends BadgeBaseProps {
-  variant: 'dot'
+  type: 'dot'
 }
 
 export type BadgeProps = BadgeNumericProps | BadgeDotProps | IconBadgeProps

@@ -7,36 +7,34 @@ import { Flex } from '../flex'
 
 const badge = forwardRef((props, ref) => {
   let {
-    highContrast = false,
+    variant = 'solid',
     color = 'primary',
     size = 'md',
     as: Tag = 'div',
-    variant = 'numeric',
+    type = 'numeric',
     corner,
     className,
     ...rest
   } = props
-
-  const classNames = classnames(`badge u_center u_${color} `, {
-    badge__dot: variant === 'dot',
+  const classNames = classnames(`badge u_${variant} u_center u_${color} `, {
+    badge__dot: type === 'dot',
     [className!]: !!className,
     [`u_size-${size}`]: !!size,
     [`u_corner-${corner}`]: !!corner,
-    ['badge--high-contrast']: highContrast,
   })
 
   /*
    I make this because dot Variant those not have value and max props and we need this condition
-   statement for typescript Look for discriminated union I use Props.variant === 'numeric' does not support
+   statement for typescript Look for discriminated union I use Props.type === 'numeric' does not support
    for destructring with default value
   */
   let displayValue
-  const isNumeric = props.variant === 'numeric'
+  const isNumeric = props.type === 'numeric'
 
   if (isNumeric) {
     const { number, max } = props
     displayValue = max && number > max ? `${max}+` : number.toString()
-  } else if (props.variant === 'icon') {
+  } else if (props.type === 'icon') {
     displayValue = props.icon
   }
 

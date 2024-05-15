@@ -36,20 +36,19 @@
   --bg: var(--color-shared-8);
   color: var(--color-shared-12);
 }
-.avatar__outline {
+.avatar__outline,
+.avatar__dashed {
   --bg: var(--color-shared-3);
   padding: 3px;
   border: 2px solid var(--color-shared-9);
 }
 
 .avatar__dashed {
-  --bg: var(--color-shared-3);
-  padding: 3px;
-  border: 2px dashed var(--color-shared-9);
+  border-style: dashed;
 }
 
 .avatar--fallback {
-  width: 2.75em;
+  width: var(--img-size);
   text-align: center;
   aspect-raio: 1/1;
 }

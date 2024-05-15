@@ -43,7 +43,7 @@ const Alert = forwardRef((props, forwardedRef) => {
     return null
   }
 
-  const classNames = classnames(`alert alert__${variant} u_${color}`, {
+  const classNames = classnames(`alert u_${variant} u_${color}`, {
     [className!]: !!className,
     [`u_corner-${corner}`]: !!corner,
     [`u_size-${size}`]: !!size,

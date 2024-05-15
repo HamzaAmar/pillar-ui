@@ -36,7 +36,7 @@ const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) 
   const id = useId()
   const itemContextValue = { id, value }
   const context = useAccordionContext()
-  const classNames = classnames(`accordion--item accordion--item__${context?.variant} `, {
+  const classNames = classnames(`accordion--item u_${context?.variant} `, {
     [`accordion--item__${context?.variant}`]: !!context?.variant,
     [`u_corner-${context?.corner}`]: !!context?.corner,
     [className!]: !!className,

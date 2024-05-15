@@ -26,29 +26,6 @@
   text-transform: var(--chip-transform, capitalize);
 }
 
-/* Chips Variants */
-
-.chips__solid {
-  background-color: var(--color-shared-9);
-  color: white;
-}
-
-.chips__outline {
-  color: var(--color-shared-11);
-  border-color: var(--color-shared-11);
-}
-
-.chips__soft {
-  background-color: var(--color-shared-3);
-  color: var(--color-shared-11);
-}
-
-.chips__mixed {
-  border-color: var(--color-shared-7);
-  background-color: var(--color-shared-3);
-  color: var(--color-shared-11);
-}
-
 .chips--content {
   font-size: 0.875em;
 }

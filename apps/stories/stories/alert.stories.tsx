@@ -103,7 +103,7 @@ export const AlertCorner = () => {
   )
 }
 
-const Variants = ['solid', 'outline', 'soft']
+const Variants = ['solid', 'outline', 'soft', 'mixed']
 
 export const AlertVariant = () => {
   return (
@@ -111,12 +111,6 @@ export const AlertVariant = () => {
       {Variants.map((variant) => (
         <Flex key={variant} direction="column" gap="sm">
           <AlertBase variant={variant} color="danger" />
-          <AlertBase variant={variant} color="success" />
-          <AlertBase variant={variant} color="info" />
-          <AlertBase variant={variant} color="warning" />
-          <AlertBase variant={variant} color="surface" />
-          <AlertBase variant={variant} color="primary" />
-          <AlertBase variant={variant} color="secondary" />
         </Flex>
       ))}
     </div>

@@ -19,12 +19,11 @@ const chips = forwardRef((props, ref) => {
     highContrast = false,
     ...rest
   } = props
-  const classNames = classnames(`chips u_truncate chips__${variant} u_${color} u_singleline`, {
+  const classNames = classnames(`chips u_truncate u_${variant} u_${color} u_singleline`, {
     [className!]: !!className,
     [`u_size-${size}`]: !!size,
     [`u_transform__${transform}`]: !!transform,
     [`u_corner-${corner}`]: !!corner,
-    'chips__high-contrast': highContrast,
   })
 
   const startIcon = icon && iconPosition === 'start' && icon

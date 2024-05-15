@@ -20,24 +20,3 @@
   font-size: var(--kdb-size, 0.875rem);
   text-transform: var(--kdb-transform, capitalize);
 }
-
-.kdb__solid {
-  background-color: var(--color-shared-9);
-  color: white;
-}
-
-.kdb__outline {
-  color: var(--color-shared-11);
-  border-color: var(--color-shared-11);
-}
-
-.kdb__soft {
-  background-color: var(--color-shared-3);
-  color: var(--color-shared-11);
-}
-
-.kdb__mixed {
-  border-color: var(--color-shared-7);
-  background-color: var(--color-shared-3);
-  color: var(--color-shared-11);
-}

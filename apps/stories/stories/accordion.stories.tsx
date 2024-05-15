@@ -128,7 +128,7 @@ export const AlertVariants = () => {
   )
 }
 
-export const AlerSizes = () => {
+export const AlertSizes = () => {
   return (
     <div className="l_flow__md">
       <AccordionBase size="2xs" />
@@ -142,7 +142,7 @@ export const AlerSizes = () => {
   )
 }
 
-export const AlerCorners = () => {
+export const AlertCorners = () => {
   return (
     <div className="l_flow__md">
       <AccordionBase separate color="surface" variant="solid" corner="sharp" />
