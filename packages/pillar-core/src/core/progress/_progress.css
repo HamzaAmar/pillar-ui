@@ -86,33 +86,6 @@
   stroke-width: clamp(2px, 0.275em, 8px);
 }
 
-/* .circle-progress--stroke-2xs {
-  stroke-width: 1%;
-}
-
-.circle-progress--stroke-xs {
-  stroke-width: 2%;
-}
-
-.circle-progress--stroke-sm {
-  stroke-width: 4%;
-}
-.circle-progress--stroke-md {
-  stroke-width: 6%;
-}
-
-.circle-progress--stroke-lg {
-  stroke-width: 8%;
-}
-
-.circle-progress--stroke-xl {
-  stroke-width: 10%;
-}
-
-.circle-progress--stroke-2xl {
-  stroke-width: 14%;
-} */
-
 .circle-progress--text {
   font-size: 20px;
   text-anchor: middle;
@@ -138,11 +111,12 @@
 }
 .progress-stack--list-item {
   position: relative;
-}
-.progress-stack--list-item::before {
-  content: '';
-  width: 0.625rem;
-  height: 0.625rem;
-  background-color: var(--color-shared-8);
-  border-radius: 50%;
+
+  &::before {
+    content: '';
+    width: 0.625rem;
+    height: 0.625rem;
+    background-color: var(--color-shared-8);
+    border-radius: 50%;
+  }
 }

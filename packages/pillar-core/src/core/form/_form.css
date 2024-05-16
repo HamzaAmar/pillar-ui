@@ -10,6 +10,16 @@
   position: relative;
   overflow: hidden;
   height: fit-content;
+
+  /*
+    These properties serve as fallbacks. If the corresponding utility functions are
+    unavailable, these properties take priority. However, if specific props related to
+    avatars are provided, they will override these properties.
+  */
+  font-size: max(16px, var(--form-controller-size, 1rem));
+  border-radius: var(--form-controller-corner, 0.25rem);
+  text-transform: var(--form-controller-transform);
+
   &:focus-within {
     outline: 2px solid var(--color-shared-9, var(--primary-9));
     outline-offset: -1px;
@@ -30,14 +40,18 @@
     cursor: not-allowed;
     border-color: var(--opacity-1);
   }
-  /*
-    These properties serve as fallbacks. If the corresponding utility functions are
-    unavailable, these properties take priority. However, if specific props related to
-    avatars are provided, they will override these properties.
-  */
-  font-size: max(16px, var(--form-controller-size, 1rem));
-  border-radius: var(--form-controller-corner, 0.25rem);
-  text-transform: var(--form-controller-transform);
+
+  &:not(:has(.input--pref-content)) .form-field:not(.pin-input) {
+    padding-inline-start: 1rem;
+  }
+
+  &:has(.input-number--counter-wrapper) .form-field {
+    padding-inline-end: 2.85rem !important;
+  }
+
+  &:not(:has(.input--suf-content)) .form-field:not(.pin-input) {
+    padding-inline-end: 1rem;
+  }
 }
 
 /* .form-field-wrapper .form-field-wrapper__fluid { */
@@ -125,23 +139,23 @@
   &:disabled {
     pointer-events: none;
   }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
 }
 
-.field-has-start-padding {
+/* .field-has-start-padding {
   padding-inline-start: 1rem;
 }
 .field-has-end-padding {
   padding-inline-end: 1rem;
-}
-
-.form-field[type='number'] {
-  -moz-appearance: textfield;
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-}
+} */
 
 /*
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -171,6 +185,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  width: 2.5rem;
   & * + * {
     border-top: 1px solid var(--opacity-6);
   }
@@ -250,8 +265,35 @@
   vertical-align: center;
 }
 
-.form-field__search:focus + .search-field--icon {
-  display: none;
+.form-field__search:placeholder-shown + .input--search--suffix {
+  & .search-field--clear {
+    display: none;
+  }
+  & .input-field--suffix {
+    display: flex;
+  }
+}
+
+.form-field__search:not(:placeholder-shown) + .input--search--suffix {
+  & .search-field--clear {
+    display: flex;
+  }
+  & .input-field--suffix {
+    display: none;
+  }
+}
+
+.search-field--clear:hover {
+  stroke: var(--shared-color-8, var(--primary-10));
+}
+
+.form-field__search {
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
 }
 
 .select-field {

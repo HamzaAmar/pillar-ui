@@ -22,19 +22,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-/* .alert__solid {
-  background-color: var(--color-shared-9);
+.alert.u_solid {
   border-inline-start: 6px solid var(--opacity-8);
-  color: white;
 }
-
-.alert__outline {
-  color: var(--color-shared-11);
-  border-color: var(--color-shared-11);
-}
-
-.alert__soft {
-  background-color: var(--color-shared-2);
-  border: 1px solid var(--color-shared-5);
-  color: var(--color-shared-11);
-} */

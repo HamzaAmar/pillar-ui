@@ -1,9 +1,6 @@
 .checkbox {
   cursor: pointer;
   width: fit-content;
-  &:hover > .checkbox--indicator {
-    box-shadow: 0 0 0 0.125em var(--color-shared-7, var(--primary-7));
-  }
   &:focus-within {
     outline: 2px dashed var(--color-shared-10, var(--primary-10));
     outline-offset: 2px;
@@ -12,6 +9,9 @@
     cursor: not-allowed;
   }
 
+  &:hover > .checkbox--indicator {
+    box-shadow: 0 0 0 0.125em var(--color-shared-7, var(--primary-7));
+  }
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to

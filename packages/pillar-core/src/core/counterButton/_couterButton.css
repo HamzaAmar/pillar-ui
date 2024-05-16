@@ -7,6 +7,18 @@
   border: 1px solid var(--opacity-6);
   border-radius: inherit;
   padding: 0.25rem 1rem;
+
+  /* Firefox */
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 .counter-button {
@@ -17,16 +29,4 @@
   &:hover {
     background: var(--surface-4);
   }
-}
-
-/* Chrome, Safari, Edge, Opera */
-.counter--input::-webkit-outer-spin-button,
-.counter--input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-.counter--input[type='number'] {
-  -moz-appearance: textfield;
 }

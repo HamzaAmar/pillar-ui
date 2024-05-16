@@ -17,7 +17,13 @@ const Template: ComponentStory<typeof InputSearch> = (args) => <InputSearch {...
 export const FilledInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <InputSearch aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
+      <InputSearch
+        aria-label="hello"
+        autoFocus
+        placeholder="Focus"
+        variant="filled"
+        suffixInput={<User width="16" />}
+      />
       <InputSearch aria-label="hello" placeholder="Normal" variant="filled" />
       <InputSearch aria-label="hello" disabled placeholder="Disabled" variant="filled" />
       <InputSearch aria-label="hello" readOnly placeholder="readOnly" variant="filled" />

@@ -56,7 +56,7 @@ export interface InputPasswordProps extends Omit<InputProps, 'suffixInput'> {
   hiddenIcon?: ReactElement
 }
 
-export interface InputSearchProps extends Omit<InputProps, 'suffixInput'> {}
+export interface InputSearchProps extends InputProps {}
 
 export interface TextareaProps extends Omit<ComponentPropsWithRef<'textarea'>, 'size' | 'color'>, FormFieldSharedProps {
   prefixInput?: ReactNode | string

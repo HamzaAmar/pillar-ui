@@ -16,14 +16,14 @@
   */
   border-radius: var(--badge-corner, 1em);
   font-size: var(--badge-size, 0.825rem);
+
+  & svg {
+    width: 1.125em;
+  }
 }
 
 .badge__dot {
   --badge-size: 0.5em;
-}
-
-.badge svg {
-  width: 1.125em;
 }
 
 .badge--content {

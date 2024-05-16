@@ -1,4 +1,4 @@
-import { ChevronDown, Eye, EyeOff, ListSearch } from '@pillar-ui/icons'
+import { ChevronDown, Eye, EyeOff, X } from '@pillar-ui/icons'
 import { useBooleanState, useControllableState, useComposedRefs } from '@pillar-ui/hooks'
 import { Flex, Text, Grid } from '..'
 import { classnames, createContext } from '@pillar-ui/utils'
@@ -28,6 +28,9 @@ const [FormGroupProvider, useFormGroup] = createContext<FormGroupContextProps>({
 ===================================================================================================
 */
 
+const PREFIX_CLASS = 'input--pref-content input-field--prefix u_center'
+const SUFFIX_CLASS = 'input--suf-content input-field--suffix u_center'
+
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, forwardedRef) => {
   const { hasError, describedby, ...ctx } = useFormController() ?? {}
   const formGroupContext = useFormGroup()
@@ -46,22 +49,18 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
     ...rest
   } = props
 
-  const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
-  const suffixInputElement = !!suffixInput && <span className="input-field--suffix u_center">{suffixInput}</span>
+  const prefixInputElement = !!prefixInput && <span className={PREFIX_CLASS}>{prefixInput}</span>
+  const suffixInputElement = !!suffixInput && <span className={SUFFIX_CLASS}>{suffixInput}</span>
 
   const wrapperClassName = classnames(
-    `form-field-wrapper u_corner-${corner} form-field-wrapper__${variant} u_flex u_items-start u_spacing-xs u_${color}`,
+    `form-field-wrapper u_corner-${corner} form-field-wrapper__${variant} u_${color}`,
     { [`u_transform__${transform}`]: !!transform, 'form-field-wrapper__fluid': !!fluid }
   )
-
-  const textareaClassName = classnames(`form-field textarea__${size}`, {
-    'field-has-start-padding': !prefixInput,
-    'field-has-end-padding': !suffixInput,
-  })
 
   return (
     <Flex
       justify="between"
+      gap="xs"
       className={wrapperClassName}
       data-disabled={rest.disabled}
       data-invalid={hasError || isInvalid}
@@ -74,7 +73,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
         ref={forwardedRef}
         {...rest}
         {...ctx}
-        className={textareaClassName}
+        className={`form-field textarea__${size}`}
       ></textarea>
       {suffixInputElement}
     </Flex>
@@ -105,21 +104,16 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
     ...rest
   } = props
 
-  const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
-  const suffixInputElement = !!suffixInput && <span className="input-field--suffix u_center">{suffixInput}</span>
+  const prefixInputElement = !!prefixInput && <span className={PREFIX_CLASS}>{prefixInput}</span>
+  const suffixInputElement = !!suffixInput && <span className={SUFFIX_CLASS}>{suffixInput}</span>
 
   const wrapperClassName = classnames(
-    `form-field-wrapper  u_corner-${corner} form-field-wrapper__${variant} u_flex u_${color}`,
+    `form-field-wrapper  u_corner-${corner} form-field-wrapper__${variant} u_${color}`,
     {
       [`u_transform__${transform}`]: !!transform,
       'form-field-wrapper__fluid': !!fluid,
     }
   )
-
-  const inputClassName = classnames(`form-field u_size-${size}`, {
-    'field-has-start-padding': !prefixInput,
-    'field-has-end-padding': !suffixInput,
-  })
 
   return (
     <Flex
@@ -137,7 +131,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
         aria-invalid={isInvalid}
         {...rest}
         {...ctx}
-        className={inputClassName}
+        className={`form-field u_size-${size}`}
       />
       {suffixInputElement}
     </Flex>
@@ -182,13 +176,9 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
     }
   )
 
-  const inputClassName = classnames(`form-field u_size-${size}`, {
-    'field-has-start-padding': !prefixInput,
-    'field-has-end-padding': !suffixInput,
-  })
-
   return (
-    <div
+    <Flex
+      justify="between"
       className={wrapperClassName}
       data-disabled={rest.disabled}
       data-invalid={hasError || isInvalid}
@@ -200,7 +190,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
         ref={composedRef}
         {...rest}
         {...ctx}
-        className={inputClassName}
+        className={`form-field u_size-${size}`}
       />
       <div className="input-number--counter-wrapper">
         <button
@@ -214,7 +204,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
           tabIndex={-1}
           className="number-input--button"
         >
-          <ChevronDown height="90%" direction="top" />
+          <ChevronDown width=".85em" direction="top" />
         </button>
 
         <button
@@ -228,10 +218,10 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
           tabIndex={-1}
           className="number-input--button"
         >
-          <ChevronDown height="90%" />
+          <ChevronDown width=".85em" />
         </button>
       </div>
-    </div>
+    </Flex>
   )
 })
 
@@ -263,21 +253,14 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
 
   const { booleanValue: showPassword, setToggle } = useBooleanState(false)
   const type = showPassword ? 'text' : 'password'
-  const wrapperClassName = classnames(
-    `form-field-wrapper form-field-wrapper__${variant} u_flex u_spacing-xs u_${color}`,
-    {
-      'form-field-wrapper__fluid': !!fluid,
-      [`u_corner-${corner}`]: !!corner,
-      [`u_transform__${transform}`]: !!transform,
-      [`u_size-${size}`]: !!size,
-    }
-  )
-
-  const inputClassName = classnames(`form-field textarea__${size} field-has-end-padding`, {
-    'field-has-start-padding': !prefixInput,
+  const wrapperClassName = classnames(`form-field-wrapper form-field-wrapper__${variant} u_flex u_${color}`, {
+    'form-field-wrapper__fluid': !!fluid,
+    [`u_corner-${corner}`]: !!corner,
+    [`u_transform__${transform}`]: !!transform,
+    [`u_size-${size}`]: !!size,
   })
 
-  const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
+  const prefixInputElement = !!prefixInput && <span className={PREFIX_CLASS}>{prefixInput}</span>
 
   const label = showPassword ? 'Hide Password' : 'Show Password'
   return (
@@ -295,10 +278,15 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
         ref={forwardedRef}
         {...rest}
         {...ctx}
-        className={inputClassName}
+        className={`form-field u_size-${size}`}
       />
 
-      <button aria-label={label} type="button" onClick={setToggle} className="password-input--button u_center">
+      <button
+        aria-label={label}
+        type="button"
+        onClick={setToggle}
+        className="input--suf-content password-input--button u_center"
+      >
         {showPassword ? hiddenIcon : visibleIcon}
       </button>
     </Flex>
@@ -326,6 +314,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
     isInvalid,
     children,
     prefixInput,
+    suffixInput,
     ...rest
   } = props
   const wrapperClassName = classnames(
@@ -337,12 +326,18 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
       [`u_size-${size}`]: !!size,
     }
   )
+  const inputRef = useRef<HTMLInputElement>(null)
 
-  const prefixInputElement = !!prefixInput && <span className="input-field--prefix u_center">{prefixInput}</span>
+  const mergedRef = useComposedRefs(inputRef, forwardedRef)
 
-  const inputClassName = classnames(`form-field textarea__${size} form-field__search field-has-end-padding`, {
-    'field-has-start-padding': !prefixInput,
-  })
+  const prefixInputElement = !!prefixInput && <span className={PREFIX_CLASS}>{prefixInput}</span>
+  const suffixInputElement = !!suffixInput && <span className={SUFFIX_CLASS}>{suffixInput}</span>
+
+  const handleInputClick = () => {
+    if (inputRef.current) {
+      inputRef.current.value = ''
+    }
+  }
 
   return (
     <Flex justify="between" data-disabled={rest.disabled} className={wrapperClassName}>
@@ -350,17 +345,21 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
       <input
         type="search"
         aria-describedby={describedby}
-        ref={forwardedRef}
+        ref={mergedRef}
         {...rest}
         {...ctx}
-        className={inputClassName}
+        className={`form-field input__${size} form-field__search`}
       />
-      <ListSearch
-        className="search-field--icon"
-        width="1.25em"
-        stroke="var(--surface-11)"
-        transform="translate(-8,0)"
-      />
+      <Flex as="span" items="center" className="input--search--suffix">
+        {suffixInputElement}
+        <X
+          onClick={handleInputClick}
+          className="search-field--clear"
+          width="1em"
+          stroke="var(--surface-11)"
+          transform="translate(-8,0)"
+        />
+      </Flex>
     </Flex>
   )
 })

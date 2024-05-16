@@ -15,13 +15,6 @@
   font-size: var(--blockquote-size, 1rem);
 }
 
-/* .quote-outside {
-  position: absolute;
-  inset-inline-start: -50%;
-  top: -50%;
-  background: red;
-} */
-
 .quote {
   position: absolute;
   inset-inline-start: 0.25em;
