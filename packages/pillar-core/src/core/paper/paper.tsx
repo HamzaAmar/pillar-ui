@@ -1,21 +1,3 @@
-// const direction = ['Top', 'Right', 'Bottom', 'Left']
-
-// function generatedProperties(arr: (string | undefined)[], prefix: string) {
-//   let result = {}
-//   const [shortProperty, ...rest] = arr
-//   if (!!shortProperty) {
-//     result = { [prefix]: `var(--space-${shortProperty})` }
-//   }
-//   rest.forEach((val, index) => {
-//     if (!!val) {
-//       const property = `${prefix}${direction[index]}`
-//       result = { ...result, [property]: `var(--space-${val})` }
-//     }
-//   })
-
-//   return result
-// }
-
 import { forwardRef } from 'react'
 import type { CSSProperties } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
@@ -36,7 +18,6 @@ const paper = forwardRef((props, ref) => {
     color,
     p,
     m,
-    b,
     shadow,
     width,
     height,

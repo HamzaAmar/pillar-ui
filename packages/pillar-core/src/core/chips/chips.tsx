@@ -1,8 +1,8 @@
-import { CSSProperties, forwardRef } from 'react'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { ChipsProps } from './chips.type'
+import { forwardRef } from 'react'
 import { classnames } from '@pillar-ui/utils'
-import { Flex } from '../flex'
+
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
+import type { ChipsProps } from './chips.type'
 
 const chips = forwardRef((props, ref) => {
   const {
@@ -16,26 +16,20 @@ const chips = forwardRef((props, ref) => {
     corner,
     className,
     children,
-    highContrast = false,
     ...rest
   } = props
-  const classNames = classnames(`chips u_truncate u_${variant} u_${color} u_singleline`, {
+  const _className = classnames(`chips u_${variant} u_${color}`, {
     [className!]: !!className,
     [`u_size-${size}`]: !!size,
     [`u_transform__${transform}`]: !!transform,
     [`u_corner-${corner}`]: !!corner,
   })
 
-  const startIcon = icon && iconPosition === 'start' && icon
-  const endIcon = icon && iconPosition === 'end' && icon
-
   return (
-    <Tag ref={ref} className={classNames} {...rest}>
-      <Flex items="center" gap="2xs" style={{ '--line-numbers': 1 } as CSSProperties} className="chips--content">
-        {startIcon}
-        {children}
-        {endIcon}
-      </Flex>
+    <Tag ref={ref} className={_className} {...rest}>
+      {icon && iconPosition === 'start' && icon}
+      <span className="chips--content u_truncate">{children}</span>
+      {icon && iconPosition === 'end' && icon}
     </Tag>
   )
 }) as ForwardRefComponent<'span', ChipsProps>

@@ -15,7 +15,6 @@ export type Value = number | string
 
 export interface AccordionButtonProps {
   id?: string
-  title: string
   icon?: ReactElement
 }
 export interface AccordionItemProps {

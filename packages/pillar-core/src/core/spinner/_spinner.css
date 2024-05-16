@@ -14,16 +14,13 @@
 
 .spinner::before,
 .spinner::after {
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
   content: '';
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   color: var(--color-shared-10);
   border: min(var(--border), 0.5em) solid transparent;
   border-top-color: currentcolor;
-  border-inline-start-color: currentcolor;
+  border-left-color: currentcolor;
   border-radius: 50%;
   transform: rotate(-45deg);
   animation: spinner-move 0.85s infinite linear;

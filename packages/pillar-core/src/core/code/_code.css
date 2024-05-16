@@ -1,12 +1,9 @@
 .code {
-  background: var(--color-shared-4);
-  color: var(--color-shared-11);
-  flex: none;
-
+  max-width: 100%;
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to
-    avatars are provided, they will override these properties.
+    Code are provided, they will override these properties.
   */
   border-radius: var(--code-corner, 0.125em);
   font-size: var(--code-size, 0.875rem);

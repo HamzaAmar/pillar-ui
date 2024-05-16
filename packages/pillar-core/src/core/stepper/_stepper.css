@@ -16,14 +16,19 @@
     color: var(--color-shared-12);
   }
 
-  &[data-state='complete'] .step--button {
-    background-color: var(--color-shared-8);
-    border-color: var(--color-shared-8);
-    color: white;
-  }
-
-  &[data-state='complete']::before {
-    background-color: var(--color-shared-9);
+  &[data-state='complete'] {
+    & .step--button {
+      background-color: var(--color-shared-8);
+      border-color: var(--color-shared-8);
+      color: white;
+    }
+    & .step--complete-icon {
+      transform: none;
+      transition: transform 0.3s;
+    }
+    &::before {
+      background-color: var(--color-shared-9);
+    }
   }
 
   &::before {
@@ -58,9 +63,5 @@
 }
 .step--complete-icon {
   transform: translateY(-200%);
-  transition: transform 0.3s;
-}
-.step[data-state='complete'] .step--complete-icon {
-  transform: none;
   transition: transform 0.3s;
 }

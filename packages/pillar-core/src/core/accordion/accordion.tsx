@@ -1,11 +1,9 @@
 import { Children, cloneElement, forwardRef, isValidElement, useId } from 'react'
 import { classnames, createContext } from '@pillar-ui/utils'
 import { ChevronDown } from '@pillar-ui/icons'
-// import { useControllableState } from '@pillar-ui/hooks'
+import { useAccordion } from './useAccordion'
 
-import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { Flex } from '../flex'
-
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type {
   AccordionButtonProps,
   AccordionContextProps,
@@ -14,8 +12,6 @@ import type {
   AccordionPanelProps,
   AccordionProps,
 } from './accordion.type'
-import { useAccordion } from './useAccordion'
-import { Text } from '../typography'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -35,10 +31,9 @@ const [AccordionProvider, useAccordionContext] = createContext<AccordionContextP
 const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) => {
   const id = useId()
   const itemContextValue = { id, value }
-  const context = useAccordionContext()
-  const classNames = classnames(`accordion--item u_${context?.variant} `, {
-    [`accordion--item__${context?.variant}`]: !!context?.variant,
-    [`u_corner-${context?.corner}`]: !!context?.corner,
+  const { corner, variant } = useAccordionContext() ?? {}
+  const classNames = classnames(`accordion--item u_${variant} `, {
+    [`u_corner-${corner}`]: !!corner,
     [className!]: !!className,
   })
 
@@ -58,28 +53,23 @@ AccordionItem.displayName = 'Pillar-AccordionItem'
 */
 
 const AccordionButton = forwardRef((props, ref) => {
-  const itemContext = useAccordionItemContext()
-  const accordionContext = useAccordionContext()
-  const { children, id = itemContext?.id, icon = <ChevronDown />, title, className, ...rest } = props
-  const classNames = classnames('accordion--button', { [className!]: !!className })
+  const { value, id: idContext } = useAccordionItemContext() ?? {}
+  const { toggleAccordion, isItemOpen } = useAccordionContext() ?? {}
+  const { children, id = idContext, icon = <ChevronDown width="1em" />, className, ...rest } = props
+  const classNames = classnames('accordion--button u_between', { [className!]: !!className })
   return (
-    <Flex
-      justify="between"
-      items="center"
-      as="button"
+    <button
       type="button"
-      aria-expanded={accordionContext?.isItemOpen?.(itemContext?.value!)}
+      aria-expanded={isItemOpen?.(value!)}
       aria-controls={id}
       className={classNames}
-      onClick={() => accordionContext?.toggleAccordion?.(itemContext?.value!)}
+      onClick={() => toggleAccordion?.(value!)}
       ref={ref}
       {...rest}
     >
-      <Text weight="medium" as="span">
-        {title}
-      </Text>
+      {children}
       {icon}
-    </Flex>
+    </button>
   )
 }) as ForwardRefComponent<'button', AccordionButtonProps>
 
@@ -93,16 +83,14 @@ AccordionButton.displayName = 'Pillar-AccordionButton'
 
 const AccordionPanel = forwardRef((props, ref) => {
   const { children, className, ...rest } = props
-  const contextItem = useAccordionItemContext()
-  const context = useAccordionContext()
-  // const { isItemOpen } = useAccordionContext()
-  const classNames = classnames('accordion--panel', {
-    'accordion-hide': !context?.isItemOpen?.(contextItem?.value!),
-    [className!]: !!className,
-  })
+  const { value } = useAccordionItemContext() ?? {}
+  const { isItemOpen, id } = useAccordionContext() ?? {}
+
+  const _className = classnames('accordion--panel', { [className!]: !!className })
+
   return (
-    <div id={context?.id} className={classNames} ref={ref} {...rest}>
-      <span className="accordion--panel-content"> {children}</span>
+    <div id={id} data-open={isItemOpen?.(value!)} className={_className} ref={ref} {...rest}>
+      {children}
     </div>
   )
 }) as ForwardRefComponent<'div', AccordionPanelProps>
@@ -123,7 +111,7 @@ export const Accordion = forwardRef((props, ref) => {
     color,
     variant,
     size = 'md',
-    corner,
+    corner = 'sharp',
     separate,
     className,
     ...rest

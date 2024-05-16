@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react'
 import { ComponentMeta } from '@storybook/react'
-import { Accordion, Flex, Grid, Paper } from '@pillar-ui/core'
+import { Accordion, Flex, Grid, Paper, Text } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Accordion',
@@ -11,15 +11,30 @@ export function AccordionBase(props: any) {
   return (
     <Accordion {...props}>
       <Accordion.Item value={1}>
-        <Accordion.Button title="Hello" />
+        <Accordion.Button>
+          <div>
+            <Text weight="medium">Hello</Text>
+            <Text size="xs">Hello</Text>
+          </div>
+        </Accordion.Button>
         <Accordion.Panel>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</Accordion.Panel>
       </Accordion.Item>
       <Accordion.Item value={2}>
-        <Accordion.Button title="Hello" />
+        <Accordion.Button>
+          <div>
+            <Text weight="medium">Hello</Text>
+            <Text size="xs">Hello</Text>
+          </div>
+        </Accordion.Button>
         <Accordion.Panel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</Accordion.Panel>
       </Accordion.Item>
       <Accordion.Item value={3}>
-        <Accordion.Button title="Hello" />
+        <Accordion.Button>
+          <div>
+            <Text weight="medium">Hello</Text>
+            <Text size="xs">Hello</Text>
+          </div>
+        </Accordion.Button>
         <Accordion.Panel>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error odio
           animi mollitia? Blanditiis facere

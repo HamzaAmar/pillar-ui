@@ -10,9 +10,6 @@
     width: 1em;
   }
 }
-.accordion-hide {
-  display: none;
-}
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,11 +30,11 @@
   font-size: var(--accordion-size, 1rem);
 }
 
-.u_solid {
+.accordion--item.u_solid {
   border-color: var(--color-shared-9);
 }
 
-.u_outline {
+.accordion--item.u_outline {
   background-color: var(--color-shared-2);
 }
 .accordion--item__outline:not(:first-child) {
@@ -53,13 +50,14 @@
 .accordion--panel {
   padding: 0.5rem;
   color: var(--surface-12);
+  font-size: 0.85em;
+
+  &[data-open='false'] {
+    display: none;
+  }
 }
 
-.accordion--panel-content {
-  font-size: 0.85em;
-  color: var(--surface-11);
-}
-/*713
+/*
 //////////////////////////////////////////////////////////////////////////////////////////////////
   Accdordion Button Section
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,12 +79,10 @@
     outline: 2px dashed var(--color-shared-11, var(--primary-9));
     outline-offset: -2px;
   }
-  &[aria-expanded='true'] svg {
+  & svg {
     transition: transform 0.25s;
-    transform: rotate(180deg);
   }
-
-  &[aria-expanded='false'] svg {
-    transition: transform 0.25s;
+  &[aria-expanded='true'] svg {
+    transform: rotate(180deg);
   }
 }

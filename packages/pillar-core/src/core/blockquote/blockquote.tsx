@@ -15,10 +15,7 @@ const Cite = ({ title, ...rest }: CiteProps) => {
 }
 
 const blockquote = forwardRef(
-  (
-    { children, icon = <Quotes />, size, as = 'blockquote', color = 'primary', corner, className, cite, ...rest },
-    ref
-  ) => {
+  ({ children, icon = <Quotes />, size, color = 'primary', corner, className, cite, ...rest }, ref) => {
     const classNames = classnames(`blockquote u_${color} `, {
       [className!]: !!className,
       [`u_size-${size}`]: !!size,
@@ -26,7 +23,7 @@ const blockquote = forwardRef(
     })
 
     return (
-      <Flex as={as} direction="column" gap="sm" ref={ref} className={classNames} cite={cite} {...rest}>
+      <Flex as="blockquote" direction="column" gap="sm" ref={ref} className={classNames} cite={cite} {...rest}>
         <span className="quote">{icon}</span>
         {children}
       </Flex>

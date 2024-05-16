@@ -4,8 +4,8 @@ import type { AccordionProps, Value } from './accordion.type'
 export function useAccordion({ type, collapsible }: AccordionProps) {
   const [activeItems, setActiveItems] = useState<Value | Value[]>(type === 'multiple' ? [] : -1)
 
-  function isItemOpen(index: Value) {
-    return Array.isArray(activeItems) ? activeItems.includes(index) : activeItems === index
+  function isItemOpen(value: Value) {
+    return Array.isArray(activeItems) ? activeItems.includes(value) : activeItems === value
   }
 
   function toggleAccordion(currentIndex: Value) {
