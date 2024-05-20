@@ -6,9 +6,10 @@
 @import './_fonts.css';
 @import './_text.css';
 @import './_animation.css';
-@import './_center.css';
+@import './_flex.css';
 @import './_shadow.css';
 @import './_fontSize.css';
 @import './_corner.css';
 @import './_sizing.css';
 @import './_variants.css';
+@import './_border.css';

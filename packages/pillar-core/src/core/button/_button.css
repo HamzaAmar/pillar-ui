@@ -1,4 +1,6 @@
 .btn {
+  --flex: inline-flex;
+
   height: fit-content;
   border: 1px solid transparent;
   font-weight: 500;

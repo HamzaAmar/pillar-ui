@@ -2,8 +2,6 @@
 
 .kdb {
   padding: 0.125em 0.25em;
-  /* background: var(--color-shared-8, var(--surface-1)); */
-  /* color: var(--color-shared-12, var(--surface-12)); */
   border: 0.075em solid transparent;
   border-bottom-width: 0.175em;
   width: fit-content;

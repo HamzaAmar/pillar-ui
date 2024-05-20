@@ -20,9 +20,6 @@ export interface PaperProps {
   shadow?: Shadow
   width?: Width
   height?: CSSProperties['height']
-  borderPosition?: 'left' | 'right' | 'top' | 'bottom' | 'block' | 'inline' | 'all'
-  borderStyle?: CSSProperties['borderStyle']
-  borderColor?: ColorShade
-  borderWidth?: CSSProperties['borderStyle']
+  border?: boolean
   ratio?: Ratio
 }

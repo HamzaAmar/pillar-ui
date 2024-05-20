@@ -27,6 +27,7 @@ const paper = forwardRef((props, ref) => {
     children,
     style = {},
     className,
+    border,
     ...rest
   } = props
 
@@ -38,6 +39,7 @@ const paper = forwardRef((props, ref) => {
     [`u_margin-${m}`]: !!m,
     [`u_width-${width}`]: !!width,
     [`u_${ratio}`]: !!ratio,
+    [`u_border`]: !!border,
     [className!]: !!className,
   })
 
