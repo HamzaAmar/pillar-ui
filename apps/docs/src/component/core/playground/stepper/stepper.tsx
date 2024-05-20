@@ -50,7 +50,7 @@ export const StepperBase = (props: Omit<StepperProps, 'children' | 'setActive'>)
 }
 export const StepperPlayGround = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <StepperBase completeComponent={<CompleteComponent />} />
       <StepperBase completeComponent={<CompleteComponent />} />
     </Paper>
@@ -59,7 +59,7 @@ export const StepperPlayGround = () => {
 
 export const StepperColors = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <StepperBase color="primary" completeComponent={<CompleteComponent />} />
       <StepperBase color="secondary" completeComponent={<CompleteComponent />} />
       <StepperBase color="danger" completeComponent={<CompleteComponent />} />
@@ -69,7 +69,7 @@ export const StepperColors = () => {
 
 export const StepperCorners = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <StepperBase corner="sharp" completeComponent={<CompleteComponent />} />
       <StepperBase corner="xs" completeComponent={<CompleteComponent />} />
       <StepperBase corner="sm" completeComponent={<CompleteComponent />} />
@@ -83,7 +83,7 @@ export const StepperCorners = () => {
 
 export const StepperSizes = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <StepperBase size="2xs" completeComponent={<CompleteComponent />} />
       <StepperBase size="xs" completeComponent={<CompleteComponent />} />
       <StepperBase size="sm" completeComponent={<CompleteComponent />} />

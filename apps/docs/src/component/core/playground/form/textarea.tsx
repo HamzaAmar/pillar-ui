@@ -7,7 +7,7 @@ export const TextareaPlayGround = () => {
 
 const FilledInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <Textarea aria-label="hello" placeholder="Normal" variant="filled" />
       <Textarea aria-label="hello" disabled placeholder="Disabled" variant="filled" />
@@ -28,7 +28,7 @@ const FilledInputPassword = () => {
 
 const OutlineInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
       <Textarea variant="outline" aria-label="hello" placeholder="Normal" />
       <Textarea variant="outline" aria-label="hello" disabled placeholder="Disabled" />
@@ -49,7 +49,7 @@ const OutlineInputPassword = () => {
 
 const BorderedInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
       <Textarea variant="bordered" aria-label="hello" placeholder="Normal" />
       <Textarea variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
@@ -70,7 +70,7 @@ const BorderedInputPassword = () => {
 
 const CornerInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea corner="sharp" placeholder="sharp" />
       <Textarea corner="xs" placeholder="xs" />
       <Textarea corner="sm" placeholder="sm" />
@@ -84,7 +84,7 @@ const CornerInputPassword = () => {
 
 const ColorInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <Textarea color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <Textarea color="secondary" variant="outline" autoFocus placeholder="Disabled" />
@@ -110,7 +110,7 @@ const ColorInputPassword = () => {
 
 export const SizeInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea size="xs" placeholder="Extra Small(xs)" />
       <Textarea size="sm" placeholder="Small(sm)" />
       <Textarea placeholder="Medium (md default You don't need it)" />
@@ -122,7 +122,7 @@ export const SizeInputPassword = () => {
 
 export const SizeIcons = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea placeholder="Medium" suffixInput={<User width="16" />} />
       <Textarea placeholder="Medium" prefixInput={<User width="16" />} />
       <Textarea placeholder="Medium" prefixInput={<User width="16" />} suffixInput={<Eye width="16" />} />

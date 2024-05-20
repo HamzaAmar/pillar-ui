@@ -14,7 +14,7 @@ const BaseFormController = (props: Omit<FormControllerProps, 'children'>) => {
 
 const FormControllerLabel = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <BaseFormController label="Hello World" />
       <BaseFormController label="Hello World" hideLabel />
     </Paper>
@@ -23,7 +23,7 @@ const FormControllerLabel = () => {
 
 const FormControllerHint = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <BaseFormController label="hello" hint="message must be more than 5 caractere" />
     </Paper>
   )
@@ -31,7 +31,7 @@ const FormControllerHint = () => {
 
 const FormControllerError = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <BaseFormController label="hello" error="message must be more than 5 caractere" />
     </Paper>
   )
@@ -39,7 +39,7 @@ const FormControllerError = () => {
 
 const FormControllerRequired = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <BaseFormController label="Name" required />
     </Paper>
   )

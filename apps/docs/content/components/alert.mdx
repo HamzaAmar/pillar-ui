@@ -223,28 +223,6 @@ Example usage:
 </Flex>
 ```
 
-### Isomerphic Alert
-
-The as prop allows you to customize the tag of the alert. The default tag is div, but you can use the as prop to change it to any other valid HTML tag, such as span or article.
-
-Here is an example of how to display the alert as a span:
-
-```tsx showLineNumbers title="Alert.tsx"
-<Alert as='span' color="danger" title="hello"  />
-<Alert as='article' color="danger" title="hello"  />
-```
-
-## Custom the style
-
-We know that you may not always like the style of the alerts that we provide in our library. That's why we've given you the ability to customize the style of the alerts to your liking. You can use the style prop to set the background color, font, and other properties of the alert, and you can use the className prop to add custom CSS classes to the alert.
-
-<AlertPlayGround.CustomStyle />
-
-```tsx showLineNumbers title="Alert.tsx"
-<Alert color="danger" title="hello" className="u_secondary" />
-<Alert color="danger" title="hello" style={{ background: 'success' }} />
-```
-
 ## Accessibility
 
 Accessibility is a core feature of Pillar UI, extending to components like the Alert. Here's a guide on ensuring accessibility when employing the Alert component:

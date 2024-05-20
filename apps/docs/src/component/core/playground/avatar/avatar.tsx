@@ -4,7 +4,7 @@ import React from 'react'
 
 export const AvatarPlayGround = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
@@ -16,7 +16,7 @@ export const AvatarPlayGround = () => {
 }
 const AvatarColors = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm">
       <Avatar title="John Doe" />
       <Avatar color="danger" title="John Doe" />
       <Avatar color="success" title="John Doe" />
@@ -31,7 +31,7 @@ const AvatarColors = () => {
 
 const AvatarImage = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm">
       <Avatar image="https://picsum.photos/id/120/100/100" />
       <Avatar image="/image/user.png" />
       <Avatar image="/image/user.svg" />
@@ -42,7 +42,7 @@ const AvatarImage = () => {
 
 const AvatarIcon = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm">
       <Avatar fallback={<CircleCheck />} title="Success!" />
     </Paper>
   )
@@ -50,7 +50,7 @@ const AvatarIcon = () => {
 
 const AvatarSizes = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar image="https://picsum.photos/id/120/100/100" size="3xs" />
       <Avatar image="https://picsum.photos/id/120/100/100" size="2xs" />
       <Avatar image="https://picsum.photos/id/120/100/100" size="xs" />
@@ -65,7 +65,7 @@ const AvatarSizes = () => {
 
 const AvatarVariants = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar variant="solid" />
       <Avatar variant="soft" />
       <Avatar variant="outline" />
@@ -78,17 +78,7 @@ const image = 'https://picsum.photos/id/25/100/100'
 
 const AvatarCorners = () => {
   return (
-    <Paper
-      as={Flex}
-      flow="md"
-      wrap
-      gap="sm"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-      items="center"
-    >
+    <Paper as={Flex} flow="md" wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Flex gap="xs" items="center">
         <Avatar corner="sharp" title="Hello" />
         <Avatar corner="xs" title="Hello" />
@@ -135,7 +125,7 @@ const AvatarCorners = () => {
 
 const AvatarAnimate = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar animate="zoom" title="Success!" />
       <Avatar animate="jump-x" title="Success!" />
       <Avatar animate="jump-y" title="Success!" />
@@ -145,7 +135,7 @@ const AvatarAnimate = () => {
 
 const AvatarFallback = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar title="Hello" />
       <Avatar image="hello.s" title="Hello" />
       <Avatar image="https://pisum" title="Hello" />
@@ -155,7 +145,7 @@ const AvatarFallback = () => {
 
 const AvatarGroupLimit = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar.Group limit={5}>
         <Avatar title="Success!" />
         <Avatar title="Success!" />
@@ -177,7 +167,7 @@ const AvatarGroupLimit = () => {
 
 const AvatarGroupStack = () => {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <Avatar.Group layout="stack">
         <Avatar animate="jump-y" title="Success!" />
         <Avatar animate="jump-y" title="Success!" />
@@ -205,7 +195,7 @@ const AvatarGroupStack = () => {
 
 function AvatarGroupContext() {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <Avatar.Group variant="outline">
         <Avatar title="Success!" />
         <Avatar title="Success!" />

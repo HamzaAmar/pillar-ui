@@ -3,7 +3,7 @@ import React from 'react'
 
 export const PaperPlayGround = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
@@ -16,38 +16,29 @@ export const PaperPlayGround = () => {
 
 export const PaperBackground = () => {
   return (
-    <Paper
-      as={Flex}
-      wrap
-      gap="sm"
-      className="playground"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="danger" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="danger-5" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="danger-10" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="success-5" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="success-8" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="success-11" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="primary-12" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="primary-10" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="primary-8" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="surface-1" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="surface-4" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="surface-8" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="warning-4" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="warning-8" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="warning-12" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="secondary-3" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="secondary-8" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="secondary-12" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="opacity-4" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="opacity-7" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="opacity-11" />
+    <Paper as={Flex} wrap gap="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+      <Paper border width="30-char" ratio="square" />
+      <Paper border width="30-char" ratio="square" background="danger" />
+      <Paper border width="30-char" ratio="square" background="danger-5" />
+      <Paper border width="30-char" ratio="square" background="danger-10" />
+      <Paper border width="30-char" ratio="square" background="success-5" />
+      <Paper border width="30-char" ratio="square" background="success-8" />
+      <Paper border width="30-char" ratio="square" background="success-11" />
+      <Paper border width="30-char" ratio="square" background="primary-12" />
+      <Paper border width="30-char" ratio="square" background="primary-10" />
+      <Paper border width="30-char" ratio="square" background="primary-8" />
+      <Paper border width="30-char" ratio="square" background="surface-1" />
+      <Paper border width="30-char" ratio="square" background="surface-4" />
+      <Paper border width="30-char" ratio="square" background="surface-8" />
+      <Paper border width="30-char" ratio="square" background="warning-4" />
+      <Paper border width="30-char" ratio="square" background="warning-8" />
+      <Paper border width="30-char" ratio="square" background="warning-12" />
+      <Paper border width="30-char" ratio="square" background="secondary-3" />
+      <Paper border width="30-char" ratio="square" background="secondary-8" />
+      <Paper border width="30-char" ratio="square" background="secondary-12" />
+      <Paper border width="30-char" ratio="square" background="opacity-4" />
+      <Paper border width="30-char" ratio="square" background="opacity-7" />
+      <Paper border width="30-char" ratio="square" background="opacity-11" />
     </Paper>
   )
 }
@@ -59,7 +50,7 @@ export const PaperColors = () => {
       gap="sm"
       direction="column"
       className="playground"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -136,16 +127,7 @@ export const PaperColors = () => {
 
 export const PaperPadding = () => {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      items="center"
-      className="playground"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} gap="sm" items="center" className="playground" border p="sm" background="surface-3" corner="sm">
       <Paper width="fit-content" background="surface-5" p="2xl">
         2xl Padding
       </Paper>
@@ -262,7 +244,7 @@ export const PaperCorners = () => {
       gap="sm"
       justify="center"
       className="playground"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -329,16 +311,7 @@ export const PaperCorners = () => {
 
 export const PaperFlow = () => {
   return (
-    <Paper
-      as={Flex}
-      justify="between"
-      wrap
-      className="playground"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} justify="between" wrap className="playground" border p="sm" background="surface-3" corner="sm">
       <Paper background="surface-5" flow="xs">
         <div>Flow xs</div>
         <div>Flow xs</div>
@@ -375,7 +348,7 @@ export const PaperShadow = () => {
       gap="sm"
       direction="column"
       className="playground"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -406,7 +379,7 @@ export function PaperWidth() {
       gap="sm"
       direction="column"
       className="playground"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"

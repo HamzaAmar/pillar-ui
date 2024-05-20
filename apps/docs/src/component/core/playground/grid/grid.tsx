@@ -21,7 +21,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => (
 
 export const GridPlayGround = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
@@ -34,7 +34,7 @@ export const GridPlayGround = () => {
 
 export const GridGap = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="md" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="md" background="surface-3" corner="sm">
       <Grid grid="repeat(4,30px)" gap="2xs">
         {boxes}
       </Grid>
@@ -62,7 +62,7 @@ export const GridGap = () => {
 
 export const GridJustify = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
       <Grid grid="repeat(5,1fr)" gap="sm">
         {boxes}
       </Grid>
@@ -87,7 +87,7 @@ export const GridJustify = () => {
 
 export const GridPlacement = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
       <Grid grid="5rem 1fr x 100px 400px 100px" gap="sm">
         <Grid.Item placement="1 / 3" as={Box}>
           header
@@ -107,7 +107,7 @@ export const GridPlacement = () => {
 
 export const GridItem = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
       <Grid grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="sm">
         <Grid.Item placement="2/4" style={{ background: 'var(--surface-8)' }}>
           Header
@@ -131,7 +131,7 @@ export const GridItem = () => {
 
 export const GridGrid = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
       <Grid grid="repeat(5, 1fr)" gap="sm">
         <div style={{ height: '40px', background: 'var(--surface-6)' }} />
         <div style={{ height: '40px', background: 'var(--surface-6)' }} />

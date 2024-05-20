@@ -3,7 +3,7 @@ import React from 'react'
 
 export const RatingPlayGround = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Rating rating={3} title="Success!" color="danger" />
       <Rating rating={3} title="Success!" color="warning" />
       <Rating rating={3} title="Success!" color="success" />
@@ -16,7 +16,7 @@ export const RatingPlayGround = () => {
 
 export const RatingSizes = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Rating rating={4} size="3xs" />
       <Rating rating={4} size="2xs" />
       <Rating rating={4} size="xs" />
@@ -32,7 +32,7 @@ export const RatingSizes = () => {
 
 export const RatingRating = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Rating rating={1} />
       <Rating rating={2} />
       <Rating rating={3} />
@@ -43,7 +43,7 @@ export const RatingRating = () => {
 }
 export const RatingIcon = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Rating icon="heart" rating={4} color="danger" />
       <Rating rating={4} />
     </Paper>
@@ -52,7 +52,7 @@ export const RatingIcon = () => {
 
 export const RatingTitle = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Rating rating={4} hideTitle />
       <Rating rating={4} title="fake label" />
       <Rating rating={4} />
@@ -62,7 +62,7 @@ export const RatingTitle = () => {
 
 export const RatingColors = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Rating color="danger" rating={4} />
       <Rating color="primary" rating={4} />
       <Rating color="secondary" rating={4} />

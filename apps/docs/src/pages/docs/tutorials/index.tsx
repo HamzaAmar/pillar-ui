@@ -19,7 +19,7 @@ export default function Blog({ tutorials }: { tutorials: Tutorials[] }) {
       <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
         {tutorials.map((tutorial) => (
           <Link href={`utils/${tutorial.slug}`} key={tutorial.slug}>
-            <Paper height="5rem" corner="sm" background="surface-3" padding="xl" className="u_center">
+            <Paper height="5rem" corner="sm" background="surface-3" p="xl" className="u_center">
               <Text size="lg" weight="medium" color="surface">
                 {tutorial.title}
               </Text>

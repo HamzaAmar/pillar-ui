@@ -9,7 +9,7 @@ export const RadioPlayGround = () => {
       as={Flex}
       wrap
       gap="sm"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -27,7 +27,7 @@ export const RadioPlayGround = () => {
 
 export const RadioSizes = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Radio size="3xs" name="red" label="Red" />
       <Radio size="2xs" name="green" label="Green" />
       <Radio size="xs" name="orange" label="Orange" />
@@ -40,16 +40,7 @@ export const RadioSizes = () => {
 
 export const RadioVariants = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Radio color="secondary" name="secondary" label="Secondary" />
       <Radio variant="outline" color="secondary" name="secondary2" label="Secondary" />
       <Radio variant="soft" color="secondary" name="secondary3" label="Secondary" />
@@ -59,7 +50,7 @@ export const RadioVariants = () => {
 
 export const RadioState = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center">
         <Radio name="solid.default" label="Red" />
         <Radio name="solid.defaultChecked" label="Red" defaultChecked />
@@ -83,16 +74,7 @@ export const RadioState = () => {
 }
 export const RadioLabel = () => {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      flow="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} gap="sm" items="center" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Radio label="Option 1" />
     </Paper>
   )
@@ -100,16 +82,7 @@ export const RadioLabel = () => {
 
 export const RadioColors = () => {
   return (
-    <Paper
-      className="playground"
-      borderColor="opacity-6"
-      p="sm"
-      as={Flex}
-      items="center"
-      gap="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" border p="sm" as={Flex} items="center" gap="sm" background="surface-3" corner="sm">
       <Radio color="danger" name="red" label="Red" />
       <Radio color="success" name="green" label="Green" />
       <Radio color="warning" name="orange" label="Orange" />
@@ -122,16 +95,7 @@ export const RadioColors = () => {
 
 export function RadioDefaultCheck() {
   return (
-    <Paper
-      className="playground"
-      borderColor="opacity-6"
-      p="sm"
-      as={Flex}
-      items="center"
-      gap="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" border p="sm" as={Flex} items="center" gap="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center">
         <Radio variant="soft" name="checked.red" label="Red" defaultChecked />
         <Radio variant="outline" name="outline.red" label="Red" defaultChecked />

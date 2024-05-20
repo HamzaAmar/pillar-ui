@@ -10,7 +10,7 @@ const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text']
 
 function ButtonColors() {
   return (
-    <Paper className="playground" borderColor="opacity-6" flow="md" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="md" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
         <Button color="danger">Hello World</Button>
         <Button color="warning">Hello World</Button>
@@ -34,7 +34,7 @@ function ButtonColors() {
 
 function ButtonSizes() {
   return (
-    <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
         <Button size="3xs">Hello World</Button>
         <Button size="2xs">Hello World</Button>
@@ -61,7 +61,7 @@ function ButtonSizes() {
 
 function ButtonCorners() {
   return (
-    <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
         <Button corner="sharp">Hello World</Button>
         <Button corner="xs">Hello World</Button>
@@ -116,7 +116,7 @@ function ButtonVariants() {
 
 function ButtonIcons() {
   return (
-    <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
         <Button icon={<Close />}>Hello World</Button>
         <Button icon={<Maximize />}>Hello World</Button>
@@ -134,7 +134,7 @@ function ButtonIcons() {
 
 function ButtonIconPosition() {
   return (
-    <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
         <Button icon={<Close />} iconPosition="end">
           Hello World
@@ -156,7 +156,7 @@ function ButtonIconPosition() {
 
 function ButtonFluid() {
   return (
-    <Paper className="playground" borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Button fluid color="danger">
         Hello World
       </Button>
@@ -181,16 +181,7 @@ function ButtonFluid() {
 
 function ButtonsState() {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      items="center"
-      gap="sm"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="surface-3" corner="sm">
       <Button state="idle" color="success">
         Idle
       </Button>
@@ -206,16 +197,7 @@ function ButtonsState() {
 
 function ButtonsCustomStyle() {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      items="center"
-      gap="sm"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="surface-3" corner="sm">
       <Button style={{ background: 'orange' }} state="idle" color="success">
         Hello world
       </Button>

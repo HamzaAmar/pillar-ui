@@ -7,7 +7,7 @@ export const InputPlayGround = () => {
 
 const FilledInput = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <Input aria-label="hello" placeholder="Normal" variant="filled" />
       <Input aria-label="hello" disabled placeholder="Disabled" variant="filled" />
@@ -28,7 +28,7 @@ const FilledInput = () => {
 
 const OutlineInput = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
       <Input variant="outline" aria-label="hello" placeholder="Normal" />
       <Input variant="outline" aria-label="hello" disabled placeholder="Disabled" />
@@ -49,7 +49,7 @@ const OutlineInput = () => {
 
 const BorderedInput = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
       <Input variant="bordered" aria-label="hello" placeholder="Normal" />
       <Input variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
@@ -70,7 +70,7 @@ const BorderedInput = () => {
 
 const CornerInput = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input corner="sharp" placeholder="sharp" />
       <Input corner="xs" placeholder="xs" />
       <Input corner="sm" placeholder="sm" />
@@ -84,7 +84,7 @@ const CornerInput = () => {
 
 const ColorInput = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <Input color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <Input color="secondary" variant="outline" autoFocus placeholder="Disabled" />
@@ -104,7 +104,7 @@ const ColorInput = () => {
 
 export const SizeInput = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input size="xs" placeholder="Extra Small(xs)" />
       <Input size="sm" placeholder="Small(sm)" />
       <Input placeholder="Medium (md default You don't need it)" />
@@ -116,7 +116,7 @@ export const SizeInput = () => {
 
 export const SizeIcons = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input placeholder="Medium" suffixInput={<User width="16" />} />
       <Input placeholder="Medium" prefixInput={<User width="16" />} />
       <Input placeholder="Medium" prefixInput={<User width="16" />} suffixInput={<Eye width="16" />} />

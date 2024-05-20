@@ -3,7 +3,7 @@ import React from 'react'
 
 export const CodePlayGround = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
@@ -21,7 +21,7 @@ export const CodeSizes = () => {
       gap="sm"
       direction="column"
       className="playground"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -44,7 +44,7 @@ export const CodeCorners = () => {
       gap="sm"
       direction="column"
       className="playground"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -67,7 +67,7 @@ export const CodeColors = () => {
       gap="sm"
       direction="column"
       className="playground"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"

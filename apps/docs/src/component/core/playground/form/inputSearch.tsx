@@ -7,7 +7,7 @@ export const InputSearchPlayGround = () => {
 
 const FilledInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <InputSearch aria-label="hello" placeholder="Normal" variant="filled" />
       <InputSearch aria-label="hello" disabled placeholder="Disabled" variant="filled" />
@@ -20,7 +20,7 @@ const FilledInputPassword = () => {
 
 const OutlineInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
       <InputSearch variant="outline" aria-label="hello" placeholder="Normal" />
       <InputSearch variant="outline" aria-label="hello" disabled placeholder="Disabled" />
@@ -33,7 +33,7 @@ const OutlineInputPassword = () => {
 
 const BorderedInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
       <InputSearch variant="bordered" aria-label="hello" placeholder="Normal" />
       <InputSearch variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
@@ -46,7 +46,7 @@ const BorderedInputPassword = () => {
 
 const CornerInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch corner="sharp" placeholder="sharp" />
       <InputSearch corner="xs" placeholder="xs" />
       <InputSearch corner="sm" placeholder="sm" />
@@ -60,7 +60,7 @@ const CornerInputPassword = () => {
 
 const ColorInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <InputSearch color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <InputSearch color="secondary" variant="outline" autoFocus placeholder="Disabled" />
@@ -78,7 +78,7 @@ const ColorInputPassword = () => {
 
 export const SizeInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch size="xs" placeholder="Extra Small(xs)" />
       <InputSearch size="sm" placeholder="Small(sm)" />
       <InputSearch placeholder="Medium (md default You don't need it)" />
@@ -90,7 +90,7 @@ export const SizeInputPassword = () => {
 
 export const SizeIcons = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch placeholder="Medium" prefixInput={<User width="16" />} />
     </Paper>
   )

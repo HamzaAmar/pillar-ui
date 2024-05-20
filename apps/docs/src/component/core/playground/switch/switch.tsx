@@ -9,7 +9,7 @@ export const SwitchPlayGround = () => {
       wrap
       items="center"
       gap="sm"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -26,16 +26,7 @@ export const SwitchPlayGround = () => {
 
 export const SwitchSizes = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Switch label="Hello" size="3xs" />
       <Switch label="Hello" size="2xs" />
       <Switch label="Hello" size="xs" />
@@ -51,7 +42,7 @@ export const SwitchSizes = () => {
 
 export const SwitchDefaultPressed = () => {
   return (
-    <Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Switch label="Hello" defaultPressed color="danger" />
       <Switch label="Hello" defaultPressed color="warning" />
       <Switch label="Hello" defaultPressed color="success" />
@@ -63,7 +54,7 @@ export const SwitchDefaultPressed = () => {
 }
 export const SwitchDisabled = () => {
   return (
-    <Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Switch label="Hello" disabled />
       <Switch label="Hello" disabled defaultPressed />
     </Paper>
@@ -78,7 +69,7 @@ export const SwitchCorners = () => {
       gap="sm"
       items="center"
       className="playground"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -102,7 +93,7 @@ export const SwitchColors = () => {
       gap="sm"
       items="center"
       className="playground"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"

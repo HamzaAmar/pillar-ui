@@ -3,7 +3,7 @@ import React from 'react'
 
 export const PaginationPlayGround = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Pagination count={10} />
       <Pagination count={10} color="danger" />
       <Pagination count={10} color="success" />
@@ -17,7 +17,7 @@ export const PaginationPlayGround = () => {
 
 export const PaginationSizes = () => {
   return (
-    <Paper as={Flex} gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="sm" border p="sm" background="surface-3" corner="sm">
       <Pagination count={10} />
       <Pagination count={10} size="2xs" />
       <Pagination count={10} size="xs" />
@@ -32,7 +32,7 @@ export const PaginationSizes = () => {
 
 export const PaginationVariants = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" flow="sm" background="surface-3" corner="sm">
       <Pagination count={10} variant="soft" />
       <Pagination count={10} variant="solid" />
       <Pagination count={10} variant="outline" />
@@ -42,16 +42,7 @@ export const PaginationVariants = () => {
 
 export const PaginationDefaultPressed = () => {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      flow="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} gap="sm" items="center" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Pagination count={10} title="Hello" />
       <Pagination count={10} title="Hello" />
       <Pagination count={10} title="Hello" />
@@ -64,7 +55,7 @@ export const PaginationDefaultPressed = () => {
 
 export const PaginationCorners = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" flow="sm" background="surface-3" corner="sm">
       <Pagination count={10} />
       <Pagination count={10} corner="full" />
       <Pagination count={10} corner="xs" />
@@ -80,7 +71,7 @@ export const PaginationCorners = () => {
 
 export const PaginationColors = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" flow="sm" background="surface-3" corner="sm">
       <Pagination count={10} title="Esc" />
       <Pagination count={10} title="Esc" color="danger" />
       <Pagination count={10} title="Esc" color="success" />

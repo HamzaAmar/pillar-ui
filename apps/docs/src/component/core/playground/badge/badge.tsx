@@ -9,7 +9,7 @@ export const BadgePlayGround = () => {
       as={Flex}
       wrap
       gap="sm"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -27,7 +27,7 @@ export const BadgePlayGround = () => {
 
 export const BadgeSizes = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Flex items="center" gap="sm">
         <Badge size="3xs" type="numeric" number={15} max={15} />
         <Badge size="2xs" type="numeric" number={15} max={15} />
@@ -64,16 +64,7 @@ export const BadgeSizes = () => {
 
 export const BadgeTypes = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Badge type="dot" color="danger" />
       <Badge type="numeric" number={15} max={15} color="danger" />
       <Badge type="icon" icon={<Check />} color="danger" />
@@ -83,16 +74,7 @@ export const BadgeTypes = () => {
 
 export const BadgeVariants = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <div>
         <Badge type="dot" variant="solid" color="danger" />
         <Badge type="numeric" variant="solid" number={15} max={15} color="danger" />
@@ -110,16 +92,7 @@ export const BadgeVariants = () => {
 
 export const BadgeNumeric = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Badge type="numeric" number={15} color="danger" />
       <Badge type="numeric" number={150} color="success" />
       <Badge type="numeric" number={5} color="warning" />
@@ -134,16 +107,7 @@ export const BadgeNumeric = () => {
 }
 export const BadgeNumericMaxValue = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Badge type="numeric" number={15} max={10} color="danger" />
       <Badge type="numeric" number={150} max={100} color="success" />
       <Badge type="numeric" number={5} max={0} color="warning" />
@@ -159,7 +123,7 @@ export const BadgeNumericMaxValue = () => {
 
 export const BadgeCorners = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Flex gap="sm">
         <Badge type="numeric" corner="sharp" number={15} max={15} color="danger" />
         <Badge type="numeric" corner="xs" number={15} max={15} color="success" />
@@ -193,7 +157,7 @@ export const BadgeCorners = () => {
 
 export const BadgeColors = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Flex gap="sm">
         <Badge type="numeric" number={15} max={15} color="danger" />
         <Badge type="numeric" number={15} max={15} color="success" />

@@ -4,7 +4,7 @@ import React from 'react'
 
 export const BreadcrumbPlayGround = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" background="surface-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
@@ -17,7 +17,7 @@ export const BreadcrumbPlayGround = () => {
 
 export const BreadcrumbSizes = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" background="surface-3" corner="sm">
       <Breadcrumb size="2xs" separator="-">
         <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
         <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
@@ -80,7 +80,7 @@ export const BreadcrumbSizes = () => {
 
 export const BreadcrumbSeparator = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" background="surface-3" corner="sm">
       <Breadcrumb separator="-">
         <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
         <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
@@ -109,7 +109,7 @@ export const BreadcrumbSeparator = () => {
 }
 export const BreadcrumbIcons = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" background="surface-3" corner="sm">
       <Breadcrumb>
         <Breadcrumb.Item link="../../..">
           Home
@@ -178,7 +178,7 @@ export const BreadcrumbIcons = () => {
 
 export const BreadcrumbColors = () => {
   return (
-    <Paper borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" background="surface-3" corner="sm">
       <Breadcrumb color="danger">
         <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
         <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>

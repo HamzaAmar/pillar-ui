@@ -9,7 +9,7 @@ export const KbdPlayGround = () => {
       wrap
       gap="sm"
       items="center"
-      borderColor="opacity-6"
+      border
       p="sm"
       background="surface-3"
       corner="sm"
@@ -26,16 +26,7 @@ export const KbdPlayGround = () => {
 
 export const KbdSizes = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      items="center"
-      gap="sm"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="surface-3" corner="sm">
       <Kbd title="Esc" />
       <Kbd title="Esc" size="2xs" />
       <Kbd title="Esc" size="xs" />
@@ -50,16 +41,7 @@ export const KbdSizes = () => {
 
 export const KbdTitle = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Kbd title="Esc" />
     </Paper>
   )
@@ -67,16 +49,7 @@ export const KbdTitle = () => {
 
 export const KbdCorners = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Kbd title="Esc" corner="sharp" />
       <Kbd title="Esc" />
       <Kbd title="Esc" corner="xs" />
@@ -90,16 +63,7 @@ export const KbdCorners = () => {
 
 export const KbdColors = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Kbd title="Esc" />
       <Kbd title="Esc" color="danger" />
       <Kbd title="Esc" color="success" />
@@ -115,16 +79,7 @@ const Variants = ['solid', 'mixed', 'soft', 'outline'] as const
 
 export const KbdVariants = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       {Variants.map((variant) => (
         <Flex key={variant} gap="sm">
           <Kbd title="Esc" variant={variant} />

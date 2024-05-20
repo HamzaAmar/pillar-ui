@@ -55,7 +55,7 @@ function CornerCorners() {
 }
 ```
 
-## Color
+### Color
 
 Type: Color (string)
 Default: `primary`
@@ -94,7 +94,7 @@ function BlockquoteColor() {
 }
 ```
 
-## Size
+### Size
 
 Type: Size (string)
 Default: `md`
@@ -131,6 +131,37 @@ function BlockquoteSize() {
       <Blockquote size="2xl" cite="John Doe">
         This is the quoted text.
       </Blockquote>
+    </div>
+  )
+}
+```
+
+<BlockquotePlayGround.Cite />
+
+### Cite
+
+The `Blockquote.Cite` subcomponent is a specialized element for attributing the quoted content to its source.
+
+- `title` (string): The text of the citation (e.g., author name, source title).
+- `align` (`start`| `center`| `end`) default `start`: Controls the horizontal alignment of the citation (`start`, `center`, or `end`; default is `start`).
+
+** Example Usage **
+
+<BlockquotePlayGround.Cite />
+
+```tsx showLineNumbers title="Blockquote.tsx"
+import { Blockquote } from '@pillar-ui/core'
+
+function BlockquoteCite() {
+  return (
+    <div className="l_flow__md">
+      <Blockquote color="danger">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        {/* ... other text ... */}
+        <Blockquote.Cite title="Hello world" />
+      </Blockquote>
+
+      {/* ... other examples with alignment */}
     </div>
   )
 }

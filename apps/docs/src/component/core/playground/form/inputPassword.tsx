@@ -7,7 +7,7 @@ export const InputPasswordPlayGround = () => {
 
 const FilledInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <InputPassword aria-label="hello" placeholder="Normal" variant="filled" />
       <InputPassword aria-label="hello" disabled placeholder="Disabled" variant="filled" />
@@ -20,7 +20,7 @@ const FilledInputPassword = () => {
 
 const OutlineInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
       <InputPassword variant="outline" aria-label="hello" placeholder="Normal" />
       <InputPassword variant="outline" aria-label="hello" disabled placeholder="Disabled" />
@@ -33,7 +33,7 @@ const OutlineInputPassword = () => {
 
 const BorderedInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
       <InputPassword variant="bordered" aria-label="hello" placeholder="Normal" />
       <InputPassword variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
@@ -51,7 +51,7 @@ const BorderedInputPassword = () => {
 
 const CornerInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword corner="sharp" placeholder="sharp" />
       <InputPassword corner="xs" placeholder="xs" />
       <InputPassword corner="sm" placeholder="sm" />
@@ -65,7 +65,7 @@ const CornerInputPassword = () => {
 
 const ColorInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <InputPassword color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <InputPassword color="secondary" variant="outline" autoFocus placeholder="Disabled" />
@@ -83,7 +83,7 @@ const ColorInputPassword = () => {
 
 export const SizeInputPassword = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword size="xs" placeholder="Extra Small(xs)" />
       <InputPassword size="sm" placeholder="Small(sm)" />
       <InputPassword placeholder="Medium (md default You don't need it)" />
@@ -95,7 +95,7 @@ export const SizeInputPassword = () => {
 
 export const SizeIcons = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword placeholder="Medium" prefixInput={<User width="16" />} />
     </Paper>
   )
@@ -103,7 +103,7 @@ export const SizeIcons = () => {
 
 export const InputPasswordCustomIcon = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword
         placeholder="enter your password"
         color="primary"

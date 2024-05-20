@@ -5,7 +5,7 @@ import { DocHeaderProps } from './docHeader.type'
 
 const docHeader = ({ title, type, items, file, excerpt, slug }: DocHeaderProps) => {
   return (
-    <Paper pb="sm" flow="lg" borderStyle="solid" borderColor="opacity-6" borderPosition="bottom" padding="sm">
+    <Paper flow="lg" p="sm">
       <Heading size="2xl">
         {title} {type} Documantation
       </Heading>

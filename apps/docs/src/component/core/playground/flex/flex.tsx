@@ -19,7 +19,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100p
 
 export const FlexPlayGround = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
@@ -32,7 +32,7 @@ export const FlexPlayGround = () => {
 
 export const FlexGap = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <Flex gap="2xs">{boxes}</Flex>
       <Flex gap="xs">{boxes}</Flex>
       <Flex gap="sm">{boxes}</Flex>
@@ -46,7 +46,7 @@ export const FlexGap = () => {
 
 export const FlexWrap = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <Flex wrap gap="sm">
         {boxes}
         {boxes}
@@ -61,7 +61,7 @@ export const FlexWrap = () => {
 
 export const FlexDirection = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <Flex gap="sm">{boxes}</Flex>
       <Flex gap="sm" direction="column">
         {boxes}
@@ -72,7 +72,7 @@ export const FlexDirection = () => {
 
 export const FlexJustify = () => {
   return (
-    <Paper className="playground" flow="xl" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="xl" border p="sm" background="surface-3" corner="sm">
       <Flex gap="sm">{boxes}</Flex>
       <Flex gap="sm" justify="center">
         {boxes}
@@ -95,7 +95,7 @@ export const FlexJustify = () => {
 
 export const FlexItems = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <Flex as={Paper} style={{ height: '100px' }} background="surface-5" gap="sm" items="center">
         Hello
       </Flex>
@@ -111,7 +111,7 @@ export const FlexItems = () => {
 
 export const FlexNested = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" direction="column">
         <Box className="l_flex-1">header</Box>
         <Flex gap="sm">

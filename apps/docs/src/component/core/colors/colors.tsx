@@ -29,16 +29,7 @@ function ColorItem({ item, value }: ColorItem) {
   }
 
   return (
-    <Grid
-      as={Paper}
-      borderPosition="bottom"
-      borderColor="opacity-6"
-      pb="md"
-      items="center"
-      grid="4rem 1fr auto"
-      gap="sm"
-      bb="1px solid red"
-    >
+    <Grid as={Paper} border items="center" grid="4rem 1fr auto" gap="sm">
       <Text size="sm">{item} </Text>
       <div className="l_flow__sm">
         <Grid justify="center" grid="repeat(12, 1fr) x auto 30px 30px" gap="xs">
@@ -48,20 +39,10 @@ function ColorItem({ item, value }: ColorItem) {
             </Text>
           ))}
           {light.map((color) => (
-            <Paper
-              b="1px solid var(--opacity-10)"
-              corner="xs"
-              style={{ background: `hsl(${color})` }}
-              key={`${color}-light`}
-            />
+            <Paper corner="xs" style={{ background: `hsl(${color})` }} key={`${color}-light`} />
           ))}
           {dark.map((color) => (
-            <Paper
-              b="1px solid var(--opacity-10)"
-              corner="xs"
-              style={{ height: '30px', background: `hsl(${color})` }}
-              key={`${color}-dark`}
-            />
+            <Paper corner="xs" style={{ height: '30px', background: `hsl(${color})` }} key={`${color}-dark`} />
           ))}
         </Grid>
       </div>

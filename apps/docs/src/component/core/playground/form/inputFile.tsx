@@ -7,7 +7,7 @@ export const InputFilePlayGround = () => {
 
 const FilledInputFile = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile aria-label="hello" autoFocus variant="filled" />
       <InputFile aria-label="hello" variant="filled" />
       <InputFile aria-label="hello" disabled variant="filled" />
@@ -18,7 +18,7 @@ const FilledInputFile = () => {
 
 const OutlineInputFile = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile variant="outline" aria-label="hello" autoFocus />
       <InputFile variant="outline" aria-label="hello" />
       <InputFile variant="outline" aria-label="hello" disabled />
@@ -29,7 +29,7 @@ const OutlineInputFile = () => {
 
 const BorderedInputFile = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile variant="bordered" aria-label="hello" autoFocus />
       <InputFile variant="bordered" aria-label="hello" />
       <InputFile variant="bordered" aria-label="hello" disabled />
@@ -40,7 +40,7 @@ const BorderedInputFile = () => {
 
 const CornerInputFile = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile corner="sharp" />
       <InputFile corner="xs" />
       <InputFile corner="sm" />
@@ -54,7 +54,7 @@ const CornerInputFile = () => {
 
 const ColorInputFile = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile color="primary" variant="bordered" autoFocus />
       <InputFile color="warning" variant="bordered" autoFocus />
       <InputFile color="secondary" variant="outline" autoFocus />
@@ -65,7 +65,7 @@ const ColorInputFile = () => {
 
 export const SizeInputFile = () => {
   return (
-    <Paper flow="sm" className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile size="xs" />
       <InputFile size="sm" />
       <InputFile />

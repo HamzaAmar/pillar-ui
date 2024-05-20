@@ -4,7 +4,7 @@ import React from 'react'
 
 export const ChipsPlayGround = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm" items="center">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
@@ -17,7 +17,7 @@ export const ChipsPlayGround = () => {
 
 export const BadgeSizes = () => {
   return (
-    <Paper as={Flex} items="center" gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} items="center" gap="sm" border p="sm" background="surface-3" corner="sm">
       <Chips size="2xs">Hello</Chips>
       <Chips size="xs">Hello</Chips>
       <Chips size="sm">Hello</Chips>
@@ -62,16 +62,7 @@ export const BadgeVariants = () => {
 
 export const BadgeNumeric = () => {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      items="center"
-      borderColor="opacity-6"
-      p="sm"
-      flow="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} gap="sm" items="center" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Chips corner="sharp">Hello</Chips>
       <Chips corner="xs">Hello</Chips>
       <Chips corner="sm">Hello</Chips>
@@ -85,7 +76,7 @@ export const BadgeNumeric = () => {
 }
 export const BadgeIcon = () => {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <Flex as={Flex} gap="sm" items="center">
         <Chips size="xs">Hello</Chips>
         <Chips size="xs" icon={<Close />}>
@@ -118,7 +109,7 @@ export const BadgeIcon = () => {
 
 export const BadgeCorners = () => {
   return (
-    <Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Chips corner="sharp">Hello</Chips>
       <Chips corner="xs">Hello</Chips>
       <Chips corner="sm">Hello</Chips>
@@ -133,7 +124,7 @@ export const BadgeCorners = () => {
 
 export const BadgeColors = () => {
   return (
-    <Paper as={Flex} items="center" borderColor="opacity-6" p="sm" gap="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} items="center" border p="sm" gap="sm" background="surface-3" corner="sm">
       <Chips color="danger">Hello</Chips>
       <Chips color="success">Hello</Chips>
       <Chips color="warning">Hello</Chips>

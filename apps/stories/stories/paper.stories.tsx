@@ -27,6 +27,17 @@ export function PaperBackground() {
   )
 }
 
+export function PaperBorder() {
+  return (
+    <div className="l_flow__md">
+      <Paper>Hello</Paper>
+      <Paper border={true} p="md">
+        Hello
+      </Paper>
+    </div>
+  )
+}
+
 export function PaperPadding() {
   return (
     <div className="l_flow__md">

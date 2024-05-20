@@ -2,7 +2,7 @@ import { Paper, ProgressBar, ProgressCircle, Flex, ProgressBarStack } from '@pil
 
 export const ProgressPlayGround = () => {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <ProgressBar size="2xs" value={100} label="hello" />
       <ProgressBar size="xs" value={50} label="hello" />
       <ProgressBar size="xs" value={30} label="hello" />
@@ -15,7 +15,7 @@ export const ProgressPlayGround = () => {
 
 export const ProgressSizes = () => {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <div className="l_flow__sm">
         <ProgressBar size="2xs" value={90} label="hello" />
         <ProgressBar size="xs" value={90} label="hello" />
@@ -57,7 +57,7 @@ export const ProgressSizes = () => {
 
 export const ProgressValue = () => {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <ProgressBar size="2xs" value={100} label="hello" />
       <ProgressBar size="xs" value={50} label="hello" />
       <ProgressBar size="xs" value={30} label="hello" />
@@ -70,7 +70,7 @@ export const ProgressValue = () => {
 
 export const ProgressLabel = () => {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <ProgressBar value={90} label="Video Time" />
       <ProgressBar value={90} label="Download percentage" />
       <ProgressBar value={90} label="Video Time" />
@@ -81,7 +81,7 @@ export const ProgressLabel = () => {
 
 export const ProgressColors = () => {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <div className="l_flow__sm">
         <ProgressBar color="danger" value={90} label="hello" />
         <ProgressBar color="success" value={90} label="hello" />
@@ -123,7 +123,7 @@ export const ProgressColors = () => {
 
 export const ProgressMin = () => {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <div className="l_flow__sm">
         <ProgressBar value={50} min={0} label="hello" />
         <ProgressBar value={500} min={0} label="hello" />
@@ -140,7 +140,7 @@ export const ProgressMin = () => {
 
 export const ProgressMax = () => {
   return (
-    <Paper flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <div className="l_flow__sm">
         <ProgressBar value={50} max={1000} label="hello" />
         <ProgressBar value={500} max={100} label="hello" />

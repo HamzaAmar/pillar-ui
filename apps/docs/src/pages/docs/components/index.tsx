@@ -19,7 +19,7 @@ export default function Blog({ components }: { components: Components[] }) {
       <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
         {components.map((component) => (
           <Link href={`utils/${component.slug}`} key={component.slug}>
-            <Paper height="5rem" corner="sm" background="surface-3" padding="xl" className="u_center">
+            <Paper height="5rem" corner="sm" background="surface-3" p="xl" className="u_center">
               <Text size="lg" weight="medium" color="surface">
                 {component.title}
               </Text>

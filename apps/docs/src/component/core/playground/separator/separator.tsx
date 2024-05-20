@@ -4,7 +4,7 @@ import React from 'react'
 
 export const SeparatorPlayGround = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <Separator color="danger" />
       <Separator color="warning" />
       <Separator color="success" />
@@ -17,7 +17,7 @@ export const SeparatorPlayGround = () => {
 
 export const SeparatorTitle = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" border p="sm" background="surface-3" corner="sm">
       <Separator title="Login Here" />
       <Separator title="Login Here" position="center" />
       <Separator title="Login Here" position="end" />
@@ -27,7 +27,7 @@ export const SeparatorTitle = () => {
 
 export const SeparatorThickness = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Separator thickness="3xs" />
       <Separator thickness="2xs" />
       <Separator thickness="xs" />
@@ -43,7 +43,7 @@ export const SeparatorThickness = () => {
 
 export const SeparatorColors = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Separator color="success" />
       <Separator color="danger" />
       <Separator color="warning" />
@@ -56,7 +56,7 @@ export const SeparatorColors = () => {
 
 export const SeparatorDirection = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Separator direction="horizontal" />
       <Separator direction="vertical" />
     </Paper>
