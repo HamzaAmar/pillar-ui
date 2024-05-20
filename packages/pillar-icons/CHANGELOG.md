@@ -1,5 +1,37 @@
 # @pillar/icons
 
+## 0.6.1
+
+### Patch Changes
+
+- This release brings improvements to the Pillar UI Core library, including bug fixes, refactoring for efficiency, and the addition of new features.
+
+  **Key Changes:**
+
+  - **Enhancements:**
+    - Added utility classes for increased flexibility (7682312).
+    - Implemented clear action icon in search input (49a2216).
+    - Revised Create Context function parameters (8ee1a5e).
+  - **Bug Fixes:**
+    - Resolved issues in Pillar UI Core (7682312).
+    - Fixed documentation errors (9968163, 11e303d).
+  - **Refactoring:**
+    - Reduced library code for improved performance (1a27b0a).
+    - Optimized CSS by sharing variant styles (41c80cc).
+
+  **Commits:**
+
+  - 7682312: fix: the pillar ui core mistakes and add utility classes
+  - 9968163: fix: the docs mistakes
+  - 1a27b0a: refactor: reduce the lib code
+  - 49a2216: refactor: the search input to add clear action icon
+  - 41c80cc: refactor: reduce the css size by sharing variants style
+  - 8ee1a5e: Refactor: Revise Create Context Function Parameters
+  - 11e303d: fix: docs errors
+  - 43856b0: refactor: change the paper component to be better
+
+  **Important Note:** Please review the full commit history for a detailed understanding of the changes.
+
 ## 0.6.0
 
 ### Minor Changes
