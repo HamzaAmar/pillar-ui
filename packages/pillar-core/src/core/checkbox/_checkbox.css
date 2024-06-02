@@ -17,11 +17,6 @@
   */
   font-size: var(--checkbox-size, 1rem);
 
-  &:focus-within {
-    outline: 2px dashed var(--color-shared-10, var(--primary-10));
-    outline-offset: 2px;
-  }
-
   &:has(:disabled) {
     cursor: not-allowed;
   }

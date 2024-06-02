@@ -34,9 +34,6 @@
     text-decoration: underline 2px;
     color: var(--color-shared-10);
   }
-  &:focus-visible {
-    outline: 1px solid;
-  }
   &[aria-current='page'] {
     color: var(--surface-11);
     text-decoration: none;

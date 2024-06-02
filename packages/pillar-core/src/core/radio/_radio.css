@@ -10,10 +10,6 @@
   font-size: var(--radio-size, 0.875rem);
 
   /* width: fit-content; */
-  &:focus-within {
-    outline: 2px dashed var(--color-shared-10);
-    outline-offset: 2px;
-  }
   &:has(:disabled) {
     color: var(--surface-11);
     cursor: not-allowed;

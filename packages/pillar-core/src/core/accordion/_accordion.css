@@ -74,10 +74,6 @@
   &:hover {
     background-color: var(--opacity-3);
   }
-  &:focus-visible {
-    outline: 2px dashed var(--color-shared-11, var(--primary-9));
-    outline-offset: -2px;
-  }
   & svg {
     transition: transform 0.25s;
   }

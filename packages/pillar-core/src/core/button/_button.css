@@ -21,10 +21,6 @@
   &:active {
     transform: translateY(-1px) scale(1.01);
   }
-  &:focus-visible {
-    outline: 2px dashed var(--color-shared-9);
-    outline-offset: 1px;
-  }
   &:disabled {
     background-color: var(--surface-5);
     color: var(--surface-11);

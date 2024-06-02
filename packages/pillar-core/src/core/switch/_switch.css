@@ -16,10 +16,6 @@
   font-size: var(--switch-size, 1rem);
   text-transform: var(--switch-transform);
 
-  &:focus-visible {
-    outline: 2px dashed var(--color-shared-9);
-    outline-offset: 2px;
-  }
   &:hover::before {
     box-shadow: inset 0 0 0 0.125em var(--opacity-8);
   }
