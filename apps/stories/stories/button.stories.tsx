@@ -338,17 +338,17 @@ export function ButtonsCustomStyle() {
   )
 }
 
-export function ButtonsLongText() {
+export function ButtonsLength() {
   return (
     <Flex items="center" gap="xs" wrap>
-      <Button style={{ background: 'orange' }} state="idle" color="success">
+      <Button state="idle" color="success">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam asperiores a vitae expedita nostrum
         perspiciatis est excepturi, eligendi facere vel quis, et in dolores eos voluptates libero, adipisci
         necessitatibus voluptatum?
       </Button>
-      <Button className="u_secondary" color="success">
-        Hello world
-      </Button>
+      <Button color="success">Hello world</Button>
+
+      <Button color="success">H</Button>
     </Flex>
   )
 }

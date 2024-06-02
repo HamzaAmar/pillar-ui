@@ -26,11 +26,15 @@ const rating = ({
         {Array(5)
           .fill('')
           .map((_, index) => {
-            const active = rating > index
-            const starStyle = active
-              ? { fill: 'var(--color-shared-9)' }
-              : { stroke: 'var(--color-shared-9)', fill: 'transparent' }
-            return <path key={index} {...starStyle} transform={`translate(${index * 24}, 0)`} d={ICONS[icon]} />
+            return (
+              <path
+                key={index}
+                fill={rating > index ? 'var(--color-shared-9)' : 'transparent'}
+                className="rating-path"
+                transform={`translate(${index * 24}, 0)`}
+                d={ICONS[icon]}
+              />
+            )
           })}
       </svg>
 

@@ -33,7 +33,9 @@
     inset-inline-start: 0;
     top: 50%;
     transform: translate(0, -50%);
-    transition: transform 0.3s, width 0.3s;
+    transition:
+      transform 0.3s,
+      width 0.3s;
     outline: 2px solid transparent;
     outline-offset: -2px;
   }

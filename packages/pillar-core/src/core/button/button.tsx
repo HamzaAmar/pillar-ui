@@ -36,7 +36,9 @@ export const Button = forwardRef((props, forwardedRef) => {
     [`u_corner-${corner}`]: !!corner,
   })
 
-  const _disabled = disabled || state === 'loading'
+  const isLoading = state === 'loading'
+
+  const _disabled = disabled || isLoading
 
   const content = (
     <>
@@ -55,7 +57,7 @@ export const Button = forwardRef((props, forwardedRef) => {
 
   return (
     <Tag disabled={_disabled} ref={forwardedRef} className={classNames} {...rest}>
-      {state === 'loading' ? loadingContent : content}
+      {isLoading ? loadingContent : content}
     </Tag>
   )
 }) as ForwardRefComponent<'button', ButtonProps>
@@ -120,14 +122,14 @@ export const ButtonGroup = forwardRef(
     },
     forwardedRef
   ) => {
-    const iconButtonClassName = classnames(`icon-button btn btn__${variant} u_${color} u_center`, {
+    const classNames = classnames(`icon-button btn btn__${variant} u_${color} u_center`, {
       [className!]: !!className,
       [`u_size-${size}`]: !!size,
       [`u_corner-${corner}`]: !!corner,
     })
 
     return (
-      <Tag role="group" className={iconButtonClassName} ref={forwardedRef} {...rest}>
+      <Tag role="group" className={classNames} ref={forwardedRef} {...rest}>
         {icon}
       </Tag>
     )

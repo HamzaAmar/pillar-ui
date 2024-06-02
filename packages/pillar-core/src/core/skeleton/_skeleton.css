@@ -20,7 +20,8 @@
   height: var(--height, 10rem);
 }
 
-.skeleton--avatar {
+.skeleton--avatar,
+.skeleton--btn {
   width: 2.5em;
   height: 2.5em;
 }
@@ -31,8 +32,6 @@
   width: var(--text-width);
 }
 .skeleton--btn {
-  width: 2.5em;
-  height: 2.5em;
   padding: 0.25em 0.75em;
   min-width: 6rem;
   border-radius: 0.15rem;

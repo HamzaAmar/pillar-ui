@@ -1,39 +1,50 @@
-.checkbox {
-  cursor: pointer;
-  width: fit-content;
-  &:focus-within {
-    outline: 2px dashed var(--color-shared-10, var(--primary-10));
-    outline-offset: 2px;
-  }
-  &[data-disabled='true'] {
-    cursor: not-allowed;
-  }
+.checkbox--label {
+  font-size: 0.875em;
+  color: inherit;
+}
 
-  &:hover > .checkbox--indicator {
-    box-shadow: 0 0 0 0.125em var(--color-shared-7, var(--primary-7));
-  }
+.checkbox-container {
+  width: fit-content;
+  color: var(--text-8);
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
   font-size: var(--checkbox-size, 1rem);
+
+  &:focus-within {
+    outline: 2px dashed var(--color-shared-10, var(--primary-10));
+    outline-offset: 2px;
+  }
+
+  &:has(:disabled) {
+    cursor: not-allowed;
+  }
+
+  &:hover > .checkbox {
+    box-shadow: 0 0 0 0.125em var(--color-shared-7, var(--primary-7));
+  }
 }
 
 .checkbox--element {
-  &:checked:disabled + .checkbox--indicator {
+  &:checked:disabled + .checkbox {
     color: var(--surface-5);
   }
-  &[aria-checked='false'] + .checkbox--indicator svg {
+  &[aria-checked='false'] + .checkbox svg {
     display: none;
   }
-  &:checked + .checkbox--indicator,
-  &:indeterminate + .checkbox--indicator {
+  &:checked + .checkbox,
+  &:indeterminate + .checkbox {
     background-color: var(--color-shared-9, none);
     color: var(--color-shared-1); /* Responsible For The Color Of The Check Icon stroke  white in checked state */
   }
 
-  &:disabled + .checkbox--indicator {
+  &:disabled + .checkbox {
     box-shadow: none;
     border-color: var(--surface-10);
     background-color: var(--surface-10);
@@ -44,10 +55,8 @@
   }
 }
 
-.checkbox--indicator {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.checkbox {
+  --flex: inline-flex;
   width: 1.25em;
   height: 1.25em;
   border: 1px solid var(--opacity-6);
@@ -55,21 +64,21 @@
   color: transparent; /* Responsible For The Color Of The Check Icon stroke Default to transparent */
 }
 
-.checkbox--label {
-  font-size: 0.875em;
-  color: var(--text-8);
-}
-
 .checkbox--check {
   stroke: currentColor;
 }
 
 @media (forced-colors: active) {
-  .checkbox[data-disabled='true'] {
+  .checkbox:has(:disabled) {
     color: GrayText;
-  }
 
-  .checkbox[data-disabled='true'] .checkbox--indicator {
-    background-color: GrayText;
+    /* & .checkbox--label {
+      color: GrayText;
+    } */
+
+    & .checkbox {
+      background-color: GrayText;
+      border-color: GrayText;
+    }
   }
 }

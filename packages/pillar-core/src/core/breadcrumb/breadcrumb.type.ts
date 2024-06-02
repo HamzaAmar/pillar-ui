@@ -20,3 +20,7 @@ export interface BreadcrumbItemProps extends BreadcrumbProps {
 export interface BreadcrumbContextProps {
   separator?: string | ReactElement
 }
+
+export interface CurrentPage {
+  'aria-current'?: 'page'
+}

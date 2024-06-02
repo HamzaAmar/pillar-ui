@@ -6,7 +6,6 @@ import { useComposedRefs } from '@pillar-ui/hooks'
 import { useEffect, useRef, forwardRef } from 'react'
 
 import type { CheckboxProps } from './checkbox.type'
-import { Flex } from '../flex'
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRef) => {
   let {
@@ -32,11 +31,11 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRe
   }, [isIndeterminate])
 
   const ref = useComposedRefs(forwardedRef, checkboxRef)
-  const classNamesRoot = classnames(`checkbox`, { [`u_size-${size}`]: !!size, [`u_${color}`]: !!color })
+  const classNamesRoot = classnames('checkbox-container', { [`u_size-${size}`]: !!size, [`u_${color}`]: !!color })
   const classNames = classnames('checkbox--label', { 'u_visually-hidden': !!showLabel })
 
   return (
-    <Flex gap="2xs" items="center" inline as="label" className={classNamesRoot} data-disabled={props.disabled}>
+    <label className={classNamesRoot}>
       <input
         type="checkbox"
         ref={ref}
@@ -45,9 +44,9 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRe
         aria-checked={isIndeterminate ? 'mixed' : rest.checked}
         {...rest}
       />
-      <span className="checkbox--indicator">{icon}</span>
+      <span className="checkbox u_center">{icon}</span>
       <div className={classNames}>{label}</div>
-    </Flex>
+    </label>
   )
 })
 

@@ -68,14 +68,13 @@
   text-align: start;
   background-color: transparent;
   padding: 0.75em 0.5em;
-  cursor: pointer;
   color: currentColor;
   transform: none;
 
   &:hover {
     background-color: var(--opacity-3);
   }
-  &::focus-visible {
+  &:focus-visible {
     outline: 2px dashed var(--color-shared-11, var(--primary-9));
     outline-offset: -2px;
   }

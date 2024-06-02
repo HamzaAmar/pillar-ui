@@ -3,9 +3,7 @@ import { Children, forwardRef, useState } from 'react'
 import { User } from '@pillar-ui/icons'
 import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
 import { classnames, createContext } from '@pillar-ui/utils'
-// import { AvatarProvider, useAvatarContext } from './context'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { Text } from '../typography'
 
 const [AvatarProvider, useAvatarContext] = createContext<AvatarGroupContextProps>({ name: 'Avatar' })
 
@@ -15,53 +13,41 @@ Avatar Group Component
 =================================================================================
 */
 
-export const AvatarGroup = forwardRef(
-  (
-    {
-      limit,
-      size = 'md',
-      layout = 'stack',
-      variant = 'soft',
-      color = 'primary',
-      corner = 'full',
-      fallback,
-      animate,
-      children,
-      as: Tag = 'div',
-      ...rest
-    },
-    ref
-  ) => {
-    const childCount = Children.count(children)
+export const AvatarGroup = forwardRef((props, forwardRef) => {
+  const {
+    limit,
+    size = 'md',
+    layout = 'stack',
+    variant = 'soft',
+    color = 'primary',
+    corner = 'full',
+    fallback,
+    animate,
+    children,
+    as: Tag = 'div',
+    ...rest
+  } = props
 
-    const restCount = limit && limit < childCount ? childCount - limit : null
+  const childCount = Children.count(children)
 
-    const maxCount = limit ? Math.min(limit, childCount) : childCount
+  const restCount = limit && limit < childCount ? childCount - limit : null
 
-    const contextProps = { color, corner, size, animate, variant, fallback }
+  const maxCount = limit ? Math.min(limit, childCount) : childCount
 
-    return (
-      <Tag ref={ref} className={`avatar-group avatar-group__${layout}`} {...rest}>
-        <AvatarProvider {...contextProps}>
-          {Array.from(new Array(maxCount)).map((_, index) => {
-            return Children.toArray(children)[index]
-          })}
-        </AvatarProvider>
+  const contextProps = { color, corner, size, animate, variant, fallback }
 
-        {restCount && (
-          <Avatar
-            {...contextProps}
-            fallback={
-              <Text size="sm" weight="medium">
-                {restCount}+
-              </Text>
-            }
-          />
-        )}
-      </Tag>
-    )
-  }
-) as ForwardRefComponent<'div', AvatarGroupProps>
+  return (
+    <Tag ref={forwardRef} className={`avatar-group avatar-group__${layout}`} {...rest}>
+      <AvatarProvider {...contextProps}>
+        {Array.from(new Array(maxCount)).map((_, index) => {
+          return Children.toArray(children)[index]
+        })}
+      </AvatarProvider>
+
+      {restCount && <Avatar {...contextProps} fallback={<div className="u_size-sm u_font-medium">{restCount}+</div>} />}
+    </Tag>
+  )
+}) as ForwardRefComponent<'div', AvatarGroupProps>
 
 AvatarGroup.displayName = 'Pillar-AvatarGroup'
 
@@ -71,16 +57,16 @@ Avatar Component
 =================================================================================
 */
 
-export const Avatar = forwardRef((props, ref) => {
-  const context = useAvatarContext()
+export const Avatar = forwardRef((props, forwardRef) => {
+  const ctx = useAvatarContext()
   const {
     as: Tag = 'div',
-    animate = context?.animate,
-    variant = context?.variant ?? 'soft',
-    size = context?.size,
-    corner = context?.corner,
-    color = context?.color ?? 'primary',
-    fallback = context?.fallback ?? <User width="max(1.75em, 10px)" />,
+    animate = ctx?.animate,
+    variant = ctx?.variant ?? 'soft',
+    size = ctx?.size,
+    corner = ctx?.corner,
+    color = ctx?.color ?? 'primary',
+    fallback = ctx?.fallback ?? <User width="max(1.75em, 10px)" />,
     image = '',
     className,
     title,
@@ -109,13 +95,13 @@ export const Avatar = forwardRef((props, ref) => {
 
   const classNames = classnames(`avatar avatar__size avatar__${variant} u_${color} u_center`, {
     [`u_${animate}`]: !!animate,
-    [className!]: !!className,
     [`u_size-${size}`]: !!size,
     [`u_corner-${corner}`]: !!corner,
+    [className!]: !!className,
   })
 
   return (
-    <Tag ref={ref} className={classNames} {...rest}>
+    <Tag ref={forwardRef} className={classNames} {...rest}>
       {content}
     </Tag>
   )

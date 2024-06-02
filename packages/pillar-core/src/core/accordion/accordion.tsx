@@ -103,7 +103,7 @@ AccordionPanel.displayName = 'Pillar-AccordionPanel'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const Accordion = forwardRef((props, ref) => {
+export const Accordion = forwardRef((props, forwardedRef) => {
   const {
     children,
     type = 'single',
@@ -117,6 +117,7 @@ export const Accordion = forwardRef((props, ref) => {
     ...rest
   } = props
   const context = useAccordion(props)
+
   const classNames = classnames(`accordion l_flow__3xs`, {
     [`u_${color}`]: !!color,
     [`u_size-${size}`]: !!size,
@@ -126,7 +127,7 @@ export const Accordion = forwardRef((props, ref) => {
   const accordionContext = { ...context, variant, corner }
 
   return (
-    <div ref={ref} className={classNames} {...rest}>
+    <div ref={forwardedRef} className={classNames} {...rest}>
       <AccordionProvider {...accordionContext}>
         {Children.map(children, (child, index) => {
           if (!isValidElement(child)) {

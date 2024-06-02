@@ -1,12 +1,12 @@
 /* Chips Variants */
 
 .kdb {
-  padding: 0.125em 0.25em;
-  border: 0.075em solid transparent;
   border-bottom-width: 0.175em;
-  width: fit-content;
   box-shadow: inset 1px 1px 0.175em var(--color-shared-6, var(--surface-6));
+  border: 0.075em solid transparent;
+  padding: 0.125em 0.25em;
   line-height: 1;
+  width: fit-content;
   height: fit-content;
 
   /*

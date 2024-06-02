@@ -10,3 +10,7 @@
 .rating svg {
   width: 7.5em;
 }
+
+.rating-path {
+  stroke: var(--color-shared-9);
+}

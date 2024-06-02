@@ -26,10 +26,5 @@
 }
 
 .cite {
-  font-weight: 500;
-  font-size: 0.75em;
-  color: var(--surface-11);
-  text-transform: uppercase;
-  display: inline-block;
-  width: 100%;
+  display: block;
 }

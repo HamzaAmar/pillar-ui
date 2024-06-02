@@ -1,26 +1,35 @@
 .pagination--button {
-  padding: 0.375rem;
-  /* min-width: 1.75rem; */
-  height: 100%;
+  padding: 0.5rem;
   aspect-ratio: 1 / 1;
   color: var(--color-shared-12);
   line-height: 1;
+  overflow: hidden;
+
+  &[aria-current='page'] {
+    background-color: var(--color-shared-9);
+    color: white;
+    border-color: var(--opacity-8);
+  }
 }
 
 .pagination-item--link {
   line-height: 0;
   width: 30px;
   height: 30px;
+
+  & svg {
+    line-height: 1;
+  }
 }
 
-.pagination-item--link svg {
-  line-height: 1;
+.pagination--list {
+  display: flex;
+  gap: var(--space-sm);
+  list-style: none;
 }
 
-.pagination--button[aria-current='page'] {
-  background-color: var(--color-shared-9);
-  color: white;
-  /* background-color: var(--opacity-4); */
-  border-color: var(--opacity-8);
-  /* box-shadow: inset -2px -2px 6px 2px var(--opacity-8); */
+@media (forced-colors: active) {
+  .pagination--button[aria-current='page'] {
+    background-color: Highlight;
+  }
 }

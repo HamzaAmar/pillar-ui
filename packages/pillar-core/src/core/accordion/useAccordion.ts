@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import type { AccordionProps, Value } from './accordion.type'
 
 export function useAccordion({ type, collapsible }: AccordionProps) {

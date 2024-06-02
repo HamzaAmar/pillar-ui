@@ -24,6 +24,8 @@
     "@storybook/addon-docs": "^6.5.14",
     "@storybook/addon-essentials": "^6.5.14",
     "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^6.5.14",
     "@storybook/test-runner": "^0.10.0",
     "@storybook/testing-library": "^0.1.0",
@@ -33,8 +35,6 @@
     "storybook-addon-pseudo-states": "^1.15.5",
     "storybook-addon-themes": "^6.1.0",
     "typescript": "^4.9.3",
-    "@storybook/builder-webpack5": "^6.5.16",
-    "@storybook/manager-webpack5": "^6.5.16",
     "webpack": "^5.72.1"
   }
 }

@@ -14,13 +14,14 @@
 
 .spinner::before,
 .spinner::after {
+  --border-color: currentcolor;
   content: '';
   position: absolute;
   inset: 0;
   color: var(--color-shared-10);
   border: min(var(--border), 0.5em) solid transparent;
-  border-top-color: currentcolor;
-  border-left-color: currentcolor;
+  border-top-color: var(--border-color);
+  border-left-color: var(--border-color);
   border-radius: 50%;
   transform: rotate(-45deg);
   animation: spinner-move 0.85s infinite linear;
@@ -37,5 +38,12 @@
 @keyframes spinner-move {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (forced-colors: active) {
+  .spinner::before,
+  .spinner::after {
+    --border-color: GrayText;
   }
 }

@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import { classnames } from '@pillar-ui/utils'
 import { Close } from '@pillar-ui/icons'
 import { useControllableState } from '@pillar-ui/hooks'
-import { Flex, Text, IconButton, FlexProps } from '..'
+import { Flex, IconButton } from '..'
 
 import type { AlertProps } from './alert.type'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
@@ -49,26 +49,20 @@ const Alert = forwardRef((props, forwardedRef) => {
     [`u_size-${size}`]: !!size,
   })
 
-  const inlineText: Partial<FlexProps> = !inline ? { direction: 'column' } : { items: 'center' }
-
-  const _title = title && (
-    <Text transform="capitalize" leading="md" weight="medium">
-      {title}
-    </Text>
-  )
-  const _message = message && <Text as="span">{message}</Text>
+  const _title = title && <div className="u_transform__capitalize u_leading__md u_font-medium">{title}</div>
+  const _message = message && <span>{message}</span>
 
   const closeIcon = closable && (
     <IconButton size="2xs" onClick={handleToggle} icon={<Close />} title="close title" color={color} />
   )
 
   return (
-    <Flex ref={forwardedRef} gap="xs" items="start" className={classNames} role="alert" {...rest}>
+    <Flex ref={forwardedRef} gap="xs" className={classNames} role="alert" {...rest}>
       {icon && <span className="u_items-self u_leading__normal">{icon}</span>}
-      <Flex {...inlineText} gap="xs" justify="center">
+      <div data-inline={!!inline} className="alert--content u_center">
         {_title}
         {_message}
-      </Flex>
+      </div>
       <div className="alert-close">{closeIcon}</div>
     </Flex>
   )

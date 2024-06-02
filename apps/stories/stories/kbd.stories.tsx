@@ -72,3 +72,17 @@ export const KbdCorners = () => {
     </Flex>
   )
 }
+
+export const KbdInFlex = () => {
+  return (
+    <Flex gap="sm" items="center">
+      <Kbd title="Esc" corner="sharp" />
+      <Kbd title="Esc" />
+      <Kbd title="Esc" corner="xs" />
+      <Kbd title="Esc" corner="md" />
+      <Kbd title="Esc" corner="xl" />
+      <Kbd title="Esc" corner="full" />
+      <Kbd title="Esc" corner="circle" />
+    </Flex>
+  )
+}

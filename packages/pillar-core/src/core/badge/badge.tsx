@@ -1,17 +1,16 @@
-import { forwardRef } from 'react'
+import { ReactNode, forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { classnames } from '@pillar-ui/utils'
 
 import type { BadgeProps } from './badge.type'
-import { Flex } from '../flex'
 
 const badge = forwardRef((props, ref) => {
   let {
     variant = 'solid',
     color = 'primary',
-    size = 'md',
     as: Tag = 'div',
     type = 'numeric',
+    size,
     corner,
     className,
     ...rest
@@ -23,12 +22,14 @@ const badge = forwardRef((props, ref) => {
     [`u_corner-${corner}`]: !!corner,
   })
 
-  /*
-   I make this because dot Variant those not have value and max props and we need this condition
-   statement for typescript Look for discriminated union I use Props.type === 'numeric' does not support
-   for destructring with default value
-  */
-  let displayValue
+  /**
+   * - If 'type' is 'numeric', it shows a numeric value (with optional max and number value).
+   * - If 'type' is 'icon', it displays an icon.
+   * The 'dot' variant does not require a value or max props, hence the condition.
+   * Note: Destructuring with default values is not supported for 'Props.type'.
+   * Consider look for discriminated union to understand the problem Correctly.
+   */
+  let displayValue: ReactNode
   const isNumeric = props.type === 'numeric'
 
   if (isNumeric) {
@@ -42,9 +43,7 @@ const badge = forwardRef((props, ref) => {
 
   return (
     <Tag ref={ref} className={classNames} {...rest}>
-      <Flex as="span" items="center" className="badge--content">
-        {displayValue}
-      </Flex>
+      <span className="badge--content u_center">{displayValue}</span>
     </Tag>
   )
 }) as ForwardRefComponent<'div', BadgeProps>

@@ -25,7 +25,7 @@ export const ProgressCircle = ({
   const dashOffset = circumference - (progress / 100) * circumference
 
   return (
-    <div className={`circle-progress u_size-${size} u_${color}`} {...rest}>
+    <div className={`circle-progress u_center u_size-${size} u_${color}`} {...rest}>
       <svg className="circle-progress--svg" viewBox="0 0 100 100">
         <circle className="circle-progress--background" cx="50" cy="50" r="45" />
         <circle
@@ -59,9 +59,7 @@ export const ProgressBar = ({
   return (
     <div className={`u_${color}`}>
       <Flex justify="end">
-        <Text size={size} className={classnames({ 'u_visually-hidden': !showValue })}>
-          {MaxValue}%
-        </Text>
+        <div className={classnames(`u_size-${size}`, { ' u_visually-hidden': !showValue })}>{MaxValue}%</div>
       </Flex>
       <div
         role="progressbar"

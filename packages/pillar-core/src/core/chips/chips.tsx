@@ -18,7 +18,7 @@ const chips = forwardRef((props, ref) => {
     children,
     ...rest
   } = props
-  const _className = classnames(`chips u_${variant} u_${color}`, {
+  const _className = classnames(`chips u_${variant} u_${color} u_center`, {
     [className!]: !!className,
     [`u_size-${size}`]: !!size,
     [`u_transform__${transform}`]: !!transform,

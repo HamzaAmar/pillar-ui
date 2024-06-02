@@ -82,13 +82,13 @@ export const RadioGroup = ({ direction = 'column', children, label, showLabel, i
 */
 
 export const Radio = (props: RadioProps) => {
-  const provider = useRadioContext()
+  const ctx = useRadioContext()
   const {
     label,
     id,
-    color = provider?.color ?? 'primary',
-    size = provider?.size ?? 'md',
-    name = provider?.name,
+    color = ctx?.color ?? 'primary',
+    size = ctx?.size ?? 'md',
+    name = ctx?.name,
     variant = 'solid',
     ...rest
   } = props
@@ -97,14 +97,7 @@ export const Radio = (props: RadioProps) => {
   const idOrLabel = id || fallbackId
 
   return (
-    <Flex
-      inline
-      gap="xs"
-      as="label"
-      className={`radio-container u_size-${size} u_${color}`}
-      htmlFor={idOrLabel}
-      aria-disabled={props.disabled}
-    >
+    <Flex inline gap="xs" as="label" className={`radio-container u_size-${size} u_${color}`} htmlFor={idOrLabel}>
       <input type="radio" name={name} className="radio u_visually-hidden" id={idOrLabel} {...rest} />
       <span className={`custom-radio custom-radio__${variant} u_circle`} />
       <span className="radio__label">{label}</span>

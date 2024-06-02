@@ -47,9 +47,9 @@
     "react": "^18.0.0"
   },
   "devDependencies": {
+    "@pillar-ui/eslint": "*",
     "@pillar-ui/tsconfig": "*",
     "@pillar-ui/utils": "*",
-    "@pillar-ui/eslint": "*",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.9",
