@@ -1,5 +1,5 @@
 import type { Color, Corner, Size, Transform } from '../../types'
-import type { ComponentPropsWithRef, ReactNode, ReactElement, AriaAttributes, RefObject } from 'react'
+import type { ComponentPropsWithRef, ReactNode, ReactElement, AriaAttributes } from 'react'
 import type { TypographyProps } from '..'
 
 type Variant = 'filled' | 'outline' | 'bordered'
