@@ -1,0 +1,4 @@
+.docs--section {
+  display: grid;
+  grid-template-columns: auto minmax(1px, 1fr) auto;
+}
