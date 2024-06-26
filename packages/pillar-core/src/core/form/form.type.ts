@@ -1,6 +1,6 @@
 import type { Color, Corner, Size, Transform } from '../../types'
 import type { ComponentPropsWithRef, ReactNode, ReactElement, AriaAttributes } from 'react'
-import type { TypographyProps } from '..'
+import type { TypographyProps } from '../typography'
 
 type Variant = 'filled' | 'outline' | 'bordered'
 type Status = 'danger' | 'success' | 'warning' | 'primary' | 'text'
