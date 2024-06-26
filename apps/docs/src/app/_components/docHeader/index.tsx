@@ -3,7 +3,9 @@ import { Github } from '@pillar-ui/icons'
 import React from 'react'
 import { DocHeaderProps } from './docHeader.type'
 
-export const DocHeader = ({ title, type, items, to, excerpt, slug, file }: DocHeaderProps) => {
+export const DocHeader = ({ title, type, items, shared, excerpt, slug, file }: DocHeaderProps) => {
+  const directory = file[0].toLowerCase() + file.slice(1)
+
   return (
     <Paper flow="lg" p="sm">
       <Heading size="2xl">
@@ -47,7 +49,7 @@ export const DocHeader = ({ title, type, items, to, excerpt, slug, file }: DocHe
       <Flex gap="sm" wrap>
         <Button
           as="a"
-          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/pillar-${file}/${to}/${slug}/${slug}.tsx`}
+          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${shared}/${directory}/${file}.tsx`}
           target="_blank"
           color="surface"
           icon={<Github strokeWidth={2} />}
