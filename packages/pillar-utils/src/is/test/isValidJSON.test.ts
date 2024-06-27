@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isValidJSON } from '../is' // Replace "your-file" with the actual file path
+import { isValidJSON } from '..' // Replace "your-file" with the actual file path
 
 describe('isValidURL Test', () => {
   test('isValidJSON function - case: valid JSON string', () => {

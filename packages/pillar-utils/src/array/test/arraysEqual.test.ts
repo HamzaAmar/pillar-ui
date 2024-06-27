@@ -1,4 +1,4 @@
-import { arraysEqual } from '../array'
+import { arraysEqual } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('arraysEqual function', () => {

@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { getDay } from '../date'
+import { getDay } from '..'
 
 describe('getDay', () => {
   test('returns the day of the month', () => {

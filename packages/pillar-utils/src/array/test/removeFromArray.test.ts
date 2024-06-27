@@ -1,4 +1,4 @@
-import { removeFromArray } from '../array'
+import { removeFromArray } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('removeFromArray function', () => {

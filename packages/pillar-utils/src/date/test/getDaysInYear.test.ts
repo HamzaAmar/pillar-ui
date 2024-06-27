@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { getDaysInYear } from '../date'
+import { getDaysInYear } from '..'
 
 describe('getDaysInYear', () => {
   it('should return 365 for non-leap years', () => {

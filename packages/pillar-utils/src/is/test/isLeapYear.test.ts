@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isLeapYear } from '../is'
+import { isLeapYear } from '..'
 
 describe('isLeapYear', () => {
   test('should return true for leap years', () => {

@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isValidCreditCardNumber } from '../is' // Replace "your-file" with the actual file path
+import { isValidCreditCardNumber } from '..' // Replace "your-file" with the actual file path
 
 describe('isValidURL Test', () => {
   test('isValidCreditCardNumber True', () => {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { getDaysInMonth } from '../date'
+import { getDaysInMonth } from '..'
 
 describe('getDaysInMonth', () => {
   it('should return the correct number of days for a given date', () => {

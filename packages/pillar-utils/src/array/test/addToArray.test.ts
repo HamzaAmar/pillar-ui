@@ -1,4 +1,4 @@
-import { addToArray } from '../array'
+import { addToArray } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('addToArray function', () => {

@@ -1,4 +1,4 @@
-import { getStartOfYear } from '../date' // Replace 'your-module' with the correct path to the module containing the function.
+import { getStartOfYear } from '..' // Replace 'your-module' with the correct path to the module containing the function.
 import { describe, test, expect } from 'vitest'
 
 describe('getStartOfYear', () => {

@@ -1,4 +1,4 @@
-import { isArray } from '../is'
+import { isArray } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('isArray', () => {

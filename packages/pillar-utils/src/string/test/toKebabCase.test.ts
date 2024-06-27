@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { toKebabCase } from '../string'
+import { toKebabCase } from '..'
 
 describe('toKebabCase', () => {
   test('converts a string to kebab case', () => {

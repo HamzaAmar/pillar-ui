@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { toSlug } from '../string'
+import { toSlug } from '..'
 
 describe('toSlug', () => {
   it('should convert string to slug format', () => {

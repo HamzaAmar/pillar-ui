@@ -1,4 +1,4 @@
-import { toCapitalize } from '../string'
+import { toCapitalize } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('toCapitalize', () => {

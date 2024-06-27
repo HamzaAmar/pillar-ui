@@ -1,6 +1,6 @@
 import React from 'react'
 import { describe, test, expect } from 'vitest'
-import { isReactElement } from '../is'
+import { isReactElement } from '..'
 
 describe('isReactElement', () => {
   test('should return true for valid React elements', () => {

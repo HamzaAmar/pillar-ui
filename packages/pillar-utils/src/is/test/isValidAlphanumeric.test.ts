@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isValidAlphanumeric } from '../is' // Replace "your-file" with the actual file path
+import { isValidAlphanumeric } from '..' // Replace "your-file" with the actual file path
 
 describe('isValidAlphanumeric Test', () => {
   test('isValidAlphanumeric function - case: valid alphanumeric string', () => {

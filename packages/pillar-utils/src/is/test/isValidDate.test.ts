@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isValidDate } from '../is' // Replace "your-file" with the actual file path
+import { isValidDate } from '..' // Replace "your-file" with the actual file path
 
 describe('isValidDate', () => {
   test('should return true for valid date strings', () => {
