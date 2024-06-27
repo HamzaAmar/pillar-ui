@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import type { DocumentElementType, DocumentType } from './useFullscreen.type'
 
 function checkRequestFullscreen(element: HTMLElement) {
   const docElement = element as DocumentElementType

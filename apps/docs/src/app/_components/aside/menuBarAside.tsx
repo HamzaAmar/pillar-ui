@@ -29,7 +29,6 @@ const MenuBar = ({ data }: DocsProps) => {
   }
 
   const KEYS = Object.keys(data) as MenuItemData[]
-
   return (
     <Flex as="aside" data-mobile-open={open} direction="column" className="aside menu-bar l_flow custom-scroll">
       <nav>
@@ -47,11 +46,13 @@ const MenuBar = ({ data }: DocsProps) => {
                 </Item>
                 {contents && (
                   <ul data-active={current?.includes(key) ?? false} className="menu-bar--nested">
-                    {contents.map(({ slug, root, ...rest }) => {
+                    {contents.map(({ slug, type, ...rest }) => {
+                      const to = type === 'core' ? 'components' : type
+
                       return (
                         <Item
                           as={Link}
-                          href={`/docs/${root}/${slug}`}
+                          href={`/docs/${to}/${slug}`}
                           level={3}
                           key={slug}
                           isActive={path === `${key}/${slug}`}

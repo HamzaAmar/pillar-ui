@@ -1,8 +1,8 @@
 import type { SharedDocs } from '~/types/docs'
 
 export interface DocHeaderProps extends Omit<SharedDocs, 'content' | 'headings'> {
-  type: 'Components' | 'Hooks' | 'Utils' | 'Tutorials' | 'Getting Started' | 'Features' | 'Themes'
+  type: 'core' | 'hooks' | 'utils' | 'tutorials' | 'getting-started' | 'features' | 'themes'
   items?: string[] | undefined
   shared: string
-  file: string
+  directory: string
 }

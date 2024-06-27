@@ -75,7 +75,7 @@ export function getUtilBySlug(s: string) {
 }
 
 export function getGetStarted() {
-  return getMDXData<GettingStarted>(path.join(process.cwd(), 'content/getStarted'))
+  return getMDXData<GettingStarted>(path.join(process.cwd(), 'content/getting-started'))
 }
 
 export function getGetStartedBySlug(s: string) {
@@ -91,7 +91,7 @@ export function getHookBySlug(s: string) {
 }
 
 export function getThemes() {
-  return getMDXData<Theme>(path.join(process.cwd(), 'content/theme'))
+  return getMDXData<Theme>(path.join(process.cwd(), 'content/themes'))
 }
 
 export function getThemeBySlug(s: string) {

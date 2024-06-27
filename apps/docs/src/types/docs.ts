@@ -13,7 +13,7 @@ export interface SharedDocs {
   excerpt: string
   content: string
   slug: string
-  root: string
+  type: string
   readingTime: ReadTimeResults
   headings: Headings
 }

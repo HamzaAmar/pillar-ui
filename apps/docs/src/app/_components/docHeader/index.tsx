@@ -3,8 +3,8 @@ import { Github } from '@pillar-ui/icons'
 import React from 'react'
 import { DocHeaderProps } from './docHeader.type'
 
-export const DocHeader = ({ title, type, items, shared, excerpt, slug, file }: DocHeaderProps) => {
-  const directory = file[0].toLowerCase() + file.slice(1)
+export const DocHeader = ({ title, type, items, shared, excerpt, slug, directory }: DocHeaderProps) => {
+  const typeName = type === 'core' ? 'Components' : type[0].toUpperCase() + type.slice(1)
 
   return (
     <Paper flow="lg" p="sm">
@@ -16,7 +16,7 @@ export const DocHeader = ({ title, type, items, shared, excerpt, slug, file }: D
       </Text>
 
       <Grid grid="auto minmax(0, 1fr)" sm="1fr" gap="md">
-        {type === 'Components' && (
+        {type === 'core' && (
           <>
             <Text weight="medium" size="sm" color="surface" contrast="low">
               Components:
@@ -30,32 +30,30 @@ export const DocHeader = ({ title, type, items, shared, excerpt, slug, file }: D
           Type
         </Text>
         <Flex gap="sm">
-          <Chips>{type}</Chips>
+          <Chips>{typeName}</Chips>
         </Flex>
-        {file ? (
-          <>
-            <Text weight="medium" size="sm" color="surface" contrast="low">
-              import
-            </Text>
-            <Flex gap="sm">
-              <code>
-                import <b>{`{ ${title} }`}</b> from {`'@pillar-ui/${file}'`}
-              </code>
-            </Flex>
-          </>
-        ) : null}
+        <>
+          <Text weight="medium" size="sm" color="surface" contrast="low">
+            import
+          </Text>
+          <Flex gap="sm">
+            <code>
+              import <b>{`{ ${title} }`}</b> from {`'@pillar-ui/${type}'`}
+            </code>
+          </Flex>
+        </>
       </Grid>
 
       <Flex gap="sm" wrap>
         <Button
           as="a"
-          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${shared}/${directory}/${file}.tsx`}
+          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${shared}/${directory}`}
           target="_blank"
           color="surface"
           icon={<Github strokeWidth={2} />}
           size="xs"
         >
-          Go To {slug} Source Code {file}
+          Go To {slug} Source Code
         </Button>
         <Button
           as="a"
