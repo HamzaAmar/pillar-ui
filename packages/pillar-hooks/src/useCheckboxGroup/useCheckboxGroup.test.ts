@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { useCheckboxGroup } from './useCheckboxGroup'
+import { useCheckboxGroup } from '.'
 import { test, describe, expect } from 'vitest'
 
 describe('useCheckboxGroup custom hook', () => {

@@ -24,7 +24,7 @@ export function getDirectionInitial(element: HTMLElement): Direction {
  *
  * @example
  * // Example usage in a functional component:
- * import { useDirection } from './path-to-hooks/useDirection'; // Adjust the path accordingly
+ * import { useDirection } from '@pillar-ui/hooks'; // Adjust the path accordingly
  *
  * function DirectionComponent() {
  *   const { isLtr, toggleDirection, directionScript } = useDirection();

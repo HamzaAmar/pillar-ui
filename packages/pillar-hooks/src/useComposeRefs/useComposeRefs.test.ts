@@ -1,7 +1,7 @@
 import { act, renderHook } from '@testing-library/react'
 import { useRef } from 'react'
 import { vi } from 'vitest'
-import { useComposedRefs } from './useComposeRefs'
+import { useComposedRefs } from '.'
 
 describe('useComposedRefs', () => {
   it('should handle object refs correctly within a hook', () => {

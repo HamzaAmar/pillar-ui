@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { useArray } from './useArray'
+import { useArray } from '.'
 import { test, describe, expect } from 'vitest'
 
 describe('useArray custom hook', () => {

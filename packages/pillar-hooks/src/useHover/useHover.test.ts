@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { useHover } from './useHover'
+import { useHover } from '.'
 import { it, describe, expect } from 'vitest'
 
 describe('UseHover custom hook', () => {

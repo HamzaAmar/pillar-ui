@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { useBooleanState } from './useBoolean'
+import { useBooleanState } from '.'
 import { test, describe, expect } from 'vitest'
 
 describe('useBooleanState', () => {

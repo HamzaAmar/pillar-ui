@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import { usePagination } from './usePagination'
+import { usePagination } from '.'
 
 describe('usePagination Test useCase', () => {
   test('returns correct range and currentStep when maxPerView > totalPages', () => {

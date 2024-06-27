@@ -1,1 +1,0 @@
-export { useDirection } from './useDirection'

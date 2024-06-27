@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { useControllableState } from './useControllableState'
+import { useControllableState } from '.'
 import { test, describe, expect } from 'vitest'
 
 describe('useControllableState custom hook', () => {
