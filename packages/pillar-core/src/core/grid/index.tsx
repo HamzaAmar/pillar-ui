@@ -21,7 +21,7 @@ const getStyles = (obj?: Record<string, string | undefined>) => {
     Grid Item Core Component
 ===============================================================================================
 */
-const Item = forwardRef((props, forwardedRef) => {
+export const GridItem = forwardRef((props, forwardedRef) => {
   const { placement, children, style, className, as: Tag = 'div', xs, sm, md, lg, xl, ...rest } = props
   let [column, row] = placement?.split(' x ') ?? []
   let [xsColumn, xsRow] = xs?.split(' x ') ?? []
@@ -75,7 +75,7 @@ const Item = forwardRef((props, forwardedRef) => {
   )
 }) as ForwardRefComponent<'div', GridItemProps>
 
-Item.displayName = 'Pillar-GridItem'
+GridItem.displayName = 'GridItem'
 
 /*
   ===============================================================================================
@@ -138,9 +138,8 @@ export const Grid = forwardRef((props, forwardedRef) => {
       {children}
     </div>
   )
-}) as ForwardRefComponent<'div', GridProps> & { Item: typeof Item }
+}) as ForwardRefComponent<'div', GridProps>
 
-Grid.Item = Item
-Grid.displayName = 'Pillar-Grid'
+Grid.displayName = 'Grid'
 
 export type { GridItemProps, GridBaseProps } from './grid.type'

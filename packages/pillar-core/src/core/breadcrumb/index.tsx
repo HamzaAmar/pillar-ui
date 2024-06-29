@@ -16,7 +16,7 @@ const [BreadcrumbProvider, useBreadcrumbContext] = createContext<BreadcrumbConte
   isContextRequired: true,
 })
 
-const BreadcrumbItem = forwardRef((props, forwardedRef) => {
+export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   const { separator: contextSeparator = '>' } = useBreadcrumbContext() ?? {}
   const { as = 'a', children, current, separator = contextSeparator, className, ...rest } = props
   const currentPage: CurrentPage = current ? { 'aria-current': 'page' } : {}
@@ -36,7 +36,7 @@ const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   )
 }) as ForwardRefComponent<'a', BreadcrumbItemProps>
 
-BreadcrumbItem.displayName = 'Pillar-BreadcrumbItem'
+BreadcrumbItem.displayName = 'BreadcrumbItem'
 
 /* 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -59,10 +59,8 @@ export const Breadcrumb = forwardRef((props, ref) => {
       </Flex>
     </Tag>
   )
-}) as ForwardRefComponent<'nav', BreadcrumbProps> & { Item: typeof BreadcrumbItem }
+}) as ForwardRefComponent<'nav', BreadcrumbProps>
 
-Breadcrumb.displayName = 'Pillar-Breadcrumb'
-
-Breadcrumb.Item = BreadcrumbItem
+Breadcrumb.displayName = 'Breadcrumb'
 
 export type { BreadcrumbItemProps, BreadcrumbProps, BreadcrumbContextProps } from './breadcrumb.type'

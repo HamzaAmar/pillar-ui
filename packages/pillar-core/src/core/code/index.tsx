@@ -19,6 +19,6 @@ export const Code = forwardRef((props, ref) => {
   )
 }) as ForwardRefComponent<'code', CodeProps>
 
-Code.displayName = 'Pillar-Code'
+Code.displayName = 'Code'
 
 export type { CodeProps } from './code.type'

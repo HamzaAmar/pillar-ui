@@ -105,7 +105,4 @@ export const Radio = (props: RadioProps) => {
   )
 }
 
-Radio.Custom = CustomRadio
-Radio.Group = RadioGroup
-
 export type { CustomRadioProps, RadioProps, RadioGroupProps } from './radio.type'

@@ -47,7 +47,7 @@ const Item = forwardRef((props, forwardedRef) => {
   )
 }) as ForwardRefComponent<'button', PaginationItem>
 
-Item.displayName = 'Pillar-PaginationItem'
+Item.displayName = 'PaginationItem'
 
 export const Pagination = (props: PaginationProps) => {
   const { count = 10, ...rest } = props
@@ -82,7 +82,5 @@ export const Pagination = (props: PaginationProps) => {
     </nav>
   )
 }
-
-Pagination.Item = Item
 
 export type { PaginationProps, PaginationItem } from './pagination.type'

@@ -9,7 +9,7 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const Avatar = forwardRef((props, ref) => {
+const SkeletonAvatar = forwardRef((props, ref) => {
   const { size = 'xl', corner = 'full', children, isLoading = true, className, ...rest } = props
   const classNames = classnames(`skeleton skeleton--avatar u_size-${size} u_corner-${corner}`, {
     [className!]: !!className,
@@ -17,7 +17,7 @@ const Avatar = forwardRef((props, ref) => {
   return isLoading ? <div className={classNames} ref={ref} {...rest} /> : <div>{children}</div>
 }) as ForwardRefComponent<'div', SkeletonType.SkeletonAvatarProps>
 
-Avatar.displayName = 'Pillar-SkeletonAvatar'
+SkeletonAvatar.displayName = 'SkeletonAvatar'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,7 +25,7 @@ Avatar.displayName = 'Pillar-SkeletonAvatar'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const Text = forwardRef((props, ref) => {
+const SkeletonText = forwardRef((props, ref) => {
   const { size = 'md', lines = 2.5, className, children, isLoading = true, as: Tag = 'div', ...rest } = props
   const ceilNumber = Math.ceil(lines)
   const classNames = classnames(`skeleton skeleton--text u_size-${size}`, { [className!]: !!className })
@@ -51,7 +51,7 @@ const Text = forwardRef((props, ref) => {
   )
 }) as ForwardRefComponent<'div', SkeletonType.SkeletonTextProps>
 
-Text.displayName = 'Pillar-SkeletonAvatar'
+SkeletonText.displayName = 'SkeletonAvatar'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -59,14 +59,14 @@ Text.displayName = 'Pillar-SkeletonAvatar'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const Button = forwardRef((props, ref) => {
+const SkeletonButton = forwardRef((props, ref) => {
   const { size = 'md', as: Tag = 'div', className, isLoading, children, ...rest } = props
   const classNames = classnames(`skeleton skeleton--btn btn__${size}`, { [className!]: !!className })
   const content = <Tag ref={ref} className={classNames} {...rest} />
   return <>{isLoading ? content : children}</>
 }) as ForwardRefComponent<'div', SkeletonType.SkeletonButtonProps>
 
-Button.displayName = 'Pillar-SkeletonButton'
+SkeletonButton.displayName = 'SkeletonButton'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -80,17 +80,9 @@ export const Skeleton = forwardRef((props, ref) => {
   const classNames = classnames('skeleton skeleton--box', { [className!]: !!className })
   const content = <Tag ref={ref} style={_style} className={classNames} {...rest} />
   return <>{isLoading ? content : children}</>
-}) as ForwardRefComponent<'div', SkeletonType.SkeletonProps> & {
-  Avatar: typeof Avatar
-  Text: typeof Text
-  Button: typeof Button
-}
+}) as ForwardRefComponent<'div', SkeletonType.SkeletonProps>
 
-Skeleton.displayName = 'Pillar-Skeleton'
-
-Skeleton.Avatar = Avatar
-Skeleton.Text = Text
-Skeleton.Button = Button
+Skeleton.displayName = 'Skeleton'
 
 export type {
   SkeletonAvatarProps,

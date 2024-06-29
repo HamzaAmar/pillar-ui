@@ -28,7 +28,7 @@ const [AccordionProvider, useAccordionContext] = createContext<AccordionContextP
   isContextRequired: true,
 })
 
-const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) => {
+export const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) => {
   const id = useId()
   const itemContextValue = { id, value }
   const { corner, variant } = useAccordionContext() ?? {}
@@ -44,7 +44,7 @@ const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) 
   )
 }) as ForwardRefComponent<'div', AccordionItemProps>
 
-AccordionItem.displayName = 'Pillar-AccordionItem'
+AccordionItem.displayName = 'AccordionItem'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -52,7 +52,7 @@ AccordionItem.displayName = 'Pillar-AccordionItem'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const AccordionButton = forwardRef((props, ref) => {
+export const AccordionButton = forwardRef((props, ref) => {
   const { value, id: idContext } = useAccordionItemContext() ?? {}
   const { toggleAccordion, isItemOpen } = useAccordionContext() ?? {}
   const { children, id = idContext, icon = <ChevronDown width="1em" />, className, ...rest } = props
@@ -73,7 +73,7 @@ const AccordionButton = forwardRef((props, ref) => {
   )
 }) as ForwardRefComponent<'button', AccordionButtonProps>
 
-AccordionButton.displayName = 'Pillar-AccordionButton'
+AccordionButton.displayName = 'AccordionButton'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,7 +81,7 @@ AccordionButton.displayName = 'Pillar-AccordionButton'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const AccordionPanel = forwardRef((props, ref) => {
+export const AccordionPanel = forwardRef((props, ref) => {
   const { children, className, ...rest } = props
   const { value } = useAccordionItemContext() ?? {}
   const { isItemOpen, id } = useAccordionContext() ?? {}
@@ -138,16 +138,8 @@ export const Accordion = forwardRef((props, forwardedRef) => {
       </AccordionProvider>
     </div>
   )
-}) as ForwardRefComponent<'div', AccordionProps> & {
-  Item: typeof AccordionItem
-  Button: typeof AccordionButton
-  Panel: typeof AccordionPanel
-}
+}) as ForwardRefComponent<'div', AccordionProps>
 
-Accordion.displayName = 'PillarAccordion'
-
-Accordion.Item = AccordionItem
-Accordion.Button = AccordionButton
-Accordion.Panel = AccordionPanel
+Accordion.displayName = 'Accordion'
 
 export type { AccordionButtonProps } from './accordion.type'

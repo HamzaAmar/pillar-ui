@@ -4,7 +4,7 @@ import type { SeparatorProps } from './separator.type'
 import { classnames } from '@pillar-ui/utils'
 import { Flex, FlexProps } from '../flex'
 
-const Separator = forwardRef((props, ref) => {
+export const Separator = forwardRef((props, ref) => {
   const {
     color = 'surface',
     direction = 'horizontal',
@@ -36,6 +36,6 @@ const Separator = forwardRef((props, ref) => {
   )
 }) as ForwardRefComponent<'div', SeparatorProps>
 
-Separator.displayName = 'Pillar-Separator'
+Separator.displayName = 'Separator'
 
 export type { SeparatorProps } from './separator.type'

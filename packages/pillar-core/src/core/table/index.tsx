@@ -3,7 +3,7 @@ import { classnames } from '@pillar-ui/utils'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { TableColumnProps, TableProps, TableRowProps } from './table.type'
 
-export const Column = forwardRef(
+export const TableColumn = forwardRef(
   ({ as: Comp = 'td', children, weight = 'normal', className, ...rest }, forwardedRef) => {
     return (
       <Comp
@@ -20,9 +20,9 @@ export const Column = forwardRef(
   }
 ) as ForwardRefComponent<'td', TableColumnProps>
 
-Column.displayName = 'Pillar-TableColumn'
+TableColumn.displayName = 'TableColumn'
 
-export const Row = forwardRef<HTMLTableRowElement, TableRowProps>(
+export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
   ({ children, type = 'body', ...rest }, forwardedRef) => {
     return (
       <tr ref={forwardedRef} className={`row row__${type}`} {...rest}>
@@ -32,7 +32,7 @@ export const Row = forwardRef<HTMLTableRowElement, TableRowProps>(
   }
 )
 
-Row.displayName = 'Pillar-TableRow'
+TableRow.displayName = 'TableRow'
 
 export const Table = ({
   color = 'surface',
@@ -56,8 +56,5 @@ export const Table = ({
     </div>
   )
 }
-
-Table.Column = Column
-Table.Row = Row
 
 export type { TableColumnProps, TableProps, TableRowProps } from './table.type'

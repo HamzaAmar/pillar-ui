@@ -56,6 +56,6 @@ export const Paper = forwardRef((props, ref) => {
   )
 }) as ForwardRefComponent<'div', PaperProps>
 
-Paper.displayName = 'Pillar-Paper'
+Paper.displayName = 'Paper'
 
 export type { PaperProps } from './paper.type'

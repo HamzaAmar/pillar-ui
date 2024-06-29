@@ -3,11 +3,11 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { ListItemProps, ListProps } from './list.type'
 import { classnames } from '@pillar-ui/utils'
 
-const ListItem = ({ children }: ListItemProps) => {
+export const ListItem = ({ children }: ListItemProps) => {
   return <li>{children}</li>
 }
 
-ListItem.displayName = 'Pillar-ListItem'
+ListItem.displayName = 'ListItem'
 
 export const List = forwardRef(({ as: Tag = 'ul', children, flow, hideStyle, ...rest }, forwardedRef) => {
   const classNames = classnames(`list  l_flow__${flow}`, { 'list--show-list': !!hideStyle })
@@ -17,12 +17,7 @@ export const List = forwardRef(({ as: Tag = 'ul', children, flow, hideStyle, ...
       {children}
     </Tag>
   )
-}) as ForwardRefComponent<'ul', ListProps> & {
-  Item: typeof ListItem
-}
-
-List.displayName = 'Pillar-List'
-
-List.Item = ListItem
+}) as ForwardRefComponent<'ul', ListProps>
+List.displayName = 'List'
 
 export type { ListItemProps, ListProps } from './list.type'

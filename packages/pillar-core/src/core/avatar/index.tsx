@@ -49,7 +49,7 @@ export const AvatarGroup = forwardRef((props, forwardRef) => {
   )
 }) as ForwardRefComponent<'div', AvatarGroupProps>
 
-AvatarGroup.displayName = 'Pillar-AvatarGroup'
+AvatarGroup.displayName = 'AvatarGroup'
 
 /*  
 =================================================================================
@@ -105,9 +105,8 @@ export const Avatar = forwardRef((props, forwardRef) => {
       {content}
     </Tag>
   )
-}) as ForwardRefComponent<'div', AvatarProps> & { Group: typeof AvatarGroup }
+}) as ForwardRefComponent<'div', AvatarProps>
 
-Avatar.displayName = 'Pillar-Avatar'
-Avatar.Group = AvatarGroup
+Avatar.displayName = 'Avatar'
 
 export type { AvatarProps, AvatarGroupProps } from './avatar.type'

@@ -48,6 +48,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forw
   )
 })
 
-Checkbox.displayName = 'Pillar-Checkbox'
+Checkbox.displayName = 'Checkbox'
 
 export type { CheckboxProps } from './checkbox.type'

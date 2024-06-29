@@ -9,7 +9,7 @@ const [TimelineProvider, useTimeline] = createContext<TimelineContextProps>({
   isContextRequired: true,
 })
 
-const Item = (props: TimelineItemProps) => {
+export const TimelineItem = (props: TimelineItemProps) => {
   const context = useTimeline()
   const { children, corner = context?.corner ?? 'circle', variant = context?.variant ?? 'solid', bullet } = props
 
@@ -32,8 +32,6 @@ export const Timeline = ({ color = 'surface', size = 'sm', children, ...rest }: 
     </div>
   )
 }
-
-Timeline.Item = Item
 
 export type {
   TimelineContextProps,

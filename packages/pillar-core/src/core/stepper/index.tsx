@@ -8,7 +8,7 @@ import { createContext } from '@pillar-ui/utils'
 
 export const [StepperProvider, useStepperContext] = createContext<StepperContextProps>({ name: 'Stepper' })
 
-const Step = (props: StepProps) => {
+export const StepperStep = (props: StepProps) => {
   const context = useStepperContext()
   const {
     state,
@@ -80,7 +80,5 @@ export const Stepper = ({ children, color = 'surface', active = 0, completeCompo
     </div>
   )
 }
-
-Stepper.Step = Step
 
 export type { StepperProps, StepProps } from './stepper.type'

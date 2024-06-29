@@ -41,7 +41,9 @@ export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, siz
       </div>
     </TooltipProvider>
   )
-}) as ForwardRefComponent<'div', TooltipProps> & { Trigger: typeof Trigger; Content: typeof Content }
+}) as ForwardRefComponent<'div', TooltipProps>
+
+Tooltip.displayName = 'TooltipRoot'
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -51,7 +53,7 @@ export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, siz
 
 type TooltipType = ForwardRefComponent<'button', TooltipProps>
 
-const Trigger = forwardRef(({ children, as: Tag = 'button', ...rest }, forwardedRef) => {
+export const TooltipTrigger = forwardRef(({ children, as: Tag = 'button', ...rest }, forwardedRef) => {
   const ctx = useTooltipContext()
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null)
 
@@ -100,7 +102,7 @@ const Trigger = forwardRef(({ children, as: Tag = 'button', ...rest }, forwarded
   )
 }) as TooltipType
 
-Trigger.displayName = 'Pillar/TooltipTrigger'
+TooltipTrigger.displayName = 'TooltipTrigger'
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -108,7 +110,7 @@ Trigger.displayName = 'Pillar/TooltipTrigger'
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const Content = forwardRef(({ children, as: Tag = 'div', ...rest }, forwardedRef) => {
+export const TooltipContent = forwardRef(({ children, as: Tag = 'div', ...rest }, forwardedRef) => {
   const { open, handleClose, id, triggerRef, size } = useTooltipContext() ?? {}
 
   return (
@@ -130,10 +132,6 @@ const Content = forwardRef(({ children, as: Tag = 'div', ...rest }, forwardedRef
   )
 }) as ForwardRefComponent<'div', TooltipContentProps>
 
-Content.displayName = 'Pillar/TooltipContent'
-
-Tooltip.Trigger = Trigger
-Tooltip.Content = Content
-Tooltip.displayName = 'Pillar/TooltipRoot'
+TooltipContent.displayName = 'TooltipContent'
 
 export type { Align, TooltipContentProps, TooltipProps } from './tooltip.type'

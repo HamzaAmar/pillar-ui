@@ -48,7 +48,7 @@ export const Text = forwardRef((props, forwardedRef) => {
     </Tag>
   )
 }) as ForwardRefComponent<'p', TypographyProps>
-Text.displayName = 'Pillar-Text'
+Text.displayName = 'Text'
 
 export const Heading = forwardRef(({ as: Tag = 'h1', children, ...rest }, forwardedRef) => {
   return (
@@ -58,7 +58,7 @@ export const Heading = forwardRef(({ as: Tag = 'h1', children, ...rest }, forwar
   )
 }) as ForwardRefComponent<'h1', TypographyProps>
 
-Heading.displayName = 'Pillar-Heading'
+Heading.displayName = 'Heading'
 
 export const Link = forwardRef(({ children, ...rest }, forwardedRef) => {
   return (
@@ -68,6 +68,6 @@ export const Link = forwardRef(({ children, ...rest }, forwardedRef) => {
   )
 }) as ForwardRefComponent<'a', TypographyProps>
 
-Link.displayName = 'Pillar-Link'
+Link.displayName = 'Link'
 
 export type { TypographyProps } from './typography.type'

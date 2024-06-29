@@ -62,7 +62,7 @@ export const Button = forwardRef((props, forwardedRef) => {
   )
 }) as ForwardRefComponent<'button', ButtonProps>
 
-Button.displayName = 'Pillar-Button'
+Button.displayName = 'Button'
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,7 +99,7 @@ export const IconButton = forwardRef(
   }
 ) as ForwardRefComponent<'button', IconButtonProps>
 
-IconButton.displayName = 'Pillar-IconButton'
+IconButton.displayName = 'IconButton'
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -136,6 +136,6 @@ export const ButtonGroup = forwardRef(
   }
 ) as ForwardRefComponent<'div', ButtonGroupProps>
 
-ButtonGroup.displayName = 'Pillar-IconButton'
+ButtonGroup.displayName = 'IconButton'
 
 export type { ButtonProps, IconButtonProps } from './button.type'

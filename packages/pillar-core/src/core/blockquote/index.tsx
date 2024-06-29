@@ -5,7 +5,7 @@ import { Quotes } from '@pillar-ui/icons'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import { Text } from '../typography'
 
-const Cite = ({ title, ...rest }: CiteProps) => {
+export const BlockquoteCite = ({ title, ...rest }: CiteProps) => {
   return (
     <Text className="cite" as="cite" {...rest}>
       {title}
@@ -28,9 +28,8 @@ export const Blockquote = forwardRef(
       </blockquote>
     )
   }
-) as ForwardRefComponent<'blockquote', BlockquoteProps> & { Cite: typeof Cite }
+) as ForwardRefComponent<'blockquote', BlockquoteProps>
 
-Blockquote.Cite = Cite
-Blockquote.displayName = 'Pillar-Blockquote'
+Blockquote.displayName = 'Blockquote'
 
 export type { BlockquoteProps } from './blockquote.type'

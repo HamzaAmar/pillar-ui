@@ -34,6 +34,6 @@ export const Chips = forwardRef((props, ref) => {
   )
 }) as ForwardRefComponent<'span', ChipsProps>
 
-Chips.displayName = 'Pillar-Chips'
+Chips.displayName = 'Chips'
 
 export type { ChipsProps } from './chips.type'

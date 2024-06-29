@@ -97,7 +97,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
   )
 })
 
-Textarea.displayName = 'Pillar-Textarea'
+Textarea.displayName = 'Textarea'
 
 /*
 ===================================================================================================
@@ -117,7 +117,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
   )
 })
 
-Input.displayName = 'Pillar-Input'
+Input.displayName = 'Input'
 
 /*
 ===================================================================================================
@@ -142,7 +142,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
   )
 })
 
-InputNumber.displayName = 'Pillar-InputNumber'
+InputNumber.displayName = 'InputNumber'
 
 /*
 ===================================================================================================
@@ -171,7 +171,7 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
   )
 })
 
-InputPassword.displayName = 'Pillar-InputPassword'
+InputPassword.displayName = 'InputPassword'
 
 /*
 ===================================================================================================
@@ -232,7 +232,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
   )
 })
 
-Select.displayName = 'Pillar-Select'
+Select.displayName = 'Select'
 
 /*
 ===================================================================================================
@@ -320,7 +320,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
   )
 })
 
-PinInput.displayName = 'Pillar-PinInput'
+PinInput.displayName = 'PinInput'
 
 /*
 ===================================================================================================
@@ -366,7 +366,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
   )
 })
 
-InputFile.displayName = 'Pillar-InputFile'
+InputFile.displayName = 'InputFile'
 
 //
 export const FormController = (props: FormControllerProps) => {

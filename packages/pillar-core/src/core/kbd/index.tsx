@@ -18,6 +18,6 @@ export const Kbd = forwardRef(
   }
 ) as ForwardRefComponent<'kbd', KbdProps>
 
-Kbd.displayName = 'Pillar-Kbd'
+Kbd.displayName = 'Kbd'
 
 export type { KbdProps } from './kbd.type'

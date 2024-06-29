@@ -49,7 +49,10 @@
     "css-build:watch": "yarn css-build --watch --verbose",
     "dev": "npm-run-all -p -r js-build:watch css-build:watch",
     "lint": "eslint \"src/**/*.ts*\"",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "clean": "npm-run-all --parallel remove:*",
+    "remove:turbo": "rm -rf .turbo",
+    "remove:node_modules": "rm -rf node_modules",
+    "remove:dist": "rm -rf dist",
     "type:check": "tsc --noEmit"
   },
   "peerDependencies": {

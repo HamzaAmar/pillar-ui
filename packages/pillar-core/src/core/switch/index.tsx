@@ -52,6 +52,6 @@ export const Switch = forwardRef((props, ref) => {
   )
 }) as ForwardRefComponent<'button', SwitchProps>
 
-Switch.displayName = 'Pillar-Switch'
+Switch.displayName = 'Switch'
 
 export type { SwitchProps } from './switch.type'

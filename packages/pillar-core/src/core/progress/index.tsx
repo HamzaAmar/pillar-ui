@@ -77,7 +77,7 @@ export const ProgressBar = ({
   )
 }
 
-const Item = ({ color = 'primary', value }: ProgressBarStackItemProps) => {
+export const ProgressBarStackItem = ({ color = 'primary', value }: ProgressBarStackItemProps) => {
   return <div className={`progressbar-stack--item u_${color}`} style={{ width: `${value}%` }} />
 }
 
@@ -107,8 +107,6 @@ export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProp
     </div>
   )
 }
-
-ProgressBarStack.Item = Item
 
 export type {
   ProgressBarProps,
