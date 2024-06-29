@@ -1,11 +1,11 @@
 import React from 'react'
-import { ComponentMeta } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Flex, List } from '@pillar-ui/core'
 
 export default {
   title: 'Components/List',
   component: List,
-} as ComponentMeta<typeof List>
+} as Meta<typeof List>
 
 function ListBase(props: any) {
   return (

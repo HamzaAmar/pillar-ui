@@ -1,15 +1,13 @@
 import React, { CSSProperties } from 'react'
 import { IconButton, Flex, Paper } from '@pillar-ui/core'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 import { ThumbUp } from '@pillar-ui/icons'
 
-export default {
+const meta: Meta<typeof IconButton> = {
   title: 'Components/IconButton',
-} as ComponentMeta<typeof IconButton>
+}
 
-const Hello: ComponentStory<typeof IconButton> = ({ ...args }) => <IconButton {...args} />
-
-export const Playground = Hello.bind({})
+export default meta
 
 export function IconButtonsColors() {
   return (
@@ -135,3 +133,5 @@ export function ButtonCornerDefaults() {
     </div>
   )
 }
+
+export const Playground: StoryObj<typeof IconButton> = {}

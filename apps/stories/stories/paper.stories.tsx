@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Paper, Flex } from '@pillar-ui/core'
 
 export default {
@@ -9,7 +9,7 @@ export default {
     message:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum quidem facilis harum velit veritatis! Voluptatum, quos ipsa! Magnam exercitationem repellat, aspernatur porro optio tempore vero dolorem suscipit vitae delectus.',
   },
-} as ComponentMeta<typeof Paper>
+} as Meta<typeof Paper>
 
 export function PaperBackground() {
   return (
@@ -180,6 +180,6 @@ export function PaperWidths() {
   )
 }
 
-const Template: ComponentStory<typeof Paper> = (args) => <Paper {...args} />
-export const Playground = Template.bind({})
-Playground.args = {}
+export const Playground = {
+  args: {},
+}

@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { Flex, InputNumber } from '@pillar-ui/core'
 
 export default {
@@ -9,9 +9,7 @@ export default {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as ComponentMeta<typeof InputNumber>
-
-const Template: ComponentStory<typeof InputNumber> = (args) => <InputNumber {...args} />
+} as Meta<typeof InputNumber>
 
 export const SizeInput = () => {
   return (
@@ -59,4 +57,4 @@ export const InputValueUpdateCheck = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

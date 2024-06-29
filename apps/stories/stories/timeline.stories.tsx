@@ -1,6 +1,6 @@
 import React from 'react'
 import { Cross } from '@pillar-ui/icons'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 
 import { Avatar, Flex, Grid, Heading, Text, Timeline } from '@pillar-ui/core'
 import type { TimelineItemProps } from '@pillar-ui/core'
@@ -8,9 +8,7 @@ import type { TimelineItemProps } from '@pillar-ui/core'
 export default {
   title: 'Components/Timeline',
   component: Timeline,
-} as ComponentMeta<typeof Timeline>
-
-const Template: ComponentStory<typeof Timeline> = (args) => <Timeline {...args} />
+} as Meta<typeof Timeline>
 
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
   return (
@@ -68,6 +66,7 @@ export const TimelineColor = () => {
     </Flex>
   )
 }
+
 export const TimelineCorner = () => {
   return (
     <Grid grid="1fr 1fr 1fr" className="md_grid-two sm_grid-one" gap="lg">
@@ -215,8 +214,8 @@ export const TimelineCustomBullet = () => {
   )
 }
 
-export const NormalTimeline = Template.bind({})
-
-NormalTimeline.args = {
-  color: 'primary',
+export const NormalTimeline = {
+  args: {
+    color: 'primary',
+  },
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { User } from '@pillar-ui/icons'
 import { Flex, InputSearch } from '@pillar-ui/core'
 
@@ -10,9 +10,7 @@ export default {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as ComponentMeta<typeof InputSearch>
-
-const Template: ComponentStory<typeof InputSearch> = (args) => <InputSearch {...args} />
+} as Meta<typeof InputSearch>
 
 export const FilledInput = () => {
   return (
@@ -32,6 +30,7 @@ export const FilledInput = () => {
     </Flex>
   )
 }
+
 export const OutlineInput = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -44,6 +43,7 @@ export const OutlineInput = () => {
     </Flex>
   )
 }
+
 export const BorderedInput = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -100,4 +100,4 @@ export const ColorInput = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

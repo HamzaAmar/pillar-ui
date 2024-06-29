@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryFn, Meta } from '@storybook/react'
 import { Flex, ProgressBar, ProgressBarStack, ProgressCircle } from '@pillar-ui/core'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   args: {
     label: 'hello',
   },
-} as ComponentMeta<typeof ProgressBar>
+} as Meta<typeof ProgressBar>
 
 export const ProgressBarSize = () => {
   return (
@@ -23,6 +23,7 @@ export const ProgressBarSize = () => {
     </Flex>
   )
 }
+
 export const ProgressBarColor = () => {
   return (
     <Flex direction="column" gap="sm" wrap>
@@ -130,9 +131,8 @@ export const ProgressBarStackSizes = () => {
   )
 }
 
-const Template: ComponentStory<typeof ProgressBar> = (args) => <ProgressBar {...args} />
-
-export const Playground = Template.bind({})
-Playground.args = {
-  value: 50,
+export const Playground = {
+  args: {
+    value: 50,
+  },
 }

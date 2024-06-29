@@ -1,12 +1,12 @@
 import React, { CSSProperties, useRef, useState } from 'react'
 import { Avatar, Flex, Paper, Button } from '@pillar-ui/core'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { DotsHorizontal } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Avatar',
   component: Avatar,
-} as ComponentMeta<typeof Avatar>
+} as Meta<typeof Avatar>
 
 const image = 'https://picsum.photos/id/128/100/100'
 
@@ -328,6 +328,8 @@ export function AvatarCornerDefaults() {
   )
 }
 
-const Template: ComponentStory<typeof Avatar> = ({ ...args }) => <Avatar {...args} />
+const Template: StoryFn<typeof Avatar> = ({ ...args }) => <Avatar {...args} />
 
-export const Playground = Template.bind({})
+export const Playground = {
+  render: Template,
+}

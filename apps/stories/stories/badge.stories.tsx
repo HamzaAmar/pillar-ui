@@ -1,6 +1,6 @@
 import React, { CSSProperties, useRef, useState } from 'react'
 import { Check, Plus, Plane, ChevronDown, Apple, Alien, LetterSpacing, SuperScript } from '@pillar-ui/icons'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { Badge, Button, Flex, Paper } from '@pillar-ui/core'
 
 export default {
@@ -10,7 +10,7 @@ export default {
     number: { if: { arg: 'type', eq: 'number' } },
     max: { if: { arg: 'type', eq: 'number' } },
   },
-} as ComponentMeta<typeof Badge>
+} as Meta<typeof Badge>
 
 export const BadgeSize = () => {
   return (
@@ -190,6 +190,7 @@ export const BadgeIconColor = () => {
     </Flex>
   )
 }
+
 export const BadgeDotColor = () => {
   return (
     <Flex gap="sm">
@@ -346,5 +347,4 @@ export function ButtonCornerDefaults() {
   )
 }
 
-const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />
-export const Playground = Template.bind({})
+export const Playground = {}

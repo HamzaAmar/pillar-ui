@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryFn, Meta } from '@storybook/react'
 import { Radio, Flex } from '@pillar-ui/core'
 
 export default {
@@ -15,7 +15,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Radio>
+} as Meta<typeof Radio>
 
 export function RadioColors() {
   return (
@@ -188,6 +188,4 @@ export function RadioGroupLongText() {
   )
 }
 
-const Template: ComponentStory<typeof Radio> = (args) => <Radio {...args} />
-
-export const Playground = Template.bind({})
+export const Playground = {}

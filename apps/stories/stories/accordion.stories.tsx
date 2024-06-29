@@ -1,11 +1,11 @@
 import React, { CSSProperties } from 'react'
-import { ComponentMeta } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Accordion, Flex, Grid, Paper, Text } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Accordion',
   component: Accordion,
-} as ComponentMeta<typeof Accordion>
+} as Meta<typeof Accordion>
 
 export function AccordionBase(props: any) {
   return (

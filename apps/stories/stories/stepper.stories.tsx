@@ -1,13 +1,13 @@
 import React from 'react'
 import { Check, Home, Settings, User } from '@pillar-ui/icons'
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Button, Flex, Heading, Text, Stepper } from '@pillar-ui/core'
 import { useStepper } from '@pillar-ui/hooks'
 
 export default {
   title: 'Components/Stepper',
   component: Stepper,
-} as ComponentMeta<typeof Stepper>
+} as Meta<typeof Stepper>
 
 const CompleteComponent = () => {
   return (

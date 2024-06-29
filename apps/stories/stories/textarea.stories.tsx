@@ -1,5 +1,5 @@
 import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { User } from '@pillar-ui/icons'
 import { Flex, Textarea } from '@pillar-ui/core'
 
@@ -10,9 +10,7 @@ export default {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as ComponentMeta<typeof Textarea>
-
-const Template: ComponentStory<typeof Textarea> = (args) => <Textarea {...args} />
+} as Meta<typeof Textarea>
 
 export const FilledTextarea = () => {
   return (
@@ -83,4 +81,4 @@ export const SizeTextarea = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

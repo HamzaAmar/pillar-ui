@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryFn, Meta } from '@storybook/react'
 
 import { Grid, Paper, Flex } from '@pillar-ui/core'
 
@@ -9,7 +9,7 @@ export default {
   args: {
     children: 'Hello world',
   },
-} as ComponentMeta<typeof Grid>
+} as Meta<typeof Grid>
 
 const Box = (props: any) => {
   return <Paper as={Flex} justify="center" items="center" background="surface-6" corner="sm" {...props} />
@@ -146,6 +146,4 @@ export const GridRows = () => {
   )
 }
 
-const Template: ComponentStory<typeof Grid> = (args) => <Grid {...args} />
-
-export const PlayGround = Template.bind({})
+export const PlayGround = {}

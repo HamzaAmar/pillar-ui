@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Button, Flex, Heading, Tabs, Grid } from '@pillar-ui/core'
 import type { TabProps } from '@pillar-ui/core'
 import { ArrowDown } from '@pillar-ui/icons'
@@ -7,9 +7,7 @@ import { ArrowDown } from '@pillar-ui/icons'
 export default {
   title: 'Components/Tabs',
   component: Tabs,
-} as ComponentMeta<typeof Tabs>
-
-const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />
+} as Meta<typeof Tabs>
 
 function TabBase(props) {
   return (
@@ -135,4 +133,4 @@ export const TabVariants = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

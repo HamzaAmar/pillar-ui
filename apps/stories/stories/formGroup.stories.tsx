@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormGroup, InputNumber, Input, InputPassword, InputSearch, Textarea, InputFile, Select } from '@pillar-ui/core'
 
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 export default {
   title: 'Components/form/FormGroup',
@@ -10,9 +10,7 @@ export default {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as ComponentMeta<typeof FormGroup>
-
-const Template: ComponentStory<typeof FormGroup> = (args) => <FormGroup {...args} />
+} as Meta<typeof FormGroup>
 
 export const SizeInput = () => {
   return (
@@ -197,4 +195,4 @@ export const HideLabelFormGroup = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

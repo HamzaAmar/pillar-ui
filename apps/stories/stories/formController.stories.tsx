@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormController, Input, InputPassword, Textarea, InputNumber, Select } from '@pillar-ui/core'
 
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 
 export default {
   title: 'Components/form/FormController',
@@ -9,7 +9,7 @@ export default {
   args: {
     'aria-label': 'Nice to Meet You',
   },
-} as ComponentMeta<typeof FormController>
+} as Meta<typeof FormController>
 
 export const FormControllerError = () => {
   return (
@@ -128,5 +128,4 @@ export const FormControllerErrorAndHint = () => {
   )
 }
 
-const Template: ComponentStory<typeof FormController> = (args) => <FormController {...args} />
-export const Playground = Template.bind({})
+export const Playground = {}

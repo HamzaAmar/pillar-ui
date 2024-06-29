@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Paper, Flex } from '@pillar-ui/core'
 
 export default {
@@ -9,7 +9,7 @@ export default {
     message:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum quidem facilis harum velit veritatis! Voluptatum, quos ipsa! Magnam exercitationem repellat, aspernatur porro optio tempore vero dolorem suscipit vitae delectus.',
   },
-} as ComponentMeta<typeof Paper>
+} as Meta<typeof Paper>
 
 export function PaperBackground() {
   return (
@@ -244,114 +244,6 @@ export function PaperBorders() {
   )
 }
 
-// export const PaperColors = () => {
-//   return (
-//     <Flex gap="sm" direction="column">
-//       <PaperBase color="danger" />
-//       <PaperBase color="warning" />
-//       <PaperBase color="success" />
-//       <PaperBase color="secondary" />
-//       <PaperBase color="primary" />
-//       <PaperBase color="surface" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperSizes = () => {
-//   return (
-//     <Flex gap="sm" direction="column">
-//       <PaperBase size="3xs" />
-//       <PaperBase size="2xs" />
-//       <PaperBase size="xs" />
-//       <PaperBase size="sm" />
-//       <PaperBase size="md" />
-//       <PaperBase size="lg" />
-//       <PaperBase size="xl" />
-//       <PaperBase size="2xl" />
-//       <PaperBase size="3xl" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperCorner = () => {
-//   return (
-//     <Flex gap="sm" direction="column">
-//       <PaperBase corner="sharp" />
-//       <PaperBase corner="xs" />
-//       <PaperBase corner="sm" />
-//       <PaperBase corner="md" />
-//       <PaperBase corner="lg" />
-//       <PaperBase corner="xl" />
-//       <PaperBase corner="full" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperVariant = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <PaperBase variant="solid" />
-//       <PaperBase variant="outline" />
-//       <PaperBase variant="soft" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperIcon = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <PaperBase icon={<CircleWarning width="20" />} color="danger" />
-//       <PaperBase icon={<CircleCheck width="20" />} color="success" />
-//       <PaperBase icon={<CircleWarning width="20" />} color="warning" />
-//       <PaperBase icon={<CircleInfo width="20" />} color="info" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperInline = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <PaperBase inline />
-//       <PaperBase inline />
-//       <PaperBase inline />
-//       <PaperBase inline />
-//       <PaperBase inline icon={<CircleWarning width="20" />} />
-//       <PaperBase inline closable />
-//       <PaperBase inline icon={<CircleWarning width="20" />} closable />
-//     </Flex>
-//   )
-// }
-
-// export const PaperTitleIcon = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <Paper color="danger" title="hello" />
-//       <Paper color="success" message="hello world something is wrong in the app here we go" />
-//       <Paper color="warning" icon={<CircleWarning width="20" />} title="hello" />
-//       <Paper
-//         color="warning"
-//         icon={<CircleWarning width="20" />}
-//         message="hello world something is wrong in the app here we go"
-//       />
-//       <Paper
-//         color="warning"
-//         icon={<CircleWarning width="20" />}
-//         title="hello"
-//         message="hello world something is wrong in the app here we go"
-//       />
-//     </Flex>
-//   )
-// }
-
-// export const PaperCustomStyle = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <Paper color="danger" title="hello" style={{ background: 'success' }} />
-//       <Paper color="danger" title="hello" className="u_secondary" />
-//     </Flex>
-//   )
-// }
-
-const Template: ComponentStory<typeof Paper> = (args) => <Paper {...args} />
-export const Playground = Template.bind({})
-Playground.args = {}
+export const Playground = {
+  args: {},
+}

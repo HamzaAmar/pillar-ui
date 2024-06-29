@@ -1,12 +1,12 @@
 import { Avatar, Button, Flex, Skeleton, Text, Grid } from '@pillar-ui/core'
 import { useBooleanState } from '@pillar-ui/hooks'
-import { ComponentMeta } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import React, { useEffect, useRef } from 'react'
 
 export default {
   title: 'Components/Skeleton',
   component: Skeleton,
-} as ComponentMeta<typeof Skeleton>
+} as Meta<typeof Skeleton>
 
 function useLoading() {
   const { booleanValue: loading, setFalse } = useBooleanState(true)

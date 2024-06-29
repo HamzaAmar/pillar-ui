@@ -1,5 +1,5 @@
 import React from 'react'
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { StoryFn, Meta } from '@storybook/react'
 
 import { Flex, Paper } from '@pillar-ui/core'
 
@@ -9,7 +9,7 @@ export default {
   args: {
     children: 'Hello world',
   },
-} as ComponentMeta<typeof Flex>
+} as Meta<typeof Flex>
 const Box = (props: any) => {
   return (
     <Paper
@@ -139,6 +139,4 @@ export const FlexNested = () => {
   )
 }
 
-const Template: ComponentStory<typeof Flex> = (args) => <Flex {...args} />
-
-export const RegularFlex = Template.bind({})
+export const RegularFlex = {}

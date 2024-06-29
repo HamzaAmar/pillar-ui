@@ -1,5 +1,5 @@
 import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { Flex, Kbd } from '@pillar-ui/core'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   args: {
     title: 'Esc',
   },
-} as ComponentMeta<typeof Kbd>
+} as Meta<typeof Kbd>
 
 export const KbdColors = () => {
   return (

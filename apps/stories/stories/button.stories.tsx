@@ -1,17 +1,18 @@
 import React, { CSSProperties } from 'react'
 import { Button, Flex, Paper, Text } from '@pillar-ui/core'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 import { Ballon, Bluetooth, Eight, Eye, Facebook, Github, Plus, ThumbDown, ThumbUp, X } from '@pillar-ui/icons'
 
 export default {
   title: 'Components/Button',
-} as ComponentMeta<typeof Button>
+  args: {
+    children: 'Hello',
+  },
+} as Meta<typeof Button>
 
 const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text'] as const
 
-const Hello: ComponentStory<typeof Button> = ({ ...args }) => <Button {...args} />
-
-export const Playground = Hello.bind({})
+export const Playground: StoryObj<typeof Button> = {}
 
 export function ButtonsColors() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { User } from '@pillar-ui/icons'
 import { Flex, Select } from '@pillar-ui/core'
 
@@ -10,9 +10,7 @@ export default {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as ComponentMeta<typeof Select>
-
-const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />
+} as Meta<typeof Select>
 
 export const FilledSelect = () => {
   return (
@@ -36,6 +34,7 @@ export const FilledSelect = () => {
     </Flex>
   )
 }
+
 export const OutlineSelect = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -58,6 +57,7 @@ export const OutlineSelect = () => {
     </Flex>
   )
 }
+
 export const BorderedSelect = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -166,4 +166,4 @@ export const ColorSelect = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

@@ -1,11 +1,11 @@
 import React, { CSSProperties } from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { Blockquote, Flex, Paper } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Blockquote',
   component: Blockquote,
-} as ComponentMeta<typeof Blockquote>
+} as Meta<typeof Blockquote>
 
 export const BlockquoteSize = () => {
   return (
@@ -293,5 +293,4 @@ export function ButtonCornerDefaults() {
   )
 }
 
-const Template: ComponentStory<typeof Blockquote> = (args) => <Blockquote {...args} />
-export const Playground = Template.bind({})
+export const Playground = {}

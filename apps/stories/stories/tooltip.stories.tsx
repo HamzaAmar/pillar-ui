@@ -1,11 +1,11 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Tooltip, Button, Flex } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
-} as ComponentMeta<typeof Tooltip>
+} as Meta<typeof Tooltip>
 
 export function TooltipBase(props: any) {
   return (
@@ -46,7 +46,7 @@ export const TooltipCorner = () => {
   )
 }
 
-const TootipCom: ComponentStory<typeof Tooltip> = ({ ...args }) => (
+const TootipCom: StoryFn<typeof Tooltip> = ({ ...args }) => (
   <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <Tooltip {...args}>
       <Tooltip.Trigger corner="sm" as={Button}>
@@ -57,4 +57,6 @@ const TootipCom: ComponentStory<typeof Tooltip> = ({ ...args }) => (
   </div>
 )
 
-export const Playground = TootipCom.bind({})
+export const Playground = {
+  render: TootipCom,
+}

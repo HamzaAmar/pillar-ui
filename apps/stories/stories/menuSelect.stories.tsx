@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Flex, MenuSelect } from '@pillar-ui/core'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   args: {
     rating: 1,
   },
-} as ComponentMeta<typeof MenuSelect>
+} as Meta<typeof MenuSelect>
 
 const ITEMS = [
   { value: 'hello', label: 'Hello world' },
@@ -16,8 +16,6 @@ const ITEMS = [
   { value: 'email', label: 'Email' },
   { value: 'name', label: 'User Name' },
 ]
-
-const Template: ComponentStory<typeof MenuSelect> = (args) => <MenuSelect {...args} />
 
 export const MenuSelectWithLabelAndSize = () => {
   return (
@@ -27,4 +25,4 @@ export const MenuSelectWithLabelAndSize = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

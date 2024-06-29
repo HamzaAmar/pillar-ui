@@ -1,5 +1,5 @@
 import React, { CSSProperties, useState } from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Alert, Button, Flex, Paper } from '@pillar-ui/core'
 import { Check, CircleCheck, CircleInfo, CircleWarning } from '@pillar-ui/icons'
 
@@ -10,7 +10,7 @@ export default {
     message:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum quidem facilis harum velit veritatis! Voluptatum, quos ipsa! Magnam exercitationem repellat, aspernatur porro optio tempore vero dolorem suscipit vitae delectus.',
   },
-} as ComponentMeta<typeof Alert>
+} as Meta<typeof Alert>
 
 function AlertBase({
   title = 'hello',
@@ -265,6 +265,6 @@ export function AlertCornerDefaults() {
   )
 }
 
-const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
-export const Playground = Template.bind({})
-Playground.args = {}
+export const Playground = {
+  args: {},
+}

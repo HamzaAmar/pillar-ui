@@ -1,5 +1,5 @@
 import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { Close, OpenSource, Lock, LockOff, User } from '@pillar-ui/icons'
 import { Flex, FormController, InputPassword } from '@pillar-ui/core'
 
@@ -10,9 +10,7 @@ export default {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as ComponentMeta<typeof InputPassword>
-
-const Template: ComponentStory<typeof InputPassword> = (args) => <InputPassword {...args} />
+} as Meta<typeof InputPassword>
 
 export const FilledInput = () => {
   return (
@@ -29,6 +27,7 @@ export const FilledInput = () => {
     </Flex>
   )
 }
+
 export const OutlineInput = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -44,6 +43,7 @@ export const OutlineInput = () => {
     </Flex>
   )
 }
+
 export const BorderedInput = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -124,4 +124,4 @@ export const InputPasswordCustomIcon = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

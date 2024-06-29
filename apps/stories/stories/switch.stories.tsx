@@ -1,5 +1,5 @@
 import React, { CSSProperties, useState } from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Switch, Flex, Button, Heading } from '@pillar-ui/core'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   args: {
     label: 'Helllo',
   },
-} as ComponentMeta<typeof Switch>
+} as Meta<typeof Switch>
 
 export function SwitchSizes() {
   return (
@@ -125,6 +125,4 @@ export const SwitchControlled = () => {
   )
 }
 
-const Template: ComponentStory<typeof Switch> = (args) => <Switch {...args} />
-
-export const Playground = Template.bind({})
+export const Playground = {}

@@ -1,5 +1,5 @@
 import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { Flex, InputFile } from '@pillar-ui/core'
 
 export default {
@@ -9,9 +9,7 @@ export default {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as ComponentMeta<typeof InputFile>
-
-const Template: ComponentStory<typeof InputFile> = (args) => <InputFile {...args} />
+} as Meta<typeof InputFile>
 
 export const FilledInputFile = () => {
   return (
@@ -24,6 +22,7 @@ export const FilledInputFile = () => {
     </Flex>
   )
 }
+
 export const OutlineInputFile = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -35,6 +34,7 @@ export const OutlineInputFile = () => {
     </Flex>
   )
 }
+
 export const BorderedInputFile = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -90,4 +90,4 @@ export const MultipleFilesInput = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

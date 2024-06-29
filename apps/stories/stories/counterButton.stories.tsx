@@ -1,11 +1,11 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { CounterButton } from '@pillar-ui/core'
 
 export default {
   title: 'Components/CounterButton',
   component: CounterButton,
-} as ComponentMeta<typeof CounterButton>
+} as Meta<typeof CounterButton>
 
 export function ButtonCounterColor() {
   return (

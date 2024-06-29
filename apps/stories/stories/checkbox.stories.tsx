@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Checkbox, Flex, FormController, Input } from '@pillar-ui/core'
 import { useCheckboxGroup } from '@pillar-ui/hooks'
 
@@ -9,7 +9,7 @@ export default {
   args: {
     label: 'Hello',
   },
-} as ComponentMeta<typeof Checkbox>
+} as Meta<typeof Checkbox>
 
 const ParentCheckbox = ({ children }) => {
   const child = Array.from({ length: React.Children.count(children) }, () => false)
@@ -133,6 +133,4 @@ export const CheckboxInAForm = () => (
   </form>
 )
 
-const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />
-
-export const Playground = Template.bind({})
+export const Playground = {}

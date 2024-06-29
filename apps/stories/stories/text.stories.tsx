@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Text } from '@pillar-ui/core'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   args: {
     children: 'Nice To Meet You',
   },
-} as ComponentMeta<typeof Text>
+} as Meta<typeof Text>
 
 export function TextSizes() {
   return (
@@ -344,6 +344,4 @@ export function TextWidth() {
   )
 }
 
-const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />
-
-export const Playground = Template.bind({})
+export const Playground = {}
