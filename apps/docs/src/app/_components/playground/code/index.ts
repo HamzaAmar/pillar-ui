@@ -1,1 +1,1 @@
-export { CodePlayGround } from './code'
+export * from './code'

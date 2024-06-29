@@ -124,10 +124,3 @@ export const FlexNested = () => {
     </Paper>
   )
 }
-
-FlexPlayGround.Gap = FlexGap
-FlexPlayGround.Items = FlexItems
-FlexPlayGround.Justify = FlexJustify
-FlexPlayGround.Wrap = FlexWrap
-FlexPlayGround.Direction = FlexDirection
-FlexPlayGround.Nested = FlexNested

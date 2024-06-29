@@ -1,1 +1,1 @@
-export { HeadingPlayGround } from './heading'
+export * from './heading'

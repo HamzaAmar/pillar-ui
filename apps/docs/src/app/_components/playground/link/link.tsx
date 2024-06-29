@@ -181,11 +181,3 @@ export function LinkTrucates() {
     </Paper>
   )
 }
-
-LinkPlayGround.Colors = LinkColors
-LinkPlayGround.Sizes = LinkSizes
-LinkPlayGround.Weight = LinkWeight
-LinkPlayGround.Leading = LinkLeading
-LinkPlayGround.RTL = LinkRTL
-LinkPlayGround.Align = LinkAlign
-LinkPlayGround.Trucates = LinkTrucates

@@ -13,9 +13,10 @@ export interface SharedDocs {
   excerpt: string
   content: string
   slug: string
-  type: string
+  type: 'core' | 'hooks' | 'utils' | 'tutorials' | 'getting-started' | 'features' | 'themes'
   readingTime: ReadTimeResults
   headings: Headings
+  directory?: string
 }
 
 export interface Component extends SharedDocs {

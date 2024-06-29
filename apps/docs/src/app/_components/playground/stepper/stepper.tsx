@@ -1,4 +1,6 @@
-import { Separator, Flex, Paper, Stepper, Heading, Text, Button, StepperProps } from '~/component/core/pillar'
+'use client'
+
+import { Flex, Paper, Stepper, Heading, Text, Button, StepperProps, StepperStep } from '~/component/core/pillar'
 import { useStepper } from '~/hooks/pillar'
 import { Home, Settings, User } from '@pillar-ui/icons'
 import React from 'react'
@@ -12,30 +14,30 @@ export const StepperBase = (props: Omit<StepperProps, 'children' | 'setActive'>)
   return (
     <Flex gap="lg" direction="column">
       <Stepper active={currentStep} setActive={setCurrentStep} {...props}>
-        <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
+        <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla
             natus at tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis
             ipsum iste!
           </Text>
-        </Stepper.Step>
-        <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
+        </StepperStep>
+        <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             Two Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla
             natus at tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis
             ipsum iste!
           </Text>
-        </Stepper.Step>
-        <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
+        </StepperStep>
+        <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             Three Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla
             natus at tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis
             ipsum iste!
           </Text>
-        </Stepper.Step>
+        </StepperStep>
       </Stepper>
       <Flex items="center" justify="center" gap="sm">
         <Button disabled={isLast} onClick={goToNextStep}>
@@ -94,7 +96,3 @@ export const StepperSizes = () => {
     </Paper>
   )
 }
-
-StepperPlayGround.Sizes = StepperSizes
-StepperPlayGround.Corners = StepperCorners
-StepperPlayGround.Colors = StepperColors

@@ -1,1 +1,1 @@
-export { PaperPlayGround } from './paper'
+export * from './paper'

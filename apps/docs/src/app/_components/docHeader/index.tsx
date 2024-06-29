@@ -3,7 +3,7 @@ import { Github } from '@pillar-ui/icons'
 import React from 'react'
 import { DocHeaderProps } from './docHeader.type'
 
-export const DocHeader = ({ title, type, items, shared, excerpt, slug, directory }: DocHeaderProps) => {
+export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }: DocHeaderProps) => {
   const typeName = type === 'core' ? 'Components' : type[0].toUpperCase() + type.slice(1)
 
   return (
@@ -47,7 +47,7 @@ export const DocHeader = ({ title, type, items, shared, excerpt, slug, directory
       <Flex gap="sm" wrap>
         <Button
           as="a"
-          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${shared}/${directory}`}
+          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
           target="_blank"
           color="surface"
           icon={<Github strokeWidth={2} />}

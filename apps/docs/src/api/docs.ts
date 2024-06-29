@@ -102,15 +102,17 @@ export function getTutorials() {
   return getMDXData<Tutorial>(path.join(process.cwd(), 'content/tutorials'))
 }
 
-export function getTutorialBySlug<T>(s: string) {
-  return getTutorials().find(({ slug }) => slug === s)
+export function getTutorialBySlug(s: string) {
+  const a = getTutorials().find(({ slug }) => slug === s)
+  console.log('this is the value of tutorial', a, 'and this is the value of slug', s)
+  return a
 }
 
 export function getFeatures() {
   return getMDXData<Feature>(path.join(process.cwd(), 'content/features'))
 }
 
-export function getFeatureBySlug<T>(s: string) {
+export function getFeatureBySlug(s: string) {
   return getFeatures().find(({ slug }) => slug === s)
 }
 

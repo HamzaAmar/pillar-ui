@@ -1,4 +1,3 @@
-import { Alien, Apple, Check, ChevronDown, LetterSpacing, Plane, Plus } from '@pillar-ui/icons'
 import { Spinner, Flex, Paper } from '~/component/core/pillar'
 import React from 'react'
 
@@ -80,8 +79,3 @@ export const SpinnerColors = () => {
     </Paper>
   )
 }
-
-SpinnerPlayGround.Colors = SpinnerColors
-SpinnerPlayGround.Sizes = SpinnerSizes
-SpinnerPlayGround.Invert = SpinnerInvert
-SpinnerPlayGround.Thickness = SpinnerThickness

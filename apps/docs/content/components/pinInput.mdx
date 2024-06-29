@@ -27,7 +27,7 @@ The PinInput component supports the following props:
 
 A filled input is a type of PinInput field that has a background color. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
-<PinInputPlayGround.Filled />
+<PinInputFilled />
 
 ```tsx showLineNumbers title="Input.tsx"
 export const FilledInput = () => {
@@ -46,7 +46,7 @@ export const FilledInput = () => {
 
 The outline variant of the PinInput component is a type of input field that has a border around it. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
-<PinInputPlayGround.Outline />
+<PinInputOutline />
 
 ```tsx showLineNumbers title="Input.tsx"
 export const OutlineInput = () => {
@@ -65,7 +65,7 @@ export const OutlineInput = () => {
 
 The bordered variant of the PinInput component is a type of input field that has a bottom border that visually separates the input from others and shows the edge of the input.
 
-<PinInputPlayGround.Bordered />
+<PinInputBordered />
 
 ```tsx showLineNumbers title="Input.tsx"
 export const BorderedInput = () => {
@@ -88,7 +88,7 @@ export const BorderedInput = () => {
 
 The size prop determines the overall size of the PinInput. It accepts any of the Size types defined in our library (2xs to 2xl). If not provided, it defaults to the `md` size.
 
-<PinInputPlayGround.Sizes />
+<PinInputSizes />
 
 ```tsx
 import { Flex, PinInput } from '@pillar-ui/core'
@@ -114,7 +114,7 @@ export const SizePinInput = () => {
 
 The corner prop determines the border radius of the PinInput. It accepts any of the Corner types defined in our library (sharp, xs, sm, md, lg, xl, full, circle). If not provided, it defaults to the `sm` corner.
 
-<PinInputPlayGround.Corners />
+<PinInputCorners />
 
 ```tsx
 import { Flex, PinInput } from '@pillar-ui/core'
@@ -142,7 +142,7 @@ export const CornerPinInput = () => {
 
 The color prop determines the color scheme of the PinInput. It accepts any of the Color types defined in our library (primary, secondary, surface, warning). If not provided, it defaults to the `primary` color.
 
-<PinInputPlayGround.Colors />
+<PinInputColors />
 
 ```tsx
 import { Flex, PinInput } from '@pillar-ui/core'
@@ -166,7 +166,7 @@ export const ColorPinInput = () => {
 
 The placeholder prop sets the default placeholder character displayed in each input field of the PinInput. It can be any single character or symbol.
 
-<PinInputPlayGround.Placeholder />
+<PinInputPlaceholder />
 
 ```tsx
 import { Flex, PinInput } from '@pillar-ui/core'
@@ -193,7 +193,7 @@ export const ColorPinPlaceholder = () => {
 
 The length prop specifies the number of input fields in the PinInput. Each input field will hold a single character of the PIN or security code. If not provided, it defaults to `4`.
 
-<PinInputPlayGround.Length />
+<PinInputLength />
 
 ```tsx
 import { Flex, PinInput } from '@pillar-ui/core'
@@ -220,7 +220,7 @@ export const PinInputLength = () => {
 
 The `ColorPinType` component story demonstrates how to use different input types with the PinInput component.
 
-<PinInputPlayGround.Type />
+<PinInputType />
 
 ```tsx
 import { PinInput, Flex } from '@pillar-ui/core'

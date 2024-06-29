@@ -1,1 +1,1 @@
-export { StepperPlayGround } from './stepper'
+export * from './stepper'

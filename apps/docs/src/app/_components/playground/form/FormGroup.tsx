@@ -1,8 +1,4 @@
-import { Flex, Input, FormGroup, FormControllerProps, FormController, Paper } from '~/component/core/pillar'
-
-export const FormGroupPlayGround = () => {
-  return <div>hello</div>
-}
+import { Input, FormGroup, FormControllerProps, FormController, Paper } from '~/component/core/pillar'
 
 const BaseFormController = (props: Omit<FormControllerProps, 'children'>) => {
   return (
@@ -12,7 +8,7 @@ const BaseFormController = (props: Omit<FormControllerProps, 'children'>) => {
   )
 }
 
-const FormGroupTitle = () => {
+export const FormGroupTitle = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <FormGroup title="User">
@@ -30,7 +26,7 @@ const FormGroupTitle = () => {
   )
 }
 
-const FormGroupColors = () => {
+export const FormGroupColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <FormGroup title="User" color="danger">
@@ -52,7 +48,7 @@ const FormGroupColors = () => {
   )
 }
 
-const FormGroupDirection = () => {
+export const FormGroupDirection = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <FormGroup title="Hello">
@@ -69,7 +65,7 @@ const FormGroupDirection = () => {
   )
 }
 
-const FormGroupCorner = () => {
+export const FormGroupCorner = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <FormGroup title="Hello" corner="sm">
@@ -86,7 +82,7 @@ const FormGroupCorner = () => {
   )
 }
 
-const FormGroupVariants = () => {
+export const FormGroupVariants = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <FormGroup title="Hello" variant="outline">
@@ -108,7 +104,7 @@ const FormGroupVariants = () => {
   )
 }
 
-const FormGroupFluid = () => {
+export const FormGroupFluid = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <FormGroup title="Hello" fluid>
@@ -124,10 +120,3 @@ const FormGroupFluid = () => {
     </Paper>
   )
 }
-
-FormGroupPlayGround.Title = FormGroupTitle
-FormGroupPlayGround.Colors = FormGroupColors
-FormGroupPlayGround.Variants = FormGroupVariants
-FormGroupPlayGround.Direction = FormGroupDirection
-FormGroupPlayGround.Fluid = FormGroupFluid
-FormGroupPlayGround.Corner = FormGroupCorner

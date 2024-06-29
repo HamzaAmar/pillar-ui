@@ -1,1 +1,1 @@
-export { PaginationPlayGround } from './pagination'
+export * from './pagination'

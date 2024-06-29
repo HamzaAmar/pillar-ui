@@ -1,1 +1,1 @@
-export { SwitchPlayGround } from './switch'
+export * from './switch'

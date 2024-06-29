@@ -1,1 +1,1 @@
-export { SpinnerPlayGround } from './spinner'
+export * from './spinner'

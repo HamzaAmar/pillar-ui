@@ -1,1 +1,1 @@
-export { SeparatorPlayGround } from './separator'
+export * from './separator'

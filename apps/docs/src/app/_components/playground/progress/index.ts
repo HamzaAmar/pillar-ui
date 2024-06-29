@@ -1,1 +1,1 @@
-export { ProgressPlayGround } from './progress'
+export * from './progress'

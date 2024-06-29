@@ -12,10 +12,10 @@ directory: form/index.tsx
 
 A filled input is a type of input field that has a background color. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
-<InputFilePlayGround.Filled />
+<InputFileFilled />
 
 ```tsx showLineNumbers title="App.tsx"
-export const FilledInputFile = () => {
+export const InputFileFilled = () => {
   return (
     <Flex gap="sm" direction="column">
       <InputFile aria-label="hello" autoFocus variant="filled" />
@@ -31,10 +31,10 @@ export const FilledInputFile = () => {
 
 The outline variant of the input component is a type of input field that has a border around it. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
-<InputFilePlayGround.Outline />
+<InputFileOutline />
 
 ```tsx showLineNumbers title="App.tsx"
-export const OutlineInputFile = () => {
+export const InputFileOutline = () => {
   return (
     <Flex gap="sm" direction="column">
       <InputFile aria-label="hello" autoFocus variant="outline" />
@@ -50,10 +50,10 @@ export const OutlineInputFile = () => {
 
 The bordered variant of the input component is a type of input field that has a bottom border that visually separates the input from others and shows the edge of the input.
 
-<InputFilePlayGround.Bordered />
+<InputFileBordered />
 
 ```tsx showLineNumbers title="App.tsx"
-export const BorderedInputFile = () => {
+export const InputFileBordered = () => {
   return (
     <Flex gap="sm" direction="column">
       <InputFile aria-label="hello" autoFocus variant="bordered" />
@@ -69,10 +69,10 @@ export const BorderedInputFile = () => {
 
 The corner prop is a prop that can be used to customize the corner radius of the InputFile component. Valid values for the corner prop are: `sharp` | `xs` | `sm` | `md` | `lg` | `xl` | `full`
 
-<InputFilePlayGround.Corners />
+<InputFileCorners />
 
 ```tsx showLineNumbers title="App.tsx"
-export const CornerInputFile = () => {
+export const InputFileCorner = () => {
   return (
     <Flex gap="sm" direction="column">
       <InputFile corner="sharp" placeholder="sharp" />
@@ -95,10 +95,10 @@ export const CornerInputFile = () => {
 
 The color prop can be used to customize the color of the input's border when it is focused. Valid values for the color prop are: `primary` | `purple` | `secondary` | `brown` | `surface`
 
-<InputFilePlayGround.Colors />
+<InputFileColors />
 
 ```tsx showLineNumbers title="App.tsx"
-export const ColorInputFile = () => {
+export const InputFileColor = () => {
   return (
     <Flex gap="sm" direction="column">
       <InputFile color="primary" variant="bordered" autoFocus placeholder="Focus" />
@@ -133,11 +133,11 @@ export const ColorInputFile = () => {
 
 The size prop of the input component is used to change the size of the input field. The default size is medium `md`. The following values are supported: `sm` ,`lg`
 
-<InputFilePlayGround.Sizes />
+<InputFileSizes />
 
 ```tsx showLineNumbers title="App.tsx"
 import { Flex, InputFile } from '@pillar-ui/core'
-export const SizeInputFile = () => {
+export const InputFileSize = () => {
   return (
     <Flex gap="sm" direction="column">
       <InputFile size="sm" placeholder="Small(sm)" />

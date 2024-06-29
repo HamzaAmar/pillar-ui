@@ -1,1 +1,1 @@
-export { GridPlayGround } from './grid'
+export * from './grid'

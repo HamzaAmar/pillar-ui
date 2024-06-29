@@ -15,15 +15,16 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function Blog({ slug }: Props) {
-  const util = getUtilBySlug(slug)
+export default function Blog({ params }: SlugParamsProps) {
+  const util = getUtilBySlug(params.slug)
+  console.log('this is the value of the util', util)
   if (!util) notFound()
   const { content, headings, ...rest } = util
 
   return (
     <>
       <div>
-        <DocHeader type="Components" file="core" to="/src/core" {...rest} />
+        <DocHeader root="pillar-utils/src" {...rest} />
         <div className="section prose l_flow__md">
           <CustomMDX source={content} />
         </div>

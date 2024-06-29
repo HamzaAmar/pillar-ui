@@ -1,4 +1,11 @@
-import { Paper, ProgressBar, ProgressCircle, Flex, ProgressBarStack } from '~/component/core/pillar'
+import {
+  Paper,
+  ProgressBar,
+  ProgressCircle,
+  Flex,
+  ProgressBarStack,
+  ProgressBarStackItem,
+} from '~/component/core/pillar'
 
 export const ProgressPlayGround = () => {
   return (
@@ -35,21 +42,21 @@ export const ProgressSizes = () => {
         <ProgressCircle size="2xl" value={95} label="hello" />
       </Flex>
       <ProgressBarStack size="sm" label="Nice to meet you">
-        <ProgressBarStack.Item label="CSS" color="danger" value={30}>
+        <ProgressBarStackItem label="CSS" color="danger" value={30}>
           <button>CSS 30</button>
-        </ProgressBarStack.Item>
-        <ProgressBarStack.Item label="HTML" color="success" value={15}>
+        </ProgressBarStackItem>
+        <ProgressBarStackItem label="HTML" color="success" value={15}>
           <button>HTML 15%</button>
-        </ProgressBarStack.Item>
-        <ProgressBarStack.Item label="React" color="secondary" value={25}>
+        </ProgressBarStackItem>
+        <ProgressBarStackItem label="React" color="secondary" value={25}>
           <button>React 25%</button>
-        </ProgressBarStack.Item>
-        <ProgressBarStack.Item label="Node" color="primary" value={15}>
+        </ProgressBarStackItem>
+        <ProgressBarStackItem label="Node" color="primary" value={15}>
           <button>Node 15%</button>
-        </ProgressBarStack.Item>
-        <ProgressBarStack.Item label="SCSS" color="warning" value={15}>
+        </ProgressBarStackItem>
+        <ProgressBarStackItem label="SCSS" color="warning" value={15}>
           <button>SCSS 15%</button>
-        </ProgressBarStack.Item>
+        </ProgressBarStackItem>
       </ProgressBarStack>
     </Paper>
   )
@@ -101,21 +108,21 @@ export const ProgressColors = () => {
       </Flex>
 
       <ProgressBarStack label="Nice to meet you">
-        <ProgressBarStack.Item label="CSS" color="danger" value={30}>
+        <ProgressBarStackItem label="CSS" color="danger" value={30}>
           <button>CSS 30</button>
-        </ProgressBarStack.Item>
-        <ProgressBarStack.Item label="HTML" color="success" value={15}>
+        </ProgressBarStackItem>
+        <ProgressBarStackItem label="HTML" color="success" value={15}>
           <button>HTML 15%</button>
-        </ProgressBarStack.Item>
-        <ProgressBarStack.Item label="React" color="secondary" value={25}>
+        </ProgressBarStackItem>
+        <ProgressBarStackItem label="React" color="secondary" value={25}>
           <button>React 25%</button>
-        </ProgressBarStack.Item>
-        <ProgressBarStack.Item label="Node" color="primary" value={15}>
+        </ProgressBarStackItem>
+        <ProgressBarStackItem label="Node" color="primary" value={15}>
           <button>Node 15%</button>
-        </ProgressBarStack.Item>
-        <ProgressBarStack.Item label="SCSS" color="warning" value={15}>
+        </ProgressBarStackItem>
+        <ProgressBarStackItem label="SCSS" color="warning" value={15}>
           <button>SCSS 15%</button>
-        </ProgressBarStack.Item>
+        </ProgressBarStackItem>
       </ProgressBarStack>
     </Paper>
   )
@@ -156,11 +163,3 @@ export const ProgressMax = () => {
     </Paper>
   )
 }
-
-ProgressPlayGround.Colors = ProgressColors
-ProgressPlayGround.Sizes = ProgressSizes
-ProgressPlayGround.Corners = ProgressLabel
-ProgressPlayGround.Label = ProgressLabel
-ProgressPlayGround.Value = ProgressValue
-ProgressPlayGround.Min = ProgressMin
-ProgressPlayGround.Max = ProgressMax

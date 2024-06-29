@@ -1,1 +1,1 @@
-export { BreadcrumbPlayGround } from './breadcrumb'
+export * from './breadcrumb'

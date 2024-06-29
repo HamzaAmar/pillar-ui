@@ -15,7 +15,7 @@ export const ChipsPlayGround = () => {
   )
 }
 
-export const BadgeSizes = () => {
+export const ChipsSizes = () => {
   return (
     <Paper as={Flex} items="center" gap="sm" border p="sm" background="surface-3" corner="sm">
       <Chips size="2xs">Hello</Chips>
@@ -30,7 +30,7 @@ export const BadgeSizes = () => {
 }
 const VARIANTS = ['solid', 'mixed', 'soft', 'outline'] as const
 
-export const BadgeVariants = () => {
+export const ChipsVariants = () => {
   return (
     <Paper as={Flex} direction="column" gap="xl" p="sm" background="surface-2" corner="sm">
       {VARIANTS.map((variant) => (
@@ -60,7 +60,7 @@ export const BadgeVariants = () => {
   )
 }
 
-export const BadgeNumeric = () => {
+export const ChipsNumeric = () => {
   return (
     <Paper as={Flex} gap="sm" items="center" border p="sm" flow="sm" background="surface-3" corner="sm">
       <Chips corner="sharp">Hello</Chips>
@@ -74,7 +74,7 @@ export const BadgeNumeric = () => {
     </Paper>
   )
 }
-export const BadgeIcon = () => {
+export const ChipsIcon = () => {
   return (
     <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
       <Flex as={Flex} gap="sm" items="center">
@@ -107,7 +107,7 @@ export const BadgeIcon = () => {
   )
 }
 
-export const BadgeCorners = () => {
+export const ChipsCorners = () => {
   return (
     <Paper as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
       <Chips corner="sharp">Hello</Chips>
@@ -122,7 +122,7 @@ export const BadgeCorners = () => {
   )
 }
 
-export const BadgeColors = () => {
+export const ChipsColors = () => {
   return (
     <Paper as={Flex} items="center" border p="sm" gap="sm" background="surface-3" corner="sm">
       <Chips color="danger">Hello</Chips>
@@ -134,10 +134,3 @@ export const BadgeColors = () => {
     </Paper>
   )
 }
-
-ChipsPlayGround.Colors = BadgeColors
-ChipsPlayGround.Sizes = BadgeSizes
-ChipsPlayGround.Variants = BadgeVariants
-ChipsPlayGround.Corners = BadgeCorners
-ChipsPlayGround.Numeric = BadgeNumeric
-ChipsPlayGround.Icon = BadgeIcon

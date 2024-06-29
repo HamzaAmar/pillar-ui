@@ -1,5 +1,4 @@
-import { Alien, Apple, Check, ChevronDown, LetterSpacing, Plane, Plus } from '@pillar-ui/icons'
-import { Separator, Flex, Paper } from '~/component/core/pillar'
+import { Separator, Paper } from '~/component/core/pillar'
 import React from 'react'
 
 export const SeparatorPlayGround = () => {
@@ -62,8 +61,3 @@ export const SeparatorDirection = () => {
     </Paper>
   )
 }
-
-SeparatorPlayGround.Colors = SeparatorColors
-SeparatorPlayGround.Thickness = SeparatorThickness
-SeparatorPlayGround.Title = SeparatorTitle
-SeparatorPlayGround.Direction = SeparatorDirection

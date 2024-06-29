@@ -1,1 +1,1 @@
-export { AvatarPlayGround } from './avatar'
+export * from './avatar'

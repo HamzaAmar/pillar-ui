@@ -1,4 +1,4 @@
-import { Blockquote, Paper } from '~/component/core/pillar'
+import { Blockquote, BlockquoteCite, Paper } from '~/component/core/pillar'
 import React from 'react'
 
 export const BlockquotePlayGround = () => {
@@ -10,7 +10,7 @@ export const BlockquotePlayGround = () => {
     </Paper>
   )
 }
-const BlockquoteCorner = () => {
+export const BlockquoteCorners = () => {
   return (
     <Paper p="sm" background="surface-2" corner="sm" flow="sm">
       <Blockquote corner="sharp" cite="John Doe">
@@ -38,7 +38,7 @@ const BlockquoteCorner = () => {
   )
 }
 
-const BlockquoteColor = () => {
+export const BlockquoteColors = () => {
   return (
     <Paper p="sm" background="surface-2" corner="sm" flow="sm">
       <Blockquote color="danger" cite="John Doe">
@@ -63,7 +63,7 @@ const BlockquoteColor = () => {
   )
 }
 
-const BlockquoteSize = () => {
+export const BlockquoteSizes = () => {
   return (
     <Paper p="sm" background="surface-2" corner="sm" flow="sm">
       <Blockquote size="2xs" cite="John Doe">
@@ -91,34 +91,29 @@ const BlockquoteSize = () => {
   )
 }
 
-export const BlockquoteCite = () => {
+export const CiteBlockquote = () => {
   return (
     <div className="l_flow__md">
       <Blockquote color="danger">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
-        <Blockquote.Cite title="Hello world" />
+        <BlockquoteCite title="Hello world" />
       </Blockquote>
 
       <Blockquote color="danger">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
-        <Blockquote.Cite title="Hello world" align="end" />
+        <BlockquoteCite title="Hello world" align="end" />
       </Blockquote>
 
       <Blockquote color="danger">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
-        <Blockquote.Cite title="Hello world" align="center" />
+        <BlockquoteCite title="Hello world" align="center" />
       </Blockquote>
     </div>
   )
 }
-
-BlockquotePlayGround.Corners = BlockquoteCorner
-BlockquotePlayGround.Colors = BlockquoteColor
-BlockquotePlayGround.Sizes = BlockquoteSize
-BlockquotePlayGround.Cite = BlockquoteCite

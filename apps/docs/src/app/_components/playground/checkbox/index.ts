@@ -1,1 +1,1 @@
-export { CheckboxPlayGround } from './checkbox'
+export * from './checkbox'

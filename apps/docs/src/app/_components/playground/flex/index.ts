@@ -1,1 +1,1 @@
-export { FlexPlayGround } from './flex'
+export * from './flex'

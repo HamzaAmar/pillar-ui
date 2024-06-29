@@ -107,9 +107,3 @@ export const SwitchColors = () => {
     </Paper>
   )
 }
-
-SwitchPlayGround.Colors = SwitchColors
-SwitchPlayGround.Sizes = SwitchSizes
-SwitchPlayGround.Corners = SwitchCorners
-SwitchPlayGround.DefaultPressed = SwitchDefaultPressed
-SwitchPlayGround.Disabled = SwitchDisabled

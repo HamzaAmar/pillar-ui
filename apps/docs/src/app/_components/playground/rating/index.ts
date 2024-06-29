@@ -1,1 +1,1 @@
-export { RatingPlayGround } from './rating'
+export * from './rating'

@@ -72,9 +72,3 @@ export const RatingColors = () => {
     </Paper>
   )
 }
-
-RatingPlayGround.Colors = RatingColors
-RatingPlayGround.Sizes = RatingSizes
-RatingPlayGround.Title = RatingTitle
-RatingPlayGround.Rating = RatingRating
-RatingPlayGround.Icon = RatingIcon

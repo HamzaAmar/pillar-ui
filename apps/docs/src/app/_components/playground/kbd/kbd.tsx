@@ -94,9 +94,3 @@ export const KbdVariants = () => {
     </Paper>
   )
 }
-
-KbdPlayGround.Variants = KbdVariants
-KbdPlayGround.Colors = KbdColors
-KbdPlayGround.Sizes = KbdSizes
-KbdPlayGround.Corners = KbdCorners
-KbdPlayGround.Title = KbdTitle

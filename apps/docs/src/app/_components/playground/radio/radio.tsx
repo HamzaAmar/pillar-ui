@@ -1,4 +1,3 @@
-import { Alien, Apple, Check, ChevronDown, LetterSpacing, Plane, Plus } from '@pillar-ui/icons'
 import { Avatar, Radio, Flex, Paper } from '~/component/core/pillar'
 import React from 'react'
 
@@ -104,10 +103,3 @@ export function RadioDefaultCheck() {
     </Paper>
   )
 }
-
-RadioPlayGround.Colors = RadioColors
-RadioPlayGround.Sizes = RadioSizes
-RadioPlayGround.Variants = RadioVariants
-RadioPlayGround.State = RadioState
-RadioPlayGround.Label = RadioLabel
-RadioPlayGround.DefaultCheck = RadioDefaultCheck

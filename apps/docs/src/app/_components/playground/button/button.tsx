@@ -8,7 +8,7 @@ export function ButtonPlayGround() {
 
 const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text'] as const
 
-function ButtonColors() {
+export function ButtonColors() {
   return (
     <Paper className="playground" border flow="md" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
@@ -32,7 +32,7 @@ function ButtonColors() {
   )
 }
 
-function ButtonSizes() {
+export function ButtonSizes() {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
@@ -59,7 +59,7 @@ function ButtonSizes() {
   )
 }
 
-function ButtonCorners() {
+export function ButtonCorners() {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
@@ -85,7 +85,7 @@ function ButtonCorners() {
   )
 }
 
-function ButtonVariants() {
+export function ButtonVariants() {
   return (
     <Paper className="playground" flow="xl" p="sm" background="surface-3" corner="sm">
       {VARIANTS.map((variant) => (
@@ -114,7 +114,7 @@ function ButtonVariants() {
   )
 }
 
-function ButtonIcons() {
+export function ButtonIcons() {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
@@ -132,7 +132,7 @@ function ButtonIcons() {
   )
 }
 
-function ButtonIconPosition() {
+export function ButtonIconPosition() {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
@@ -154,7 +154,7 @@ function ButtonIconPosition() {
   )
 }
 
-function ButtonFluid() {
+export function ButtonFluid() {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Button fluid color="danger">
@@ -179,7 +179,7 @@ function ButtonFluid() {
   )
 }
 
-function ButtonsState() {
+export function ButtonsState() {
   return (
     <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="surface-3" corner="sm">
       <Button state="idle" color="success">
@@ -195,7 +195,7 @@ function ButtonsState() {
   )
 }
 
-function ButtonsCustomStyle() {
+export function ButtonsCustomStyle() {
   return (
     <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="surface-3" corner="sm">
       <Button style={{ background: 'orange' }} state="idle" color="success">
@@ -205,13 +205,3 @@ function ButtonsCustomStyle() {
     </Paper>
   )
 }
-
-ButtonPlayGround.Colors = ButtonColors
-ButtonPlayGround.Sizes = ButtonSizes
-ButtonPlayGround.Variants = ButtonVariants
-ButtonPlayGround.Corners = ButtonCorners
-ButtonPlayGround.Icons = ButtonIcons
-ButtonPlayGround.IconPosition = ButtonIconPosition
-ButtonPlayGround.Fluid = ButtonFluid
-ButtonPlayGround.State = ButtonsState
-ButtonPlayGround.CustomStyle = ButtonsCustomStyle

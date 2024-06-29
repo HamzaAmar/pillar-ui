@@ -1,1 +1,1 @@
-export { KbdPlayGround } from './kbd'
+export * from './kbd'

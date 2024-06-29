@@ -1,11 +1,7 @@
-import { Flex, InputNumber, Paper } from '~/component/core/pillar'
-import { Eye, User } from '@pillar-ui/icons'
+import { InputNumber, Paper } from '~/component/core/pillar'
+import { User } from '@pillar-ui/icons'
 
-export const InputNumberPlayGround = () => {
-  return <div>hello</div>
-}
-
-const FilledInputNumber = () => {
+export const InputNumberFilled = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
@@ -18,7 +14,7 @@ const FilledInputNumber = () => {
   )
 }
 
-const OutlineInputNumber = () => {
+export const InputNumberOutline = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
@@ -31,7 +27,7 @@ const OutlineInputNumber = () => {
   )
 }
 
-const BorderedInputNumber = () => {
+export const InputNumberBordered = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
@@ -44,7 +40,7 @@ const BorderedInputNumber = () => {
   )
 }
 
-const CornerInputNumber = () => {
+export const InputNumberCorners = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber corner="sharp" placeholder="sharp" />
@@ -58,7 +54,7 @@ const CornerInputNumber = () => {
   )
 }
 
-const ColorInputNumber = () => {
+export const InputNumberColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber color="primary" variant="bordered" autoFocus placeholder="Focus" />
@@ -76,7 +72,7 @@ const ColorInputNumber = () => {
   )
 }
 
-export const SizeInputNumber = () => {
+export const InputNumberSizes = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber size="xs" placeholder="Extra Small(xs)" />
@@ -88,7 +84,7 @@ export const SizeInputNumber = () => {
   )
 }
 
-export const SizeIcons = () => {
+export const SizeIconsNumber = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber placeholder="Medium" prefixInput={<User width="16" />} />
@@ -96,7 +92,7 @@ export const SizeIcons = () => {
   )
 }
 
-export const StepInput = () => {
+export const InputNumberStep = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber step="1" size="sm" placeholder="Step 1" />
@@ -106,7 +102,7 @@ export const StepInput = () => {
   )
 }
 
-export const MaxInput = () => {
+export const InputNumberMax = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber step="1" max="10" size="sm" placeholder="Step 1" />
@@ -117,7 +113,7 @@ export const MaxInput = () => {
   )
 }
 
-export const MinInput = () => {
+export const InputNumberMin = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputNumber step="1" min="5" size="sm" placeholder="Step 1" />
@@ -127,14 +123,3 @@ export const MinInput = () => {
     </Paper>
   )
 }
-
-InputNumberPlayGround.Filled = FilledInputNumber
-InputNumberPlayGround.Outline = OutlineInputNumber
-InputNumberPlayGround.Bordered = BorderedInputNumber
-InputNumberPlayGround.Corners = CornerInputNumber
-InputNumberPlayGround.Colors = ColorInputNumber
-InputNumberPlayGround.Sizes = SizeInputNumber
-InputNumberPlayGround.Icons = SizeIcons
-InputNumberPlayGround.Step = StepInput
-InputNumberPlayGround.Min = MinInput
-InputNumberPlayGround.Max = MaxInput

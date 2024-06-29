@@ -181,11 +181,3 @@ export function TextTrucates() {
     </div>
   )
 }
-
-TextPlayGround.Colors = TextColors
-TextPlayGround.Sizes = TextSizes
-TextPlayGround.Weight = TextWeight
-TextPlayGround.Leading = TextLeading
-TextPlayGround.RTL = TextRTL
-TextPlayGround.Align = TextAlign
-TextPlayGround.Trucates = TextTrucates

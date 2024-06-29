@@ -1,11 +1,11 @@
 import { Paper, InputPassword } from '~/component/core/pillar'
-import { Close, Eye, Lock, LockOff, OpenSource, User } from '@pillar-ui/icons'
+import { Close, Lock, LockOff, OpenSource, User } from '@pillar-ui/icons'
 
 export const InputPasswordPlayGround = () => {
   return <div>hello</div>
 }
 
-const FilledInputPassword = () => {
+export const InputPasswordFilled = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
@@ -18,7 +18,7 @@ const FilledInputPassword = () => {
   )
 }
 
-const OutlineInputPassword = () => {
+export const InputPasswordOutline = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
@@ -31,7 +31,7 @@ const OutlineInputPassword = () => {
   )
 }
 
-const BorderedInputPassword = () => {
+export const InputPasswordBordered = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
@@ -49,7 +49,7 @@ const BorderedInputPassword = () => {
   )
 }
 
-const CornerInputPassword = () => {
+export const InputPasswordCorners = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword corner="sharp" placeholder="sharp" />
@@ -63,7 +63,7 @@ const CornerInputPassword = () => {
   )
 }
 
-const ColorInputPassword = () => {
+export const InputPasswordColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword color="primary" variant="bordered" autoFocus placeholder="Focus" />
@@ -81,7 +81,7 @@ const ColorInputPassword = () => {
   )
 }
 
-export const SizeInputPassword = () => {
+export const InputPasswordSizes = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword size="xs" placeholder="Extra Small(xs)" />
@@ -93,7 +93,7 @@ export const SizeInputPassword = () => {
   )
 }
 
-export const SizeIcons = () => {
+export const SizeIconsPassword = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputPassword placeholder="Medium" prefixInput={<User width="16" />} />
@@ -119,12 +119,3 @@ export const InputPasswordCustomIcon = () => {
     </Paper>
   )
 }
-
-InputPasswordPlayGround.Filled = FilledInputPassword
-InputPasswordPlayGround.Outline = OutlineInputPassword
-InputPasswordPlayGround.Bordered = BorderedInputPassword
-InputPasswordPlayGround.Corners = CornerInputPassword
-InputPasswordPlayGround.Colors = ColorInputPassword
-InputPasswordPlayGround.Sizes = SizeInputPassword
-InputPasswordPlayGround.Icons = SizeIcons
-InputPasswordPlayGround.CustomIcon = InputPasswordCustomIcon

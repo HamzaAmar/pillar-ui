@@ -1,31 +1,39 @@
-import { Accordion, Heading, Paper, Text } from '~/component/core/pillar'
+import {
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
+  Heading,
+  Paper,
+  Text,
+} from '~/component/core/pillar'
 import React from 'react'
 
 function AccordionBase(props: any) {
   return (
     <Accordion {...props}>
-      <Accordion.Item value={1}>
-        <Accordion.Button>Hello</Accordion.Button>
-        <Accordion.Panel>
+      <AccordionItem value={1}>
+        <AccordionButton>Hello</AccordionButton>
+        <AccordionPanel>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt hic debitis, neque accusamus atque
           provident facilis vel ipsa illo officia aliquid dolore veritat iente at cum dolores.
-        </Accordion.Panel>
-      </Accordion.Item>
-      <Accordion.Item value={2}>
-        <Accordion.Button>Hello</Accordion.Button>
-        <Accordion.Panel>
+        </AccordionPanel>
+      </AccordionItem>
+      <AccordionItem value={2}>
+        <AccordionButton>Hello</AccordionButton>
+        <AccordionPanel>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos laborum distinctio officiis a eaque
           perspiciatis itaque, fugiat quaerat! Natus beatae eius ullam sed repellendus aliquam provident quod fugiat
           veniam recusandae.
-        </Accordion.Panel>
-      </Accordion.Item>
-      <Accordion.Item value={3}>
-        <Accordion.Button>Hello</Accordion.Button>
-        <Accordion.Panel>
+        </AccordionPanel>
+      </AccordionItem>
+      <AccordionItem value={3}>
+        <AccordionButton>Hello</AccordionButton>
+        <AccordionPanel>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error odio
           animi mollitia? Blanditiis
-        </Accordion.Panel>
-      </Accordion.Item>
+        </AccordionPanel>
+      </AccordionItem>
     </Accordion>
   )
 }
@@ -38,7 +46,7 @@ export const AccordionPlayGround = () => {
   )
 }
 
-const AccordionSizes = () => {
+export const AccordionSizes = () => {
   return (
     <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
       <AccordionBase size="2xs" />
@@ -56,8 +64,8 @@ export const AccordionSubtitle = () => {
   return (
     <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
       <Accordion>
-        <Accordion.Item value={1}>
-          <Accordion.Button>
+        <AccordionItem value={1}>
+          <AccordionButton>
             <div>
               <Text>Hello</Text>{' '}
               <Text size="sm">
@@ -67,38 +75,38 @@ export const AccordionSubtitle = () => {
                 repudiandae distinctio. Ipsum, modi.
               </Text>
             </div>
-          </Accordion.Button>
-          <Accordion.Panel>Lorem, ipsum dolor sit amet consectetur adipisicing elit</Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item value={2}>
-          <Accordion.Button>
+          </AccordionButton>
+          <AccordionPanel>Lorem, ipsum dolor sit amet consectetur adipisicing elit</AccordionPanel>
+        </AccordionItem>
+        <AccordionItem value={2}>
+          <AccordionButton>
             <div>
               <Text>Hello</Text> <Text size="sm"> Lorem ipsum dolor sit, amet consectetur adipisicing elit</Text>
             </div>
-          </Accordion.Button>
-          <Accordion.Panel>
+          </AccordionButton>
+          <AccordionPanel>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos laborum distinctio officiis a eaque
             perspiciatis itaque, fugiat quaerat! Natus beatae eius ullam sed repellendus aliquam provident quod fugiat
             veniam recusandae.
-          </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item value={3}>
-          <Accordion.Button>
+          </AccordionPanel>
+        </AccordionItem>
+        <AccordionItem value={3}>
+          <AccordionButton>
             <div>
               <Text>Hello</Text> <Text size="sm"> Lorem ipsum dolor sit, amet consectetur adipisicing elit</Text>
             </div>
-          </Accordion.Button>
-          <Accordion.Panel>
+          </AccordionButton>
+          <AccordionPanel>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error
             odio animi mollitia? Blanditiis
-          </Accordion.Panel>
-        </Accordion.Item>
+          </AccordionPanel>
+        </AccordionItem>
       </Accordion>
     </Paper>
   )
 }
 
-const AccordionSeparate = () => {
+export const AccordionSeparate = () => {
   return (
     <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
       <AccordionBase separate />
@@ -106,7 +114,7 @@ const AccordionSeparate = () => {
   )
 }
 
-const AccordionVariants = () => {
+export const AccordionVariants = () => {
   return (
     <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
       <AccordionBase variant="solid" />
@@ -116,7 +124,7 @@ const AccordionVariants = () => {
   )
 }
 
-const AccordionCorners = () => {
+export const AccordionCorners = () => {
   return (
     <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
       <AccordionBase separate color="surface" variant="solid" corner="sharp" />
@@ -129,7 +137,7 @@ const AccordionCorners = () => {
   )
 }
 
-const AccordionType = () => {
+export const AccordionType = () => {
   return (
     <Paper className="playground" flow="xl" p="sm" background="surface-3" corner="sm">
       <div className="l_flow__sm">
@@ -145,7 +153,7 @@ const AccordionType = () => {
   )
 }
 
-const AccordionCollapsible = () => {
+export const AccordionCollapsible = () => {
   return (
     <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
       <AccordionBase collapsible />

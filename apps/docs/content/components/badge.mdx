@@ -16,7 +16,7 @@ directory: badge/index.tsx
 
 The size prop determines the size of the Badge. It accepts the following values:
 
-<BadgePlayGround.Sizes />
+<BadgeSizes />
 
 ```tsx showLineNumbers title="Badge.tsx"
 export const BadgeSize = () => {
@@ -66,7 +66,7 @@ The size prop determines the size of the Alert. It accepts any of the Size types
 
 The corner prop determines the border radius of the Badge. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-<BadgePlayGround.Corners />
+<BadgeCorners />
 
 ```tsx showLineNumbers title="Badge.tsx"
 export const BadgeSize = () => {
@@ -115,7 +115,7 @@ The type prop determines the type of Badge to render. It accepts the following v
 - **icon**: displays an icon.
 - **dot**: displays a dot.
 
-<BadgePlayGround.Types />
+<BadgeTypes />
 
 ```tsx showLineNumbers title="Badge.tsx"
 export const BadgeTypes = () => {
@@ -139,7 +139,7 @@ Options: `solid` | `mixed`
 
 The variants prop determines the style of the Badge.
 
-<BadgePlayGround.Variants />
+<BadgeVariants />
 
 ```tsx showLineNumbers title="Badge.tsx"
 export const BadgeVariants = () => {
@@ -158,7 +158,7 @@ export const BadgeVariants = () => {
 
 The number prop is required for the numeric type. It determines the numeric value to display.
 
-<BadgePlayGround.Numeric />
+<BadgeNumeric />
 
 ```tsx showLineNumbers title="Badge.tsx"
 export const BadgeNumericMaxValue = () => {
@@ -182,7 +182,7 @@ export const BadgeNumericMaxValue = () => {
 
 The max prop is required for the numeric type. It determines the maximum value that can be displayed. If the number prop is greater than max, the badge will display max+.
 
-<BadgePlayGround.MaxValue />
+<BadgeNumericMaxValue />
 
 ```tsx showLineNumbers title="Badge.tsx"
 export const BadgeNumericMaxValue = () => {
@@ -212,7 +212,7 @@ The color prop determines the color of the Badge. It accepts a string representi
 
 code Example
 
-<BadgePlayGround.Colors />
+<BadgeColors />
 
 ```tsx showLineNumbers title="Badge.tsx"
 export const BadgeDotColor = () => {

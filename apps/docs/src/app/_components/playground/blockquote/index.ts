@@ -1,1 +1,1 @@
-export { BlockquotePlayGround } from './blockquote'
+export * from './blockquote'

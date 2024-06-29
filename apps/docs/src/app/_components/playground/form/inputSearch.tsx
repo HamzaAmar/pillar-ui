@@ -1,11 +1,7 @@
 import { Paper, InputSearch } from '~/component/core/pillar'
 import { Eye, User } from '@pillar-ui/icons'
 
-export const InputSearchPlayGround = () => {
-  return <div>hello</div>
-}
-
-const FilledInputPassword = () => {
+export const InputSearchFilled = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
@@ -18,7 +14,7 @@ const FilledInputPassword = () => {
   )
 }
 
-const OutlineInputPassword = () => {
+export const InputSearchOutline = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
@@ -31,7 +27,7 @@ const OutlineInputPassword = () => {
   )
 }
 
-const BorderedInputPassword = () => {
+export const InputSearchBordered = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
@@ -44,7 +40,7 @@ const BorderedInputPassword = () => {
   )
 }
 
-const CornerInputPassword = () => {
+export const InputSearchCorners = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch corner="sharp" placeholder="sharp" />
@@ -58,7 +54,7 @@ const CornerInputPassword = () => {
   )
 }
 
-const ColorInputPassword = () => {
+export const InputSearchColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch color="primary" variant="bordered" autoFocus placeholder="Focus" />
@@ -76,7 +72,7 @@ const ColorInputPassword = () => {
   )
 }
 
-export const SizeInputPassword = () => {
+export const InputSearchSizes = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch size="xs" placeholder="Extra Small(xs)" />
@@ -88,18 +84,10 @@ export const SizeInputPassword = () => {
   )
 }
 
-export const SizeIcons = () => {
+export const SizeIconsSearch = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputSearch placeholder="Medium" prefixInput={<User width="16" />} />
     </Paper>
   )
 }
-
-InputSearchPlayGround.Filled = FilledInputPassword
-InputSearchPlayGround.Outline = OutlineInputPassword
-InputSearchPlayGround.Bordered = BorderedInputPassword
-InputSearchPlayGround.Corners = CornerInputPassword
-InputSearchPlayGround.Colors = ColorInputPassword
-InputSearchPlayGround.Sizes = SizeInputPassword
-InputSearchPlayGround.Icons = SizeIcons

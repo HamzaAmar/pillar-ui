@@ -1,1 +1,1 @@
-export { LinkPlayGround } from './link'
+export * from './link'

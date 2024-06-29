@@ -162,11 +162,3 @@ export function HeadingTrucates() {
     </Paper>
   )
 }
-
-HeadingPlayGround.Colors = HeadingColors
-HeadingPlayGround.Sizes = HeadingSizes
-HeadingPlayGround.Weight = HeadingWeight
-HeadingPlayGround.Leading = HeadingLeading
-HeadingPlayGround.RTL = HeadingRTL
-HeadingPlayGround.Align = HeadingAlign
-HeadingPlayGround.Trucates = HeadingTrucates

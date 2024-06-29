@@ -1,11 +1,6 @@
 import { Paper, Select } from '~/component/core/pillar'
-import { Eye, User } from '@pillar-ui/icons'
 
-export const SelectPlayGround = () => {
-  return <div>hello</div>
-}
-
-export const Options = () => {
+const Options = () => {
   return (
     <>
       <option value="">Option 1</option>
@@ -16,7 +11,7 @@ export const Options = () => {
   )
 }
 
-const VariantsSelect = () => {
+export const SelectVariants = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Select variant="filled">
@@ -32,7 +27,7 @@ const VariantsSelect = () => {
   )
 }
 
-const CornerSelect = () => {
+export const SelectCorners = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Select corner="sharp">
@@ -60,7 +55,7 @@ const CornerSelect = () => {
   )
 }
 
-const ColorSelect = () => {
+export const SelectColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Select color="danger">
@@ -88,7 +83,7 @@ const ColorSelect = () => {
   )
 }
 
-export const SizeSelect = () => {
+export const SelectSizes = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Select size="xs">
@@ -109,8 +104,3 @@ export const SizeSelect = () => {
     </Paper>
   )
 }
-
-SelectPlayGround.Variants = VariantsSelect
-SelectPlayGround.Corners = CornerSelect
-SelectPlayGround.Colors = ColorSelect
-SelectPlayGround.Sizes = SizeSelect

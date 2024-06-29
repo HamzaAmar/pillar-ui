@@ -145,11 +145,3 @@ export const CheckboxIsIndeterminate = () => (
     </ParentCheckbox>
   </Paper>
 )
-
-CheckboxPlayGround.IsIndeterminate = CheckboxIsIndeterminate
-CheckboxPlayGround.Colors = CheckboxColors
-CheckboxPlayGround.Sizes = CheckboxSizes
-CheckboxPlayGround.DefaultCheck = CheckboxDefaultCheck
-CheckboxPlayGround.Label = CheckboxLabel
-CheckboxPlayGround.Disabled = CheckboxDisabled
-CheckboxPlayGround.Status = CheckboxStatus

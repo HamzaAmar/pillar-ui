@@ -15,8 +15,8 @@ export async function generateStaticParams() {
   }))
 }
 
-function Tutorial({ slug }: Props) {
-  const tutorial = getTutorialBySlug(slug)
+function Tutorial({ params }: SlugParamsProps) {
+  const tutorial = getTutorialBySlug(params.slug)
   if (!tutorial) notFound()
   const { content, headings } = tutorial
 

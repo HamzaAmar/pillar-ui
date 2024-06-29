@@ -1,9 +1,5 @@
-import { Flex, Input, FormController, FormControllerProps, Paper } from '~/component/core/pillar'
-import { Eye, User } from '@pillar-ui/icons'
+import { Input, FormController, FormControllerProps, Paper } from '~/component/core/pillar'
 
-export const FormControllerPlayGround = () => {
-  return <div>hello</div>
-}
 const BaseFormController = (props: Omit<FormControllerProps, 'children'>) => {
   return (
     <FormController {...props}>
@@ -12,7 +8,7 @@ const BaseFormController = (props: Omit<FormControllerProps, 'children'>) => {
   )
 }
 
-const FormControllerLabel = () => {
+export const FormControllerLabel = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <BaseFormController label="Hello World" />
@@ -21,7 +17,7 @@ const FormControllerLabel = () => {
   )
 }
 
-const FormControllerHint = () => {
+export const FormControllerHint = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <BaseFormController label="hello" hint="message must be more than 5 caractere" />
@@ -29,7 +25,7 @@ const FormControllerHint = () => {
   )
 }
 
-const FormControllerError = () => {
+export const FormControllerError = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <BaseFormController label="hello" error="message must be more than 5 caractere" />
@@ -37,14 +33,10 @@ const FormControllerError = () => {
   )
 }
 
-const FormControllerRequired = () => {
+export const FormControllerRequired = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <BaseFormController label="Name" required />
     </Paper>
   )
 }
-
-FormControllerPlayGround.Label = FormControllerLabel
-FormControllerPlayGround.Hint = FormControllerHint
-FormControllerPlayGround.Error = FormControllerError

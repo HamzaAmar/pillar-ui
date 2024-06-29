@@ -1,1 +1,1 @@
-export { BadgePlayGround } from './badge'
+export * from './badge'

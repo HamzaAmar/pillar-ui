@@ -1,34 +1,34 @@
-import { Timeline, Paper, TimelineProps, Heading, Text, Avatar } from '~/component/core/pillar'
+import { Timeline, Paper, TimelineProps, Heading, Text, Avatar, TimelineItem } from '~/component/core/pillar'
 import { Cross } from '@pillar-ui/icons'
 import React from 'react'
 
 const TimelineBase = (props: Omit<TimelineProps, 'children'>) => {
   return (
     <Timeline {...props}>
-      <Timeline.Item>
+      <TimelineItem>
         <Heading size="xs">Hello</Heading>
         <Text size="xs">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
-      <Timeline.Item>
+      </TimelineItem>
+      <TimelineItem>
         <Heading size="xs">Hello</Heading>
         <Text size="xs">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
-      <Timeline.Item>
+      </TimelineItem>
+      <TimelineItem>
         <Heading size="xs">Hello</Heading>
         <Text size="xs">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
+      </TimelineItem>
     </Timeline>
   )
 }
@@ -41,7 +41,7 @@ export const TimelinePlayGround = () => {
   )
 }
 
-const TimelineSizes = () => {
+export const TimelineSizes = () => {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <TimelineBase size="2xs" />
@@ -55,7 +55,7 @@ const TimelineSizes = () => {
   )
 }
 
-const TimelineVariants = () => {
+export const TimelineVariants = () => {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <TimelineBase variant="solid" />
@@ -65,7 +65,7 @@ const TimelineVariants = () => {
   )
 }
 
-const TimelineCorners = () => {
+export const TimelineCorners = () => {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <TimelineBase corner="sharp" />
@@ -78,7 +78,7 @@ const TimelineCorners = () => {
   )
 }
 
-const TimelineColors = () => {
+export const TimelineColors = () => {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <TimelineBase color="surface" />
@@ -91,19 +91,19 @@ const TimelineColors = () => {
   )
 }
 
-const TimelineCustomBullet = () => {
+export const TimelineCustomBullet = () => {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
       <Timeline>
-        <Timeline.Item bullet={<Cross />}>
+        <TimelineItem bullet={<Cross />}>
           <Heading size="xs">Hello</Heading>
           <Text size="xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
-        </Timeline.Item>
-        <Timeline.Item
+        </TimelineItem>
+        <TimelineItem
           bullet={<Avatar variant="image" size="xs" image="https://picsum.photos/id/152/40/40" title="hello" />}
         >
           <Heading size="xs">Hello</Heading>
@@ -112,30 +112,24 @@ const TimelineCustomBullet = () => {
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
-        </Timeline.Item>
-        <Timeline.Item>
+        </TimelineItem>
+        <TimelineItem>
           <Heading size="xs">Hello</Heading>
           <Text size="xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
-        </Timeline.Item>
-        <Timeline.Item>
+        </TimelineItem>
+        <TimelineItem>
           <Heading size="xs">Hello</Heading>
           <Text size="xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
-        </Timeline.Item>
+        </TimelineItem>
       </Timeline>
     </Paper>
   )
 }
-
-TimelinePlayGround.Sizes = TimelineSizes
-TimelinePlayGround.Variants = TimelineVariants
-TimelinePlayGround.Corners = TimelineCorners
-TimelinePlayGround.Colors = TimelineColors
-TimelinePlayGround.CustomBullet = TimelineCustomBullet

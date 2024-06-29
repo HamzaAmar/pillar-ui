@@ -1,1 +1,1 @@
-export { AlertPlayGround } from './alert'
+export * from './alert'

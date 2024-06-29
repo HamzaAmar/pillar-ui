@@ -403,12 +403,3 @@ export function PaperWidth() {
     </Paper>
   )
 }
-
-PaperPlayGround.Background = PaperBackground
-PaperPlayGround.Colors = PaperColors
-PaperPlayGround.Corners = PaperCorners
-PaperPlayGround.Shadow = PaperShadow
-PaperPlayGround.Padding = PaperPadding
-PaperPlayGround.Margin = PaperMargin
-PaperPlayGround.Flow = PaperFlow
-PaperPlayGround.Width = PaperWidth

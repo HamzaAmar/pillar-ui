@@ -1,11 +1,7 @@
 import { Paper, Textarea } from '~/component/core/pillar'
 import { Eye, User } from '@pillar-ui/icons'
 
-export const TextareaPlayGround = () => {
-  return <div>hello</div>
-}
-
-const FilledInputPassword = () => {
+export const TextareaFilled = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
@@ -26,7 +22,7 @@ const FilledInputPassword = () => {
   )
 }
 
-const OutlineInputPassword = () => {
+export const TextareaOutline = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
@@ -47,7 +43,7 @@ const OutlineInputPassword = () => {
   )
 }
 
-const BorderedInputPassword = () => {
+export const TextareaBordered = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
@@ -68,7 +64,7 @@ const BorderedInputPassword = () => {
   )
 }
 
-const CornerInputPassword = () => {
+export const TextareaCorners = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea corner="sharp" placeholder="sharp" />
@@ -82,7 +78,7 @@ const CornerInputPassword = () => {
   )
 }
 
-const ColorInputPassword = () => {
+export const TextareaColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea color="primary" variant="bordered" autoFocus placeholder="Focus" />
@@ -108,7 +104,7 @@ const ColorInputPassword = () => {
   )
 }
 
-export const SizeInputPassword = () => {
+export const TextareaSizes = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea size="xs" placeholder="Extra Small(xs)" />
@@ -120,7 +116,7 @@ export const SizeInputPassword = () => {
   )
 }
 
-export const SizeIcons = () => {
+export const TextareaSizeIcons = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Textarea placeholder="Medium" suffixInput={<User width="16" />} />
@@ -129,11 +125,3 @@ export const SizeIcons = () => {
     </Paper>
   )
 }
-
-TextareaPlayGround.Filled = FilledInputPassword
-TextareaPlayGround.Outline = OutlineInputPassword
-TextareaPlayGround.Bordered = BorderedInputPassword
-TextareaPlayGround.Corners = CornerInputPassword
-TextareaPlayGround.Colors = ColorInputPassword
-TextareaPlayGround.Sizes = SizeInputPassword
-TextareaPlayGround.Icons = SizeIcons

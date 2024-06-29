@@ -42,7 +42,7 @@ The color prop determines the background color of the Alert. It accepts any of t
 
 Example usage:
 
-<AlertPlayGround.Colors />
+<AlertColors />
 
 ```tsx showLineNumbers title="Alert.tsx"
 function AlertColors(){
@@ -68,7 +68,7 @@ The size prop determines the size of the Alert. It accepts any of the Size types
 
 Example usage:
 
-<AlertPlayGround.Sizes />
+<AlertSizes />
 
 ```tsx showLineNumbers title="Alert.tsx"
 function AlerSizes(){
@@ -93,7 +93,7 @@ Type: string
 Default: `solid`
 Options: `solid` | `outline` | `soft` | `mixed`
 
-<AlertPlayGround.Variants />
+<AlertVariants />
 
 ```tsx showLineNumbers title="Alert.tsx"
 export const AlertVariant = () => {
@@ -119,7 +119,7 @@ The corner prop determines the border radius of the Alert. It accepts any of the
 
 Example usage:
 
-<AlertPlayGround.Corners />
+<AlertCorners />
 
 ```tsx showLineNumbers title="Alert.tsx"
 function AlerCorners(){
@@ -142,7 +142,7 @@ The content of the Alert the text displayed as the Alert's title. If not provide
 
 Example usage:
 
-<AlertPlayGround.Content />
+<AlertContent />
 
 ```tsx showLineNumbers title="Alert.tsx"
 function(){
@@ -163,7 +163,7 @@ function(){
 The icon prop allows you to display an icon alongside the Alert. It accepts any ReactNode, such as an icon from the @pillar-ui/icons package. If no icon is provided, no icon will be displayed.
 Example usage:
 
-<AlertPlayGround.Icons />
+<AlertIcons />
 
 ```tsx showLineNumbers title="Alert.tsx"
 <Paper borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
@@ -179,7 +179,7 @@ The closable prop determines whether the Alert should be closable by the user. I
 
 Example usage:
 
-<AlertPlayGround.Closable />
+<AlertClosable />
 
 ```tsx showLineNumbers title="Alert.tsx"
 <Paper borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
@@ -194,7 +194,7 @@ Example usage:
 The inline prop determines how the alert is displayed. If set to true, the alert will be displayed horizontally, which is useful for short alerts that do not take up a lot of space, such as notifications or messages. If not set or set to false, the alert will be displayed as a vertically.
 Example usage:
 
-<AlertPlayGround.Inline />
+<AlertInline />
 
 ```tsx showLineNumbers title="Alert.tsx"
 <Flex direction="column" gap="sm">

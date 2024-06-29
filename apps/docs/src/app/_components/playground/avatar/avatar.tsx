@@ -1,5 +1,5 @@
 import { CircleCheck } from '@pillar-ui/icons'
-import { Avatar, Flex, Paper } from '~/component/core/pillar'
+import { Avatar, AvatarGroup, Flex, Paper } from '~/component/core/pillar'
 import React from 'react'
 
 export const AvatarPlayGround = () => {
@@ -14,7 +14,7 @@ export const AvatarPlayGround = () => {
     </Paper>
   )
 }
-const AvatarColors = () => {
+export const AvatarColors = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm">
       <Avatar title="John Doe" />
@@ -29,7 +29,7 @@ const AvatarColors = () => {
   )
 }
 
-const AvatarImage = () => {
+export const AvatarImage = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm">
       <Avatar image="https://picsum.photos/id/120/100/100" />
@@ -40,7 +40,7 @@ const AvatarImage = () => {
   )
 }
 
-const AvatarIcon = () => {
+export const AvatarIcon = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm">
       <Avatar fallback={<CircleCheck />} title="Success!" />
@@ -48,7 +48,7 @@ const AvatarIcon = () => {
   )
 }
 
-const AvatarSizes = () => {
+export const AvatarSizes = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar image="https://picsum.photos/id/120/100/100" size="3xs" />
@@ -63,7 +63,7 @@ const AvatarSizes = () => {
   )
 }
 
-const AvatarVariants = () => {
+export const AvatarVariants = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar variant="solid" />
@@ -74,9 +74,9 @@ const AvatarVariants = () => {
   )
 }
 
-const image = 'https://picsum.photos/id/25/100/100'
+export const image = 'https://picsum.photos/id/25/100/100'
 
-const AvatarCorners = () => {
+export const AvatarCorners = () => {
   return (
     <Paper as={Flex} flow="md" wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Flex gap="xs" items="center">
@@ -123,7 +123,7 @@ const AvatarCorners = () => {
   )
 }
 
-const AvatarAnimate = () => {
+export const AvatarAnimate = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar animate="zoom" title="Success!" />
@@ -133,7 +133,7 @@ const AvatarAnimate = () => {
   )
 }
 
-const AvatarFallback = () => {
+export const AvatarFallback = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
       <Avatar title="Hello" />
@@ -143,10 +143,10 @@ const AvatarFallback = () => {
   )
 }
 
-const AvatarGroupLimit = () => {
+export const AvatarGroupLimit = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
-      <Avatar.Group limit={5}>
+      <AvatarGroup limit={5}>
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
@@ -155,20 +155,20 @@ const AvatarGroupLimit = () => {
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group limit={5}>
+      </AvatarGroup>
+      <AvatarGroup limit={5}>
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
-      </Avatar.Group>
+      </AvatarGroup>
     </Paper>
   )
 }
 
-const AvatarGroupStack = () => {
+export const AvatarGroupStack = () => {
   return (
     <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
-      <Avatar.Group layout="stack">
+      <AvatarGroup layout="stack">
         <Avatar animate="jump-y" title="Success!" />
         <Avatar animate="jump-y" title="Success!" />
         <Avatar animate="jump-y" title="Success!" />
@@ -177,8 +177,8 @@ const AvatarGroupStack = () => {
         <Avatar animate="jump-y" title="Success!" />
         <Avatar animate="jump-y" title="Success!" />
         <Avatar animate="jump-y" title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group layout="grid">
+      </AvatarGroup>
+      <AvatarGroup layout="grid">
         <Avatar animate="jump-x" title="Success!" />
         <Avatar animate="jump-x" title="Success!" />
         <Avatar animate="jump-x" title="Success!" />
@@ -188,46 +188,34 @@ const AvatarGroupStack = () => {
         <Avatar animate="jump-x" title="Success!" />
         <Avatar animate="jump-x" title="Success!" />
         <Avatar animate="jump-x" title="Success!" />
-      </Avatar.Group>
+      </AvatarGroup>
     </Paper>
   )
 }
 
-function AvatarGroupContext() {
+export function AvatarGroupContext() {
   return (
     <Paper flow="sm" border p="sm" background="surface-3" corner="sm">
-      <Avatar.Group variant="outline">
+      <AvatarGroup variant="outline">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group size="xs">
+      </AvatarGroup>
+      <AvatarGroup size="xs">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group corner="sharp">
+      </AvatarGroup>
+      <AvatarGroup corner="sharp">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group color="danger">
+      </AvatarGroup>
+      <AvatarGroup color="danger">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
-      </Avatar.Group>
+      </AvatarGroup>
     </Paper>
   )
 }
-
-AvatarPlayGround.Colors = AvatarColors
-AvatarPlayGround.Sizes = AvatarSizes
-AvatarPlayGround.Variants = AvatarVariants
-AvatarPlayGround.Corners = AvatarCorners
-AvatarPlayGround.Image = AvatarImage
-AvatarPlayGround.Icon = AvatarIcon
-AvatarPlayGround.Animate = AvatarAnimate
-AvatarPlayGround.Fallback = AvatarFallback
-AvatarPlayGround.GroupContext = AvatarGroupContext
-AvatarPlayGround.GroupStack = AvatarGroupStack
-AvatarPlayGround.GroupLimit = AvatarGroupLimit

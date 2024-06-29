@@ -1,11 +1,7 @@
-import { Flex, Input, Paper } from '~/component/core/pillar'
+import { Input, Paper } from '~/component/core/pillar'
 import { Eye, User } from '@pillar-ui/icons'
 
-export const InputPlayGround = () => {
-  return <div>hello</div>
-}
-
-const FilledInput = () => {
+export const InputFilled = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
@@ -26,7 +22,7 @@ const FilledInput = () => {
   )
 }
 
-const OutlineInput = () => {
+export const InputOutline = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
@@ -47,7 +43,7 @@ const OutlineInput = () => {
   )
 }
 
-const BorderedInput = () => {
+export const InputBordered = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
@@ -68,7 +64,7 @@ const BorderedInput = () => {
   )
 }
 
-const CornerInput = () => {
+export const InputCorners = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input corner="sharp" placeholder="sharp" />
@@ -82,7 +78,7 @@ const CornerInput = () => {
   )
 }
 
-const ColorInput = () => {
+export const InputColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input color="primary" variant="bordered" autoFocus placeholder="Focus" />
@@ -102,7 +98,7 @@ const ColorInput = () => {
   )
 }
 
-export const SizeInput = () => {
+export const InputSizes = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input size="xs" placeholder="Extra Small(xs)" />
@@ -114,7 +110,7 @@ export const SizeInput = () => {
   )
 }
 
-export const SizeIcons = () => {
+export const InputIcons = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <Input placeholder="Medium" suffixInput={<User width="16" />} />
@@ -123,11 +119,3 @@ export const SizeIcons = () => {
     </Paper>
   )
 }
-
-InputPlayGround.Filled = FilledInput
-InputPlayGround.Outline = OutlineInput
-InputPlayGround.Bordered = BorderedInput
-InputPlayGround.Corners = CornerInput
-InputPlayGround.Colors = ColorInput
-InputPlayGround.Sizes = SizeInput
-InputPlayGround.Icons = SizeIcons

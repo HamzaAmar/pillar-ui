@@ -1,1 +1,1 @@
-export { ChipsPlayGround } from './chips'
+export * from './chips'

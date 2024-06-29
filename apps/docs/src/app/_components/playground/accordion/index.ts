@@ -1,1 +1,1 @@
-export { AccordionPlayGround } from './accordion'
+export * from './accordion'

@@ -1,1 +1,1 @@
-export { TextPlayGround } from './text'
+export * from './text'

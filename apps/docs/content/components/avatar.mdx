@@ -2,8 +2,7 @@
 title: Avatar
 type: core
 excerpt: The Avatar component is a UI element that represents a user, usually with a profile picture or initials. It can be used to show the profile image of a user or any image that is relevant to the context in which it is being used. It has several props that allow customization of its appearance, including size, corner radius, color, variant, and animation. The Avatar component can also be used in conjunction with the Avatar.Group component to display multiple avatars in a group.
-items: ['Avatar', 'Avatar.Group']
-directory: Avatar
+items: ['Avatar', 'AvatarGroup']
 directory: avatar/index.tsx
 ---
 
@@ -43,7 +42,7 @@ An optional title to display as an alt to make the avatar accessible.
 
 Example usage:
 
-<AvatarPlayGround.Colors />
+<AvatarColors />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AvatarColors() {
@@ -68,7 +67,7 @@ The image source to display in the avatar.
 
 Example:
 
-<AvatarPlayGround.Image />
+<AvatarImage />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AvatarImage() {
@@ -90,7 +89,7 @@ The icon prop allows you to display an icon alongside the Avatar. It accepts any
 
 Example usage:
 
-<AvatarPlayGround.Icon />
+<AvatarIcon />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 <Avatar icon={<CheckCircleIcon />} title="Success!" />
@@ -106,7 +105,7 @@ The size prop determines the size of the Avatar. It accepts any of the Size type
 
 Example usage:
 
-<AvatarPlayGround.Sizes />
+<AvatarSizes />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlerSizes() {
@@ -136,7 +135,7 @@ The corner prop determines the border radius of the Avatar. It accepts any of th
 
 Example usage:
 
-<AvatarPlayGround.Corners />
+<AvatarCorners />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlerCorners() {
@@ -197,7 +196,7 @@ The variant prop specifies the visual style of the Avatar component. It can be s
 
 Example usage:
 
-<AvatarPlayGround.Variants />
+<AvatarVariants />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlerVariants(){
@@ -220,7 +219,7 @@ The animate prop allows you to apply a predefined animation to the Avatar compon
 
 Example usage:
 
-<AvatarPlayGround.Animate />
+<AvatarAnimate />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlertAnimate(){
@@ -234,7 +233,7 @@ function AlertAnimate(){
 
 ## Avatars Fallback
 
-<AvatarPlayGround.Fallback />
+<AvatarFallback />
 
 The Avatar component is used to display a fallback image if the main image is not found. The fallback image can be a text string or an image file.
 
@@ -270,7 +269,7 @@ The maximum number of avatars to display.
 
 Example usage:
 
-<AvatarPlayGround.GroupLimit />
+<AvatarGroupLimit />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlertGroupLimit() {
@@ -302,7 +301,7 @@ The layout of the avatars. Can be one of stack or grid.
 
 Example usage:
 
-<AvatarPlayGround.GroupStack />
+<AvatarGroupStack />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlertGroupStack() {
@@ -340,7 +339,7 @@ The Avatar.Group component can be used to group multiple Avatar components toget
 
 Example usage:
 
-<AvatarPlayGround.GroupContext />
+<AvatarGroupContext />
 
 ```tsx showLineNumbers title="Avatar.tsx"
 function AlertGroupContext() {

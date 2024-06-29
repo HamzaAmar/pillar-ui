@@ -1,11 +1,6 @@
 import { InputFile, Paper } from '~/component/core/pillar'
-import { Eye, User } from '@pillar-ui/icons'
 
-export const InputFilePlayGround = () => {
-  return <div>hello</div>
-}
-
-const FilledInputFile = () => {
+export const InputFileFilled = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile aria-label="hello" autoFocus variant="filled" />
@@ -16,7 +11,7 @@ const FilledInputFile = () => {
   )
 }
 
-const OutlineInputFile = () => {
+export const InputFileOutline = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile variant="outline" aria-label="hello" autoFocus />
@@ -27,7 +22,7 @@ const OutlineInputFile = () => {
   )
 }
 
-const BorderedInputFile = () => {
+export const InputFileBordered = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile variant="bordered" aria-label="hello" autoFocus />
@@ -38,7 +33,7 @@ const BorderedInputFile = () => {
   )
 }
 
-const CornerInputFile = () => {
+export const InputFileCorners = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile corner="sharp" />
@@ -52,7 +47,7 @@ const CornerInputFile = () => {
   )
 }
 
-const ColorInputFile = () => {
+export const InputFileColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile color="primary" variant="bordered" autoFocus />
@@ -63,7 +58,7 @@ const ColorInputFile = () => {
   )
 }
 
-export const SizeInputFile = () => {
+export const InputFileSizes = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
       <InputFile size="xs" />
@@ -74,10 +69,3 @@ export const SizeInputFile = () => {
     </Paper>
   )
 }
-
-InputFilePlayGround.Filled = FilledInputFile
-InputFilePlayGround.Outline = OutlineInputFile
-InputFilePlayGround.Bordered = BorderedInputFile
-InputFilePlayGround.Corners = CornerInputFile
-InputFilePlayGround.Colors = ColorInputFile
-InputFilePlayGround.Sizes = SizeInputFile

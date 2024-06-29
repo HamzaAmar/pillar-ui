@@ -1,4 +1,4 @@
-import { Table, Alert } from '~/component/core/pillar'
+import { Table, Alert, TableColumn, TableRow } from '~/component/core/pillar'
 import React from 'react'
 
 import Image, { ImageProps } from 'next/image'
@@ -72,10 +72,11 @@ let components = {
   h4: createHeading(4),
   h5: createHeading(5),
   h6: createHeading(6),
-  image: RoundedImage,
   a: CustomLink,
   code: Code,
   Table,
+  TableColumn,
+  TableRow,
   ...playground,
   Colors,
   Alert,

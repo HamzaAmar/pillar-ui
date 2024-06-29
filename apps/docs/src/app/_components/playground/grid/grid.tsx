@@ -1,4 +1,4 @@
-import { Avatar, Grid, Paper } from '~/component/core/pillar'
+import { Avatar, Grid, GridItem, Paper } from '~/component/core/pillar'
 import React from 'react'
 
 const Box = (props: any) => {
@@ -89,41 +89,41 @@ export const GridPlacement = () => {
   return (
     <Paper className="playground" border p="sm" background="surface-3" corner="sm">
       <Grid grid="5rem 1fr x 100px 400px 100px" gap="sm">
-        <Grid.Item placement="1 / 3" as={Box}>
+        <GridItem placement="1 / 3" as={Box}>
           header
-        </Grid.Item>
-        <Grid.Item placement="1 / 2 x 2 / 4" as={Grid} grid="4rem 1fr 4rem" gap="sm">
+        </GridItem>
+        <GridItem placement="1 / 2 x 2 / 4" as={Grid} grid="4rem 1fr 4rem" gap="sm">
           <Box className="l_flex-1">sidebar</Box>
           <Box className="l_flex-2">main</Box>
           <Box className="l_flex-1">sidebar</Box>
-        </Grid.Item>
-        <Grid.Item placement="2 / 3" as={Box} className="l_flex-1">
+        </GridItem>
+        <GridItem placement="2 / 3" as={Box} className="l_flex-1">
           footer
-        </Grid.Item>
+        </GridItem>
       </Grid>
     </Paper>
   )
 }
 
-export const GridItem = () => {
+export const Item = () => {
   return (
     <Paper className="playground" border p="sm" background="surface-3" corner="sm">
       <Grid grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="sm">
-        <Grid.Item placement="2/4" style={{ background: 'var(--surface-8)' }}>
+        <GridItem placement="2/4" style={{ background: 'var(--surface-8)' }}>
           Header
-        </Grid.Item>
-        <Grid.Item placement="span 1 x 1 / span 3" style={{ background: 'var(--surface-8)' }}>
+        </GridItem>
+        <GridItem placement="span 1 x 1 / span 3" style={{ background: 'var(--surface-8)' }}>
           sidebar
-        </Grid.Item>
-        <Grid.Item placement="2 / 3" style={{ background: 'var(--surface-8)' }}>
+        </GridItem>
+        <GridItem placement="2 / 3" style={{ background: 'var(--surface-8)' }}>
           main
-        </Grid.Item>
-        <Grid.Item placement="3 / 4" style={{ background: 'var(--surface-8)' }}>
+        </GridItem>
+        <GridItem placement="3 / 4" style={{ background: 'var(--surface-8)' }}>
           sidebar
-        </Grid.Item>
-        <Grid.Item placement="2 / span 2" style={{ background: 'var(--surface-8)' }}>
+        </GridItem>
+        <GridItem placement="2 / span 2" style={{ background: 'var(--surface-8)' }}>
           Footer
-        </Grid.Item>
+        </GridItem>
       </Grid>
     </Paper>
   )
@@ -150,9 +150,3 @@ export const GridGrid = () => {
     </Paper>
   )
 }
-
-GridPlayGround.Placement = GridPlacement
-GridPlayGround.Gap = GridGap
-GridPlayGround.Grid = GridGrid
-GridPlayGround.Justify = GridJustify
-GridPlayGround.Items = GridItem

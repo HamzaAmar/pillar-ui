@@ -5,10 +5,6 @@ import { CustomMDX, TableOfContent } from '~/app/_components'
 import { DOMAIN } from '~/constant/domain'
 import { SlugParamsProps } from '~/types/params'
 
-interface Props {
-  slug: string
-}
-
 export async function generateStaticParams() {
   return getFeatures().map(({ slug }) => ({
     slug,

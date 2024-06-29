@@ -1,18 +1,5 @@
-// .menu-bar--nested {
-//   height: 0;
-//   overflow: hidden;
-// }
-
-// .menu-bar--nested[data-active='true'] {
-//   height: auto;
-// }
-
-// .table-of-content--link:hover {
-//   color: var(--surface-12);
-// }
-
 .aside--list-item[data-active='true'] {
-  background-color: var(--primary-4);
+  background-color: var(--primary-3);
   color: var(--primary-12);
   &::before {
     background-color: var(--primary-9);
@@ -65,9 +52,19 @@
   width: 100%;
   padding: 0.675rem;
   padding-inline-start: calc(var(--lvl, 1) * 0.875rem);
-  &:focus-within {
+  &:has(.aside--list-link:focus):focus-visible {
     outline: 2px solid var(--primary-9);
     outline-offset: -2px;
+  }
+  &::before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    // border-radius: 200px;
+    transform: translateX(-50%);
   }
 }
 
@@ -81,17 +78,7 @@
   font-size: var(--font-sm);
   color: var(--surface-11);
   outline: none;
-}
-
-.aside--list-item::before {
-  content: '';
-  width: 4px;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  // border-radius: 200px;
-  transform: translateX(-50%);
+  font-size: 0.875rem;
 }
 
 .menu-bar--nested {
@@ -100,7 +87,6 @@
   margin: 0;
 }
 
-.menu-bar--nested[data-active='true'],
-.menu-bar--nested:focus-within {
+.menu-bar--nested:is([data-active='true'], :focus-within) {
   height: auto;
 }

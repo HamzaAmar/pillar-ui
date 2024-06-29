@@ -20,7 +20,7 @@ function Page({ params }: SlugParamsProps) {
   return (
     <>
       <div>
-        <DocHeader shared="pillar-core/src/core" {...rest} />
+        <DocHeader root="pillar-core/src/core" {...rest} />
         <div className="section prose l_flow__md">
           <CustomMDX source={content} />
         </div>

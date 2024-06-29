@@ -82,8 +82,3 @@ export const PaginationColors = () => {
     </Paper>
   )
 }
-
-PaginationPlayGround.Colors = PaginationColors
-PaginationPlayGround.Sizes = PaginationSizes
-PaginationPlayGround.Corners = PaginationCorners
-PaginationPlayGround.Variants = PaginationVariants

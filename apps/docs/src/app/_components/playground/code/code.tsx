@@ -81,7 +81,3 @@ export const CodeColors = () => {
     </Paper>
   )
 }
-
-CodePlayGround.Colors = CodeColors
-CodePlayGround.Sizes = CodeSizes
-CodePlayGround.Corners = CodeCorners

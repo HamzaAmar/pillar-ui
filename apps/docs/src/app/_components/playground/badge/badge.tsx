@@ -185,11 +185,3 @@ export const BadgeColors = () => {
     </Paper>
   )
 }
-
-BadgePlayGround.Colors = BadgeColors
-BadgePlayGround.Sizes = BadgeSizes
-BadgePlayGround.Types = BadgeTypes
-BadgePlayGround.Variants = BadgeVariants
-BadgePlayGround.Corners = BadgeCorners
-BadgePlayGround.Numeric = BadgeNumeric
-BadgePlayGround.MaxValue = BadgeNumericMaxValue

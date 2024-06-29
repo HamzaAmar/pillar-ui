@@ -1,3 +1,4 @@
+'use client'
 import React, { CSSProperties, useState } from 'react'
 import * as ICONS from '@pillar-ui/icons'
 import { Button, Flex, Grid, Heading, Paper, Text } from '~/component/core/pillar'
@@ -73,8 +74,8 @@ const Icons = () => {
 
 export default Icons
 
-export const metadata: Metadata = {
-  description:
-    'Explore a diverse library of icons available in Pillar UI. Perfectly crafted icons suited to enhance your design projects and applications.',
-  title: 'Icon Library',
-}
+// export const metadata: Metadata = {
+//   description:
+//     'Explore a diverse library of icons available in Pillar UI. Perfectly crafted icons suited to enhance your design projects and applications.',
+//   title: 'Icon Library',
+// }
