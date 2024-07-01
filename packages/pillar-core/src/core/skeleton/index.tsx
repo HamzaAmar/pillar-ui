@@ -9,7 +9,7 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const SkeletonAvatar = forwardRef((props, ref) => {
+export const SkeletonAvatar = forwardRef((props, ref) => {
   const { size = 'xl', corner = 'full', children, isLoading = true, className, ...rest } = props
   const classNames = classnames(`skeleton skeleton--avatar u_size-${size} u_corner-${corner}`, {
     [className!]: !!className,
@@ -25,7 +25,7 @@ SkeletonAvatar.displayName = 'SkeletonAvatar'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const SkeletonText = forwardRef((props, ref) => {
+export const SkeletonText = forwardRef((props, ref) => {
   const { size = 'md', lines = 2.5, className, children, isLoading = true, as: Tag = 'div', ...rest } = props
   const ceilNumber = Math.ceil(lines)
   const classNames = classnames(`skeleton skeleton--text u_size-${size}`, { [className!]: !!className })
@@ -59,7 +59,7 @@ SkeletonText.displayName = 'SkeletonAvatar'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const SkeletonButton = forwardRef((props, ref) => {
+export const SkeletonButton = forwardRef((props, ref) => {
   const { size = 'md', as: Tag = 'div', className, isLoading, children, ...rest } = props
   const classNames = classnames(`skeleton skeleton--btn btn__${size}`, { [className!]: !!className })
   const content = <Tag ref={ref} className={classNames} {...rest} />

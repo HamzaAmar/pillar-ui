@@ -4,9 +4,6 @@
 // import type { TabProps } from '@pillar-ui/core'
 // import { ArrowDown } from '@pillar-ui/icons'
 
-import { Tabs } from '@pillar-ui/core'
-import { Meta } from '@storybook/react'
-
 // const meta: Meta<typeof Chips> = {
 //   title: 'Components/Tabs',
 //   component: Tabs,
@@ -138,8 +135,4 @@ import { Meta } from '@storybook/react'
 //   )
 // }
 
-const meta: Meta<typeof Tabs> = {
-  title: 'Components/Tabs',
-  component: Tabs,
-}
-export const Playground = {}
+export const a = 1
