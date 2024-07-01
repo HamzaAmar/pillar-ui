@@ -1,9 +1,8 @@
 ---
 title: useLocalStorage
-type: Hooks
+type: hooks
 excerpt: 'The useLocalStorage hook is a custom React hook that provides an interface for working with local storage while supporting Server-Side Rendering (SSR).'
-file: hooks
-root: hooks
+directory: useLocalStorage/index.ts
 ---
 
 # Table of Contents
@@ -65,9 +64,8 @@ function MyComponent() {
   return (
     <div>
       {' '}
-      <p>Stored value: {value}</p> <button onClick={handleClick}>Set Value</button> <button onClick={handleRemove}>
-        Remove Value
-      </button>{' '}
+      <p>Stored value: {value}</p> <button onClick={handleClick}>Set Value</button>{' '}
+      <button onClick={handleRemove}>Remove Value</button>{' '}
     </div>
   )
 }

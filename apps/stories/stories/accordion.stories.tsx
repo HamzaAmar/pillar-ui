@@ -1,45 +1,45 @@
 import React, { CSSProperties } from 'react'
-import { ComponentMeta } from '@storybook/react'
-import { Accordion, Flex, Grid, Paper, Text } from '@pillar-ui/core'
+import { Meta } from '@storybook/react'
+import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Flex, Grid, Paper, Text } from '@pillar-ui/core'
 
 export default {
   title: 'Components/Accordion',
   component: Accordion,
-} as ComponentMeta<typeof Accordion>
+} as Meta<typeof Accordion>
 
 export function AccordionBase(props: any) {
   return (
     <Accordion {...props}>
-      <Accordion.Item value={1}>
-        <Accordion.Button>
+      <AccordionItem value={1}>
+        <AccordionButton>
           <div>
             <Text weight="medium">Hello</Text>
             <Text size="xs">Hello</Text>
           </div>
-        </Accordion.Button>
-        <Accordion.Panel>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</Accordion.Panel>
-      </Accordion.Item>
-      <Accordion.Item value={2}>
-        <Accordion.Button>
+        </AccordionButton>
+        <AccordionPanel>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</AccordionPanel>
+      </AccordionItem>
+      <AccordionItem value={2}>
+        <AccordionButton>
           <div>
             <Text weight="medium">Hello</Text>
             <Text size="xs">Hello</Text>
           </div>
-        </Accordion.Button>
-        <Accordion.Panel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</Accordion.Panel>
-      </Accordion.Item>
-      <Accordion.Item value={3}>
-        <Accordion.Button>
+        </AccordionButton>
+        <AccordionPanel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</AccordionPanel>
+      </AccordionItem>
+      <AccordionItem value={3}>
+        <AccordionButton>
           <div>
             <Text weight="medium">Hello</Text>
             <Text size="xs">Hello</Text>
           </div>
-        </Accordion.Button>
-        <Accordion.Panel>
+        </AccordionButton>
+        <AccordionPanel>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error odio
           animi mollitia? Blanditiis facere
-        </Accordion.Panel>
-      </Accordion.Item>
+        </AccordionPanel>
+      </AccordionItem>
     </Accordion>
   )
 }
@@ -174,41 +174,39 @@ export const AccordionStyle = () => {
   return (
     <div className="l_flow-md">
       <Accordion>
-        <Accordion.Item value={1}>
-          <Accordion.Button className="u_red" title="Hello World" />
-          <Accordion.Panel className="u_brown">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item value={1}>
-          <Accordion.Button title="Hello" />
-          <Accordion.Panel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item value={1}>
-          <Accordion.Button title="Hello" />
-          <Accordion.Panel>
+        <AccordionItem value={1}>
+          <AccordionButton className="u_red" title="Hello World" />
+          <AccordionPanel className="u_brown">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</AccordionPanel>
+        </AccordionItem>
+        <AccordionItem value={1}>
+          <AccordionButton title="Hello" />
+          <AccordionPanel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</AccordionPanel>
+        </AccordionItem>
+        <AccordionItem value={1}>
+          <AccordionButton title="Hello" />
+          <AccordionPanel>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error
             odio animi mollitia? Blanditiis facere
-          </Accordion.Panel>
-        </Accordion.Item>
+          </AccordionPanel>
+        </AccordionItem>
       </Accordion>
 
       <Accordion>
-        <Accordion.Item value={1}>
-          <Accordion.Button title="Hello WOrld" />
-          <Accordion.Panel>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item value={1}>
-          <Accordion.Button title="Hello" />
-          <Accordion.Panel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item value={1}>
-          <Accordion.Button title="Hello" />
-          <Accordion.Panel>
+        <AccordionItem value={1}>
+          <AccordionButton title="Hello WOrld" />
+          <AccordionPanel>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</AccordionPanel>
+        </AccordionItem>
+        <AccordionItem value={1}>
+          <AccordionButton title="Hello" />
+          <AccordionPanel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</AccordionPanel>
+        </AccordionItem>
+        <AccordionItem value={1}>
+          <AccordionButton title="Hello" />
+          <AccordionPanel>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error
             odio animi mollitia? Blanditiis facere
-          </Accordion.Panel>
-        </Accordion.Item>
+          </AccordionPanel>
+        </AccordionItem>
       </Accordion>
     </div>
   )

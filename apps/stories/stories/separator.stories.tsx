@@ -1,15 +1,13 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Alert, Separator, Flex } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Separator> = {
   title: 'Components/Separator',
   component: Alert,
-  args: {
-    message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum quidem facilis harum velit veritatis! Voluptatum, quos ipsa! Magnam exercitationem repellat, aspernatur porro optio tempore vero dolorem suscipit vitae delectus.',
-  },
-} as ComponentMeta<typeof Alert>
+}
+
+export default meta
 
 export const SeparatorColors = () => {
   return (
@@ -87,6 +85,4 @@ export const SeparatorDirection = () => {
   )
 }
 
-const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
-export const Playground = Template.bind({})
-Playground.args = {}
+export const Playground = {}

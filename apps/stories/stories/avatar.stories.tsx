@@ -1,13 +1,13 @@
 import React, { CSSProperties, useRef, useState } from 'react'
-import { Avatar, Flex, Paper, Button } from '@pillar-ui/core'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Avatar, Flex, Paper, Button, AvatarGroup } from '@pillar-ui/core'
+import { Meta, StoryFn } from '@storybook/react'
 import { DotsHorizontal } from '@pillar-ui/icons'
 
-export default {
+const meta: Meta<typeof Avatar> = {
   title: 'Components/Avatar',
   component: Avatar,
-} as ComponentMeta<typeof Avatar>
-
+}
+export default meta
 const image = 'https://picsum.photos/id/128/100/100'
 
 export function AvatarsSizes() {
@@ -189,7 +189,7 @@ export function AvatarsVariants() {
 export function AvatarGroupVariants() {
   return (
     <div className="l_flow__md">
-      <Avatar.Group limit={4} layout="stack">
+      <AvatarGroup limit={4} layout="stack">
         <Avatar title="Hello" />
         <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
         <Avatar image="https://picsum.photos/id/123/100/100" title="Hello" />
@@ -198,8 +198,8 @@ export function AvatarGroupVariants() {
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
-      </Avatar.Group>
-      <Avatar.Group limit={4} variant="solid" layout="stack">
+      </AvatarGroup>
+      <AvatarGroup limit={4} variant="solid" layout="stack">
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
@@ -208,17 +208,17 @@ export function AvatarGroupVariants() {
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
-      </Avatar.Group>
-      <Avatar.Group layout="grid">
+      </AvatarGroup>
+      <AvatarGroup layout="grid">
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
-      </Avatar.Group>
-      <Avatar.Group variant="outline" layout="grid">
+      </AvatarGroup>
+      <AvatarGroup variant="outline" layout="grid">
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
-      </Avatar.Group>
+      </AvatarGroup>
     </div>
   )
 }
@@ -226,7 +226,7 @@ export function AvatarGroupVariants() {
 export function AvatarGroupCustom() {
   return (
     <div className="l_flow__md">
-      <Avatar.Group limit={6} layout="stack" color="danger" variant="outline" fallback={<DotsHorizontal width="20" />}>
+      <AvatarGroup limit={6} layout="stack" color="danger" variant="outline" fallback={<DotsHorizontal width="20" />}>
         <Avatar title="Hello" />
         <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
         <Avatar fallback={<DotsHorizontal width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
@@ -235,7 +235,7 @@ export function AvatarGroupCustom() {
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
-      </Avatar.Group>
+      </AvatarGroup>
     </div>
   )
 }
@@ -328,6 +328,8 @@ export function AvatarCornerDefaults() {
   )
 }
 
-const Template: ComponentStory<typeof Avatar> = ({ ...args }) => <Avatar {...args} />
+const Template: StoryFn<typeof Avatar> = ({ ...args }) => <Avatar {...args} />
 
-export const Playground = Template.bind({})
+export const Playground = {
+  render: Template,
+}

@@ -1,4 +1,4 @@
-import { range } from '../array'
+import { range } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('range function', () => {

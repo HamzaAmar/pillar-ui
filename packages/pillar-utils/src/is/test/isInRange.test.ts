@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isInRange } from '../is' // Replace "your-file" with the actual file path
+import { isInRange } from '..' // Replace "your-file" with the actual file path
 
 describe('isValidURL Test', () => {
   test('isInRange function', () => {

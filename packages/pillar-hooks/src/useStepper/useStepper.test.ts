@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { useStepper } from './useStepper'
+import { useStepper } from '.'
 import { test, describe, expect } from 'vitest'
 
 describe('useStepper custom hook', () => {

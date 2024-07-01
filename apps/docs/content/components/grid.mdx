@@ -1,10 +1,9 @@
 ---
 title: Grid
-type: Components
+type: core
 excerpt: The Grid component is a powerful layout tool that allows for the creation of responsive and complex layouts with ease. It facilitates the arrangement of components or elements into rows and columns, offering various customization options such as alignment, spacing, and placement.
 items: ['Grid', 'GridItem']
-file: core
-root: components
+directory: grid/index.tsx
 ---
 
 ## Usage
@@ -33,7 +32,7 @@ The Grid component accepts the following props:
 - `xs`, `sm`, `md`, `lg`, `xl`: string
   - These props define the grid's layout for different screen sizes. They set the grid template based on the screen width.
 
-<GridPlayGround.Gap />
+<GridGap />
 
 ```tsx showLineNumbers title="Code.tsx"
 export const GridGap = () => {
@@ -70,7 +69,7 @@ export const GridGap = () => {
 - Type: string
 - The prop that defines the number of columns in the grid.
 
-<GridPlayGround.Grid />
+<GridGrid />
 
 ```tsx showLineNumbers title="Code.tsx"
 import { Grid } from '@pillar-ui/core'
@@ -102,7 +101,7 @@ const GridGrid = () => {
 
 The GridItem component accepts the following props:
 
-<GridPlayGround.Items />
+<Item />
 
 ```tsx showLineNumbers title="Code.tsx"
 import { Grid } from '@pillar-ui/core'

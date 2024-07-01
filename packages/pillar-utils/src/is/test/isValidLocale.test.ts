@@ -1,4 +1,4 @@
-import { isValidLocale } from '../is'
+import { isValidLocale } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('isValidLocale', () => {

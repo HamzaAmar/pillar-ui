@@ -4,8 +4,15 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.breadcrumb svg {
-  width: 1em;
+.breadcrumb {
+  & ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  & svg {
+    width: 1em;
+  }
 }
 
 /*
@@ -21,15 +28,11 @@
 .breadcrumb--link {
   min-width: 1.5rem;
   font-size: 1em;
-  cursor: pointer;
   color: var(--color-shared-11);
   padding: 0;
   &:hover {
     text-decoration: underline 2px;
     color: var(--color-shared-10);
-  }
-  &:focus {
-    outline: 1px solid;
   }
   &[aria-current='page'] {
     color: var(--surface-11);

@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isInteger } from '../is'
+import { isInteger } from '..'
 
 describe('isInteger', () => {
   test('should return true for integer values', () => {

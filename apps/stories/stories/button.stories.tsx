@@ -1,17 +1,19 @@
 import React, { CSSProperties } from 'react'
 import { Button, Flex, Paper, Text } from '@pillar-ui/core'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 import { Ballon, Bluetooth, Eight, Eye, Facebook, Github, Plus, ThumbDown, ThumbUp, X } from '@pillar-ui/icons'
 
-export default {
+const meta: Meta<typeof Button> = {
   title: 'Components/Button',
-} as ComponentMeta<typeof Button>
+  args: {
+    children: 'Hello',
+  },
+}
+export default meta
 
 const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text'] as const
 
-const Hello: ComponentStory<typeof Button> = ({ ...args }) => <Button {...args} />
-
-export const Playground = Hello.bind({})
+export const Playground: StoryObj<typeof Button> = {}
 
 export function ButtonsColors() {
   return (
@@ -338,17 +340,17 @@ export function ButtonsCustomStyle() {
   )
 }
 
-export function ButtonsLongText() {
+export function ButtonsLength() {
   return (
     <Flex items="center" gap="xs" wrap>
-      <Button style={{ background: 'orange' }} state="idle" color="success">
+      <Button state="idle" color="success">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam asperiores a vitae expedita nostrum
         perspiciatis est excepturi, eligendi facere vel quis, et in dolores eos voluptates libero, adipisci
         necessitatibus voluptatum?
       </Button>
-      <Button className="u_secondary" color="success">
-        Hello world
-      </Button>
+      <Button color="success">Hello world</Button>
+
+      <Button color="success">H</Button>
     </Flex>
   )
 }

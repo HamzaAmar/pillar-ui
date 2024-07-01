@@ -55,20 +55,11 @@
     "husky": "^8.0.3",
     "lint-staged": "^v13.2.0",
     "prettier": "latest",
-    "turbo": "^v1.11.2"
+    "turbo": "^2.0.4"
   },
-  "packageManager": "yarn@1.22.15",
+  "packageManager": "yarn@4.3.1",
   "dependencies": {
     "@changesets/cli": "^2.26.2"
-  },
-  "resolutions": {
-    "@opentelemetry/api": "1.4.1",
-    "@opentelemetry/core": "1.13.0",
-    "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
-    "@opentelemetry/resources": "1.13.0",
-    "@opentelemetry/sdk-trace-base": "1.13.0",
-    "@opentelemetry/sdk-trace-node": "1.13.0",
-    "@opentelemetry/semantic-conventions": "1.13.0"
   },
   "version": "0.0.0"
 }

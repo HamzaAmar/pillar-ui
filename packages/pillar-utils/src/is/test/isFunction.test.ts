@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isFunction } from '../is'
+import { isFunction } from '..'
 
 describe('isFunction', () => {
   test('should return true for function values', () => {

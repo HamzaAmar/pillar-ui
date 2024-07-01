@@ -1,15 +1,17 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Paper, Flex } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Paper> = {
   title: 'Components/popover',
   component: Paper,
   args: {
-    message:
+    children:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum quidem facilis harum velit veritatis! Voluptatum, quos ipsa! Magnam exercitationem repellat, aspernatur porro optio tempore vero dolorem suscipit vitae delectus.',
   },
-} as ComponentMeta<typeof Paper>
+}
+
+export default meta
 
 export function PaperBackground() {
   return (
@@ -51,30 +53,26 @@ export function PaperPadding() {
         </Paper>
       </Flex>
       <Flex>
-        <Paper p="2xs" pt="lg" background="danger">
+        <Paper p="2xs" background="danger">
           Hello
         </Paper>
-        <Paper p="2xs" pr="lg" background="warning">
+        <Paper p="2xs" background="warning">
           Hello
         </Paper>
-        <Paper p="2xs" pb="lg" background="success">
+        <Paper p="2xs" background="success">
           Hello
         </Paper>
-        <Paper p="2xs" pl="lg" background="surface">
+        <Paper p="2xs" background="surface">
           Hello
         </Paper>
-        <Paper p="2xs" plr="lg" background="secondary">
+        <Paper p="2xs" background="secondary">
           Hello
         </Paper>
-        <Paper p="2xs" ptb="lg" background="primary">
+        <Paper p="2xs" background="primary">
           Hello
         </Paper>
-        <Paper ptb="lg" background="primary">
-          Hello
-        </Paper>
-        <Paper plr="lg" background="primary">
-          Hello
-        </Paper>
+        <Paper background="primary">Hello</Paper>
+        <Paper background="primary">Hello</Paper>
       </Flex>
     </div>
   )
@@ -166,19 +164,19 @@ export function PaperWidths() {
       <Paper background="danger-4" color="danger">
         Hello
       </Paper>
-      <Paper width="100px" background="success-4" color="success">
+      <Paper width="half" background="success-4" color="success">
         Hello
       </Paper>
-      <Paper width="50%" background="warning-4" color="warning">
+      <Paper width="25-char" background="warning-4" color="warning">
         Hello
       </Paper>
-      <Paper width="15rem" background="secondary-4" color="secondary">
+      <Paper width="45-char" background="secondary-4" color="secondary">
         Hello
       </Paper>
-      <Paper width="min(100px, 10rem)" background="surface-4" color="surface">
+      <Paper width="75-char" background="surface-4" color="surface">
         Hello
       </Paper>
-      <Paper width="100vw" background="primary-4" color="primary">
+      <Paper width="60-char" background="primary-4" color="primary">
         Hello
       </Paper>
     </div>
@@ -210,148 +208,4 @@ export function PaperHeights() {
   )
 }
 
-export function PaperBorders() {
-  return (
-    <div className="l_flow__md">
-      <Paper borderStyle="dotted">Dotted</Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="top">
-        Border Top
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="right">
-        Border Right
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="bottom">
-        Border Bottom
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="left">
-        Border Left
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="block">
-        Border Block
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="inline">
-        Border Inline
-      </Paper>
-
-      <Paper borderStyle="dashed">Hello</Paper>
-      <Paper borderColor="danger-9">Hello</Paper>
-      <Paper borderColor="warning-9">Hello</Paper>
-      <Paper borderWidth="4px">Hello</Paper>
-      <Paper background="primary-4" color="primary">
-        Hello
-      </Paper>
-    </div>
-  )
-}
-
-// export const PaperColors = () => {
-//   return (
-//     <Flex gap="sm" direction="column">
-//       <PaperBase color="danger" />
-//       <PaperBase color="warning" />
-//       <PaperBase color="success" />
-//       <PaperBase color="secondary" />
-//       <PaperBase color="primary" />
-//       <PaperBase color="surface" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperSizes = () => {
-//   return (
-//     <Flex gap="sm" direction="column">
-//       <PaperBase size="3xs" />
-//       <PaperBase size="2xs" />
-//       <PaperBase size="xs" />
-//       <PaperBase size="sm" />
-//       <PaperBase size="md" />
-//       <PaperBase size="lg" />
-//       <PaperBase size="xl" />
-//       <PaperBase size="2xl" />
-//       <PaperBase size="3xl" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperCorner = () => {
-//   return (
-//     <Flex gap="sm" direction="column">
-//       <PaperBase corner="sharp" />
-//       <PaperBase corner="xs" />
-//       <PaperBase corner="sm" />
-//       <PaperBase corner="md" />
-//       <PaperBase corner="lg" />
-//       <PaperBase corner="xl" />
-//       <PaperBase corner="full" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperVariant = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <PaperBase variant="solid" />
-//       <PaperBase variant="outline" />
-//       <PaperBase variant="soft" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperIcon = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <PaperBase icon={<CircleWarning width="20" />} color="danger" />
-//       <PaperBase icon={<CircleCheck width="20" />} color="success" />
-//       <PaperBase icon={<CircleWarning width="20" />} color="warning" />
-//       <PaperBase icon={<CircleInfo width="20" />} color="info" />
-//     </Flex>
-//   )
-// }
-
-// export const PaperInline = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <PaperBase inline />
-//       <PaperBase inline />
-//       <PaperBase inline />
-//       <PaperBase inline />
-//       <PaperBase inline icon={<CircleWarning width="20" />} />
-//       <PaperBase inline closable />
-//       <PaperBase inline icon={<CircleWarning width="20" />} closable />
-//     </Flex>
-//   )
-// }
-
-// export const PaperTitleIcon = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <Paper color="danger" title="hello" />
-//       <Paper color="success" message="hello world something is wrong in the app here we go" />
-//       <Paper color="warning" icon={<CircleWarning width="20" />} title="hello" />
-//       <Paper
-//         color="warning"
-//         icon={<CircleWarning width="20" />}
-//         message="hello world something is wrong in the app here we go"
-//       />
-//       <Paper
-//         color="warning"
-//         icon={<CircleWarning width="20" />}
-//         title="hello"
-//         message="hello world something is wrong in the app here we go"
-//       />
-//     </Flex>
-//   )
-// }
-
-// export const PaperCustomStyle = () => {
-//   return (
-//     <Flex direction="column" gap="sm">
-//       <Paper color="danger" title="hello" style={{ background: 'success' }} />
-//       <Paper color="danger" title="hello" className="u_secondary" />
-//     </Flex>
-//   )
-// }
-
-const Template: ComponentStory<typeof Paper> = (args) => <Paper {...args} />
-export const Playground = Template.bind({})
-Playground.args = {}
+export const Playground = {}

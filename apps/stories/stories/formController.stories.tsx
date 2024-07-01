@@ -1,15 +1,15 @@
 import React from 'react'
 import { FormController, Input, InputPassword, Textarea, InputNumber, Select } from '@pillar-ui/core'
 
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 
-export default {
+const meta: Meta<typeof FormController> = {
   title: 'Components/form/FormController',
   component: FormController,
-  args: {
-    'aria-label': 'Nice to Meet You',
-  },
-} as ComponentMeta<typeof FormController>
+  args: {},
+}
+
+export default meta
 
 export const FormControllerError = () => {
   return (
@@ -20,19 +20,15 @@ export const FormControllerError = () => {
       <FormController label="Subject" error="The minimum length for this field is 5 characters.">
         <Textarea name="subject" />
       </FormController>
-      <FormController
-        label="Password"
-        defaultValue="hello"
-        error="Your password must contain at least one uppercase character."
-      >
+      <FormController label="Password" error="Your password must contain at least one uppercase character.">
         <InputPassword fluid name="name" required />
       </FormController>
 
-      <FormController label="Age" defaultValue="hello" error="the age field need to be greater that 1">
+      <FormController label="Age" error="the age field need to be greater that 1">
         <InputNumber name="age" defaultValue={1} fluid required />
       </FormController>
 
-      <FormController label="Age" defaultValue="hello" error="the age field need to be greater that 1">
+      <FormController label="Age" error="the age field need to be greater that 1">
         <Select name="age" fluid required>
           <option value="">Choose the best Option</option>
           <option value="hello">Hello</option>
@@ -54,19 +50,15 @@ export const FormControllerHint = () => {
       <FormController label="Subject" hint="The minimum length for this field is 5 characters.">
         <Textarea name="subject" />
       </FormController>
-      <FormController
-        label="Password"
-        defaultValue="hello"
-        hint="Your password must contain at least one uppercase character."
-      >
+      <FormController label="Password" hint="Your password must contain at least one uppercase character.">
         <InputPassword fluid name="name" required />
       </FormController>
 
-      <FormController label="Age" defaultValue="hello" hint="the age field need to be greater that 1">
+      <FormController label="Age" hint="the age field need to be greater that 1">
         <InputNumber name="age" defaultValue={1} fluid required />
       </FormController>
 
-      <FormController label="Age" defaultValue="hello" hint="the age field need to be greater that 1">
+      <FormController label="Age" hint="the age field need to be greater that 1">
         <Select name="age" fluid required>
           <option value="">Choose the best Option</option>
           <option value="hello">Hello</option>
@@ -94,7 +86,6 @@ export const FormControllerErrorAndHint = () => {
       </FormController>
       <FormController
         label="Password"
-        defaultValue="hello"
         hint="Your password must contain at least one uppercase character, one lowercase character, and one special character."
         error="Your password must contain at least one uppercase character."
       >
@@ -103,7 +94,6 @@ export const FormControllerErrorAndHint = () => {
 
       <FormController
         label="Age"
-        defaultValue="hello"
         error="the age field need to be greater that 1"
         hint="the age field need to be greater that 1"
       >
@@ -112,7 +102,6 @@ export const FormControllerErrorAndHint = () => {
 
       <FormController
         label="Age"
-        defaultValue="hello"
         hint="the age field need to be greater that 1"
         error="the age field need to be greater that 1"
       >
@@ -128,5 +117,4 @@ export const FormControllerErrorAndHint = () => {
   )
 }
 
-const Template: ComponentStory<typeof FormController> = (args) => <FormController {...args} />
-export const Playground = Template.bind({})
+export const Playground = {}

@@ -1,17 +1,16 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Flex, Rating } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Rating> = {
   title: 'Components/Rating',
   component: Rating,
   args: {
     rating: 1,
   },
-} as ComponentMeta<typeof Rating>
+}
 
-const Template: ComponentStory<typeof Rating> = (args) => <Rating {...args} />
-
+export default meta
 export const RatingWithLabelAndSize = () => {
   return (
     <Flex direction="column" gap="md">
@@ -21,6 +20,7 @@ export const RatingWithLabelAndSize = () => {
     </Flex>
   )
 }
+
 export const Ratings = () => {
   return (
     <Flex direction="column" gap="md">
@@ -81,4 +81,4 @@ export const RatingLabels = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

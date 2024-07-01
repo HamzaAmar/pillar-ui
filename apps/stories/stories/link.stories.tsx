@@ -1,14 +1,16 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { Link, Text } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Link> = {
   title: 'Components/Link',
   component: Link,
   args: {
     children: 'Nice To Meet You',
   },
-} as ComponentMeta<typeof Link>
+}
+
+export default meta
 
 export function LinkSizes() {
   return (
@@ -276,6 +278,8 @@ export function LinkInsideParagraph() {
   )
 }
 
-const Template: ComponentStory<typeof Link> = (args) => <Link href="#" {...args} />
+const Template: StoryFn<typeof Link> = (args) => <Link href="#" {...args} />
 
-export const Playground = Template.bind({})
+export const Playground = {
+  render: Template,
+}

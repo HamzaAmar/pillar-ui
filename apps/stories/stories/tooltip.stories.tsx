@@ -1,19 +1,18 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Tooltip, Button, Flex } from '@pillar-ui/core'
+import { Meta, StoryFn } from '@storybook/react'
+import { Tooltip, Flex, TooltipTrigger, TooltipContent } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Tooltip> = {
   title: 'Components/Tooltip',
   component: Tooltip,
-} as ComponentMeta<typeof Tooltip>
+}
 
+export default meta
 export function TooltipBase(props: any) {
   return (
     <Tooltip {...props}>
-      <Tooltip.Trigger corner="sm" as={Button}>
-        hello
-      </Tooltip.Trigger>
-      <Tooltip.Content>Hello world</Tooltip.Content>
+      <TooltipTrigger as="button">hello</TooltipTrigger>
+      <TooltipContent>Hello world</TooltipContent>
     </Tooltip>
   )
 }
@@ -46,15 +45,15 @@ export const TooltipCorner = () => {
   )
 }
 
-const TootipCom: ComponentStory<typeof Tooltip> = ({ ...args }) => (
+const TootipCom: StoryFn<typeof Tooltip> = ({ ...args }) => (
   <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <Tooltip {...args}>
-      <Tooltip.Trigger corner="sm" as={Button}>
-        hello
-      </Tooltip.Trigger>
-      <Tooltip.Content>Hello world</Tooltip.Content>
+      <TooltipTrigger as="button">hello</TooltipTrigger>
+      <TooltipContent>Hello world</TooltipContent>
     </Tooltip>
   </div>
 )
 
-export const Playground = TootipCom.bind({})
+export const Playground = {
+  render: TootipCom,
+}

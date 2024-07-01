@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isRef } from '../is'
+import { isRef } from '..'
 
 describe('isRef', () => {
   test('should return true for Ref objects', () => {

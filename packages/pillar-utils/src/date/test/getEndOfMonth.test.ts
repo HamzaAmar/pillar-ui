@@ -1,4 +1,4 @@
-import { getEndOfMonth } from '../date' // Replace 'your-module' with the correct path to the module containing the functions.
+import { getEndOfMonth } from '..' // Replace 'your-module' with the correct path to the module containing the functions.
 import { describe, test, expect } from 'vitest'
 
 describe('getEndOfMonth', () => {

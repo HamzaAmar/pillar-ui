@@ -1,12 +1,13 @@
 .badge {
+  --flex: inline-flex;
+
   font-weight: 500;
   text-decoration: none;
-  /* TO make it grow when the content of it is big */
   min-width: var(--badge-size, 1.75em);
   max-width: fit-content;
   height: var(--badge-size, 1.75em);
-  line-height: 1;
   padding: 0.125em;
+  line-height: 1;
   border: 1px solid transparent;
 
   /*

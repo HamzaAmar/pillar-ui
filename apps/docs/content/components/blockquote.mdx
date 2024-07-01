@@ -1,10 +1,9 @@
 ---
 title: Blockquote
-type: Components
+type: core
 excerpt: The accordion component allows users to expand and collapse content sections, which can be useful for displaying large amounts of information in a compact and organized manner.
-items: ['Blockquote', 'Blockquote.Cite']
-file: core
-root: components
+items: ['Blockquote', 'BlockquoteCite']
+directory: blockquote/index.tsx
 ---
 
 ## Props
@@ -23,7 +22,7 @@ The corner prop determines the border radius of the Blockquote. It accepts any o
 
 Example usage:
 
-<BlockquotePlayGround.Corners />
+<BlockquoteCorners />
 
 ```tsx showLineNumbers title="Accordion.tsx"
 function CornerCorners() {
@@ -63,7 +62,7 @@ Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
 
 You can customize the color of the blockquote by passing a color prop to the Blockquote component.
 
-<BlockquotePlayGround.Colors />
+<BlockquoteColors />
 
 ```tsx showLineNumbers title="Blockquote.tsx"
 import { Blockquote } from '@pillar-ui/core'
@@ -102,7 +101,7 @@ Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
 
 You can customize the size of the blockquote by passing a size prop to the Blockquote component.
 
-<BlockquotePlayGround.Sizes />
+<BlockquoteSizes />
 
 ```tsx showLineNumbers title="Blockquote.tsx"
 import { Blockquote } from '@pillar-ui/core'
@@ -136,8 +135,6 @@ function BlockquoteSize() {
 }
 ```
 
-<BlockquotePlayGround.Cite />
-
 ### Cite
 
 The `Blockquote.Cite` subcomponent is a specialized element for attributing the quoted content to its source.
@@ -147,7 +144,7 @@ The `Blockquote.Cite` subcomponent is a specialized element for attributing the 
 
 ** Example Usage **
 
-<BlockquotePlayGround.Cite />
+<CiteBlockquote />
 
 ```tsx showLineNumbers title="Blockquote.tsx"
 import { Blockquote } from '@pillar-ui/core'

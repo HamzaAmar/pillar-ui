@@ -1,14 +1,16 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Heading } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Heading> = {
   title: 'Components/Heading',
   component: Heading,
   args: {
     children: 'Nice To Meet You',
   },
-} as ComponentMeta<typeof Heading>
+}
+
+export default meta
 
 export function HeadingSizes() {
   return (
@@ -344,6 +346,4 @@ export function HeadingWidth() {
   )
 }
 
-const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />
-
-export const Playground = Template.bind({})
+export const Playground = {}

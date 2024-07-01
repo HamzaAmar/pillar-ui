@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { useTimeout } from './useTimeout'
+import { useTimeout } from '.'
 import { it, describe, expect, vi } from 'vitest'
 
 describe('useTimeout custom hook', () => {

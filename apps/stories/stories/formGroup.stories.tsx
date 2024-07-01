@@ -1,18 +1,14 @@
 import React from 'react'
 import { FormGroup, InputNumber, Input, InputPassword, InputSearch, Textarea, InputFile, Select } from '@pillar-ui/core'
 
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 
-export default {
+const meta: Meta<typeof FormGroup> = {
   title: 'Components/form/FormGroup',
   component: FormGroup,
-  args: {
-    'aria-label': 'Nice',
-    placeholder: 'Type your Name',
-  },
-} as ComponentMeta<typeof FormGroup>
+}
 
-const Template: ComponentStory<typeof FormGroup> = (args) => <FormGroup {...args} />
+export default meta
 
 export const SizeInput = () => {
   return (
@@ -24,7 +20,7 @@ export const SizeInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -35,7 +31,7 @@ export const SizeInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -46,7 +42,7 @@ export const SizeInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -64,7 +60,7 @@ export const ColorInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -75,7 +71,7 @@ export const ColorInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -86,7 +82,7 @@ export const ColorInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -97,7 +93,7 @@ export const ColorInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -108,7 +104,7 @@ export const ColorInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -126,7 +122,7 @@ export const CornerInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -137,7 +133,7 @@ export const CornerInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -148,7 +144,7 @@ export const CornerInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -159,7 +155,7 @@ export const CornerInput = () => {
         <InputFile name="firstname" placeholder="First Name" />
         <InputSearch name="middlename" placeholder="Middle Name" />
         <Textarea name="lastname" placeholder="Last Name" />
-        <Select name="firstname" placeholder="First Name">
+        <Select name="firstname">
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
@@ -189,7 +185,7 @@ export const StepAndMaxInput = () => {
 
 export const HideLabelFormGroup = () => {
   return (
-    <FormGroup title="number" hideLabel direction="column">
+    <FormGroup title="number" direction="column">
       <InputNumber step="1" max="10" size="sm" placeholder="Step 1 max 10" />
       <InputNumber step="10" max="100" placeholder="Step 10 max 100" />
       <InputNumber step=".1" max=".5" size="lg" placeholder="Step 0.1 max 0.5" />
@@ -197,4 +193,4 @@ export const HideLabelFormGroup = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

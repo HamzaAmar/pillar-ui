@@ -1,22 +1,24 @@
 import React from 'react'
-import { ComponentMeta } from '@storybook/react'
-import { Flex, List } from '@pillar-ui/core'
+import { Meta } from '@storybook/react'
+import { Flex, List, ListItem } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof List> = {
   title: 'Components/List',
   component: List,
-} as ComponentMeta<typeof List>
+} as Meta<typeof List>
+
+export default meta
 
 function ListBase(props: any) {
   return (
     <List {...props}>
-      <List.Item>Hello</List.Item>
-      <List.Item>Hello</List.Item>
-      <List.Item>Hello</List.Item>
-      <List.Item>Hello</List.Item>
-      <List.Item>Hello</List.Item>
-      <List.Item>Hello</List.Item>
-      <List.Item>Hello</List.Item>
+      <ListItem>Hello</ListItem>
+      <ListItem>Hello</ListItem>
+      <ListItem>Hello</ListItem>
+      <ListItem>Hello</ListItem>
+      <ListItem>Hello</ListItem>
+      <ListItem>Hello</ListItem>
+      <ListItem>Hello</ListItem>
     </List>
   )
 }

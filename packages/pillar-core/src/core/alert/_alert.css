@@ -25,3 +25,13 @@
 .alert.u_solid {
   border-inline-start: 6px solid var(--opacity-8);
 }
+
+.alert--content {
+  &[data-inline='true'] {
+    gap: var(--space-xs);
+  }
+  &[data-inline='false'] {
+    flex-direction: column;
+    align-items: initial;
+  }
+}

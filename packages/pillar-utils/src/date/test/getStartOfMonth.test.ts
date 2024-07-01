@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { getStartOfMonth } from '../date' // Replace 'your-module' with the correct path to the module containing the functions.
+import { getStartOfMonth } from '..' // Replace 'your-module' with the correct path to the module containing the functions.
 
 describe('getStartOfMonth', () => {
   test('should return the start of the month for a valid date string (en-US)', () => {

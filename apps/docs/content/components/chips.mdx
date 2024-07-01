@@ -1,10 +1,9 @@
 ---
 title: Chips
-type: Components
+type: core
 excerpt: The Chips component is a UI component that is used to represent small pieces of information. It can be used to display different types of information like tags, categories, and status indicators.
 items: ['Chips']
-file: core
-root: components
+directory: chips/index.tsx
 ---
 
 ### Props
@@ -21,7 +20,7 @@ The color prop is used to specify the background color of the Chips component. I
 
 Example:
 
-<ChipsPlayGround.Colors />
+<ChipsColors />
 
 ```tsx showLineNumbers title="Chips.tsx"
 <Paper borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
@@ -40,7 +39,7 @@ The variant prop is used to specify the style of the Chips component. It support
 
 Example:
 
-<ChipsPlayGround.Variants />
+<ChipsVariants />
 
 ```tsx showLineNumbers title="Chips.tsx"
 <Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
@@ -69,7 +68,7 @@ The size prop is used to specify the size of the Chips component. It supports th
 
 Example:
 
-<ChipsPlayGround.Sizes />
+<ChipsSizes />
 
 ```tsx showLineNumbers title="Chips.tsx"
 <Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
@@ -89,7 +88,7 @@ The corner prop is used to specify the corner style of the Chips component. It s
 
 Example:
 
-<ChipsPlayGround.Corners />
+<ChipsCorners />
 
 ```tsx showLineNumbers title="Chips.tsx"
 <Chips corner="sharp">Hello</Chips>
@@ -108,7 +107,7 @@ The prefix and suffix props are used to add icons or text before or after the Ch
 
 Example:
 
-<ChipsPlayGround.Icon />
+<ChipsIcon />
 
 ```tsx showLineNumbers title="Chips.tsx"
 const BadgeIcon = () => {

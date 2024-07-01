@@ -1,10 +1,9 @@
 ---
 title: Checkbox
-type: Components
+type: core
 excerpt: The Checkbox component is a UI component that provides a visual representation of a binary option. It allows users to select or deselect an option by clicking on the checkbox.
 items: ['Checkbox']
-file: core
-root: components
+directory: checkbox/index.tsx
 ---
 
 ## Props
@@ -17,7 +16,7 @@ The label prop is used to specify the text that appears next to the checkbox.
 
 Example:
 
-<CheckboxPlayGround.Label />
+<CheckboxLabel />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 <Checkbox label="Option 1" />
@@ -31,7 +30,7 @@ Example:
 
 The size prop determines the size of the Badge. It accepts the following values:
 
-<CheckboxPlayGround.Sizes />
+<CheckboxSizes />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 export const BadgeSize = () => {
@@ -62,7 +61,7 @@ The color prop is used to specify the background color of the Checkbox component
 
 Example:
 
-<CheckboxPlayGround.Colors />
+<CheckboxColors />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 export const CheckboxColor = () => {
@@ -85,7 +84,7 @@ export const CheckboxColor = () => {
 The disabled state of the Checkbox component is used to indicate that the checkbox cannot be interacted with. It is often used when the user is not allowed to select an option or when the option is not applicable in the current context. In this state, the checkbox appears grayed out and its label may also be grayed out to indicate that it is disabled.
 Example:
 
-<CheckboxPlayGround.Disabled />
+<CheckboxDisabled />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 export const CheckboxDisabled = () => {
@@ -122,7 +121,7 @@ The defaultChecked prop in the Checkbox component is used to set the initial che
 
 #### Usage
 
-<CheckboxPlayGround.DefaultCheck />
+<CheckboxDefaultCheck />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 import { Flex, Checkbox } from '@pillar-ui/core'
@@ -147,7 +146,7 @@ Here's an example of using the defaultChecked prop with different colors in the 
 
 The size prop is used to set the size of the checkbox component. It accepts the following options: 3xs, 2xs, xs, sm, md, lg, xl, 2xl, and 3xl.
 
-<CheckboxPlayGround.Sizes />
+<CheckboxSizes />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 import { Flex, Checkbox } from '@pillar-ui/core'
@@ -179,7 +178,7 @@ By default, when neither checked nor isIndeterminate props are set, the checkbox
 
 Examples
 
-<CheckboxPlayGround.Status />
+<CheckboxStatus />
 
 ```tsx showLineNumbers title="Checkbox.tsx"
 import { Checkbox } from '@pillar-ui/core'
@@ -198,7 +197,7 @@ export const CheckboxStatus = () => {
 
 ### isIndeterminate
 
-<CheckboxPlayGround.IsIndeterminate />
+<CheckboxIsIndeterminate />
 
 ```tsx
 import { Checkbox } from '@pillar-ui/core'

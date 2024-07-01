@@ -1,10 +1,9 @@
 ---
 title: Timeline
-type: Components
+type: core
 excerpt: The timeline component used to display a list of events in chronological order. It is a flexible component that can be customized to meet the needs of your application.
-items: ['Timeline', 'Timeline.Item']
-file: core
-root: components
+items: ['Timeline', 'TimelineItem']
+directory: timeline/index.tsx
 ---
 
 ### Size
@@ -17,7 +16,7 @@ The size prop determines the size of the Timeline. It accepts any of the Size ty
 
 Example usage:
 
-<TimelinePlayGround.Sizes />
+<TimelineSizes />
 
 ```tsx showLineNumbers title="Timeline.tsx"
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
@@ -90,7 +89,7 @@ The color prop determines the color of the Timeline. It accepts a string represe
 
 code Example
 
-<TimelinePlayGround.Colors />
+<TimelineColors />
 
 ```tsx
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
@@ -159,7 +158,7 @@ The size prop determines the size of the Alert. It accepts any of the Size types
 
 The corner prop determines the border radius of the Timeline. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-<TimelinePlayGround.Corners />
+<TimelineCorners />
 
 ```tsx showLineNumbers title="Timeline.tsx"
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
@@ -232,7 +231,7 @@ The variant property specifies the type of border for a component. The possible 
 
 The default value is solid.
 
-<TimelinePlayGround.Variants />
+<TimelineVariants />
 
 ```tsx showLineNumbers title="Timeline.tsx"
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
@@ -287,7 +286,7 @@ export const TimelineVariant = () => {
 
 The bullet prop can be used to customize the appearance of the bullet. It accepts a React element, which can be used to change the color, size, and style of the bullet.
 
-<TimelinePlayGround.CustomBullet />
+<TimelineCustomBullet />
 
 ```tsx showLineNumbers title="Timeline.tsx"
 export const TimelineCustomBullet = () => {

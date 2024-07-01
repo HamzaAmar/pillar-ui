@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import { usePersistentCallback } from './usePersistentCallback'
+import { usePersistentCallback } from '.'
 import { test, expect, describe } from 'vitest'
 
 describe('usePersistentCallback Test', () => {

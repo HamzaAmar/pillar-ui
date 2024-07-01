@@ -12,36 +12,8 @@
   position: relative;
 }
 
-.circle-chart--stroke {
-  fill: none;
-  stroke-width: 1.2;
-  stroke: var(--primary-500);
-}
-
-.circle-chart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.circle-chart--progress {
-  fill: none;
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  animation: progress 1s ease-out forwards;
-  stroke: var(--color-shared-5);
-}
-
-.circle-chart--text {
-  fill: red;
-  font-size: 0.4rem;
-  text-anchor: middle;
-  font-weight: 400;
-}
-
 .progress-bar--inner {
-  content: '';
+  /* content: ''; */
   height: 100%;
   position: absolute;
   inset-inline-start: 0;
@@ -57,10 +29,6 @@
 */
 
 .circle-progress {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   width: 8em;
   flex: none;
 }

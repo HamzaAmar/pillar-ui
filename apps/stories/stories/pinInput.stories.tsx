@@ -1,16 +1,16 @@
 import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Flex, PinInput } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof PinInput> = {
   title: 'Components/Form/PinInput',
   component: PinInput,
   args: {
     'aria-label': 'Nice',
   },
-} as ComponentMeta<typeof PinInput>
+}
 
-const Template: ComponentStory<typeof PinInput> = (args) => <PinInput {...args} />
+export default meta
 
 export const FilledPinInput = () => {
   return (
@@ -22,6 +22,7 @@ export const FilledPinInput = () => {
     </Flex>
   )
 }
+
 export const OutlinePinInput = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -32,6 +33,7 @@ export const OutlinePinInput = () => {
     </Flex>
   )
 }
+
 export const BorderedPinInput = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -79,6 +81,7 @@ export const ColorPinInput = () => {
     </Flex>
   )
 }
+
 export const ColorPinLength = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -116,4 +119,4 @@ export const ColorPinType = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

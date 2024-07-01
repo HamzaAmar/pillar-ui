@@ -1,10 +1,9 @@
 ---
 title: Accordion
-type: Components
+type: core
 excerpt: The accordion component allows users to expand and collapse content sections, which can be useful for displaying large amounts of information in a compact and organized manner.
-items: ['Accordion', 'Accordion.Button', 'Accordion.Panel', 'Accordion.Item']
-file: core
-root: components
+items: ['Accordion', 'AccordionButton', 'AccordionPanel', 'AccordionItem']
+directory: accordion/index.tsx
 ---
 
 ## Props
@@ -19,7 +18,7 @@ The Accordion component is a reusable component that allows you to create a coll
 
 type: Specifies the type of accordion. It can be either "single" or "multiple". If "single", only one item can be open at a time. If "multiple", multiple items can be open at the same time. By default, the type is "single".
 
-<AccordionPlayGround.Type />
+<AccordionType />
 
 ```tsx showLineNumbers title="Accordion.tsx"
 function AccordionType() {
@@ -88,7 +87,7 @@ The size prop determines the corners of the Accordion. It accepts any of the Siz
 - **Default:** `md`
 - **Options:** `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
 
-<AccordionPlayGround.Corners />
+<AccordionCorners />
 
 **Example Usage**
 
@@ -146,7 +145,7 @@ The separate prop determines whether to separate the accordion items or not. If 
 
 **Example Usage**
 
-<AccordionPlayGround.Separate />
+<AccordionSeparate />
 
 ### Example Usage
 
@@ -203,7 +202,7 @@ The "collapsible" prop specifies whether or not all accordion items can be close
 
 Here's an example of how to use the "collapsible" prop:
 
-<AccordionPlayGround.Collapsible />
+<AccordionCollapsible />
 
 ```tsx showLineNumbers title="Accordion.tsx"
 function AccordionCollapsible() {
@@ -246,7 +245,7 @@ The Accordion component has four variants available: solid, soft, outline, and t
 
 Example usage:
 
-<AccordionPlayGround.Variants />
+<AccordionVariants />
 
 ```tsx showLineNumbers title="Accordion.tsx"
 function AccordionType() {
@@ -337,7 +336,7 @@ The Accordion component supports seven different sizes, ranging from 2xs to 2xl.
 
 Example usage:
 
-<AccordionPlayGround.Sizes />
+<AccordionSizes />
 
 ```tsx showLineNumbers title="Accordion.tsx"
 function AccordionBase(props){

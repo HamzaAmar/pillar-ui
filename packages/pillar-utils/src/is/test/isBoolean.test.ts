@@ -1,4 +1,4 @@
-import { isBoolean } from '../is'
+import { isBoolean } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('isBoolean', () => {

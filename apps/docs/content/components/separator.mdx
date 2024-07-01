@@ -1,17 +1,16 @@
 ---
 title: Separator
-type: Components
+type: core
 excerpt: The Separator component is used to create a horizontal or vertical line.
 items: ['Separator']
-file: core
-root: components
+directory: separator/index.tsx
 ---
 
 ## Props
 
 ### Title
 
-<SeparatorPlayGround.Title />
+<SeparatorTitle />
 
 ```tsx
 export const SeparatorTitle = () => {
@@ -33,7 +32,7 @@ export const SeparatorTitle = () => {
 
 The color prop determines the color of the separator. It accepts a string representing a color name or a color value in hex, rgb, rgba format.
 
-<SeparatorPlayGround.Colors />
+<SeparatorColors />
 
 ```tsx showLineNumbers title='_App.tsx'
 import { Separator, Paper } from '@pillar-ui/core'
@@ -56,7 +55,7 @@ export const SeparatorColors = () => {
 
 The thickness prop determines the thickness of the separator. It accepts a string representing a length in pixels.
 
-<SeparatorPlayGround.Thickness />
+<SeparatorThickness />
 
 ```tsx showLineNumbers title='_App.tsx'
 export const SeparatorThickness = () => {
@@ -96,7 +95,7 @@ The `direction` prop is used to control the orientation of the separator line. I
 
 Example usage:
 
-<SeparatorPlayGround.Direction />
+<SeparatorDirection />
 
 ```tsx
 import { Paper, Separator } from '@pillar-ui/core'

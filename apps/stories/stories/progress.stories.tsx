@@ -1,14 +1,16 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Flex, ProgressBar, ProgressBarStack, ProgressCircle } from '@pillar-ui/core'
+import { Meta } from '@storybook/react'
+import { Flex, ProgressBar, ProgressBarStack, ProgressBarStackItem, ProgressCircle } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof ProgressBar> = {
   title: 'Components/ProgressBar',
   component: ProgressBar,
   args: {
     label: 'hello',
   },
-} as ComponentMeta<typeof ProgressBar>
+}
+
+export default meta
 
 export const ProgressBarSize = () => {
   return (
@@ -23,6 +25,7 @@ export const ProgressBarSize = () => {
     </Flex>
   )
 }
+
 export const ProgressBarColor = () => {
   return (
     <Flex direction="column" gap="sm" wrap>
@@ -96,21 +99,21 @@ export const ProgressCircleColor = () => {
 function ProgressBarStackBase(props) {
   return (
     <ProgressBarStack {...props} label="Nice to meet you">
-      <ProgressBarStack.Item label="CSS" color="danger" value={30}>
+      <ProgressBarStackItem label="CSS" color="danger" value={30}>
         <button>CSS 30</button>
-      </ProgressBarStack.Item>
-      <ProgressBarStack.Item label="HTML" color="success" value={15}>
+      </ProgressBarStackItem>
+      <ProgressBarStackItem label="HTML" color="success" value={15}>
         <button>HTML 15%</button>
-      </ProgressBarStack.Item>
-      <ProgressBarStack.Item label="React" color="purple" value={25}>
+      </ProgressBarStackItem>
+      <ProgressBarStackItem label="React" color="secondary" value={25}>
         <button>React 25%</button>
-      </ProgressBarStack.Item>
-      <ProgressBarStack.Item label="Node" color="primary" value={15}>
+      </ProgressBarStackItem>
+      <ProgressBarStackItem label="Node" color="primary" value={15}>
         <button>Node 15%</button>
-      </ProgressBarStack.Item>
-      <ProgressBarStack.Item label="SCSS" color="warning" value={15}>
+      </ProgressBarStackItem>
+      <ProgressBarStackItem label="SCSS" color="warning" value={15}>
         <button>SCSS 15%</button>
-      </ProgressBarStack.Item>
+      </ProgressBarStackItem>
     </ProgressBarStack>
   )
 }
@@ -130,9 +133,8 @@ export const ProgressBarStackSizes = () => {
   )
 }
 
-const Template: ComponentStory<typeof ProgressBar> = (args) => <ProgressBar {...args} />
-
-export const Playground = Template.bind({})
-Playground.args = {
-  value: 50,
+export const Playground = {
+  args: {
+    value: 50,
+  },
 }

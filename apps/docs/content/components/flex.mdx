@@ -1,10 +1,9 @@
 ---
 title: Flex
-type: Components
+type: core
 excerpt: The Flex component is a versatile layout component where you can handle alignment and direction of the children.
 items: ['Flex']
-file: Flex.tsx
-root: components
+directory: flex/index.tsx
 ---
 
 ## Usage
@@ -16,7 +15,7 @@ This property provides you with the ability to manage and adjust the amount of s
 - **Type:** string
 - **Options:** `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
 
-<FlexPlayGround.Gap />
+<FlexGap />
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {
@@ -57,7 +56,7 @@ This option lets you decide if items inside a container should wrap to the next 
 - **Type:** boolean
 - **Default:** false
 
-<FlexPlayGround.Wrap />
+<FlexWrap />
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {
@@ -100,7 +99,7 @@ This attribute defines the orientation in which the flexible items within a Flex
 - **Options:** `column` | `row`
 - **Default:** `row`
 
-<FlexPlayGround.Direction />
+<FlexDirection />
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {
@@ -139,7 +138,7 @@ This property governs the positioning of child elements within a container along
 - **Options:** `start` | `center` | `end` | `between` | `around` | `evenly`
 - **Default:** `start`
 
-<FlexPlayGround.Justify />
+<FlexJustify />
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {
@@ -190,7 +189,7 @@ This property allows you to determine the positioning of child elements along th
 - **Options:** `start` | `center` | `end`
 - **Default:** `start`
 
-<FlexPlayGround.Items />
+<FlexItems />
 
 ```tsx showLineNumbers title="Flex.tsx"
 const Box = (props: any) => {

@@ -1,4 +1,4 @@
-import { isFloat } from '../is'
+import { isFloat } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('isFloat', () => {

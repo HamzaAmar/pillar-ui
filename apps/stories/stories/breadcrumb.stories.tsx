@@ -1,22 +1,21 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Breadcrumb } from '@pillar-ui/core'
+import { Meta } from '@storybook/react'
+import { Breadcrumb, BreadcrumbItem } from '@pillar-ui/core'
 import { Home, Link, Minus, Anchor } from '@pillar-ui/icons'
 
-export default {
+const meta: Meta<typeof Breadcrumb> = {
   title: 'Components/Breadcrumb',
   component: Breadcrumb,
-  subcomponents: { BreadcrumbItem: Breadcrumb.Item },
-} as ComponentMeta<typeof Breadcrumb>
-
+}
+export default meta
 export function BreadcrumbDefault() {
   return (
     <Breadcrumb>
-      <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-      <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-      <Breadcrumb.Item link="./" current>
+      <BreadcrumbItem link="../..">components</BreadcrumbItem>
+      <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+      <BreadcrumbItem link="./" current>
         breadcrumb
-      </Breadcrumb.Item>
+      </BreadcrumbItem>
     </Breadcrumb>
   )
 }
@@ -25,27 +24,27 @@ export function BreadcrumbSeparator() {
   return (
     <div className="l_flow__md">
       <Breadcrumb separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb separator="*">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb separator={<Minus width={10} />}>
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
     </div>
   )
@@ -55,51 +54,51 @@ export function BreadcrumbColor() {
   return (
     <div className="l_flow__md">
       <Breadcrumb color="danger">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="warning">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="success">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="secondary">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="primary">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="surface">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
     </div>
   )
@@ -109,66 +108,66 @@ export function BreadcrumbIcons() {
   return (
     <div className="l_flow__md">
       <Breadcrumb>
-        <Breadcrumb.Item link="../../..">
+        <BreadcrumbItem link="../../..">
           Home
           <Home width={16} />
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
 
-        <Breadcrumb.Item link="../..">
+        <BreadcrumbItem link="../..">
           components
           <Anchor width={16} />
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
 
-        <Breadcrumb.Item link="../">
+        <BreadcrumbItem link="../">
           base-ui
           <Home width={16} />
-        </Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        </BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
           <Link width={16} />
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb>
-        <Breadcrumb.Item link="../../..">
+        <BreadcrumbItem link="../../..">
           <Home width={16} />
           Home
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
 
-        <Breadcrumb.Item link="../..">
+        <BreadcrumbItem link="../..">
           <Anchor width={16} />
           components
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
 
-        <Breadcrumb.Item link="../">
+        <BreadcrumbItem link="../">
           <Home width={16} />
           base-ui
-        </Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        </BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           <Link width={16} />
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb>
-        <Breadcrumb.Item link="../../..">
+        <BreadcrumbItem link="../../..">
           <span className="u_visually-hidden">Home</span>
           <Home width={16} />
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
 
-        <Breadcrumb.Item link="../..">
+        <BreadcrumbItem link="../..">
           components
           <Anchor width={16} />
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
 
-        <Breadcrumb.Item link="../">
+        <BreadcrumbItem link="../">
           base-ui
           <Home width={16} />
-        </Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        </BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
           <Link width={16} />
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
     </div>
   )
@@ -178,63 +177,63 @@ export function BreadcrumbSize() {
   return (
     <div className="l_flow__md">
       <Breadcrumb size="2xs" separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
       <Breadcrumb size="xs" separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb size="sm" separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
       <Breadcrumb separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb size="md" separator="/">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb size="lg">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
       <Breadcrumb size="xl">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
       <Breadcrumb size="2xl">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
     </div>
   )
@@ -244,31 +243,31 @@ export function BreadcrumbCustomStyle() {
   return (
     <div className="l_flow__md">
       <Breadcrumb className="u_red" separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb style={{ color: 'danger', background: 'var(--surface-5)' }} separator="*">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb separator={<Minus width={10} />}>
-        <Breadcrumb.Item style={{ color: 'danger', background: 'white' }} link="../..">
+        <BreadcrumbItem style={{ color: 'danger', background: 'white' }} link="../..">
           components
-        </Breadcrumb.Item>
-        <Breadcrumb.Item style={{ color: 'danger', background: 'white' }} link="../">
+        </BreadcrumbItem>
+        <BreadcrumbItem style={{ color: 'danger', background: 'white' }} link="../">
           base-ui
-        </Breadcrumb.Item>
-        <Breadcrumb.Item style={{ color: 'danger', background: 'white' }} link="./" current>
+        </BreadcrumbItem>
+        <BreadcrumbItem style={{ color: 'danger', background: 'white' }} link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
     </div>
   )
@@ -278,35 +277,32 @@ export function BreadcrumbPolymorphic() {
   return (
     <div className="l_flow__md">
       <Breadcrumb as="div" separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb as="span" separator="*">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
+        <BreadcrumbItem link="../..">components</BreadcrumbItem>
+        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb as="article" separator={<Minus width={10} />}>
-        <Breadcrumb.Item as="button" link="../..">
+        <BreadcrumbItem as="button" link="../..">
           components
-        </Breadcrumb.Item>
-        <Breadcrumb.Item as="div" link="../">
+        </BreadcrumbItem>
+        <BreadcrumbItem as="div" link="../">
           base-ui
-        </Breadcrumb.Item>
-        <Breadcrumb.Item as="kbd" link="./" current>
+        </BreadcrumbItem>
+        <BreadcrumbItem as="kbd" link="./" current>
           breadcrumb
-        </Breadcrumb.Item>
+        </BreadcrumbItem>
       </Breadcrumb>
     </div>
   )
 }
-
-const Template: ComponentStory<typeof Breadcrumb> = (args) => <Breadcrumb {...args} />
-export const Playground = Template.bind({})

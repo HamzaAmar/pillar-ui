@@ -1,18 +1,18 @@
 import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { User } from '@pillar-ui/icons'
 import { Flex, Input, Button } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Input> = {
   title: 'Components/Form/Input',
   component: Input,
   args: {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as ComponentMeta<typeof Input>
+}
 
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />
+export default meta
 
 export const FilledInput = () => {
   return (
@@ -41,7 +41,6 @@ export const FilledInput = () => {
   )
 }
 
-/* ; */
 export const OutlineInput = () => {
   return (
     <div className="l_flow__lg">
@@ -58,6 +57,7 @@ export const OutlineInput = () => {
     </div>
   )
 }
+
 export const BorderedInput = () => {
   return (
     <Flex gap="sm" direction="column">
@@ -117,4 +117,4 @@ export const ColorInput = () => {
   )
 }
 
-export const Playground = Template.bind({})
+export const Playground = {}

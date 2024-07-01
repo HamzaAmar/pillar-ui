@@ -35,7 +35,7 @@ function ejectClassNameMode(mode: Mode = 'light') {
  *
  * @example
  * // Example usage in a functional component:
- * import { useDarkMode } from './path-to-hooks/useDarkMode'; // Adjust the path accordingly
+ * import { useDarkMode } from '@pillar-ui/hooks'; // Adjust the path accordingly
  *
  * function DarkModeComponent() {
  *   const { isDark, toggleMode, modeScript } = useDarkMode();

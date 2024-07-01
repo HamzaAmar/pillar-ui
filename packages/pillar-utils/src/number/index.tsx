@@ -1,4 +1,8 @@
-import type { RandomNumber } from './number.type'
+export interface RandomNumber {
+  min?: number
+  max: number
+  rounded?: boolean
+}
 
 /**
  * Clamps a value between a minimum and maximum range.

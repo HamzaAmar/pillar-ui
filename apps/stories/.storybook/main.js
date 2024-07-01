@@ -1,20 +1,33 @@
+import { dirname, join } from 'path'
 const path = require('path')
 
 module.exports = {
-  stories: ['../stories/**/*.stories.mdx', '../stories/**/*.stories.tsx'],
+  stories: ['../stories/**/*.mdx', '../stories/**/*.stories.tsx'],
+
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-a11y',
-    'storybook-addon-themes',
-    // 'storybook-addon-pseudo-states',
-    // 'addon-screen-reader',
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('storybook-addon-themes'),
+    '@chromatic-com/storybook',
   ],
-  framework: '@storybook/react',
+
+  framework: {
+    name: getAbsolutePath('@storybook/nextjs'),
+    options: {},
+  },
+
   webpackFinal: async (config) => {
     return config
   },
-  core: {
-    builder: '@storybook/builder-webpack5',
+
+  docs: {},
+
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
+}
+
+function getAbsolutePath(value) {
+  return dirname(require.resolve(join(value, 'package.json')))
 }

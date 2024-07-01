@@ -1,6 +1,6 @@
 import type { Color, Corner, Size, Transform } from '../../types'
 import type { ComponentPropsWithRef, ReactNode, ReactElement, AriaAttributes } from 'react'
-import type { TypographyProps } from '..'
+import type { TypographyProps } from '../typography'
 
 type Variant = 'filled' | 'outline' | 'bordered'
 type Status = 'danger' | 'success' | 'warning' | 'primary' | 'text'
@@ -102,4 +102,10 @@ export type FormLabelProps = {
 export interface FormMessageProps {
   message: string
   icon?: ReactElement
+}
+
+export interface InputNumberButtonProps {
+  onClick: () => void
+  title: string
+  direction?: 'bottom' | 'top'
 }

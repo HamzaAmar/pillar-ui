@@ -1,4 +1,4 @@
-import { isDate } from '../is'
+import { isDate } from '..'
 import { describe, test, expect } from 'vitest'
 
 describe('isDate', () => {

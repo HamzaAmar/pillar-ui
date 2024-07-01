@@ -1,0 +1,272 @@
+---
+title: Create React App
+type: getting-started
+excerpt: 'Welcome to the Pillar project! This Library houses a comprehensive collection of reusable UI components, React hooks, Icons, and other tools designed to enhance modern web development. With a focus on accessibility, scalability, and best practices, Pillar streamlines the development process and empowers you to build robust, high-quality web applications.'
+---
+
+# Overview
+
+Before diving into the installation, let's provide a brief overview of what this page will cover. In this guide, you'll learn how to get started with Pillar, a comprehensive library for building modern web applications. We'll walk you through the installation process, adding styles, customizing the theming, and enhancing your developer experience. By the end, you'll be ready to use Pillar's components, icons, utilities, and hooks to create stunning web user interfaces.
+
+## Table of Contents
+
+- [Installation](#installation)
+  - [Step 1: Install Node.js and npm](#step-1-install-nodejs-and-npm)
+  - [Step 2: Install Pillar Packages](#step-2-install-pillar-packages)
+  - [Step 3: Adding Styles](#step-3-adding-styles)
+  - [Step 4: Customize the Theming](#step-4-customize-the-theming)
+- [Developer Experience](#developer-experience)
+  - [Responsive Variables](#responsive-variables)
+  - [Preventing Repetition](#preventing-repetition)
+  - [Customization and Extensibility](#customization-and-extensibility)
+- [Get Ready](#get-ready)
+- [Next Steps](#next-steps)
+  - [Explore Component Documentation](#explore-component-documentation)
+  - [Dive into Utilities, Hooks, and Icons](#dive-into-utilities-hooks-and-icons)
+  - [Build Real-world Projects](#build-real-world-projects)
+  - [Contribute and Give Feedback](#contribute-and-give-feedback)
+  - [Stay Updated](#stay-updated)
+- [Troubleshooting](#troubleshooting)
+  - [Troubleshooting Section](#troubleshooting-section)
+  - [Further Assistance](#further-assistance)
+
+## Installation
+
+To start using Pillar in your project, follow these simple steps:
+
+1. Make sure you have [Node.js](https://nodejs.org/en) and [npm (Node Package Manager)](https://www.npmjs.com/) installed on your machine.
+
+1. Create a new project or navigate to your existing project directory in the terminal.
+
+1. Install one or more of Pillar Packages by running the following command:
+
+```bash
+npm install @pillar-ui/core
+```
+
+or you prefer Yarn
+
+```bash
+yarn add @pillar-ui/core
+```
+
+1. You can also install the other packages that Pillar-ui contains to make the process of building your site faster and simpler.
+
+```bash
+npm install @pillar-ui/hooks @pillar-ui/utils @pillar-ui/icons
+```
+
+or you prefer Yarn
+
+```bash
+yarn add @pillar-ui/hooks @pillar-ui/utils @pillar-ui/icons
+```
+
+## Adding Styles
+
+To enhance the appearance and maintain visual consistency of your create react app using Pillar components, follow these steps to add the necessary styles. Pillar provides a CSS file that not only enhances the styling but also introduces additional features such as dark mode support and right-to-left (RTL) language support.
+
+- Open the root file of your CRA React app project.
+
+- Locate the file where your app is initialized, typically named App.(ts, tsx, js,jsx).
+
+- Import the Pillar CSS file by adding the following import statement at the top of the directory:
+
+```tsx
+import '@pillar-ui/core/main.css'
+```
+
+## Customize the theming
+
+With Pillar UI, you can easily customize the appearance of your user interface (UI) to match your preferences. By modifying the predefined [custom properties](https://css-tricks.com/a-complete-guide-to-custom-properties/), you can control colors, typography, spacing, and more.
+
+To change the primary color of your UI, follow these simple steps:
+
+1. Create a file named `theme.css`.
+1. Inside `theme.css`, define the desired primary color using the --primary-color custom property. For example:
+
+```css title="theme.css"
+:root {
+  --primary-1: hsl(225deg 60% 99.4%);
+  --primary-2: hsl(223deg 100% 98.6%);
+  /* ... */
+  --primary-11: hsl(226deg 55% 45%);
+  --primary-12: hsl(226dg 62% 17%);
+}
+
+.dark {
+  --primary-1: hsl(229deg 24% 10%);
+  --primary-2: hsl(230deg 36.4% 12.9%);
+  /* ... */
+  --primary-11: hsl(228deg 100% 75.9%);
+  --primary-12: hsl(226deg 8% 96.3%);
+}
+```
+
+1. Save the theme.css file.
+
+1. Import the theme.css file in your project, making sure to import it after the `@pillar-ui/core/main.css` import. This ensures that your custom styles override the default styles provided by Pillar UI. For example:
+
+```tsx
+import '@pillar-ui/core/main.css'
+import './theme.css'
+```
+
+By following these steps, you can easily personalize the primary color of your UI to your preferred choice. Feel free to explore other customization options such as font size, shadows, gradients, and spacing, which can be adjusted using similar custom properties.
+
+Pillar UI empowers you to create a visually appealing UI that aligns with your project requirements and brand identity. Enjoy the flexibility and control over your UI's appearance with Pillar UI's customization capabilities [More info about the theme](http://localhost:3001/docs/themes/font).
+
+## Developer experience
+
+Pillar UI enhances your development experience (DX) with simple workflows for component implementation and customization. It eliminates repetitive styling code and offers customization options to fit your project requirements.
+
+- Responsive Variables: Control component appearance easily with responsive variables.
+- Preventing Repetition: Avoid repetitive styling by using predefined styles and variables.
+- Customization and Extensibility: Customize Pillar UI to match your project's design language and branding.
+
+```css
+/*
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Theme Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+/*  Define custom theme styles here  */
+
+/*
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  Default Properties Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+:root {
+  --button-corner: 0;
+  --avatar-corner: 0;
+  --badge-corner: 0;
+}
+```
+
+Set `--button-corner`, `--avatar-corner`, and `--badge-corner` to 0 for sharp corners on buttons, avatars, and badges.
+
+## Get Ready
+
+Once you have customized your Pillar UI theme and set the desired variables, you are ready to import the necessary components, icons, utilities, or hooks and start developing your application.
+
+you can import icons, utilities, or hooks based on your requirements. Here are some examples:
+
+```tsx
+import { Button, Paper, Flex, InputPassword, FormController, Input } from '@pillar-ui/core'
+import { Envelop } from '@pillar-ui/icons'
+import { toCapitalize } from '@pillar-ui/utils'
+import { useDarkMode } from '@pillar-ui/hooks'
+
+interface FormValues {
+  email: string
+  password: string
+}
+
+function App() {
+  const [formData, setFormData] = useState<FormValues>({
+    email: '',
+    password: '',
+  })
+  const [error, setError] = useState({})
+
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    const { name, value } = event.target
+    const newValue = name === 'email' ? toCapitalize(value) : value
+    setFormData((prevFormValues) => ({ ...prevFormValues, [name]: newValue }))
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+
+    const form = e.target as HTMLFormElement
+
+    if (form.checkValidity()) {
+      setErrors({})
+    } else {
+      const validationErrors: { [key: string]: string } = {}
+
+      for (let i = 0; i < form.elements.length; i++) {
+        const field = form.elements[i] as HTMLInputElement
+        if (!field.checkValidity()) {
+          validationErrors[field.name] = field.validationMessage
+        }
+      }
+
+      setErrors(validationErrors)
+    }
+  }
+
+  return (
+    <Paper as={Flex} width="100vw" height="100vh" justify="center" items="center" p="sm">
+      <Paper as="form" onSubmit={handleSubmit} width="min(320px , 60vw)" borderColor="opacity-6" p="sm">
+        <FormController required label="Email">
+          <Input
+            value={formData.email}
+            name="email"
+            onChange={handleChange}
+            placeholder="Default Input"
+            suffix={<Envelop />}
+          />
+        </FormController>
+        <FormController required minLength={7} label="Email" hint="Enter your password (at least 7 characters)">
+          <InputPassword value={formData.password} name="password" onChange={handleChange} />
+        </FormController>
+        <Button> Login </Button>
+      </Paper>
+    </Paper>
+  )
+}
+
+export default App
+```
+
+## Next Steps
+
+Congratulations on successfully setting up Pillar UI and completing the initial steps! You're now equipped with the tools to create stunning UIs and streamline your web development process. But what's next? Here are a few recommended steps to continue your journey with Pillar UI:
+
+### Explore Component Documentation
+
+[Our documentation](http://localhost:3001/docs/components) is your gateway to mastering Pillar UI's capabilities. Take a deep dive into the comprehensive component documentation. Each component comes with detailed information on props, usage examples, and customization options. You'll discover how to leverage components to build a wide range of interfaces, from simple forms to complex data visualizations.
+
+### Dive into Utilities, Hooks, and Icons
+
+Pillar UI offers more than just components. Explore our [utility functions](http://localhost:3001/docs/utils) , [hooks](http://localhost:3001/docs/hooks), [and icons](http://localhost:3001/docs/icons) to enhance your development process. Discover utility functions that simplify common tasks, hooks that add functionality to your app, and a rich collection of icons that can be seamlessly integrated into your UI.
+
+### Build Real-world Projects
+
+Now that you have a solid foundation, it's time to put your skills to the test. Start by working on small projects or prototypes to get hands-on experience with Pillar UI. As you become more confident, challenge yourself with larger applications that showcase the library's capabilities across various user interfaces.
+
+### Contribute and Give Feedback
+
+If you're excited about Pillar UI and want to contribute back, consider participating in the open-source community. Contribute to the library's development by submitting pull requests, addressing issues, or improving documentation. Your contributions will help enhance the library and benefit the entire user community.
+
+### Stay Updated
+
+Web development is a dynamic field, and Pillar UI is no exception. Stay updated with the latest releases, enhancements, and features by following our GitHub repository and announcements. Being aware of updates ensures that you're leveraging the full potential of the library.
+
+Remember, your journey with Pillar UI is a continuous process of learning and growth. Explore, experiment, create, and collaborate – your possibilities are endless with Pillar UI.
+
+## Troubleshooting
+
+If you encounter any issues while integrating Pillar UI, refer to the [Troubleshooting](http://localhost:3001/docs/troubleshooting) section for solutions to common problems.
+
+### Further Assistance
+
+If you're still facing issues after trying the solutions above, consider the following options:
+
+_FAQ:_ Check the Frequently Asked Questions section on our website for answers to common queries.
+
+_Community Discord:_ Join our community Discord server to seek help from other users and our development team. You can find the [invite link on our website](https://discord.gg/GvB865nE).
+
+_GitHub Issues:_ Visit our [GitHub Issues page](https://github.com/HamzaAmar/pillar-ui/issues) to report problems or find solutions to known issues.
+
+Remember, troubleshooting can vary depending on individual projects and setups. These are general guidelines, so adapt them to fit your users' needs and your UI library's peculiarities.
+
+## Feedback
+
+We value your feedback! If you have any suggestions, questions, or encounter any issues while using Pillar, please don't hesitate to provide feedback. Your input is invaluable for continuous improvement. You can share your thoughts and report any documentation-related issues by [submitting feedback here](link-to-feedback-form).
+
+Thank you for helping us make Pillar better!

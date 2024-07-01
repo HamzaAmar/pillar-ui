@@ -1,1 +1,0 @@
-export { RatingPlayGround } from './rating'

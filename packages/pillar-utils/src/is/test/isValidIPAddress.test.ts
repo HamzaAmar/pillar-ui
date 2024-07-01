@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { isValidIPAddress } from '../is' // Replace "your-file" with the actual file path
+import { isValidIPAddress } from '..' // Replace "your-file" with the actual file path
 
 describe('isValidURL Test', () => {
   test('should return true for valid IP addresses', () => {

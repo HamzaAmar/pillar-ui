@@ -1,11 +1,13 @@
 import React, { CSSProperties } from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Flex, Code, Paper } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Code> = {
   title: 'Components/Code',
   component: Code,
-} as ComponentMeta<typeof Code>
+}
+
+export default meta
 
 export const CodeColors = () => {
   return (

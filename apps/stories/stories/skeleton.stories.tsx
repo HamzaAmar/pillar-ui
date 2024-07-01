@@ -1,12 +1,25 @@
-import { Avatar, Button, Flex, Skeleton, Text, Grid } from '@pillar-ui/core'
+/* eslint-disable @next/next/no-img-element */
+import {
+  Avatar,
+  Button,
+  Flex,
+  Skeleton,
+  Text,
+  Grid,
+  SkeletonText,
+  SkeletonButton,
+  SkeletonAvatar,
+} from '@pillar-ui/core'
 import { useBooleanState } from '@pillar-ui/hooks'
-import { ComponentMeta } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import React, { useEffect, useRef } from 'react'
 
-export default {
+const meta: Meta<typeof Skeleton> = {
   title: 'Components/Skeleton',
   component: Skeleton,
-} as ComponentMeta<typeof Skeleton>
+}
+
+export default meta
 
 function useLoading() {
   const { booleanValue: loading, setFalse } = useBooleanState(true)
@@ -25,25 +38,25 @@ function useLoading() {
   return loading
 }
 
-export const SkeletonAvatar = () => {
+export const Avatars = () => {
   const loading = useLoading()
   return (
     <Flex items="center" gap="md">
-      <Skeleton.Avatar size="xs" isLoading={loading}>
+      <SkeletonAvatar size="xs" isLoading={loading}>
         <Avatar size="xs" variant="image" title="Hello" />
-      </Skeleton.Avatar>
-      <Skeleton.Avatar size="sm" isLoading={loading}>
+      </SkeletonAvatar>
+      <SkeletonAvatar size="sm" isLoading={loading}>
         <Avatar size="sm" variant="image" title="Hello" />
-      </Skeleton.Avatar>
-      <Skeleton.Avatar size="md" isLoading={loading}>
+      </SkeletonAvatar>
+      <SkeletonAvatar size="md" isLoading={loading}>
         <Avatar size="md" variant="image" title="Hello" />
-      </Skeleton.Avatar>
-      <Skeleton.Avatar size="xl" isLoading={loading}>
+      </SkeletonAvatar>
+      <SkeletonAvatar size="xl" isLoading={loading}>
         <Avatar size="xl" variant="image" title="Hello" />
-      </Skeleton.Avatar>
-      <Skeleton.Avatar size="2xl" isLoading={loading}>
+      </SkeletonAvatar>
+      <SkeletonAvatar size="2xl" isLoading={loading}>
         <Avatar size="2xl" variant="image" title="Hello" />
-      </Skeleton.Avatar>
+      </SkeletonAvatar>
     </Flex>
   )
 }
@@ -52,21 +65,21 @@ export const SkeletonTextLines = () => {
   const loading = useLoading()
   return (
     <Flex items="center" gap="md">
-      <Skeleton.Text size="xs" isLoading={loading} lines={3}>
+      <SkeletonText size="xs" isLoading={loading} lines={3}>
         <Text size="xs">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="sm" isLoading={loading} lines={3.5}>
+      </SkeletonText>
+      <SkeletonText size="sm" isLoading={loading} lines={3.5}>
         <Text size="sm">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="md" isLoading={loading} lines={2.3}>
+      </SkeletonText>
+      <SkeletonText size="md" isLoading={loading} lines={2.3}>
         <Text size="md">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="xl" isLoading={loading} lines={3.3}>
+      </SkeletonText>
+      <SkeletonText size="xl" isLoading={loading} lines={3.3}>
         <Text size="xl">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="2xl" isLoading={loading} lines={1.13}>
+      </SkeletonText>
+      <SkeletonText size="2xl" isLoading={loading} lines={1.13}>
         <Text size="2xl">hello world</Text>
-      </Skeleton.Text>
+      </SkeletonText>
     </Flex>
   )
 }
@@ -75,53 +88,53 @@ export const SkeletonTextSizes = () => {
   const loading = useLoading()
   return (
     <Grid grid="1fr 1fr" gap="xl">
-      <Skeleton.Text size="3xs" isLoading={loading}>
+      <SkeletonText size="3xs" isLoading={loading}>
         <Text size="xs">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="2xs" isLoading={loading}>
+      </SkeletonText>
+      <SkeletonText size="2xs" isLoading={loading}>
         <Text size="xs">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="xs" isLoading={loading}>
+      </SkeletonText>
+      <SkeletonText size="xs" isLoading={loading}>
         <Text size="xs">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="sm" isLoading={loading}>
+      </SkeletonText>
+      <SkeletonText size="sm" isLoading={loading}>
         <Text size="sm">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="md" isLoading={loading}>
+      </SkeletonText>
+      <SkeletonText size="md" isLoading={loading}>
         <Text size="md">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="lg" isLoading={loading}>
+      </SkeletonText>
+      <SkeletonText size="lg" isLoading={loading}>
         <Text size="md">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="xl" isLoading={loading}>
+      </SkeletonText>
+      <SkeletonText size="xl" isLoading={loading}>
         <Text size="xl">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="2xl" isLoading={loading}>
+      </SkeletonText>
+      <SkeletonText size="2xl" isLoading={loading}>
         <Text size="2xl">hello world</Text>
-      </Skeleton.Text>
-      <Skeleton.Text size="3xl" isLoading={loading}>
+      </SkeletonText>
+      <SkeletonText size="3xl" isLoading={loading}>
         <Text size="2xl">hello world</Text>
-      </Skeleton.Text>
+      </SkeletonText>
     </Grid>
   )
 }
 
-export const SkeletonButton = () => {
+export const Buttons = () => {
   const loading = useLoading()
   return (
     <Flex items="center" gap="md">
-      <Skeleton.Button size="xs" isLoading={loading}>
+      <SkeletonButton size="xs" isLoading={loading}>
         <Button size="xs">hello world</Button>
-      </Skeleton.Button>
-      <Skeleton.Button size="sm" isLoading={loading}>
+      </SkeletonButton>
+      <SkeletonButton size="sm" isLoading={loading}>
         <Button size="sm">hello world</Button>
-      </Skeleton.Button>
-      <Skeleton.Button size="md" isLoading={loading}>
+      </SkeletonButton>
+      <SkeletonButton size="md" isLoading={loading}>
         <Button size="md">hello world</Button>
-      </Skeleton.Button>
-      <Skeleton.Button size="xl" isLoading={loading}>
+      </SkeletonButton>
+      <SkeletonButton size="xl" isLoading={loading}>
         <Button size="xl">hello world</Button>
-      </Skeleton.Button>
+      </SkeletonButton>
     </Flex>
   )
 }

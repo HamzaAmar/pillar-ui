@@ -2,22 +2,18 @@
 .radio-container {
   border-radius: 0.5em;
 
-  /* width: fit-content; */
-  &:focus-within {
-    outline: 2px dashed var(--color-shared-10);
-    outline-offset: 2px;
-  }
-  &[aria-disabled='true'] {
-    color: var(--surface-11);
-    cursor: not-allowed;
-  }
-
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
   font-size: var(--radio-size, 0.875rem);
+
+  /* width: fit-content; */
+  &:has(:disabled) {
+    color: var(--surface-11);
+    cursor: not-allowed;
+  }
 }
 
 .custom-radio {
@@ -36,6 +32,10 @@
 
 .radio {
   &:checked {
+    & + .custom-radio {
+      outline-offset: -0.75em;
+    }
+
     & + .custom-radio__solid {
       outline: 0.45em var(--color-shared-9) solid;
       outline-offset: -0.45em;
@@ -43,12 +43,10 @@
     & + .custom-radio__outline {
       outline: 0.35em var(--color-shared-9) solid;
       border-color: var(--color-shared-9);
-      outline-offset: -0.75em;
     }
     & + .custom-radio__soft {
       outline: 0.35em var(--color-shared-11) solid;
       border-color: var(--color-shared-5);
-      outline-offset: -0.75em;
       background: var(--color-shared-5);
     }
   }

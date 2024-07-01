@@ -1,14 +1,13 @@
 .avatar {
-  display: inline-block;
-  overflow: hidden;
+  /* TODO: CHECK IF IT INLINE FLEX OR The Cache  */
+  --flex: inline-flex;
+
+  /* overflow: hidden; */
   padding: 0;
   border: 2px solid var(--surface-1);
   background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(var(--surface-1), var(--surface-1));
   background-clip: content-box, padding-box;
   flex-shrink: 0;
-  & > * {
-    border-radius: inherit;
-  }
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -17,12 +16,23 @@
   */
   border-radius: var(--avatar-corner, 10em);
   font-size: var(--avatar-size, 1rem);
+
+  & > * {
+    border-radius: inherit;
+  }
 }
 
-.avatar__size {
+.avatar__size,
+.avatar--img,
+.avatar--fallback {
   --img-size: 2.75em;
   width: var(--img-size);
   height: var(--img-size);
+}
+
+.avatar--img {
+  --img-size: 100%;
+  object-fit: cover;
 }
 
 /* Avatar Variants */
@@ -47,17 +57,6 @@
   border-style: dashed;
 }
 
-.avatar--fallback {
-  width: var(--img-size);
-  text-align: center;
-  aspect-raio: 1/1;
-}
-
-.avatar--img {
-  width: 100%;
-  height: 100%;
-}
-
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
   Avatar Group Section
@@ -66,6 +65,7 @@
 
 .avatar-group {
   display: flex;
+  flex-wrap: wrap;
 
   & > * {
     transition: transform 0.3s;
@@ -82,7 +82,5 @@
 }
 
 .avatar-group__grid {
-  display: flex;
-  gap: 0.375rem;
-  flex-wrap: wrap;
+  gap: 0.375em;
 }

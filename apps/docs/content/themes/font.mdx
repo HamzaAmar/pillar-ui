@@ -1,0 +1,97 @@
+---
+title: Font
+type: themes
+excerpt: 'The following CSS variables define font sizes for different breakpoints. These variables are responsive and adjust dynamically based on the viewport size. If you prefer different font sizes for your project, you can customize these values according to your needs.'
+root: themes
+---
+
+# CSS Font Size Variables
+
+The font size variables, defined within the `:root` CSS selector, ensure accessibility throughout your CSS stylesheets.
+
+<Alert
+  color="warning"
+  title="Caution"
+  variant="soft"
+  message="Customizing spacing using the `--space-*` variables may impact the responsive layout. Default values utilize the `clamp` function to adapt spacing based on viewport size, maintaining proportions and alignment. Modifying these values might result in spacing inconsistencies."
+/>
+
+<Table>
+  <TableRow type="head">
+    <TableColumn as="th">Variable</TableColumn>
+    <TableColumn as="th">Description</TableColumn>
+    <TableColumn as="th">Default value</TableColumn>
+  </TableRow>
+  <TableRow>
+    <TableColumn>`--font-3xs`</TableColumn>
+    <TableColumn>Font size variable for 3 extra small text.</TableColumn>
+    <TableColumn>`clamp(0.55rem, calc(0.52rem + 0.14vw), 0.66rem)`</TableColumn>
+  </TableRow>
+  <TableRow>
+    <TableColumn>`--font-2xs`</TableColumn>
+    <TableColumn>Font size variable for 2 extra small text.</TableColumn>
+    <TableColumn>`clamp(0.61rem, calc(0.57rem + 0.22vw), 0.8rem)`</TableColumn>
+  </TableRow>
+  <TableRow>
+    <TableColumn>`--font-xs`</TableColumn>
+    <TableColumn>Font size variable for extra small text.</TableColumn>
+    <TableColumn>`clamp(0.69rem, calc(0.63rem + 0.31vw), 0.96rem)`</TableColumn>
+  </TableRow>
+  <TableRow>
+    <TableColumn>`--font-sm`</TableColumn>
+    <TableColumn>Font size variable for small text.</TableColumn>
+    <TableColumn>`clamp(0.78rem, calc(0.69rem + 0.44vw), 1.15rem)`</TableColumn>
+  </TableRow>
+  <TableRow>
+    <TableColumn>`--font-md`</TableColumn>
+    <TableColumn>Font size variable for medium text.</TableColumn>
+    <TableColumn>`clamp(0.88rem, calc(0.76rem + 0.6vw), 1.38rem)`</TableColumn>
+  </TableRow>
+  <TableRow>
+    <TableColumn>`--font-lg`</TableColumn>
+    <TableColumn>Font size variable for large text.</TableColumn>
+    <TableColumn>`clamp(0.98rem, calc(0.83rem + 0.79vw), 1.65rem)`</TableColumn>
+  </TableRow>
+  <TableRow>
+    <TableColumn>`--font-xl`</TableColumn>
+    <TableColumn>Font size variable for extra large text.</TableColumn>
+    <TableColumn>`clamp(1.11rem, calc(0.9rem + 1.04vw), 1.98rem)`</TableColumn>
+  </TableRow>
+  <TableRow>
+    <TableColumn>`--font-2xl`</TableColumn>
+    <TableColumn>Font size variable for 2 extra large text.</TableColumn>
+    <TableColumn>`clamp(1.25rem, calc(0.98rem + 1.35vw), 2.38rem)`</TableColumn>
+  </TableRow>
+  <TableRow>
+    <TableColumn>`--font-3xl`</TableColumn>
+    <TableColumn>Font size variable for 3 extra large text.</TableColumn>
+    <TableColumn>`clamp(1.4rem, calc(1.06rem + 1.73vw), 2.85rem)`</TableColumn>
+  </TableRow>
+</Table>
+
+## Customizing the Font Sizes
+
+To customize the font sizes, you can override the default values of the font size variables by assigning new values to the corresponding --custom-\* variables. Here's an example:
+
+```css showLineNumbers title="themes.css"
+:root {
+  /*  To customize the font sizes, you can customize one or all of the custom variables by assigning new values to them. */
+  --custom-font-md: 18px; /* Customize the font size for the md breakpoint */
+  --custom-font-lg: 24px; /* Customize the font size for the lg breakpoint */
+}
+```
+
+By updating these font size variables, you can achieve a unique typography style and influence the way the Text, Heading, and Link components are rendered.
+
+## Best Practices
+
+- **Stick with the provided font**: We encourage you to use the provided font sizes and leverage the custom properties within the existing Text, Heading, and Link components as much as possible. This promotes design consistency and facilitates adherence to UX/UI best practices.
+- **Consider accessibility**: When using the --font-3xs and --font-2xs variables, exercise caution as smaller font sizes can potentially compromise accessibility. Ensure that the text remains legible and meets the minimum contrast requirements to accommodate users with visual impairments.
+
+## Conclusion
+
+The CSS font size variables allow you to create responsive typography styles for your project. By customizing the font sizes, you can achieve a unique design while maintaining consistency and following best practices. Experiment with different values and breakpoints to find the optimal font sizes that enhance readability and visual harmony.
+
+Remember to test and preview your changes to ensure they align with your design goals. Strive for a balance between aesthetics and accessibility, ensuring that the text remains clear and legible across various screen sizes.
+
+We hope this documentation helps you understand and utilize the font size variables effectively. Enjoy creating a visually appealing and user-friendly experience with customized font sizes!

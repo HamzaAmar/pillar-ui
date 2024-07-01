@@ -1,10 +1,9 @@
 ---
 title: Text
-type: Components
+type: core
 excerpt: The Accordion component is a collapsible container that can be used to toggle the visibility of content. It's often used to hide content that may be overwhelming or to group related information together.
 items: ['Text']
-file: core
-root: components
+directory: typography/index.tsx
 ---
 
 ## Props
@@ -19,7 +18,7 @@ The size prop controls the size of the text. The following values are valid:
 
 Example:
 
-<TextPlayGround.Sizes />
+<TextSizes />
 
 ```tsx showLineNumbers title="Text.tsx"
 <Text size="xs">Some text.</Text>
@@ -36,7 +35,7 @@ The weight prop controls the weight (boldness) of the text. The following values
 
 Example:
 
-<TextPlayGround.Weight />
+<TextWeight />
 
 ```tsx showLineNumbers title="Text.tsx"
 <Text weight="thin">Some text.</Text>
@@ -54,7 +53,7 @@ truncate (optional): Determines whether the text should be truncated and how it 
 
 Example:
 
-<TextPlayGround.Trucates />
+<TextTrucates />
 
 ```tsx showLineNumbers title="Text.tsx"
 export function TextTrucates() {
@@ -119,7 +118,7 @@ This property specifies the horizontal alignment of the text within the parent e
 
 Example:
 
-<TextPlayGround.Align />
+<TextAlign />
 
 ```tsx showLineNumbers title="Text.tsx"
 export function TextAligns() {
@@ -161,7 +160,7 @@ The color prop sets the color of the text . The available options are: red, brow
 
 Example:
 
-<TextPlayGround.Colors />
+<TextColors />
 
 ```tsx showLineNumbers title="Text.tsx"
 export function TextColors() {
@@ -215,7 +214,7 @@ you can customize the leading (line height) of your text by using the leading pr
 
 Example
 
-<TextPlayGround.Leading />
+<TextLeading />
 
 ```tsx showLineNumbers title="Text.tsx"
 <Text leading="normal">
@@ -239,7 +238,7 @@ By using the leading prop, you can easily adjust the line height of your text to
 
 "dir": This prop sets the direction of the text within the component. It accepts the values "rtl" for right-to-left direction or "ltr" for left-to-right direction. This prop is useful when displaying text in languages that are read from right to left, such as Arabic or Hebrew.
 
-<TextPlayGround.RTL />
+<TextRTL />
 
 ```tsx showLineNumbers title="Text.tsx"
 export function TextRTL() {

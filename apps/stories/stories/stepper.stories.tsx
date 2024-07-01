@@ -1,13 +1,15 @@
 import React from 'react'
 import { Check, Home, Settings, User } from '@pillar-ui/icons'
-import type { ComponentMeta } from '@storybook/react'
-import { Button, Flex, Heading, Text, Stepper } from '@pillar-ui/core'
+import type { Meta } from '@storybook/react'
+import { Button, Flex, Heading, Text, Stepper, StepperStep } from '@pillar-ui/core'
 import { useStepper } from '@pillar-ui/hooks'
 
-export default {
+const meta: Meta<typeof Stepper> = {
   title: 'Components/Stepper',
   component: Stepper,
-} as ComponentMeta<typeof Stepper>
+}
+
+export default meta
 
 const CompleteComponent = () => {
   return (
@@ -30,27 +32,27 @@ export const StepperIcon = () => {
   return (
     <Flex gap="lg" direction="column">
       <Stepper active={currentStep} setActive={setCurrentStep} completeComponent={<CompleteComponent />}>
-        <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
+        <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
-        </Stepper.Step>
-        <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
+        </StepperStep>
+        <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
-        </Stepper.Step>
-        <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
+        </StepperStep>
+        <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
-        </Stepper.Step>
+        </StepperStep>
       </Stepper>
       <Flex items="center" justify="center" gap="sm">
         <Button disabled={isLast} onClick={goToNextStep}>
@@ -76,24 +78,24 @@ function StepperBase(props) {
         {...props}
         completeComponent={<CompleteComponent />}
       >
-        <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
+        <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             Hello
           </Text>
-        </Stepper.Step>
-        <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
+        </StepperStep>
+        <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             World
           </Text>
-        </Stepper.Step>
-        <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
+        </StepperStep>
+        <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             Nice{' '}
           </Text>
-        </Stepper.Step>
+        </StepperStep>
       </Stepper>
       <Flex items="center" justify="center" gap="sm">
         <Button disabled={isLast} onClick={goToNextStep}>
@@ -140,27 +142,27 @@ export const DefaultStepper = () => {
   return (
     <Flex gap="lg" direction="column">
       <Stepper active={currentStep} setActive={setCurrentStep} completeComponent={<CompleteComponent />}>
-        <Stepper.Step title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
+        <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
-        </Stepper.Step>
-        <Stepper.Step icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
+        </StepperStep>
+        <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading size="xs">Hello Nice</Heading>
           <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
-        </Stepper.Step>
-        <Stepper.Step icon={<Settings />} title="Skills" description="Word is word no matter what happen">
+        </StepperStep>
+        <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading size="xs">Nice to Meet You</Heading>
           <Text size="sm" color="surface" contrast="low">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
-        </Stepper.Step>
+        </StepperStep>
       </Stepper>
 
       <Flex items="center" justify="center" gap="sm">

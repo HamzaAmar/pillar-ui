@@ -1,18 +1,18 @@
 import * as React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Chips, Flex, Button, Paper } from '@pillar-ui/core'
 import { DotsHorizontal, Plus } from '@pillar-ui/icons'
 
-export default {
+const meta: Meta<typeof Chips> = {
   title: 'Components/Chips',
   component: Chips,
   args: {
     children: 'Hello world',
   },
-} as ComponentMeta<typeof Chips>
+}
 
-const Template: ComponentStory<typeof Chips> = (args) => <Chips {...args} />
-export const Playground = Template.bind({})
+export default meta
+export const Playground = {}
 
 export const ChipsColor = () => (
   <Flex gap="xs">

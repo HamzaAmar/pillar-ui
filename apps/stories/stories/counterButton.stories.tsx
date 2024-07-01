@@ -1,12 +1,12 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { CounterButton } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof CounterButton> = {
   title: 'Components/CounterButton',
   component: CounterButton,
-} as ComponentMeta<typeof CounterButton>
-
+}
+export default meta
 export function ButtonCounterColor() {
   return (
     <div className="l_flow__sm">

@@ -2,7 +2,6 @@ import '@pillar-ui/core/main.css'
 import { INITIAL_VIEWPORTS as viewports } from '@storybook/addon-viewport'
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
   themes: {
     default: 'dark',
     list: [
@@ -21,3 +20,4 @@ export const parameters = {
     viewports,
   },
 }
+export const tags = ['autodocs']

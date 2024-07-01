@@ -1,14 +1,16 @@
 import React from 'react'
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Flex, Kbd } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Kbd> = {
   title: 'Components/Kbd',
   component: Kbd,
   args: {
     title: 'Esc',
   },
-} as ComponentMeta<typeof Kbd>
+}
+
+export default meta
 
 export const KbdColors = () => {
   return (
@@ -60,6 +62,20 @@ export const KbdSizes = () => {
 }
 
 export const KbdCorners = () => {
+  return (
+    <Flex gap="sm" items="center">
+      <Kbd title="Esc" corner="sharp" />
+      <Kbd title="Esc" />
+      <Kbd title="Esc" corner="xs" />
+      <Kbd title="Esc" corner="md" />
+      <Kbd title="Esc" corner="xl" />
+      <Kbd title="Esc" corner="full" />
+      <Kbd title="Esc" corner="circle" />
+    </Flex>
+  )
+}
+
+export const KbdInFlex = () => {
   return (
     <Flex gap="sm" items="center">
       <Kbd title="Esc" corner="sharp" />

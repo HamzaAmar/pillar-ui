@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { useInterval } from './useInterval'
+import { useInterval } from '.'
 import { test, describe, expect, vi } from 'vitest'
 
 describe('useInterval custom hook', () => {

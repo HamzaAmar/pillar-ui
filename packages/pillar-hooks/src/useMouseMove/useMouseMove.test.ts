@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import { useMouseMove } from './useMouseMove'
+import { useMouseMove } from '.'
 
 describe('useMouseMove', () => {
   it('test initial position', () => {

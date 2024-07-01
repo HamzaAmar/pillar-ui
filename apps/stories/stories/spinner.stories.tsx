@@ -1,12 +1,14 @@
 import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta } from '@storybook/react'
 
 import { Spinner, Flex } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Spinner> = {
   title: 'Components/Spinner',
   component: Spinner,
-} as ComponentMeta<typeof Spinner>
+}
+
+export default meta
 
 export function SpinnerColors() {
   return (
@@ -74,6 +76,4 @@ export function SpinnerInvert() {
   )
 }
 
-const Template: ComponentStory<typeof Spinner> = (args) => <Spinner {...args} />
-
-export const NormalSpinner = Template.bind({})
+export const NormalSpinner = {}

@@ -1,10 +1,9 @@
 ---
 title: Progress
-type: Components
+type: core
 excerpt: The Progress component is a UI component that represents the progress of a task or operation. It visually displays the completion percentage and can be customized with different sizes and colors.
-items: ['ProgressBar', 'ProgressCircle', 'ProgressBarStack', 'ProgressBarStack.Item']
-file: core
-root: components
+items: ['ProgressBar', 'ProgressCircle', 'ProgressBarStack', 'ProgressBarStackItem']
+directory: progress/index.tsx
 ---
 
 ## Props
@@ -17,7 +16,7 @@ The value prop is used to specify the completion percentage of the task or opera
 
 Example:
 
-<ProgressPlayGround.Value />
+<ProgressValue />
 
 ```tsx
 
@@ -36,7 +35,7 @@ Example:
 
 The label prop is used to provide a descriptive label or text for the Progress. It is typically used to indicate the task or operation being represented by the Progress.
 
-<ProgressPlayGround.Label />
+<ProgressLabel />
 
 ```tsx
 // ProgressBar
@@ -58,7 +57,7 @@ The size prop is used to specify the size of the ProgressBar component. It suppo
 
 Example:
 
-<ProgressPlayGround.Sizes />
+<ProgressSizes />
 
 ```tsx
 
@@ -110,7 +109,7 @@ The color prop is used to specify the color of the ProgressBar component. It sup
 
 Example:
 
-<ProgressPlayGround.Colors />
+<ProgressColors />
 
 ```tsx
 // ProgressBar
@@ -157,7 +156,7 @@ The min prop is used to specify the minimum value of the range for the ProgressB
 
 Example:
 
-<ProgressPlayGround.Min />
+<ProgressMin />
 
 ```tsx
 // ProgressBar
@@ -177,7 +176,7 @@ The max prop is used to specify the maximum value of the range for the ProgressB
 
 Example:
 
-<ProgressPlayGround.Max />
+<ProgressMax />
 
 ```tsx
 // ProgressBar

@@ -1,0 +1,55 @@
+.prose {
+  --sh-class: var(--primary-11);
+  --sh-identifier: var(--success-11);
+  --sh-sign: var(--surface-11);
+  --sh-property: var(--secondary-11);
+  --sh-entity: var(--warning-11);
+  --sh-jsxliterals: var(--surface-12);
+  --sh-string: var(--success-10);
+  --sh-keyword: var(--danger-11);
+  --sh-comment: var(--surface-9);
+
+  & :is(ul, ol) > * + * {
+    margin-top: var(--space-2xs);
+  }
+
+  ul,
+  ol {
+    margin-left: 0.5rem;
+  }
+}
+
+pre:has(.code--section) {
+  background-color: var(--surface-3);
+  padding: 1rem;
+  font-size: 0.925rem;
+  overflow: auto;
+  max-height: 80vh;
+}
+
+.code--section {
+  max-width: 100%;
+  counter-reset: sh-line-number;
+  font-family: 'dank mono', 'operator mono', inconsolata, 'fira mono', ui-monospace, 'sf mono', monaco,
+    'droid sans mono', 'source code pro', monospace;
+}
+
+.sh__line::before {
+  counter-increment: sh-line-number 1;
+  content: counter(sh-line-number);
+  margin-inline-end: 1.25rem;
+  color: hsl(0deg 0% 64%);
+  font-size: 0.875rem;
+  vertical-align: middle;
+}
+
+.sh__line {
+  border-inline-start: 4px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sh__token--break {
+  height: 0;
+  font-size: 0px;
+}

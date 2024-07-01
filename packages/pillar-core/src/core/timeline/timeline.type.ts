@@ -19,8 +19,8 @@ export interface TimelineItemProps extends TimelineBase {
   bullet?: ReactElement
 }
 
-export interface ContextProps extends TimelineBase {}
+export interface TimelineContextProps extends TimelineBase {}
 
-export interface TimelineContextProviderProps extends ContextProps {
+export interface TimelineContextProviderProps extends TimelineContextProps {
   children: ReactNode
 }
