@@ -1,14 +1,16 @@
 import React from 'react'
-import { Meta, StoryFn } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Text } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Text> = {
   title: 'Components/Text',
   component: Text,
   args: {
     children: 'Nice To Meet You',
   },
-} as Meta<typeof Text>
+}
+
+export default meta
 
 export function TextSizes() {
   return (

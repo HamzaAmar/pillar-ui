@@ -1,16 +1,18 @@
 import React from 'react'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { User } from '@pillar-ui/icons'
 import { Flex, Input, Button } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Input> = {
   title: 'Components/Form/Input',
   component: Input,
   args: {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as Meta<typeof Input>
+}
+
+export default meta
 
 export const FilledInput = () => {
   return (

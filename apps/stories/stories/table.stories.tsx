@@ -1,72 +1,72 @@
 import React from 'react'
-import { Meta, StoryFn } from '@storybook/react'
-import { Button, Flex, Heading, Table } from '@pillar-ui/core'
+import { Meta } from '@storybook/react'
+import { Button, Flex, Heading, Table, TableColumn, TableRow } from '@pillar-ui/core'
 import type { TableProps } from '@pillar-ui/core'
 import { ArrowDown } from '@pillar-ui/icons'
 
-export default {
+const meta: Meta<typeof Table> = {
   title: 'Components/Table',
   component: Table,
-} as Meta<typeof Table>
+}
 
-export const NormalTableExample = {
-  render: (props: Partial<TableProps>) => {
-    return (
-      <Table {...props}>
-        <Table.Row type="head">
-          <Table.Column as="th">ID</Table.Column>
-          <Table.Column as="th">User</Table.Column>
-          <Table.Column as="th">Followers</Table.Column>
-          <Table.Column as="th">Following</Table.Column>
-          <Table.Column as="th">Action</Table.Column>
-        </Table.Row>
-        <Table.Row>
-          <Table.Column weight="medium">#HE1234</Table.Column>
-          <Table.Column>Samir Lamir</Table.Column>
-          <Table.Column weight="medium">15.3K</Table.Column>
-          <Table.Column weight="medium">1</Table.Column>
-          <Table.Column>
-            <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
-              Accept
-            </Button>
-          </Table.Column>
-        </Table.Row>
-        <Table.Row>
-          <Table.Column weight="medium">#HE12sd</Table.Column>
-          <Table.Column>Kent Lempo</Table.Column>
-          <Table.Column weight="medium">19.3K</Table.Column>
-          <Table.Column weight="medium">190.9K</Table.Column>
-          <Table.Column>
-            <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
-              Accept
-            </Button>
-          </Table.Column>
-        </Table.Row>
-        <Table.Row>
-          <Table.Column weight="medium">#HE15434</Table.Column>
-          <Table.Column>Ryan Dod</Table.Column>
-          <Table.Column weight="medium">2.5K</Table.Column>
-          <Table.Column weight="medium">20K</Table.Column>
-          <Table.Column>
-            <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
-              Accept
-            </Button>
-          </Table.Column>
-        </Table.Row>
-        <Table.Row>
-          <Table.Column weight="medium">#HE12s56</Table.Column>
-          <Table.Column>Remix Run</Table.Column>
-          <Table.Column weight="medium">20.5K</Table.Column>
-          <Table.Column weight="medium">27.8K</Table.Column>
-          <Table.Column>
-            <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
-              Accept
-            </Button>
-          </Table.Column>
-        </Table.Row>
-      </Table>
-    )
-  },
+export default meta
+
+export const NormalTableExample = (props: Partial<TableProps>) => {
+  return (
+    <Table {...props}>
+      <TableRow type="head">
+        <TableColumn as="th">ID</TableColumn>
+        <TableColumn as="th">User</TableColumn>
+        <TableColumn as="th">Followers</TableColumn>
+        <TableColumn as="th">Following</TableColumn>
+        <TableColumn as="th">Action</TableColumn>
+      </TableRow>
+      <TableRow>
+        <TableColumn weight="medium">#HE1234</TableColumn>
+        <TableColumn>Samir Lamir</TableColumn>
+        <TableColumn weight="medium">15.3K</TableColumn>
+        <TableColumn weight="medium">1</TableColumn>
+        <TableColumn>
+          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
+            Accept
+          </Button>
+        </TableColumn>
+      </TableRow>
+      <TableRow>
+        <TableColumn weight="medium">#HE12sd</TableColumn>
+        <TableColumn>Kent Lempo</TableColumn>
+        <TableColumn weight="medium">19.3K</TableColumn>
+        <TableColumn weight="medium">190.9K</TableColumn>
+        <TableColumn>
+          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
+            Accept
+          </Button>
+        </TableColumn>
+      </TableRow>
+      <TableRow>
+        <TableColumn weight="medium">#HE15434</TableColumn>
+        <TableColumn>Ryan Dod</TableColumn>
+        <TableColumn weight="medium">2.5K</TableColumn>
+        <TableColumn weight="medium">20K</TableColumn>
+        <TableColumn>
+          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
+            Accept
+          </Button>
+        </TableColumn>
+      </TableRow>
+      <TableRow>
+        <TableColumn weight="medium">#HE12s56</TableColumn>
+        <TableColumn>Remix Run</TableColumn>
+        <TableColumn weight="medium">20.5K</TableColumn>
+        <TableColumn weight="medium">27.8K</TableColumn>
+        <TableColumn>
+          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
+            Accept
+          </Button>
+        </TableColumn>
+      </TableRow>
+    </Table>
+  )
 }
 
 export const Playground = {}

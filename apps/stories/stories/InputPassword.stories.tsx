@@ -1,9 +1,9 @@
 import React from 'react'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Close, OpenSource, Lock, LockOff, User } from '@pillar-ui/icons'
 import { Flex, FormController, InputPassword } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof InputPassword> = {
   title: 'Components/Form/InputPassword',
   component: InputPassword,
   args: {
@@ -12,6 +12,7 @@ export default {
   },
 } as Meta<typeof InputPassword>
 
+export default meta
 export const FilledInput = () => {
   return (
     <Flex gap="sm" direction="column">

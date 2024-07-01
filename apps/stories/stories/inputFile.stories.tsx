@@ -1,15 +1,17 @@
 import React from 'react'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Flex, InputFile } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof InputFile> = {
   title: 'Components/Form/InputFile',
   component: InputFile,
   args: {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as Meta<typeof InputFile>
+}
+
+export default meta
 
 export const FilledInputFile = () => {
   return (

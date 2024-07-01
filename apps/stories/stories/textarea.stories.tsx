@@ -1,9 +1,9 @@
 import React from 'react'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { User } from '@pillar-ui/icons'
 import { Flex, Textarea } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Textarea> = {
   title: 'Components/Form/Textarea',
   component: Textarea,
   args: {
@@ -11,6 +11,8 @@ export default {
     placeholder: 'Type your Name',
   },
 } as Meta<typeof Textarea>
+
+export default meta
 
 export const FilledTextarea = () => {
   return (

@@ -1,12 +1,12 @@
 import React from 'react'
-import { StoryFn, Meta } from '@storybook/react'
-import { Radio, Flex } from '@pillar-ui/core'
+import { StoryObj, Meta } from '@storybook/react'
+import { Radio, Flex, RadioGroup } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Radio> = {
   title: 'Components/Radio',
   component: Radio,
   args: {
-    Label: 'Choose Your Gender',
+    label: 'Choose Your Gender',
   },
   argTypes: {
     children: {
@@ -15,7 +15,9 @@ export default {
       },
     },
   },
-} as Meta<typeof Radio>
+}
+
+export default meta
 
 export function RadioColors() {
   return (
@@ -134,40 +136,40 @@ export function RadioStates() {
 
 export function RadioGroupHorizontal() {
   return (
-    <Radio.Group direction="row" label="Choose you Color">
+    <RadioGroup direction="row" label="Choose you Color">
       <Radio name="red" label="Red" />
       <Radio name="red" label="Red" />
       <Radio name="red" label="Red" />
       <Radio name="red" label="Red" />
-    </Radio.Group>
+    </RadioGroup>
   )
 }
 
 export function RadioGroupVertical() {
   return (
-    <Radio.Group label="Choose you Color">
+    <RadioGroup label="Choose you Color">
       <Radio name="red" label="Red" />
       <Radio name="red" label="Red" />
       <Radio name="red" label="Red" />
       <Radio name="red" label="Red" />
-    </Radio.Group>
+    </RadioGroup>
   )
 }
 
 export function RadioGroupVl() {
   return (
-    <Radio.Group name="red" label="Choose you Color" showLabel size="lg" color="danger">
+    <RadioGroup name="red" label="Choose you Color" showLabel size="lg" color="danger">
       <Radio label="Nice" />
       <Radio label="To Meet" />
       <Radio label="Here IN " />
       <Radio label="Morocco" />
-    </Radio.Group>
+    </RadioGroup>
   )
 }
 
 export function RadioGroupLongText() {
   return (
-    <Radio.Group name="red" label="Choose you Color" showLabel size="md" color="danger">
+    <RadioGroup name="red" label="Choose you Color" showLabel size="md" color="danger">
       <Radio
         label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora saepe laborum, iste ad eaque animi laboriosam officiis architecto at, esse magnam eos dolorem! Culpa odit temporibus ab excepturi, fugiat a?
 "
@@ -184,8 +186,8 @@ export function RadioGroupLongText() {
         label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora saepe laborum, iste ad eaque animi laboriosam officiis architecto at, esse magnam eos dolorem! Culpa odit temporibus ab excepturi, fugiat a?
 "
       />
-    </Radio.Group>
+    </RadioGroup>
   )
 }
 
-export const Playground = {}
+export const Playground: StoryObj<typeof Radio> = {}

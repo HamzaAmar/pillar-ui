@@ -1,14 +1,16 @@
 import React from 'react'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Flex, PinInput } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof PinInput> = {
   title: 'Components/Form/PinInput',
   component: PinInput,
   args: {
     'aria-label': 'Nice',
   },
-} as Meta<typeof PinInput>
+}
+
+export default meta
 
 export const FilledPinInput = () => {
   return (

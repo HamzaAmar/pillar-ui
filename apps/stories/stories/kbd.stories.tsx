@@ -1,14 +1,16 @@
 import React from 'react'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Flex, Kbd } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Kbd> = {
   title: 'Components/Kbd',
   component: Kbd,
   args: {
     title: 'Esc',
   },
-} as Meta<typeof Kbd>
+}
+
+export default meta
 
 export const KbdColors = () => {
   return (

@@ -1,12 +1,14 @@
 import React from 'react'
-import { Meta, StoryFn } from '@storybook/react'
+import { Meta } from '@storybook/react'
 
 import { Spinner, Flex } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Spinner> = {
   title: 'Components/Spinner',
   component: Spinner,
-} as Meta<typeof Spinner>
+}
+
+export default meta
 
 export function SpinnerColors() {
   return (

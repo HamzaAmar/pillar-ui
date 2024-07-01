@@ -3,12 +3,13 @@ import { Button, Flex, Paper, Text } from '@pillar-ui/core'
 import { Meta, StoryObj } from '@storybook/react'
 import { Ballon, Bluetooth, Eight, Eye, Facebook, Github, Plus, ThumbDown, ThumbUp, X } from '@pillar-ui/icons'
 
-export default {
+const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   args: {
     children: 'Hello',
   },
-} as Meta<typeof Button>
+}
+export default meta
 
 const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text'] as const
 

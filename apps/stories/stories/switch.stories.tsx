@@ -1,14 +1,16 @@
 import React, { CSSProperties, useState } from 'react'
-import { Meta, StoryFn } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Switch, Flex, Button, Heading } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Switch> = {
   title: 'Components/Switch',
   component: Switch,
   args: {
     label: 'Helllo',
   },
-} as Meta<typeof Switch>
+}
+
+export default meta
 
 export function SwitchSizes() {
   return (

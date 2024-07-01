@@ -1,42 +1,44 @@
 import React from 'react'
 import { Cross } from '@pillar-ui/icons'
-import { Meta, StoryFn } from '@storybook/react'
+import { Meta } from '@storybook/react'
 
-import { Avatar, Flex, Grid, Heading, Text, Timeline } from '@pillar-ui/core'
+import { Avatar, Flex, Grid, Heading, Text, Timeline, TimelineItem } from '@pillar-ui/core'
 import type { TimelineItemProps } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Timeline> = {
   title: 'Components/Timeline',
   component: Timeline,
 } as Meta<typeof Timeline>
 
+export default meta
+
 const Items = (props: Omit<TimelineItemProps, 'children'>) => {
   return (
     <>
-      <Timeline.Item {...props}>
+      <TimelineItem {...props}>
         <Heading size="xs">Hello</Heading>
         <Text size="xs">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
+      </TimelineItem>
+      <TimelineItem {...props}>
         <Heading size="xs">Hello</Heading>
         <Text size="xs">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
+      </TimelineItem>
+      <TimelineItem {...props}>
         <Heading size="xs">Hello</Heading>
         <Text size="xs">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
+      </TimelineItem>
     </>
   )
 }
@@ -60,7 +62,7 @@ export const TimelineColor = () => {
       <Timeline color="warning">
         <Items />
       </Timeline>
-      <Timeline color="purple">
+      <Timeline color="secondary">
         <Items />
       </Timeline>
     </Flex>
@@ -136,38 +138,38 @@ export const TimelineVariant = () => {
         <Items />
       </Timeline>
       <Timeline variant="dashed">
-        <Timeline.Item variant="solid">
+        <TimelineItem variant="solid">
           <Heading size="xs">Hello</Heading>
           <Text size="xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
-        </Timeline.Item>
-        <Timeline.Item variant="dotted">
+        </TimelineItem>
+        <TimelineItem variant="dotted">
           <Heading size="xs">Hello</Heading>
           <Text size="xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
-        </Timeline.Item>
-        <Timeline.Item>
+        </TimelineItem>
+        <TimelineItem>
           <Heading size="xs">Hello</Heading>
           <Text size="xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
-        </Timeline.Item>
-        <Timeline.Item>
+        </TimelineItem>
+        <TimelineItem>
           <Heading size="xs">Hello</Heading>
           <Text size="xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
-        </Timeline.Item>
+        </TimelineItem>
       </Timeline>
     </Flex>
   )
@@ -176,15 +178,15 @@ export const TimelineVariant = () => {
 export const TimelineCustomBullet = () => {
   return (
     <Timeline>
-      <Timeline.Item bullet={<Cross />}>
+      <TimelineItem bullet={<Cross />}>
         <Heading size="xs">Hello</Heading>
         <Text size="xs">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
-      <Timeline.Item
+      </TimelineItem>
+      <TimelineItem
         bullet={<Avatar variant="image" size="xs" image="https://picsum.photos/id/152/40/40" title="hello" />}
       >
         <Heading size="xs">Hello</Heading>
@@ -193,23 +195,23 @@ export const TimelineCustomBullet = () => {
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
-      <Timeline.Item>
+      </TimelineItem>
+      <TimelineItem>
         <Heading size="xs">Hello</Heading>
         <Text size="xs">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
-      <Timeline.Item>
+      </TimelineItem>
+      <TimelineItem>
         <Heading size="xs">Hello</Heading>
         <Text size="xs">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
-      </Timeline.Item>
+      </TimelineItem>
     </Timeline>
   )
 }

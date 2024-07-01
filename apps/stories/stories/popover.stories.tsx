@@ -1,15 +1,17 @@
 import React from 'react'
-import { Meta, StoryFn } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Paper, Flex } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Paper> = {
   title: 'Components/popover',
   component: Paper,
   args: {
-    message:
+    children:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum quidem facilis harum velit veritatis! Voluptatum, quos ipsa! Magnam exercitationem repellat, aspernatur porro optio tempore vero dolorem suscipit vitae delectus.',
   },
-} as Meta<typeof Paper>
+}
+
+export default meta
 
 export function PaperBackground() {
   return (
@@ -51,30 +53,26 @@ export function PaperPadding() {
         </Paper>
       </Flex>
       <Flex>
-        <Paper p="2xs" pt="lg" background="danger">
+        <Paper p="2xs" background="danger">
           Hello
         </Paper>
-        <Paper p="2xs" pr="lg" background="warning">
+        <Paper p="2xs" background="warning">
           Hello
         </Paper>
-        <Paper p="2xs" pb="lg" background="success">
+        <Paper p="2xs" background="success">
           Hello
         </Paper>
-        <Paper p="2xs" pl="lg" background="surface">
+        <Paper p="2xs" background="surface">
           Hello
         </Paper>
-        <Paper p="2xs" plr="lg" background="secondary">
+        <Paper p="2xs" background="secondary">
           Hello
         </Paper>
-        <Paper p="2xs" ptb="lg" background="primary">
+        <Paper p="2xs" background="primary">
           Hello
         </Paper>
-        <Paper ptb="lg" background="primary">
-          Hello
-        </Paper>
-        <Paper plr="lg" background="primary">
-          Hello
-        </Paper>
+        <Paper background="primary">Hello</Paper>
+        <Paper background="primary">Hello</Paper>
       </Flex>
     </div>
   )
@@ -166,19 +164,19 @@ export function PaperWidths() {
       <Paper background="danger-4" color="danger">
         Hello
       </Paper>
-      <Paper width="100px" background="success-4" color="success">
+      <Paper width="half" background="success-4" color="success">
         Hello
       </Paper>
-      <Paper width="50%" background="warning-4" color="warning">
+      <Paper width="25-char" background="warning-4" color="warning">
         Hello
       </Paper>
-      <Paper width="15rem" background="secondary-4" color="secondary">
+      <Paper width="45-char" background="secondary-4" color="secondary">
         Hello
       </Paper>
-      <Paper width="min(100px, 10rem)" background="surface-4" color="surface">
+      <Paper width="75-char" background="surface-4" color="surface">
         Hello
       </Paper>
-      <Paper width="100vw" background="primary-4" color="primary">
+      <Paper width="60-char" background="primary-4" color="primary">
         Hello
       </Paper>
     </div>
@@ -210,40 +208,4 @@ export function PaperHeights() {
   )
 }
 
-export function PaperBorders() {
-  return (
-    <div className="l_flow__md">
-      <Paper borderStyle="dotted">Dotted</Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="top">
-        Border Top
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="right">
-        Border Right
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="bottom">
-        Border Bottom
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="left">
-        Border Left
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="block">
-        Border Block
-      </Paper>
-      <Paper borderStyle="dotted" p="sm" borderPosition="inline">
-        Border Inline
-      </Paper>
-
-      <Paper borderStyle="dashed">Hello</Paper>
-      <Paper borderColor="danger-9">Hello</Paper>
-      <Paper borderColor="warning-9">Hello</Paper>
-      <Paper borderWidth="4px">Hello</Paper>
-      <Paper background="primary-4" color="primary">
-        Hello
-      </Paper>
-    </div>
-  )
-}
-
-export const Playground = {
-  args: {},
-}
+export const Playground = {}

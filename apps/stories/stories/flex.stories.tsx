@@ -1,15 +1,16 @@
 import React from 'react'
-import type { StoryFn, Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 
 import { Flex, Paper } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Flex> = {
   title: 'Components/Flex',
   component: Flex,
   args: {
     children: 'Hello world',
   },
-} as Meta<typeof Flex>
+}
+export default meta
 const Box = (props: any) => {
   return (
     <Paper

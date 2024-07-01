@@ -1,11 +1,13 @@
 import React, { CSSProperties } from 'react'
-import type { Meta, StoryFn } from '@storybook/react'
-import { Blockquote, Flex, Paper } from '@pillar-ui/core'
+import type { Meta, StoryObj } from '@storybook/react'
+import { Blockquote, BlockquoteCite, Flex, Paper } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Blockquote> = {
   title: 'Components/Blockquote',
   component: Blockquote,
-} as Meta<typeof Blockquote>
+}
+
+export default meta
 
 export const BlockquoteSize = () => {
   return (
@@ -118,28 +120,28 @@ export const BlockquoteColor = () => {
   )
 }
 
-export const BlockquoteCite = () => {
+export const BlockquoteWithCite = () => {
   return (
     <div className="l_flow__md">
       <Blockquote color="danger">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
-        <Blockquote.Cite title="Hello world" />
+        <BlockquoteCite title="Hello world" />
       </Blockquote>
 
       <Blockquote color="danger">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
-        <Blockquote.Cite title="Hello world" align="end" />
+        <BlockquoteCite title="Hello world" align="end" />
       </Blockquote>
 
       <Blockquote color="danger">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
-        <Blockquote.Cite title="Hello world" align="center" />
+        <BlockquoteCite title="Hello world" align="center" />
       </Blockquote>
     </div>
   )
@@ -152,13 +154,13 @@ export const BlockquoteCustomStyle = () => {
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
-        <Blockquote.Cite title="Hello world" align="end" />
+        <BlockquoteCite title="Hello world" align="end" />
       </Blockquote>
       <Blockquote style={{ background: 'red' }} color="danger">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
-        <Blockquote.Cite title="Hello world" />
+        <BlockquoteCite title="Hello world" />
       </Blockquote>
     </Flex>
   )
@@ -293,4 +295,4 @@ export function ButtonCornerDefaults() {
   )
 }
 
-export const Playground = {}
+export const Playground: StoryObj<typeof Blockquote> = {}

@@ -1,16 +1,18 @@
 import React, { CSSProperties, useState } from 'react'
-import { Meta, StoryFn } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 import { Alert, Button, Flex, Paper } from '@pillar-ui/core'
 import { Check, CircleCheck, CircleInfo, CircleWarning } from '@pillar-ui/icons'
 
-export default {
+const meta: Meta<typeof Alert> = {
   title: 'Components/Alert',
   component: Alert,
   args: {
+    title: 'hello',
     message:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum quidem facilis harum velit veritatis! Voluptatum, quos ipsa! Magnam exercitationem repellat, aspernatur porro optio tempore vero dolorem suscipit vitae delectus.',
   },
-} as Meta<typeof Alert>
+}
+export default meta
 
 function AlertBase({
   title = 'hello',
@@ -265,6 +267,4 @@ export function AlertCornerDefaults() {
   )
 }
 
-export const Playground = {
-  args: {},
-}
+export const Playground: StoryObj<typeof Alert> = {}

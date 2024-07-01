@@ -1,16 +1,17 @@
 import React, { CSSProperties, useRef, useState } from 'react'
 import { Check, Plus, Plane, ChevronDown, Apple, Alien, LetterSpacing, SuperScript } from '@pillar-ui/icons'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Badge, Button, Flex, Paper } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Badge> = {
   title: 'Components/Badge',
   component: Badge,
   argTypes: {
     number: { if: { arg: 'type', eq: 'number' } },
     max: { if: { arg: 'type', eq: 'number' } },
   },
-} as Meta<typeof Badge>
+}
+export default meta
 
 export const BadgeSize = () => {
   return (
@@ -347,4 +348,4 @@ export function ButtonCornerDefaults() {
   )
 }
 
-export const Playground = {}
+export const Playground: StoryObj<typeof Badge> = {}

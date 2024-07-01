@@ -1,15 +1,14 @@
 import React from 'react'
 import { Pagination } from '@pillar-ui/core'
 
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 
-export default {
+const meta: Meta<typeof Pagination> = {
   title: 'Components/Pagination',
   component: Pagination,
-  args: {
-    children: 'Nice To Meet You',
-  },
-} as Meta<typeof Pagination>
+}
+
+export default meta
 export function PaginationColor() {
   return (
     <div>

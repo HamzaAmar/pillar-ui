@@ -49,10 +49,10 @@
     "css-build:watch": "yarn css-build --watch --verbose",
     "dev": "npm-run-all -p -r js-build:watch css-build:watch",
     "lint": "eslint \"src/**/*.ts*\"",
-    "clean": "npm-run-all --parallel remove:*",
-    "remove:turbo": "rm -rf .turbo",
-    "remove:node_modules": "rm -rf node_modules",
-    "remove:dist": "rm -rf dist",
+    "clean:turbo": "rimraf .turbo",
+    "clean:modules": "rimraf node_modules",
+    "clean:dist": "rimraf dist",
+    "clean": "npm-run-all clean:turbo clean:modules clean:dist",
     "type:check": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -76,6 +76,7 @@
     "postcss-import": "^15.1.0",
     "postcss-nested": "^6.0.1",
     "react": "^18.1.0",
+    "rimraf": "^5.0.7",
     "sass": "^1.59.2",
     "terser": "^5.19.1",
     "tsup": "^8.0.1",

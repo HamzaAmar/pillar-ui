@@ -2,13 +2,15 @@ import React from 'react'
 import { Meta, StoryFn } from '@storybook/react'
 import { Link, Text } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof Link> = {
   title: 'Components/Link',
   component: Link,
   args: {
     children: 'Nice To Meet You',
   },
-} as Meta<typeof Link>
+}
+
+export default meta
 
 export function LinkSizes() {
   return (

@@ -1,16 +1,17 @@
 import * as React from 'react'
-import { Meta, StoryFn } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Chips, Flex, Button, Paper } from '@pillar-ui/core'
 import { DotsHorizontal, Plus } from '@pillar-ui/icons'
 
-export default {
+const meta: Meta<typeof Chips> = {
   title: 'Components/Chips',
   component: Chips,
   args: {
     children: 'Hello world',
   },
-} as Meta<typeof Chips>
+}
 
+export default meta
 export const Playground = {}
 
 export const ChipsColor = () => (

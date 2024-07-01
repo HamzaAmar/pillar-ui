@@ -1,16 +1,18 @@
 import React from 'react'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { User } from '@pillar-ui/icons'
 import { Flex, InputSearch } from '@pillar-ui/core'
 
-export default {
+const meta: Meta<typeof InputSearch> = {
   title: 'Components/Form/InputSearch',
   component: InputSearch,
   args: {
     'aria-label': 'Nice',
     placeholder: 'Type your Name',
   },
-} as Meta<typeof InputSearch>
+}
+
+export default meta
 
 export const FilledInput = () => {
   return (
