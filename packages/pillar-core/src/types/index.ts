@@ -7,7 +7,7 @@ type Size = '3xs' | '2xs' | CommonSize | '2xl' | '3xl'
  * @typedef {Size} Size
  */
 
-type Color = 'info' | 'danger' | 'success' | 'secondary' | 'warning' | 'primary' | 'surface' | 'opacity' | undefined
+type Color = 'info' | 'danger' | 'success' | 'secondary' | 'warning' | 'primary' | 'bg' | 'opacity' | undefined
 
 /**
  * Represents the color of a component.
@@ -23,8 +23,9 @@ type Gradient = Color | 'mixed1' | 'mixed2' | 'mixed3' | 'mixed4' | undefined
 
 /* The Difference Between circle and full circle use 50% and the other use 1000px */
 
-type CornerHand = 'hand-1' | 'hand-2' | 'hand-3' | 'hand-4' | 'hand-5' | 'hand-6'
-type CornerBlob = 'blob-1' | 'blob-2' | 'blob-3' | 'blob-4' | 'blob-5'
+// TODO: Add jsdoc to this types
+type CornerHand = 'h-1' | 'h-2' | 'h-3' | 'h-4' | 'h-5' | 'h-6'
+type CornerBlob = 'b-1' | 'b-2' | 'b-3' | 'b-4' | 'b-5'
 
 type Corner = 'sharp' | CommonSize | 'circle' | 'full' | undefined
 
