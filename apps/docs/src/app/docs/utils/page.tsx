@@ -10,8 +10,8 @@ export default function utils() {
     <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
       {utils.map((util) => (
         <Link href={`utils/${util.slug}`} key={util.slug}>
-          <Paper height="5rem" corner="sm" background="surface-3" p="xl" className="u_center">
-            <Text size="lg" weight="medium" color="surface">
+          <Paper height="5rem" corner="sm" background="bg-3" p="xl" className="u_center">
+            <Text size="lg" weight="medium" color="bg">
               {util.title}
             </Text>
           </Paper>

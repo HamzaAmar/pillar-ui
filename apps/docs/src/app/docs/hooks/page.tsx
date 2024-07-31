@@ -10,8 +10,8 @@ export default function Hooks() {
     <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
       {hooks.map((hook) => (
         <Link href={`utils/${hook.slug}`} key={hook.slug}>
-          <Paper height="5rem" corner="sm" background="surface-3" p="xl" className="u_center">
-            <Text size="lg" weight="medium" color="surface">
+          <Paper height="5rem" corner="sm" background="bg-3" p="xl" className="u_center">
+            <Text size="lg" weight="medium" color="bg">
               {hook.title}
             </Text>
           </Paper>

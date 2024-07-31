@@ -10,8 +10,8 @@ async function Page() {
     <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
       {components.map((component) => (
         <Link href={`components/${component.slug}`} key={component.slug}>
-          <Paper height="5rem" corner="sm" background="surface-3" p="xl" className="u_center">
-            <Text size="lg" weight="medium" color="surface">
+          <Paper height="5rem" corner="sm" background="bg-3" p="xl" className="u_center">
+            <Text size="lg" weight="medium" color="bg">
               {component.title}
             </Text>
           </Paper>

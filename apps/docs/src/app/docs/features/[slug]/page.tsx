@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: SlugParamsProps): Promise<Met
       title,
       description,
       type: 'article',
-      url: `${DOMAIN}/features/${slug}`,
+      url: `${DOMAIN}/docs/features/${slug}`,
     },
     twitter: {
       card: 'summary_large_image',
