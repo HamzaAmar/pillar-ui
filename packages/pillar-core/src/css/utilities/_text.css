@@ -1,16 +1,16 @@
-.u_transform__uppercase {
+.u_t__uppercase {
   text-transform: uppercase;
 }
 
-.u_transform__lowercase {
+.u_t__lowercase {
   text-transform: lowercase;
 }
 
-.u_transform__capitalize {
+.u_t__capitalize {
   text-transform: capitalize;
 }
 
-.u_transform__first-letter-only::first-letter {
+.u_t__first-letter-only::first-letter {
   text-transform: uppercase;
 }
 
@@ -18,19 +18,19 @@
       Align Text Style Section
   */
 
-.u_align__center {
+.u_t__center {
   text-align: center;
 }
 
-.u_align__end {
+.u_t__end {
   text-align: end;
 }
 
-.u_align__start {
+.u_t__start {
   text-align: start;
 }
 
-.u_align__justify {
+.u_t__justify {
   text-align: justify;
 }
 
@@ -38,15 +38,15 @@
       Align Text Decoration Section
   */
 
-.u_decoration__overline {
+.u_t__over {
   text-decoration: overline;
 }
 
-.u_decoration__underline {
+.u_t__under {
   text-decoration: underline;
 }
 
-.u_decoration__line-through {
+.u_t__through {
   text-decoration: line-through;
 }
 

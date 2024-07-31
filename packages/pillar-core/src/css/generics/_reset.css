@@ -64,10 +64,10 @@ a {
 }
 
 body {
-  color: var(--surface-12);
+  color: var(--bg-12);
 
   /* // Please Make Sure If you want to update This Background color you need to update .storybook/preview.js */
-  background-color: var(--surface-1);
+  background-color: var(--bg-1);
   -webkit-font-smoothing: antialiased;
   font-family: var(--custom-body-font, var(--body-font));
   font-weight: 400;

@@ -1,75 +1,75 @@
-.u_corner-sharp {
+.u_rad-sharp {
   border-radius: 0;
 }
 
-.u_corner-xs {
-  border-radius: var(--corner-xs);
+.u_rad-xs {
+  border-radius: var(--rad-xs);
 }
 
-.u_corner-sm {
-  border-radius: var(--corner-sm);
+.u_rad-sm {
+  border-radius: var(--rad-sm);
 }
 
-.u_corner-md {
-  border-radius: var(--corner-md);
+.u_rad-md {
+  border-radius: var(--rad-md);
 }
 
-.u_corner-lg {
-  border-radius: var(--corner-lg);
+.u_rad-lg {
+  border-radius: var(--rad-lg);
 }
 
-.u_corner-xl {
-  border-radius: var(--corner-xl);
+.u_rad-xl {
+  border-radius: var(--rad-xl);
 }
 
-.u_corner-circle {
-  border-radius: var(--corner-round);
+.u_rad-circle {
+  border-radius: var(--rad-round);
 }
 
-.u_corner-full {
-  border-radius: var(--corner-full);
+.u_rad-full {
+  border-radius: var(--rad-full);
 }
 
-.u_corner-hand-1 {
-  border-radius: var(---hand-);
+.u_rad-h-1 {
+  border-radius: var(--rad-h-1);
 }
 
-.u_corner-hand-2 {
-  border-radius: var(--corner-hand-2);
+.u_rad-h-2 {
+  border-radius: var(--rad-h-2);
 }
 
-.u_corner-hand-3 {
-  border-radius: var(--corner-hand-3);
+.u_rad-h-3 {
+  border-radius: var(--rad-h-3);
 }
 
-.u_corner-hand-4 {
-  border-radius: var(--corner-hand-4);
+.u_rad-h-4 {
+  border-radius: var(--rad-h-4);
 }
 
-.u_corner-hand-5 {
-  border-radius: var(--corner-hand-5);
+.u_rad-h-5 {
+  border-radius: var(--rad-h-5);
 }
 
-.u_corner-hand-6 {
-  border-radius: var(--corner-hand-6);
+.u_rad-h-6 {
+  border-radius: var(--rad-h-6);
 }
 
-.u_corner-blob-1 {
-  border-radius: var(--corner-blob-1);
+.u_rad-b-1 {
+  border-radius: var(--rad-b-1);
 }
 
-.u_corner-blob-2 {
-  border-radius: var(--corner-blob-2);
+.u_rad-b-2 {
+  border-radius: var(--rad-b-2);
 }
 
-.u_corner-blob-3 {
-  border-radius: var(--corner-blob-3);
+.u_rad-b-3 {
+  border-radius: var(--rad-b-3);
 }
 
-.u_corner-blob-4 {
-  border-radius: var(--corner-blob-4);
+.u_rad-b-4 {
+  border-radius: var(--rad-b-4);
 }
 
-.u_corner-blob-5 {
-  border-radius: var(--corner-blob-5);
+.u_rad-b-5 {
+  border-radius: var(--rad-b-5);
 }

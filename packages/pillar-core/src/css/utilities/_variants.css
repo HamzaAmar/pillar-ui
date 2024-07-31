@@ -1,28 +1,28 @@
 .u_solid,
 .u_shadow {
-  background-color: var(--color-shared-9);
+  background-color: var(--clr-9);
   color: white;
 }
 
 .u_shadow {
-  box-shadow: 0px 4px 12px -4px var(--color-shared-8);
+  box-shadow: 0px 4px 12px -4px var(--clr-8);
 }
 
 :is(.u_outline, .u_soft, .u_mixed, .u_text, .u_link) {
-  color: var(--color-shared-11);
+  color: var(--clr-11);
 }
 
 .u_outline {
-  border-color: var(--color-shared-11);
+  border-color: var(--clr-11);
 }
 
 .u_soft {
-  background-color: var(--color-shared-3);
+  background-color: var(--clr-3);
 }
 
 .u_mixed {
-  border-color: var(--color-shared-7);
-  background-color: var(--color-shared-3);
+  border-color: var(--clr-7);
+  background-color: var(--clr-3);
 }
 
 .u_text {

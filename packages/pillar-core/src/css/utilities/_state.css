@@ -1,10 +1,10 @@
-:is(.btn, .switch):focus-visible,
-:is(.radio-container, .checkbox-container, .breadcrumb--item, .step--button):focus-within {
-  outline: 2px dashed var(--color-shared-9, var(--primary-9));
+:is(.b-u, .s-w):focus-visible,
+:is(.r-a_cnt, .c-h_cnt, .b-r_itm, .step--button):focus-within {
+  outline: 2px dashed var(--clr-9, var(--pri-9));
   outline-offset: 2px;
 }
 
-:is(.step--button, .accordion--button, .field-wrapper, .password-input--button):focus-visible {
-  outline: 2px dashed var(--color-shared-9, var(--primary-9));
+:is(.step--button, .a-c_btn, .fi-p-btn):focus-visible {
+  outline: 2px dashed var(--clr-9, var(--pri-9));
   outline-offset: -2px;
 }

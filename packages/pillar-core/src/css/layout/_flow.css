@@ -1,33 +1,33 @@
 .l_flow__3xs > * + * {
-  margin-top: var(--space-3xs);
+  margin-top: var(--s-3xs);
 }
 .l_flow__2xs > * + * {
-  margin-top: var(--space-2xs);
+  margin-top: var(--s-2xs);
 }
 
 .l_flow__xs > * + * {
-  margin-top: var(--space-xs);
+  margin-top: var(--s-xs);
 }
 
 .l_flow__sm > * + * {
-  margin-top: var(--space-sm);
+  margin-top: var(--s-sm);
 }
 
 .l_flow__md > * + * {
-  margin-top: var(--space-md);
+  margin-top: var(--s-md);
 }
 
 .l_flow__lg > * + * {
-  margin-top: var(--space-lg);
+  margin-top: var(--s-lg);
 }
 .l_flow__xl > * + * {
-  margin-top: var(--space-xl);
+  margin-top: var(--s-xl);
 }
 
 .l_flow__2xl > * + * {
-  margin-top: var(--space-2xl);
+  margin-top: var(--s-2xl);
 }
 
 .l_flow__3xl > * + * {
-  margin-top: var(--space-3xl);
+  margin-top: var(--s-3xl);
 }

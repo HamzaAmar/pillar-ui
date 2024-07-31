@@ -1,27 +1,27 @@
 /* //Spacing Style Section Start */
-.u_spacing-2xs {
+.u_space-2xs {
   --spacing: clamp(2px, 1.2px + 0.27vw, 4px);
 }
-.u_spacing-xs {
+.u_space-xs {
   --spacing: clamp(4px, 2.4px + 0.49vw, 8px);
 }
-.u_spacing-sm {
+.u_space-sm {
   --spacing: clamp(6px, 3.68px + 0.73vw, 12px);
 }
-.u_spacing-md {
+.u_space-md {
   --spacing: clamp(8px, 4.8px + 0.98vw, 16px);
 }
-.u_spacing-lg {
+.u_space-lg {
   --spacing: clamp(12px, 7.3px + 1.46vw, 24px);
 }
-.u_spacing-xl {
+.u_space-xl {
   --spacing: clamp(16px, 9.76px + 1.95vw, 32px);
 }
-.u_spacing-2xl {
+.u_space-2xl {
   --spacing: clamp(24px, 14.5px + 2.93vw, 48px);
 }
 
-.u_spacing-3xl {
+.u_space-3xl {
   --spacing: clamp(32px, 19.52px + 3.9vw, 64px);
 }
 /* //Spacing Style Section End */
@@ -86,6 +86,10 @@
 
 .u_margin-2xl {
   margin: clamp(24px, 14.5px + 2.93vw, 48px);
+}
+
+.u_margin-3xl {
+  margin: clamp(32px, 19.52px + 3.9vw, 64px);
 }
 
 .u_mt-auto {

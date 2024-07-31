@@ -1,0 +1,331 @@
+:root {
+  /*
+   ------------------------------------------------------------------------------------------------------
+    Color Theme Section
+   ------------------------------------------------------------------------------------------------------
+   */
+
+  /* 
+     Switched back to hex colors for theme implementation due to file size 
+     considerations with HSL in large themes. Might revisit HSL for specific cases.
+  */
+
+  --pri-1: var(--pri-l-1, #fdfdfe);
+  --pri-2: var(--pri-l-2, #f7f9ff);
+  --pri-3: var(--pri-l-3, #edf2fe);
+  --pri-4: var(--pri-l-4, #e1e9ff);
+  --pri-5: var(--pri-l-5, #d2deff);
+  --pri-6: var(--pri-l-6, #c1d0ff);
+  --pri-7: var(--pri-l-7, #abbdf9);
+  --pri-8: var(--pri-l-8, #8da4ef);
+  --pri-9: var(--pri-l-9, #3e63dd);
+  --pri-10: var(--pri-l-10, #3358d4);
+  --pri-11: var(--pri-l-11, #3a5bc7);
+  --pri-12: var(--pri-l-12, #1f2d5c);
+
+  --sec-1: var(--sec-l-1, #fffcfe);
+  --sec-2: var(--sec-l-2, #fef7fb);
+  --sec-3: var(--sec-l-3, #fee9f5);
+  --sec-4: var(--sec-l-4, #fbdcef);
+  --sec-5: var(--sec-l-5, #f6cee7);
+  --sec-6: var(--sec-l-6, #efbfdd);
+  --sec-7: var(--sec-l-7, #e7acd0);
+  --sec-8: var(--sec-l-8, #dd93c2);
+  --sec-9: var(--sec-l-9, #d6409f);
+  --sec-10: var(--sec-l-10, #cf3897);
+  --sec-11: var(--sec-l-11, #c2298a);
+  --sec-12: var(--sec-l-12, #651249);
+
+  --opa-1: var(--opa-light-1, #00000003);
+  --opa-2: var(--opa-light-2, #00000007);
+  --opa-3: var(--opa-light-3, #0000000c);
+  --opa-4: var(--opa-light-4, #00000012);
+  --opa-5: var(--opa-light-5, #00000016);
+  --opa-6: var(--opa-light-6, #0000001c);
+  --opa-7: var(--opa-light-7, #00000023);
+  --opa-8: var(--opa-light-8, #00000038);
+  --opa-9: var(--opa-light-9, #0000006f);
+  --opa-10: var(--opa-light-10, #0000007a);
+  --opa-11: var(--opa-light-11, #0000008f);
+  --opa-12: var(--opa-light-12, #000000e3);
+
+  --bg-1: var(--bg-l-1, #fcfcfd);
+  --bg-2: var(--bg-l-2, #f9f9fb);
+  --bg-3: var(--bg-l-3, #f0f0f3);
+  --bg-4: var(--bg-l-4, #e8e8ec);
+  --bg-5: var(--bg-l-5, #e0e1e6);
+  --bg-6: var(--bg-l-6, #d9d9e0);
+  --bg-7: var(--bg-l-7, #cdced6);
+  --bg-8: var(--bg-l-8, #b9bbc6);
+  --bg-9: var(--bg-l-9, #8b8d98);
+  --bg-10: var(--bg-l-10, #80838d);
+  --bg-11: var(--bg-l-11, #60646c);
+  --bg-12: var(--bg-l-12, #1c2024);
+
+  --dan-1: var(--dan-l-1, #fffcfc);
+  --dan-2: var(--dan-l-2, #fff7f7);
+  --dan-3: var(--dan-l-3, #feebec);
+  --dan-4: var(--dan-l-4, #ffdbdc);
+  --dan-5: var(--dan-l-5, #ffcdce);
+  --dan-6: var(--dan-l-6, #fdbdbe);
+  --dan-7: var(--dan-l-7, #f4a9aa);
+  --dan-8: var(--dan-l-8, #eb8e90);
+  --dan-9: var(--dan-l-9, #e5484d);
+  --dan-10: var(--dan-l-10, #dc3e42);
+  --dan-11: var(--dan-l-11, #ce2c31);
+  --dan-12: var(--dan-l-12, #641723);
+
+  --war-1: var(--war-l-1, #fefcfb);
+  --war-2: var(--war-l-2, #fff7ed);
+  --war-3: var(--war-l-3, #ffefd6);
+  --war-4: var(--war-l-4, #ffdfb5);
+  --war-5: var(--war-l-5, #ffd19a);
+  --war-6: var(--war-l-6, #ffc182);
+  --war-7: var(--war-l-7, #f5ae73);
+  --war-8: var(--war-l-8, #ec9455);
+  --war-9: var(--war-l-9, #f76b15);
+  --war-10: var(--war-l-10, #ef5f00);
+  --war-11: var(--war-l-11, #cc4e00);
+  --war-12: var(--war-l-12, #582d1d);
+
+  --suc-1: var(--suc-l-1, #fbfefc);
+  --suc-2: var(--suc-l-2, #f4fbf6);
+  --suc-3: var(--suc-l-3, #e6f6eb);
+  --suc-4: var(--suc-l-4, #d6f1df);
+  --suc-5: var(--suc-l-5, #c4e8d1);
+  --suc-6: var(--suc-l-6, #adddc0);
+  --suc-7: var(--suc-l-7, #8eceaa);
+  --suc-8: var(--suc-l-8, #5bb98b);
+  --suc-9: var(--suc-l-9, #30a46c);
+  --suc-10: var(--suc-l-10, #2b9a66);
+  --suc-11: var(--suc-l-11, #218358);
+  --suc-12: var(--suc-l-12, #193b2d);
+
+  --inf-1: var(--inf-l-1, #210,);
+  --inf-2: var(--inf-l-2, #207,);
+  --inf-3: var(--inf-l-3, #205,);
+  --inf-4: var(--inf-l-4, #203,);
+  --inf-5: var(--inf-l-5, #206,);
+  --inf-6: var(--inf-l-6, #207,);
+  --inf-7: var(--inf-l-7, #207,);
+  --inf-8: var(--inf-l-8, #206,);
+  --inf-9: var(--inf-l-9, #206,);
+  --inf-10: var(--inf-l-10, #207,);
+  --inf-11: var(--inf-l-11, #208,);
+  --inf-12: var(--inf-l-12, #216,);
+  /*
+   ------------------------------------------------------------------------------------------------------
+    Spacing Theme Section
+   ------------------------------------------------------------------------------------------------------
+   */
+
+  --s-none: 0;
+  --s-4xs: var(--c-s-4xs, clamp(1px, 0.6522px + 0.1087vi, 2px));
+  --s-3xs: var(--c-s-3xs, clamp(3px, 3px + 0vi, 3px));
+  --s-2xs: var(--c-s-2xs, clamp(5px, 4.6522px + 0.1087vi, 6px));
+  --s-xs: var(--c-s-xs, clamp(8px, 7.6522px + 0.1087vi, 9px));
+  --s-sm: var(--c-s-sm, clamp(10px, 9.3043px + 0.2174vi, 12px));
+  --s-md: var(--c-s-md, clamp(15px, 13.9565px + 0.3261vi, 18px));
+  --s-lg: var(--c-s-lg, clamp(20px, 18.6087px + 0.4348vi, 24px));
+  --s-xl: var(--c-s-xl, clamp(30px, 27.913px + 0.6522vi, 36px));
+  --s-2xl: var(--c-s-2xl, clamp(40px, 37.2174px + 0.8696vi, 48px));
+  --s-3xl: var(--c-s-3xl, clamp(50px, 46.5217px + 1.087vi, 60px));
+  --s-4xl: var(--c-s-4xl, clamp(70px, 65.1304px + 1.5217vi, 84px));
+
+  /*
+   ------------------------------------------------------------------------------------------------------
+    Shadow Theme Section
+   ------------------------------------------------------------------------------------------------------
+   */
+
+  --shad-2xs: var(--c-shad-2xs, 0 1px 2px -1px var(--opa-6));
+  --shad-xs: var(--c-shad-xs, 0 2px 4px -2px var(--opa-6));
+  --shad-sm: var(--c-shad-sm, 0 4px 8px -4px var(--opa-6));
+  --shad-md: var(--c-shad-md, 0 6px 12px -6px var(--opa-6));
+  --shad-lg: var(--c-shad-lg, 0 8px 16px -8px var(--opa-6));
+  --shad-xl: var(--c-shad-xl, 0 12px 24px -12px var(--opa-6));
+  --shad-2xl: var(--c-shad-2xl, 0 16px 32px -16px var(--opa-6));
+  --shad-in-out: var(
+    --c-shad-in-out,
+    inset 0 0 0.75rem var(--opa-6),
+    1px 1px 3px var(--opa-6),
+    -1px -1px 2px var(--opa-6)
+  );
+
+  /*
+   ------------------------------------------------------------------------------------------------------
+    Font Theme Section
+   ------------------------------------------------------------------------------------------------------
+   */
+
+  /* Font Family  */
+  --body-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu,
+    Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Lucida Grande', Helvetica, Arial, sans-serif;
+  --heading-font: var(--custom-heading-font, var(--body-font));
+  --mono-font: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono,
+    Source Code Pro, monospace;
+
+  /* Font Size varaibles */
+  --f-3xs: var(--c-f-3xs, clamp(0.54rem, calc(0.83rem + -0.28vw), 0.77rem));
+  --f-2xs: var(--c-f-2xs, clamp(0.65rem, calc(0.86rem + -0.21vw), 0.82rem));
+  --f-xs: var(--c-f-xs, clamp(0.78rem, calc(0.9rem + -0.12vw), 0.88rem));
+  --f-sm: var(--c-f-sm, clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem));
+  --f-md: var(--c-f-md, clamp(1rem, calc(0.97rem + 0.15vw), 1.13rem));
+  --f-lg: var(--c-f-lg, clamp(1.07rem, calc(1rem + 0.34vw), 1.35rem));
+  --f-xl: var(--c-f-xl, clamp(1.14rem, calc(1.02rem + 0.58vw), 1.62rem));
+  --f-2xl: var(--c-f-2xl, clamp(1.22rem, calc(1.04rem + 0.88vw), 1.94rem));
+  --f-3xl: var(--c-f-3xl, clamp(1.3rem, calc(1.05rem + 1.26vw), 2.33rem));
+  /*
+   ------------------------------------------------------------------------------------------------------
+    Border Theme Section
+   ------------------------------------------------------------------------------------------------------
+   */
+  --border-size-thin: 1px;
+  --border-size-medium: 2px;
+  --border-size-bold: 5px;
+  --border-size-exta-bold: 10px;
+
+  --rad-sharp: 0;
+  --rad-xs: 0.125em;
+  --rad-sm: 0.25em;
+  --rad-md: 0.5em;
+  --rad-lg: 0.75em;
+  --rad-xl: 1em;
+  --rad-round: 50%;
+  --rad-full: 1e5px;
+
+  --rad-h-1: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  --rad-h-2: 125px 10px 20px 185px / 25px 205px 205px 25px;
+  --rad-h-3: 15px 255px 15px 225px / 225px 15px 255px 15px;
+  --rad-h-4: 15px 25px 155px 25px / 225px 150px 25px 115px;
+  --rad-h-5: 250px 25px 15px 20px / 15px 80px 105px 115px;
+  --rad-h-6: 28px 100px 20px 15px / 150px 30px 205px 225px;
+
+  --rad-b-1: 30% 70% 70% 30% / 53% 30% 70% 47%;
+  --rad-b-2: 53% 47% 34% 66% / 63% 46% 54% 37%;
+  --rad-b-3: 37% 63% 56% 44% / 49% 56% 44% 51%;
+  --rad-b-4: 63% 37% 37% 63% / 43% 37% 63% 57%;
+  --rad-b-5: 49% 51% 48% 52% / 57% 44% 56% 43%;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --sec-1: var(--sec-d-1, #191117);
+  --sec-2: var(--sec-d-2, #21121d);
+  --sec-3: var(--sec-d-3, #37172f);
+  --sec-4: var(--sec-d-4, #4b143d);
+  --sec-5: var(--sec-d-5, #591c47);
+  --sec-6: var(--sec-d-6, #692955);
+  --sec-7: var(--sec-d-7, #833869);
+  --sec-8: var(--sec-d-8, #a84885);
+  --sec-9: var(--sec-d-9, #d6409f);
+  --sec-10: var(--sec-d-10, #de51a8);
+  --sec-11: var(--sec-d-11, #ff8dcc);
+  --sec-12: var(--sec-d-12, #fdd1ea);
+
+  --bg-1: var(--bg-d-1, #111113);
+  --bg-2: var(--bg-d-2, #18191b);
+  --bg-3: var(--bg-d-3, #212225);
+  --bg-4: var(--bg-d-4, #272a2d);
+  --bg-5: var(--bg-d-5, #2e3135);
+  --bg-6: var(--bg-d-6, #363a3f);
+  --bg-7: var(--bg-d-7, #43484e);
+  --bg-8: var(--bg-d-8, #5a6169);
+  --bg-9: var(--bg-d-9, #696e77);
+  --bg-10: var(--bg-d-10, #777b84);
+  --bg-11: var(--bg-d-11, #b0b4ba);
+  --bg-12: var(--bg-d-12, #edeef0);
+
+  --opa-1: var(--opa-d-1, #0deg);
+  --opa-2: var(--opa-d-2, #0deg);
+  --opa-3: var(--opa-d-3, #0deg);
+  --opa-4: var(--opa-d-4, #0deg);
+  --opa-5: var(--opa-d-5, #0deg);
+  --opa-6: var(--opa-d-6, #0deg);
+  --opa-7: var(--opa-d-7, #0deg);
+  --opa-8: var(--opa-d-8, #0deg);
+  --opa-9: var(--opa-d-9, #0deg);
+  --opa-10: var(--opa-d-10, #0deg);
+  --opa-11: var(--opa-d-11, #0deg);
+  --opa-12: var(--opa-d-12, #0deg);
+
+  --opa-1: var(--opa-d-1, #ffffff00);
+  --opa-2: var(--opa-d-2, #ffffff03);
+  --opa-3: var(--opa-d-3, #ffffff08);
+  --opa-4: var(--opa-d-4, #ffffff0e);
+  --opa-5: var(--opa-d-5, #ffffff15);
+  --opa-6: var(--opa-d-6, #ffffff1f);
+  --opa-7: var(--opa-d-7, #ffffff2c);
+  --opa-8: var(--opa-d-8, #ffffff3f);
+  --opa-9: var(--opa-d-9, #ffffff61);
+  --opa-10: var(--opa-d-10, #ffffff70);
+  --opa-11: var(--opa-d-11, #ffffff97);
+  --opa-12: var(--opa-d-12, #ffffffe6);
+
+  --dan-1: var(--dan-d-1, #191111);
+  --dan-2: var(--dan-d-2, #201314);
+  --dan-3: var(--dan-d-3, #3b1219);
+  --dan-4: var(--dan-d-4, #500f1c);
+  --dan-5: var(--dan-d-5, #611623);
+  --dan-6: var(--dan-d-6, #72232d);
+  --dan-7: var(--dan-d-7, #8c333a);
+  --dan-8: var(--dan-d-8, #b54548);
+  --dan-9: var(--dan-d-9, #e5484d);
+  --dan-10: var(--dan-d-10, #ec5d5e);
+  --dan-11: var(--dan-d-11, #ff9592);
+  --dan-12: var(--dan-d-12, #ffd1d9);
+
+  --pri-1: var(--pri-d-1, #11131f);
+  --pri-2: var(--pri-d-2, #141726);
+  --pri-3: var(--pri-d-3, #182449);
+  --pri-4: var(--pri-d-4, #1d2e62);
+  --pri-5: var(--pri-d-5, #253974);
+  --pri-6: var(--pri-d-6, #304384);
+  --pri-7: var(--pri-d-7, #3a4f97);
+  --pri-8: var(--pri-d-8, #435db1);
+  --pri-9: var(--pri-d-9, #3e63dd);
+  --pri-10: var(--pri-d-10, #5472e4);
+  --pri-11: var(--pri-d-11, #9eb1ff);
+  --pri-12: var(--pri-d-12, #d6e1ff);
+
+  --suc-1: var(--suc-d-1, #0e1512);
+  --suc-2: var(--suc-d-2, #121b17);
+  --suc-3: var(--suc-d-3, #132d21);
+  --suc-4: var(--suc-d-4, #113b29);
+  --suc-5: var(--suc-d-5, #174933);
+  --suc-6: var(--suc-d-6, #20573e);
+  --suc-7: var(--suc-d-7, #28684a);
+  --suc-8: var(--suc-d-8, #2f7c57);
+  --suc-9: var(--suc-d-9, #30a46c);
+  --suc-10: var(--suc-d-10, #33b074);
+  --suc-11: var(--suc-d-11, #3dd68c);
+  --suc-12: var(--suc-d-12, #b1f1cb);
+
+  --war-1: var(--war-d-1, #17120e);
+  --war-2: var(--war-d-2, #1e160f);
+  --war-3: var(--war-d-3, #331e0b);
+  --war-4: var(--war-d-4, #462100);
+  --war-5: var(--war-d-5, #562800);
+  --war-6: var(--war-d-6, #66350c);
+  --war-7: var(--war-d-7, #7e451d);
+  --war-8: var(--war-d-8, #a35829);
+  --war-9: var(--war-d-9, #f76b15);
+  --war-10: var(--war-d-10, #ff801f);
+  --war-11: var(--war-d-11, #ffa057);
+  --war-12: var(--war-d-12, #ffe0c2);
+
+  --inf-1: var(--inf-d-1, #0d1520,);
+  --inf-2: var(--inf-d-2, #111927,);
+  --inf-3: var(--inf-d-3, #0d2847,);
+  --inf-4: var(--inf-d-4, #003362,);
+  --inf-5: var(--inf-d-5, #004074,);
+  --inf-6: var(--inf-d-6, #104d87,);
+  --inf-7: var(--inf-d-7, #205d9e,);
+  --inf-8: var(--inf-d-8, #2870bd,);
+  --inf-9: var(--inf-d-9, #0090ff,);
+  --inf-10: var(--inf-d-10, #3b9eff,);
+  --inf-11: var(--inf-d-11, #70b8ff,);
+  --inf-12: var(--inf-d-12, #c2e6ff,);
+}

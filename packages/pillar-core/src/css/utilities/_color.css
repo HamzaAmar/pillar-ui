@@ -1,104 +1,104 @@
 .u_primary {
-  --color-shared-1: var(--primary-1);
-  --color-shared-2: var(--primary-2);
-  --color-shared-3: var(--primary-3);
-  --color-shared-4: var(--primary-4);
-  --color-shared-5: var(--primary-5);
-  --color-shared-6: var(--primary-6);
-  --color-shared-7: var(--primary-7);
-  --color-shared-8: var(--primary-8);
-  --color-shared-9: var(--primary-9);
-  --color-shared-10: var(--primary-10);
-  --color-shared-11: var(--primary-11);
-  --color-shared-12: var(--primary-12);
+  --clr-1: var(--pri-1);
+  --clr-2: var(--pri-2);
+  --clr-3: var(--pri-3);
+  --clr-4: var(--pri-4);
+  --clr-5: var(--pri-5);
+  --clr-6: var(--pri-6);
+  --clr-7: var(--pri-7);
+  --clr-8: var(--pri-8);
+  --clr-9: var(--pri-9);
+  --clr-10: var(--pri-10);
+  --clr-11: var(--pri-11);
+  --clr-12: var(--pri-12);
 }
 
 .u_secondary {
-  --color-shared-1: var(--secondary-1);
-  --color-shared-2: var(--secondary-2);
-  --color-shared-3: var(--secondary-3);
-  --color-shared-4: var(--secondary-4);
-  --color-shared-5: var(--secondary-5);
-  --color-shared-6: var(--secondary-6);
-  --color-shared-7: var(--secondary-7);
-  --color-shared-8: var(--secondary-8);
-  --color-shared-9: var(--secondary-9);
-  --color-shared-10: var(--secondary-10);
-  --color-shared-11: var(--secondary-11);
-  --color-shared-12: var(--secondary-12);
+  --clr-1: var(--sec-1);
+  --clr-2: var(--sec-2);
+  --clr-3: var(--sec-3);
+  --clr-4: var(--sec-4);
+  --clr-5: var(--sec-5);
+  --clr-6: var(--sec-6);
+  --clr-7: var(--sec-7);
+  --clr-8: var(--sec-8);
+  --clr-9: var(--sec-9);
+  --clr-10: var(--sec-10);
+  --clr-11: var(--sec-11);
+  --clr-12: var(--sec-12);
 }
-,
+
 .u_warning {
-  --color-shared-1: var(--warning-1);
-  --color-shared-2: var(--warning-2);
-  --color-shared-3: var(--warning-3);
-  --color-shared-4: var(--warning-4);
-  --color-shared-5: var(--warning-5);
-  --color-shared-6: var(--warning-6);
-  --color-shared-7: var(--warning-7);
-  --color-shared-8: var(--warning-8);
-  --color-shared-9: var(--warning-9);
-  --color-shared-10: var(--warning-10);
-  --color-shared-11: var(--warning-11);
-  --color-shared-12: var(--warning-12);
+  --clr-1: var(--war-1);
+  --clr-2: var(--war-2);
+  --clr-3: var(--war-3);
+  --clr-4: var(--war-4);
+  --clr-5: var(--war-5);
+  --clr-6: var(--war-6);
+  --clr-7: var(--war-7);
+  --clr-8: var(--war-8);
+  --clr-9: var(--war-9);
+  --clr-10: var(--war-10);
+  --clr-11: var(--war-11);
+  --clr-12: var(--war-12);
 }
 
 .u_success {
-  --color-shared-1: var(--success-1);
-  --color-shared-2: var(--success-2);
-  --color-shared-3: var(--success-3);
-  --color-shared-4: var(--success-4);
-  --color-shared-5: var(--success-5);
-  --color-shared-6: var(--success-6);
-  --color-shared-7: var(--success-7);
-  --color-shared-8: var(--success-8);
-  --color-shared-9: var(--success-9);
-  --color-shared-10: var(--success-10);
-  --color-shared-11: var(--success-11);
-  --color-shared-12: var(--success-12);
+  --clr-1: var(--suc-1);
+  --clr-2: var(--suc-2);
+  --clr-3: var(--suc-3);
+  --clr-4: var(--suc-4);
+  --clr-5: var(--suc-5);
+  --clr-6: var(--suc-6);
+  --clr-7: var(--suc-7);
+  --clr-8: var(--suc-8);
+  --clr-9: var(--suc-9);
+  --clr-10: var(--suc-10);
+  --clr-11: var(--suc-11);
+  --clr-12: var(--suc-12);
 }
 
 .u_danger {
-  --color-shared-1: var(--danger-1);
-  --color-shared-2: var(--danger-2);
-  --color-shared-3: var(--danger-3);
-  --color-shared-4: var(--danger-4);
-  --color-shared-5: var(--danger-5);
-  --color-shared-6: var(--danger-6);
-  --color-shared-7: var(--danger-7);
-  --color-shared-8: var(--danger-8);
-  --color-shared-9: var(--danger-9);
-  --color-shared-10: var(--danger-10);
-  --color-shared-11: var(--danger-11);
-  --color-shared-12: var(--danger-12);
+  --clr-1: var(--dan-1);
+  --clr-2: var(--dan-2);
+  --clr-3: var(--dan-3);
+  --clr-4: var(--dan-4);
+  --clr-5: var(--dan-5);
+  --clr-6: var(--dan-6);
+  --clr-7: var(--dan-7);
+  --clr-8: var(--dan-8);
+  --clr-9: var(--dan-9);
+  --clr-10: var(--dan-10);
+  --clr-11: var(--dan-11);
+  --clr-12: var(--dan-12);
 }
 
 .u_info {
-  --color-shared-1: var(--info-1);
-  --color-shared-2: var(--info-2);
-  --color-shared-3: var(--info-3);
-  --color-shared-4: var(--info-4);
-  --color-shared-5: var(--info-5);
-  --color-shared-6: var(--info-6);
-  --color-shared-7: var(--info-7);
-  --color-shared-8: var(--info-8);
-  --color-shared-9: var(--info-9);
-  --color-shared-10: var(--info-10);
-  --color-shared-11: var(--info-11);
-  --color-shared-12: var(--info-12);
+  --clr-1: var(--inf-1);
+  --clr-2: var(--inf-2);
+  --clr-3: var(--inf-3);
+  --clr-4: var(--inf-4);
+  --clr-5: var(--inf-5);
+  --clr-6: var(--inf-6);
+  --clr-7: var(--inf-7);
+  --clr-8: var(--inf-8);
+  --clr-9: var(--inf-9);
+  --clr-10: var(--inf-10);
+  --clr-11: var(--inf-11);
+  --clr-12: var(--inf-12);
 }
 
-.u_surface {
-  --color-shared-1: var(--surface-1);
-  --color-shared-2: var(--surface-2);
-  --color-shared-3: var(--surface-3);
-  --color-shared-4: var(--surface-4);
-  --color-shared-5: var(--surface-5);
-  --color-shared-6: var(--surface-6);
-  --color-shared-7: var(--surface-7);
-  --color-shared-8: var(--surface-8);
-  --color-shared-9: var(--surface-9);
-  --color-shared-10: var(--surface-10);
-  --color-shared-11: var(--surface-11);
-  --color-shared-12: var(--surface-12);
+.u_bg {
+  --clr-1: var(--bg-1);
+  --clr-2: var(--bg-2);
+  --clr-3: var(--bg-3);
+  --clr-4: var(--bg-4);
+  --clr-5: var(--bg-5);
+  --clr-6: var(--bg-6);
+  --clr-7: var(--bg-7);
+  --clr-8: var(--bg-8);
+  --clr-9: var(--bg-9);
+  --clr-10: var(--bg-10);
+  --clr-11: var(--bg-11);
+  --clr-12: var(--bg-12);
 }

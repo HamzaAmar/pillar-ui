@@ -1,40 +1,40 @@
-.u_font-thin {
+.u_f-thin {
   font-weight: 100;
 }
 
-.u_font-small {
-  font-weight: var(--font-sm);
+.u_f-small {
+  font-weight: var(--f-sm);
 }
 
-.u_font-extra-light {
+.u_f-extra-light {
   font-weight: 200;
 }
 
-.u_font-light {
+.u_f-light {
   font-weight: 300;
 }
 
-.u_font-normal {
+.u_f-normal {
   font-weight: 400;
 }
 
-.u_font-medium {
+.u_f-medium {
   font-weight: 500;
 }
 
-.u_font-semi-bold {
+.u_f-semi-bold {
   font-weight: 600;
 }
 
-.u_font-bold {
+.u_f-bold {
   font-weight: 700;
 }
 
-.u_font-extra-bold {
+.u_f-extra-bold {
   font-weight: 800;
 }
 
-.u_font-black {
+.u_f-black {
   font-weight: 900;
 }
 
@@ -48,30 +48,30 @@
 
 /* Font size section */
 
-.u_font-3xs {
-  font-size: var(--font-3xs);
+.u_f-3xs {
+  font-size: var(--f-3xs);
 }
-.u_font-2xs {
-  font-size: var(--font-2xs);
+.u_f-2xs {
+  font-size: var(--f-2xs);
 }
-.u_font-xs {
-  font-size: var(--font-xs);
+.u_f-xs {
+  font-size: var(--f-xs);
 }
-.u_font-sm {
-  font-size: var(--font-sm);
+.u_f-sm {
+  font-size: var(--f-sm);
 }
-.u_font-md {
-  font-size: var(--font-md);
+.u_f-md {
+  font-size: var(--f-md);
 }
-.u_font-lg {
-  font-size: var(--font-lg);
+.u_f-lg {
+  font-size: var(--f-lg);
 }
-.u_font-xl {
-  font-size: var(--font-xl);
+.u_f-xl {
+  font-size: var(--f-xl);
 }
-.u_font-2xl {
-  font-size: var(--font-2xl);
+.u_f-2xl {
+  font-size: var(--f-2xl);
 }
-.u_font-3xl {
-  font-size: var(--font-3xl);
+.u_f-3xl {
+  font-size: var(--f-3xl);
 }
