@@ -29,7 +29,7 @@ const CopyButton = ({ item, value }: CopyButtonProps) => {
   return (
     <IconButton
       variant={`${!copied ? 'outline' : 'soft'}`}
-      color="surface"
+      color="bg"
       icon={copied ? <Check /> : <Copy />}
       title={`${copied ? 'Copied' : 'Copy'} Color`}
       onClick={handleClick}

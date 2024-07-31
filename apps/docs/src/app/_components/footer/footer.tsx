@@ -6,10 +6,10 @@ import Link from 'next/link'
 const footer = () => {
   return (
     <footer>
-      <Paper background="surface-3" as={Grid} p="lg" gap="sm" grid="repeat(4, 1fr)" xs="1fr" lg="1fr 1fr">
+      <Paper background="bg-3" as={Grid} p="lg" gap="sm" grid="repeat(4, 1fr)" xs="1fr" lg="1fr 1fr">
         <div>
           <Logo width={100} />
-          <Text transform="first-letter-only" color="surface" contrast="low">
+          <Text transform="first-letter-only" color="bg" contrast="low">
             Your comprehensive solution for modern web development. Reusable UI components, React hooks, icons, and
             tools designed with accessibility and scalability in mind. Empower your web applications effortlessly
           </Text>
@@ -20,7 +20,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as={Link}
                 className="footer_link"
@@ -32,7 +32,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as={Link}
                 className="footer_link"
@@ -44,7 +44,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as={Link}
                 className="footer_link"
@@ -56,7 +56,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as={Link}
                 className="footer_link"
@@ -74,7 +74,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as="a"
                 target="_blank"
@@ -87,7 +87,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as="a"
                 href="https://twitter.com/pillar_ui"
@@ -100,7 +100,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as="a"
                 className="footer_link"
@@ -113,7 +113,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as="a"
                 className="footer_link"
@@ -131,7 +131,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as="a"
                 className="footer_link"
@@ -143,7 +143,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as="a"
                 className="footer_link"
@@ -155,7 +155,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as="a"
                 className="footer_link"
@@ -167,7 +167,7 @@ const footer = () => {
             <li>
               <Text
                 transform="capitalize"
-                color="surface"
+                color="bg"
                 contrast="low"
                 as="a"
                 className="footer_link"

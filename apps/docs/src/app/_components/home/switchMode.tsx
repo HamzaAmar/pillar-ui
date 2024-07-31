@@ -30,7 +30,7 @@ const SwitchMode = () => {
 
   return (
     <Button
-      color={resolvedTheme ? 'primary' : 'surface'}
+      color={resolvedTheme ? 'primary' : 'bg'}
       variant={resolvedTheme ? 'solid' : 'outline'}
       onClick={() => setTheme(nextMode)}
       size="md"

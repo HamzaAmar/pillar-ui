@@ -22,7 +22,7 @@ export function Accessible() {
                   {title}
                 </Heading>
               </Flex>
-              <Text color="surface" contrast="low">
+              <Text color="bg" contrast="low">
                 {description}!
               </Text>
             </div>

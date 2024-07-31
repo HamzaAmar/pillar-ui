@@ -1,16 +1,16 @@
 .prose {
-  --sh-class: var(--primary-11);
-  --sh-identifier: var(--success-11);
-  --sh-sign: var(--surface-11);
-  --sh-property: var(--secondary-11);
-  --sh-entity: var(--warning-11);
-  --sh-jsxliterals: var(--surface-12);
-  --sh-string: var(--success-10);
-  --sh-keyword: var(--danger-11);
-  --sh-comment: var(--surface-9);
+  --sh-class: var(--pri-11);
+  --sh-identifier: var(--suc-11);
+  --sh-sign: var(--bg-11);
+  --sh-property: var(--sec-11);
+  --sh-entity: var(--war-11);
+  --sh-jsxliterals: var(--bg-12);
+  --sh-string: var(--suc-10);
+  --sh-keyword: var(--dan-11);
+  --sh-comment: var(--bg-9);
 
   & :is(ul, ol) > * + * {
-    margin-top: var(--space-2xs);
+    margin-top: var(--s-2xs);
   }
 
   ul,
@@ -20,7 +20,7 @@
 }
 
 pre:has(.code--section) {
-  background-color: var(--surface-3);
+  background-color: var(--bg-3);
   padding: 1rem;
   font-size: 0.925rem;
   overflow: auto;
@@ -39,17 +39,17 @@ pre:has(.code--section) {
   content: counter(sh-line-number);
   margin-inline-end: 1.25rem;
   color: hsl(0deg 0% 64%);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   vertical-align: middle;
 }
 
 .sh__line {
   border-inline-start: 4px solid transparent;
-  font-size: 1rem;
-  line-height: 1.5;
-}
+  font-size: 0;
+  font-size: 0.85rem;
+  line-height: 2;
 
-.sh__token--break {
-  height: 0;
-  font-size: 0px;
+  & > * {
+    display: inline-block;
+  }
 }

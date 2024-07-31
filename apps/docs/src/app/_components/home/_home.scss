@@ -13,7 +13,7 @@
 .hero--text {
   font-size: max(2.5vw, 1.75rem);
   line-height: 1.25;
-  color: var(--surface-11);
+  color: var(--bg-11);
 }
 
 .switch--home-mode--button {
@@ -28,7 +28,7 @@
 }
 
 .pillar--title-container {
-  stroke: var(--primary-9);
+  stroke: var(--pri-9);
   position: absolute;
   left: -10%;
   width: 115%;
@@ -50,7 +50,7 @@
 .dark--section {
   display: flex;
   justify-content: space-between;
-  gap: var(--space-sm);
+  gap: var(--s-sm);
 
   & > * {
     flex: 1;
@@ -62,11 +62,11 @@
 .section {
   min-height: 100vh;
   position: relative;
-  padding: var(--space-lg);
+  padding: var(--s-lg);
   z-index: 1;
   max-width: 100%;
   &:nth-child(even) {
-    background-color: var(--surface-2);
+    background-color: var(--bg-2);
   }
 }
 .rtl--support {
@@ -93,7 +93,7 @@
 }
 
 .feature--item {
-  border: 1px solid var(--surface-5);
+  border: 1px solid var(--bg-5);
   padding: 0.75rem;
   border-radius: 0.75rem;
 }
@@ -107,15 +107,15 @@
 }
 .article--item {
   padding: 1.25rem;
-  border: 1px solid var(--surface-4);
+  border: 1px solid var(--bg-4);
   position: relative;
   z-index: 1;
   border-radius: 0.5rem;
-  background-color: var(--surface-1);
+  background-color: var(--bg-1);
 }
 
 .article--icon-container {
-  background-color: var(--primary-4);
+  background-color: var(--pri-4);
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -191,9 +191,9 @@
 .user--article,
 .get-started {
   padding: 0.75rem;
-  border: 1px solid var(--surface-4);
+  border: 1px solid var(--bg-4);
   border-radius: 0.5rem;
-  background-color: var(--surface-3);
+  background-color: var(--bg-3);
   height: fit-content;
 }
 

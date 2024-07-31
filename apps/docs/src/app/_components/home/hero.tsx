@@ -9,7 +9,7 @@ export function Hero() {
         <Text as="span" className="pillar--title">
           <svg
             className="pillar--title-container"
-            stroke="var(--surface-9)"
+            stroke="var(--bg-9)"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-miterlimit="1.5"
@@ -29,7 +29,7 @@ export function Hero() {
           applications quickly and easily.
         </p>
 
-        <Text color="surface" contrast="low">
+        <Text color="bg" contrast="low">
           Currently, this library only supports React, but we are actively working on adding support for (Qwik, and Vue)
         </Text>
       </div>
@@ -39,16 +39,16 @@ export function Hero() {
           Get Started
         </Button>
 
-        <Button color="surface" variant="outline" icon={<Dollar />}>
+        <Button color="bg" variant="outline" icon={<Dollar />}>
           Donation
         </Button>
       </Flex>
 
       <Flex justify="end" gap="sm">
-        <IconButton color="surface" variant="soft" title="Go to Github" icon={<Github />} />
-        <IconButton color="surface" variant="soft" title="Go to Discord" icon={<Discord />} />
-        <IconButton color="surface" variant="soft" title="Go to Youtube" icon={<Youtube />} />
-        <IconButton color="surface" variant="soft" title="Go to Linkdin" icon={<Linkdin />} />
+        <IconButton color="bg" variant="soft" title="Go to Github" icon={<Github />} />
+        <IconButton color="bg" variant="soft" title="Go to Discord" icon={<Discord />} />
+        <IconButton color="bg" variant="soft" title="Go to Youtube" icon={<Youtube />} />
+        <IconButton color="bg" variant="soft" title="Go to Linkdin" icon={<Linkdin />} />
       </Flex>
     </Flex>
   )

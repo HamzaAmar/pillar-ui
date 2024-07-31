@@ -14,11 +14,11 @@ export function DarkMode() {
               Night Mode: Effortless Elegance
             </Heading>
           </div>
-          <Text className="dark--description" color="surface" contrast="low" size="xl">
+          <Text className="dark--description" color="bg" contrast="low" size="xl">
             Switch to dark mode with ease. Our useDarkMode hook ensures a smooth, flicker-free experience, compatible
             with major frameworks.
           </Text>
-          <Text className="dark--description" color="surface" contrast="low" size="xl">
+          <Text className="dark--description" color="bg" contrast="low" size="xl">
             Our styles are dark mode-ready from the start. Simply add <code>class=&quot;dark&quot;</code> to your
             elements, and watch them transform.
           </Text>
@@ -27,7 +27,7 @@ export function DarkMode() {
       </div>
 
       <svg
-        stroke="var(--surface-8)"
+        stroke="var(--bg-8)"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-miterlimit="1.5"

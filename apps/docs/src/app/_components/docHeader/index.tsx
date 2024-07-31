@@ -8,17 +8,15 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
 
   return (
     <Paper flow="lg" p="sm">
-      <Heading size="2xl">
-        {title} {type} Documantation
-      </Heading>
-      <Text color="surface" contrast="low" size="sm" weight="medium">
+      <Heading size="2xl">{title} documentation</Heading>
+      <Text color="bg" contrast="low" size="sm" weight="medium">
         {excerpt}
       </Text>
 
       <Grid grid="auto minmax(0, 1fr)" sm="1fr" gap="md">
         {type === 'core' && (
           <>
-            <Text weight="medium" size="sm" color="surface" contrast="low">
+            <Text weight="medium" size="sm" color="bg" contrast="low">
               Components:
             </Text>
             <Flex gap="sm" wrap>
@@ -26,14 +24,14 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
             </Flex>
           </>
         )}
-        <Text weight="medium" size="sm" color="surface" contrast="low">
+        <Text weight="medium" size="sm" color="bg" contrast="low">
           Type
         </Text>
         <Flex gap="sm">
           <Chips>{typeName}</Chips>
         </Flex>
         <>
-          <Text weight="medium" size="sm" color="surface" contrast="low">
+          <Text weight="medium" size="sm" color="bg" contrast="low">
             import
           </Text>
           <Flex gap="sm">
@@ -49,7 +47,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
           as="a"
           href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
           target="_blank"
-          color="surface"
+          color="bg"
           icon={<Github strokeWidth={2} />}
           size="xs"
         >
@@ -60,7 +58,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
           href="https://github.com/HamzaAmar/pillar-ui/issues"
           target="_blank"
           variant="soft"
-          color="surface"
+          color="bg"
           icon={<Github strokeWidth={2} />}
           size="xs"
         >
@@ -71,7 +69,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
           href="https://github.com/HamzaAmar/pillar-ui/discussions"
           target="_blank"
           variant="soft"
-          color="surface"
+          color="bg"
           icon={<Github strokeWidth={2} />}
           size="xs"
         >

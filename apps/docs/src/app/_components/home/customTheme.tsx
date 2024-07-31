@@ -13,11 +13,11 @@ export function CustomTheme() {
           </Heading>
         </div>
         <div className="l_flow__lg">
-          <Text className="dark--description" color="surface" contrast="low" size="xl">
+          <Text className="dark--description" color="bg" contrast="low" size="xl">
             Customize your interface to showcase your personal flair. Adjust CSS variables for colors, fonts, and
             layouts to craft a design that’s unmistakably your own.
           </Text>
-          <Text className="dark--description" color="surface" contrast="low" size="xl">
+          <Text className="dark--description" color="bg" contrast="low" size="xl">
             In the theme settings, you can enhance your user experience by customizing various elements. This includes
             adjusting the size, corner details, and text transformations. You can select specific areas within the
             entire tree structure to apply these style changes, ensuring a consistent and personalized look.
@@ -27,13 +27,13 @@ export function CustomTheme() {
 
       <svg viewBox="0 0 490 490" height="491" fill="none">
         <path
-          fill="var(--surface-1)"
+          fill="var(--bg-1)"
           fill-rule="evenodd"
           d="m381 112-13-7c-19-7-43-2-62-1l-86 3c-17 1-35 0-52 2-19 3-39-3-57 6-26 13-25 33-25 60l1 108c0 17 1 41 3 58 4 24 25 49 53 48 52 1 109-2 159-4 22 0 49-1 71-7 35-11 32-67 31-95 0-8-4-113-9-142-1-5-2-13-5-18"
           clip-rule="evenodd"
         />
         <g
-          stroke="var(--surface-8)"
+          stroke="var(--bg-8)"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-miterlimit="1.5"

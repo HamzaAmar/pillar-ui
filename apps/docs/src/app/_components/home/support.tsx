@@ -17,7 +17,7 @@ export function PillarSupport() {
               Effortless Integration with Pillar UI
             </Heading>
           </div>
-          <Text color="surface" contrast="low" size="xl" className="dark--description">
+          <Text color="bg" contrast="low" size="xl" className="dark--description">
             Pillar UI adapts to your workflow, enhancing your projects with ease. Stay ahead of the curve with support
             for emerging technologies.
           </Text>
@@ -36,14 +36,14 @@ export function PillarSupport() {
       <div className="support--second l_flow__sm">
         <div className="get-started l_flow__sm">
           <Heading>Lets Getting Start</Heading>
-          <Text size="sm" color="surface" contrast="low">
+          <Text size="sm" color="bg" contrast="low">
             Build faster and lighter. Experience the power of our streamlined design system.
           </Text>
           <Button>Get Started</Button>
         </div>
         <div className="get-started l_flow__sm">
           <Heading>Community</Heading>
-          <Text size="sm" color="surface" contrast="low">
+          <Text size="sm" color="bg" contrast="low">
             Get involved in our community. Everyone is welcome!
           </Text>
           <Flex gap="sm">
