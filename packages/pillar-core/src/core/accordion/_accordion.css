@@ -4,8 +4,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.accordion {
-  font-size: var(--font-size, var(--accordion-size, 1rem));
+.a-c {
+  font-size: var(--font-size, var(--acn-size, 1em));
   & svg {
     width: 1em;
   }
@@ -17,8 +17,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.accordion--item {
-  border-block-end: 1px solid var(--opacity-6);
+.a-c_itm {
+  border-block-end: 1px solid var(--opa-6);
   overflow: hidden;
 
   /*
@@ -26,20 +26,20 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--accordion-corner, 0);
-  font-size: var(--accordion-size, 1rem);
+  border-radius: var(--acn-rad, 0);
+  font-size: var(--acn-size, 1em);
+  &.u_outline {
+    background-color: var(--clr-2);
+  }
+  &.u_solid {
+    border-color: var(--clr-9);
+    background-color: var(--clr-9);
+  }
 }
 
-.accordion--item.u_solid {
-  border-color: var(--color-shared-9);
-}
-
-.accordion--item.u_outline {
-  background-color: var(--color-shared-2);
-}
-.accordion--item__outline:not(:first-child) {
+/* .a-c_itm__outline:not(:first-child) {
   border-top: none;
-}
+} */
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -47,9 +47,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.accordion--panel {
+.a-c_pnl {
   padding: 0.5rem;
-  color: var(--surface-12);
+  color: var(--bg-12);
   font-size: 0.85em;
 
   &[data-open='false'] {
@@ -63,7 +63,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.accordion--button {
+.a-c_btn {
   width: 100%;
   text-align: start;
   background-color: transparent;
@@ -72,7 +72,7 @@
   transform: none;
 
   &:hover {
-    background-color: var(--opacity-3);
+    background-color: var(--opa-3);
   }
   & svg {
     transition: transform 0.25s;
