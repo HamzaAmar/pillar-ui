@@ -3,7 +3,7 @@ import { Eye, User } from '@pillar-ui/icons'
 
 export const InputSearchFilled = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <InputSearch aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <InputSearch aria-label="hello" placeholder="Normal" variant="filled" />
       <InputSearch aria-label="hello" disabled placeholder="Disabled" variant="filled" />
@@ -16,7 +16,7 @@ export const InputSearchFilled = () => {
 
 export const InputSearchOutline = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <InputSearch variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
       <InputSearch variant="outline" aria-label="hello" placeholder="Normal" />
       <InputSearch variant="outline" aria-label="hello" disabled placeholder="Disabled" />
@@ -29,7 +29,7 @@ export const InputSearchOutline = () => {
 
 export const InputSearchBordered = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <InputSearch variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
       <InputSearch variant="bordered" aria-label="hello" placeholder="Normal" />
       <InputSearch variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
@@ -42,7 +42,7 @@ export const InputSearchBordered = () => {
 
 export const InputSearchCorners = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <InputSearch corner="sharp" placeholder="sharp" />
       <InputSearch corner="xs" placeholder="xs" />
       <InputSearch corner="sm" placeholder="sm" />
@@ -56,11 +56,11 @@ export const InputSearchCorners = () => {
 
 export const InputSearchColors = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <InputSearch color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <InputSearch color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <InputSearch color="secondary" variant="outline" autoFocus placeholder="Disabled" />
-      <InputSearch color="surface" variant="filled" autoFocus placeholder="isInvalid" />
+      <InputSearch color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <InputSearch
         color="success"
         variant="bordered"
@@ -74,7 +74,7 @@ export const InputSearchColors = () => {
 
 export const InputSearchSizes = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <InputSearch size="xs" placeholder="Extra Small(xs)" />
       <InputSearch size="sm" placeholder="Small(sm)" />
       <InputSearch placeholder="Medium (md default You don't need it)" />
@@ -86,7 +86,7 @@ export const InputSearchSizes = () => {
 
 export const SizeIconsSearch = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <InputSearch placeholder="Medium" prefixInput={<User width="16" />} />
     </Paper>
   )

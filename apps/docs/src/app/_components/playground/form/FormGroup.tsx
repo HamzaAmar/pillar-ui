@@ -10,7 +10,7 @@ const BaseFormController = (props: Omit<FormControllerProps, 'children'>) => {
 
 export const FormGroupTitle = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <FormGroup title="User">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
@@ -28,7 +28,7 @@ export const FormGroupTitle = () => {
 
 export const FormGroupColors = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <FormGroup title="User" color="danger">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
@@ -50,7 +50,7 @@ export const FormGroupColors = () => {
 
 export const FormGroupDirection = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <FormGroup title="Hello">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
@@ -67,7 +67,7 @@ export const FormGroupDirection = () => {
 
 export const FormGroupCorner = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <FormGroup title="Hello" corner="sm">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
@@ -84,7 +84,7 @@ export const FormGroupCorner = () => {
 
 export const FormGroupVariants = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <FormGroup title="Hello" variant="outline">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
@@ -106,7 +106,7 @@ export const FormGroupVariants = () => {
 
 export const FormGroupFluid = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <FormGroup title="Hello" fluid>
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />

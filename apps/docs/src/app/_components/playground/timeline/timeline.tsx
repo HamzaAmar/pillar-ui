@@ -35,7 +35,7 @@ const TimelineBase = (props: Omit<TimelineProps, 'children'>) => {
 
 export const TimelinePlayGround = () => {
   return (
-    <Paper border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper border flow="sm" p="sm" background="bg-3" corner="sm">
       Hello
     </Paper>
   )
@@ -43,7 +43,7 @@ export const TimelinePlayGround = () => {
 
 export const TimelineSizes = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <TimelineBase size="2xs" />
       <TimelineBase size="xs" />
       <TimelineBase size="sm" />
@@ -57,7 +57,7 @@ export const TimelineSizes = () => {
 
 export const TimelineVariants = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <TimelineBase variant="solid" />
       <TimelineBase variant="dashed" />
       <TimelineBase variant="dotted" />
@@ -67,7 +67,7 @@ export const TimelineVariants = () => {
 
 export const TimelineCorners = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <TimelineBase corner="sharp" />
       <TimelineBase corner="sm" />
       <TimelineBase corner="md" />
@@ -80,8 +80,8 @@ export const TimelineCorners = () => {
 
 export const TimelineColors = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
-      <TimelineBase color="surface" />
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
+      <TimelineBase color="bg" />
       <TimelineBase color="secondary" />
       <TimelineBase color="primary" />
       <TimelineBase color="success" />
@@ -93,7 +93,7 @@ export const TimelineColors = () => {
 
 export const TimelineCustomBullet = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Timeline>
         <TimelineItem bullet={<Cross />}>
           <Heading size="xs">Hello</Heading>

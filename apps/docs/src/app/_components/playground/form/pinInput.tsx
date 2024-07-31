@@ -3,7 +3,7 @@ import { PinInput, Paper } from '~/component/core/pillar'
 
 export const PinInputFilled = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <PinInput autoFocus variant="filled" />
       <PinInput disabled variant="filled" />
       <PinInput readOnly variant="filled" />
@@ -13,7 +13,7 @@ export const PinInputFilled = () => {
 
 export const PinInputOutline = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <PinInput autoFocus variant="outline" />
       <PinInput disabled variant="outline" />
       <PinInput readOnly variant="outline" />
@@ -23,7 +23,7 @@ export const PinInputOutline = () => {
 
 export const PinInputBordered = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <PinInput autoFocus variant="bordered" />
       <PinInput disabled variant="bordered" />
       <PinInput readOnly variant="bordered" />
@@ -33,7 +33,7 @@ export const PinInputBordered = () => {
 
 export const PinInputCorners = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <PinInput corner="sharp" />
       <PinInput corner="xs" />
       <PinInput corner="sm" />
@@ -47,18 +47,18 @@ export const PinInputCorners = () => {
 
 export const PinInputColors = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <PinInput color="primary" />
       <PinInput color="warning" />
       <PinInput color="secondary" />
-      <PinInput color="surface" />
+      <PinInput color="bg" />
     </Paper>
   )
 }
 
 export const PinInputSizes = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <PinInput size="xs" />
       <PinInput size="sm" />
       <PinInput size="md" />
@@ -70,7 +70,7 @@ export const PinInputSizes = () => {
 
 export const PinInputPlaceholder = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <PinInput length={10} />
       <PinInput placeholder="◊" />
       <PinInput placeholder="◉" />
@@ -84,7 +84,7 @@ export const PinInputPlaceholder = () => {
 
 export const PinInputLength = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <PinInput />
       <PinInput length={5} />
       <PinInput length={6} />
@@ -97,7 +97,7 @@ export const PinInputLength = () => {
 
 export const PinInputType = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <PinInput type="number" />
       <PinInput type="text" />
       <PinInput type="password" />

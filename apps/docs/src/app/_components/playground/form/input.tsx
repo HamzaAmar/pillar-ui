@@ -3,7 +3,7 @@ import { Eye, User } from '@pillar-ui/icons'
 
 export const InputFilled = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Input aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <Input aria-label="hello" placeholder="Normal" variant="filled" />
       <Input aria-label="hello" disabled placeholder="Disabled" variant="filled" />
@@ -24,7 +24,7 @@ export const InputFilled = () => {
 
 export const InputOutline = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Input variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
       <Input variant="outline" aria-label="hello" placeholder="Normal" />
       <Input variant="outline" aria-label="hello" disabled placeholder="Disabled" />
@@ -45,7 +45,7 @@ export const InputOutline = () => {
 
 export const InputBordered = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Input variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
       <Input variant="bordered" aria-label="hello" placeholder="Normal" />
       <Input variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
@@ -66,7 +66,7 @@ export const InputBordered = () => {
 
 export const InputCorners = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Input corner="sharp" placeholder="sharp" />
       <Input corner="xs" placeholder="xs" />
       <Input corner="sm" placeholder="sm" />
@@ -80,11 +80,11 @@ export const InputCorners = () => {
 
 export const InputColors = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Input color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <Input color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <Input color="secondary" variant="outline" autoFocus placeholder="Disabled" />
-      <Input color="surface" variant="filled" autoFocus placeholder="isInvalid" />
+      <Input color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <Input color="success" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
       <Input
         color="danger"
@@ -100,7 +100,7 @@ export const InputColors = () => {
 
 export const InputSizes = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Input size="xs" placeholder="Extra Small(xs)" />
       <Input size="sm" placeholder="Small(sm)" />
       <Input placeholder="Medium (md default You don't need it)" />
@@ -112,7 +112,7 @@ export const InputSizes = () => {
 
 export const InputIcons = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Input placeholder="Medium" suffixInput={<User width="16" />} />
       <Input placeholder="Medium" prefixInput={<User width="16" />} />
       <Input placeholder="Medium" prefixInput={<User width="16" />} suffixInput={<Eye width="16" />} />

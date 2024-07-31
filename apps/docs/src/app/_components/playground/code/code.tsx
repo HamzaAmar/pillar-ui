@@ -3,12 +3,12 @@ import React from 'react'
 
 export const CodePlayGround = () => {
   return (
-    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="bg-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
       <Avatar title="Success!" color="primary" />
-      <Avatar title="Success!" color="surface" />
+      <Avatar title="Success!" color="bg" />
       <Avatar title="Success!" color="secondary" />
     </Paper>
   )
@@ -16,16 +16,7 @@ export const CodePlayGround = () => {
 
 export const CodeSizes = () => {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      direction="column"
-      className="playground"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} gap="sm" direction="column" className="playground" border p="sm" background="bg-3" corner="sm">
       <Code size="2xs">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="xs">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="sm">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -39,16 +30,7 @@ export const CodeSizes = () => {
 
 export const CodeCorners = () => {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      direction="column"
-      className="playground"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} gap="sm" direction="column" className="playground" border p="sm" background="bg-3" corner="sm">
       <Code corner="sharp">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code corner="xs">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code corner="sm">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -62,21 +44,12 @@ export const CodeCorners = () => {
 
 export const CodeColors = () => {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      direction="column"
-      className="playground"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} gap="sm" direction="column" className="playground" border p="sm" background="bg-3" corner="sm">
       <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="success">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="warning">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="primary">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="surface">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="bg">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="secondary">{`console.log('Hello world Every thing is OK')`}</Code>
     </Paper>
   )

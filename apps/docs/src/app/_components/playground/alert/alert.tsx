@@ -5,12 +5,12 @@ import React from 'react'
 export const AlertPlayGround = () => {
   return (
     <div>
-      <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+      <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
         <Alert title="Success!" color="danger" />
         <Alert title="Success!" color="warning" />
         <Alert title="Success!" color="success" />
         <Alert title="Success!" color="primary" />
-        <Alert title="Success!" color="surface" />
+        <Alert title="Success!" color="bg" />
         <Alert title="Success!" color="secondary" />
       </Paper>
     </div>
@@ -18,12 +18,12 @@ export const AlertPlayGround = () => {
 }
 export const AlertColors = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Alert title="Success!" color="danger" />
       <Alert title="Success!" color="warning" />
       <Alert title="Success!" color="success" />
       <Alert title="Success!" color="primary" />
-      <Alert title="Success!" color="surface" />
+      <Alert title="Success!" color="bg" />
       <Alert title="Success!" color="secondary" />
     </Paper>
   )
@@ -31,7 +31,7 @@ export const AlertColors = () => {
 
 export const AlertSizes = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Alert title="Success!" size="3xs" />
       <Alert title="Success!" size="2xs" />
       <Alert title="Success!" size="xs" />
@@ -46,7 +46,7 @@ export const AlertSizes = () => {
 
 export const AlertVariants = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Alert title="Danger Here" variant="solid" />
       <Alert title="Danger Here" variant="outline" />
       <Alert title="Danger Here" variant="soft" />
@@ -57,7 +57,7 @@ export const AlertVariants = () => {
 
 export const AlertCorners = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Alert title="Success!" corner="sharp" />
       <Alert title="Success!" corner="xs" />
       <Alert title="Success!" corner="md" />
@@ -71,7 +71,7 @@ export const AlertCorners = () => {
 
 export const AlertContent = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Alert title="Success!" />
       <Alert icon={<CircleCheck width="30" />} title="Success!" />
       <Alert message="Success!" />
@@ -83,7 +83,7 @@ export const AlertContent = () => {
 
 export const AlertIcons = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Alert icon={<CircleCheck width="32" />} title="Success!" />
       <Alert icon={<CircleCheck width="32" />} title="Success!" />
       <Alert icon={<CircleCheck width="48" />} title="Success!" message="Your prefered description" />
@@ -93,7 +93,7 @@ export const AlertIcons = () => {
 
 export const AlertClosable = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Alert closable title="Success!" />
       <Alert closable title="Success!" message="you have an error in the start of the program" />
       <Alert closable message="you have an error in the start of the program!" />
@@ -103,7 +103,7 @@ export const AlertClosable = () => {
 
 export const AlertInline = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Alert title="hello" message="you have an error in the start of the program" inline />
       <Alert title="hello" message="you have an error in the start of the program" inline />
       <Alert
@@ -131,7 +131,7 @@ export const AlertInline = () => {
 
 export const AlertCustomStyle = () => {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <Alert color="danger" title="hello" className="u_secondary" />
       <Alert color="danger" title="hello" style={{ background: 'success' }} />
     </Paper>

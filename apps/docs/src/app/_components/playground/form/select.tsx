@@ -13,7 +13,7 @@ const Options = () => {
 
 export const SelectVariants = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Select variant="filled">
         <Options />
       </Select>
@@ -29,7 +29,7 @@ export const SelectVariants = () => {
 
 export const SelectCorners = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Select corner="sharp">
         <Options />
       </Select>
@@ -57,7 +57,7 @@ export const SelectCorners = () => {
 
 export const SelectColors = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Select color="danger">
         <Options />
       </Select>
@@ -73,7 +73,7 @@ export const SelectColors = () => {
       <Select color="primary">
         <Options />
       </Select>
-      <Select color="surface">
+      <Select color="bg">
         <Options />
       </Select>
       <Select>
@@ -85,7 +85,7 @@ export const SelectColors = () => {
 
 export const SelectSizes = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Select size="xs">
         <Options />
       </Select>

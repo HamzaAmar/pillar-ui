@@ -3,7 +3,7 @@ import React from 'react'
 
 export const TextPlayGround = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" border p="sm" background="surface-3" corner="sm" items="center">
+    <Paper as={Flex} wrap gap="sm" border p="sm" background="bg-3" corner="sm" items="center">
       <Text size="2xs">Hello World</Text>
       <Text size="xs">Hello World</Text>
       <Text size="sm">Hello World</Text>
@@ -17,7 +17,7 @@ export const TextPlayGround = () => {
 
 export const TextSizes = () => {
   return (
-    <Paper border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" flow="sm" background="bg-3" corner="sm">
       <Text size="2xs">Hello World</Text>
       <Text size="xs">Hello World</Text>
       <Text size="sm">Hello World</Text>
@@ -31,7 +31,7 @@ export const TextSizes = () => {
 
 export const TextLeading = () => {
   return (
-    <Paper border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" flow="sm" background="bg-3" corner="sm">
       <Text leading="normal">This heading has a normal line height.</Text>
       <Text leading="sm">This heading has a small line height.</Text>
       <Text leading="md">This heading has a medium line height.</Text>
@@ -42,7 +42,7 @@ export const TextLeading = () => {
 
 export const TextWeight = () => {
   return (
-    <Paper border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" flow="sm" background="bg-3" corner="sm">
       <Text weight="extra-light">Hello World</Text>
       <Text weight="light">Hello World</Text>
       <Text weight="thin">Hello World</Text>
@@ -58,7 +58,7 @@ export const TextWeight = () => {
 
 export const TextRTL = () => {
   return (
-    <Paper border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" flow="sm" background="bg-3" corner="sm">
       <Text dir="rtl">
         مُرَاكُش اموراكوش، «أرض الله») تسمى أيضًا بالمدينة الحمراء وعاصمة النخيل، هي ثالث أكبر مدينة في المملكة المغربية
         من ناحية عدد السكان. وهي عاصمة جهة مراكش آسفي. تقع مراكش على بعد 580 كم (360 ميل) جنوب شرق طنجة، 327 كم (203
@@ -73,7 +73,7 @@ export const TextRTL = () => {
 
 export const TextAlign = () => {
   return (
-    <Paper border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" flow="sm" background="bg-3" corner="sm">
       <Text align="start">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -101,12 +101,12 @@ export const TextAlign = () => {
 
 export const TextColors = () => {
   return (
-    <Paper border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper border p="sm" flow="sm" background="bg-3" corner="sm">
       <Text color="danger">Hello World</Text>
       <Text color="success">Hello World</Text>
       <Text color="warning">Hello World</Text>
       <Text color="primary">Hello World</Text>
-      <Text color="surface">Hello World</Text>
+      <Text color="bg">Hello World</Text>
       <Text color="secondary">Hello World</Text>
 
       <Text contrast="low" color="danger">
@@ -121,7 +121,7 @@ export const TextColors = () => {
       <Text contrast="low" color="primary">
         Hello World
       </Text>
-      <Text contrast="low" color="surface">
+      <Text contrast="low" color="bg">
         Hello World
       </Text>
       <Text contrast="low" color="secondary">

@@ -40,7 +40,7 @@ function AccordionBase(props: any) {
 
 export const AccordionPlayGround = () => {
   return (
-    <Paper flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" p="sm" background="bg-3" corner="sm">
       Hello
     </Paper>
   )
@@ -48,7 +48,7 @@ export const AccordionPlayGround = () => {
 
 export const AccordionSizes = () => {
   return (
-    <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" p="sm" background="bg-3" corner="sm">
       <AccordionBase size="2xs" />
       <AccordionBase size="xs" />
       <AccordionBase size="sm" />
@@ -62,7 +62,7 @@ export const AccordionSizes = () => {
 
 export const AccordionSubtitle = () => {
   return (
-    <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" p="sm" background="bg-3" corner="sm">
       <Accordion>
         <AccordionItem value={1}>
           <AccordionButton>
@@ -108,7 +108,7 @@ export const AccordionSubtitle = () => {
 
 export const AccordionSeparate = () => {
   return (
-    <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" p="sm" background="bg-3" corner="sm">
       <AccordionBase separate />
     </Paper>
   )
@@ -116,7 +116,7 @@ export const AccordionSeparate = () => {
 
 export const AccordionVariants = () => {
   return (
-    <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" p="sm" background="bg-3" corner="sm">
       <AccordionBase variant="solid" />
       <AccordionBase variant="soft" />
       <AccordionBase variant="outline" />
@@ -126,20 +126,20 @@ export const AccordionVariants = () => {
 
 export const AccordionCorners = () => {
   return (
-    <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
-      <AccordionBase separate color="surface" variant="solid" corner="sharp" />
-      <AccordionBase separate color="surface" variant="soft" corner="sm" />
-      <AccordionBase separate color="surface" variant="outline" corner="md" />
-      <AccordionBase separate color="surface" variant="solid" corner="lg" />
-      <AccordionBase separate color="surface" variant="soft" corner="xl" />
-      <AccordionBase separate color="surface" variant="outline" corner="full" />
+    <Paper className="playground" flow="sm" p="sm" background="bg-3" corner="sm">
+      <AccordionBase separate color="bg" variant="solid" corner="sharp" />
+      <AccordionBase separate color="bg" variant="soft" corner="sm" />
+      <AccordionBase separate color="bg" variant="outline" corner="md" />
+      <AccordionBase separate color="bg" variant="solid" corner="lg" />
+      <AccordionBase separate color="bg" variant="soft" corner="xl" />
+      <AccordionBase separate color="bg" variant="outline" corner="full" />
     </Paper>
   )
 }
 
 export const AccordionType = () => {
   return (
-    <Paper className="playground" flow="xl" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="xl" p="sm" background="bg-3" corner="sm">
       <div className="l_flow__sm">
         <Heading>Accordion Type Single</Heading>
         <AccordionBase type="single" />
@@ -155,7 +155,7 @@ export const AccordionType = () => {
 
 export const AccordionCollapsible = () => {
   return (
-    <Paper className="playground" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" p="sm" background="bg-3" corner="sm">
       <AccordionBase collapsible />
     </Paper>
   )

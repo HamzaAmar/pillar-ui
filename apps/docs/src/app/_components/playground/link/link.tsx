@@ -3,7 +3,7 @@ import React from 'react'
 
 export const LinkPlayGround = () => {
   return (
-    <Paper as={Flex} gap="xs" direction="column" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="xs" direction="column" items="center" border p="sm" background="bg-3" corner="sm">
       <Link size="2xs">Hello World</Link>
       <Link size="xs">Hello World</Link>
       <Link size="sm">Hello World</Link>
@@ -17,7 +17,7 @@ export const LinkPlayGround = () => {
 
 export const LinkSizes = () => {
   return (
-    <Paper as={Flex} gap="xs" direction="column" border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="xs" direction="column" border p="sm" flow="sm" background="bg-3" corner="sm">
       <Link size="2xs">Hello World</Link>
       <Link size="xs">Hello World</Link>
       <Link size="sm">Hello World</Link>
@@ -31,7 +31,7 @@ export const LinkSizes = () => {
 
 export const LinkLeading = () => {
   return (
-    <Paper as={Flex} gap="xs" direction="column" border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="xs" direction="column" border p="sm" flow="sm" background="bg-3" corner="sm">
       <Link leading="normal">This heading has a normal line height.</Link>
       <Link leading="sm">This heading has a small line height.</Link>
       <Link leading="md">This heading has a medium line height.</Link>
@@ -42,7 +42,7 @@ export const LinkLeading = () => {
 
 export const LinkWeight = () => {
   return (
-    <Paper as={Flex} gap="xs" direction="column" border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="xs" direction="column" border p="sm" flow="sm" background="bg-3" corner="sm">
       <Link weight="extra-light">Hello World</Link>
       <Link weight="light">Hello World</Link>
       <Link weight="thin">Hello World</Link>
@@ -58,7 +58,7 @@ export const LinkWeight = () => {
 
 export const LinkRTL = () => {
   return (
-    <Paper as={Flex} gap="xs" direction="column" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="xs" direction="column" items="center" border p="sm" background="bg-3" corner="sm">
       <Link dir="rtl">
         مُرَاكُش اموراكوش، «أرض الله») تسمى أيضًا بالمدينة الحمراء وعاصمة النخيل، هي ثالث أكبر مدينة في المملكة المغربية
         من ناحية عدد السكان. وهي عاصمة جهة مراكش آسفي. تقع مراكش على بعد 580 كم (360 ميل) جنوب شرق طنجة، 327 كم (203
@@ -73,7 +73,7 @@ export const LinkRTL = () => {
 
 export const LinkAlign = () => {
   return (
-    <Paper as={Flex} gap="xs" direction="column" border p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="xs" direction="column" border p="sm" background="bg-3" corner="sm">
       <Link align="start">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -101,12 +101,12 @@ export const LinkAlign = () => {
 
 export const LinkColors = () => {
   return (
-    <Paper as={Flex} direction="column" items="center" border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} direction="column" items="center" border p="sm" flow="sm" background="bg-3" corner="sm">
       <Link color="danger">Hello World</Link>
       <Link color="success">Hello World</Link>
       <Link color="warning">Hello World</Link>
       <Link color="primary">Hello World</Link>
-      <Link color="surface">Hello World</Link>
+      <Link color="bg">Hello World</Link>
       <Link color="secondary">Hello World</Link>
 
       <Link contrast="low" color="danger">
@@ -121,7 +121,7 @@ export const LinkColors = () => {
       <Link contrast="low" color="primary">
         Hello World
       </Link>
-      <Link contrast="low" color="surface">
+      <Link contrast="low" color="bg">
         Hello World
       </Link>
       <Link contrast="low" color="secondary">
@@ -133,7 +133,7 @@ export const LinkColors = () => {
 
 export function LinkTrucates() {
   return (
-    <Paper as={Flex} direction="column" items="center" border p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} direction="column" items="center" border p="sm" flow="sm" background="bg-3" corner="sm">
       <Link size="3xl" truncate={1}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!

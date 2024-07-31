@@ -3,22 +3,12 @@ import React from 'react'
 
 export const SwitchPlayGround = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      wrap
-      items="center"
-      gap="sm"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} wrap items="center" gap="sm" border p="sm" background="bg-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
       <Avatar title="Success!" color="primary" />
-      <Avatar title="Success!" color="surface" />
+      <Avatar title="Success!" color="bg" />
       <Avatar title="Success!" color="secondary" />
     </Paper>
   )
@@ -26,7 +16,7 @@ export const SwitchPlayGround = () => {
 
 export const SwitchSizes = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Switch label="Hello" size="3xs" />
       <Switch label="Hello" size="2xs" />
       <Switch label="Hello" size="xs" />
@@ -42,19 +32,19 @@ export const SwitchSizes = () => {
 
 export const SwitchDefaultPressed = () => {
   return (
-    <Paper as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Switch label="Hello" defaultPressed color="danger" />
       <Switch label="Hello" defaultPressed color="warning" />
       <Switch label="Hello" defaultPressed color="success" />
       <Switch label="Hello" defaultPressed color="primary" />
       <Switch label="Hello" defaultPressed color="secondary" />
-      <Switch label="Hello" defaultPressed color="surface" />
+      <Switch label="Hello" defaultPressed color="bg" />
     </Paper>
   )
 }
 export const SwitchDisabled = () => {
   return (
-    <Paper as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Switch label="Hello" disabled />
       <Switch label="Hello" disabled defaultPressed />
     </Paper>
@@ -63,17 +53,7 @@ export const SwitchDisabled = () => {
 
 export const SwitchCorners = () => {
   return (
-    <Paper
-      as={Flex}
-      wrap
-      gap="sm"
-      items="center"
-      className="playground"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} wrap gap="sm" items="center" className="playground" border p="sm" background="bg-3" corner="sm">
       <Switch label="Hello" corner="sharp" />
       <Switch label="Hello" corner="xs" />
       <Switch label="Hello" corner="sm" />
@@ -87,23 +67,13 @@ export const SwitchCorners = () => {
 
 export const SwitchColors = () => {
   return (
-    <Paper
-      as={Flex}
-      wrap
-      gap="sm"
-      items="center"
-      className="playground"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper as={Flex} wrap gap="sm" items="center" className="playground" border p="sm" background="bg-3" corner="sm">
       <Switch label="Hello" color="danger" />
       <Switch label="Hello" color="warning" />
       <Switch label="Hello" color="success" />
       <Switch label="Hello" color="primary" />
       <Switch label="Hello" color="secondary" />
-      <Switch label="Hello" color="surface" />
+      <Switch label="Hello" color="bg" />
     </Paper>
   )
 }

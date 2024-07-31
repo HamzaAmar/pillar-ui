@@ -3,22 +3,12 @@ import React from 'react'
 
 export const KbdPlayGround = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      wrap
-      gap="sm"
-      items="center"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
+    <Paper className="playground" as={Flex} wrap gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
       <Avatar title="Success!" color="primary" />
-      <Avatar title="Success!" color="surface" />
+      <Avatar title="Success!" color="bg" />
       <Avatar title="Success!" color="secondary" />
     </Paper>
   )
@@ -26,7 +16,7 @@ export const KbdPlayGround = () => {
 
 export const KbdSizes = () => {
   return (
-    <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="bg-3" corner="sm">
       <Kbd title="Esc" />
       <Kbd title="Esc" size="2xs" />
       <Kbd title="Esc" size="xs" />
@@ -41,7 +31,7 @@ export const KbdSizes = () => {
 
 export const KbdTitle = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Kbd title="Esc" />
     </Paper>
   )
@@ -49,7 +39,7 @@ export const KbdTitle = () => {
 
 export const KbdCorners = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Kbd title="Esc" corner="sharp" />
       <Kbd title="Esc" />
       <Kbd title="Esc" corner="xs" />
@@ -63,13 +53,13 @@ export const KbdCorners = () => {
 
 export const KbdColors = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Kbd title="Esc" />
       <Kbd title="Esc" color="danger" />
       <Kbd title="Esc" color="success" />
       <Kbd title="Esc" color="warning" />
       <Kbd title="Esc" color="primary" />
-      <Kbd title="Esc" color="surface" />
+      <Kbd title="Esc" color="bg" />
       <Kbd title="Esc" color="secondary" />
     </Paper>
   )
@@ -79,7 +69,7 @@ const Variants = ['solid', 'mixed', 'soft', 'outline'] as const
 
 export const KbdVariants = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       {Variants.map((variant) => (
         <Flex key={variant} gap="sm">
           <Kbd title="Esc" variant={variant} />
@@ -87,7 +77,7 @@ export const KbdVariants = () => {
           <Kbd title="Esc" variant={variant} color="success" />
           <Kbd title="Esc" variant={variant} color="warning" />
           <Kbd title="Esc" variant={variant} color="primary" />
-          <Kbd title="Esc" variant={variant} color="surface" />
+          <Kbd title="Esc" variant={variant} color="bg" />
           <Kbd title="Esc" variant={variant} color="secondary" />
         </Flex>
       ))}

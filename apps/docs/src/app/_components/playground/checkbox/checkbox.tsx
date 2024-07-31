@@ -6,22 +6,12 @@ import { useCheckboxGroup } from '~/hooks/pillar'
 
 export const CheckboxPlayGround = () => {
   return (
-    <Paper
-      className="playground"
-      as={Flex}
-      wrap
-      gap="sm"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-      items="center"
-    >
+    <Paper className="playground" as={Flex} wrap gap="sm" border p="sm" background="bg-3" corner="sm" items="center">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
       <Avatar title="Success!" color="primary" />
-      <Avatar title="Success!" color="surface" />
+      <Avatar title="Success!" color="bg" />
       <Avatar title="Success!" color="secondary" />
     </Paper>
   )
@@ -29,7 +19,7 @@ export const CheckboxPlayGround = () => {
 
 export const CheckboxSizes = () => {
   return (
-    <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="bg-3" corner="sm">
       <Checkbox size="3xs" label="Option 1" />
       <Checkbox size="2xs" label="Option 2" />
       <Checkbox size="xs" label="Option 3" />
@@ -44,21 +34,21 @@ export const CheckboxSizes = () => {
 
 export const CheckboxLabel = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Checkbox label="Option 1" />
     </Paper>
   )
 }
 export const CheckboxDisabled = () => {
   return (
-    <Paper className="playground" border p="sm" background="surface-3" flow="sm" corner="sm">
+    <Paper className="playground" border p="sm" background="bg-3" flow="sm" corner="sm">
       <Flex gap="sm" items="center">
         <Checkbox disabled name="hello" label="Hello" color="danger" />
         <Checkbox disabled name="hello" label="Hello" color="success" />
         <Checkbox disabled name="hello" label="Hello" color="warning" />
         <Checkbox disabled name="hello" label="Hello" color="primary" />
         <Checkbox disabled name="hello" label="Hello" color="secondary" />
-        <Checkbox disabled name="hello" label="Hello" color="surface" />
+        <Checkbox disabled name="hello" label="Hello" color="bg" />
       </Flex>
       <Flex gap="sm" items="center">
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="danger" />
@@ -66,7 +56,7 @@ export const CheckboxDisabled = () => {
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="warning" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="primary" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="secondary" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="surface" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="bg" />
       </Flex>
     </Paper>
   )
@@ -74,34 +64,34 @@ export const CheckboxDisabled = () => {
 
 export const CheckboxDefaultCheck = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Checkbox defaultChecked name="hello" label="Hello" color="danger" />
       <Checkbox defaultChecked name="hello" label="Hello" color="success" />
       <Checkbox defaultChecked name="hello" label="Hello" color="warning" />
       <Checkbox defaultChecked name="hello" label="Hello" color="primary" />
       <Checkbox defaultChecked name="hello" label="Hello" color="secondary" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="surface" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="bg" />
     </Paper>
   )
 }
 
 export const CheckboxColors = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Checkbox name="hello" label="Options 1" />
       <Checkbox name="hello" label="Options 2" color="danger" />
       <Checkbox name="hello" label="Options 3" color="success" />
       <Checkbox name="hello" label="Options 4" color="warning" />
       <Checkbox name="hello" label="Options 5" color="primary" />
       <Checkbox name="hello" label="Options 6" color="secondary" />
-      <Checkbox name="hello" label="Options 7" color="surface" />
+      <Checkbox name="hello" label="Options 7" color="bg" />
     </Paper>
   )
 }
 
 export const CheckboxStatus = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Checkbox name="hello" label="Hello" />
       <Checkbox name="hello" label="Hello" checked />
       <Checkbox name="hello" label="Hello" isIndeterminate />
@@ -137,7 +127,7 @@ const ParentCheckbox = ({ children }: any) => {
 }
 
 export const CheckboxIsIndeterminate = () => (
-  <Paper className="playground" border p="sm" background="surface-3" corner="sm">
+  <Paper className="playground" border p="sm" background="bg-3" corner="sm">
     <ParentCheckbox>
       <Checkbox label="Child Checkbox 1" name="child1" />
       <Checkbox label="Child Checkbox 2" name="child2" />

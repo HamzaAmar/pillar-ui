@@ -3,7 +3,7 @@ import React from 'react'
 
 export const BlockquotePlayGround = () => {
   return (
-    <Paper p="sm" background="surface-2" corner="sm" flow="sm">
+    <Paper p="sm" background="bg-2" corner="sm" flow="sm">
       <Blockquote corner="sharp" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -12,7 +12,7 @@ export const BlockquotePlayGround = () => {
 }
 export const BlockquoteCorners = () => {
   return (
-    <Paper p="sm" background="surface-2" corner="sm" flow="sm">
+    <Paper p="sm" background="bg-2" corner="sm" flow="sm">
       <Blockquote corner="sharp" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -40,7 +40,7 @@ export const BlockquoteCorners = () => {
 
 export const BlockquoteColors = () => {
   return (
-    <Paper p="sm" background="surface-2" corner="sm" flow="sm">
+    <Paper p="sm" background="bg-2" corner="sm" flow="sm">
       <Blockquote color="danger" cite="John Doe">
         This is the quoted text.
       </Blockquote>
@@ -56,7 +56,7 @@ export const BlockquoteColors = () => {
       <Blockquote color="secondary" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="surface" cite="John Doe">
+      <Blockquote color="bg" cite="John Doe">
         This is the quoted text.
       </Blockquote>
     </Paper>
@@ -65,7 +65,7 @@ export const BlockquoteColors = () => {
 
 export const BlockquoteSizes = () => {
   return (
-    <Paper p="sm" background="surface-2" corner="sm" flow="sm">
+    <Paper p="sm" background="bg-2" corner="sm" flow="sm">
       <Blockquote size="2xs" cite="John Doe">
         This is the quoted text.
       </Blockquote>

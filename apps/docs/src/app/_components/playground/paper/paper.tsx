@@ -3,12 +3,12 @@ import React from 'react'
 
 export const PaperPlayGround = () => {
   return (
-    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="bg-3" corner="sm">
       <Avatar title="Success!" color="danger" />
       <Avatar title="Success!" color="warning" />
       <Avatar title="Success!" color="success" />
       <Avatar title="Success!" color="primary" />
-      <Avatar title="Success!" color="surface" />
+      <Avatar title="Success!" color="bg" />
       <Avatar title="Success!" color="secondary" />
     </Paper>
   )
@@ -16,7 +16,7 @@ export const PaperPlayGround = () => {
 
 export const PaperBackground = () => {
   return (
-    <Paper as={Flex} wrap gap="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper as={Flex} wrap gap="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Paper border width="30-char" ratio="square" />
       <Paper border width="30-char" ratio="square" background="danger" />
       <Paper border width="30-char" ratio="square" background="danger-5" />
@@ -27,9 +27,9 @@ export const PaperBackground = () => {
       <Paper border width="30-char" ratio="square" background="primary-12" />
       <Paper border width="30-char" ratio="square" background="primary-10" />
       <Paper border width="30-char" ratio="square" background="primary-8" />
-      <Paper border width="30-char" ratio="square" background="surface-1" />
-      <Paper border width="30-char" ratio="square" background="surface-4" />
-      <Paper border width="30-char" ratio="square" background="surface-8" />
+      <Paper border width="30-char" ratio="square" background="bg-1" />
+      <Paper border width="30-char" ratio="square" background="bg-4" />
+      <Paper border width="30-char" ratio="square" background="bg-8" />
       <Paper border width="30-char" ratio="square" background="warning-4" />
       <Paper border width="30-char" ratio="square" background="warning-8" />
       <Paper border width="30-char" ratio="square" background="warning-12" />
@@ -45,80 +45,71 @@ export const PaperBackground = () => {
 
 export const PaperColors = () => {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      direction="column"
-      className="playground"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
-      <Paper background="surface-5" p="xs">
+    <Paper as={Flex} gap="sm" direction="column" className="playground" border p="sm" background="bg-3" corner="sm">
+      <Paper background="bg-5" p="xs">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="danger">
+      <Paper background="bg-5" p="xs" color="danger">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="danger-5">
+      <Paper background="bg-5" p="xs" color="danger-5">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="danger-10">
+      <Paper background="bg-5" p="xs" color="danger-10">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="success-5">
+      <Paper background="bg-5" p="xs" color="success-5">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="success-8">
+      <Paper background="bg-5" p="xs" color="success-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="success-11">
+      <Paper background="bg-5" p="xs" color="success-11">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="primary-12">
+      <Paper background="bg-5" p="xs" color="primary-12">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="primary-10">
+      <Paper background="bg-5" p="xs" color="primary-10">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="primary-8">
+      <Paper background="bg-5" p="xs" color="primary-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="surface-1">
+      <Paper background="bg-5" p="xs" color="bg-1">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="surface-4">
+      <Paper background="bg-5" p="xs" color="bg-4">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="surface-8">
+      <Paper background="bg-5" p="xs" color="bg-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="warning-4">
+      <Paper background="bg-5" p="xs" color="warning-4">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="warning-8">
+      <Paper background="bg-5" p="xs" color="warning-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="warning-12">
+      <Paper background="bg-5" p="xs" color="warning-12">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="secondary-3">
+      <Paper background="bg-5" p="xs" color="secondary-3">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="secondary-8">
+      <Paper background="bg-5" p="xs" color="secondary-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="secondary-12">
+      <Paper background="bg-5" p="xs" color="secondary-12">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="opacity-4">
+      <Paper background="bg-5" p="xs" color="opacity-4">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="opacity-7">
+      <Paper background="bg-5" p="xs" color="opacity-7">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" height="60px" color="opacity-11">
+      <Paper background="bg-5" p="xs" height="60px" color="opacity-11">
         Hello
       </Paper>
     </Paper>
@@ -127,29 +118,29 @@ export const PaperColors = () => {
 
 export const PaperPadding = () => {
   return (
-    <Paper as={Flex} gap="sm" items="center" className="playground" border p="sm" background="surface-3" corner="sm">
-      <Paper width="fit-content" background="surface-5" p="2xl">
+    <Paper as={Flex} gap="sm" items="center" className="playground" border p="sm" background="bg-3" corner="sm">
+      <Paper width="fit-content" background="bg-5" p="2xl">
         2xl Padding
       </Paper>
-      <Paper width="fit-content" background="surface-5" p="xl">
+      <Paper width="fit-content" background="bg-5" p="xl">
         xl Padding
       </Paper>
-      <Paper width="fit-content" background="surface-5" p="lg">
+      <Paper width="fit-content" background="bg-5" p="lg">
         lg Padding
       </Paper>
 
-      <Paper width="fit-content" background="surface-5" p="md">
+      <Paper width="fit-content" background="bg-5" p="md">
         md Padding
       </Paper>
-      <Paper width="fit-content" background="surface-5" p="sm">
+      <Paper width="fit-content" background="bg-5" p="sm">
         sm Padding
       </Paper>
 
-      <Paper width="fit-content" background="surface-5" p="xs">
+      <Paper width="fit-content" background="bg-5" p="xs">
         xs Padding
       </Paper>
 
-      <Paper width="fit-content" background="surface-5" p="2xs">
+      <Paper width="fit-content" background="bg-5" p="2xs">
         2xs Padding
       </Paper>
     </Paper>
@@ -158,13 +149,13 @@ export const PaperPadding = () => {
 
 export const PaperMargin = () => {
   return (
-    <Paper className="playground" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" p="sm" background="bg-3" corner="sm">
       <Paper
         style={{ display: 'flow-root' }}
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="2xl"
       >
         2xl Padding
@@ -174,7 +165,7 @@ export const PaperMargin = () => {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="xl"
       >
         xl Padding
@@ -184,7 +175,7 @@ export const PaperMargin = () => {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="lg"
       >
         lg Padding
@@ -195,7 +186,7 @@ export const PaperMargin = () => {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="md"
       >
         md Padding
@@ -205,7 +196,7 @@ export const PaperMargin = () => {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="sm"
       >
         sm Padding
@@ -216,7 +207,7 @@ export const PaperMargin = () => {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="xs"
       >
         xs Padding
@@ -227,7 +218,7 @@ export const PaperMargin = () => {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="2xs"
       >
         2xs Padding
@@ -238,71 +229,61 @@ export const PaperMargin = () => {
 
 export const PaperCorners = () => {
   return (
-    <Paper
-      as={Flex}
-      wrap
-      gap="sm"
-      justify="center"
-      className="playground"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="sharp">
+    <Paper as={Flex} wrap gap="sm" justify="center" className="playground" border p="sm" background="bg-3" corner="sm">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="sharp">
         sharp
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="xs">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="xs">
         xs
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="md">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="md">
         md
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="lg">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="lg">
         lg
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="xl">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="xl">
         xl
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="circle">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="circle">
         circle
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="full">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="full">
         full
       </Paper>
 
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="blob-1">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="blob-1">
         B Blob 1
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="blob-2">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="blob-2">
         Blob 2
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="blob-3">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="blob-3">
         Blob 3
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="blob-4">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="blob-4">
         Blob 4
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="blob-5">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="blob-5">
         Blob 5
       </Paper>
 
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="hand-1">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="hand-1">
         Hand 1
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="hand-2">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="hand-2">
         Hand 2
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="hand-3">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="hand-3">
         Hand 3
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="hand-4">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="hand-4">
         Hand 4
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="hand-5">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="hand-5">
         Hand 5
       </Paper>
-      <Paper className="u_center" p="xs" background="surface-5" width="25-char" ratio="square" corner="hand-6">
+      <Paper className="u_center" p="xs" background="bg-5" width="25-char" ratio="square" corner="hand-6">
         Hand 6
       </Paper>
     </Paper>
@@ -311,28 +292,28 @@ export const PaperCorners = () => {
 
 export const PaperFlow = () => {
   return (
-    <Paper as={Flex} justify="between" wrap className="playground" border p="sm" background="surface-3" corner="sm">
-      <Paper background="surface-5" flow="xs">
+    <Paper as={Flex} justify="between" wrap className="playground" border p="sm" background="bg-3" corner="sm">
+      <Paper background="bg-5" flow="xs">
         <div>Flow xs</div>
         <div>Flow xs</div>
         <div>Flow xs</div>
       </Paper>
-      <Paper background="surface-5" flow="sm">
+      <Paper background="bg-5" flow="sm">
         <div>Flow sm</div>
         <div>Flow sm</div>
         <div>Flow sm</div>
       </Paper>
-      <Paper background="surface-5" flow="md">
+      <Paper background="bg-5" flow="md">
         <div>Flow md</div>
         <div>Flow md</div>
         <div>Flow md</div>
       </Paper>
-      <Paper background="surface-5" flow="lg">
+      <Paper background="bg-5" flow="lg">
         <div>Flow lg</div>
         <div>Flow lg</div>
         <div>Flow lg</div>
       </Paper>
-      <Paper background="surface-5" flow="xl">
+      <Paper background="bg-5" flow="xl">
         <div>Flow xl</div>
         <div>Flow xl</div>
         <div>Flow xl</div>
@@ -343,29 +324,20 @@ export const PaperFlow = () => {
 
 export const PaperShadow = () => {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      direction="column"
-      className="playground"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
-      <Paper p="sm" background="surface-5" shadow="xs">
+    <Paper as={Flex} gap="sm" direction="column" className="playground" border p="sm" background="bg-3" corner="sm">
+      <Paper p="sm" background="bg-5" shadow="xs">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-5" shadow="sm">
+      <Paper p="sm" background="bg-5" shadow="sm">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-5" shadow="md">
+      <Paper p="sm" background="bg-5" shadow="md">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-5" shadow="lg">
+      <Paper p="sm" background="bg-5" shadow="lg">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-5" shadow="xl">
+      <Paper p="sm" background="bg-5" shadow="xl">
         Hello
       </Paper>
     </Paper>
@@ -374,29 +346,20 @@ export const PaperShadow = () => {
 
 export function PaperWidth() {
   return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      direction="column"
-      className="playground"
-      border
-      p="sm"
-      background="surface-3"
-      corner="sm"
-    >
-      <Paper background="surface-5" width="30-char">
+    <Paper as={Flex} gap="sm" direction="column" className="playground" border p="sm" background="bg-3" corner="sm">
+      <Paper background="bg-5" width="30-char">
         This Paper component will be 30 characters wide This Paper component will be 30 characters wide This Paper
         component will be 30 characters wide.
       </Paper>
-      <Paper background="surface-5" width="60-char">
+      <Paper background="bg-5" width="60-char">
         This Paper component will be 60 characters wide This Paper component will be 60 characters wide This Paper
         component will be 60 characters wide.
       </Paper>
-      <Paper background="surface-5" width="90-char">
+      <Paper background="bg-5" width="90-char">
         This Paper component will be 90 characters wide This Paper component will be 90 characters wide This Paper
         component will be 90 characters wide.
       </Paper>
-      <Paper background="surface-5" width="half">
+      <Paper background="bg-5" width="half">
         This Paper component will take up half of its parent container This Paper component will take up half of its
         parent container This Paper component will take up half of its parent container.
       </Paper>

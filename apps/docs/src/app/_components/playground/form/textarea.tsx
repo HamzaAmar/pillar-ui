@@ -3,7 +3,7 @@ import { Eye, User } from '@pillar-ui/icons'
 
 export const TextareaFilled = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Textarea aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <Textarea aria-label="hello" placeholder="Normal" variant="filled" />
       <Textarea aria-label="hello" disabled placeholder="Disabled" variant="filled" />
@@ -24,7 +24,7 @@ export const TextareaFilled = () => {
 
 export const TextareaOutline = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Textarea variant="outline" aria-label="hello" autoFocus placeholder="Focus" />
       <Textarea variant="outline" aria-label="hello" placeholder="Normal" />
       <Textarea variant="outline" aria-label="hello" disabled placeholder="Disabled" />
@@ -45,7 +45,7 @@ export const TextareaOutline = () => {
 
 export const TextareaBordered = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Textarea variant="bordered" aria-label="hello" autoFocus placeholder="Focus" />
       <Textarea variant="bordered" aria-label="hello" placeholder="Normal" />
       <Textarea variant="bordered" aria-label="hello" disabled placeholder="Disabled" />
@@ -66,7 +66,7 @@ export const TextareaBordered = () => {
 
 export const TextareaCorners = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Textarea corner="sharp" placeholder="sharp" />
       <Textarea corner="xs" placeholder="xs" />
       <Textarea corner="sm" placeholder="sm" />
@@ -80,11 +80,11 @@ export const TextareaCorners = () => {
 
 export const TextareaColors = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Textarea color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <Textarea color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <Textarea color="secondary" variant="outline" autoFocus placeholder="Disabled" />
-      <Textarea color="surface" variant="filled" autoFocus placeholder="isInvalid" />
+      <Textarea color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <Textarea
         color="success"
         variant="bordered"
@@ -106,7 +106,7 @@ export const TextareaColors = () => {
 
 export const TextareaSizes = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Textarea size="xs" placeholder="Extra Small(xs)" />
       <Textarea size="sm" placeholder="Small(sm)" />
       <Textarea placeholder="Medium (md default You don't need it)" />
@@ -118,7 +118,7 @@ export const TextareaSizes = () => {
 
 export const TextareaSizeIcons = () => {
   return (
-    <Paper flow="sm" className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Textarea placeholder="Medium" suffixInput={<User width="16" />} />
       <Textarea placeholder="Medium" prefixInput={<User width="16" />} />
       <Textarea placeholder="Medium" prefixInput={<User width="16" />} suffixInput={<Eye width="16" />} />

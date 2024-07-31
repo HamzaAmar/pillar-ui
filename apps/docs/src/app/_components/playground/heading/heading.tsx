@@ -3,7 +3,7 @@ import React from 'react'
 
 export const HeadingPlayGround = () => {
   return (
-    <Paper className="playground" border p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" background="bg-3" corner="sm">
       <Heading size="2xs">Hello World</Heading>
       <Heading size="xs">Hello World</Heading>
       <Heading size="sm">Hello World</Heading>
@@ -17,7 +17,7 @@ export const HeadingPlayGround = () => {
 
 export const HeadingSizes = () => {
   return (
-    <Paper className="playground" border p="sm" flow="md" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="md" background="bg-3" corner="sm">
       <Heading size="2xs">Hello World</Heading>
       <Heading size="xs">Hello World</Heading>
       <Heading size="sm">Hello World</Heading>
@@ -31,7 +31,7 @@ export const HeadingSizes = () => {
 
 export const HeadingLeading = () => {
   return (
-    <Paper className="playground" border p="sm" flow="md" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="md" background="bg-3" corner="sm">
       <Heading leading="normal">This heading has a normal line height.</Heading>
       <Heading leading="sm">This heading has a small line height.</Heading>
       <Heading leading="md">This heading has a medium line height.</Heading>
@@ -42,7 +42,7 @@ export const HeadingLeading = () => {
 
 export const HeadingWeight = () => {
   return (
-    <Paper className="playground" border p="sm" flow="md" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="md" background="bg-3" corner="sm">
       <Heading weight="extra-light">Hello World</Heading>
       <Heading weight="light">Hello World</Heading>
       <Heading weight="thin">Hello World</Heading>
@@ -58,7 +58,7 @@ export const HeadingWeight = () => {
 
 export const HeadingRTL = () => {
   return (
-    <Paper className="playground" border p="sm" flow="md" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="md" background="bg-3" corner="sm">
       <Heading dir="rtl">
         مُرَاكُش اموراكوش، «أرض الله») تسمى أيضًا بالمدينة الحمراء وعاصمة النخيل، هي ثالث أكبر مدينة في المملكة المغربية
         من ناحية عدد السكان. وهي عاصمة جهة مراكش آسفي. تقع مراكش على بعد 580 كم (360 ميل) جنوب شرق طنجة، 327 كم (203
@@ -72,7 +72,7 @@ export const HeadingRTL = () => {
 
 export const HeadingAlign = () => {
   return (
-    <Paper className="playground" border p="sm" flow="md" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="md" background="bg-3" corner="sm">
       <Heading align="start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe,</Heading>
       <Heading align="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe,</Heading>
       <Heading align="end">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe,</Heading>
@@ -82,12 +82,12 @@ export const HeadingAlign = () => {
 
 export const HeadingColors = () => {
   return (
-    <Paper className="playground" border p="sm" flow="md" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="md" background="bg-3" corner="sm">
       <Heading color="danger">Hello World</Heading>
       <Heading color="success">Hello World</Heading>
       <Heading color="warning">Hello World</Heading>
       <Heading color="primary">Hello World</Heading>
-      <Heading color="surface">Hello World</Heading>
+      <Heading color="bg">Hello World</Heading>
       <Heading color="secondary">Hello World</Heading>
 
       <Heading contrast="low" color="danger">
@@ -102,7 +102,7 @@ export const HeadingColors = () => {
       <Heading contrast="low" color="primary">
         Hello World
       </Heading>
-      <Heading contrast="low" color="surface">
+      <Heading contrast="low" color="bg">
         Hello World
       </Heading>
       <Heading contrast="low" color="secondary">
@@ -114,7 +114,7 @@ export const HeadingColors = () => {
 
 export function HeadingTrucates() {
   return (
-    <Paper className="playground" border p="sm" flow="md" background="surface-3" corner="sm">
+    <Paper className="playground" border p="sm" flow="md" background="bg-3" corner="sm">
       <Heading size="xl" truncate={1}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
