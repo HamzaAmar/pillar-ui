@@ -1,0 +1,65 @@
+---
+title: useIntersectionObserver
+type: hooks
+excerpt: 'The useIntersectionObserver hook is a custom hook for tracking the intersection of an element with its containing element or the viewport. It provides an easy-to-use interface to observe the visibility of an element.'
+directory: useIntersectionObserver/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+## Why useIntersectionObserver
+
+The useIntersectionObserver hook simplifies the process of tracking the intersection of an element with its containing element or the viewport in a React application. It provides an easy-to-use interface for observing the visibility of an element.
+
+## Installation
+
+To use the useIntersectionObserver hook, simply import it into your React component:
+
+```tsx
+import { useIntersectionObserver } from '@pillar-ui/hooks'
+```
+
+## Parameters
+
+The useIntersectionObserver hook takes three parameters:
+
+- `ref: React.RefObject<HTMLElement> | Array<React.RefObject<HTMLElement>>`: A ref object or an array of ref objects for the element(s) you want to observe the intersection of.
+- `options: IntersectionObserverOptions`: An object containing options for the Intersection Observer. It uses the same options as the `IntersectionObserver` constructor. You can refer to the [Intersection Observer API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for more details on the available options.
+- `callback: IntersectionObserverCallback`: A callback function that will be called whenever the intersection of the observed element(s) changes. The callback receives two parameters - `entries` (an array of `IntersectionObserverEntry` objects) and `observer` (the Intersection Observer instance). You can refer to the [Intersection Observer API documentation](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) for more details on the `IntersectionObserverEntry` object.
+
+## Usage
+
+To use the useIntersectionObserver hook, call it inside your functional component:
+
+```tsx
+import { useIntersectionObserver } from '@pillar-ui/hooks'
+
+function MyComponent() {
+  const ref = useRef<HTMLDivElement>(null)
+
+  const options = { threshold: 0.5, rootMargin: '0px' }
+
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      console.log(entry)
+    })
+  } // Perform actions based on the intersection changes
+
+  useIntersectionObserver(ref, options, callback)
+
+  return <div ref={ref}> Your content here </div>
+}
+```
+
+In the example above, the `useIntersectionObserver` hook is used to track the intersection of a `div` element with its containing element or the viewport. The `ref` is assigned to the `div` element, and the `options` object configures the threshold and rootMargin for the Intersection Observer. The `callback` function logs the intersection entries and performs actions based on the intersection changes.
+
+## Implementation details
+
+The useIntersectionObserver hook uses the `useEffect` and `useRef` hooks from React to create and manage the Intersection Observer. It sets up the observer when the component mounts and disconnects it when the component unmounts. It also updates the observer when the `ref`, `options`, or `callback` changes.
+
+## TypeScript Support
+
+The useIntersectionObserver hook is written in TypeScript and provides type definitions for its parameters.
+
+## Conclusion
+
+The useIntersectionObserver hook simplifies the process of tracking the intersection of an element with its containing element or the viewport in a React application. By handling the complex logic of setting up and managing the Intersection Observer, this hook allows you to easily observe the visibility of elements and perform actions based on intersection changes.

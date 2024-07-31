@@ -1,9 +1,10 @@
 ---
-title: Grid
+title: React Grid Component
 type: core
-excerpt: The Grid component is a powerful layout tool that allows for the creation of responsive and complex layouts with ease. It facilitates the arrangement of components or elements into rows and columns, offering various customization options such as alignment, spacing, and placement.
+excerpt: Effortlessly create responsive and customizable grid layouts for your React applications. Arrange content with flexibility and precision using a versatile Grid component.
 items: ['Grid', 'GridItem']
 directory: grid/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Usage
@@ -37,7 +38,7 @@ The Grid component accepts the following props:
 ```tsx showLineNumbers title="Code.tsx"
 export const GridGap = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" borderColor="opacity-6" p="sm" background="bg-3" corner="sm">
       <Grid grid="repeat(5, 1fr)" gap="2xs">
         {boxes}
       </Grid>
@@ -76,7 +77,7 @@ import { Grid } from '@pillar-ui/core'
 
 const GridGrid = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" borderColor="opacity-6" p="sm" background="bg-3" corner="sm">
       <Grid grid="repeat(5, 1fr)" gap="sm">
         <div style="height:40px" />
         <div style="height:40px" />

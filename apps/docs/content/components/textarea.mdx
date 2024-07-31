@@ -1,9 +1,10 @@
 ---
-title: Textarea
+title: React Textarea Component
 type: core
 excerpt: A simple text input field that can be used to collect user input.
 items: ['Textarea']
 directory: form/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## props
@@ -147,9 +148,9 @@ export const CornerInput = () => {
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
-The color prop can be used to customize the color of the input's border when it is focused. Valid values for the color prop are: `primary` | `purple` | `secondary` | `brown` | `surface`
+The color prop can be used to customize the color of the input's border when it is focused. Valid values for the color prop are: `primary` | `purple` | `secondary` | `brown` | `bg`
 
 <TextareaColors />
 
@@ -160,7 +161,7 @@ export const ColorInput = () => {
       <Textarea color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <Textarea color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <Textarea color="secondary" variant="outline" autoFocus placeholder="Disabled" />
-      <Textarea color="surface" variant="filled" autoFocus placeholder="isInvalid" />
+      <Textarea color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <Textarea
         color="success"
         variant="bordered"

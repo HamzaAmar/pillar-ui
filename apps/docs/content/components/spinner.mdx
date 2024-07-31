@@ -1,9 +1,10 @@
 ---
-title: Spinner
+title: React Spinner Component
 type: core
-excerpt: The Spinner component is used to indicate loading or progress state.
+excerpt: 'Loading Spinner React Component: Keep users engaged with visually appealing and customizable loading states.'
 items: ['Spinner']
 directory: spinner/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -14,9 +15,9 @@ The Spinner component accepts the following props:
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
-The color prop sets the color of the spinner. You can choose from a range of colors including green, red, orange, primary, purple, secondary, brown and surface.
+The color prop sets the color of the spinner. You can choose from a range of colors including green, red, orange, primary, purple, secondary, brown and bg.
 
 <SpinnerColors />
 
@@ -31,7 +32,7 @@ export function SpinnerColors() {
       <Spinner color="warning" />
       <Spinner color="primary" />
       <Spinner color="secondary" />
-      <Spinner color="surface" />
+      <Spinner color="bg" />
     </Flex>
   )
 }
@@ -110,7 +111,7 @@ export function SpinnerInvert() {
         <Spinner color="purple" />
         <Spinner color="secondary" />
         <Spinner color="brown" />
-        <Spinner color="surface" />
+        <Spinner color="bg" />
       </Flex>
       <Flex gap="sm" items="center">
         <Spinner invert color="success" />
@@ -120,7 +121,7 @@ export function SpinnerInvert() {
         <Spinner invert color="purple" />
         <Spinner invert color="secondary" />
         <Spinner invert color="brown" />
-        <Spinner invert color="surface" />
+        <Spinner invert color="bg" />
       </Flex>
     </div>
   )

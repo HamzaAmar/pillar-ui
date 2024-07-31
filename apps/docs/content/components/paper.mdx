@@ -1,9 +1,10 @@
 ---
-title: Paper
+title: React Paper Component
 type: core
 excerpt: The Paper component is a versatile container component used to display content. It can be customized with different background colors, text colors, corners, padding, spacing, shadow, and more.
 items: ['Paper']
 directory: paper/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Usage
@@ -34,7 +35,7 @@ The Paper component accepts the following props:
 
 - Type: string
 - Default: none
-- Options: `danger` | `warning` | `success` | `primary` | `surface` | `primary` | `secondary` | `opacity`
+- Options: `danger` | `warning` | `success` | `primary` | `bg` | `primary` | `secondary` | `opacity`
 
 The background prop determines the background color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it defaults to the white color.
 
@@ -50,7 +51,7 @@ function PaperBackgrounds(){
       className="playground"
       borderColor="opacity-6"
       p="sm"
-      background="surface-3"
+      background="bg-3"
       corner="sm"
     >
       <Paper borderColor="opacity-8" width="30-char" ratio="square" />
@@ -63,9 +64,9 @@ function PaperBackgrounds(){
       <Paper borderColor="opacity-8" width="30-char" ratio="square" background="primary-12" />
       <Paper borderColor="opacity-8" width="30-char" ratio="square" background="primary-10" />
       <Paper borderColor="opacity-8" width="30-char" ratio="square" background="primary-8" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="surface-1" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="surface-4" />
-      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="surface-8" />
+      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="bg-1" />
+      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="bg-4" />
+      <Paper borderColor="opacity-8" width="30-char" ratio="square" background="bg-8" />
       <Paper borderColor="opacity-8" width="30-char" ratio="square" background="warning-4" />
       <Paper borderColor="opacity-8" width="30-char" ratio="square" background="warning-8" />
       <Paper borderColor="opacity-8" width="30-char" ratio="square" background="warning-12" />
@@ -84,7 +85,7 @@ function PaperBackgrounds(){
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `surface` | `primary` | `secondary`
+- Options: `danger` | `warning` | `success` | `bg` | `primary` | `secondary`
 
 The color prop determines the text color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it `inherit` the of its parent.
 
@@ -104,73 +105,73 @@ function PaperColors() {
       className="playground"
       borderColor="opacity-6"
       p="sm"
-      background="surface-3"
+      background="bg-3"
       corner="sm"
     >
-      <Paper background="surface-5" p="xs">
+      <Paper background="bg-5" p="xs">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="danger">
+      <Paper background="bg-5" p="xs" color="danger">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="danger-5">
+      <Paper background="bg-5" p="xs" color="danger-5">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="danger-10">
+      <Paper background="bg-5" p="xs" color="danger-10">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="success-5">
+      <Paper background="bg-5" p="xs" color="success-5">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="success-8">
+      <Paper background="bg-5" p="xs" color="success-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="success-11">
+      <Paper background="bg-5" p="xs" color="success-11">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="primary-12">
+      <Paper background="bg-5" p="xs" color="primary-12">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="primary-10">
+      <Paper background="bg-5" p="xs" color="primary-10">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="primary-8">
+      <Paper background="bg-5" p="xs" color="primary-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="surface-1">
+      <Paper background="bg-5" p="xs" color="bg-1">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="surface-4">
+      <Paper background="bg-5" p="xs" color="bg-4">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="surface-8">
+      <Paper background="bg-5" p="xs" color="bg-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="warning-4">
+      <Paper background="bg-5" p="xs" color="warning-4">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="warning-8">
+      <Paper background="bg-5" p="xs" color="warning-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="warning-12">
+      <Paper background="bg-5" p="xs" color="warning-12">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="secondary-3">
+      <Paper background="bg-5" p="xs" color="secondary-3">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="secondary-8">
+      <Paper background="bg-5" p="xs" color="secondary-8">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="secondary-12">
+      <Paper background="bg-5" p="xs" color="secondary-12">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="opacity-4">
+      <Paper background="bg-5" p="xs" color="opacity-4">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" color="opacity-7">
+      <Paper background="bg-5" p="xs" color="opacity-7">
         Hello
       </Paper>
-      <Paper background="surface-5" p="xs" height="60px" color="opacity-11">
+      <Paper background="bg-5" p="xs" height="60px" color="opacity-11">
         Hello
       </Paper>
     </Paper>
@@ -195,60 +196,60 @@ Example usage:
 function PaperCorners() {
   return (
     <>
-      <Paper p="xs" background="surface-5" corner="sharp">
+      <Paper p="xs" background="bg-5" corner="sharp">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="xs">
+      <Paper p="xs" background="bg-5" corner="xs">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="md">
+      <Paper p="xs" background="bg-5" corner="md">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="lg">
+      <Paper p="xs" background="bg-5" corner="lg">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="xl">
+      <Paper p="xs" background="bg-5" corner="xl">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="circle">
+      <Paper p="xs" background="bg-5" corner="circle">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="full">
-        Hello World
-      </Paper>
-
-      <Paper p="xs" background="surface-5" corner="blob-1">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="surface-5" corner="blob-2">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="surface-5" corner="blob-3">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="surface-5" corner="blob-4">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="surface-5" corner="blob-5">
+      <Paper p="xs" background="bg-5" corner="full">
         Hello World
       </Paper>
 
-      <Paper p="xs" background="surface-5" corner="hand-1">
+      <Paper p="xs" background="bg-5" corner="blob-1">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="hand-2">
+      <Paper p="xs" background="bg-5" corner="blob-2">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="hand-3">
+      <Paper p="xs" background="bg-5" corner="blob-3">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="hand-4">
+      <Paper p="xs" background="bg-5" corner="blob-4">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="hand-5">
+      <Paper p="xs" background="bg-5" corner="blob-5">
         Hello World
       </Paper>
-      <Paper p="xs" background="surface-5" corner="hand-6">
+
+      <Paper p="xs" background="bg-5" corner="hand-1">
+        Hello World
+      </Paper>
+      <Paper p="xs" background="bg-5" corner="hand-2">
+        Hello World
+      </Paper>
+      <Paper p="xs" background="bg-5" corner="hand-3">
+        Hello World
+      </Paper>
+      <Paper p="xs" background="bg-5" corner="hand-4">
+        Hello World
+      </Paper>
+      <Paper p="xs" background="bg-5" corner="hand-5">
+        Hello World
+      </Paper>
+      <Paper p="xs" background="bg-5" corner="hand-6">
         Hello World
       </Paper>
     </>
@@ -279,7 +280,7 @@ function PaperPadding() {
       className="playground"
       borderColor="opacity-6"
       p="sm"
-      background="surface-3"
+      background="bg-3"
       corner="sm"
     >
       <Paper
@@ -287,7 +288,7 @@ function PaperPadding() {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="2xl"
       >
         2xl Margin
@@ -297,7 +298,7 @@ function PaperPadding() {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="xl"
       >
         xl Margin
@@ -307,7 +308,7 @@ function PaperPadding() {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="lg"
       >
         lg Margin
@@ -318,20 +319,20 @@ function PaperPadding() {
         className="u_center"
         width="30-char"
         ratio="landscape"
-        background="surface-5"
+        background="bg-5"
         m="md"
       >
         md Margin
       </Paper>
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="sm">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="sm">
         sm Margin
       </Paper>
 
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="xs">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="xs">
         xs Margin
       </Paper>
 
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="2xs">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="2xs">
         2xs Margin
       </Paper>
     </Paper>
@@ -355,29 +356,29 @@ Example usage:
 ```tsx showLineNumbers title="Paper.tsx"
 function PaperMargin() {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="2xl">
+    <Paper className="playground" borderColor="opacity-6" p="sm" background="bg-3" corner="sm">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="2xl">
         2xl Margin
       </Paper>
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="xl">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="xl">
         xl Margin
       </Paper>
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="lg">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="lg">
         lg Margin
       </Paper>
 
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="md">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="md">
         md Margin
       </Paper>
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="sm">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="sm">
         sm Margin
       </Paper>
 
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="xs">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="xs">
         xs Margin
       </Paper>
 
-      <Paper className="u_center" width="30-char" ratio="landscape" background="surface-5" m="2xs">
+      <Paper className="u_center" width="30-char" ratio="landscape" background="bg-5" m="2xs">
         2xs Margin
       </Paper>
     </Paper>
@@ -401,27 +402,27 @@ Example usage:
 function PaperSpacing() {
   return (
     <div>
-      <Paper background="surface-5" flow="xs">
+      <Paper background="bg-5" flow="xs">
         <div>Flow xs</div>
         <div>Flow xs</div>
         <div>Flow xs</div>
       </Paper>
-      <Paper background="surface-5" flow="sm">
+      <Paper background="bg-5" flow="sm">
         <div>Flow sm</div>
         <div>Flow sm</div>
         <div>Flow sm</div>
       </Paper>
-      <Paper background="surface-5" flow="md">
+      <Paper background="bg-5" flow="md">
         <div>Flow md</div>
         <div>Flow md</div>
         <div>Flow md</div>
       </Paper>
-      <Paper background="surface-5" flow="lg">
+      <Paper background="bg-5" flow="lg">
         <div>Flow lg</div>
         <div>Flow lg</div>
         <div>Flow lg</div>
       </Paper>
-      <Paper background="surface-5" flow="xl">
+      <Paper background="bg-5" flow="xl">
         <div>Flow xl</div>
         <div>Flow xl</div>
         <div>Flow xl</div>
@@ -447,19 +448,19 @@ Example usage:
 function PaperShadow() {
   return (
     <>
-      <Paper p="sm" background="surface-5" shadow="xs">
+      <Paper p="sm" background="bg-5" shadow="xs">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-5" shadow="sm">
+      <Paper p="sm" background="bg-5" shadow="sm">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-5" shadow="md">
+      <Paper p="sm" background="bg-5" shadow="md">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-5" shadow="lg">
+      <Paper p="sm" background="bg-5" shadow="lg">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-5" shadow="xl">
+      <Paper p="sm" background="bg-5" shadow="xl">
         Hello
       </Paper>
     </>
@@ -491,19 +492,19 @@ The Paper component provides a convenient width prop for controlling its horizon
 function PaperWidth() {
   return (
     <>
-    <Paper background="surface-5" width="30-char">
+    <Paper background="bg-5" width="30-char">
         This Paper component will be 30 characters wide This Paper component will be 30 characters wide This Paper
         component will be 30 characters wide.
       </Paper>
-     <Paper background="surface-5" width="60-char">
+     <Paper background="bg-5" width="60-char">
         This Paper component will be 60 characters wide This Paper component will be 60 characters wide This Paper
         component will be 60 characters wide.
       </Paper>
-      <Paper background="surface-5" width="90-char">
+      <Paper background="bg-5" width="90-char">
         This Paper component will be 90 characters wide This Paper component will be 90 characters wide This Paper
         component will be 90 characters wide.
       </Paper>
-      <Paper background="surface-5" width="half">
+      <Paper background="bg-5" width="half">
         This Paper component will take up half of its parent container This Paper component will take up half of its
         parent container This Paper component will take up half of its parent container.
       </Paper>

@@ -1,0 +1,82 @@
+---
+title: useCheckboxGroup
+type: hooks
+excerpt: 'The useCheckboxGroup hook is a custom React hook that manages the state of a group of checkboxes and provides toggle functionality.'
+directory: useCheckboxGroup/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+## Introduction
+
+The useCheckboxGroup hook is a custom React hook that manages the state of a group of checkboxes and provides toggle functionality.
+
+## Why useCheckboxGroup?
+
+Managing the state of a group of checkboxes in React can be tedious, especially when it comes to handling toggling the checked state of all checkboxes or individual checkboxes. This hook provides a simple and efficient way of handling the state of a group of checkboxes in React.
+
+## Parameters
+
+- **initialCheckedState**: An optional initial value for the checked state of the checkboxes. The default value is an empty array.
+
+## Return Value
+
+An object containing the following properties and functions:
+
+- **checkedItems**: An array containing the checked state of the checkboxes.
+- **setCheckedItems**: A function to update the state of the checkboxes.
+- **isIndeterminate**: A boolean indicating whether the checked state of some, but not all, checkboxes is true.
+- **isAllChecked**: A boolean indicating whether the checked state of all checkboxes is true.
+- **handleToggleAll**: A function to handle toggling the checked state of all checkboxes.
+- **handleToggleItem**: A function to handle toggling the checked state of an individual checkbox.
+
+## Installation
+
+To install useCheckboxGroup using npm, run the following command:
+
+```bash
+npm install @pillar-ui/hooks
+yarn add @pillar-ui/hooks
+```
+
+## Usage
+
+To use useCheckboxGroup in a React component, import it as follows:
+
+```tsx showLineNumbers title="Alert.tsx"
+import { useCheckboxGroup } from '@pillar-ui/hooks'
+
+const { checkedItems, setCheckedItems, isIndeterminate, isAllChecked, handleToggleAll, handleToggleItem } =
+  useCheckboxGroup()
+```
+
+## use Case
+
+- **Creating a list of checkboxes for user selection**: You can use the hook to manage the state of a group of checkboxes in a list or table, and update the state when the user selects or deselects checkboxes.
+
+- **Creating a checkbox to toggle the selection of all other checkboxes**: You can use the hook to manage the state of a group of checkboxes and implement a "select all" checkbox that toggles the checked state of all other checkboxes in the group.
+
+- **Implementing a filter system**: You can use the hook to manage the state of a group of checkboxes that represent filters for a data set. When the user selects one or more checkboxes, the data is filtered accordingly.
+
+- **Implementing a tag system**: You can use the hook to manage the state of a group of checkboxes that represent tags for a content item. When the user selects one or more checkboxes, the tags are added to the content item.
+
+- **Creating a multi-select dropdown**: You can use the hook to manage the state of a group of checkboxes and implement a dropdown that allows the user to select multiple options. The selected options are displayed as tags, and the state is updated as the user selects or deselects checkboxes.-\*\*
+
+## Implementation details
+
+The useCheckboxGroup hook uses the useState hook to manage the state of the checkboxes. It provides the handleToggleAll function to handle toggling the checked state of all checkboxes, and the handleToggleItem function to handle toggling the checked state of an individual checkbox.
+
+## Server-Side Rendering
+
+useCheckboxGroup is a client-side hook and should not be used for server-side rendering.
+
+## TypeScript Support
+
+The useCheckboxGroup hook has full TypeScript support.
+
+## Troubleshooting
+
+No known issues.
+
+## Conclusion
+
+The useCheckboxGroup hook provides an efficient and easy-to-use way of managing the state of a group of checkboxes in React.

@@ -1,9 +1,10 @@
 ---
-title: Separator
+title: React Separator Component
 type: core
-excerpt: The Separator component is used to create a horizontal or vertical line.
+excerpt: Visually organize your content with our versatile React Separator component. A subtle yet powerful alternative to Chakra UI, adding clarity to your layouts.
 items: ['Separator']
 directory: separator/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -15,7 +16,7 @@ directory: separator/index.tsx
 ```tsx
 export const SeparatorTitle = () => {
   return (
-    <Paper className="playground" as={Flex} gap="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" as={Flex} gap="sm" borderColor="opacity-6" p="sm" background="bg-3" corner="sm">
       <Separator title="Login Here" />
       <Separator title="Login Here" position="center" />
       <Separator title="Login Here" position="end" />
@@ -28,7 +29,7 @@ export const SeparatorTitle = () => {
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `surface` | `secondary`
+- Options: `danger` | `warning` | `success` | `primary` | `bg` | `secondary`
 
 The color prop determines the color of the separator. It accepts a string representing a color name or a color value in hex, rgb, rgba format.
 
@@ -39,13 +40,13 @@ import { Separator, Paper } from '@pillar-ui/core'
 
 export const SeparatorColors = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="bg-3" corner="sm">
       <Separator color="success" />
       <Separator color="danger" />
       <Separator color="warning" />
       <Separator color="primary" />
       <Separator color="secondary" />
-      <Separator color="surface" />
+      <Separator color="bg" />
     </Paper>
   )
 }
@@ -68,7 +69,7 @@ export const SeparatorThickness = () => {
       borderColor="opacity-6"
       p="sm"
       flow="sm"
-      background="surface-3"
+      background="bg-3"
       corner="sm"
     >
       <Separator thickness="3xs" />
@@ -101,7 +102,7 @@ Example usage:
 import { Paper, Separator } from '@pillar-ui/core'
 export const SeparatorDirection = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="bg-3" corner="sm">
       <Separator direction="horizontal" />
       <Separator direction="vertical" />
     </Paper>

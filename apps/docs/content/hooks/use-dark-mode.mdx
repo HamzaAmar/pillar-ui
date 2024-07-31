@@ -1,0 +1,69 @@
+---
+title: useDarkMode
+type: hooks
+excerpt: "The useDarkMode custom hook is a React hook that provides functionalities to manage and toggle between light and dark modes in your application. It respects the user's system preference and can be easily integrated into any React project."
+directory: useDarkMode/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+## Introduction
+
+The `useDarkMode` custom hook is a React hook designed to manage and toggle between light and dark modes in your application. It automatically detects the user's system preference and provides an easy way to switch between modes. By using this hook, you can enhance the user experience by offering a dark mode option in your application.
+
+## Installation
+
+To use the `useDarkMode` hook in your React project, ensure that it's properly exported and imported from its location:
+
+```shell
+import { useDarkMode } from '@pillar-ui/hooks';
+```
+
+## Usage
+
+To utilize the `useDarkMode` hook, simply import it into your component and call it:
+
+```tsx title='DarkModeComponent.tsx' showLineNumbers
+import React from 'react'
+import { useDarkMode } from '@pillar-ui/hooks' // Adjust the path accordingly
+
+function DarkModeComponent() {
+  const { isDark, toggleMode } = useDarkMode()
+
+  return (
+    <div>
+      <button onClick={toggleMode}>Toggle Dark Mode</button>
+      <p>Current mode: {isDark ? 'Dark' : 'Light'}</p>
+    </div>
+  )
+}
+
+export default DarkModeComponent
+```
+
+## Use Cases
+
+- **User Preference**: Respect the user's system preference for light or dark mode and automatically set the appropriate mode when the application loads.
+- **Theme Switcher**: Provide a toggle in your application's settings or navbar that allows users to switch between light and dark themes on demand.
+- **Accessibility**: Improve accessibility and readability for users who prefer a darker theme, especially in low-light environments.
+
+## Implementation details
+
+The `useDarkMode` hook uses the `useState` and `useEffect` hooks from React. It checks the user's system preference using the `window.matchMedia` method and also considers any saved preference in the local storage. The hook provides a `toggleMode` function to switch between light and dark modes, and it ensures that the appropriate CSS class is applied to the `document.documentElement` to reflect the current mode.
+
+## TypeScript Support
+
+The `useDarkMode` hook comes with built-in TypeScript support, offering type safety, type checking, and autocompletion benefits when used in TypeScript projects.
+
+## Troubleshooting
+
+**The mode doesn't reflect the user's system preference**
+
+Ensure that the hook is being called and rendered properly in your component. Also, check if there are any conflicts with other CSS or JavaScript that might be overriding the mode.
+
+**The mode doesn't persist across page reloads**
+
+The hook uses local storage to save the user's mode preference. Ensure that local storage is accessible and not being cleared or overridden by other scripts or browser settings.
+
+## Conclusion
+
+The `useDarkMode` custom hook offers a streamlined way to integrate dark mode functionality into your React applications. By respecting user preferences and providing an easy toggle mechanism, you can enhance user experience and accessibility in your projects.

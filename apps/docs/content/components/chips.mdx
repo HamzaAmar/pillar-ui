@@ -1,9 +1,10 @@
 ---
-title: Chips
+title: React Chips Component
 type: core
-excerpt: The Chips component is a UI component that is used to represent small pieces of information. It can be used to display different types of information like tags, categories, and status indicators.
+excerpt: Display code snippets with syntax highlighting and formatting using a customizable Code component for React. Improve the readability of code blocks within your applications.
 items: ['Chips']
 directory: chips/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ### Props
@@ -14,22 +15,22 @@ The following are the props that can be used with the Chips component:
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
-The color prop is used to specify the background color of the Chips component. It supports the following color options: danger, warning, success, brown, primary, secondary, purple, and surface.
+The color prop is used to specify the background color of the Chips component. It supports the following color options: danger, warning, success, brown, primary, secondary, purple, and bg.
 
 Example:
 
 <ChipsColors />
 
 ```tsx showLineNumbers title="Chips.tsx"
-<Paper borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+<Paper borderColor="opacity-6" p="sm" flow="sm" background="bg-3" corner="sm">
   <Chips color="danger">Hello</Chips>
   <Chips color="success">Hello</Chips>
   <Chips color="warning">Hello</Chips>
   <Chips color="primary">Hello</Chips>
   <Chips color="secondary">Hello</Chips>
-  <Chips color="surface">Hello</Chips>
+  <Chips color="bg">Hello</Chips>
 </Paper>
 ```
 
@@ -42,7 +43,7 @@ Example:
 <ChipsVariants />
 
 ```tsx showLineNumbers title="Chips.tsx"
-<Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+<Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="bg-3" corner="sm">
   <Chips color="success" variant="solid">
     Hello
   </Chips>
@@ -71,7 +72,7 @@ Example:
 <ChipsSizes />
 
 ```tsx showLineNumbers title="Chips.tsx"
-<Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+<Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="bg-3" corner="sm">
   <Chips size="2xs">Hello</Chips>
   <Chips size="xs">Hello</Chips>
   <Chips size="sm">Hello</Chips>

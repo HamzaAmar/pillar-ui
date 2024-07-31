@@ -1,9 +1,10 @@
 ---
-title: Blockquote
+title: React Blockquote Component
 type: core
-excerpt: The accordion component allows users to expand and collapse content sections, which can be useful for displaying large amounts of information in a compact and organized manner.
+excerpt: Elevate your React applications with a customizable Blockquote component. Effortlessly display quotes, testimonials, or excerpts in a visually appealing and semantically correct manner.
 items: ['Blockquote', 'BlockquoteCite']
 directory: blockquote/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -58,7 +59,7 @@ function CornerCorners() {
 
 Type: Color (string)
 Default: `primary`
-Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
 You can customize the color of the blockquote by passing a color prop to the Blockquote component.
 
@@ -85,7 +86,7 @@ function BlockquoteColor() {
       <Blockquote color="secondary" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="surface" cite="John Doe">
+      <Blockquote color="bg" cite="John Doe">
         This is the quoted text.
       </Blockquote>
     </div>

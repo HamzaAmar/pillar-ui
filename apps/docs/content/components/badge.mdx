@@ -1,9 +1,10 @@
 ---
-title: Badge
+title: React Badge Component
 type: core
-excerpt: The Badge component is used to display small pieces of information such as counts, statuses, and notifications in a concise and eye-catching way.
+excerpt: Add visual emphasis to your React applications with Pillar UI's Badge component. Create customizable badges to highlight new features, notifications, user status, or any other relevant information.
 items: ['Badge']
 directory: badge/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## props
@@ -172,7 +173,7 @@ export const BadgeNumericMaxValue = () => {
       <Badge type="numeric" number={12211} color="brown" />
       <Badge type="numeric" number={1500} color="purple" />
       <Badge type="numeric" number={15} color="secondary" />
-      <Badge type="numeric" number={15} color="surface" />
+      <Badge type="numeric" number={15} color="bg" />
     </Flex>
   )
 }
@@ -196,7 +197,7 @@ export const BadgeNumericMaxValue = () => {
       <Badge type="numeric" number={12211} max={10000} color="brown" />
       <Badge type="numeric" number={1500} max={100} color="purple" />
       <Badge type="numeric" number={15} max={1} color="secondary" />
-      <Badge type="numeric" number={15} max={15} color="surface" />
+      <Badge type="numeric" number={15} max={15} color="bg" />
     </Flex>
   )
 }
@@ -206,7 +207,7 @@ export const BadgeNumericMaxValue = () => {
 
 Type: Color (string)
 Default: `primary`
-Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
 The color prop determines the color of the Badge. It accepts a string representing a color name or a color value in hex, rgb, rgba format.###
 
@@ -217,14 +218,14 @@ code Example
 ```tsx showLineNumbers title="Badge.tsx"
 export const BadgeDotColor = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="bg-3" corner="sm">
       <Flex gap="sm">
         <Badge type="numeric" number={15} max={15} color="danger" />
         <Badge type="numeric" number={15} max={15} color="success" />
         <Badge type="numeric" number={15} max={15} color="warning" />
         <Badge type="numeric" number={15} max={15} color="primary" />
         <Badge type="numeric" number={15} max={15} color="secondary" />
-        <Badge type="numeric" number={15} max={15} color="surface" />
+        <Badge type="numeric" number={15} max={15} color="bg" />
       </Flex>
       <Flex gap="sm">
         <Badge type="icon" icon={<Check />} color="danger" />
@@ -232,7 +233,7 @@ export const BadgeDotColor = () => {
         <Badge type="icon" icon={<Check />} color="warning" />
         <Badge type="icon" icon={<Check />} color="primary" />
         <Badge type="icon" icon={<Check />} color="secondary" />
-        <Badge type="icon" icon={<Check />} color="surface" />
+        <Badge type="icon" icon={<Check />} color="bg" />
       </Flex>
       <Flex gap="sm">
         <Badge type="dot" color="danger" />
@@ -240,7 +241,7 @@ export const BadgeDotColor = () => {
         <Badge type="dot" color="warning" />
         <Badge type="dot" color="primary" />
         <Badge type="dot" color="secondary" />
-        <Badge type="dot" color="surface" />
+        <Badge type="dot" color="bg" />
       </Flex>
     </Paper>
   )

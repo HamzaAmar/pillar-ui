@@ -1,0 +1,62 @@
+---
+title: useDarkMode
+type: hooks
+excerpt: 'The useDarkMode custom hook is a React hook that enables you to easily toggle between dark and light mode in your application. This hook provides a simple and powerful way to add dark mode support to your React application, which can be particularly useful for users who prefer a darker interface or who use your application in low-light environments.'
+directory: useDarkMode/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+## Introduction
+
+The useDebounce hook is a custom hook for debouncing a value in React. It allows you to delay the update of a value until a specified delay has passed without any new changes.
+
+## Why useDebounce
+
+Debouncing values can be useful in scenarios where you want to delay processing or actions triggered by user input. It helps to reduce unnecessary updates and improve performance, especially when dealing with fast-changing input values like search queries or autocomplete suggestions.
+
+## Installation
+
+To use useDebounce in your project, you can create a file (e.g., `useDebounce.ts`) and place the hook implementation inside it. Then, you can import and use it in your React components.
+
+## Usage
+
+To use the useDebounce hook in your React components, import it and call it in your functional component like this:
+
+```tsx title='app.ts' showLineNumbers
+import React, { useState } from 'react'
+import { useDebounce } from '@pillar-ui/hooks'
+
+function MyComponent() {
+  const [inputValue, setInputValue] = useState('')
+  const debouncedValue = useDebounce(inputValue, 500)
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value)
+  }
+
+  return (
+    <div>
+      <input type="text" value={inputValue} onChange={handleChange} />
+      <p>Debounced value: {debouncedValue}</p>
+    </div>
+  )
+}
+```
+
+In this example, the useDebounce hook takes an initial value and a delay in milliseconds. It returns a debounced value that is updated after the specified delay has passed without any new changes to the input value.
+
+## Implementation details
+
+The useDebounce hook uses the useState and useEffect hooks from the React library to manage the debounced value and the update logic respectively. It sets a timeout to update the debounced value after the specified delay, canceling the previous timeout whenever the value changes within the delay.
+
+## TypeScript Support
+
+This hook is written in TypeScript and provides type definitions for its usage, allowing you to specify the type of the debounced value.
+
+## Troubleshooting
+
+If you encounter any issues using the useDebounce hook, please refer to the documentation or seek help on the relevant forums or communities.
+
+## Conclusion
+
+The useDebounce custom hook is a handy tool for debouncing values in React applications. By using this hook, you can control the frequency of updates and improve performance in scenarios where delayed updates are desired.##

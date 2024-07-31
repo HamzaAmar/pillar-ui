@@ -1,0 +1,65 @@
+---
+title: usePersistentCallback
+type: hooks
+excerpt: 'The usePersistentCallback hook is a custom React hook that allows you to create a persistent callback function that is preserved across renders.'
+directory: usePersistentCallback/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+# Table of Contents
+
+- [Why usePersistentCallback](#why-usepersistentcallback)
+- [Installation](#installation)
+- [Parameters](#parameters)
+- [Returned Value](#returned-value)
+- [Usage](#usage)
+- [Implementation details](#implementation-details)
+- [Conclusion](#conclusion)
+
+## Why usePersistentCallback
+
+The usePersistentCallback hook provides a way to create a persistent callback function that remains the same across multiple renders of a React component. It is useful in scenarios where the callback function needs to be preserved, such as when passing the callback as a dependency to other hooks or callbacks.
+
+## Installation
+
+To use the usePersistentCallback hook, simply import it into your React component:
+
+```tsx
+import { usePersistentCallback } from '@pillar-ui/hooks'
+```
+
+## Parameters
+
+The usePersistentCallback hook takes a single parameter:
+
+- `callback: T | undefined`: The callback function that you want to make persistent.
+
+## Returned Value
+
+The usePersistentCallback hook returns the persisted callback function of type `T | undefined`. The returned function has references to the previous versions of the `callback` argument, ensuring its stability across renders. It is important to note that the returned callback may be `undefined` if the input `callback` is `undefined` or not of function type.
+
+## Usage
+
+To use the usePersistentCallback hook, call it inside your functional component:
+
+```tsx
+import { usePersistentCallback } from '@pillar-ui/hooks'
+
+function MyComponent() {
+  const handleClick = usePersistentCallback((event: MouseEvent) => {
+    console.log('Button clicked', event.target)
+  })
+
+  return <button onClick={handleClick}>Click Me</button>
+}
+```
+
+In the example above, the `usePersistentCallback` hook creates a persistent callback function `handleClick` that logs a message when the button is clicked. The callback function remains the same even if `MyComponent` is re-rendered.
+
+## Implementation details
+
+The usePersistentCallback hook uses the `useRef`, `useEffect`, and `useMemo` hooks from React to store and update the reference to the callback function. The `persistedCallback` ref is updated to hold the latest value of `callback` on each render. The `persistedFunction` is then created using `useMemo` to return a stable version of the callback function.
+
+## Conclusion
+
+The usePersistentCallback hook allows you to create a persistent callback function that remains the same across renders. Whether you are passing the callback as a dependency or using it in other hooks or callbacks, this hook ensures the stability and persistence of the function.```

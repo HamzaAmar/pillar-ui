@@ -1,9 +1,10 @@
 ---
-title: Progress
+title: React Progress Component
 type: core
 excerpt: The Progress component is a UI component that represents the progress of a task or operation. It visually displays the completion percentage and can be customized with different sizes and colors.
 items: ['ProgressBar', 'ProgressCircle', 'ProgressBarStack', 'ProgressBarStackItem']
 directory: progress/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -103,7 +104,7 @@ Example:
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `surface` | `primary` | `secondary`
+- Options: `danger` | `warning` | `success` | `primary` | `bg` | `primary` | `secondary`
 
 The color prop is used to specify the color of the ProgressBar component. It supports various color options.
 
@@ -117,7 +118,7 @@ Example:
 <ProgressBar color="success" value={90} label="hello" />
 <ProgressBar color="warning" value={90} label="hello" />
 <ProgressBar color="secondary" value={90} label="hello" />
-<ProgressBar color="surface" value={90} label="hello" />
+<ProgressBar color="bg" value={90} label="hello" />
 <ProgressBar color="primary" value={90} label="hello" />
 
 // ProgressCircle
@@ -125,7 +126,7 @@ Example:
 <ProgressCircle color="success" value={90} label="hello" />
 <ProgressCircle color="warning" value={90} label="hello" />
 <ProgressCircle color="secondary" value={90} label="hello" />
-<ProgressCircle color="surface" value={90} label="hello" />
+<ProgressCircle color="bg" value={90} label="hello" />
 <ProgressCircle color="primary" value={90} label="hello" />
 
 // ProgressBarStack

@@ -1,9 +1,10 @@
 ---
-title: Input
+title: React Input Component
 type: core
-excerpt: A simple text input field that can be used to collect user input.
+excerpt: Capture user input with a customizable Input component for React. Easily collect text, email addresses, passwords, and more with validation and formatting options.
 items: ['Input']
 directory: form/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## props
@@ -147,9 +148,9 @@ export const InputCorner = () => {
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
-The color prop can be used to customize the color of the input's border when it is focused. Valid values for the color prop are: `primary` | `purple` | `secondary` | `brown` | `surface`
+The color prop can be used to customize the color of the input's border when it is focused. Valid values for the color prop are: `primary` | `purple` | `secondary` | `brown` | `bg`
 
 <InputColors />
 
@@ -160,7 +161,7 @@ export const InputColor = () => {
       <Input color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <Input color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <Input color="secondary" variant="outline" autoFocus placeholder="Disabled" />
-      <Input color="surface" variant="filled" autoFocus placeholder="isInvalid" />
+      <Input color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <Input color="success" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
       <Input
         color="danger"

@@ -1,0 +1,79 @@
+---
+title: useMediaQuery
+type: hooks
+excerpt: 'The useMediaQuery hook is a custom hook for managing the state of a media query. It returns an object containing the current value of the media query and functions for updating it.'
+directory: useMediaQuery/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Why useMediaQuery](#why-usemediaquery)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Use Case](#use-case)
+- [Implementation Details](#implementation-details)
+- [TypeScript Support](#typescript-support)
+- [Troubleshooting](#troubleshooting)
+- [Conclusion](#conclusion)
+
+## Introduction
+
+The useMediaQuery hook is a custom hook for managing the state of a media query. It returns an object containing the current value of the media query and functions for updating it.
+
+## Why useMediaQuery
+
+Managing media query state can be a common task in React applications, and this hook provides an easy way to handle it in a consistent and reusable way.
+
+## Installation
+
+To use useMediaQuery in your project, you can install it from npm:
+
+```bash
+npm install --dev @pillar-ui/hooks
+```
+
+## Usage
+
+To use the useMediaQuery hook in your React components, import it and call it in your functional component like this:
+
+```tsx title='app.ts' showLineNumbers
+import { useMediaQuery } from '@pillar-ui/hooks'
+
+function MyComponent() {
+  const { matches, setMatches } = useMediaQuery('(min-width: 600px)')
+
+  return (
+    <div>
+      <p>Current value: {matches.toString()}</p>
+      <button onClick={() => setMatches(false)}>Set false</button>
+      <button onClick={() => setMatches(true)}>Set true</button>
+    </div>
+  )
+}
+```
+
+## Use Case
+
+The useMediaQuery hook can be used in a variety of situations where you need to manage the state of a media query. For example, you could use it to:
+
+- Toggle the visibility of an element based on the width of the browser window.
+- Change the style of an element based on the orientation of the device.
+- Enable or disable a feature based on the current time of day.
+
+## Implementation details
+
+The useMediaQuery hook uses the useState and useCallback hooks from the React library to manage the state of the media query and update functions respectively.
+
+## TypeScript Support
+
+This hook is written in TypeScript and provides type definitions for its usage.
+
+## Troubleshooting
+
+If you encounter any issues using the useMediaQuery hook, please refer to the documentation or open an issue on the project's GitHub repository.
+
+## Conclusion
+
+The useMediaQuery custom hook is a useful tool for adding media query functionality to your React application. By using this hook, you can make your app more responsive and improve the user experience for your users.

@@ -1,9 +1,10 @@
 ---
-title: Button
+title: React Button Component
 type: core
-excerpt: The Button component is a reusable button component that can be used throughout your React application.
+excerpt: Create interactive and visually appealing buttons for your React applications. Customize styles, sizes, and behaviors to enhance user engagement and streamline navigation.
 items: ['Button', 'IconButton']
 directory: button/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -14,7 +15,7 @@ The Button component accepts the following props:
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
 The color prop determines the background color of the Button. It accepts any of the Color types defined in your library, including primary, secondary, success, danger, warning, info, and light. If not provided, it defaults to the primary color.
 
@@ -30,7 +31,7 @@ function ButtonColors(){
         <Button color='success' >Hello World</Button>
         <Button color='primary' >Hello World</Button>
         <Button color='secondary' >Hello World</Button>
-        <Button color='surface' >Hello World</Button>
+        <Button color='bg' >Hello World</Button>
 
         // ===== Icon Button Section=====
         <IconButton color='danger' />
@@ -38,7 +39,7 @@ function ButtonColors(){
         <IconButton color='success' />
         <IconButton color='primary' />
         <IconButton color='secondary' />
-        <IconButton color='surface' />
+        <IconButton color='bg' />
     )
 }
 
@@ -190,7 +191,7 @@ import { Close, Maximun, Minimum } from '@pillar-ui/icons'
 
 function ButtonIcon() {
   return (
-    <Paper borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+    <Paper borderColor="opacity-6" flow="sm" p="sm" background="bg-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
         <Button icon={<Close />} iconPosition="end">
           Hello World
@@ -236,7 +237,7 @@ function ButtonIcon() {
       <Button fluid color="secondary">
         Hello World
       </Button>
-      <Button fluid color="surface">
+      <Button fluid color="bg">
         Hello World
       </Button>
     </Paper>

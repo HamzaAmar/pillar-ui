@@ -1,9 +1,10 @@
 ---
-title: Breadcrumb
+title: React Blockquote Component
 type: core
-excerpt: The Breadcrumb component is a collapsible container that can be used to toggle the visibility of content. It's often used to hide content that may be overwhelming or to group related information together.
+excerpt: Enhance website navigation with a customizable Breadcrumb component for React. Easily guide users through your website's hierarchy and improve user experience.
 items: ['Breadcrumb', 'BreadcrumbItem']
 directory: breadcrumb/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Usage
@@ -70,9 +71,9 @@ In the example above, we pass a string (- and \*) as the separator in the first 
 
 Type: Color (string)
 Default: `primary`
-Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
-You can customize the color of the breadcrumb by passing a color prop to the Breadcrumb component. The available colors are "red", "orange", "green", "secondary", "purple", "brown", "primary", and "surface". Here are some examples:
+You can customize the color of the breadcrumb by passing a color prop to the Breadcrumb component. The available colors are "red", "orange", "green", "secondary", "purple", "brown", "primary", and "bg". Here are some examples:
 
 <BreadcrumbColors />
 
@@ -122,7 +123,7 @@ function BreadcrumbColor() {
         </Breadcrumb.Item>
       </Breadcrumb>
 
-      <Breadcrumb color="surface">
+      <Breadcrumb color="bg">
         <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
         <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
         <Breadcrumb.Item link="./" current>

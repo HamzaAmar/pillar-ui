@@ -1,9 +1,10 @@
 ---
-title: Switch
+title: React Switch Component
 type: core
-excerpt: The Switch component is used to toggle between two states.
+excerpt: 'Toggle Switch React Component: Create intuitive binary choices with this versatile and customizable component.'
 items: ['Switch']
 directory: switch/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -48,9 +49,9 @@ export function SwitchSizes() {
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
-The color prop sets the color of the switch. You can choose from a range of colors including red, orange, green, primary, purple, secondary, surface and brown.
+The color prop sets the color of the switch. You can choose from a range of colors including red, orange, green, primary, purple, secondary, bg and brown.
 
 <SwitchColors />
 
@@ -65,7 +66,7 @@ export function SwitchSizes() {
       <Switch label="Hello" color="success" />
       <Switch label="Hello" color="primary" />
       <Switch label="Hello" color="secondary" />
-      <Switch label="Hello" color="surface" />
+      <Switch label="Hello" color="bg" />
     </Flex>
   )
 }
@@ -88,7 +89,7 @@ export function SwitchDefault() {
       <Switch label="Hello" defaultPressed color="success" />
       <Switch label="Hello" defaultPressed color="primary" />
       <Switch label="Hello" defaultPressed color="secondary" />
-      <Switch label="Hello" defaultPressed color="surface" />
+      <Switch label="Hello" defaultPressed color="bg" />
     </Flex>
   )
 }

@@ -1,9 +1,10 @@
 ---
-title: Text
+title: React Text Component
 type: core
 excerpt: The Accordion component is a collapsible container that can be used to toggle the visibility of content. It's often used to hide content that may be overwhelming or to group related information together.
 items: ['Text']
 directory: typography/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -154,9 +155,9 @@ export function TextAligns() {
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
-The color prop sets the color of the text . The available options are: red, brown, purple, secondary, green, orange, primary, and surface. The contrast prop sets the contrast level between the text and the background color. When contrast is set to "high", the text has a higher contrast with the background, making it easier to read, while when contrast is set to "low", the text has lower contrast with the background, which can make it more difficult to read the default is `high`.
+The color prop sets the color of the text . The available options are: red, brown, purple, secondary, green, orange, primary, and bg. The contrast prop sets the contrast level between the text and the background color. When contrast is set to "high", the text has a higher contrast with the background, making it easier to read, while when contrast is set to "low", the text has lower contrast with the background, which can make it more difficult to read the default is `high`.
 
 Example:
 
@@ -181,7 +182,7 @@ export function TextColors() {
       <Text color="primary">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="surface">
+      <Text color="bg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
 
@@ -200,7 +201,7 @@ export function TextColors() {
       <Text color="primary" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="surface" contrast="low">
+      <Text color="bg" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
     </div>

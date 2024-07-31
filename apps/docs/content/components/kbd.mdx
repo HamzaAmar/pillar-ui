@@ -1,9 +1,10 @@
 ---
-title: Kbd
+title: React Kbd Component
 type: core
-excerpt: The Kbd component is a UI component that represents a keyboard key. It can be used to display keyboard shortcuts or any other key-related information.
+excerpt: Provide visual cues for keyboard input with a customizable Kbd component for React. Display keyboard shortcuts and commands in a clear and intuitive format.
 items: ['Kbd']
 directory: kdb/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -26,7 +27,7 @@ Example:
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `surfacece` | `primary` | `secondary`
+- Options: `danger` | `warning` | `success` | `primary` | `bgce` | `primary` | `secondary`
 
 The color prop is used to specify the background color of the Kbd component. It supports various color options.
 
@@ -38,7 +39,7 @@ The color prop is used to specify the background color of the Kbd component. It 
 <Kbd title="Esc" color="success" />
 <Kbd title="Esc" color="warning" />
 <Kbd title="Esc" color="primary" />
-<Kbd title="Esc" color="surfacece" />
+<Kbd title="Esc" color="bgce" />
 <Kbd title="Esc" color="secondary" />
 ```
 
@@ -88,14 +89,14 @@ Example:
 <KbdVariants />
 
 ```tsx showLineNumbers title="Home.tsx" showLineNumbers title="Chips.tsx"
-<Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="surface-3" corner="sm">
+<Paper as={Flex} gap="sm" items="center" borderColor="opacity-6" p="sm" flow="sm" background="bg-3" corner="sm">
   <Flex gap="sm">
     <Kbd title="Esc" variant="solid" />
     <Kbd title="Esc" variant="solid" color="danger" />
     <Kbd title="Esc" variant="solid" color="success" />
     <Kbd title="Esc" variant="solid" color="warning" />
     <Kbd title="Esc" variant="solid" color="primary" />
-    <Kbd title="Esc" variant="solid" color="surface" />
+    <Kbd title="Esc" variant="solid" color="bg" />
     <Kbd title="Esc" variant="solid" color="secondary" />
   </Flex>
   <Flex gap="sm">
@@ -104,7 +105,7 @@ Example:
     <Kbd title="Esc" variant="outline" color="success" />
     <Kbd title="Esc" variant="outline" color="warning" />
     <Kbd title="Esc" variant="outline" color="primary" />
-    <Kbd title="Esc" variant="outline" color="surface" />
+    <Kbd title="Esc" variant="outline" color="bg" />
     <Kbd title="Esc" variant="outline" color="secondary" />
   </Flex>
   <Flex gap="sm">
@@ -113,7 +114,7 @@ Example:
     <Kbd title="Esc" variant="mixed" color="success" />
     <Kbd title="Esc" variant="mixed" color="warning" />
     <Kbd title="Esc" variant="mixed" color="primary" />
-    <Kbd title="Esc" variant="mixed" color="surface" />
+    <Kbd title="Esc" variant="mixed" color="bg" />
     <Kbd title="Esc" variant="mixed" color="secondary" />
   </Flex>
   <Flex gap="sm">
@@ -122,7 +123,7 @@ Example:
     <Kbd title="Esc" variant="soft" color="success" />
     <Kbd title="Esc" variant="soft" color="warning" />
     <Kbd title="Esc" variant="soft" color="primary" />
-    <Kbd title="Esc" variant="soft" color="surface" />
+    <Kbd title="Esc" variant="soft" color="bg" />
     <Kbd title="Esc" variant="soft" color="secondary" />
   </Flex>
 </Paper>

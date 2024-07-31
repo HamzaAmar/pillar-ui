@@ -1,0 +1,76 @@
+---
+title: useClickOutside
+type: hooks
+excerpt: 'The useClickOutside hook is a custom React hook that allows you to listen for clicks outside a specified DOM element. This is particularly useful for scenarios where you want to close a component or trigger a specific action when the user clicks outside a specific element.'
+directory: useClickOutside/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+## Why useClickOutside
+
+Managing click outside events can be a common task in React applications, and this hook provides an easy way to handle it in a consistent and reusable way.
+
+## Installation
+
+To use useClickOutside in your project, you can install it from npm:
+
+npm install --dev @pillar-ui/hooks
+
+## Usage
+
+To use the useClickOutside hook in your React components, import it and call it in your functional component like this:
+
+```tsx title='app.tsx' showLineNumbers
+import { useState } from 'react'
+import { useClickOutside } from '@pillar-ui/hooks'
+
+function App() {
+  const [isOpen, setOpen] = useState(false)
+
+  const handleOutsideClick = () => {
+    setOpen(false)
+  }
+
+  const outsideRef = useClickOutside(handleOutsideClick)
+
+  return (
+    <div>
+      <button onClick={() => setOpen(!isOpen)}>Toggle Menu</button>
+      {isOpen && (
+        <div ref={outsideRef} style={{ border: '1px solid black', padding: '10px' }}>
+          Click outside this box to close the menu.
+        </div>
+      )}
+    </div>
+  )
+}
+```
+
+## How It Works
+
+The useClickOutside hook attaches a ref to the specified DOM element. It then listens for click events on the entire document. When a click event occurs, the hook checks if the event's target is outside the element referenced by the ref. If it's outside, the provided handler function is executed.
+
+## Use Case
+
+The useClickOutside hook can be used in a variety of situations, such as:
+
+- Toggling the visibility of an element when the user clicks outside of it.
+- Closing a modal when the user clicks outside of it.
+- Hiding a menu when the user clicks outside of it.
+- Preventing the user from clicking on elements that they are not supposed to click on.
+
+## Implementation details
+
+The useClickOutside hook uses the useRef and useEffect hooks from the React library to manage the boolean state value and update functions respectively.
+
+## TypeScript Support
+
+This hook is written in TypeScript and provides type definitions for its usage
+
+## Troubleshooting
+
+If you encounter any issues using the useClickOutside hook, please refer to the documentation or open an issue on the project's GitHub repository.
+
+## Conclusion
+
+The useClickOutside custom hook is a useful tool for adding click outside functionality to your React application. By using this hook, you can make your app more accessible and improve the user experience for your users.

@@ -1,0 +1,94 @@
+---
+title: useGeolocation
+type: hooks
+excerpt: The useGeolocation hook is a custom hook for tracking the geolocation of the user. It provides real-time updates of the user's latitude, longitude, altitude, speed, and other related properties.
+directory: useGeolocation/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+## Why useGeolocation
+
+The useGeolocation hook simplifies the process of tracking the geolocation of the user in a React application. It provides an easy-to-use interface for accessing real-time updates of the user's location.
+
+## Installation
+
+To use the useGeolocation hook, simply import it into your React component:
+
+```ts
+// With NPM
+npm install --dev '@pillar-ui/hooks'
+
+// With YARN
+yarn add '@pillar-ui/hooks'
+
+// Usage
+import { useGeolocation } from '@pillar-ui/hooks'
+```
+
+## Parameters
+
+- **options (optional):** An object containing options for the geolocation tracking. It uses the same options as the `getCurrentPosition` and `watchPosition` methods of the Geolocation API. You can refer to the [Geolocation API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) for more details on the available options.
+
+## Returned Values
+
+The useGeolocation hook returns an object with the following properties:
+
+- `loading`: A boolean value indicating whether the geolocation is currently being loaded.
+- `accuracy`: A number representing the accuracy of the geolocation in meters.
+- `altitude`: The altitude in meters above the reference ellipsoid. This value is `null` if the device doesn't support altitude tracking.
+- `altitudeAccuracy`: The accuracy of the altitude value in meters. This value is `null` if the device doesn't support altitude tracking.
+- `heading`: The direction of travel of the device. This value is `null` if the device doesn't support tracking the device's heading.
+- `latitude`: The latitude of the user's location.
+- `longitude`: The longitude of the user's location.
+- `speed`: The speed at which the device is moving. This value is `null` if the device doesn't support tracking the device's speed.
+- `timestamp`: The timestamp of the geolocation update.
+- `error`: If an error occurs during geolocation tracking, this property contains a string with the error message. Otherwise, it is `null`.
+
+## Usage
+
+To use the useGeolocation hook, call it inside your functional component like so:
+
+```tsx import { useGeolocation } from '@pillar-ui/hooks' // Adjust the path accordingly
+function MyComponent() {
+  const geolocation = useGeolocation()
+
+  if (geolocation.loading) {
+    return <div>Loading geolocation...</div>
+  }
+
+  if (geolocation.error) {
+    return <div>Error: {geolocation.error}</div>
+  }
+
+  return (
+    <div>
+      <div>Latitude: {geolocation.latitude}</div>
+      <div>Longitude: {geolocation.longitude}</div>
+      <div>Accuracy: {geolocation.accuracy} meters</div>
+      {geolocation.altitude !== null && <div>Altitude: {geolocation.altitude} meters</div>}
+      {geolocation.altitudeAccuracy !== null && <div>Altitude Accuracy: {geolocation.altitudeAccuracy} meters</div>}
+      {geolocation.heading !== null && <div>Heading: {geolocation.heading} degrees</div>}
+      {geolocation.speed !== null && <div>Speed: {geolocation.speed} meters per second</div>}
+      <div>Timestamp: {geolocation.timestamp}</div>{' '}
+    </div>
+  )
+}
+```
+
+In the example above, the `useGeolocation` hook is used to track the geolocation of the user. The hook updates the component with the latest geolocation data, which is then rendered in the component.
+
+## Implementation details
+
+The useGeolocation hook uses the Geolocation API provided by the browser to track the user's location. It handles the process of requesting permissions, updating the geolocation data, and handling errors that may occur during the tracking process.
+
+## TypeScript Support
+
+The useGeolocation hook is written in TypeScript and provides type definitions for its parameters and return values.
+
+## Troubleshooting
+
+If you encounter issues with the `useGeolocation` hook, make sure that your code is executing on the client-side and that the user's browser supports the Geolocation API.
+
+## Conclusion
+
+The `useGeolocation` hook simplifies the process of tracking the geolocation of the user in a React application. By handling the complex work of interacting with the Geolocation API, this hook allows you to easily access real-time updates of the user's location.

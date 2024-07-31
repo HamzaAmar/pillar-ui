@@ -1,9 +1,10 @@
 ---
-title: Link
+title: React Link Component
 type: core
-excerpt: The Link component is used for clickable text that navigates the user to another page or resource. It typically displays as underlined text with a distinct color, and can be customized with various props such as color, size, and so on
+excerpt: Enhance navigation within your React applications with a customizable Link component. Seamlessly guide users to different sections of your website or external resources
 items: ['Link']
 directory: typography/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -154,9 +155,9 @@ export function LinkAligns() {
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `surfacecece` | `primary` | `secondary`
+- Options: `danger` | `warning` | `success` | `primary` | `bgcece` | `primary` | `secondary`
 
-The color prop sets the color of the text . The available options are: red, brown, purple, secondary, green, orange, primary, and surfacecece. The contrast prop sets the contrast level between the text and the background color. When contrast is set to "high", the text has a higher contrast with the background, making it easier to read, while when contrast is set to "low", the text has lower contrast with the background, which can make it more difficult to read the default is `high`.
+The color prop sets the color of the text . The available options are: red, brown, purple, secondary, green, orange, primary, and bgcece. The contrast prop sets the contrast level between the text and the background color. When contrast is set to "high", the text has a higher contrast with the background, making it easier to read, while when contrast is set to "low", the text has lower contrast with the background, which can make it more difficult to read the default is `high`.
 
 Example:
 
@@ -181,7 +182,7 @@ export function LinkColors() {
       <Link color="primary">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link color="surfacecece">
+      <Link color="bgcece">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
 
@@ -200,7 +201,7 @@ export function LinkColors() {
       <Link color="primary" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link color="surfacecece" contrast="low">
+      <Link color="bgcece" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
     </div>

@@ -1,9 +1,10 @@
 ---
-title: Alert
+title: React Alert Component
 type: core
-excerpt: The Alert component is a versatile component used to display messages to the user. It can be customized with different colors, sizes, corners, variants, and more.
+excerpt: Enhance user experience with Pillar UI's versatile  React Alert component. Easily create customizable alert notifications for your React applications, with various styles, and options for user interaction.
 items: ['Alert']
 directory: alert/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Usage
@@ -36,7 +37,7 @@ The Alert component accepts the following props:
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
 The color prop determines the background color of the Alert. It accepts any of the Color types defined in our library see options above. If not provided, it defaults to the primary color.
 
@@ -51,7 +52,7 @@ function AlertColors(){
         <Alert title="Success!" color='warning' />
         <Alert title="Success!" color='success' />
         <Alert title="Success!" color='primary' />
-        <Alert title="Success!" color='surface' />
+        <Alert title="Success!" color='bg' />
         <Alert title="Success!" color='secondary' />
     )
 }
@@ -166,7 +167,7 @@ Example usage:
 <AlertIcons />
 
 ```tsx showLineNumbers title="Alert.tsx"
-<Paper borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+<Paper borderColor="opacity-6" flow="sm" p="sm" background="bg-3" corner="sm">
   <Alert icon={<CircleCheck width="32" />} title="Success!" />
   <Alert icon={<CircleCheck width="32" />} title="Success!" />
   <Alert icon={<CircleCheck width="48" />} title="Success!" message="Your prefered description" />
@@ -182,7 +183,7 @@ Example usage:
 <AlertClosable />
 
 ```tsx showLineNumbers title="Alert.tsx"
-<Paper borderColor="opacity-6" flow="sm" p="sm" background="surface-3" corner="sm">
+<Paper borderColor="opacity-6" flow="sm" p="sm" background="bg-3" corner="sm">
   <Alert closable title="Success!" />
   <Alert closable title="Success!" message="you have an error in the start of the program" />
   <Alert closable message="you have an error in the start of the program!" />

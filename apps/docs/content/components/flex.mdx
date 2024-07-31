@@ -1,9 +1,10 @@
 ---
-title: Flex
+title: React Flexbox Component
 type: core
-excerpt: The Flex component is a versatile layout component where you can handle alignment and direction of the children.
+excerpt: Create flexible and responsive layouts with a customizable Flexbox component for React. Easily arrange and align elements within your applications for optimal user experience.
 items: ['Flex']
 directory: flex/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Usage
@@ -25,7 +26,7 @@ const Box = (props: any) => {
       justify="center"
       items="center"
       style={{ width: '30px', height: '30px' }}
-      background="surface-6"
+      background="bg-6"
       corner="sm"
       {...props}
     />
@@ -66,7 +67,7 @@ const Box = (props: any) => {
       justify="center"
       items="center"
       style={{ width: '30px', height: '30px' }}
-      background="surface-6"
+      background="bg-6"
       corner="sm"
       {...props}
     />
@@ -77,7 +78,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100p
 
 export const FlexWrap = () => {
   return (
-    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="surface-3" corner="sm">
+    <Paper className="playground" flow="sm" borderColor="opacity-6" p="sm" background="bg-3" corner="sm">
       <Flex wrap gap="sm">
         {boxes}
         {boxes}
@@ -109,7 +110,7 @@ const Box = (props: any) => {
       justify="center"
       items="center"
       style={{ width: '30px', height: '30px' }}
-      background="surface-6"
+      background="bg-6"
       corner="sm"
       {...props}
     />
@@ -148,7 +149,7 @@ const Box = (props: any) => {
       justify="center"
       items="center"
       style={{ width: '30px', height: '30px' }}
-      background="surface-6"
+      background="bg-6"
       corner="sm"
       {...props}
     />
@@ -199,7 +200,7 @@ const Box = (props: any) => {
       justify="center"
       items="center"
       style={{ width: '30px', height: '30px' }}
-      background="surface-6"
+      background="bg-6"
       corner="sm"
       {...props}
     />
@@ -211,13 +212,13 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100p
 export const FlexItems = () => {
   return (
     <div className="l_flow__sm">
-      <Flex as={Paper} height="100px" background="surface-5" gap="sm" items="center">
+      <Flex as={Paper} height="100px" background="bg-5" gap="sm" items="center">
         Hello
       </Flex>
-      <Flex as={Paper} height="100px" background="surface-5" gap="sm" items="end">
+      <Flex as={Paper} height="100px" background="bg-5" gap="sm" items="end">
         Hello
       </Flex>
-      <Flex as={Paper} height="100px" background="surface-5" gap="sm">
+      <Flex as={Paper} height="100px" background="bg-5" gap="sm">
         Hello
       </Flex>
     </div>

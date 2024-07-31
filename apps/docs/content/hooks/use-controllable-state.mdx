@@ -1,0 +1,49 @@
+---
+title: useControllableState
+type: hooks
+excerpt: 'The useControllableState hook creates a state variable that can be either controlled or uncontrolled.'
+directory: useControllableState/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+## Introduction
+
+The useControllableState hook creates a state variable that can be either controlled or uncontrolled.
+
+## Why useControllableState
+
+This hook is useful for creating stateful components that need to handle controlled and uncontrolled scenarios.
+
+## Installation
+
+```bash
+npm install @pillar-ui/hooks
+yarn add @pillar-ui/hooks
+```
+
+## Usage
+
+```tsx showLineNumbers title="Alert.tsx"
+import { useControllableState } from '@pillar-ui/hooks'
+
+function MyComponent({ controlledValue, defaultValue }) {
+  const [value, setValue] = useControllableState({ controlledValue, defaultValue })
+  // ...
+}
+```
+
+## Implementation details
+
+The hook returns an array containing the current value and a setter function. If controlledValue is defined, the hook returns it and a setter function that updates it. If controlledValue is not defined, the hook returns a state variable initialized to defaultValue and a setter function that updates it.
+
+## TypeScript Support
+
+This hook is fully typed and supports TypeScript out of the box.
+
+## Troubleshooting
+
+If you encounter any issues while using this hook, please open an issue on the GitHub repository.
+
+## Conclusion
+
+useControllableState is a versatile hook that simplifies handling controlled and uncontrolled state scenarios.

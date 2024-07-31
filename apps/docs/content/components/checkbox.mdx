@@ -1,9 +1,10 @@
 ---
-title: Checkbox
+title: React Checkbox Component
 type: core
-excerpt: The Checkbox component is a UI component that provides a visual representation of a binary option. It allows users to select or deselect an option by clicking on the checkbox.
+excerpt: Build interactive forms with a customizable Checkbox component for React. Seamlessly integrate checkboxes into your applications, providing users with clear and intuitive options.
 items: ['Checkbox']
 directory: checkbox/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -55,9 +56,9 @@ export const BadgeSize = () => {
 
 - Type: string
 - Default: `undefined`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
-The color prop is used to specify the background color of the Checkbox component. It supports the following color options: danger, warning, success, brown, primary, secondary, purple, and surface.
+The color prop is used to specify the background color of the Checkbox component. It supports the following color options: danger, warning, success, brown, primary, secondary, purple, and bg.
 
 Example:
 
@@ -73,7 +74,7 @@ export const CheckboxColor = () => {
       <Checkbox name="hello" label="Options 4" color="warning" />
       <Checkbox name="hello" label="Options 5" color="primary" />
       <Checkbox name="hello" label="Options 6" color="secondary" />
-      <Checkbox name="hello" label="Options 7" color="surface" />
+      <Checkbox name="hello" label="Options 7" color="bg" />
     </Flex>
   )
 }
@@ -98,7 +99,7 @@ export const CheckboxDisabled = () => {
         <Checkbox disabled name="hello" label="Hello" color="secondary" />
         <Checkbox disabled name="hello" label="Hello" color="purple" />
         <Checkbox disabled name="hello" label="Hello" color="brown" />
-        <Checkbox disabled name="hello" label="Hello" color="surface" />
+        <Checkbox disabled name="hello" label="Hello" color="bg" />
       </Flex>
       <Flex gap="sm" items="center">
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="danger" />
@@ -108,7 +109,7 @@ export const CheckboxDisabled = () => {
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="secondary" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="purple" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="brown" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="surface" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="bg" />
       </Flex>
     </div>
   )
@@ -134,7 +135,7 @@ export const CheckboxDefaultCheckedColor = () => {
       <Checkbox defaultChecked name="hello" label="Hello" color="warning" />
       <Checkbox defaultChecked name="hello" label="Hello" color="primary" />
       <Checkbox defaultChecked name="hello" label="Hello" color="secondary" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="surface" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="bg" />
     </Flex>
   )
 }

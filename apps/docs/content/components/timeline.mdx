@@ -1,9 +1,10 @@
 ---
-title: Timeline
+title: React Timeline Component
 type: core
 excerpt: The timeline component used to display a list of events in chronological order. It is a flexible component that can be customized to meet the needs of your application.
 items: ['Timeline', 'TimelineItem']
 directory: timeline/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ### Size
@@ -83,7 +84,7 @@ export const TimelineSize = () => {
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
 The color prop determines the color of the Timeline. It accepts a string representing a color name or a color value in hex, rgb, rgba format.###
 
@@ -126,7 +127,7 @@ const Items = (props: Omit<TimelineItemProps, 'children'>) => {
 export const TimelineColor = () => {
   return (
     <Flex gap="sm">
-      <Timeline color="surface">
+      <Timeline color="bg">
         <Items />
       </Timeline>
       <Timeline color="secondary">

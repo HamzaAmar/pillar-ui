@@ -1,9 +1,10 @@
 ---
-title: Pagination
+title: React Pagination Component
 type: core
-excerpt: The Pagination component is used to navigate between pages of content.
+excerpt: Simplify navigation through large datasets with a customizable Pagination component for React. Easily display page numbers, previous/next buttons, and jump controls.
 items: ['Pagination']
 directory: pagination/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -14,9 +15,9 @@ The Pagination component accepts the following props:
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `surfacece` | `primary` | `secondary`
+- Options: `danger` | `warning` | `success` | `primary` | `bgce` | `primary` | `secondary`
 
-The color prop sets the color of the pagination buttons. You can choose from a range of colors including red, green, orange, primary, purple, secondary, surfacece and brown.
+The color prop sets the color of the pagination buttons. You can choose from a range of colors including red, green, orange, primary, purple, secondary, bgce and brown.
 
 <PaginationColors />
 
@@ -32,7 +33,7 @@ export function PaginationDefault() {
       <Pagination color="warning" />
       <Pagination color="primary" />
       <Pagination color="secondary" />
-      <Pagination color="surfacece" />
+      <Pagination color="bgce" />
     </Flex>
   )
 }

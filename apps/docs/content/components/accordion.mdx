@@ -1,9 +1,10 @@
 ---
-title: Accordion
+title: 'React Accordions Component'
+excerpt: 'Enhance user experience with our React Accordion component. Easily create collapsible content sections for FAQs, product descriptions, tutorials, and more.'
 type: core
-excerpt: The accordion component allows users to expand and collapse content sections, which can be useful for displaying large amounts of information in a compact and organized manner.
 items: ['Accordion', 'AccordionButton', 'AccordionPanel', 'AccordionItem']
 directory: accordion/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -124,12 +125,12 @@ function AccordionBase(props) {
 function CornerCorners() {
   return (
     <div>
-      <AccordionBase color="surface" variant="solid" corner="sharp" />
-      <AccordionBase color="surface" variant="soft" corner="sm" />
-      <AccordionBase color="surface" variant="outline" corner="md" />
-      <AccordionBase color="surface" variant="solid" corner="lg" />
-      <AccordionBase color="surface" variant="soft" corner="xl" />
-      <AccordionBase color="surface" variant="outline" corner="full" />
+      <AccordionBase color="bg" variant="solid" corner="sharp" />
+      <AccordionBase color="bg" variant="soft" corner="sm" />
+      <AccordionBase color="bg" variant="outline" corner="md" />
+      <AccordionBase color="bg" variant="solid" corner="lg" />
+      <AccordionBase color="bg" variant="soft" corner="xl" />
+      <AccordionBase color="bg" variant="outline" corner="full" />
     </div>
   )
 }
@@ -182,9 +183,9 @@ function AccordionBase(props) {
 function SeparateExample() {
   return (
     <div>
-      <AccordionBase separate color="surface" variant="solid" corner="md" />
-      <AccordionBase separate color="surface" variant="soft" corner="md" />
-      <AccordionBase separate color="surface" variant="outline" corner="md" />
+      <AccordionBase separate color="bg" variant="solid" corner="md" />
+      <AccordionBase separate color="bg" variant="soft" corner="md" />
+      <AccordionBase separate color="bg" variant="outline" corner="md" />
     </div>
   )
 }

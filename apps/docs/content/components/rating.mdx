@@ -1,9 +1,10 @@
 ---
-title: Rating
+title: React Rating Component
 type: core
 excerpt: The Rating component is used to display a user's rating of a product, service, or business.
 items: ['Rating']
 directory: rating/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -60,7 +61,7 @@ export const RatingSize = () => {
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `surface` | `primary` | `secondary`
+- Options: `danger` | `warning` | `success` | `primary` | `bg` | `primary` | `secondary`
 
 The color prop determines the color of the Rating component. It accepts a string representing a color name or a color value in hex, rgb, rgba format.
 
@@ -75,7 +76,7 @@ export const RatingColor = () => {
       <Rating color="secondary" rating={4} />
       <Rating color="success" rating={4} />
       <Rating color="warning" rating={4} />
-      <Rating color="surface" rating={4} />
+      <Rating color="bg" rating={4} />
     </Flex>
   )
 }

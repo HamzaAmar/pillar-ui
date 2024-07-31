@@ -1,9 +1,10 @@
 ---
-title: Code
+title: React Code Component
 type: core
 excerpt: The Code component is used to render code to the screen.
 items: ['Code']
 directory: code/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
 ---
 
 ## Props
@@ -38,7 +39,7 @@ export const CodeCorners = () => {
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `surface`
+- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
 The color prop determines the color of the code. It accepts a string representing a color name or a color value in hex, rgb, rgba format.
 
@@ -52,7 +53,7 @@ export const CodeColors = () => {
       <Code color="success">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="warning">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="primary">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="surface">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="bg">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="secondary">{`console.log('Hello world Every thing is OK')`}</Code>
     </Flex>
   )

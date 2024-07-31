@@ -1,0 +1,81 @@
+---
+title: useReducedMotion
+type: hooks
+excerpt: 'The useReducedMotion hook is a custom hook for detecting whether the user has enabled Reduced Motion. It returns a boolean value of either true or false.'
+directory: useReducedMotion/index.ts
+lastModified: '2024-07-31T05:35:07.322Z'
+---
+
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Why useReducedMotion](#why-usereducedmotion)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Use Case](#use-case)
+- [Implementation details](#implementation-details)
+- [TypeScript Support](#typescript-support)
+- [Troubleshooting](#troubleshooting)
+- [Conclusion](#conclusion)
+
+## Introduction
+
+The useReducedMotion hook is a custom hook for detecting whether the user has enabled Reduced Motion. It returns a boolean value of either true or false.
+
+## Why useReducedMotion
+
+The useReducedMotion hook is a useful tool for adding Reduced Motion functionality to your React application. By using this hook, you can make your app more accessible and improve the user experience for users who have vestibular dysfunction or other conditions that can be exacerbated by motion.
+
+## Installation
+
+To use useReducedMotion in your project, you can install it from npm:
+
+```bash
+npm install --dev @pillar-ui/hooks
+```
+
+Use code with caution. Learn more
+
+## Usage
+
+To use the useReducedMotion hook in your React components, import it and call it in your functional component like this:
+
+```tsx title='app.ts' showLineNumbers
+import { useReducedMotion } from '@pillar-ui/hooks'
+
+function MyComponent() {
+  const { reducedMotion } = useReducedMotion()
+
+  return (
+    <div>
+      <p>Reduced motion enabled: {reducedMotion}</p>
+    </div>
+  )
+}
+```
+
+Use code with caution. Learn more
+
+## Use Case
+
+The useReducedMotion hook can be used in a variety of situations where you need to detect whether the user has enabled Reduced Motion. For example, you could use it to:
+
+- Disable animations and other motion-based effects based on the user's Reduced Motion setting.
+- Present the user with a choice of whether to enable or disable Reduced Motion.
+- Provide alternative ways for users to interact with your application if they have Reduced Motion enabled.
+
+## Implementation details
+
+The useReducedMotion hook uses the useMediaQuery hook from the React library to detect whether the user has enabled Reduced Motion.
+
+## TypeScript Support
+
+This hook is written in TypeScript and provides type definitions for its usage.
+
+## Troubleshooting
+
+If you encounter any issues using the useReducedMotion hook, please refer to the documentation or open an issue on the project's GitHub repository.
+
+## Conclusion
+
+The useReducedMotion custom hook is a useful tool for adding Reduced Motion functionality to your React application. By using this hook, you can make your app more accessible and improve the user experience for users who have vestibular dysfunction or other conditions that can be exacerbated by motion.
