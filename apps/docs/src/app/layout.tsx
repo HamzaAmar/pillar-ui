@@ -35,8 +35,20 @@ export const metadata: Metadata = {
     template: '%s | Pillar UI library',
   },
   description:
-    'Frontend Developer & Creator of Pillar UI | Passionate about building elegant, accessible, and UX-friendly Design Systems with React | React, Next,CSS,Remix',
-
+    'Pillar UI: A modern, accessible React component library for building beautiful, customizable, and lightning-fast web apps.',
+  keywords: [
+    'TypeScript',
+    'React',
+    'Hooks Library',
+    'Utils Library',
+    'Icons Library',
+    'Accessibility',
+    'React Component Library',
+    'Design System',
+    'UI library',
+    'Pillar UI',
+    'react design system',
+  ],
   robots: {
     index: true,
     follow: true,
@@ -44,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pillar UI library',
     description:
-      'Frontend Developer & Creator of Pillar UI | Passionate about building elegant, accessible, and UX-friendly Design Systems with React | React, Next,CSS,Remix',
+      'Pillar UI: A modern, accessible React component library for building beautiful, customizable, and lightning-fast web apps.',
     url: DOMAIN,
     siteName: 'Pillar UI library',
     locale: 'en_US',

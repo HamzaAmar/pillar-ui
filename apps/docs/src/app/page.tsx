@@ -26,5 +26,5 @@ function Home() {
 export default Home
 
 export const metadata: Metadata = {
-  title: 'Elevate Your Web Development Experience',
+  title: 'Pillar UI: The Modern, Accessible React Component Library ',
 }
