@@ -117,7 +117,7 @@ export const BadgeNumericColor = () => {
       <Badge type="numeric" number={15} max={15} color="warning" />
       <Badge type="numeric" number={15} max={15} color="primary" />
       <Badge type="numeric" number={15} max={15} color="secondary" />
-      <Badge type="numeric" number={15} max={15} color="surface" />
+      <Badge type="numeric" number={15} max={15} color="bg" />
     </Flex>
   )
 }
@@ -131,7 +131,7 @@ export const BadgeHighContrastColor = () => {
         <Badge type="numeric" number={15} max={15} color="warning" />
         <Badge type="numeric" number={15} max={15} color="primary" />
         <Badge type="numeric" number={15} max={15} color="secondary" />
-        <Badge type="numeric" number={15} max={15} color="surface" />
+        <Badge type="numeric" number={15} max={15} color="bg" />
       </Flex>
       <Flex gap="sm">
         <Badge type="numeric" highContrast number={15} max={15} color="danger" />
@@ -139,7 +139,7 @@ export const BadgeHighContrastColor = () => {
         <Badge type="numeric" highContrast number={15} max={15} color="warning" />
         <Badge type="numeric" highContrast number={15} max={15} color="primary" />
         <Badge type="numeric" highContrast number={15} max={15} color="secondary" />
-        <Badge type="numeric" highContrast number={15} max={15} color="surface" />
+        <Badge type="numeric" highContrast number={15} max={15} color="bg" />
       </Flex>
     </div>
   )
@@ -155,7 +155,7 @@ export const BadgeCorner = () => {
         <Badge type="numeric" corner="md" number={15} max={15} color="secondary" />
         <Badge type="numeric" corner="lg" number={15} max={15} color="secondary" />
         <Badge type="numeric" corner="circle" number={15} max={15} color="primary" />
-        <Badge type="numeric" corner="full" number={15} max={15} color="surface" />
+        <Badge type="numeric" corner="full" number={15} max={15} color="bg" />
       </Flex>
       <Flex gap="sm">
         <Badge type="icon" icon={<Check />} corner="sharp" color="danger" />
@@ -164,7 +164,7 @@ export const BadgeCorner = () => {
         <Badge type="icon" icon={<Apple />} corner="md" color="secondary" />
         <Badge type="icon" icon={<Alien />} corner="lg" color="secondary" />
         <Badge type="icon" icon={<ChevronDown />} corner="circle" color="primary" />
-        <Badge type="icon" icon={<LetterSpacing />} corner="full" color="surface" />
+        <Badge type="icon" icon={<LetterSpacing />} corner="full" color="bg" />
       </Flex>
       <Flex gap="sm">
         <Badge type="dot" corner="sharp" color="danger" />
@@ -173,7 +173,7 @@ export const BadgeCorner = () => {
         <Badge type="dot" corner="md" color="secondary" />
         <Badge type="dot" corner="lg" color="secondary" />
         <Badge type="dot" corner="circle" color="primary" />
-        <Badge type="dot" corner="full" color="surface" />
+        <Badge type="dot" corner="full" color="bg" />
       </Flex>
     </div>
   )
@@ -187,7 +187,7 @@ export const BadgeIconColor = () => {
       <Badge type="icon" icon={<Check />} color="warning" />
       <Badge type="icon" icon={<Check />} color="primary" />
       <Badge type="icon" icon={<Check />} color="secondary" />
-      <Badge type="icon" icon={<Check />} color="surface" />
+      <Badge type="icon" icon={<Check />} color="bg" />
     </Flex>
   )
 }
@@ -200,7 +200,7 @@ export const BadgeDotColor = () => {
       <Badge type="dot" color="warning" />
       <Badge type="dot" color="primary" />
       <Badge type="dot" color="secondary" />
-      <Badge type="dot" color="surface" />
+      <Badge type="dot" color="bg" />
     </Flex>
   )
 }
@@ -214,7 +214,7 @@ export const BadgeNumericMaxValue = () => {
       <Badge type="numeric" number={0} max={15} color="primary" />
       <Badge type="numeric" showZero number={0} max={15} color="danger" />
       <Badge type="numeric" number={15} max={1} color="secondary" />
-      <Badge type="numeric" number={15} max={15} color="surface" />
+      <Badge type="numeric" number={15} max={15} color="bg" />
     </Flex>
   )
 }
@@ -282,7 +282,7 @@ export const BadgePolymorphic = () => {
 export function ButtonCornerDefaults() {
   return (
     <div className="l_flow__sm">
-      <Flex gap="sm">
+      <Flex gap="sm" style={{ '--badge-rad': '0' } as CSSProperties}>
         <Paper corner="sharp">
           <Badge type="numeric" number={15} max={15} />
         </Paper>
@@ -298,7 +298,7 @@ export function ButtonCornerDefaults() {
         <Badge type="numeric" number={15} max={15} />
       </Flex>
 
-      <Flex gap="sm" style={{ '--badge-corner': '1px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--badge-rad': '4px' } as CSSProperties}>
         <Paper corner="sharp">
           <Badge type="numeric" number={15} max={15} />
         </Paper>
@@ -313,7 +313,7 @@ export function ButtonCornerDefaults() {
         </Paper>
         <Badge type="numeric" number={15} max={15} />
       </Flex>
-      <Flex gap="sm" style={{ '--badge-corner': '10px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--badge-rad': '8px' } as CSSProperties}>
         <Paper corner="sharp">
           <Badge type="numeric" number={15} max={15} />
         </Paper>
@@ -329,7 +329,7 @@ export function ButtonCornerDefaults() {
         <Badge type="numeric" number={15} max={15} />
       </Flex>
 
-      <Flex gap="sm" style={{ '--badge-corner': '20px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--badge-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <Badge type="numeric" number={15} max={15} />
         </Paper>

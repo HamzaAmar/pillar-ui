@@ -89,7 +89,7 @@ export const ColorInput = () => {
       <InputSearch color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <InputSearch color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <InputSearch color="secondary" variant="outline" autoFocus placeholder="Disabled" />
-      <InputSearch color="surface" variant="filled" autoFocus placeholder="isInvalid" />
+      <InputSearch color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <InputSearch
         color="success"
         variant="bordered"

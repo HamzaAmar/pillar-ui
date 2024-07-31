@@ -159,9 +159,9 @@ export function TextTrasforms() {
 export function TextDecorations() {
   return (
     <div className="l_flow">
-      <Text decoration="line-through">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
-      <Text decoration="underline">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
-      <Text decoration="overline">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
+      <Text decoration="through">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
+      <Text decoration="under">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
+      <Text decoration="over">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
     </div>
   )
 }
@@ -225,7 +225,7 @@ export function TextColors() {
       <Text color="primary">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="surface">
+      <Text color="bg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
 
@@ -245,7 +245,7 @@ export function TextColors() {
       <Text color="primary" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="surface" contrast="low">
+      <Text color="bg" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
     </div>

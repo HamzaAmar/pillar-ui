@@ -18,7 +18,7 @@ export function SpinnerColors() {
       <Spinner color="warning" />
       <Spinner color="primary" />
       <Spinner color="secondary" />
-      <Spinner color="surface" />
+      <Spinner color="bg" />
     </Flex>
   )
 }
@@ -62,7 +62,7 @@ export function SpinnerInvert() {
         <Spinner color="warning" />
         <Spinner color="primary" />
         <Spinner color="secondary" />
-        <Spinner color="surface" />
+        <Spinner color="bg" />
       </Flex>
       <Flex gap="sm" items="center">
         <Spinner invert color="success" />
@@ -70,7 +70,7 @@ export function SpinnerInvert() {
         <Spinner invert color="warning" />
         <Spinner invert color="primary" />
         <Spinner invert color="secondary" />
-        <Spinner invert color="surface" />
+        <Spinner invert color="bg" />
       </Flex>
     </div>
   )

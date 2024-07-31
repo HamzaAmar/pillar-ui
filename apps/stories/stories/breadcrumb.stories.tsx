@@ -93,7 +93,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="surface">
+      <Breadcrumb color="bg">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -250,7 +250,7 @@ export function BreadcrumbCustomStyle() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb style={{ color: 'danger', background: 'var(--surface-5)' }} separator="*">
+      <Breadcrumb style={{ color: 'brown', background: 'var(--bg-5)' }} separator="*">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -259,13 +259,13 @@ export function BreadcrumbCustomStyle() {
       </Breadcrumb>
 
       <Breadcrumb separator={<Minus width={10} />}>
-        <BreadcrumbItem style={{ color: 'danger', background: 'white' }} link="../..">
+        <BreadcrumbItem style={{ color: 'red', background: 'white' }} link="../..">
           components
         </BreadcrumbItem>
-        <BreadcrumbItem style={{ color: 'danger', background: 'white' }} link="../">
+        <BreadcrumbItem style={{ color: 'red', background: 'white' }} link="../">
           base-ui
         </BreadcrumbItem>
-        <BreadcrumbItem style={{ color: 'danger', background: 'white' }} link="./" current>
+        <BreadcrumbItem style={{ color: 'red', background: 'white' }} link="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>

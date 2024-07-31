@@ -18,7 +18,7 @@ const Box = (props: any) => {
       justify="center"
       items="center"
       style={{ height: '100px' }}
-      background="surface-6"
+      background="bg-6"
       corner="sm"
       {...props}
     />
@@ -113,13 +113,13 @@ export const FlexJustify = () => {
 export const FlexItems = () => {
   return (
     <div className="l_flow__sm">
-      <Flex as={Paper} height="100px" background="surface-5" gap="sm" items="center">
+      <Flex as={Paper} height="100px" background="bg-5" gap="sm" items="center">
         Hello
       </Flex>
-      <Flex as={Paper} height="100px" background="surface-5" gap="sm" items="end">
+      <Flex as={Paper} height="100px" background="bg-5" gap="sm" items="end">
         Hello
       </Flex>
-      <Flex as={Paper} height="100px" background="surface-5" gap="sm">
+      <Flex as={Paper} height="100px" background="bg-5" gap="sm">
         Hello
       </Flex>
     </div>

@@ -16,7 +16,7 @@ export const CodeColors = () => {
       <Code color="success">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="warning">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="primary">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="surface">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="bg">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="secondary">{`console.log('Hello world Every thing is OK')`}</Code>
     </Flex>
   )
@@ -58,7 +58,7 @@ export const CodeLong = () => {
           laborum reiciendis.
         </div>`}
       </Code>
-      <Code color="surface" corner="sharp">
+      <Code color="bg" corner="sharp">
         {`<!DOCTYPE html>
             <html lang="en">
             <head>
@@ -123,7 +123,7 @@ export function ButtonCornerDefaults() {
         <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
 
-      <Flex gap="sm" direction="column" style={{ '--code-corner': '1px' } as CSSProperties}>
+      <Flex gap="sm" direction="column" style={{ '--code-rad': '1px' } as CSSProperties}>
         <Paper corner="sharp">
           <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
@@ -138,7 +138,7 @@ export function ButtonCornerDefaults() {
         </Paper>
         <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
-      <Flex gap="sm" direction="column" style={{ '--code-corner': '10px' } as CSSProperties}>
+      <Flex gap="sm" direction="column" style={{ '--code-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
           <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
@@ -154,7 +154,7 @@ export function ButtonCornerDefaults() {
         <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
 
-      <Flex gap="sm" direction="column" style={{ '--code-corner': '20px' } as CSSProperties}>
+      <Flex gap="sm" direction="column" style={{ '--code-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <Code color="danger">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>

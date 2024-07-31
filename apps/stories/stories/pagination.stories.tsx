@@ -19,7 +19,7 @@ export function PaginationColor() {
         <Pagination count={10} color="warning" />
         <Pagination count={10} color="primary" />
         <Pagination count={10} color="secondary" />
-        <Pagination count={10} color="surface" />
+        <Pagination count={10} color="bg" />
       </div>
       <div className="l_flow__md">
         <Pagination count={10} variant="soft" />
@@ -28,7 +28,7 @@ export function PaginationColor() {
         <Pagination count={10} variant="soft" color="warning" />
         <Pagination count={10} variant="soft" color="primary" />
         <Pagination count={10} variant="soft" color="secondary" />
-        <Pagination count={10} variant="soft" color="surface" />
+        <Pagination count={10} variant="soft" color="bg" />
       </div>
       <div className="l_flow__md">
         <Pagination count={10} />
@@ -37,7 +37,7 @@ export function PaginationColor() {
         <Pagination count={10} variant="solid" color="warning" />
         <Pagination count={10} variant="solid" color="primary" />
         <Pagination count={10} variant="solid" color="secondary" />
-        <Pagination count={10} variant="solid" color="surface" />
+        <Pagination count={10} variant="solid" color="bg" />
       </div>
     </div>
   )
@@ -52,7 +52,7 @@ export function PaginationVariant() {
       <Pagination count={10} color="warning" />
       <Pagination count={10} color="primary" />
       <Pagination count={10} color="secondary" />
-      <Pagination count={10} color="surface" />
+      <Pagination count={10} color="bg" />
     </div>
   )
 }
@@ -66,7 +66,7 @@ export function PaginationCustomStyle() {
       <Pagination count={10} color="warning" />
       <Pagination count={10} color="primary" />
       <Pagination count={10} color="secondary" />
-      <Pagination count={10} color="surface" />
+      <Pagination count={10} color="bg" />
     </div>
   )
 }

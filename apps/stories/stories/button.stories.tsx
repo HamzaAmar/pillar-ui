@@ -22,7 +22,7 @@ export function ButtonsColors() {
       <Button color="warning">Orange</Button>
       <Button color="danger">Red</Button>
       <Button color="secondary">Secondary</Button>
-      <Button color="surface">Surface</Button>
+      <Button color="bg">bg</Button>
       <Button color="primary">Primary</Button>
     </Flex>
   )
@@ -50,8 +50,10 @@ export function ButtonsIcons() {
     <div className="l_flow__xl">
       {SIZES.map((size) => (
         <div key={size}>
-          <Text size="lg">{size} Button</Text>
-          <Flex gap="sm">
+          <Text weight="bold" size="2xl">
+            {size} Button
+          </Text>
+          <Flex gap="sm" wrap>
             <Button size={size}>No Icon Button</Button>
             <Button size={size} icon={<X />}>
               Icon Button
@@ -82,7 +84,7 @@ export function ButtonsTransforms() {
   return (
     <div>
       <h1>with Props</h1>
-      <Flex gap="sm">
+      <Flex gap="sm" wrap>
         <Button transform="uppercase" color="success">
           Green
         </Button>
@@ -138,8 +140,8 @@ export function ButtonsVariants() {
           <Button color="secondary" variant={variant}>
             Secondary
           </Button>
-          <Button color="surface" variant={variant}>
-            Surface
+          <Button color="bg" variant={variant}>
+            bg
           </Button>
           <Button color="primary" variant={variant}>
             Primary
@@ -167,51 +169,51 @@ export function ButtonsCorners() {
         <Button corner="md" color="secondary">
           Secondary
         </Button>
-        <Button corner="lg" color="surface">
-          Surface
+        <Button corner="lg" color="bg">
+          bg
         </Button>
         <Button corner="xl" color="primary">
           Primary
         </Button>
-        <Button corner="hand-1" color="primary">
+        <Button corner="h-1" color="primary">
           Primary
         </Button>
-        <Button corner="hand-2" color="primary">
+        <Button corner="h-2" color="primary">
           Primary
         </Button>
-        <Button corner="hand-3" color="primary">
+        <Button corner="h-3" color="primary">
           Primary
         </Button>
 
-        <Button corner="hand-4" color="primary">
+        <Button corner="h-4" color="primary">
           Primary
         </Button>
-        <Button corner="hand-5" color="primary">
+        <Button corner="h-5" color="primary">
           Primary
         </Button>
-        <Button corner="hand-6" color="primary">
+        <Button corner="h-6" color="primary">
           Primary
         </Button>
       </Flex>
       <h1>Specify the button Corner circle</h1>
 
-      <Flex gap="sm" style={{ '--button-corner': '1000px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--button-rad': '1000px' } as CSSProperties}>
         <Button color="success">Green</Button>
         <Button color="warning">Orange</Button>
         <Button color="danger">Red</Button>
         <Button color="secondary">Secondary</Button>
-        <Button color="surface">Surface</Button>
+        <Button color="bg">bg</Button>
         <Button color="primary">Primary</Button>
       </Flex>
 
       <h1>Specify the button Corner Medium</h1>
 
-      <Flex gap="sm" style={{ '--button-corner': 'var(--corner-md)' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--button-rad': 'var(--rad-md)' } as CSSProperties}>
         <Button color="success">Green</Button>
         <Button color="warning">Orange</Button>
         <Button color="danger">Red</Button>
         <Button color="secondary">Secondary</Button>
-        <Button color="surface">Surface</Button>
+        <Button color="bg">bg</Button>
         <Button color="primary">Primary</Button>
       </Flex>
     </div>
@@ -233,8 +235,8 @@ export function ButtonSizes() {
       <Button size="sm" color="secondary">
         Secondary
       </Button>
-      <Button size="md" color="surface">
-        Surface
+      <Button size="md" color="bg">
+        bg
       </Button>
       <Button size="lg" color="primary">
         Primary
@@ -245,7 +247,7 @@ export function ButtonSizes() {
 
 export function ButtonsFluid() {
   return (
-    <div className="l_flow__md">
+    <Flex gap="md" direction="column">
       <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xs" color="success">
         Green
       </Button>
@@ -258,8 +260,8 @@ export function ButtonsFluid() {
       <Button fluid icon={<Github />} size="sm" color="secondary">
         Secondary
       </Button>
-      <Button fluid icon={<Eye />} iconPosition="end" size="md" color="surface">
-        Surface
+      <Button fluid icon={<Eye />} iconPosition="end" size="md" color="bg">
+        bg
       </Button>
       <Button fluid icon={<ThumbUp />} size="lg" color="primary">
         Primary
@@ -273,7 +275,7 @@ export function ButtonsFluid() {
       <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xl" color="secondary">
         Brown
       </Button>
-    </div>
+    </Flex>
   )
 }
 
@@ -308,8 +310,8 @@ export function ButtonLoadingState() {
       <Button state="loading" size="sm" color="secondary">
         Secondary
       </Button>
-      <Button state="loading" size="md" color="surface">
-        Surface
+      <Button state="loading" size="md" color="bg">
+        bg
       </Button>
       <Button state="loading" size="lg" color="primary">
         Primary
@@ -374,7 +376,7 @@ export function ButtonCornerDefaults() {
         <Button color="success">Green</Button>
       </Flex>
 
-      <Flex gap="sm" style={{ '--button-corner': '5px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--button-rad': '5px' } as CSSProperties}>
         <Paper corner="sharp">
           <Button color="success">Green</Button>
         </Paper>
@@ -389,7 +391,7 @@ export function ButtonCornerDefaults() {
         </Paper>
         <Button color="success">Green</Button>
       </Flex>
-      <Flex gap="sm" style={{ '--button-corner': '10px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--button-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
           <Button color="success">Green</Button>
         </Paper>
@@ -405,7 +407,7 @@ export function ButtonCornerDefaults() {
         <Button color="success">Green</Button>
       </Flex>
 
-      <Flex gap="sm" style={{ '--button-corner': '20px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--button-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <Button color="success">Green</Button>
         </Paper>

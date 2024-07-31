@@ -90,7 +90,7 @@ export const ColorInput = () => {
       <InputPassword color="primary" variant="bordered" autoFocus placeholder="Focus" />
       <InputPassword color="warning" variant="bordered" autoFocus placeholder="Normal" />
       <InputPassword color="secondary" variant="outline" autoFocus placeholder="Disabled" />
-      <InputPassword color="surface" variant="filled" autoFocus placeholder="isInvalid" />
+      <InputPassword color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <InputPassword color="success" variant="bordered" autoFocus placeholder="Placeholder" />
       <InputPassword color="danger" variant="bordered" autoFocus defaultValue="Default Value" />
     </Flex>

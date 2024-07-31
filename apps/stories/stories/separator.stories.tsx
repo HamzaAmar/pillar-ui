@@ -17,7 +17,7 @@ export const SeparatorColors = () => {
       <Separator color="success" />
       <Separator color="secondary" />
       <Separator color="primary" />
-      <Separator color="surface" />
+      <Separator color="bg" />
     </div>
   )
 }

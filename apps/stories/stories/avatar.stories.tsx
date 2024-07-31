@@ -78,17 +78,17 @@ export function AvatarsCorners() {
         <Avatar corner="lg" title="Hello" />
         <Avatar corner="xl" title="Hello" />
         <Avatar corner="full" title="Hello" />
-        <Avatar corner="blob-1" title="Hello" />
-        <Avatar corner="blob-2" title="Hello" />
-        <Avatar corner="blob-3" title="Hello" />
-        <Avatar corner="blob-4" title="Hello" />
-        <Avatar corner="blob-5" title="Hello" />
-        <Avatar corner="hand-1" title="Hello" />
-        <Avatar corner="hand-2" title="Hello" />
-        <Avatar corner="hand-3" title="Hello" />
-        <Avatar corner="hand-4" title="Hello" />
-        <Avatar corner="hand-5" title="Hello" />
-        <Avatar corner="hand-6" title="Hello" />
+        <Avatar corner="b-1" title="Hello" />
+        <Avatar corner="b-2" title="Hello" />
+        <Avatar corner="b-3" title="Hello" />
+        <Avatar corner="b-4" title="Hello" />
+        <Avatar corner="b-5" title="Hello" />
+        <Avatar corner="h-1" title="Hello" />
+        <Avatar corner="h-2" title="Hello" />
+        <Avatar corner="h-3" title="Hello" />
+        <Avatar corner="h-4" title="Hello" />
+        <Avatar corner="h-5" title="Hello" />
+        <Avatar corner="h-6" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
         <Avatar corner="sharp" image={image} title="Hello" />
@@ -98,17 +98,17 @@ export function AvatarsCorners() {
         <Avatar corner="lg" image={image} title="Hello" />
         <Avatar corner="xl" image={image} title="Hello" />
         <Avatar corner="full" image={image} title="Hello" />
-        <Avatar corner="blob-1" image={image} title="Hello" />
-        <Avatar corner="blob-2" image={image} title="Hello" />
-        <Avatar corner="blob-3" image={image} title="Hello" />
-        <Avatar corner="blob-4" image={image} title="Hello" />
-        <Avatar corner="blob-5" image={image} title="Hello" />
-        <Avatar corner="hand-1" image={image} title="Hello" />
-        <Avatar corner="hand-2" image={image} title="Hello" />
-        <Avatar corner="hand-3" image={image} title="Hello" />
-        <Avatar corner="hand-4" image={image} title="Hello" />
-        <Avatar corner="hand-5" image={image} title="Hello" />
-        <Avatar corner="hand-6" image={image} title="Hello" />
+        <Avatar corner="b-1" image={image} title="Hello" />
+        <Avatar corner="b-2" image={image} title="Hello" />
+        <Avatar corner="b-3" image={image} title="Hello" />
+        <Avatar corner="b-4" image={image} title="Hello" />
+        <Avatar corner="b-5" image={image} title="Hello" />
+        <Avatar corner="h-1" image={image} title="Hello" />
+        <Avatar corner="h-2" image={image} title="Hello" />
+        <Avatar corner="h-3" image={image} title="Hello" />
+        <Avatar corner="h-4" image={image} title="Hello" />
+        <Avatar corner="h-5" image={image} title="Hello" />
+        <Avatar corner="h-6" image={image} title="Hello" />
       </Flex>
     </div>
   )
@@ -134,7 +134,7 @@ export function AvatarsColors() {
         <Avatar color="warning" variant="solid" title="Hello" />
         <Avatar color="secondary" variant="solid" title="Hello" />
         <Avatar color="primary" variant="solid" title="Hello" />
-        <Avatar color="surface" variant="solid" title="Hello" />
+        <Avatar color="bg" variant="solid" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
         <Avatar color="danger" variant="outline" image={image} title="Hello" />
@@ -143,7 +143,7 @@ export function AvatarsColors() {
         <Avatar color="warning" variant="outline" title="Hello" />
         <Avatar color="secondary" variant="outline" title="Hello" />
         <Avatar color="primary" variant="outline" title="Hello" />
-        <Avatar color="surface" variant="outline" title="Hello" />
+        <Avatar color="bg" variant="outline" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
         <Avatar color="danger" variant="dashed" image={image} title="Hello" />
@@ -152,7 +152,7 @@ export function AvatarsColors() {
         <Avatar color="warning" variant="dashed" title="Hello" />
         <Avatar color="secondary" variant="dashed" title="Hello" />
         <Avatar color="primary" variant="dashed" title="Hello" />
-        <Avatar color="surface" variant="dashed" title="Hello" />
+        <Avatar color="bg" variant="dashed" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
         <Avatar color="danger" variant="soft" image={image} title="Hello" />
@@ -161,7 +161,7 @@ export function AvatarsColors() {
         <Avatar color="warning" variant="soft" title="Hello" />
         <Avatar color="secondary" variant="soft" title="Hello" />
         <Avatar color="primary" variant="soft" title="Hello" />
-        <Avatar color="surface" variant="soft" title="Hello" />
+        <Avatar color="bg" variant="soft" title="Hello" />
       </Flex>
     </div>
   )
@@ -278,7 +278,7 @@ export function AvatarCornerDefaults() {
         <Avatar title="Hello" />
       </Flex>
 
-      <Flex gap="sm" style={{ '--avatar-corner': '5px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--avatar-rad': '5px' } as CSSProperties}>
         <Paper corner="sharp">
           <Avatar title="Hello" />
         </Paper>
@@ -293,7 +293,7 @@ export function AvatarCornerDefaults() {
         </Paper>
         <Avatar title="Hello" />
       </Flex>
-      <Flex gap="sm" style={{ '--avatar-corner': '10px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--avatar-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
           <Avatar title="Hello" />
         </Paper>
@@ -309,7 +309,7 @@ export function AvatarCornerDefaults() {
         <Avatar title="Hello" />
       </Flex>
 
-      <Flex gap="sm" style={{ '--avatar-corner': '20px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--avatar-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <Avatar title="Hello" />
         </Paper>

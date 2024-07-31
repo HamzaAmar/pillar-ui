@@ -16,7 +16,7 @@ export function IconButtonsColors() {
       <IconButton title="Hello world" icon={<ThumbUp />} color="warning" />
       <IconButton title="Hello world" icon={<ThumbUp />} color="danger" />
       <IconButton title="Hello world" icon={<ThumbUp />} color="secondary" />
-      <IconButton title="Hello world" icon={<ThumbUp />} color="surface" />
+      <IconButton title="Hello world" icon={<ThumbUp />} color="bg" />
       <IconButton title="Hello world" icon={<ThumbUp />} color="primary" />
     </Flex>
   )
@@ -29,7 +29,7 @@ export function IconButtonsSizes() {
       <IconButton title="Hello world" size="2xs" icon={<ThumbUp />} color="warning" />
       <IconButton title="Hello world" size="xs" icon={<ThumbUp />} color="danger" />
       <IconButton title="Hello world" size="sm" icon={<ThumbUp />} color="secondary" />
-      <IconButton title="Hello world" size="md" icon={<ThumbUp />} color="surface" />
+      <IconButton title="Hello world" size="md" icon={<ThumbUp />} color="bg" />
       <IconButton title="Hello world" size="xl" icon={<ThumbUp />} color="primary" />
     </Flex>
   )
@@ -41,7 +41,7 @@ export function IconButtonsCorners() {
       <IconButton title="Hello world" corner="sharp" icon={<ThumbUp />} color="success" />
       <IconButton title="Hello world" corner="xs" icon={<ThumbUp />} color="danger" />
       <IconButton title="Hello world" corner="sm" icon={<ThumbUp />} color="secondary" />
-      <IconButton title="Hello world" corner="md" icon={<ThumbUp />} color="surface" />
+      <IconButton title="Hello world" corner="md" icon={<ThumbUp />} color="bg" />
       <IconButton title="Hello world" corner="xl" icon={<ThumbUp />} color="primary" />
     </Flex>
   )
@@ -57,7 +57,7 @@ export function IconButtonsVariants() {
           <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="warning" />
           <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="danger" />
           <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="secondary" />
-          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="surface" />
+          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="bg" />
           <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="primary" />
         </Flex>
       ))}
@@ -84,7 +84,7 @@ export function ButtonCornerDefaults() {
         <IconButton title="Hello world" icon={<ThumbUp />} color="primary" />
       </Flex>
 
-      <Flex gap="sm" style={{ '--button-corner': '5px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--button-rad': '5px' } as CSSProperties}>
         <Paper corner="sharp">
           <IconButton title="Hello world" icon={<ThumbUp />} color="primary" />
         </Paper>
@@ -99,7 +99,7 @@ export function ButtonCornerDefaults() {
         </Paper>
         <IconButton title="Hello world" icon={<ThumbUp />} color="primary" />
       </Flex>
-      <Flex gap="sm" style={{ '--button-corner': '10px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--button-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
           <IconButton title="Hello world" icon={<ThumbUp />} color="primary" />
         </Paper>
@@ -115,7 +115,7 @@ export function ButtonCornerDefaults() {
         <IconButton title="Hello world" icon={<ThumbUp />} color="primary" />
       </Flex>
 
-      <Flex gap="sm" style={{ '--button-corner': '20px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--button-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <IconButton title="Hello world" icon={<ThumbUp />} color="primary" />
         </Paper>

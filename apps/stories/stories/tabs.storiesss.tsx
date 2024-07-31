@@ -82,7 +82,7 @@
 //       <TabBase color="success" defaultValue={1} />
 //       <TabBase color="primary" defaultValue={1} />
 //       <TabBase color="secondary" defaultValue={1} />
-//       <TabBase color="surface" defaultValue={1} />
+//       <TabBase color="bg" defaultValue={1} />
 //     </Flex>
 //   )
 // }
@@ -105,7 +105,7 @@
 //         <TabBase variant="solid" color="success" defaultValue={1} />
 //         <TabBase variant="solid" color="primary" defaultValue={1} />
 //         <TabBase variant="solid" color="secondary" defaultValue={1} />
-//         <TabBase variant="solid" color="surface" defaultValue={1} />
+//         <TabBase variant="solid" color="bg" defaultValue={1} />
 //       </Flex>
 //       <Flex direction="column" gap="sm">
 //         <TabBase variant="outline" color="danger" defaultValue={1} />
@@ -113,7 +113,7 @@
 //         <TabBase variant="outline" color="success" defaultValue={1} />
 //         <TabBase variant="outline" color="primary" defaultValue={1} />
 //         <TabBase variant="outline" color="secondary" defaultValue={1} />
-//         <TabBase variant="outline" color="surface" defaultValue={1} />
+//         <TabBase variant="outline" color="bg" defaultValue={1} />
 //       </Flex>
 //       <Flex direction="column" gap="sm">
 //         <TabBase variant="soft" color="danger" defaultValue={1} />
@@ -121,7 +121,7 @@
 //         <TabBase variant="soft" color="success" defaultValue={1} />
 //         <TabBase variant="soft" color="primary" defaultValue={1} />
 //         <TabBase variant="soft" color="secondary" defaultValue={1} />
-//         <TabBase variant="soft" color="surface" defaultValue={1} />
+//         <TabBase variant="soft" color="bg" defaultValue={1} />
 //       </Flex>
 //       <Flex direction="column" gap="sm">
 //         <TabBase color="danger" defaultValue={1} />
@@ -129,7 +129,7 @@
 //         <TabBase color="success" defaultValue={1} />
 //         <TabBase color="primary" defaultValue={1} />
 //         <TabBase color="secondary" defaultValue={1} />
-//         <TabBase color="surface" defaultValue={1} />
+//         <TabBase color="bg" defaultValue={1} />
 //       </Flex>
 //     </Grid>
 //   )

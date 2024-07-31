@@ -23,8 +23,8 @@ export function PaperBackground() {
       <Paper background="success">Hello</Paper>
       <Paper background="secondary">Hello</Paper>
       <Paper background="primary">Hello</Paper>
-      <Paper background="surface">Hello</Paper>
-      <Paper background="surface">Hello</Paper>
+      <Paper background="bg">Hello</Paper>
+      <Paper background="bg">Hello</Paper>
     </div>
   )
 }
@@ -42,7 +42,7 @@ export function PaperPadding() {
         <Paper p="sm" background="success">
           Hello
         </Paper>
-        <Paper p="md" background="surface">
+        <Paper p="md" background="bg">
           Hello
         </Paper>
         <Paper p="xl" background="secondary">
@@ -62,7 +62,7 @@ export function PaperPadding() {
         <Paper p="2xs" background="success">
           Hello
         </Paper>
-        <Paper p="2xs" background="surface">
+        <Paper p="2xs" background="bg">
           Hello
         </Paper>
         <Paper p="2xs" background="secondary">
@@ -81,28 +81,28 @@ export function PaperPadding() {
 export function PaperCorner() {
   return (
     <div className="l_flow__md">
-      <Paper p="sm" background="surface-4">
+      <Paper p="sm" background="bg-4">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" corner="xs">
+      <Paper p="sm" background="bg-4" corner="xs">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" corner="sm">
+      <Paper p="sm" background="bg-4" corner="sm">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" corner="md">
+      <Paper p="sm" background="bg-4" corner="md">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" corner="lg">
+      <Paper p="sm" background="bg-4" corner="lg">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" corner="xl">
+      <Paper p="sm" background="bg-4" corner="xl">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" corner="full">
+      <Paper p="sm" background="bg-4" corner="full">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" corner="circle">
+      <Paper p="sm" background="bg-4" corner="circle">
         Hello
       </Paper>
     </div>
@@ -136,22 +136,22 @@ export function PaperShadow() {
 export function PaperColors() {
   return (
     <div className="l_flow__md">
-      <Paper p="sm" background="surface-4" color="danger-11">
+      <Paper p="sm" background="bg-4" color="danger-11">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" color="success-11">
+      <Paper p="sm" background="bg-4" color="success-11">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" color="warning-11">
+      <Paper p="sm" background="bg-4" color="warning-11">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" color="secondary-11">
+      <Paper p="sm" background="bg-4" color="secondary-11">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" color="surface-11">
+      <Paper p="sm" background="bg-4" color="bg-11">
         Hello
       </Paper>
-      <Paper p="sm" background="surface-4" color="primary-11">
+      <Paper p="sm" background="bg-4" color="primary-11">
         Hello
       </Paper>
     </div>
@@ -173,7 +173,7 @@ export function PaperWidths() {
       <Paper width="45-char" background="secondary-4" color="secondary">
         Hello
       </Paper>
-      <Paper width="75-char" background="surface-4" color="surface">
+      <Paper width="75-char" background="bg-4" color="bg">
         Hello
       </Paper>
       <Paper width="60-char" background="primary-4" color="primary">
@@ -198,7 +198,7 @@ export function PaperHeights() {
       <Paper height="30vmin" background="secondary-4" color="secondary">
         Hello
       </Paper>
-      <Paper height="min(100px, 8rem)" background="surface-4" color="surface">
+      <Paper height="min(100px, 8rem)" background="bg-4" color="bg">
         Hello
       </Paper>
       <Paper background="primary-4" color="primary">

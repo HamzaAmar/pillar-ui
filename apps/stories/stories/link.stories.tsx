@@ -126,13 +126,13 @@ export function LinkTrasforms() {
 export function LinkDecorations() {
   return (
     <div className="l_flow__md">
-      <Link href="#" decoration="line-through">
+      <Link href="#" decoration="through">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" decoration="underline">
+      <Link href="#" decoration="under">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" decoration="overline">
+      <Link href="#" decoration="over">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
     </div>
@@ -190,7 +190,7 @@ export function LinkColors() {
       <Link href="#" color="primary" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="surface" contrast="high">
+      <Link href="#" color="bg" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
 
@@ -209,7 +209,7 @@ export function LinkColors() {
       <Link href="#" color="primary">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="surface">
+      <Link href="#" color="bg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
     </div>

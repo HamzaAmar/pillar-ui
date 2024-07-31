@@ -36,7 +36,7 @@ export function SwitchColors() {
       <Switch label="Hello" color="success" />
       <Switch label="Hello" color="primary" />
       <Switch label="Hello" color="secondary" />
-      <Switch label="Hello" color="surface" />
+      <Switch label="Hello" color="bg" />
     </Flex>
   )
 }
@@ -49,7 +49,7 @@ export function SwitchColorsDefault() {
       <Switch label="Hello" defaultPressed color="success" />
       <Switch label="Hello" defaultPressed color="primary" />
       <Switch label="Hello" defaultPressed color="secondary" />
-      <Switch label="Hello" defaultPressed color="surface" />
+      <Switch label="Hello" defaultPressed color="bg" />
     </Flex>
   )
 }
@@ -68,7 +68,7 @@ export function SwitchCorners() {
         <Switch label="Hello" corner="full" />
       </Flex>
       <Heading>With Border Radius .5rem</Heading>
-      <Flex gap="sm" items="center" style={{ '--switch-corner': '.5rem' } as CSSProperties}>
+      <Flex gap="sm" items="center" style={{ '--switch-rad': '.5rem' } as CSSProperties}>
         <Switch label="Hello" />
         <Switch label="Hello" />
         <Switch label="Hello" />
@@ -79,7 +79,7 @@ export function SwitchCorners() {
       </Flex>
 
       <Heading>With Border Radius 1rem</Heading>
-      <Flex gap="sm" items="center" style={{ '--switch-corner': '2rem' } as CSSProperties}>
+      <Flex gap="sm" items="center" style={{ '--switch-rad': '2rem' } as CSSProperties}>
         <Switch label="Hello" />
         <Switch label="Hello" />
         <Switch label="Hello" />
@@ -89,7 +89,7 @@ export function SwitchCorners() {
         <Switch label="Hello" />
       </Flex>
       <Heading>With Border Radius sharp</Heading>
-      <Flex gap="sm" items="center" style={{ '--switch-corner': 0 } as CSSProperties}>
+      <Flex gap="sm" items="center" style={{ '--switch-rad': 0 } as CSSProperties}>
         <Switch label="Hello" />
         <Switch label="Hello" />
         <Switch label="Hello" />

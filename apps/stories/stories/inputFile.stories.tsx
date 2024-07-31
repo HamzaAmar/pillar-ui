@@ -79,7 +79,7 @@ export const ColorInputFile = () => {
       <InputFile color="primary" variant="bordered" />
       <InputFile color="warning" variant="bordered" />
       <InputFile color="secondary" variant="outline" />
-      <InputFile color="surface" variant="filled" />
+      <InputFile color="bg" variant="filled" />
     </Flex>
   )
 }

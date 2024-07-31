@@ -48,7 +48,7 @@ export const CheckboxColor = () => {
       <Checkbox name="hello" label="Warning" color="warning" />
       <Checkbox name="hello" label="Primary" color="primary" />
       <Checkbox name="hello" label="Secondary" color="secondary" />
-      <Checkbox name="hello" label="Surface" color="surface" />
+      <Checkbox name="hello" label="bg" color="bg" />
     </Flex>
   )
 }
@@ -62,7 +62,7 @@ export const CheckboxDisabled = () => {
         <Checkbox disabled name="hello" label="Hello" color="warning" />
         <Checkbox disabled name="hello" label="Hello" color="primary" />
         <Checkbox disabled name="hello" label="Hello" color="secondary" />
-        <Checkbox disabled name="hello" label="Hello" color="surface" />
+        <Checkbox disabled name="hello" label="Hello" color="bg" />
       </Flex>
       <Flex gap="sm" items="center">
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="danger" />
@@ -70,7 +70,7 @@ export const CheckboxDisabled = () => {
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="warning" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="primary" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="secondary" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="surface" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="bg" />
       </Flex>
     </div>
   )
@@ -84,7 +84,7 @@ export const CheckboxDefaultCheckedColor = () => {
       <Checkbox defaultChecked name="hello" label="Hello" color="warning" />
       <Checkbox defaultChecked name="hello" label="Hello" color="primary" />
       <Checkbox defaultChecked name="hello" label="Hello" color="secondary" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="surface" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="bg" />
     </Flex>
   )
 }

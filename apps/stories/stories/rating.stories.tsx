@@ -57,7 +57,7 @@ export const RatingColor = () => {
       <Rating color="secondary" rating={4} />
       <Rating color="success" rating={4} />
       <Rating color="warning" rating={4} />
-      <Rating color="surface" rating={4} />
+      <Rating color="bg" rating={4} />
     </Flex>
   )
 }

@@ -27,7 +27,7 @@ export function RadioColors() {
         <Radio color="success" name="green" label="Green" />
         <Radio color="warning" name="orange" label="Orange" />
         <Radio color="primary" name="primary" label="Primary" />
-        <Radio color="surface" name="surface" label="Surface" />
+        <Radio color="bg" name="bg" label="bg" />
         <Radio color="secondary" name="secondary" label="Secondary" />
       </Flex>
     </div>
@@ -42,7 +42,7 @@ export function RadioDefaultCheck() {
         <Radio defaultChecked color="success" name="solid.green" label="Green" />
         <Radio defaultChecked color="warning" name="solid.orange" label="Orange" />
         <Radio defaultChecked color="primary" name="solid.primary" label="Primary" />
-        <Radio defaultChecked color="surface" name="solid.surface" label="Surface" />
+        <Radio defaultChecked color="bg" name="solid.bg" label="bg" />
         <Radio defaultChecked color="secondary" name="solid.secondary" label="Secondary" />
       </Flex>
       <Flex gap="sm" items="center">
@@ -50,7 +50,7 @@ export function RadioDefaultCheck() {
         <Radio defaultChecked variant="outline" color="success" name="outline.green" label="Green" />
         <Radio defaultChecked variant="outline" color="warning" name="outline.orange" label="Orange" />
         <Radio defaultChecked variant="outline" color="primary" name="outline.primary" label="Primary" />
-        <Radio defaultChecked variant="outline" color="surface" name="outline.surface" label="Surface" />
+        <Radio defaultChecked variant="outline" color="bg" name="outline.bg" label="bg" />
         <Radio defaultChecked variant="outline" color="secondary" name="outline.secondary" label="Secondary" />
       </Flex>
       <Flex gap="sm" items="center">
@@ -58,7 +58,7 @@ export function RadioDefaultCheck() {
         <Radio defaultChecked variant="soft" color="success" name="soft.green" label="Green" />
         <Radio defaultChecked variant="soft" color="warning" name="soft.orange" label="Orange" />
         <Radio defaultChecked variant="soft" color="primary" name="soft.primary" label="Primary" />
-        <Radio defaultChecked variant="soft" color="surface" name="soft.surface" label="Surface" />
+        <Radio defaultChecked variant="soft" color="bg" name="soft.bg" label="bg" />
         <Radio defaultChecked variant="soft" color="secondary" name="soft.secondary" label="Secondary" />
       </Flex>
     </div>
@@ -73,7 +73,7 @@ export function RadioVariants() {
         <Radio color="success" name="green" label="Green" />
         <Radio color="warning" name="orange" label="Orange" />
         <Radio color="primary" name="primary" label="Primary" />
-        <Radio color="surface" name="surface" label="Surface" />
+        <Radio color="bg" name="bg" label="bg" />
         <Radio color="secondary" name="secondary" label="Secondary" />
       </Flex>
       <Flex gap="sm" items="center">
@@ -81,7 +81,7 @@ export function RadioVariants() {
         <Radio variant="outline" color="success" name="green2" label="Green" />
         <Radio variant="outline" color="warning" name="orange2" label="Orange" />
         <Radio variant="outline" color="primary" name="primary2" label="Primary" />
-        <Radio variant="outline" color="surface" name="surface2" label="Surface" />
+        <Radio variant="outline" color="bg" name="bg2" label="bg" />
         <Radio variant="outline" color="secondary" name="secondary2" label="Secondary" />
       </Flex>
       <Flex gap="sm" items="center">
@@ -89,7 +89,7 @@ export function RadioVariants() {
         <Radio variant="soft" color="success" name="green3" label="Green" />
         <Radio variant="soft" color="warning" name="orange3" label="Orange" />
         <Radio variant="soft" color="primary" name="primary3" label="Primary" />
-        <Radio variant="soft" color="surface" name="surface3" label="Surface" />
+        <Radio variant="soft" color="bg" name="bg3" label="bg" />
         <Radio variant="soft" color="secondary" name="secondary3" label="Secondary" />
       </Flex>
     </div>
@@ -103,7 +103,7 @@ export function RadioSizes() {
       <Radio size="2xs" name="green" label="Green" />
       <Radio size="xs" name="orange" label="Orange" />
       <Radio size="sm" name="primary" label="Primary" />
-      <Radio size="lg" name="surface" label="Surface" />
+      <Radio size="lg" name="bg" label="bg" />
       <Radio size="3xl" name="secondary" label="Secondary" />
     </Flex>
   )

@@ -159,9 +159,9 @@ export function HeadingTrasforms() {
 export function HeadingDecorations() {
   return (
     <div className="l_flow__md">
-      <Heading decoration="line-through">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
-      <Heading decoration="underline">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
-      <Heading decoration="overline">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
+      <Heading decoration="through">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
+      <Heading decoration="under">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
+      <Heading decoration="over">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
     </div>
   )
 }
@@ -225,7 +225,7 @@ export function HeadingColors() {
       <Heading color="primary">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="surface">
+      <Heading color="bg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
 
@@ -244,7 +244,7 @@ export function HeadingColors() {
       <Heading color="primary" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="surface" contrast="low">
+      <Heading color="bg" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
     </div>

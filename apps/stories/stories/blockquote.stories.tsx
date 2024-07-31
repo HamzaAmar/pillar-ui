@@ -111,7 +111,7 @@ export const BlockquoteColor = () => {
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="surface">
+      <Blockquote color="bg">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
@@ -200,7 +200,7 @@ export function ButtonCornerDefaults() {
         </Blockquote>
       </Flex>
 
-      <Flex gap="sm" style={{ '--blockquote-corner': '0' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--blockquote-rad': '0' } as CSSProperties}>
         <Paper corner="sharp">
           <Blockquote size="3xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
@@ -230,7 +230,7 @@ export function ButtonCornerDefaults() {
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>
       </Flex>
-      <Flex gap="sm" style={{ '--blockquote-corner': '10px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--blockquote-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
           <Blockquote size="3xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
@@ -261,7 +261,7 @@ export function ButtonCornerDefaults() {
         </Blockquote>
       </Flex>
 
-      <Flex gap="sm" style={{ '--blockquote-corner': '20px' } as CSSProperties}>
+      <Flex gap="sm" style={{ '--blockquote-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <Blockquote size="3xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore

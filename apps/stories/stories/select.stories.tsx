@@ -150,7 +150,7 @@ export const ColorSelect = () => {
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select color="surface" variant="filled" autoFocus>
+      <Select color="bg" variant="filled" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>

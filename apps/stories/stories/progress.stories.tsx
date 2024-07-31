@@ -33,7 +33,7 @@ export const ProgressBarColor = () => {
       <ProgressBar color="success" value={90} label="hello" />
       <ProgressBar color="warning" value={90} label="hello" />
       <ProgressBar color="secondary" value={90} label="hello" />
-      <ProgressBar color="surface" value={90} label="hello" />
+      <ProgressBar color="bg" value={90} label="hello" />
       <ProgressBar color="primary" value={90} label="hello" />
     </Flex>
   )
@@ -91,7 +91,7 @@ export const ProgressCircleColor = () => {
       <ProgressCircle color="warning" value={60} label="hello" />
       <ProgressCircle color="primary" value={45} label="hello" />
       <ProgressCircle color="secondary" value={90} label="hello" />
-      <ProgressCircle color="surface" value={90} label="hello" />
+      <ProgressCircle color="bg" value={90} label="hello" />
     </Flex>
   )
 }

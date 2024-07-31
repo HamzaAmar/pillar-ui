@@ -77,7 +77,7 @@ export const ColorPinInput = () => {
       <PinInput color="primary" variant="bordered" />
       <PinInput color="warning" variant="bordered" />
       <PinInput color="secondary" variant="outline" />
-      <PinInput color="surface" variant="filled" />
+      <PinInput color="bg" variant="filled" />
     </Flex>
   )
 }
@@ -86,11 +86,11 @@ export const ColorPinLength = () => {
   return (
     <Flex gap="sm" direction="column">
       <PinInput length={10} color="primary" variant="bordered" />
-      <PinInput color="surface" variant="filled" />
+      <PinInput color="bg" variant="filled" />
       <PinInput length={5} color="primary" variant="bordered" />
       <PinInput length={6} color="warning" variant="bordered" />
       <PinInput length={7} color="secondary" variant="outline" />
-      <PinInput length={8} color="surface" variant="filled" />
+      <PinInput length={8} color="bg" variant="filled" />
     </Flex>
   )
 }
@@ -100,11 +100,11 @@ export const ColorPinPlaceholder = () => {
     <Flex gap="sm" direction="column">
       <PinInput length={10} color="primary" variant="bordered" />
       <PinInput placeholder="◊" length={10} color="primary" variant="bordered" />
-      <PinInput placeholder="◉" color="surface" variant="filled" />
+      <PinInput placeholder="◉" color="bg" variant="filled" />
       <PinInput placeholder="●" length={5} color="primary" variant="bordered" />
       <PinInput placeholder="◯" length={6} color="warning" variant="bordered" />
       <PinInput placeholder="◵" length={7} color="secondary" variant="outline" />
-      <PinInput placeholder="◬" length={8} color="surface" variant="filled" />
+      <PinInput placeholder="◬" length={8} color="bg" variant="filled" />
     </Flex>
   )
 }
