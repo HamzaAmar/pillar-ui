@@ -33,10 +33,10 @@ export const Switch = forwardRef((props, ref) => {
     setPressed((current) => !current)
   }
 
-  const classNames = classnames(`switch u_${color}`, {
+  const classNames = classnames(`s-w u_${color}`, {
     [className!]: !!className,
-    [`u_corner-${corner}`]: !!corner,
-    [`u_size-${size}`]: !!size,
+    [`u_rad-${corner}`]: !!corner,
+    [`u_f-${size}`]: !!size,
   })
 
   return (

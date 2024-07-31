@@ -1,4 +1,4 @@
-.code {
+.c-o {
   max-width: 100%;
   width: fit-content;
   padding: 0.125rem 0.5rem;
@@ -7,7 +7,7 @@
     unavailable, these properties take priority. However, if specific props related to
     Code are provided, they will override these properties.
   */
-  border-radius: var(--code-corner, 0.125em);
+  border-radius: var(--code-rad, 0.125em);
   font-size: var(--code-size, 0.875rem);
   text-transform: var(--code-transform, capitalize);
 }

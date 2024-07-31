@@ -44,13 +44,14 @@ export const Alert = forwardRef((props, forwardedRef) => {
     return null
   }
 
-  const classNames = classnames(`alert u_${variant} u_${color}`, {
+  // u_f is used to set the font size based on the size we size the component
+  const classNames = classnames(`a-l u_${variant} u_${color}`, {
     [className!]: !!className,
-    [`u_corner-${corner}`]: !!corner,
-    [`u_size-${size}`]: !!size,
+    [`u_rad-${corner}`]: !!corner,
+    [`u_f-${size}`]: !!size,
   })
 
-  const _title = title && <div className="u_transform__capitalize u_leading__md u_font-medium">{title}</div>
+  const _title = title && <div className="u_transform__capitalize u_leading__md u_f-medium">{title}</div>
   const _message = message && <span>{message}</span>
 
   const closeIcon = closable && (
@@ -60,11 +61,11 @@ export const Alert = forwardRef((props, forwardedRef) => {
   return (
     <Flex ref={forwardedRef} gap="xs" className={classNames} role="alert" {...rest}>
       {icon && <span className="u_items-self u_leading__normal">{icon}</span>}
-      <div data-inline={!!inline} className="alert--content u_center">
+      <div data-inline={!!inline} className="a-l_cnt u_center">
         {_title}
         {_message}
       </div>
-      <div className="alert-close">{closeIcon}</div>
+      <div className="a-l_itm">{closeIcon}</div>
     </Flex>
   )
 }) as ForwardRefComponent<'div', AlertProps>

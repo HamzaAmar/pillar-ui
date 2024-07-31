@@ -37,14 +37,14 @@ export const AvatarGroup = forwardRef((props, forwardRef) => {
   const contextProps = { color, corner, size, animate, variant, fallback }
 
   return (
-    <Tag ref={forwardRef} className={`avatar-group avatar-group__${layout}`} {...rest}>
+    <Tag ref={forwardRef} className={`av-g av-g av-g-${layout}`} {...rest}>
       <AvatarProvider {...contextProps}>
         {Array.from(new Array(maxCount)).map((_, index) => {
           return Children.toArray(children)[index]
         })}
       </AvatarProvider>
 
-      {restCount && <Avatar {...contextProps} fallback={<div className="u_size-sm u_font-medium">{restCount}+</div>} />}
+      {restCount && <Avatar {...contextProps} fallback={<div className="u_size-sm u_f-medium">{restCount}+</div>} />}
     </Tag>
   )
 }) as ForwardRefComponent<'div', AvatarGroupProps>
@@ -77,10 +77,10 @@ export const Avatar = forwardRef((props, forwardRef) => {
   const [isError, setIsError] = useState(!image)
 
   const content = isError ? (
-    <span className="avatar--fallback u_center">{fallback}</span>
+    <span className="a-v_flb u_center">{fallback}</span>
   ) : (
     <img
-      className="avatar--img"
+      className="a-v_img"
       ref={(node) => {
         if (node) {
           node.src = image
@@ -93,10 +93,10 @@ export const Avatar = forwardRef((props, forwardRef) => {
     />
   )
 
-  const classNames = classnames(`avatar avatar__size avatar__${variant} u_${color} u_center`, {
+  const classNames = classnames(`a-v a-v_flb a-v-${variant} u_${color} u_center`, {
     [`u_${animate}`]: !!animate,
-    [`u_size-${size}`]: !!size,
-    [`u_corner-${corner}`]: !!corner,
+    [`u_f-${size}`]: !!size,
+    [`u_rad-${corner}`]: !!corner,
     [className!]: !!className,
   })
 

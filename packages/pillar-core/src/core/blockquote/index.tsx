@@ -7,7 +7,7 @@ import { Text } from '../typography'
 
 export const BlockquoteCite = ({ title, ...rest }: CiteProps) => {
   return (
-    <Text className="cite" as="cite" {...rest}>
+    <Text className="b-l_cite" as="cite" {...rest}>
       {title}
     </Text>
   )
@@ -15,15 +15,15 @@ export const BlockquoteCite = ({ title, ...rest }: CiteProps) => {
 
 export const Blockquote = forwardRef(
   ({ children, icon = <Quotes />, size, color = 'primary', corner, className, cite, ...rest }, ref) => {
-    const classNames = classnames(`blockquote u_${color} l_flow__xs`, {
+    const classNames = classnames(`b-l u_${color} l_flow__xs`, {
       [className!]: !!className,
-      [`u_size-${size}`]: !!size,
-      [`u_corner-${corner}`]: !!corner,
+      [`u_f-${size}`]: !!size,
+      [`u_rad-${corner}`]: !!corner,
     })
 
     return (
       <blockquote ref={ref} className={classNames} cite={cite} {...rest}>
-        <span className="quote">{icon}</span>
+        <span className="b-l_quote">{icon}</span>
         {children}
       </blockquote>
     )

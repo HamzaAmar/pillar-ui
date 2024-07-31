@@ -1,8 +1,6 @@
-/* Chips Variants */
-
-.kdb {
+.k-d {
   border-bottom-width: 0.175em;
-  box-shadow: inset 1px 1px 0.175em var(--color-shared-6, var(--surface-6));
+  box-shadow: inset 1px 1px 0.175em var(--clr-6, var(--bg-6));
   border: 0.075em solid transparent;
   padding: 0.125em 0.25em;
   line-height: 1;
@@ -14,7 +12,7 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--kdb-corner, 0.25em);
+  border-radius: var(--kdb-rad, 0.25em);
   font-size: var(--kdb-size, 0.875rem);
   text-transform: var(--kdb-transform, capitalize);
 }

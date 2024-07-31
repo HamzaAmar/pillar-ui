@@ -37,15 +37,15 @@ FlexItem.displayName = 'FlexItem'
 export const Flex = forwardRef((props, forwardedRef) => {
   const { children, justify, items, flex, direction, wrap, inline, as: Tag = 'div', gap, className, ...rest } = props
 
-  const classNames = classnames('flex', {
+  const classNames = classnames('f-l', {
     [`u_justify-${justify}`]: !!justify && justify !== 'start',
     [`u_items-${items}`]: !!items,
     // [`u_flex-${flex}`]: !!items,
     [`l_direction-${direction}`]: !!direction && direction !== 'row',
     'l_flex-wrap': !!wrap,
     'u_flex-inline': !!inline,
-    [`u_spacing-${gap}`]: !!gap,
-    [`flex--gap`]: !!gap,
+    [`u_space-${gap}`]: !!gap,
+    [`f-l-gap`]: !!gap,
     [`${className}`!]: !!className,
   })
 

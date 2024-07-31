@@ -18,7 +18,7 @@ const Item = forwardRef((props, forwardedRef) => {
     active = 1,
     children,
     variant = context?.variant ?? 'outline',
-    color = context?.color ?? 'surface',
+    color = context?.color ?? 'bg',
     size = context?.size ?? 'md',
     corner = context?.corner ?? 'sm',
     number,
@@ -26,7 +26,7 @@ const Item = forwardRef((props, forwardedRef) => {
     ...rest
   } = props
 
-  const _classNames = classnames('pagination--button u_center', { className: !!className })
+  const _classNames = classnames('p-a_btn u_center', { className: !!className })
 
   return (
     <li>
@@ -57,15 +57,15 @@ export const Pagination = (props: PaginationProps) => {
   })
 
   return (
-    <nav className={`pagination u_${rest.color}`} aria-label="Pagination">
+    <nav className={`p-a u_${rest.color}`} aria-label="Pagination">
       <PaginationProvider {...rest}>
-        <ul className="pagination--list">
+        <ul className="p-a_lst">
           <Item disabled={isFirst} onClick={goToPreviousStep} active={currentStep} number={currentStep - 1}>
             <ChevronDown width="20" direction="left" />
           </Item>
           {range.map((item, index) =>
             item === '.' ? (
-              <li key={index} className="pagination-item--link u_center">
+              <li key={index} className="p-a_itm u_center">
                 <DotsHorizontal width={16} />
               </li>
             ) : (

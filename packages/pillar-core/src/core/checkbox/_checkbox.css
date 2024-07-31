@@ -1,13 +1,13 @@
-.checkbox--label {
+.c-h_lbl {
   font-size: 0.875em;
   color: inherit;
 }
 
-.checkbox-container {
+.c-h_cnt {
   width: fit-content;
   color: var(--text-8);
   display: flex;
-  gap: var(--space-xs);
+  gap: var(--s-xs);
   align-items: center;
 
   /*
@@ -21,57 +21,57 @@
     cursor: not-allowed;
   }
 
-  &:hover > .checkbox {
-    box-shadow: 0 0 0 0.125em var(--color-shared-7, var(--primary-7));
+  &:hover > .c-h {
+    box-shadow: 0 0 0 0.125em var(--clr-7, var(--pri-7));
   }
 }
 
-.checkbox--element {
-  &:checked:disabled + .checkbox {
-    color: var(--surface-5);
+.c-h_el {
+  &:checked:disabled + .c-h {
+    color: var(--bg-5);
   }
-  &[aria-checked='false'] + .checkbox svg {
+  &[aria-checked='false'] + .c-h svg {
     display: none;
   }
-  &:checked + .checkbox,
-  &:indeterminate + .checkbox {
-    background-color: var(--color-shared-9, none);
-    color: var(--color-shared-1); /* Responsible For The Color Of The Check Icon stroke  white in checked state */
+  &:checked + .c-h,
+  &:indeterminate + .c-h {
+    background-color: var(--clr-9, none);
+    color: var(--clr-1); /* Responsible For The Color Of The Check Icon stroke  white in checked state */
   }
 
-  &:disabled + .checkbox {
+  &:disabled + .c-h {
     box-shadow: none;
-    border-color: var(--surface-10);
-    background-color: var(--surface-10);
+    border-color: var(--bg-10);
+    background-color: var(--bg-10);
     color: transparent; /* Responsible For The Color Of The Check Icon stroke  transparent in disabled state */
   }
   &:disabled ~ * {
-    color: var(--surface-10);
+    color: var(--bg-10);
   }
 }
 
-.checkbox {
+.c-h {
   --flex: inline-flex;
   width: 1.25em;
   height: 1.25em;
-  border: 1px solid var(--opacity-6);
+  border: 1px solid var(--opa-6);
   border-radius: 0.25em;
   color: transparent; /* Responsible For The Color Of The Check Icon stroke Default to transparent */
 }
 
-.checkbox--check {
+.c-h_icn {
   stroke: currentColor;
 }
 
 @media (forced-colors: active) {
-  .checkbox:has(:disabled) {
+  .c-h:has(:disabled) {
     color: GrayText;
 
-    /* & .checkbox--label {
+    /* & .c-h--label {
       color: GrayText;
     } */
 
-    & .checkbox {
+    & .c-h {
       background-color: GrayText;
       border-color: GrayText;
     }

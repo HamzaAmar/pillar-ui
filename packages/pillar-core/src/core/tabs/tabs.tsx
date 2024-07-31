@@ -47,7 +47,7 @@
 //     <button
 //       onClick={() => context?.handleSelect(value)}
 //       type="button"
-//       className={`tab tab__${context?.variant} u_corner-${context?.corner}`}
+//       className={`tab tab__${context?.variant} u_rad-${context?.corner}`}
 //       role="tab"
 //       aria-selected={context?.selected === value}
 //       aria-controls={id}
@@ -86,7 +86,7 @@
 // */
 
 // const TabPanels = forwardRef((props, ref) => {
-//   const { color = 'surface-12', children, ...rest } = props
+//   const { color = 'bg-12', children, ...rest } = props
 
 //   return (
 //     <div ref={ref} {...rest}>

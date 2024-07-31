@@ -1,19 +1,19 @@
-.popover {
-  border: 1px solid var(--surface-6);
-  background: var(--surface-1);
+.p-o {
+  border: 1px solid var(--bg-6);
+  background: var(--bg-1);
   position: absolute;
   z-index: 1000000000000000000000000000;
 }
 
-.popover--content {
+.p-o_c {
   font-size: clamp(0.75rem, 0.825em, 1rem);
   padding: 0.25em 1em;
 }
 
-.popover--full {
+.p-o-full {
   width: 100%;
 }
 
-.popover--auto {
+.p-o-auto {
   width: fit-content;
 }

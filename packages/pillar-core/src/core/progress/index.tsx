@@ -26,18 +26,18 @@ export const ProgressCircle = ({
   const dashOffset = circumference - (progress / 100) * circumference
 
   return (
-    <div className={`circle-progress u_center u_size-${size} u_${color}`} {...rest}>
-      <svg className="circle-progress--svg" viewBox="0 0 100 100">
-        <circle className="circle-progress--background" cx="50" cy="50" r="45" />
+    <div className={`pr-c u_center u_f-${size} u_${color}`} {...rest}>
+      <svg className="pr-c_svg" viewBox="0 0 100 100">
+        <circle className="pr-c_background" cx="50" cy="50" r="45" />
         <circle
-          className={`circle-progress--bar`}
+          className={`pr-c_bar`}
           cx="50"
           cy="50"
           r="45"
           strokeDasharray={circumference}
           strokeDashoffset={dashOffset}
         />
-        <text fill="black" className="circle-progress--text" x="50" y="50">
+        <text fill="black" className="pr-c_txt" x="50" y="50">
           {_value}%
         </text>
       </svg>
@@ -60,7 +60,7 @@ export const ProgressBar = ({
   return (
     <div className={`u_${color}`}>
       <Flex justify="end">
-        <div className={classnames(`u_size-${size}`, { ' u_visually-hidden': !showValue })}>{MaxValue}%</div>
+        <div className={classnames(`u_f-${size}`, { ' u_sr': !showValue })}>{MaxValue}%</div>
       </Flex>
       <div
         role="progressbar"
@@ -69,16 +69,16 @@ export const ProgressBar = ({
         aria-valuenow={progress}
         aria-valuetext={`${progress}%`}
         aria-label={label}
-        className={`progress-bar u_size-${size}`}
+        className={`pr-b u_f-${size}`}
       >
-        <div className="progress-bar--inner" style={{ width: `${progress}%` }} />
+        <div className="pr-b_inner" style={{ width: `${progress}%` }} />
       </div>
     </div>
   )
 }
 
 export const ProgressBarStackItem = ({ color = 'primary', value }: ProgressBarStackItemProps) => {
-  return <div className={`progressbar-stack--item u_${color}`} style={{ width: `${value}%` }} />
+  return <div className={`pr-s_itm u_${color}`} style={{ width: `${value}%` }} />
 }
 
 export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProps) => {
@@ -92,13 +92,13 @@ export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProp
   })
   return (
     <div className="l_flow-sm">
-      <Flex gap="2xs" className={`progress-bar progressbar-stack u_size-${size}`}>
+      <Flex gap="2xs" className={`pr-b pr-s u_f-${size}`}>
         {children}
       </Flex>
       <Flex as="ul" wrap gap="md">
         {_children?.map(({ children, color }, index) => (
-          <Flex items="center" gap="2xs" as="li" className={`progress-stack--list-item u_${color}`} key={index}>
-            <Text as="span" color="surface" size="sm" contrast="low">
+          <Flex items="center" gap="2xs" as="li" className={`pr-s_cnt u_${color}`} key={index}>
+            <Text as="span" color="bg" size="sm" contrast="low">
               {children}
             </Text>
           </Flex>

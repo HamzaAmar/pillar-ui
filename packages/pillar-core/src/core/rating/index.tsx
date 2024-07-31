@@ -17,8 +17,8 @@ export const Rating = ({
   icon = 'star',
   ...props
 }: RatingProps) => {
-  const classNames = classnames(`rating u_${color}`, {
-    [`u_size-${size}`]: !!size,
+  const classNames = classnames(`r-t u_${color}`, {
+    [`u_f-${size}`]: !!size,
   })
   return (
     <Flex as="figure" gap="sm" items="center" className={classNames} {...props}>
@@ -29,8 +29,8 @@ export const Rating = ({
             return (
               <path
                 key={index}
-                fill={rating > index ? 'var(--color-shared-9)' : 'transparent'}
-                className="rating-path"
+                fill={rating > index ? 'var(--clr-9)' : 'transparent'}
+                className="r-t_path"
                 transform={`translate(${index * 24}, 0)`}
                 d={ICONS[icon]}
               />
@@ -38,7 +38,7 @@ export const Rating = ({
           })}
       </svg>
 
-      <figcaption className={classnames('u_font-medium', { 'u_visually-hidden': !!hideTitle })}>{title}</figcaption>
+      <figcaption className={classnames('u_f-medium', { u_sr: !!hideTitle })}>{title}</figcaption>
     </Flex>
   )
 }

@@ -1,10 +1,10 @@
-.counter-button--container {
+.c-b_cnt {
   width: fit-content;
 }
-.counter--input {
+.cb-f {
   appearance: none;
   background: none;
-  border: 1px solid var(--opacity-6);
+  border: 1px solid var(--opa-6);
   border-radius: inherit;
   padding: 0.25rem 1rem;
 
@@ -21,12 +21,12 @@
   }
 }
 
-.counter-button {
-  background: var(--surface-1);
-  border: 1px solid var(--opacity-6);
+.c-b {
+  background: var(--bg-1);
+  border: 1px solid var(--opa-6);
   border-radius: inherit;
 
   &:hover {
-    background: var(--surface-4);
+    background: var(--bg-4);
   }
 }

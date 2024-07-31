@@ -4,13 +4,13 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.field-wrapper {
+.f-i_cnt {
   border: 1px solid transparent;
   position: relative;
   overflow: hidden;
   height: fit-content;
   display: flex;
-  gap: var(--space-xs);
+  gap: var(--s-xs);
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -18,55 +18,59 @@
     avatars are provided, they will override these properties.
   */
   font-size: max(16px, var(--form-field-size, 1rem));
-  border-radius: var(--form-field-corner, 0.25rem);
+  border-radius: var(--form-field-rad, 0.25rem);
   text-transform: var(--form-field-transform);
 
+  &:has(.f-i:focus):not(.f-i_cnt-bordered) {
+    outline: 2px solid var(--clr-9);
+    outline-offset: -1px;
+  }
   &:has([aria-invalid='true']) {
-    color: var(--danger-11);
-    border-color: var(--danger-9);
-    outline-color: var(--danger-9);
-    background-color: var(--danger-3);
+    color: var(--dan-11);
+    border-color: var(--dan-9);
+    outline-color: var(--dan-9);
+    background-color: var(--dan-3);
     input::placeholder {
-      color: var(--danger-11);
+      color: var(--dan-11);
     }
   }
 
   &:has(:disabled) {
-    background-color: var(--surface-7) !important;
+    background-color: var(--bg-7) !important;
     cursor: not-allowed;
-    border-color: var(--opacity-1);
+    border-color: var(--opa-1);
   }
 
-  &:not(:has(.input--pref-content)) .field:not(.pin-input) {
+  &:not(:has(.fi-p_cnt)) .f-i:not(.pin-input) {
     padding-inline-start: 1rem;
   }
 
-  &:has(.input-number--counter-wrapper) .field {
+  &:has(.fi-n_cnt) .f-i {
     padding-inline-end: 2.85rem !important;
   }
 
-  &:not(:has(.input--suf-content)) .field:not(.pin-input) {
+  &:not(:has(.fi-s_cnt)) .f-i:not(.pin-input) {
     padding-inline-end: 1rem;
   }
 }
 
-/* .field-wrapper .field-wrapper__fluid { */
-.field-wrapper__fluid {
+/* .f-i_cnt .f-i_cnt__fluid { */
+.f-i_cnt-fluid {
   width: 100%;
 }
 
-.field-wrapper__outline {
-  border-color: var(--surface-7);
+.f-i_cnt-outline {
+  border-color: var(--bg-7);
 }
-.field-wrapper__filled {
-  border-color: var(--opacity-11);
-  background-color: var(--surface-1);
+.f-i_cnt-filled {
+  border-color: var(--opa-11);
+  background-color: var(--bg-1);
 }
 
-.field-wrapper__bordered {
+.f-i_cnt-bordered {
   border: none;
   outline: 2px solid transparent;
-  background-color: var(--opacity-2);
+  background-color: var(--opa-2);
 
   &::before,
   &::after {
@@ -76,16 +80,16 @@
     position: absolute;
     bottom: 0;
     inset-inline-start: 0;
-    background-color: var(--opacity-7);
+    background-color: var(--opa-7);
     border-radius: 100px;
   }
   &::after {
-    background-color: var(--color-shared-9, var(--primary-9));
+    background-color: var(--clr-9, var(--pri-9));
     transform: scaleX(0);
     transition: transform 0.2s;
   }
   &:focus-within {
-    outline: none;
+    /* outline: none; */
     &::after {
       transform: none;
       transition: transform 220ms ease-out;
@@ -95,19 +99,19 @@
     border: none;
     outline: none;
     &::after {
-      background: var(--danger-11);
+      background: var(--dan-11);
     }
     &::before {
-      background: var(--danger-5);
+      background: var(--dan-5);
     }
   }
 }
 
-.text-field--root {
+.fc-o {
   width: 100%;
 
-  &:has(:read-only) .field-wrapper {
-    background-color: var(--surface-5);
+  &:has(:read-only) .f-i_cnt {
+    background-color: var(--bg-5);
   }
 }
 
@@ -116,7 +120,7 @@
  Form Field Style Section 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
-.field {
+.f-i {
   appearance: none;
   flex: 1;
   min-width: 0;
@@ -152,8 +156,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.input-field--prefix,
-.input-field--suffix {
+.f-i-pre,
+.f-i-suf {
   font-size: 0.75rem;
   min-width: 2rem;
   padding: 0.25em 0.5em;
@@ -165,7 +169,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.input-number--counter-wrapper {
+.fi-n_cnt {
   position: absolute;
   inset-inline-end: 0;
   top: 0;
@@ -174,18 +178,18 @@
   flex-direction: column;
   width: 2.5rem;
   & * + * {
-    border-top: 1px solid var(--opacity-6);
+    border-top: 1px solid var(--opa-6);
   }
 }
-.number-input--button {
+.fi-n-btn {
   line-height: 0;
-  background-color: var(--surface-7);
+  background-color: var(--bg-7);
   height: 50%;
   &:active {
-    background-color: var(--opacity-8);
+    background-color: var(--opa-8);
   }
   &:hover {
-    background-color: var(--surface-8);
+    background-color: var(--bg-8);
   }
 }
 
@@ -195,15 +199,15 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.password-input--button {
+.fi-p-btn {
   line-height: 0;
   min-height: 100%;
   padding: 0 0.5em;
   &:focus-visible {
-    box-shadow: inset 0 0 16px var(--opacity-8);
+    box-shadow: inset 0 0 16px var(--opa-8);
   }
   &:hover {
-    background-color: var(--surface-5);
+    background-color: var(--bg-5);
   }
   & svg {
     width: 20px;
@@ -215,24 +219,24 @@
   Form Group Style Section 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
-.form-group--container {
-  color: var(--surface-11);
-  border: 1px solid var(--opacity-6);
+.f-g_cnt {
+  color: var(--bg-11);
+  border: 1px solid var(--opa-6);
 }
 
-.form-group--hide-border {
+.f-g-hide-border {
   border: none;
 }
 
-.form-group--legend {
+.f-g_legend {
   padding: 0.5rem;
   font-size: 0.85rem;
   margin-inline-start: 0.5rem;
 }
-.form-group {
+.f-g {
   padding: 0.5rem;
 }
-.form-group--fluid > * {
+.f-g-fluid > * {
   flex-grow: 1;
 }
 
@@ -241,38 +245,38 @@
   Form Controller Style Section 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
-.form-controller--required {
-  color: var(--danger-11);
+/* .form-controller--required {
+  color: var(--dan-11);
   margin-inline-start: 0.25em;
   line-height: 0;
   font-weight: bold;
   font-size: 0.875rem;
   vertical-align: center;
-}
+} */
 
-.field__search:placeholder-shown + .input--search--suffix {
-  & .search-field--clear {
+.fi-s:placeholder-shown + .fi-s_suf {
+  & .fi-s_icn {
     display: none;
   }
-  & .input-field--suffix {
+  & .f-i-suf {
     display: flex;
   }
 }
 
-.field__search:not(:placeholder-shown) + .input--search--suffix {
-  & .search-field--clear {
+.fi-s:not(:placeholder-shown) + .fi-s_suf {
+  & .fi-s_icn {
     display: flex;
   }
-  & .input-field--suffix {
+  & .f-i-suf {
     display: none;
   }
 }
 
-.search-field--clear:hover {
-  stroke: var(--shared-color-8, var(--primary-10));
+.fi-s:hover {
+  stroke: var(--shared-color-8, var(--pri-10));
 }
 
-.field__search {
+.fi-s {
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
   &::-webkit-search-results-button,
@@ -281,45 +285,46 @@
   }
 }
 
-.select-field {
-  background-color: var(--surface-1);
+.fi-se {
+  background-color: var(--bg-1);
   width: 100%;
   padding-inline: 0.75rem;
 }
-.select-chevron {
+.fi-s_icn {
   position: absolute;
   inset-inline-end: 0.5rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--surface-11);
+  stroke: var(--bg-11);
+  width: 1em;
 }
 
-.input-file {
-  background-color: var(--color-shared-7, var(--surface-7));
+.fi-f {
+  background-color: var(--clr-7, var(--bg-7));
   font-size: 0.9em;
   padding: 0.25rem 1rem;
   cursor: pointer;
 
-  .field-wrapper:not([data-disabled]) &:hover {
-    background-color: var(--color-shared-8, var(--surface-8));
+  .f-i_cnt:not([data-disabled]) &:hover {
+    background-color: var(--clr-8, var(--bg-8));
   }
 }
 
-.pin-input {
+.fi-p {
   font-size: var(--font-size, var(--input-size, 1rem));
   width: 2.25em;
   height: 2.25em;
   text-align: center;
-  box-shadow: inset 0 0 0 1px var(--opacity-3);
+  box-shadow: inset 0 0 0 1px var(--opa-3);
   padding: 0;
 }
 
-.field--error {
-  color: var(--danger-11);
+.f-c_err {
+  color: var(--dan-11);
   width: fit-content;
-  gap: var(--space-xs);
+  gap: var(--s-3xs);
 }
 
-.field--error-icon {
+.f-c_icn {
   font-size: 0;
 }

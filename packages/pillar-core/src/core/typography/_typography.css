@@ -1,22 +1,22 @@
-.typography {
+.t-y {
   color: var(--color-text);
-  font-size: var(--typophraphy-size, inherit);
-  text-transform: var(--typophraphy-transform, inherit);
+  font-size: var(--typography-size, inherit);
+  text-transform: var(--typography-transform, inherit);
 }
 
-.heading {
-  font-size: calc(var(--typophraphy-size, 1rem) * 1.25);
+.t-y_hdg {
+  font-size: calc(var(--typography-size, 1rem) * 1.25);
 }
 
-.link {
+.t-y_lnk {
   cursor: pointer;
   padding: 2px;
   text-decoration: none;
+  color: var(--pri-11);
   &:hover {
-    text-decoration: underline var(--color-text) 1px;
+    text-decoration: underline var(--pri-9) clamp(1px, 0.1em, 2px);
   }
-  &:focus {
-    outline: 2px dashed var(--color-shared-9);
-    outline-offset: -1px;
+  &:focus-visible {
+    outline: 2px dashed var(--clr-9);
   }
 }

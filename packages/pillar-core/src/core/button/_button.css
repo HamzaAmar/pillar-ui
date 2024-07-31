@@ -1,4 +1,4 @@
-.btn {
+.b-u {
   --flex: inline-flex;
 
   height: fit-content;
@@ -13,23 +13,31 @@
   letter-spacing: 0.5px;
   line-height: 1.3;
   text-align: start;
-  gap: var(--space-2xs);
+  gap: var(--s-2xs);
 
   &:hover {
-    background-color: var(--color-shared-4);
+    background-color: var(--clr-4);
   }
   &:active {
     transform: translateY(-1px) scale(1.01);
   }
   &:disabled {
-    background-color: var(--surface-5);
-    color: var(--surface-11);
+    background-color: var(--bg-5);
+    color: var(--bg-11);
     pointer-events: none;
-    border-color: var(--surface-5);
+    border-color: var(--bg-5);
   }
   & svg {
     width: 1.1em;
     stroke-width: 1.5px;
+  }
+  /* &:is(.u_solid,.u_shadow):hover */
+  &.u_solid:hover,
+  &.u_shadow:hover {
+    background-color: var(--clr-10);
+  }
+  &.u_outline:hover {
+    background-color: var(--clr-4);
   }
 
   /*
@@ -37,24 +45,16 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--button-corner, var(--corner-sm));
+  border-radius: var(--button-rad, var(--rad-sm));
   font-size: var(--button-size, 0.875rem);
   text-transform: var(--button-transform, capitalize);
 }
 
-.btn--text {
+.b-u_text {
   font-size: 0.9em;
 }
 
-.btn.u_solid:hover {
-  background-color: var(--color-shared-10);
-}
-
-.btn.u_outline:hover {
-  background-color: var(--color-shared-4);
-}
-
-.btn__fluid {
+.b-u-fluid {
   display: flex;
   min-width: 100%;
 }
@@ -65,7 +65,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.icon-button {
+.bu-i {
   padding: 0.375em;
   line-height: 0;
   width: fit-content;
@@ -76,12 +76,12 @@
   }
 }
 
-.btn__transparent {
-  border: 1px solid var(--opacity-6);
+.b-u-transparent {
+  border: 1px solid var(--opa-6);
   &:hover {
-    background-color: var(--opacity-6);
+    background-color: var(--opa-6);
   }
   &:focus-visible {
-    outline: 2px dashed var(--opacity-11);
+    outline: 2px dashed var(--opa-11);
   }
 }

@@ -1,10 +1,10 @@
-.chips {
+.c-i {
   --flex: inline-flex;
   height: fit-content;
   border: 1px solid transparent;
   font-weight: 500;
   line-height: 1;
-  gap: var(--space-xs);
+  gap: var(--s-xs);
   width: fit-content;
   max-width: 25ch;
   padding: 0.125em 0.25em;
@@ -17,11 +17,11 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--chip-corner, 0.25em);
+  border-radius: var(--chip-rad, 0.25em);
   font-size: var(--chip-size, 0.875rem);
   text-transform: var(--chip-transform, capitalize);
 }
 
-.chips--content {
+.c-i_cnt {
   font-size: 0.875em;
 }

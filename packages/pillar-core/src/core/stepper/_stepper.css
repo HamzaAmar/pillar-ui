@@ -1,33 +1,33 @@
-.stepper--wrapper {
+.s-t_cnt {
   position: relative;
   z-index: 1;
 }
 
-.step {
+.s-t_step {
   position: relative;
   flex: 1;
 
   &:last-child {
     flex: none;
   }
-  &[data-state='current'] .step--button {
-    border-color: var(--color-shared-8);
-    background-color: var(--color-shared-6);
-    color: var(--color-shared-12);
+  &[data-state='current'] .s-t_btn {
+    border-color: var(--clr-10);
+    background-color: var(--clr-9);
+    color: white;
   }
 
   &[data-state='complete'] {
-    & .step--button {
-      background-color: var(--color-shared-8);
-      border-color: var(--color-shared-8);
+    & .s-t_btn {
+      background-color: var(--clr-10);
+      border-color: var(--clr-10);
       color: white;
     }
-    & .step--complete-icon {
+    & .s-t_icn {
       transform: none;
       transition: transform 0.3s;
     }
     &::before {
-      background-color: var(--color-shared-9);
+      background-color: var(--clr-9);
     }
   }
 
@@ -39,29 +39,29 @@
     position: absolute;
     inset-inline-start: 0;
     top: 50%;
-    background-color: var(--surface-4);
+    background-color: var(--bg-4);
     z-index: -1;
   }
 }
 
-.step--content {
+.s-t_cnt {
   padding: 0.5rem 1.5rem;
-  background-color: var(--surface-1);
+  background-color: var(--bg-1);
 }
 
-.step--button {
+.s-t_btn {
   width: 2.75rem;
   height: 2.75rem;
-  background-color: var(--surface-4);
-  border: 2px solid var(--surface-6);
+  background-color: var(--bg-4);
+  border: 2px solid var(--bg-6);
   flex: none;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-rad);
   & svg {
     width: 20px;
     stroke-width: 2px;
   }
 }
-.step--complete-icon {
+.s-t_icn {
   transform: translateY(-200%);
   transition: transform 0.3s;
 }

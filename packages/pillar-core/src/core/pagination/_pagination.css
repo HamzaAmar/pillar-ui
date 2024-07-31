@@ -1,18 +1,18 @@
-.pagination--button {
+.p-a_btn {
   padding: 0.5rem;
   aspect-ratio: 1 / 1;
-  color: var(--color-shared-12);
+  color: var(--clr-12);
   line-height: 1;
   overflow: hidden;
 
   &[aria-current='page'] {
-    background-color: var(--color-shared-9);
+    background-color: var(--clr-9);
     color: white;
-    border-color: var(--opacity-8);
+    border-color: var(--opa-8);
   }
 }
 
-.pagination-item--link {
+.p-a_itm {
   line-height: 0;
   width: 30px;
   height: 30px;
@@ -22,14 +22,14 @@
   }
 }
 
-.pagination--list {
+.p-a_lst {
   display: flex;
-  gap: var(--space-sm);
+  gap: var(--s-sm);
   list-style: none;
 }
 
 @media (forced-colors: active) {
-  .pagination--button[aria-current='page'] {
+  .p-a_bu[aria-current='page'] {
     background-color: Highlight;
   }
 }

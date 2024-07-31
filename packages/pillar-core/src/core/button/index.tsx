@@ -28,12 +28,12 @@ export const Button = forwardRef((props, forwardedRef) => {
     ...rest
   } = props
 
-  const classNames = classnames(`btn u_${variant} u_${color} u_center`, {
+  const classNames = classnames(`b-u u_${variant} u_${color} u_center`, {
     [className!]: !!className,
     btn__fluid: !!fluid,
     [`u_transform__${transform}`]: !!transform,
-    [`u_size-${size}`]: !!size,
-    [`u_corner-${corner}`]: !!corner,
+    [`u_f-${size}`]: !!size,
+    [`u_rad-${corner}`]: !!corner,
   })
 
   const isLoading = state === 'loading'
@@ -50,8 +50,8 @@ export const Button = forwardRef((props, forwardedRef) => {
 
   const loadingContent = (
     <>
+      <Spinner color="bg" size={size} />
       <span> Loading... </span>
-      <Spinner color="surface" size={size} />
     </>
   )
 
@@ -85,10 +85,10 @@ export const IconButton = forwardRef(
     },
     forwardedRef
   ) => {
-    const iconButtonClassName = classnames(`icon-button btn u_${variant} u_${color} u_center`, {
+    const iconButtonClassName = classnames(`bu-i b_u u_${variant} u_${color} u_center`, {
       [className!]: !!className,
-      [`u_size-${size}`]: !!size,
-      [`u_corner-${corner}`]: !!corner,
+      [`u_f-${size}`]: !!size,
+      [`u_rad-${corner}`]: !!corner,
     })
 
     return (
@@ -122,10 +122,10 @@ export const ButtonGroup = forwardRef(
     },
     forwardedRef
   ) => {
-    const classNames = classnames(`icon-button btn btn__${variant} u_${color} u_center`, {
+    const classNames = classnames(`bu-g b-u u_${color} u_center`, {
       [className!]: !!className,
-      [`u_size-${size}`]: !!size,
-      [`u_corner-${corner}`]: !!corner,
+      [`u_f-${size}`]: !!size,
+      [`u_rad-${corner}`]: !!corner,
     })
 
     return (

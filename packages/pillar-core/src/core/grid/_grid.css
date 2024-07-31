@@ -1,4 +1,4 @@
-.grid {
+.g-r {
   gap: var(--spacing);
   --columns: var(--regular-columns);
   --rows: var(--regular-rows);
@@ -10,7 +10,7 @@
   grid-template-areas: var(--areas);
 }
 
-.grid--item {
+.g-r_i {
   grid-column: var(--column);
   grid-row: var(--row);
 }

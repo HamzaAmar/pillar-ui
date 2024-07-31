@@ -1,22 +1,22 @@
-.timeline {
+.t-i {
   position: relative;
   font-size: var(--timeline-size, 1rem);
 }
 
-.timeline--line {
-  border-inline-start: var(--color-shared-9) 0.15em var(--timeline-variant);
+.t-i_line {
+  border-inline-start: var(--clr-9) 0.15em var(--timeline-variant);
   width: 0.15em;
 }
 
-.timeline--item {
+.t-i_itm {
   position: relative;
 }
 
-.timeline--bullet {
+.t-i_bullet {
   width: 1em;
   height: 1em;
-  background-color: var(--surface-1);
-  border: var(--color-shared-9) 0.15em solid;
+  background-color: var(--bg-1);
+  border: var(--clr-9) 0.15em solid;
   transform: translateX(-50%) translateX(-0.08em);
   overflow: hidden;
   border-radius: var(--border-radius, 0);
@@ -29,12 +29,12 @@ Variant Section Style Start
 ====================================================================================================
 */
 
-.timeline--item__solid {
+.t-i_itm-solid {
   --timeline-variant: solid;
 }
-.timeline--item__dotted {
+.t-i_itm-dotted {
   --timeline-variant: dotted;
 }
-.timeline--item__dashed {
+.t-i_itm-dashed {
   --timeline-variant: dashed;
 }

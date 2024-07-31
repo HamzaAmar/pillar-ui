@@ -1,4 +1,4 @@
-.spinner {
+.s-p {
   position: relative;
   flex: none;
   width: 1.25em;
@@ -12,13 +12,13 @@
   font-size: var(--spinner-size, 0.875rem);
 }
 
-.spinner::before,
-.spinner::after {
+.s-p::before,
+.s-p::after {
   --border-color: currentcolor;
   content: '';
   position: absolute;
   inset: 0;
-  color: var(--color-shared-10);
+  color: var(--clr-10);
   border: min(var(--border), 0.5em) solid transparent;
   border-top-color: var(--border-color);
   border-left-color: var(--border-color);
@@ -27,11 +27,11 @@
   animation: spinner-move 0.85s infinite linear;
 }
 
-.spinner::after {
+.s-p::after {
   animation-timing-function: linear;
 }
 
-.spinner__invert {
+.s-p-invert {
   filter: invert(70%);
 }
 
@@ -42,8 +42,8 @@
 }
 
 @media (forced-colors: active) {
-  .spinner::before,
-  .spinner::after {
+  .s-p::before,
+  .s-p::after {
     --border-color: GrayText;
   }
 }

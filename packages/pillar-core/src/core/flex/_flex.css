@@ -1,7 +1,7 @@
-.flex {
+.f-l {
   display: flex;
 }
 
-.flex--gap {
+.f-l-gap {
   gap: var(--spacing);
 }

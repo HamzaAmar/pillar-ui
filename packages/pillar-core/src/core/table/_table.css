@@ -1,49 +1,49 @@
-.table--wrapper {
+.t-a_cnt {
   overflow-x: auto;
   width: 100%;
 }
 
-.table {
+.t-a {
   width: 100%;
   max-width: 100%;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.table__border,
-.table__border .column {
-  border: var(--color-shared-6) 1px solid;
+.t-a-c,
+.t-a-c .column {
+  border: var(--clr-6) 1px solid;
 }
 
-.table__striped {
+.t-a-striped {
   & .row__body:nth-child(odd) {
-    background-color: var(--color-shared-4);
+    background-color: var(--clr-4);
   }
 }
-.table__soft {
+.t-a-soft {
   & .row {
-    background-color: var(--color-shared-5);
+    background-color: var(--clr-5);
   }
 }
-.table__head-color {
+.t-a-head-color {
   & .row__head {
-    background-color: var(--color-shared-8);
-    color: var(--color-shared-12);
+    background-color: var(--clr-8);
+    color: var(--clr-12);
   }
 }
 
 .row {
-  border-block-end: var(--color-shared-6) 1px solid;
-  background-color: var(--color-shared-1);
+  border-block-end: var(--clr-6) 1px solid;
+  background-color: var(--clr-1);
   width: 100%;
 }
 
-.column {
+.col {
   text-align: start;
   font-size: 0.85em;
   padding: 0.5em 0.25em;
 }
 
-.column__head {
+.col__head {
   font-weight: 500;
 }

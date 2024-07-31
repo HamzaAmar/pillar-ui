@@ -4,11 +4,12 @@ import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import { classnames } from '@pillar-ui/utils'
 
 export const Code = forwardRef((props, ref) => {
-  const { as: Tag = 'code', color = 'surface', size = 'md', corner, children, transform, className, ...rest } = props
+  const { as: Tag = 'code', color = 'bg', size = 'md', corner, children, transform, className, ...rest } = props
 
-  const classNames = classnames(`code u_soft u_size-${size} u_${color} `, {
+  const classNames = classnames(`c-o u_soft u_${color} `, {
+    [`u_f-${size}`]: !!size,
     [`u_transform__${transform}`]: !!transform,
-    [`u_corner-${corner}`]: !!corner,
+    [`u_rad-${corner}`]: !!corner,
     [className!]: !!className,
   })
 

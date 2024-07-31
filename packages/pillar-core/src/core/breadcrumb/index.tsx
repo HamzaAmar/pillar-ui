@@ -20,15 +20,15 @@ export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   const { separator: contextSeparator = '>' } = useBreadcrumbContext() ?? {}
   const { as = 'a', children, current, separator = contextSeparator, className, ...rest } = props
   const currentPage: CurrentPage = current ? { 'aria-current': 'page' } : {}
-  const classNames = classnames(`breadcrumb--link`, { [className!]: !!className })
+  const classNames = classnames(`b-r_lnk`, { [className!]: !!className })
 
   return (
-    <Flex as="li" gap="sm" className={`breadcrumb--item`}>
+    <Flex as="li" gap="sm" className={`b-r_itm`}>
       <Flex as={as} ref={forwardedRef} gap="2xs" items="center" {...currentPage} className={classNames} {...rest}>
         {children}
       </Flex>
       {!current && (
-        <span className="u_font-medium" role="presentation">
+        <span className="u_f-medium" role="presentation">
           {separator}
         </span>
       )}
@@ -47,8 +47,8 @@ BreadcrumbItem.displayName = 'BreadcrumbItem'
 export const Breadcrumb = forwardRef((props, ref) => {
   const { children, separator, size, color = 'primary', className, as: Tag = 'nav', ...rest } = props
   const breadcrumbContext = { separator }
-  const classNames = classnames(`breadcrumb--list u_${color}`, {
-    [`u_size-${size}`]: !!size,
+  const classNames = classnames(`u_${color}`, {
+    [`u_f-${size}`]: !!size,
     [className!]: !!className,
   })
 

@@ -1,11 +1,11 @@
-.skeleton {
-  background-color: var(--surface-7);
+.s-k {
+  background-color: var(--bg-7);
   position: relative;
   overflow: hidden;
 
   &::before {
     content: '';
-    background-image: linear-gradient(to right, var(--opacity-1), var(--opacity-4), var(--opacity-2));
+    background-image: linear-gradient(to right, var(--opa-1), var(--opa-4), var(--opa-2));
     width: 40%;
     height: 100%;
     position: absolute;
@@ -15,25 +15,25 @@
   }
 }
 
-.skeleton--box {
+.s-k_box {
   width: 100%;
   height: var(--height, 10rem);
 }
 
-.skeleton--avatar,
-.skeleton--btn {
+.s-k_avt,
+.s-k_btn {
   width: 2.5em;
   height: 2.5em;
 }
-.skeleton--text {
+.s-k_txt {
   --flow-gap: 0.5em;
   height: 1em;
   border-radius: 0.15em;
   width: var(--text-width);
 }
-.skeleton--btn {
+.s-k_btn {
   padding: 0.25em 0.75em;
-  min-width: 6rem;
+  min-width: 8em;
   border-radius: 0.15rem;
 }
 

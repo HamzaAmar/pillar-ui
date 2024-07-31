@@ -30,7 +30,7 @@ export const GridItem = forwardRef((props, forwardedRef) => {
   let [lgColumn, lgRow] = lg?.split(' x ') ?? []
   let [xlColumn, xlRow] = xl?.split(' x ') ?? []
 
-  const classNames = classnames('grid--item', {
+  const classNames = classnames('g-r_i', {
     className: !!className,
     [`xs_grid-column`]: !!xsColumn,
     [`sm_grid-column`]: !!smColumn,
@@ -92,10 +92,10 @@ export const Grid = forwardRef((props, forwardedRef) => {
   let [lgColumns, lgRows] = lg?.split(' x ') ?? []
   let [xlColumns, xlRows] = xl?.split(' x ') ?? []
 
-  const classNames = classnames('grid', {
+  const classNames = classnames('g-r', {
     [`u_justify-${justify}`]: !!justify,
     [`u_items-${items}`]: !!items,
-    [`u_spacing-${gap}`]: !!gap,
+    [`u_space-${gap}`]: !!gap,
     [className!]: !!className,
     [`xs_grid-columns`]: !!xsColumns,
     [`sm_grid-columns`]: !!smColumns,

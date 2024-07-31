@@ -1,7 +1,7 @@
-.switch {
+.s-w {
   position: relative;
-  background-color: var(--surface-7);
-  border: 2px solid var(--surface-8);
+  background-color: var(--bg-7);
+  border: 2px solid var(--bg-8);
   width: 2.5em;
   max-width: 2.5em;
   flex: none;
@@ -12,19 +12,19 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--switch-corner, 2em);
+  border-radius: var(--switch-rad, 2em);
   font-size: var(--switch-size, 1rem);
   text-transform: var(--switch-transform);
 
   &:hover::before {
-    box-shadow: inset 0 0 0 0.125em var(--opacity-8);
+    box-shadow: inset 0 0 0 0.125em var(--opa-8);
   }
   &::before {
     content: '';
     width: calc(1.25em - 2px);
     height: calc(1.25em - 4px);
     border-radius: inherit;
-    background-color: var(--surface-2);
+    background-color: var(--bg-2);
     position: absolute;
     inset-inline-start: 0;
     top: 50%;
@@ -40,8 +40,8 @@
     width: 1.675em;
   }
   &[aria-pressed='true'] {
-    background: var(--color-shared-9);
-    border-color: var(--color-shared-9);
+    background: var(--clr-9);
+    border-color: var(--clr-9);
     &:active::before {
       transform: translate(40%, -50%);
     }
@@ -50,12 +50,12 @@
     }
   }
   &:disabled {
-    background-color: var(--surface-8);
-    border-color: var(--surface-8);
+    background-color: var(--bg-8);
+    border-color: var(--bg-8);
     pointer-events: none;
     cursor: not-allowed;
     &:before {
-      background-color: var(--surface-7);
+      background-color: var(--bg-7);
     }
   }
 }

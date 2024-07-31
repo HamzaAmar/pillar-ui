@@ -13,11 +13,11 @@ export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: 
   })
 
   return (
-    <Flex gap="sm" className="counter-button--container">
+    <Flex gap="sm" className="c-b_cnt">
       <Flex
         as="button"
         items="center"
-        className="counter-button counter--decrement-button"
+        className="c-b"
         type="button"
         onClick={() => decrement()}
         aria-label="Decrement value"
@@ -27,7 +27,7 @@ export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: 
       </Flex>
 
       <input
-        className="counter--input"
+        className="cb-f"
         type="number"
         value={count}
         step={step}
@@ -37,17 +37,15 @@ export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: 
         aria-label="Counter value"
       />
 
-      <Flex
-        as="button"
-        items="center"
-        className="counter-button counter--increment-button"
+      <button
+        className="flex u_items-center c-b"
         type="button"
         onClick={() => increment()}
         aria-label="Increment value"
         disabled={count >= max}
       >
         <Plus width="1em" />
-      </Flex>
+      </button>
     </Flex>
   )
 }

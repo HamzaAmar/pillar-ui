@@ -1,5 +1,5 @@
 /* // TODO: LOOKING FOR A WAY TO MAKE FOCUS HAPPEN ONLY FOR KEYBOARD USER FOCUS-VISIBLE WITH FOCUS-WITHIN */
-.radio-container {
+.r-a_cnt {
   border-radius: 0.5em;
 
   /*
@@ -11,98 +11,98 @@
 
   /* width: fit-content; */
   &:has(:disabled) {
-    color: var(--surface-11);
+    color: var(--bg-11);
     cursor: not-allowed;
   }
 }
 
-.custom-radio {
+.rc {
   width: 1.25em;
   height: 1.25em;
   border-radius: 50%;
   position: relative;
-  border: 1px solid var(--surface-7);
+  border: 1px solid var(--bg-7);
   margin-top: 2px;
   flex: none;
 
   &:hover {
-    border-color: var(--color-shared-9);
+    border-color: var(--clr-9);
   }
 }
 
-.radio {
+.r-a {
   &:checked {
-    & + .custom-radio {
+    & + .rc {
       outline-offset: -0.75em;
     }
 
-    & + .custom-radio__solid {
-      outline: 0.45em var(--color-shared-9) solid;
+    & + .rc__solid {
+      outline: 0.45em var(--clr-9) solid;
       outline-offset: -0.45em;
     }
-    & + .custom-radio__outline {
-      outline: 0.35em var(--color-shared-9) solid;
-      border-color: var(--color-shared-9);
+    & + .rc__outline {
+      outline: 0.35em var(--clr-9) solid;
+      border-color: var(--clr-9);
     }
-    & + .custom-radio__soft {
-      outline: 0.35em var(--color-shared-11) solid;
-      border-color: var(--color-shared-5);
-      background: var(--color-shared-5);
+    & + .rc__soft {
+      outline: 0.35em var(--clr-11) solid;
+      border-color: var(--clr-5);
+      background: var(--clr-5);
     }
   }
 
-  &:disabled + .custom-radio {
+  &:disabled + .rc {
     filter: grayscale(1);
-    background: var(--surface-8);
+    background: var(--bg-8);
   }
 }
 
-.radio__label {
+.r-a_lbl {
   max-width: 55ch;
   color: var(--text-8);
   font-size: 0.875em;
 }
 
 /* Radio Group Section Style Start */
-.radio-group {
+.ra-g {
   border-radius: 0.5rem;
   font-size: 0.85rem;
 }
 
-.radio-group--legend {
+.ra-g--legend {
   padding: 0.5rem;
   font-size: 0.85rem;
   margin-inline-start: 0.5rem;
 }
 
-.radio-group--horizontal {
+.ra-g--ho {
   flex-direction: vertical;
 }
 
-.radio-group--vertical {
+.ra-g--ve {
   flex-direction: column;
 }
 
 /* Radio Group Section Style End */
 
-.custom-radio-content {
+.rc_c {
   position: relative;
 }
 
-.custom-radio--check-icon {
+.rc_i {
   position: absolute;
   inset-inline-start: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   visibility: hidden;
 }
-.radio:checked + .custom-radio-content .custom-radio--check-icon {
+.r-a:checked + .rc_c .rc_i {
   visibility: visible;
 }
 
 @media (forced-colors: active) {
-  .radio:disabled {
-    & + .custom-radio {
+  .r-a:disabled {
+    & + .rc {
       background-color: GrayText;
       border-color: GrayText;
       filter: none;

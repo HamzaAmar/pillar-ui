@@ -6,7 +6,7 @@ import { Flex, FlexProps } from '../flex'
 
 export const Separator = forwardRef((props, ref) => {
   const {
-    color = 'surface',
+    color = 'bg',
     direction = 'horizontal',
     position = 'start',
     thickness = 'xs',
@@ -25,13 +25,13 @@ export const Separator = forwardRef((props, ref) => {
     ...(isVertical && { direction: 'column' }),
   }
 
-  const classNames = classnames(`separator separator__${direction} u_size-${thickness} u_${color}`, {
+  const classNames = classnames(`s-e s-e-${direction} u_size-${thickness} u_${color}`, {
     [className!]: !!className,
-    [`u_corner-${corner}`]: !!corner,
+    [`u_rad-${corner}`]: !!corner,
   })
   return (
     <Flex as={as} {..._direction} className={classNames} ref={ref} {...rest}>
-      {title && <span className="separator--text">{title}</span>}
+      {title && <span className="s-e_txt">{title}</span>}
     </Flex>
   )
 }) as ForwardRefComponent<'div', SeparatorProps>

@@ -10,7 +10,7 @@ export const ListItem = ({ children }: ListItemProps) => {
 ListItem.displayName = 'ListItem'
 
 export const List = forwardRef(({ as: Tag = 'ul', children, flow, hideStyle, ...rest }, forwardedRef) => {
-  const classNames = classnames(`list  l_flow__${flow}`, { 'list--show-list': !!hideStyle })
+  const classNames = classnames(`l-i  l_flow__${flow}`, { 'list--show-list': !!hideStyle })
 
   return (
     <Tag className={classNames} ref={forwardedRef} {...rest}>

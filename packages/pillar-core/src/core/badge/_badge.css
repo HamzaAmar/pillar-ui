@@ -1,4 +1,4 @@
-.badge {
+.b-a {
   --flex: inline-flex;
 
   font-weight: 500;
@@ -15,7 +15,7 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--badge-corner, 1em);
+  border-radius: var(--badge-rad, 1em);
   font-size: var(--badge-size, 0.825rem);
 
   & svg {
@@ -23,10 +23,10 @@
   }
 }
 
-.badge__dot {
+.b-a_dot {
   --badge-size: 0.5em;
 }
 
-.badge--content {
+.b-a_cnt {
   font-size: clamp(0.5rem, 0.825em, 1.25rem);
 }

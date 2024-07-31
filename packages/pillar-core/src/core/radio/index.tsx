@@ -31,22 +31,15 @@ export const CustomRadio = (props: CustomRadioProps) => {
 
   const labelDirection = direction === 'column' ? { direction: 'column' as 'column' } : {}
 
-  // const radioClassName = classnames(`custom-radio u_circle`)
+  // const radioClassName = classnames(`rc u_circle`)
   return (
-    <Flex
-      as="label"
-      className={`radio-container radio--${size} u_${color}`}
-      htmlFor={idOrLabel}
-      {...labelDirection}
-      gap="xs"
-      items="center"
-    >
-      <input type="radio" name={name} className="radio" id={idOrLabel} {...rest} />
-      <span className={`custom-radio-content ${className}`}>
+    <Flex as="label" className={`r-a_c u_${color}`} htmlFor={idOrLabel} {...labelDirection} gap="xs" items="center">
+      <input type="radio" name={name} className="r-a" id={idOrLabel} {...rest} />
+      <span className={`rc_c ${className}`}>
         {children}
-        <CircleCheck className="custom-radio--check-icon" width={20} />
+        <CircleCheck className="rc_i" width={20} />
       </span>
-      <span className={classnames(`radio__label`, { 'u_visually-hidden': !showLabel })}>{label}</span>
+      <span className={classnames(`r-a_la`, { u_sr: !showLabel })}>{label}</span>
     </Flex>
   )
 }
@@ -61,12 +54,10 @@ export const RadioGroup = ({ direction = 'column', children, label, showLabel, i
   /*TODO: ADD ERROR ACCESSIBILITY  */
 
   return (
-    <fieldset role="radiogroup" className="form-group--container">
-      <legend className={classnames('form-group--legend', { 'u_visually-hidden': !showLabel })}>{label}</legend>
+    <fieldset role="radiogroup" className="ra-g">
+      <legend className={classnames('form-group--legend', { u_sr: !showLabel })}>{label}</legend>
 
-      {/*
-       TODO: ADD DEFAULT  TO RADIO GROUP 
-      */}
+      {/* TODO: ADD DEFAULT  TO RADIO GROUP  */}
 
       <Flex wrap gap="sm" className="form-group" items="start" direction={direction}>
         <RadioProvider {...rest}>{children}</RadioProvider>
@@ -97,10 +88,10 @@ export const Radio = (props: RadioProps) => {
   const idOrLabel = id || fallbackId
 
   return (
-    <Flex inline gap="xs" as="label" className={`radio-container u_size-${size} u_${color}`} htmlFor={idOrLabel}>
-      <input type="radio" name={name} className="radio u_visually-hidden" id={idOrLabel} {...rest} />
-      <span className={`custom-radio custom-radio__${variant} u_circle`} />
-      <span className="radio__label">{label}</span>
+    <Flex inline gap="xs" as="label" className={`r-a_cnt u_f-${size} u_${color}`} htmlFor={idOrLabel}>
+      <input type="radio" name={name} className="r-a u_sr" id={idOrLabel} {...rest} />
+      <span className={`rc rc__${variant} u_circle`} />
+      <span className="r-a_lbl">{label}</span>
     </Flex>
   )
 }

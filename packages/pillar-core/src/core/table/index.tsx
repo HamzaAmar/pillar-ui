@@ -8,8 +8,8 @@ export const TableColumn = forwardRef(
     return (
       <Comp
         ref={forwardedRef}
-        className={classnames('column', {
-          [`u_font-${weight}`]: weight !== 'normal',
+        className={classnames('col', {
+          [`u_f-${weight}`]: weight !== 'normal',
           [className!]: !!className,
         })}
         {...rest}
@@ -35,7 +35,7 @@ export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
 TableRow.displayName = 'TableRow'
 
 export const Table = ({
-  color = 'surface',
+  color = 'bg',
   variant = 'default',
   showBorder,
   size = 'md',
@@ -44,9 +44,9 @@ export const Table = ({
   ...rest
 }: TableProps) => {
   return (
-    <div className="table--wrapper">
+    <div className="t-a_cnt">
       <table
-        className={classnames(`table u_size-${size} table__${variant}  u_${color}`, {
+        className={classnames(`t-a u_size-${size} t-a-${variant}  u_${color}`, {
           table__border: !!showBorder,
         })}
         {...rest}

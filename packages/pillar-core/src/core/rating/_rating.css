@@ -1,4 +1,4 @@
-.rating {
+.r-t {
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to
@@ -7,10 +7,10 @@
   font-size: var(--rating-size, 0.875rem);
 }
 
-.rating svg {
+.r-t svg {
   width: 7.5em;
 }
 
-.rating-path {
-  stroke: var(--color-shared-9);
+.r-t_path {
+  stroke: var(--clr-9);
 }

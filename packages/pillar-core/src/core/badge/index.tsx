@@ -15,11 +15,11 @@ export const Badge = forwardRef((props, ref) => {
     className,
     ...rest
   } = props
-  const classNames = classnames(`badge u_${variant} u_center u_${color} `, {
-    badge__dot: type === 'dot',
+  const classNames = classnames(`b-a u_${variant} u_center u_${color} `, {
+    'b-a_dot': type === 'dot',
     [className!]: !!className,
-    [`u_size-${size}`]: !!size,
-    [`u_corner-${corner}`]: !!corner,
+    [`u_f-${size}`]: !!size,
+    [`u_rad-${corner}`]: !!corner,
   })
 
   /**
@@ -43,7 +43,7 @@ export const Badge = forwardRef((props, ref) => {
 
   return (
     <Tag ref={ref} className={classNames} {...rest}>
-      <span className="badge--content u_center">{displayValue}</span>
+      <span className="b-a_cnt u_center">{displayValue}</span>
     </Tag>
   )
 }) as ForwardRefComponent<'div', BadgeProps>

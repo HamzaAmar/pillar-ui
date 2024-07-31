@@ -18,17 +18,17 @@ export const Chips = forwardRef((props, ref) => {
     children,
     ...rest
   } = props
-  const _className = classnames(`chips u_${variant} u_${color} u_center`, {
+  const _className = classnames(`c-i u_${variant} u_${color} u_center`, {
     [className!]: !!className,
-    [`u_size-${size}`]: !!size,
+    [`u_f-${size}`]: !!size,
     [`u_transform__${transform}`]: !!transform,
-    [`u_corner-${corner}`]: !!corner,
+    [`u_rad-${corner}`]: !!corner,
   })
 
   return (
     <Tag ref={ref} className={_className} {...rest}>
       {icon && iconPosition === 'start' && icon}
-      <span className="chips--content u_truncate">{children}</span>
+      <span className="c-i_cnt u_truncate">{children}</span>
       {icon && iconPosition === 'end' && icon}
     </Tag>
   )

@@ -23,13 +23,13 @@ export const Text = forwardRef((props, forwardedRef) => {
     ...rest
   } = props
 
-  const classNames = classnames(`typography`, {
-    [`u_size-${size}`]: !!size,
+  const classNames = classnames(`t-y`, {
+    [`u_f-${size}`]: !!size,
     [`u_truncate`]: !!truncate,
-    [`u_transform__${transform}`]: !!transform,
-    [`u_align__${align}`]: !!align,
-    [`u_font-${weight}`]: !!weight,
-    [`u_decoration__${decoration}`]: !!decoration,
+    [`u_t__${transform}`]: !!transform,
+    [`u_t__${align}`]: !!align,
+    [`u_f-${weight}`]: !!weight,
+    [`u_t__${decoration}`]: !!decoration,
     [`u_leading__${leading}`]: !!leading,
     [`u_style__${fontStyle}`]: !!fontStyle,
     [`u_${color}`]: !!color,
@@ -52,7 +52,7 @@ Text.displayName = 'Text'
 
 export const Heading = forwardRef(({ as: Tag = 'h1', children, ...rest }, forwardedRef) => {
   return (
-    <Text as={Tag} className="heading" ref={forwardedRef} {...rest}>
+    <Text as={Tag} className="t-y_hdg" ref={forwardedRef} {...rest}>
       {children}
     </Text>
   )
@@ -62,7 +62,7 @@ Heading.displayName = 'Heading'
 
 export const Link = forwardRef(({ children, ...rest }, forwardedRef) => {
   return (
-    <Text ref={forwardedRef} color="primary" contrast="low" className="link" as="a" {...rest}>
+    <Text ref={forwardedRef} color="primary" contrast="low" className="t-y_lnk" as="a" {...rest}>
       {children}
     </Text>
   )

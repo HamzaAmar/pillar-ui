@@ -42,18 +42,14 @@ function useField(props: any) {
     ...restProps
   } = props
 
-  const prefixInputElement = !!prefixInput && (
-    <span className="input--pref-content input-field--prefix u_center">{prefixInput}</span>
-  )
-  const suffixInputElement = !!suffixInput && (
-    <span className="input--suf-content input-field--suffix u_center">{suffixInput}</span>
-  )
+  const prefixInputElement = !!prefixInput && <span className="fi-p_cnt f-i-pre u_center">{prefixInput}</span>
+  const suffixInputElement = !!suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
 
-  const classNames = classnames(`field-wrapper field-wrapper__${variant} u_${color}`, {
-    [`u_transform__${transform}`]: !!transform,
-    'field-wrapper__fluid': !!fluid,
-    [`u_size-${size}`]: corner,
-    [`u_corner-${corner}`]: corner,
+  const classNames = classnames(`f-i_cnt f-i_cnt-${variant} u_${color}`, {
+    [`u_t__${transform}`]: !!transform,
+    'f-i_cnt-fluid': !!fluid,
+    [`u_f-${size}`]: corner,
+    [`u_rad-${corner}`]: corner,
   })
   const isError = hasError || isInvalid
 
@@ -73,7 +69,7 @@ const handleStep =
 function InputNumberButton({ onClick, title, direction = 'top' }: InputNumberButtonProps) {
   const dir = direction ? ({ direction } as const) : {}
   return (
-    <button type="button" onClick={onClick} aria-label={title} tabIndex={-1} className="number-input--button">
+    <button type="button" onClick={onClick} aria-label={title} tabIndex={-1} className="fi-n-btn">
       <ChevronDown width=".85em" {...dir} />
     </button>
   )
@@ -91,7 +87,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
   return (
     <div className={classNames}>
       {prefixInputElement}
-      <textarea ref={forwardedRef} {...fieldProps} className="field"></textarea>
+      <textarea ref={forwardedRef} {...fieldProps} className="f-i"></textarea>
       {suffixInputElement}
     </div>
   )
@@ -111,7 +107,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
   return (
     <div className={classNames}>
       {prefixInputElement}
-      <input ref={forwardedRef} type="text" {...fieldProps} className="field" />
+      <input ref={forwardedRef} type="text" {...fieldProps} className="f-i" />
       {suffixInputElement}
     </div>
   )
@@ -133,8 +129,8 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
   return (
     <div className={classNames}>
       {prefixInputElement}
-      <input type="number" ref={composedRef} {...fieldProps} className="field" />
-      <div className="input-number--counter-wrapper">
+      <input type="number" ref={composedRef} {...fieldProps} className="f-i" />
+      <div className="fi-n_cnt">
         <InputNumberButton onClick={handleStep(inputRef, 'stepUp')} title="Increase Value" />
         <InputNumberButton onClick={handleStep(inputRef, 'stepDown')} direction="bottom" title="Decrease Value" />
       </div>
@@ -157,13 +153,13 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
   return (
     <div className={classNames}>
       {prefixInputElement}
-      <input type={showPassword ? 'text' : 'password'} ref={forwardedRef} {...fieldProps} className="field" />
+      <input type={showPassword ? 'text' : 'password'} ref={forwardedRef} {...fieldProps} className="f-i" />
 
       <button
         aria-label={`${showPassword ? 'Hide' : 'Show '} Password`}
         type="button"
         onClick={setToggle}
-        className="input--suf-content password-input--button u_center"
+        className="input--suf-content fi-p-btn u_center"
       >
         {showPassword ? hiddenIcon : visibleIcon}
       </button>
@@ -193,16 +189,10 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
   return (
     <div className={classNames}>
       {prefixInputElement}
-      <input type="search" ref={mergedRef} {...fieldProps} className="field field__search" />
-      <Flex as="span" items="center" className="input--search--suffix">
+      <input type="search" ref={mergedRef} {...fieldProps} className="f-i fi-s" />
+      <Flex as="span" items="center" className="fi-s_suf">
         {suffixInputElement}
-        <X
-          onClick={handleInputClick}
-          className="search-field--clear"
-          width="1em"
-          stroke="var(--surface-11)"
-          transform="translate(-8,0)"
-        />
+        <X onClick={handleInputClick} className="fi-s_icn" transform="translate(-8,0)" />
       </Flex>
     </div>
   )
@@ -222,10 +212,10 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forward
 
   return (
     <div className={classNames}>
-      <select ref={forwardedRef} {...fieldProps} className="field select-field">
+      <select ref={forwardedRef} {...fieldProps} className="f-i fi-se">
         {children}{' '}
       </select>
-      <span className="select-chevron">
+      <span className="fi-s_icn">
         <ChevronDown width={16} />
       </span>
     </div>
@@ -255,10 +245,10 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = classnames(`field-wrapper field-wrapper__${variant} u_flex u_spacing-xs u_${color}`, {
-    [`u_corner-${corner}`]: !!corner,
-    [`u_transform__${transform}`]: !!transform,
-    [`u_size-${size}`]: !!size,
+  const className = classnames(`f-i_cnt f-i_cnt-${variant} u_flex u_space-xs u_${color}`, {
+    [`u_rad-${corner}`]: !!corner,
+    [`u_t__${transform}`]: !!transform,
+    [`u_f-${size}`]: !!size,
   })
 
   console.log(forwardedRef)
@@ -301,7 +291,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
         <div className={className} key={index}>
           <input
             placeholder={placeholder}
-            className="pin-input field"
+            className="f-i fi-p"
             value={pin[index]}
             onChange={(e) => handleInputChange(e.target.value, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
@@ -354,12 +344,12 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
   }
   return (
     <Grid grid="auto 1fr" className={classNames} onClick={() => inputRef.current?.click()}>
-      <input type="file" ref={composedRef} {...fieldProps} className="u_visually-hidden" onChange={handleChange} />
-      <Flex as="span" items="center" className="input-file">
+      <input type="file" ref={composedRef} {...fieldProps} className="u_sr" onChange={handleChange} />
+      <Flex as="span" items="center" className="fi-f">
         {title}
       </Flex>
 
-      <Text as={Flex} color="surface" size="xs" contrast="low" items="center">
+      <Text as={Flex} color="bg" size="xs" contrast="low" items="center">
         {hasValue ? _value : 'No file Choose'}
       </Text>
     </Grid>
@@ -391,15 +381,15 @@ export const FormController = (props: FormControllerProps) => {
   const fieldLabel = `${label}${rest.required ? ' *' : ''}`
   return (
     <FormControllerProvider {...values}>
-      <Flex direction="column" className={classnames('text-field--root u_size-xs', { [className!]: !!className })}>
-        <label className={classnames('u_font-medium u_size-sm', { 'u_visually-hidden': !!hideLabel })} htmlFor={id}>
+      <Flex direction="column" className={classnames('fc-o u_f-xs', { [className!]: !!className })}>
+        <label className={classnames('u_f-medium u_f-sm', { u_sr: !!hideLabel })} htmlFor={id}>
           {fieldLabel}
         </label>
         {hint && <span id={hintID}>{hint}</span>}
         {children}
         {error && (
-          <div className="field--error u_center" id={messageID} role="alert">
-            <span className="field--error-icon">{<X type="circle" width="16" />}</span>
+          <div className="f-c_err u_center" id={messageID} role="alert">
+            <span className="f-c_icn">{<X type="circle" width="16" />}</span>
             <span> {error}</span>
           </div>
         )}
@@ -418,17 +408,12 @@ export const FormGroup = ({
 }: FormGroupProps) => {
   return (
     <fieldset
-      className={classnames('form-group--container', {
-        'form-group--hide-border ': !!hideBorder,
+      className={classnames('f-g_cnt', {
+        'f-g-hide-border ': !!hideBorder,
       })}
     >
-      <legend className={classnames('form-group--legend', { 'u_visually-hidden': !!hideTitle })}>{title}</legend>
-      <Flex
-        gap="sm"
-        className={classnames('form-group', { 'form-group--fluid': !!rest.fluid })}
-        items="start"
-        direction={direction}
-      >
+      <legend className={classnames('f-g_legend', { u_sr: !!hideTitle })}>{title}</legend>
+      <Flex gap="sm" className={classnames('f-g', { 'f-g-fluid': !!rest.fluid })} items="start" direction={direction}>
         <FormGroupProvider {...rest}>{children}</FormGroupProvider>
       </Flex>
     </fieldset>

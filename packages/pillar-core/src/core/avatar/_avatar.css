@@ -1,11 +1,11 @@
-.avatar {
+.a-v {
   /* TODO: CHECK IF IT INLINE FLEX OR The Cache  */
   --flex: inline-flex;
 
   /* overflow: hidden; */
   padding: 0;
-  border: 2px solid var(--surface-1);
-  background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(var(--surface-1), var(--surface-1));
+  border: 2px solid var(--bg-1);
+  background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(var(--bg-1), var(--bg-1));
   background-clip: content-box, padding-box;
   flex-shrink: 0;
 
@@ -14,7 +14,7 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--avatar-corner, 10em);
+  border-radius: var(--avatar-rad, 10em);
   font-size: var(--avatar-size, 1rem);
 
   & > * {
@@ -22,38 +22,37 @@
   }
 }
 
-.avatar__size,
-.avatar--img,
-.avatar--fallback {
+.a-v_img,
+.a-v_flb {
   --img-size: 2.75em;
   width: var(--img-size);
   height: var(--img-size);
 }
 
-.avatar--img {
+.a-v_img {
   --img-size: 100%;
   object-fit: cover;
 }
 
 /* Avatar Variants */
 
-.avatar__soft {
-  --bg: var(--color-shared-3);
-  color: var(--color-shared-11);
+.a-v-soft {
+  --bg: var(--clr-3);
+  color: var(--clr-11);
 }
 
-.avatar__solid {
-  --bg: var(--color-shared-8);
-  color: var(--color-shared-12);
+.a-v-solid {
+  --bg: var(--clr-8);
+  color: var(--clr-12);
 }
-.avatar__outline,
-.avatar__dashed {
-  --bg: var(--color-shared-3);
+.a-v-outline,
+.a-v-dashed {
+  --bg: var(--clr-3);
   padding: 3px;
-  border: 2px solid var(--color-shared-9);
+  border: 2px solid var(--clr-9);
 }
 
-.avatar__dashed {
+.a-v-dashed {
   border-style: dashed;
 }
 
@@ -63,7 +62,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.avatar-group {
+.av-g {
   display: flex;
   flex-wrap: wrap;
 
@@ -77,10 +76,10 @@
   }
 }
 
-.avatar-group__stack > * + * {
+.av-g-stack > * + * {
   margin-inline-start: -0.5em;
 }
 
-.avatar-group__grid {
+.av-g-grid {
   gap: 0.375em;
 }
