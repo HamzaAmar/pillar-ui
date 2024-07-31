@@ -47,6 +47,78 @@ If you encounter a bug or have a feature request, please open an issue on the Gi
 
 Pillar follows a set of design and coding guidelines to ensure consistency and maintainability. Please review these guidelines before contributing.
 
+### Component Class Naming Convention
+
+for class naming convention we use like bem methodology .block_element-modifier please we want it to follow this one.
+
+also for utilities, and layout we prefix them with with the beginning of the folder followed by \_
+
+`utils` ====> u\_
+`layout` ====> l\_
+
+but for the components we follow this inscruction below :
+
+To ensure uniqueness and minimize bundle size, Pillar adopts the following class naming convention for components:
+
+The first and second letters of the component's folder name, separated by a hyphen (-).
+
+Absolutely! Let's refine your component class naming convention description.
+
+Pillar components adhere to a unique class naming convention designed for both clarity and efficiency:
+
+1. **Base Abbreviation:** The first two letters of the component folder name are used as the base abbreviation. (e.g., "Button" becomes "b-u")
+
+2. **Disambiguation:**
+   - If two or more components share the same base abbreviation, the third letter is included for distinction.
+   - If ambiguity persists, the first unique letter encountered in the component folder name is added to the abbreviation.
+   - This step is repeated as needed until a unique class name is generated.
+
+**Example:**
+
+```html
+<div class="b-u"></div>
+<div class="b-u-primary"></div>
+<div class="b-u-large"></div>
+```
+
+**Benefits:**
+
+- **Collision Prevention:** This approach minimizes the risk of Pillar component styles conflicting with user-defined classes.
+- **Conciseness:** Short, predictable class names reduce CSS bundle size, also component size, enhancing website performance.
+- **Readability:** While abbreviated, the class names remain reasonably intuitive, aiding in code maintainability.
+- **Scalability:** The convention accommodates a growing number of components without sacrificing uniqueness.
+
+**Additional Considerations (Optional):**
+
+- **Delimiter:** Consider using a consistent delimiter (e.g., hyphen, underscore) to visually separate the abbreviation parts in longer class names.
+- **Documentation:** Include the naming convention details in your component documentation or style guide for easy reference.
+
+## CSS Reserved Words (Continued)
+
+| Reserved Word | Description               | Example    |
+| ------------- | ------------------------- | ---------- |
+| `_btn`        | Reserved for "button"     | `.b-u_btn` |
+| `_cnt`        | Reserved for "content"    | `.b-u_cnt` |
+| `_err`        | Reserved for "error"      | `.b-u_err` |
+| `_ele`        | Reserved for "element"    | `.b-u_el`  |
+| `_flb`        | Reserved for "fallback"   | `.b-u_flb` |
+| `_hor`        | Reserved for "horizontal" | `.b-u_hor` |
+| `_itm`        | Reserved for "item"       | `.b-u_itm` |
+| `_img`        | Reserved for "image"      | `.b-u_img` |
+| `_icn`        | Reserved for "icon"       | `.b-u_icn` |
+| `_lnk`        | Reserved for "link"       | `.b-u_lnk` |
+| `_lbl`        | Reserved for "label"      | `.b-u_lbl` |
+| `_lst`        | Reserved for "list"       | `.b-u_lst` |
+| `_pnl`        | Reserved for "panel"      | `.b-u_pnl` |
+| `_pfx`        | Reserved for "prefix"     | `.b-u_pfx` |
+| `_sh`         | Reserved for "show"       | `.b-u_shw` |
+| `_sfx`        | Reserved for "suffix"     | `.b-u_sfx` |
+| `_txt`        | Reserved for "text"       | `.b-u_txt` |
+| `_ver`        | Reserved for "vertical"   | `.b-u_ver` |
+| `_wrp`        | Reserved for "wrapper"    | `.b-u_wrp` |
+
+Please adhere to this convention when creating or modifying Pillar components.
+
 ## Commit Messages
 
 When making commits, please follow the [Conventional Commits format](https://www.conventionalcommits.org/en/v1.0.0/) . This helps us to automatically generate changelogs and version numbers.
