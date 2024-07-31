@@ -228,14 +228,14 @@ export const ChipsRefForwarded = () => {
     if (chipsRef.current?.style) {
       const { style } = chipsRef.current
       if (count % 2 === 0) {
-        style.backgroundColor = 'var(--primary-8)'
-        style.borderColor = 'var(--primary-12)'
-        style.borderColor = 'var(--primary-11)'
+        style.backgroundColor = 'var(--pri-8)'
+        style.borderColor = 'var(--pri-12)'
+        style.borderColor = 'var(--pri-11)'
         return
       }
-      style.background = 'var(--secondary-8)'
-      style.color = 'var(--secondary-12)'
-      style.borderColor = 'var(--secondary-11)'
+      style.background = 'var(--sec-8)'
+      style.color = 'var(--sec-12)'
+      style.borderColor = 'var(--sec-11)'
       return
     }
   }

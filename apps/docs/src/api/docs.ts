@@ -20,7 +20,7 @@ function extractTOCFromMDX(content: string): Headings {
   return toc
 }
 
-function parseFrontmatter<T>(fileContent: string) {
+function parseFrontmatter<T>(fileContent: string, filename: string) {
   // Split the file content into frontmatter and content
 
   const frontmatterRegex = /---\s*([\s\S]*?)\s*---/
@@ -28,7 +28,7 @@ function parseFrontmatter<T>(fileContent: string) {
   const frontMatterBlock = match![1]
   const content = fileContent.replace(frontmatterRegex, '').trim()
   const frontmatter = parse(frontMatterBlock)
-  const slug = toSlug(frontmatter.title)
+  const slug = filename
   const stats = readingTime(content)
   const headings = extractTOCFromMDX(content)
 
@@ -45,15 +45,17 @@ function getMDXFiles(dir: string) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx')
 }
 
-function readMDXFile<T>(filePath: string) {
+function readMDXFile<T>(filePath: string, filename: string) {
   let fileContent = fs.readFileSync(filePath, 'utf-8')
-  return parseFrontmatter<T>(fileContent)
+  return parseFrontmatter<T>(fileContent, filename)
 }
 
 function getMDXData<T>(dir: string) {
   let mdxFiles = getMDXFiles(dir)
   return mdxFiles.map((file) => {
-    let obj = readMDXFile<T>(path.join(dir, file))
+    const [filename] = file.split('.')
+
+    let obj = readMDXFile<T>(path.join(dir, file), filename)
     return obj
   })
 }

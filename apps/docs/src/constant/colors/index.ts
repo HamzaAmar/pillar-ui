@@ -669,7 +669,7 @@ const mauve = {
     '256, 6.0%, 93.2%',
   ],
 }
-const surface = {
+const bg = {
   light: [
     '206, 30.0%, 98.8%',
     '210, 16.7%, 97.6%',
@@ -873,7 +873,7 @@ export const COLORS: Colors = {
   amber,
   gray,
   mauve,
-  surface,
+  bg,
   sage,
   olive,
   sand,

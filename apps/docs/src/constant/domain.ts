@@ -1,1 +1,1 @@
-export const DOMAIN = 'http://pillar-ui.com/'
+export const DOMAIN = 'http://pillar-ui.com'

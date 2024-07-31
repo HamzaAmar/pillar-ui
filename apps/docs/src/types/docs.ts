@@ -17,6 +17,7 @@ export interface SharedDocs {
   readingTime: ReadTimeResults
   headings: Headings
   directory?: string
+  lastModified: string
 }
 
 export interface Component extends SharedDocs {
