@@ -1,5 +1,34 @@
 # @pillar/utils
 
+## 0.7.0
+
+### Minor Changes
+
+- # New Release
+
+  This release primarily focuses on enhancing the codebase's maintainability and performance, setting the stage for future feature development and improvements. While the changes may not be immediately visible to end-users, they significantly impact the project's long-term health and sustainability.
+
+  ## Key Enhancements
+
+  - **Codebase Refactoring:** A comprehensive overhaul of components, CSS classes, and file structures to improve code quality, consistency, and organization. This refactor enhances maintainability, streamlines development, and lays the groundwork for future optimizations.
+  - **Performance Optimizations:** Various adjustments have been made to enhance site speed and overall performance. These include optimizing CSS variables, consolidating theme files, and refining component structures for faster loading times.
+  - **SEO and Accessibility Improvements:** The project now includes upgraded meta tags, improved sitemap generation, and content updates to optimize for search engines and screen readers. These changes enhance the project's discoverability and inclusivity.
+  - **Content Refinement:** Story excerpts, titles, and metadata have been revised for clarity, relevance, and improved user experience. This includes adding `lastModified` dates for better SEO and sitemap management.
+  - **Styling Updates:** CSS variables and color schemes have been streamlined, making customization and maintenance easier for developers.
+
+  ## Additional Changes
+
+  - **Contributor Guidelines:** Naming conventions for contributors have been updated and can be found in the README and Contribute files.
+  - **Donation Option:** A donation button has been added to support the project's ongoing development. Details can be found in the updated documentation.
+  - **Technical Upgrades:** The project has been upgraded to use a more modern approach to generate favicons and sitemaps. Additionally, various technical adjustments have been made to pages like docs, playground, and stories to ensure compatibility with changes in the core pillar.
+
+  ## Developer Notes
+
+  - Developers are encouraged to review the updated naming conventions, component structures, and contributor guidelines.
+  - The streamlined CSS variables and theme files offer greater flexibility for customization and theming.
+
+  This release marks a significant milestone in the project's evolution. While user-facing features may not be immediately apparent, the underlying improvements are substantial and pave the way for exciting future enhancements. We are committed to continuous improvement and welcome feedback and contributions from the community.
+
 ## 0.6.1
 
 ### Patch Changes
