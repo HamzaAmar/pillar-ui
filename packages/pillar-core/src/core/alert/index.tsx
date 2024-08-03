@@ -15,7 +15,7 @@ export const Alert = forwardRef((props, forwardedRef) => {
     size,
     title,
     inline,
-    variant = 'solid',
+    variant = 'soft',
     closable = false,
     corner,
     className,
@@ -51,7 +51,7 @@ export const Alert = forwardRef((props, forwardedRef) => {
     [`u_f-${size}`]: !!size,
   })
 
-  const _title = title && <div className="u_transform__capitalize u_leading__md u_f-medium">{title}</div>
+  const _title = title && <div className="u_t__capitalize u_leading__md u_f-medium">{title}</div>
   const _message = message && <span>{message}</span>
 
   const closeIcon = closable && (

@@ -7,7 +7,13 @@ const meta: Meta<typeof Pagination> = {
   title: 'Components/Pagination',
   component: Pagination,
 }
-
+export function PaginationDefault() {
+  return (
+    <div>
+      <Pagination count={10} />
+    </div>
+  )
+}
 export default meta
 export function PaginationColor() {
   return (
@@ -46,13 +52,11 @@ export function PaginationColor() {
 export function PaginationVariant() {
   return (
     <div className="l_flow__md">
-      <Pagination count={10} />
-      <Pagination count={10} color="danger" />
-      <Pagination count={10} color="success" />
-      <Pagination count={10} color="warning" />
       <Pagination count={10} color="primary" />
-      <Pagination count={10} color="secondary" />
-      <Pagination count={10} color="bg" />
+      <Pagination count={10} color="primary" variant="mixed" />
+      <Pagination count={10} color="primary" variant="soft" />
+      <Pagination count={10} color="primary" variant="solid" />
+      <Pagination count={10} color="primary" variant="text" />
     </div>
   )
 }

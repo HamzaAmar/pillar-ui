@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Children, forwardRef, useState } from 'react'
-import { User } from '@pillar-ui/icons'
+import { Photos } from '@pillar-ui/icons'
 import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
 import { classnames, createContext } from '@pillar-ui/utils'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
@@ -66,7 +66,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
     size = ctx?.size,
     corner = ctx?.corner,
     color = ctx?.color ?? 'primary',
-    fallback = ctx?.fallback ?? <User width="max(1.75em, 10px)" />,
+    fallback = ctx?.fallback ?? <Photos strokeWidth="1.5" width="max(1.5em, 10px)" />,
     image = '',
     className,
     title,

@@ -5,6 +5,7 @@
 */
 
 .b-r {
+  font-size: 0;
   & ol {
     margin: 0;
     padding: 0;
@@ -27,15 +28,16 @@
 
 .b-r_lnk {
   min-width: 1.5rem;
-  font-size: 1em;
+  font-size: 0.875em;
   color: var(--clr-11);
   padding: 0;
+  text-transform: capitalize;
   &:hover {
-    text-decoration: underline 2px;
-    color: var(--clr-10);
+    text-decoration: underline 1.2px;
   }
   &[aria-current='page'] {
-    color: var(--bg-11);
+    color: var(--bg-10);
     text-decoration: none;
+    cursor: not-allowed;
   }
 }

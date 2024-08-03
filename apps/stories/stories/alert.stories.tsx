@@ -105,14 +105,14 @@ export const AlertCorner = () => {
   )
 }
 
-const Variants = ['solid', 'outline', 'soft', 'mixed']
+const Variants = ['shadow', 'solid', 'outline', 'soft', 'mixed']
 
 export const AlertVariant = () => {
   return (
     <div className="l_flow__md">
       {Variants.map((variant) => (
         <Flex key={variant} direction="column" gap="sm">
-          <AlertBase variant={variant} color="danger" />
+          <AlertBase variant={variant} color="warning" />
         </Flex>
       ))}
     </div>

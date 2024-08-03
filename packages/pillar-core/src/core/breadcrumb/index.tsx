@@ -17,7 +17,7 @@ const [BreadcrumbProvider, useBreadcrumbContext] = createContext<BreadcrumbConte
 })
 
 export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
-  const { separator: contextSeparator = '>' } = useBreadcrumbContext() ?? {}
+  const { separator: contextSeparator = '/' } = useBreadcrumbContext() ?? {}
   const { as = 'a', children, current, separator = contextSeparator, className, ...rest } = props
   const currentPage: CurrentPage = current ? { 'aria-current': 'page' } : {}
   const classNames = classnames(`b-r_lnk`, { [className!]: !!className })
@@ -45,7 +45,7 @@ BreadcrumbItem.displayName = 'BreadcrumbItem'
 */
 
 export const Breadcrumb = forwardRef((props, ref) => {
-  const { children, separator, size, color = 'primary', className, as: Tag = 'nav', ...rest } = props
+  const { children, separator, size, color = 'bg', className, as: Tag = 'nav', ...rest } = props
   const breadcrumbContext = { separator }
   const classNames = classnames(`u_${color}`, {
     [`u_f-${size}`]: !!size,

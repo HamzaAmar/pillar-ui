@@ -19,7 +19,7 @@ const Item = forwardRef((props, forwardedRef) => {
     children,
     variant = context?.variant ?? 'outline',
     color = context?.color ?? 'bg',
-    size = context?.size ?? 'md',
+    size = context?.size ?? 'sm',
     corner = context?.corner ?? 'sm',
     number,
     className,

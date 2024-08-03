@@ -85,7 +85,7 @@ export const IconButton = forwardRef(
     },
     forwardedRef
   ) => {
-    const iconButtonClassName = classnames(`bu-i b_u u_${variant} u_${color} u_center`, {
+    const iconButtonClassName = classnames(`b_u bu-i u_${variant} u_${color} u_center`, {
       [className!]: !!className,
       [`u_f-${size}`]: !!size,
       [`u_rad-${corner}`]: !!corner,

@@ -1,14 +1,17 @@
 .p-a_btn {
-  padding: 0.5rem;
+  padding: 0.25rem;
   aspect-ratio: 1 / 1;
+  min-width: 2em;
   color: var(--clr-12);
-  line-height: 1;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   &[aria-current='page'] {
-    background-color: var(--clr-9);
-    color: white;
     border-color: var(--opa-8);
+    outline: 2.5px solid var(--clr-9);
+    outline-offset: -2px;
+    &.u_solid {
+      outline-color: var(--clr-12);
+    }
   }
 }
 
@@ -26,10 +29,4 @@
   display: flex;
   gap: var(--s-sm);
   list-style: none;
-}
-
-@media (forced-colors: active) {
-  .p-a_bu[aria-current='page'] {
-    background-color: Highlight;
-  }
 }

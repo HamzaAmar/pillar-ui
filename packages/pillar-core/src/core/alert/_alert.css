@@ -8,11 +8,16 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--alert-rad, 0.25em);
+  border-radius: var(--alert-rad, 0);
   font-size: var(--alert-size, 1rem);
 
-  &.u_solid {
-    border-inline-start: 6px solid var(--opa-8);
+  &.u_solid,
+  &.u_soft {
+    border-inline-start: 3px solid var(--opa-8);
+  }
+
+  &.u_soft {
+    border-inline-color: var(--clr-9);
   }
 }
 
@@ -27,6 +32,7 @@
 */
 
 .a-l_cnt {
+  font-size: 0.925em;
   &[data-inline='true'] {
     gap: var(--s-xs);
   }

@@ -24,7 +24,7 @@
     width: calc(1.25em - 2px);
     height: calc(1.25em - 4px);
     border-radius: inherit;
-    background-color: var(--bg-2);
+    background-color: var(--bg-1);
     position: absolute;
     inset-inline-start: 0;
     top: 50%;
