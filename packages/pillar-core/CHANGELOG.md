@@ -1,5 +1,13 @@
 # @pillar/core
 
+## 0.8.1
+
+### Patch Changes
+
+- # please imporve this release message
+
+  We've refined the Pillar Core UI design to provide a more visually appealing and user-friendly experience.
+
 ## 0.8.0
 
 ### Minor Changes
