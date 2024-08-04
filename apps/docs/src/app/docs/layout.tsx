@@ -2,11 +2,10 @@ import { ReactNode } from 'react'
 import { MenuBar } from '../_components'
 import { getAll } from '~/api/docs'
 
-interface DocsLayoutProps {
+interface LayoutProps {
   children: ReactNode
-  headings: any
 }
-const Layout = ({ children }: DocsLayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   const data = getAll()
   return (
     <div className="docs--section">
