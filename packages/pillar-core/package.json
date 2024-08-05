@@ -15,7 +15,8 @@
   ],
   "files": [
     "dist/**",
-    "css/main.css"
+    "css/main.css",
+    "README.md"
   ],
   "repository": {
     "type": "git",

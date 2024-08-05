@@ -1,17 +1,22 @@
-# Pillar Core
+# Pillar Core: React Design System & Reusable UI Components
 
-Pillar Core is a collection of reusable UI components for modern web development. These components follow best practices, are highly customizable, and promote a consistent user experience across applications.
+Pillar Core is a comprehensive React design system empowering developers to build beautiful, consistent, and high-performing user interfaces. Our meticulously crafted library of reusable UI components accelerates your modern web development projects, ensuring a seamless user experience across devices.
 
-## Features
+**## Why Choose Pillar Core?**
 
-- **Best Practices**: Components adhere to industry best practices, ensuring optimal performance, maintainability, and accessibility.
-- **Customizable**: Components are highly customizable, allowing you to adapt them to your application's unique visual and branding requirements.
-- **Responsive Design**: All components are designed to be responsive and work seamlessly across different screen sizes and devices.
-- **Consistent User Experience**: Pillar Core promotes a consistent user experience by providing a cohesive visual language and intuitive interactions.
-- **TypeScript Support**: Components are built with TypeScript, providing type safety and enhanced developer experience.
-- **Storybook Integration**: The components are fully compatible with Storybook, making it easy to explore and showcase their functionality.
+- **React-Centric Design:** Specifically designed for React applications, ensuring seamless integration and optimal performance.
+- **Industry Best Practices:** Components adhere to the latest React design patterns and accessibility standards (WCAG), guaranteeing a top-tier user experience.
+- **Customization:** Tailor components effortlessly to match your brand's unique visual identity and design requirements.
+- **Responsive Out of the Box:** Every component gracefully adapts to diverse screen sizes and devices, delivering a pixel-perfect experience everywhere.
+- **Consistent & Intuitive UX:** Pillar Core fosters a cohesive user experience through a unified design language and intuitive interactions.
+- **TypeScript for Type Safety:** Built with TypeScript, ensuring robust type safety and a smooth, predictable development process.
+- **Storybook Showcase:** Explore and interact with live component examples in the interactive Storybook environment.
+- **Theming & Customization Power:** Easily create custom themes and modify colors, typography, and spacing to align with your brand.
+- **Dark Mode & RTL Support:** Out-of-the-box support for dark mode and right-to-left (RTL) languages enhances accessibility for all users.
 
-## Installation
+## Getting Started
+
+### Installation
 
 To start using Pillar Core in your project, follow these simple steps:
 
@@ -32,7 +37,7 @@ Or Yarn
 yarn add @pillar-ui/core
 ```
 
-## Adding Styles
+### Adding Styles
 
 To enhance the appearance and maintain visual consistency of your application using Pillar components, follow these steps to add the necessary styles. Pillar provides a CSS file that not only enhances the styling but also introduces additional features such as dark mode support and right-to-left (RTL) language support.
 
@@ -48,7 +53,7 @@ import '@pillar-ui/core/main.css'
 
 This import statement ensures that the necessary styles are applied to the Pillar components used in your application.
 
-## Customizing Theming
+### Customizing Theming
 
 With Pillar UI, you can easily customize the appearance of your user interface (UI) to match your preferences. By modifying the predefined custom properties, you can control colors, typography, spacing, and more.
 
@@ -56,7 +61,7 @@ To change the primary color of your UI, follow these simple steps:
 
 1. Create a file named theme.css or any other preferred name.
 
-1. Inside theme.css, define the desired primary color using the --pri-color custom property. For example:
+1. Inside theme.css, define the desired primary color using the `--pri-color` custom property. For example:
 
 ```css
 :root {
@@ -89,14 +94,6 @@ Pillar Core enhances your development experience (DX) with simple workflows for 
 
 Refer to the Pillar Core documentation for more details on utilizing the responsive variables, predefined styles, and customizations available.
 
-## Get Ready
-
-Once you have customized your Pillar Core theme and set the desired variables, you are ready to import the necessary components, icons, utilities, or hooks and start developing your application.
-
-```tsx
-import { Button } from '@pillar-ui/core'
-```
-
 ## Contributing
 
 We welcome contributions to Pillar Core! Whether you want to report issues, suggest new features, or submit pull requests, please refer to our Contributing Guidelines for more information.
@@ -105,24 +102,18 @@ We welcome contributions to Pillar Core! Whether you want to report issues, sugg
 
 We are constantly working to improve Pillar-ui and add new features to the library. Our roadmap includes plans to improve accessibility, add new components, and improve the documentation. We welcome feedback and suggestions from the community and encourage you to get involved in the development process.
 
-## Sponsor Pillar-ui
+## Support Pillar-ui – We Appreciate Your Help
 
-If you find Pillar-ui useful and want to support its development and maintenance, you can consider sponsoring the project. Your sponsorship will help cover the costs of development, testing, documentation, and community support. It will also help us allocate more time and resources to improving and expanding the library.
+If you find Pillar-ui valuable and would like to help ensure its continued development and maintenance, we'd be honored if you would consider sponsoring the project. Your generous support would help cover the costs of ongoing development, testing, documentation, and community engagement. It would also enable us to dedicate more time and resources to making Pillar-ui even better and more versatile.
 
-You can sponsor the project on GitHub Sponsors. GitHub Sponsors is a platform that enables you to support open source projects and contributors. You can choose to sponsor us monthly or with a one-time donation. Your sponsorship will be publicly recognized on our GitHub repository and website.
+You can easily become a sponsor through GitHub Sponsors. This platform allows you to directly support open source projects and their contributors. You can choose to sponsor us on a monthly basis or with a one-time contribution. We'll be sure to acknowledge your sponsorship on our GitHub repository and website.
 
-Alternatively, you can also support the project by contributing code, reporting issues, and spreading the word about it. Every little bit helps and we appreciate all contributions, big and small.
+Of course, there are other wonderful ways to contribute! We always welcome code contributions, issue reports, and spreading the word about Pillar-ui. We value all contributions, no matter how big or small.
 
-Thank you for considering sponsoring Pillar-ui!
+We are deeply grateful for your consideration and support. If you'd prefer to make a one-time donation, you can also support us through Ko-fi. Thank you for being a part of the Pillar-ui community!
 
-## Let Us Know
-
-If you have any questions, feedback, or need assistance with Pillar Utils, feel free to open a discussion on our GitHub page. We are committed to providing fast and helpful responses to ensure your success with the library.
-
-You can visit the [Pillar Utils GitHub Discussions page]: https://github.com/HamzaAmar/pillar-ui/discussions to start a new discussion or join existing ones. We are here to support you and provide answers as quickly as possible.
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y210RGNC)
 
 ## License
 
 Pillar Core is released under the MIT License.
-
-Feel free to customize the readme file further with specific links to your documentation, contributing guidelines, and any other relevant information for the users of the Pillar Core package.

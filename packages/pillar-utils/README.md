@@ -1,6 +1,6 @@
 # Pillar Utils
 
-Pillar Utils is a collection of utility functions and tools designed to assist with common tasks and improve the efficiency of web development. These utilities are carefully crafted to enhance productivity and streamline the development process, allowing you to write clean, concise, and optimized code.
+Pillar Utils is a comprehensive Typescript and React utility library designed to supercharge web development workflows. This meticulously crafted collection of functions and tools simplifies common tasks, optimizes code efficiency, and enhances developer productivity. Whether you're building complex React applications or simple websites, Pillar Utils provides a robust set of utilities to streamline your development process and elevate your codebase.
 
 ## Features
 
@@ -50,10 +50,20 @@ We welcome contributions to Pillar Utils! If you have any ideas for new utility 
 
 If you have any questions, feedback, or need assistance with Pillar Utils, feel free to open a discussion on our GitHub page. We are committed to providing fast and helpful responses to ensure your success with the library.
 
-You can visit the [Pillar Utils GitHub Discussions page]: https://github.com/HamzaAmar/pillar-ui/discussions to start a new discussion or join existing ones. We are here to support you and provide answers as quickly as possible.
+You can visit the [Pillar Utils GitHub Discussions page](https://github.com/HamzaAmar/pillar-ui/discussions) to start a new discussion or join existing ones. We are here to support you and provide answers as quickly as possible.
+
+## Support Pillar-ui – We Appreciate Your Help
+
+If you find Pillar-ui valuable and would like to help ensure its continued development and maintenance, we'd be honored if you would consider sponsoring the project. Your generous support would help cover the costs of ongoing development, testing, documentation, and community engagement. It would also enable us to dedicate more time and resources to making Pillar-ui even better and more versatile.
+
+You can easily become a sponsor through GitHub Sponsors. This platform allows you to directly support open source projects and their contributors. You can choose to sponsor us on a monthly basis or with a one-time contribution. We'll be sure to acknowledge your sponsorship on our GitHub repository and website.
+
+Of course, there are other wonderful ways to contribute! We always welcome code contributions, issue reports, and spreading the word about Pillar-ui. We value all contributions, no matter how big or small.
+
+We are deeply grateful for your consideration and support. If you'd prefer to make a one-time donation, you can also support us through Ko-fi. Thank you for being a part of the Pillar-ui community!
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y210RGNC)
 
 ## License
 
 Pillar Utils is released under the MIT License.
-
-Feel free to customize the readme file further with specific links to your documentation, contributing guidelines, and any other relevant information for the users of the Pillar Utils package.
