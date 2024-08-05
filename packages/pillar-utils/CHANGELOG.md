@@ -1,5 +1,14 @@
 # @pillar/utils
 
+## 0.7.1
+
+### Patch Changes
+
+- # This release includes the following improvements:
+
+  - **Color Class Optimization:** The color class and variant definitions have been refactored to use only the 3 digits of each color. This optimization reduces the overall size of the stylesheets, improving page load times and user experience.
+  - **README Enhancement:** The README files have been updated to provide clearer instructions and more detailed information.
+
 ## 0.7.0
 
 ### Minor Changes
