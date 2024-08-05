@@ -17,7 +17,6 @@ export async function generateStaticParams() {
 
 export default function Blog({ params }: SlugParamsProps) {
   const util = getUtilBySlug(params.slug)
-  console.log('this is the value of the util', util)
   if (!util) notFound()
   const { content, headings, ...rest } = util
 

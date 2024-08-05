@@ -45,7 +45,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
       <Flex gap="sm" wrap>
         <Button
           as="a"
-          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
+          href={`https://github.com/HamzaAmar/pillar-ui/b/main/packages/${root}/${directory}`}
           target="_blank"
           color="bg"
           icon={<Github strokeWidth={2} />}

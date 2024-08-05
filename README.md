@@ -119,7 +119,8 @@ When issues are reported, they are triaged by the Pillar-ui team to ensure that 
 
 Pull requests are welcome and should follow the guidelines outlined in the CONTRIBUTING.md file. Once a pull request is submitted, it is reviewed by the Pillar-ui team, who will provide feedback and suggest any necessary changes. Once the pull request is approved, it will be merged into the main branch and included in the next release.
 
-Releases
+## Releases
+
 Pillar-ui releases are managed using Semantic Versioning. When a new release is ready, the team will create a release branch and begin the process of testing and preparing the release. Once the release has been thoroughly tested and is ready for deployment, it will be merged into the main branch and published to NPM.
 
 ## Roadmap
@@ -133,6 +134,8 @@ If you find Pillar-ui useful and want to support its development and maintenance
 You can sponsor the project on GitHub Sponsors. GitHub Sponsors is a platform that enables you to support open source projects and contributors. You can choose to sponsor us monthly or with a one-time donation. Your sponsorship will be publicly recognized on our GitHub repository and website.
 
 Alternatively, you can also support the project by contributing code, reporting issues, and spreading the word about it. Every little bit helps and we appreciate all contributions, big and small.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y210RGNC)
 
 Thank you for considering sponsoring Pillar-ui!
 

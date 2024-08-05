@@ -87,17 +87,17 @@ export const AvatarCorners = () => {
         <Avatar corner="lg" title="Hello" />
         <Avatar corner="xl" title="Hello" />
         <Avatar corner="full" title="Hello" />
-        <Avatar corner="blob-1" title="Hello" />
-        <Avatar corner="blob-2" title="Hello" />
-        <Avatar corner="blob-3" title="Hello" />
-        <Avatar corner="blob-4" title="Hello" />
-        <Avatar corner="blob-5" title="Hello" />
-        <Avatar corner="hand-1" title="Hello" />
-        <Avatar corner="hand-2" title="Hello" />
-        <Avatar corner="hand-3" title="Hello" />
-        <Avatar corner="hand-4" title="Hello" />
-        <Avatar corner="hand-5" title="Hello" />
-        <Avatar corner="hand-6" title="Hello" />
+        <Avatar corner="b-1" title="Hello" />
+        <Avatar corner="b-2" title="Hello" />
+        <Avatar corner="b-3" title="Hello" />
+        <Avatar corner="b-4" title="Hello" />
+        <Avatar corner="b-5" title="Hello" />
+        <Avatar corner="h-1" title="Hello" />
+        <Avatar corner="h-2" title="Hello" />
+        <Avatar corner="h-3" title="Hello" />
+        <Avatar corner="h-4" title="Hello" />
+        <Avatar corner="h-5" title="Hello" />
+        <Avatar corner="h-6" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
         <Avatar corner="sharp" image={image} title="Hello" />
@@ -107,17 +107,17 @@ export const AvatarCorners = () => {
         <Avatar corner="lg" image={image} title="Hello" />
         <Avatar corner="xl" image={image} title="Hello" />
         <Avatar corner="full" image={image} title="Hello" />
-        <Avatar corner="blob-1" image={image} title="Hello" />
-        <Avatar corner="blob-2" image={image} title="Hello" />
-        <Avatar corner="blob-3" image={image} title="Hello" />
-        <Avatar corner="blob-4" image={image} title="Hello" />
-        <Avatar corner="blob-5" image={image} title="Hello" />
-        <Avatar corner="hand-1" image={image} title="Hello" />
-        <Avatar corner="hand-2" image={image} title="Hello" />
-        <Avatar corner="hand-3" image={image} title="Hello" />
-        <Avatar corner="hand-4" image={image} title="Hello" />
-        <Avatar corner="hand-5" image={image} title="Hello" />
-        <Avatar corner="hand-6" image={image} title="Hello" />
+        <Avatar corner="b-1" image={image} title="Hello" />
+        <Avatar corner="b-2" image={image} title="Hello" />
+        <Avatar corner="b-3" image={image} title="Hello" />
+        <Avatar corner="b-4" image={image} title="Hello" />
+        <Avatar corner="b-5" image={image} title="Hello" />
+        <Avatar corner="h-1" image={image} title="Hello" />
+        <Avatar corner="h-2" image={image} title="Hello" />
+        <Avatar corner="h-3" image={image} title="Hello" />
+        <Avatar corner="h-4" image={image} title="Hello" />
+        <Avatar corner="h-5" image={image} title="Hello" />
+        <Avatar corner="h-6" image={image} title="Hello" />
       </Flex>
     </Paper>
   )

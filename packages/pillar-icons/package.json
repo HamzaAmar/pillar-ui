@@ -24,6 +24,7 @@
     "url": "https://github.com/HamzaAmar/pillar-ui",
     "directory": "packages/pillar-icons"
   },
+  "homepage": "https://www.pillar-ui.com/",
   "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

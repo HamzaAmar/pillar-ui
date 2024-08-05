@@ -25,6 +25,7 @@
     "url": "https://github.com/HamzaAmar/pillar-ui",
     "directory": "packages/pillar-utils"
   },
+  "homepage": "https://www.pillar-ui.com/",
   "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
   "author": {
     "name": "Hamza Miloud Amar",

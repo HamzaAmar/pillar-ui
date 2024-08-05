@@ -105,9 +105,7 @@ export function getTutorials() {
 }
 
 export function getTutorialBySlug(s: string) {
-  const a = getTutorials().find(({ slug }) => slug === s)
-  console.log('this is the value of tutorial', a, 'and this is the value of slug', s)
-  return a
+  return getTutorials().find(({ slug }) => slug === s)
 }
 
 export function getFeatures() {

@@ -26,6 +26,7 @@
     "url": "https://github.com/HamzaAmar/pillar-ui",
     "directory": "packages/pillar-hooks"
   },
+  "homepage": "https://www.pillar-ui.com/",
   "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
   "exports": {
     ".": {
