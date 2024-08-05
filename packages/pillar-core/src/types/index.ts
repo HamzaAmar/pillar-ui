@@ -7,7 +7,7 @@ type Size = '3xs' | '2xs' | CommonSize | '2xl' | '3xl'
  * @typedef {Size} Size
  */
 
-type Color = 'info' | 'danger' | 'success' | 'secondary' | 'warning' | 'primary' | 'bg' | 'opacity' | undefined
+type Color = 'inf' | 'dan' | 'suc' | 'sec' | 'war' | 'pri' | 'bg' | 'opa' | undefined
 
 /**
  * Represents the color of a component.

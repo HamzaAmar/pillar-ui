@@ -138,15 +138,15 @@ export const SizeSelect = () => {
 export const ColorSelect = () => {
   return (
     <Flex gap="sm" direction="column">
-      <Select color="primary" variant="bordered" autoFocus>
+      <Select color="pri" variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select color="warning" variant="bordered" autoFocus>
+      <Select color="war" variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select color="secondary" variant="outline" autoFocus>
+      <Select color="sec" variant="outline" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
@@ -154,11 +154,11 @@ export const ColorSelect = () => {
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select color="success" variant="bordered" autoFocus>
+      <Select color="suc" variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select color="danger" variant="bordered" autoFocus>
+      <Select color="dan" variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>

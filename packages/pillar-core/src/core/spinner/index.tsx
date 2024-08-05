@@ -2,7 +2,7 @@ import { CSSProperties } from 'react'
 import { classnames } from '@pillar-ui/utils'
 import { SpinnerProps } from './spinner.type'
 
-export const Spinner = ({ color = 'primary', size, thickness = '2px', invert = false, ...rest }: SpinnerProps) => {
+export const Spinner = ({ color = 'pri', size, thickness = '2px', invert = false, ...rest }: SpinnerProps) => {
   const className = classnames(`s-p u_${color}`, {
     [`u_${color}`]: !!color,
     ['s-p-invert']: invert,

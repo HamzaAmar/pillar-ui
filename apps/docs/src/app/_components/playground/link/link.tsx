@@ -102,29 +102,29 @@ export const LinkAlign = () => {
 export const LinkColors = () => {
   return (
     <Paper as={Flex} direction="column" items="center" border p="sm" flow="sm" background="bg-3" corner="sm">
-      <Link color="danger">Hello World</Link>
-      <Link color="success">Hello World</Link>
-      <Link color="warning">Hello World</Link>
-      <Link color="primary">Hello World</Link>
+      <Link color="dan">Hello World</Link>
+      <Link color="suc">Hello World</Link>
+      <Link color="war">Hello World</Link>
+      <Link color="pri">Hello World</Link>
       <Link color="bg">Hello World</Link>
-      <Link color="secondary">Hello World</Link>
+      <Link color="sec">Hello World</Link>
 
-      <Link contrast="low" color="danger">
+      <Link contrast="low" color="dan">
         Hello World
       </Link>
-      <Link contrast="low" color="success">
+      <Link contrast="low" color="suc">
         Hello World
       </Link>
-      <Link contrast="low" color="warning">
+      <Link contrast="low" color="war">
         Hello World
       </Link>
-      <Link contrast="low" color="primary">
+      <Link contrast="low" color="pri">
         Hello World
       </Link>
       <Link contrast="low" color="bg">
         Hello World
       </Link>
-      <Link contrast="low" color="secondary">
+      <Link contrast="low" color="sec">
         Hello World
       </Link>
     </Paper>

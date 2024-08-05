@@ -50,9 +50,9 @@ export const InputFileCorners = () => {
 export const InputFileColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
-      <InputFile color="primary" variant="bordered" autoFocus />
-      <InputFile color="warning" variant="bordered" autoFocus />
-      <InputFile color="secondary" variant="outline" autoFocus />
+      <InputFile color="pri" variant="bordered" autoFocus />
+      <InputFile color="war" variant="bordered" autoFocus />
+      <InputFile color="sec" variant="outline" autoFocus />
       <InputFile color="bg" variant="filled" autoFocus />
     </Paper>
   )

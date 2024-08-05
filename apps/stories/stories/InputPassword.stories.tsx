@@ -87,12 +87,12 @@ export const SizeInput = () => {
 export const ColorInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <InputPassword color="primary" variant="bordered" autoFocus placeholder="Focus" />
-      <InputPassword color="warning" variant="bordered" autoFocus placeholder="Normal" />
-      <InputPassword color="secondary" variant="outline" autoFocus placeholder="Disabled" />
+      <InputPassword color="pri" variant="bordered" autoFocus placeholder="Focus" />
+      <InputPassword color="war" variant="bordered" autoFocus placeholder="Normal" />
+      <InputPassword color="sec" variant="outline" autoFocus placeholder="Disabled" />
       <InputPassword color="bg" variant="filled" autoFocus placeholder="isInvalid" />
-      <InputPassword color="success" variant="bordered" autoFocus placeholder="Placeholder" />
-      <InputPassword color="danger" variant="bordered" autoFocus defaultValue="Default Value" />
+      <InputPassword color="suc" variant="bordered" autoFocus placeholder="Placeholder" />
+      <InputPassword color="dan" variant="bordered" autoFocus defaultValue="Default Value" />
     </Flex>
   )
 }
@@ -100,15 +100,10 @@ export const ColorInput = () => {
 export const InputPasswordCustomIcon = () => {
   return (
     <Flex gap="sm" direction="column">
+      <InputPassword placeholder="enter your password" color="pri" visibleIcon={<Lock />} hiddenIcon={<LockOff />} />
       <InputPassword
         placeholder="enter your password"
-        color="primary"
-        visibleIcon={<Lock />}
-        hiddenIcon={<LockOff />}
-      />
-      <InputPassword
-        placeholder="enter your password"
-        color="warning"
+        color="war"
         visibleIcon={<OpenSource />}
         hiddenIcon={<Close />}
       />
@@ -116,7 +111,7 @@ export const InputPasswordCustomIcon = () => {
       <FormController label="Hello world" hint="The password need to be between 5 and 15" error="Nice Error Here">
         <InputPassword
           placeholder="enter your password"
-          color="warning"
+          color="war"
           visibleIcon={<OpenSource />}
           hiddenIcon={<Close />}
         />

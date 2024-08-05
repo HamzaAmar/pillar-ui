@@ -12,20 +12,20 @@ export function ButtonColors() {
   return (
     <Paper className="playground" border flow="md" p="sm" background="bg-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
-        <Button color="danger">Hello World</Button>
-        <Button color="warning">Hello World</Button>
-        <Button color="success">Hello World</Button>
-        <Button color="primary">Hello World</Button>
-        <Button color="secondary">Hello World</Button>
+        <Button color="dan">Hello World</Button>
+        <Button color="war">Hello World</Button>
+        <Button color="suc">Hello World</Button>
+        <Button color="pri">Hello World</Button>
+        <Button color="sec">Hello World</Button>
         <Button color="bg">Hello World</Button>
       </Flex>
 
       <Flex gap="sm" items="center" wrap>
-        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="danger" />
-        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="warning" />
-        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="success" />
-        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="primary" />
-        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="secondary" />
+        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="dan" />
+        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="war" />
+        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="suc" />
+        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="pri" />
+        <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="sec" />
         <IconButton title="hello" variant="solid" icon={<ZoomPlus />} color="bg" />
       </Flex>
     </Paper>
@@ -90,22 +90,22 @@ export function ButtonVariants() {
     <Paper className="playground" flow="xl" p="sm" background="bg-3" corner="sm">
       {VARIANTS.map((variant) => (
         <Flex key={variant} gap="sm">
-          <Button color="success" variant={variant}>
+          <Button color="suc" variant={variant}>
             Green
           </Button>
-          <Button color="warning" variant={variant}>
+          <Button color="war" variant={variant}>
             Orange
           </Button>
-          <Button color="danger" variant={variant}>
+          <Button color="dan" variant={variant}>
             Red
           </Button>
-          <Button color="secondary" variant={variant}>
+          <Button color="sec" variant={variant}>
             Secondary
           </Button>
           <Button color="bg" variant={variant}>
             bg
           </Button>
-          <Button color="primary" variant={variant}>
+          <Button color="pri" variant={variant}>
             Primary
           </Button>
         </Flex>
@@ -157,19 +157,19 @@ export function ButtonIconPosition() {
 export function ButtonFluid() {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
-      <Button fluid color="danger">
+      <Button fluid color="dan">
         Hello World
       </Button>
-      <Button fluid color="warning">
+      <Button fluid color="war">
         Hello World
       </Button>
-      <Button fluid color="success">
+      <Button fluid color="suc">
         Hello World
       </Button>
-      <Button fluid color="primary">
+      <Button fluid color="pri">
         Hello World
       </Button>
-      <Button fluid color="secondary">
+      <Button fluid color="sec">
         Hello World
       </Button>
       <Button fluid color="bg">
@@ -182,13 +182,13 @@ export function ButtonFluid() {
 export function ButtonsState() {
   return (
     <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="bg-3" corner="sm">
-      <Button state="idle" color="success">
+      <Button state="idle" color="suc">
         Idle
       </Button>
-      <Button state="loading" color="success">
+      <Button state="loading" color="suc">
         Loading
       </Button>
-      <Button disabled color="success">
+      <Button disabled color="suc">
         Disabled
       </Button>
     </Paper>
@@ -198,7 +198,7 @@ export function ButtonsState() {
 export function ButtonsCustomStyle() {
   return (
     <Paper className="playground" as={Flex} items="center" gap="sm" border p="sm" background="bg-3" corner="sm">
-      <Button style={{ background: 'orange' }} state="idle" color="success">
+      <Button style={{ background: 'orange' }} state="idle" color="suc">
         Hello world
       </Button>
       <Button className="u_secondary">Hello world</Button>

@@ -1,10 +1,10 @@
 :is(.b-u, .s-w):focus-visible,
 :is(.r-a_cnt, .c-h_cnt, .b-r_itm, .step--button):focus-within {
-  outline: 2px dashed var(--clr-9, var(--pri-9));
+  outline: 2px dashed var(--c-9, var(--pri-9));
   outline-offset: 2px;
 }
 
 :is(.step--button, .a-c_btn, .fi-p-btn):focus-visible {
-  outline: 2px dashed var(--clr-9, var(--pri-9));
+  outline: 2px dashed var(--c-9, var(--pri-9));
   outline-offset: -2px;
 }

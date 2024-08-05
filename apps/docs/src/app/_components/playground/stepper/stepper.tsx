@@ -62,9 +62,9 @@ export const StepperPlayGround = () => {
 export const StepperColors = () => {
   return (
     <Paper className="playground" flow="sm" border p="sm" background="bg-3" corner="sm">
-      <StepperBase color="primary" completeComponent={<CompleteComponent />} />
-      <StepperBase color="secondary" completeComponent={<CompleteComponent />} />
-      <StepperBase color="danger" completeComponent={<CompleteComponent />} />
+      <StepperBase color="pri" completeComponent={<CompleteComponent />} />
+      <StepperBase color="sec" completeComponent={<CompleteComponent />} />
+      <StepperBase color="dan" completeComponent={<CompleteComponent />} />
     </Paper>
   )
 }

@@ -7,12 +7,12 @@ import { useCheckboxGroup } from '~/hooks/pillar'
 export const CheckboxPlayGround = () => {
   return (
     <Paper className="playground" as={Flex} wrap gap="sm" border p="sm" background="bg-3" corner="sm" items="center">
-      <Avatar title="Success!" color="danger" />
-      <Avatar title="Success!" color="warning" />
-      <Avatar title="Success!" color="success" />
-      <Avatar title="Success!" color="primary" />
+      <Avatar title="Success!" color="dan" />
+      <Avatar title="Success!" color="war" />
+      <Avatar title="Success!" color="suc" />
+      <Avatar title="Success!" color="pri" />
       <Avatar title="Success!" color="bg" />
-      <Avatar title="Success!" color="secondary" />
+      <Avatar title="Success!" color="sec" />
     </Paper>
   )
 }
@@ -43,19 +43,19 @@ export const CheckboxDisabled = () => {
   return (
     <Paper className="playground" border p="sm" background="bg-3" flow="sm" corner="sm">
       <Flex gap="sm" items="center">
-        <Checkbox disabled name="hello" label="Hello" color="danger" />
-        <Checkbox disabled name="hello" label="Hello" color="success" />
-        <Checkbox disabled name="hello" label="Hello" color="warning" />
-        <Checkbox disabled name="hello" label="Hello" color="primary" />
-        <Checkbox disabled name="hello" label="Hello" color="secondary" />
+        <Checkbox disabled name="hello" label="Hello" color="dan" />
+        <Checkbox disabled name="hello" label="Hello" color="suc" />
+        <Checkbox disabled name="hello" label="Hello" color="war" />
+        <Checkbox disabled name="hello" label="Hello" color="pri" />
+        <Checkbox disabled name="hello" label="Hello" color="sec" />
         <Checkbox disabled name="hello" label="Hello" color="bg" />
       </Flex>
       <Flex gap="sm" items="center">
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="danger" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="success" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="warning" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="primary" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="secondary" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="dan" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="suc" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="war" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="pri" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="sec" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="bg" />
       </Flex>
     </Paper>
@@ -65,11 +65,11 @@ export const CheckboxDisabled = () => {
 export const CheckboxDefaultCheck = () => {
   return (
     <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
-      <Checkbox defaultChecked name="hello" label="Hello" color="danger" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="success" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="warning" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="primary" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="secondary" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="dan" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="suc" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="war" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="pri" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="sec" />
       <Checkbox defaultChecked name="hello" label="Hello" color="bg" />
     </Paper>
   )
@@ -79,11 +79,11 @@ export const CheckboxColors = () => {
   return (
     <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
       <Checkbox name="hello" label="Options 1" />
-      <Checkbox name="hello" label="Options 2" color="danger" />
-      <Checkbox name="hello" label="Options 3" color="success" />
-      <Checkbox name="hello" label="Options 4" color="warning" />
-      <Checkbox name="hello" label="Options 5" color="primary" />
-      <Checkbox name="hello" label="Options 6" color="secondary" />
+      <Checkbox name="hello" label="Options 2" color="dan" />
+      <Checkbox name="hello" label="Options 3" color="suc" />
+      <Checkbox name="hello" label="Options 4" color="war" />
+      <Checkbox name="hello" label="Options 5" color="pri" />
+      <Checkbox name="hello" label="Options 6" color="sec" />
       <Checkbox name="hello" label="Options 7" color="bg" />
     </Paper>
   )

@@ -5,12 +5,12 @@ import React from 'react'
 export const ChipsPlayGround = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="bg-3" corner="sm" items="center">
-      <Avatar title="Success!" color="danger" />
-      <Avatar title="Success!" color="warning" />
-      <Avatar title="Success!" color="success" />
-      <Avatar title="Success!" color="primary" />
+      <Avatar title="Success!" color="dan" />
+      <Avatar title="Success!" color="war" />
+      <Avatar title="Success!" color="suc" />
+      <Avatar title="Success!" color="pri" />
       <Avatar title="Success!" color="bg" />
-      <Avatar title="Success!" color="secondary" />
+      <Avatar title="Success!" color="sec" />
     </Paper>
   )
 }
@@ -35,20 +35,20 @@ export const ChipsVariants = () => {
     <Paper as={Flex} direction="column" gap="xl" p="sm" background="bg-2" corner="sm">
       {VARIANTS.map((variant) => (
         <Flex key={variant} gap="xs">
-          <Chips color="danger" variant={variant}>
+          <Chips color="dan" variant={variant}>
             Hello
           </Chips>
-          <Chips color="warning" variant={variant}>
+          <Chips color="war" variant={variant}>
             Hello
           </Chips>
-          <Chips color="success" variant={variant}>
+          <Chips color="suc" variant={variant}>
             Hello
           </Chips>
 
-          <Chips color="primary" variant={variant}>
+          <Chips color="pri" variant={variant}>
             Hello
           </Chips>
-          <Chips color="secondary" variant={variant}>
+          <Chips color="sec" variant={variant}>
             Hello
           </Chips>
           <Chips color="bg" variant={variant}>
@@ -125,11 +125,11 @@ export const ChipsCorners = () => {
 export const ChipsColors = () => {
   return (
     <Paper as={Flex} items="center" border p="sm" gap="sm" background="bg-3" corner="sm">
-      <Chips color="danger">Hello</Chips>
-      <Chips color="success">Hello</Chips>
-      <Chips color="warning">Hello</Chips>
-      <Chips color="primary">Hello</Chips>
-      <Chips color="secondary">Hello</Chips>
+      <Chips color="dan">Hello</Chips>
+      <Chips color="suc">Hello</Chips>
+      <Chips color="war">Hello</Chips>
+      <Chips color="pri">Hello</Chips>
+      <Chips color="sec">Hello</Chips>
       <Chips color="bg">Hello</Chips>
     </Paper>
   )

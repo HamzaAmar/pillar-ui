@@ -26,7 +26,7 @@
   flex: none;
 
   &:hover {
-    border-color: var(--clr-9);
+    border-color: var(--c-9);
   }
 }
 
@@ -37,17 +37,17 @@
     }
 
     & + .rc__solid {
-      outline: 0.45em var(--clr-9) solid;
+      outline: 0.45em var(--c-9) solid;
       outline-offset: -0.45em;
     }
     & + .rc__outline {
-      outline: 0.35em var(--clr-9) solid;
-      border-color: var(--clr-9);
+      outline: 0.35em var(--c-9) solid;
+      border-color: var(--c-9);
     }
     & + .rc__soft {
-      outline: 0.35em var(--clr-11) solid;
-      border-color: var(--clr-5);
-      background: var(--clr-5);
+      outline: 0.35em var(--c-11) solid;
+      border-color: var(--c-5);
+      background: var(--c-5);
     }
   }
 

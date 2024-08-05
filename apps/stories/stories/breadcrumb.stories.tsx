@@ -53,7 +53,7 @@ export function BreadcrumbSeparator() {
 export function BreadcrumbColor() {
   return (
     <div className="l_flow__md">
-      <Breadcrumb color="danger">
+      <Breadcrumb color="dan">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -61,7 +61,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="warning">
+      <Breadcrumb color="war">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -69,7 +69,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="success">
+      <Breadcrumb color="suc">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -77,7 +77,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="secondary">
+      <Breadcrumb color="sec">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -85,7 +85,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="primary">
+      <Breadcrumb color="pri">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>

@@ -82,11 +82,11 @@ export const TimelineColors = () => {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
       <TimelineBase color="bg" />
-      <TimelineBase color="secondary" />
-      <TimelineBase color="primary" />
-      <TimelineBase color="success" />
-      <TimelineBase color="danger" />
-      <TimelineBase color="warning" />
+      <TimelineBase color="sec" />
+      <TimelineBase color="pri" />
+      <TimelineBase color="suc" />
+      <TimelineBase color="dan" />
+      <TimelineBase color="war" />
     </Paper>
   )
 }

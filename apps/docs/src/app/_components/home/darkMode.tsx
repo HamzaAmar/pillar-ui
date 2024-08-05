@@ -7,7 +7,7 @@ export function DarkMode() {
       <div className="l_flow__lg">
         <div className="l_flow__md">
           <div className="l_flow__2xs">
-            <Text size="lg" color="primary" contrast="low">
+            <Text size="lg" color="pri" contrast="low">
               Subtle, Soothing, Smart
             </Text>
             <Heading className="highlight" size="3xl" transform="uppercase" as="h2">

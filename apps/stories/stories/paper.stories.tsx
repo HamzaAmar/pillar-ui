@@ -17,12 +17,12 @@ export function PaperBackground() {
   return (
     <div className="l_flow__md">
       <Paper>Hello</Paper>
-      <Paper background="danger">Hello</Paper>
-      <Paper background="danger-8">Hello</Paper>
-      <Paper background="warning">Hello</Paper>
-      <Paper background="success">Hello</Paper>
-      <Paper background="secondary">Hello</Paper>
-      <Paper background="primary">Hello</Paper>
+      <Paper background="dan">Hello</Paper>
+      <Paper background="dan-8">Hello</Paper>
+      <Paper background="war">Hello</Paper>
+      <Paper background="suc">Hello</Paper>
+      <Paper background="sec">Hello</Paper>
+      <Paper background="pri">Hello</Paper>
       <Paper background="bg">Hello</Paper>
       <Paper background="bg">Hello</Paper>
     </div>
@@ -43,22 +43,22 @@ export function PaperBorder() {
 export function PaperPadding() {
   return (
     <div className="l_flow__md">
-      <Paper p="2xs" background="danger">
+      <Paper p="2xs" background="dan">
         Hello
       </Paper>
-      <Paper p="xs" background="warning">
+      <Paper p="xs" background="war">
         Hello
       </Paper>
-      <Paper p="sm" background="success">
+      <Paper p="sm" background="suc">
         Hello
       </Paper>
       <Paper p="md" background="bg">
         Hello
       </Paper>
-      <Paper p="xl" background="secondary">
+      <Paper p="xl" background="sec">
         Hello
       </Paper>
-      <Paper p="2xl" background="primary">
+      <Paper p="2xl" background="pri">
         Hello
       </Paper>
     </div>
@@ -123,22 +123,22 @@ export function PaperShadow() {
 export function PaperColors() {
   return (
     <div className="l_flow__md">
-      <Paper p="sm" background="bg-4" color="danger-11">
+      <Paper p="sm" background="bg-4" color="dan-11">
         Hello
       </Paper>
-      <Paper p="sm" background="bg-4" color="success-11">
+      <Paper p="sm" background="bg-4" color="suc-11">
         Hello
       </Paper>
-      <Paper p="sm" background="bg-4" color="warning-11">
+      <Paper p="sm" background="bg-4" color="war-11">
         Hello
       </Paper>
-      <Paper p="sm" background="bg-4" color="secondary-11">
+      <Paper p="sm" background="bg-4" color="sec-11">
         Hello
       </Paper>
       <Paper p="sm" background="bg-4" color="bg-11">
         Hello
       </Paper>
-      <Paper p="sm" background="bg-4" color="primary-11">
+      <Paper p="sm" background="bg-4" color="pri-11">
         Hello
       </Paper>
     </div>
@@ -148,34 +148,34 @@ export function PaperColors() {
 export function PaperWidths() {
   return (
     <div className="l_flow__md">
-      <Paper background="danger-4" color="danger">
+      <Paper background="dan-4" color="dan">
         Hello
       </Paper>
-      <Paper width="30-char" background="success-4" color="success">
+      <Paper width="30-char" background="suc-4" color="suc">
         Hello
       </Paper>
-      <Paper width="45-char" background="warning-4" color="warning">
+      <Paper width="45-char" background="war-4" color="war">
         Hello
       </Paper>
-      <Paper width="60-char" background="secondary-4" color="secondary">
+      <Paper width="60-char" background="sec-4" color="sec">
         Hello
       </Paper>
       <Paper width="75-char" background="bg-4" color="bg">
         Hello
       </Paper>
-      <Paper width="90-char" background="primary-4" color="primary">
+      <Paper width="90-char" background="pri-4" color="pri">
         Hello
       </Paper>
-      <Paper width="fit-content" background="primary-4" color="primary">
+      <Paper width="fit-content" background="pri-4" color="pri">
         Hello
       </Paper>
-      <Paper width="full" background="primary-4" color="primary">
+      <Paper width="full" background="pri-4" color="pri">
         Hello
       </Paper>
-      <Paper width="one-third" background="primary-4" color="primary">
+      <Paper width="one-third" background="pri-4" color="pri">
         Hello
       </Paper>
-      <Paper width="half" background="primary-4" color="primary">
+      <Paper width="half" background="pri-4" color="pri">
         Hello
       </Paper>
     </div>

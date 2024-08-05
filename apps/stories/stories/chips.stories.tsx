@@ -16,20 +16,20 @@ export const Playground = {}
 
 export const ChipsColor = () => (
   <Flex gap="xs">
-    <Chips color="danger" variant="solid">
+    <Chips color="dan" variant="solid">
       Hello
     </Chips>
-    <Chips color="warning" variant="solid">
+    <Chips color="war" variant="solid">
       Hello
     </Chips>
-    <Chips color="success" variant="solid">
+    <Chips color="suc" variant="solid">
       Hello
     </Chips>
 
-    <Chips color="primary" variant="solid">
+    <Chips color="pri" variant="solid">
       Hello
     </Chips>
-    <Chips color="secondary" variant="solid">
+    <Chips color="sec" variant="solid">
       Hello
     </Chips>
 
@@ -45,20 +45,20 @@ export const ChipsVariants = () => (
   <div className="l_flow__md">
     {VARIANTS.map((variant) => (
       <Flex key={variant} gap="xs">
-        <Chips color="danger" variant={variant}>
+        <Chips color="dan" variant={variant}>
           Hello
         </Chips>
-        <Chips color="warning" variant={variant}>
+        <Chips color="war" variant={variant}>
           Hello
         </Chips>
-        <Chips color="success" variant={variant}>
+        <Chips color="suc" variant={variant}>
           Hello
         </Chips>
 
-        <Chips color="primary" variant={variant}>
+        <Chips color="pri" variant={variant}>
           Hello
         </Chips>
-        <Chips color="secondary" variant={variant}>
+        <Chips color="sec" variant={variant}>
           Hello
         </Chips>
         <Chips color="bg" variant={variant}>

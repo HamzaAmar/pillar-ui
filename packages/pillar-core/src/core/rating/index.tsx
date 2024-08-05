@@ -11,7 +11,7 @@ const ICONS = {
 export const Rating = ({
   rating,
   hideTitle,
-  color = 'warning',
+  color = 'war',
   title = `${rating} star${rating > 1 && 's'} out of 5`,
   size,
   icon = 'star',
@@ -29,7 +29,7 @@ export const Rating = ({
             return (
               <path
                 key={index}
-                fill={rating > index ? 'var(--clr-9)' : 'transparent'}
+                fill={rating > index ? 'var(--c-9)' : 'transparent'}
                 className="r-t_path"
                 transform={`translate(${index * 24}, 0)`}
                 d={ICONS[icon]}

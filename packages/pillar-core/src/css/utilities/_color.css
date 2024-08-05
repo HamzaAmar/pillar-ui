@@ -1,104 +1,104 @@
-.u_primary {
-  --clr-1: var(--pri-1);
-  --clr-2: var(--pri-2);
-  --clr-3: var(--pri-3);
-  --clr-4: var(--pri-4);
-  --clr-5: var(--pri-5);
-  --clr-6: var(--pri-6);
-  --clr-7: var(--pri-7);
-  --clr-8: var(--pri-8);
-  --clr-9: var(--pri-9);
-  --clr-10: var(--pri-10);
-  --clr-11: var(--pri-11);
-  --clr-12: var(--pri-12);
+.u_pri {
+  --c-1: var(--pri-1);
+  --c-2: var(--pri-2);
+  --c-3: var(--pri-3);
+  --c-4: var(--pri-4);
+  --c-5: var(--pri-5);
+  --c-6: var(--pri-6);
+  --c-7: var(--pri-7);
+  --c-8: var(--pri-8);
+  --c-9: var(--pri-9);
+  --c-10: var(--pri-10);
+  --c-11: var(--pri-11);
+  --c-12: var(--pri-12);
 }
 
-.u_secondary {
-  --clr-1: var(--sec-1);
-  --clr-2: var(--sec-2);
-  --clr-3: var(--sec-3);
-  --clr-4: var(--sec-4);
-  --clr-5: var(--sec-5);
-  --clr-6: var(--sec-6);
-  --clr-7: var(--sec-7);
-  --clr-8: var(--sec-8);
-  --clr-9: var(--sec-9);
-  --clr-10: var(--sec-10);
-  --clr-11: var(--sec-11);
-  --clr-12: var(--sec-12);
+.u_sec {
+  --c-1: var(--sec-1);
+  --c-2: var(--sec-2);
+  --c-3: var(--sec-3);
+  --c-4: var(--sec-4);
+  --c-5: var(--sec-5);
+  --c-6: var(--sec-6);
+  --c-7: var(--sec-7);
+  --c-8: var(--sec-8);
+  --c-9: var(--sec-9);
+  --c-10: var(--sec-10);
+  --c-11: var(--sec-11);
+  --c-12: var(--sec-12);
 }
 
-.u_warning {
-  --clr-1: var(--war-1);
-  --clr-2: var(--war-2);
-  --clr-3: var(--war-3);
-  --clr-4: var(--war-4);
-  --clr-5: var(--war-5);
-  --clr-6: var(--war-6);
-  --clr-7: var(--war-7);
-  --clr-8: var(--war-8);
-  --clr-9: var(--war-9);
-  --clr-10: var(--war-10);
-  --clr-11: var(--war-11);
-  --clr-12: var(--war-12);
+.u_war {
+  --c-1: var(--war-1);
+  --c-2: var(--war-2);
+  --c-3: var(--war-3);
+  --c-4: var(--war-4);
+  --c-5: var(--war-5);
+  --c-6: var(--war-6);
+  --c-7: var(--war-7);
+  --c-8: var(--war-8);
+  --c-9: var(--war-9);
+  --c-10: var(--war-10);
+  --c-11: var(--war-11);
+  --c-12: var(--war-12);
 }
 
-.u_success {
-  --clr-1: var(--suc-1);
-  --clr-2: var(--suc-2);
-  --clr-3: var(--suc-3);
-  --clr-4: var(--suc-4);
-  --clr-5: var(--suc-5);
-  --clr-6: var(--suc-6);
-  --clr-7: var(--suc-7);
-  --clr-8: var(--suc-8);
-  --clr-9: var(--suc-9);
-  --clr-10: var(--suc-10);
-  --clr-11: var(--suc-11);
-  --clr-12: var(--suc-12);
+.u_suc {
+  --c-1: var(--suc-1);
+  --c-2: var(--suc-2);
+  --c-3: var(--suc-3);
+  --c-4: var(--suc-4);
+  --c-5: var(--suc-5);
+  --c-6: var(--suc-6);
+  --c-7: var(--suc-7);
+  --c-8: var(--suc-8);
+  --c-9: var(--suc-9);
+  --c-10: var(--suc-10);
+  --c-11: var(--suc-11);
+  --c-12: var(--suc-12);
 }
 
-.u_danger {
-  --clr-1: var(--dan-1);
-  --clr-2: var(--dan-2);
-  --clr-3: var(--dan-3);
-  --clr-4: var(--dan-4);
-  --clr-5: var(--dan-5);
-  --clr-6: var(--dan-6);
-  --clr-7: var(--dan-7);
-  --clr-8: var(--dan-8);
-  --clr-9: var(--dan-9);
-  --clr-10: var(--dan-10);
-  --clr-11: var(--dan-11);
-  --clr-12: var(--dan-12);
+.u_dan {
+  --c-1: var(--dan-1);
+  --c-2: var(--dan-2);
+  --c-3: var(--dan-3);
+  --c-4: var(--dan-4);
+  --c-5: var(--dan-5);
+  --c-6: var(--dan-6);
+  --c-7: var(--dan-7);
+  --c-8: var(--dan-8);
+  --c-9: var(--dan-9);
+  --c-10: var(--dan-10);
+  --c-11: var(--dan-11);
+  --c-12: var(--dan-12);
 }
 
-.u_info {
-  --clr-1: var(--inf-1);
-  --clr-2: var(--inf-2);
-  --clr-3: var(--inf-3);
-  --clr-4: var(--inf-4);
-  --clr-5: var(--inf-5);
-  --clr-6: var(--inf-6);
-  --clr-7: var(--inf-7);
-  --clr-8: var(--inf-8);
-  --clr-9: var(--inf-9);
-  --clr-10: var(--inf-10);
-  --clr-11: var(--inf-11);
-  --clr-12: var(--inf-12);
+.u_inf {
+  --c-1: var(--inf-1);
+  --c-2: var(--inf-2);
+  --c-3: var(--inf-3);
+  --c-4: var(--inf-4);
+  --c-5: var(--inf-5);
+  --c-6: var(--inf-6);
+  --c-7: var(--inf-7);
+  --c-8: var(--inf-8);
+  --c-9: var(--inf-9);
+  --c-10: var(--inf-10);
+  --c-11: var(--inf-11);
+  --c-12: var(--inf-12);
 }
 
 .u_bg {
-  --clr-1: var(--bg-1);
-  --clr-2: var(--bg-2);
-  --clr-3: var(--bg-3);
-  --clr-4: var(--bg-4);
-  --clr-5: var(--bg-5);
-  --clr-6: var(--bg-6);
-  --clr-7: var(--bg-7);
-  --clr-8: var(--bg-8);
-  --clr-9: var(--bg-9);
-  --clr-10: var(--bg-10);
-  --clr-11: var(--bg-11);
-  --clr-12: var(--bg-12);
+  --c-1: var(--bg-1);
+  --c-2: var(--bg-2);
+  --c-3: var(--bg-3);
+  --c-4: var(--bg-4);
+  --c-5: var(--bg-5);
+  --c-6: var(--bg-6);
+  --c-7: var(--bg-7);
+  --c-8: var(--bg-8);
+  --c-9: var(--bg-9);
+  --c-10: var(--bg-10);
+  --c-11: var(--bg-11);
+  --c-12: var(--bg-12);
 }

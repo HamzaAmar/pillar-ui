@@ -5,7 +5,7 @@ export function CustomTheme() {
     <Paper as={Flex} items="center" justify="center" flow="xl" className="section hello-world">
       <div className="l_flow__md">
         <div>
-          <Text size="lg" as="span" color="primary" contrast="low">
+          <Text size="lg" as="span" color="pri" contrast="low">
             Change Theme
           </Text>
           <Heading as="h2" size="3xl" transform="uppercase">

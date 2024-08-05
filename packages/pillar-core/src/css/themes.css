@@ -101,18 +101,19 @@
   --suc-11: var(--suc-l-11, #218358);
   --suc-12: var(--suc-l-12, #193b2d);
 
-  --inf-1: var(--inf-l-1, #210,);
-  --inf-2: var(--inf-l-2, #207,);
-  --inf-3: var(--inf-l-3, #205,);
-  --inf-4: var(--inf-l-4, #203,);
-  --inf-5: var(--inf-l-5, #206,);
-  --inf-6: var(--inf-l-6, #207,);
-  --inf-7: var(--inf-l-7, #207,);
-  --inf-8: var(--inf-l-8, #206,);
-  --inf-9: var(--inf-l-9, #206,);
-  --inf-10: var(--inf-l-10, #207,);
-  --inf-11: var(--inf-l-11, #208,);
-  --inf-12: var(--inf-l-12, #216,);
+  --inf-1: var(--inf-l-1, #fbfdff);
+  --inf-2: var(--inf-l-2, #f4faff);
+  --inf-3: var(--inf-l-3, #e6f4fe);
+  --inf-4: var(--inf-l-4, #d5efff);
+  --inf-5: var(--inf-l-5, #c2e5ff);
+  --inf-6: var(--inf-l-6, #acd8fc);
+  --inf-7: var(--inf-l-7, #8ec8f6);
+  --inf-8: var(--inf-l-8, #5eb1ef);
+  --inf-9: var(--inf-l-9, #0090ff);
+  --inf-10: var(--inf-l-10, #0588f0);
+  --inf-11: var(--inf-l-11, #0d74ce);
+  --inf-12: var(--inf-l-12, #113264);
+
   /*
    ------------------------------------------------------------------------------------------------------
     Spacing Theme Section
@@ -251,19 +252,6 @@
   --opa-11: var(--opa-d-11, #0deg);
   --opa-12: var(--opa-d-12, #0deg);
 
-  --opa-1: var(--opa-d-1, #ffffff00);
-  --opa-2: var(--opa-d-2, #ffffff03);
-  --opa-3: var(--opa-d-3, #ffffff08);
-  --opa-4: var(--opa-d-4, #ffffff0e);
-  --opa-5: var(--opa-d-5, #ffffff15);
-  --opa-6: var(--opa-d-6, #ffffff1f);
-  --opa-7: var(--opa-d-7, #ffffff2c);
-  --opa-8: var(--opa-d-8, #ffffff3f);
-  --opa-9: var(--opa-d-9, #ffffff61);
-  --opa-10: var(--opa-d-10, #ffffff70);
-  --opa-11: var(--opa-d-11, #ffffff97);
-  --opa-12: var(--opa-d-12, #ffffffe6);
-
   --dan-1: var(--dan-d-1, #191111);
   --dan-2: var(--dan-d-2, #201314);
   --dan-3: var(--dan-d-3, #3b1219);
@@ -316,16 +304,16 @@
   --war-11: var(--war-d-11, #ffa057);
   --war-12: var(--war-d-12, #ffe0c2);
 
-  --inf-1: var(--inf-d-1, #0d1520,);
-  --inf-2: var(--inf-d-2, #111927,);
-  --inf-3: var(--inf-d-3, #0d2847,);
-  --inf-4: var(--inf-d-4, #003362,);
-  --inf-5: var(--inf-d-5, #004074,);
-  --inf-6: var(--inf-d-6, #104d87,);
-  --inf-7: var(--inf-d-7, #205d9e,);
-  --inf-8: var(--inf-d-8, #2870bd,);
-  --inf-9: var(--inf-d-9, #0090ff,);
-  --inf-10: var(--inf-d-10, #3b9eff,);
-  --inf-11: var(--inf-d-11, #70b8ff,);
-  --inf-12: var(--inf-d-12, #c2e6ff,);
+  --inf-1: var(--inf-d-1, #0d1520);
+  --inf-2: var(--inf-d-2, #111927);
+  --inf-3: var(--inf-d-3, #0d2847);
+  --inf-4: var(--inf-d-4, #003362);
+  --inf-5: var(--inf-d-5, #004074);
+  --inf-6: var(--inf-d-6, #104d87);
+  --inf-7: var(--inf-d-7, #205d9e);
+  --inf-8: var(--inf-d-8, #2870bd);
+  --inf-9: var(--inf-d-9, #0090ff);
+  --inf-10: var(--inf-d-10, #3b9eff);
+  --inf-11: var(--inf-d-11, #70b8ff);
+  --inf-12: var(--inf-d-12, #c2e6ff);
 }

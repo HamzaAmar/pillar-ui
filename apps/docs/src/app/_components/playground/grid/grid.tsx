@@ -22,12 +22,12 @@ const boxes = Array.from({ length: 5 }, (_, index) => (
 export const GridPlayGround = () => {
   return (
     <Paper className="playground" border p="sm" background="bg-3" corner="sm">
-      <Avatar title="Success!" color="danger" />
-      <Avatar title="Success!" color="warning" />
-      <Avatar title="Success!" color="success" />
-      <Avatar title="Success!" color="primary" />
+      <Avatar title="Success!" color="dan" />
+      <Avatar title="Success!" color="war" />
+      <Avatar title="Success!" color="suc" />
+      <Avatar title="Success!" color="pri" />
       <Avatar title="Success!" color="bg" />
-      <Avatar title="Success!" color="secondary" />
+      <Avatar title="Success!" color="sec" />
     </Paper>
   )
 }

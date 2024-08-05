@@ -13,8 +13,11 @@ export function AccordionBase(props: any) {
       <AccordionItem value={1}>
         <AccordionButton>
           <div>
-            <Text weight="medium">Hello</Text>
-            <Text size="xs">Hello</Text>
+            <Text weight="medium">Nice to Meet You</Text>
+            <Text size="2xs">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
+              voluptatem obcaecati temporibus
+            </Text>
           </div>
         </AccordionButton>
         <AccordionPanel>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</AccordionPanel>
@@ -74,59 +77,59 @@ export const AlertColors = () => {
   return (
     <div className="l_flow__md">
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase color="danger" />
-        <AccordionBase color="success" />
-        <AccordionBase color="warning" />
-        <AccordionBase color="primary" />
-        <AccordionBase color="secondary" />
+        <AccordionBase color="dan" />
+        <AccordionBase color="suc" />
+        <AccordionBase color="war" />
+        <AccordionBase color="pri" />
+        <AccordionBase color="sec" />
         <AccordionBase color="bg" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase variant="soft" color="danger" />
-        <AccordionBase variant="soft" color="success" />
-        <AccordionBase variant="soft" color="warning" />
-        <AccordionBase variant="soft" color="primary" />
-        <AccordionBase variant="soft" color="secondary" />
+        <AccordionBase variant="soft" color="dan" />
+        <AccordionBase variant="soft" color="suc" />
+        <AccordionBase variant="soft" color="war" />
+        <AccordionBase variant="soft" color="pri" />
+        <AccordionBase variant="soft" color="sec" />
         <AccordionBase variant="soft" color="bg" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase separate variant="soft" color="danger" />
-        <AccordionBase separate variant="soft" color="success" />
-        <AccordionBase separate variant="soft" color="warning" />
-        <AccordionBase separate variant="soft" color="primary" />
-        <AccordionBase separate variant="soft" color="secondary" />
+        <AccordionBase separate variant="soft" color="dan" />
+        <AccordionBase separate variant="soft" color="suc" />
+        <AccordionBase separate variant="soft" color="war" />
+        <AccordionBase separate variant="soft" color="pri" />
+        <AccordionBase separate variant="soft" color="sec" />
         <AccordionBase separate variant="soft" color="bg" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase variant="outline" color="danger" />
-        <AccordionBase variant="outline" color="success" />
-        <AccordionBase variant="outline" color="warning" />
-        <AccordionBase variant="outline" color="primary" />
-        <AccordionBase variant="outline" color="secondary" />
+        <AccordionBase variant="outline" color="dan" />
+        <AccordionBase variant="outline" color="suc" />
+        <AccordionBase variant="outline" color="war" />
+        <AccordionBase variant="outline" color="pri" />
+        <AccordionBase variant="outline" color="sec" />
         <AccordionBase variant="outline" color="bg" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase separate variant="outline" color="danger" />
-        <AccordionBase separate variant="outline" color="success" />
-        <AccordionBase separate variant="outline" color="warning" />
-        <AccordionBase separate variant="outline" color="primary" />
-        <AccordionBase separate variant="outline" color="secondary" />
+        <AccordionBase separate variant="outline" color="dan" />
+        <AccordionBase separate variant="outline" color="suc" />
+        <AccordionBase separate variant="outline" color="war" />
+        <AccordionBase separate variant="outline" color="pri" />
+        <AccordionBase separate variant="outline" color="sec" />
         <AccordionBase separate variant="outline" color="bg" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase variant="solid" color="danger" />
-        <AccordionBase variant="solid" color="success" />
-        <AccordionBase variant="solid" color="warning" />
-        <AccordionBase variant="solid" color="primary" />
-        <AccordionBase variant="solid" color="secondary" />
+        <AccordionBase variant="solid" color="dan" />
+        <AccordionBase variant="solid" color="suc" />
+        <AccordionBase variant="solid" color="war" />
+        <AccordionBase variant="solid" color="pri" />
+        <AccordionBase variant="solid" color="sec" />
         <AccordionBase variant="solid" color="bg" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase separate variant="solid" color="danger" />
-        <AccordionBase separate variant="solid" color="success" />
-        <AccordionBase separate variant="solid" color="warning" />
-        <AccordionBase separate variant="solid" color="primary" />
-        <AccordionBase separate variant="solid" color="secondary" />
+        <AccordionBase separate variant="solid" color="dan" />
+        <AccordionBase separate variant="solid" color="suc" />
+        <AccordionBase separate variant="solid" color="war" />
+        <AccordionBase separate variant="solid" color="pri" />
+        <AccordionBase separate variant="solid" color="sec" />
         <AccordionBase separate variant="solid" color="bg" />
       </Grid>
     </div>

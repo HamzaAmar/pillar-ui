@@ -4,7 +4,7 @@
 }
 
 .t-i_line {
-  border-inline-start: var(--clr-9) 0.15em var(--timeline-variant);
+  border-inline-start: var(--c-9) 0.15em var(--timeline-variant);
   width: 0.15em;
 }
 
@@ -16,7 +16,7 @@
   width: 1em;
   height: 1em;
   background-color: var(--bg-1);
-  border: var(--clr-9) 0.15em solid;
+  border: var(--c-9) 0.15em solid;
   transform: translateX(-50%) translateX(-0.08em);
   overflow: hidden;
   border-radius: var(--border-radius, 0);

@@ -74,9 +74,9 @@ export const SizePinInput = () => {
 export const ColorPinInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <PinInput color="primary" variant="bordered" />
-      <PinInput color="warning" variant="bordered" />
-      <PinInput color="secondary" variant="outline" />
+      <PinInput color="pri" variant="bordered" />
+      <PinInput color="war" variant="bordered" />
+      <PinInput color="sec" variant="outline" />
       <PinInput color="bg" variant="filled" />
     </Flex>
   )
@@ -85,11 +85,11 @@ export const ColorPinInput = () => {
 export const ColorPinLength = () => {
   return (
     <Flex gap="sm" direction="column">
-      <PinInput length={10} color="primary" variant="bordered" />
+      <PinInput length={10} color="pri" variant="bordered" />
       <PinInput color="bg" variant="filled" />
-      <PinInput length={5} color="primary" variant="bordered" />
-      <PinInput length={6} color="warning" variant="bordered" />
-      <PinInput length={7} color="secondary" variant="outline" />
+      <PinInput length={5} color="pri" variant="bordered" />
+      <PinInput length={6} color="war" variant="bordered" />
+      <PinInput length={7} color="sec" variant="outline" />
       <PinInput length={8} color="bg" variant="filled" />
     </Flex>
   )
@@ -98,12 +98,12 @@ export const ColorPinLength = () => {
 export const ColorPinPlaceholder = () => {
   return (
     <Flex gap="sm" direction="column">
-      <PinInput length={10} color="primary" variant="bordered" />
-      <PinInput placeholder="◊" length={10} color="primary" variant="bordered" />
+      <PinInput length={10} color="pri" variant="bordered" />
+      <PinInput placeholder="◊" length={10} color="pri" variant="bordered" />
       <PinInput placeholder="◉" color="bg" variant="filled" />
-      <PinInput placeholder="●" length={5} color="primary" variant="bordered" />
-      <PinInput placeholder="◯" length={6} color="warning" variant="bordered" />
-      <PinInput placeholder="◵" length={7} color="secondary" variant="outline" />
+      <PinInput placeholder="●" length={5} color="pri" variant="bordered" />
+      <PinInput placeholder="◯" length={6} color="war" variant="bordered" />
+      <PinInput placeholder="◵" length={7} color="sec" variant="outline" />
       <PinInput placeholder="◬" length={8} color="bg" variant="filled" />
     </Flex>
   )

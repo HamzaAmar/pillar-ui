@@ -86,18 +86,18 @@ export const SizeInput = () => {
 export const ColorInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <InputSearch color="primary" variant="bordered" autoFocus placeholder="Focus" />
-      <InputSearch color="warning" variant="bordered" autoFocus placeholder="Normal" />
-      <InputSearch color="secondary" variant="outline" autoFocus placeholder="Disabled" />
+      <InputSearch color="pri" variant="bordered" autoFocus placeholder="Focus" />
+      <InputSearch color="war" variant="bordered" autoFocus placeholder="Normal" />
+      <InputSearch color="sec" variant="outline" autoFocus placeholder="Disabled" />
       <InputSearch color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <InputSearch
-        color="success"
+        color="suc"
         variant="bordered"
         autoFocus
         prefixInput={<User width="16" />}
         placeholder="Placeholder"
       />
-      <InputSearch color="danger" variant="bordered" autoFocus prefixInput={'https://'} defaultValue="Default Value" />
+      <InputSearch color="dan" variant="bordered" autoFocus prefixInput={'https://'} defaultValue="Default Value" />
     </Flex>
   )
 }

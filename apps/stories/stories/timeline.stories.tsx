@@ -50,19 +50,19 @@ export const TimelineColor = () => {
         <Items />
       </Timeline>
 
-      <Timeline color="primary">
+      <Timeline color="pri">
         <Items />
       </Timeline>
-      <Timeline color="success">
+      <Timeline color="suc">
         <Items />
       </Timeline>
-      <Timeline color="danger">
+      <Timeline color="dan">
         <Items />
       </Timeline>
-      <Timeline color="warning">
+      <Timeline color="war">
         <Items />
       </Timeline>
-      <Timeline color="secondary">
+      <Timeline color="sec">
         <Items />
       </Timeline>
     </Flex>
@@ -218,6 +218,6 @@ export const TimelineCustomBullet = () => {
 
 export const NormalTimeline = {
   args: {
-    color: 'primary',
+    color: 'pri',
   },
 }

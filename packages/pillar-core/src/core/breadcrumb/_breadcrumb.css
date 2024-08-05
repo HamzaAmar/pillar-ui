@@ -29,7 +29,7 @@
 .b-r_lnk {
   min-width: 1.5rem;
   font-size: 0.875em;
-  color: var(--clr-11);
+  color: var(--c-11);
   padding: 0;
   text-transform: capitalize;
   &:hover {

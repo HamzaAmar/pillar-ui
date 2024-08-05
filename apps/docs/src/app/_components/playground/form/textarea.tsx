@@ -81,19 +81,13 @@ export const TextareaCorners = () => {
 export const TextareaColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
-      <Textarea color="primary" variant="bordered" autoFocus placeholder="Focus" />
-      <Textarea color="warning" variant="bordered" autoFocus placeholder="Normal" />
-      <Textarea color="secondary" variant="outline" autoFocus placeholder="Disabled" />
+      <Textarea color="pri" variant="bordered" autoFocus placeholder="Focus" />
+      <Textarea color="war" variant="bordered" autoFocus placeholder="Normal" />
+      <Textarea color="sec" variant="outline" autoFocus placeholder="Disabled" />
       <Textarea color="bg" variant="filled" autoFocus placeholder="isInvalid" />
+      <Textarea color="suc" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
       <Textarea
-        color="success"
-        variant="bordered"
-        autoFocus
-        prefixInput={<User width="16" />}
-        placeholder="Placeholder"
-      />
-      <Textarea
-        color="danger"
+        color="dan"
         variant="bordered"
         autoFocus
         prefixInput={'https://'}

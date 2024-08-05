@@ -31,11 +31,11 @@ export function SwitchSizes() {
 export function SwitchColors() {
   return (
     <Flex gap="sm" items="center">
-      <Switch label="Hello" color="danger" />
-      <Switch label="Hello" color="warning" />
-      <Switch label="Hello" color="success" />
-      <Switch label="Hello" color="primary" />
-      <Switch label="Hello" color="secondary" />
+      <Switch label="Hello" color="dan" />
+      <Switch label="Hello" color="war" />
+      <Switch label="Hello" color="suc" />
+      <Switch label="Hello" color="pri" />
+      <Switch label="Hello" color="sec" />
       <Switch label="Hello" color="bg" />
     </Flex>
   )
@@ -44,11 +44,11 @@ export function SwitchColors() {
 export function SwitchColorsDefault() {
   return (
     <Flex gap="sm" items="center">
-      <Switch label="Hello" defaultPressed color="danger" />
-      <Switch label="Hello" defaultPressed color="warning" />
-      <Switch label="Hello" defaultPressed color="success" />
-      <Switch label="Hello" defaultPressed color="primary" />
-      <Switch label="Hello" defaultPressed color="secondary" />
+      <Switch label="Hello" defaultPressed color="dan" />
+      <Switch label="Hello" defaultPressed color="war" />
+      <Switch label="Hello" defaultPressed color="suc" />
+      <Switch label="Hello" defaultPressed color="pri" />
+      <Switch label="Hello" defaultPressed color="sec" />
       <Switch label="Hello" defaultPressed color="bg" />
     </Flex>
   )
@@ -122,7 +122,7 @@ export const SwitchControlled = () => {
   return (
     <Flex gap="sm" direction="column">
       <Button onClick={onPressedChange}>{pressed ? 'Pressed' : 'Unpressed'} The Switch</Button>
-      <Switch color="danger" label="hello" pressed={pressed} onPressedChange={onPressedChange} />
+      <Switch color="dan" label="hello" pressed={pressed} onPressedChange={onPressedChange} />
     </Flex>
   )
 }

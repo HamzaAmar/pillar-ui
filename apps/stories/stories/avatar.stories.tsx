@@ -128,39 +128,39 @@ export function AvatarsColors() {
   return (
     <div className="l_flow__md">
       <Flex gap="xs" items="center">
-        <Avatar color="danger" variant="solid" image={image} title="Hello" />
-        <Avatar color="danger" variant="solid" title="Hello" />
-        <Avatar color="success" variant="solid" title="Hello" />
-        <Avatar color="warning" variant="solid" title="Hello" />
-        <Avatar color="secondary" variant="solid" title="Hello" />
-        <Avatar color="primary" variant="solid" title="Hello" />
+        <Avatar color="dan" variant="solid" image={image} title="Hello" />
+        <Avatar color="dan" variant="solid" title="Hello" />
+        <Avatar color="suc" variant="solid" title="Hello" />
+        <Avatar color="war" variant="solid" title="Hello" />
+        <Avatar color="sec" variant="solid" title="Hello" />
+        <Avatar color="pri" variant="solid" title="Hello" />
         <Avatar color="bg" variant="solid" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
-        <Avatar color="danger" variant="outline" image={image} title="Hello" />
-        <Avatar color="danger" variant="outline" title="Hello" />
-        <Avatar color="success" variant="outline" title="Hello" />
-        <Avatar color="warning" variant="outline" title="Hello" />
-        <Avatar color="secondary" variant="outline" title="Hello" />
-        <Avatar color="primary" variant="outline" title="Hello" />
+        <Avatar color="dan" variant="outline" image={image} title="Hello" />
+        <Avatar color="dan" variant="outline" title="Hello" />
+        <Avatar color="suc" variant="outline" title="Hello" />
+        <Avatar color="war" variant="outline" title="Hello" />
+        <Avatar color="sec" variant="outline" title="Hello" />
+        <Avatar color="pri" variant="outline" title="Hello" />
         <Avatar color="bg" variant="outline" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
-        <Avatar color="danger" variant="dashed" image={image} title="Hello" />
-        <Avatar color="danger" variant="dashed" title="Hello" />
-        <Avatar color="success" variant="dashed" title="Hello" />
-        <Avatar color="warning" variant="dashed" title="Hello" />
-        <Avatar color="secondary" variant="dashed" title="Hello" />
-        <Avatar color="primary" variant="dashed" title="Hello" />
+        <Avatar color="dan" variant="dashed" image={image} title="Hello" />
+        <Avatar color="dan" variant="dashed" title="Hello" />
+        <Avatar color="suc" variant="dashed" title="Hello" />
+        <Avatar color="war" variant="dashed" title="Hello" />
+        <Avatar color="sec" variant="dashed" title="Hello" />
+        <Avatar color="pri" variant="dashed" title="Hello" />
         <Avatar color="bg" variant="dashed" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
-        <Avatar color="danger" variant="soft" image={image} title="Hello" />
-        <Avatar color="danger" variant="soft" title="Hello" />
-        <Avatar color="success" variant="soft" title="Hello" />
-        <Avatar color="warning" variant="soft" title="Hello" />
-        <Avatar color="secondary" variant="soft" title="Hello" />
-        <Avatar color="primary" variant="soft" title="Hello" />
+        <Avatar color="dan" variant="soft" image={image} title="Hello" />
+        <Avatar color="dan" variant="soft" title="Hello" />
+        <Avatar color="suc" variant="soft" title="Hello" />
+        <Avatar color="war" variant="soft" title="Hello" />
+        <Avatar color="sec" variant="soft" title="Hello" />
+        <Avatar color="pri" variant="soft" title="Hello" />
         <Avatar color="bg" variant="soft" title="Hello" />
       </Flex>
     </div>
@@ -226,7 +226,7 @@ export function AvatarGroupVariants() {
 export function AvatarGroupCustom() {
   return (
     <div className="l_flow__md">
-      <AvatarGroup limit={6} layout="stack" color="danger" variant="outline" fallback={<DotsHorizontal width="20" />}>
+      <AvatarGroup limit={6} layout="stack" color="dan" variant="outline" fallback={<DotsHorizontal width="20" />}>
         <Avatar title="Hello" />
         <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
         <Avatar fallback={<DotsHorizontal width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
@@ -254,7 +254,7 @@ export function AvatarCustomStyle() {
   return (
     <div className="l_flow__md">
       <Avatar title="Hello" className="u_brown" />
-      <Avatar title="Hello" style={{ background: 'danger', color: 'white' }} />
+      <Avatar title="Hello" style={{ background: 'red', color: 'white' }} />
     </div>
   )
 }

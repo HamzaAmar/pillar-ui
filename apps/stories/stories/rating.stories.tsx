@@ -52,11 +52,11 @@ export const RatingSize = () => {
 export const RatingColor = () => {
   return (
     <Flex direction="column" gap="md">
-      <Rating color="danger" rating={4} />
-      <Rating color="primary" rating={4} />
-      <Rating color="secondary" rating={4} />
-      <Rating color="success" rating={4} />
-      <Rating color="warning" rating={4} />
+      <Rating color="dan" rating={4} />
+      <Rating color="pri" rating={4} />
+      <Rating color="sec" rating={4} />
+      <Rating color="suc" rating={4} />
+      <Rating color="war" rating={4} />
       <Rating color="bg" rating={4} />
     </Flex>
   )
@@ -65,7 +65,7 @@ export const RatingColor = () => {
 export const RatingType = () => {
   return (
     <Flex direction="column" gap="md">
-      <Rating icon="heart" rating={4} color="danger" />
+      <Rating icon="heart" rating={4} color="dan" />
       <Rating rating={4} />
     </Flex>
   )

@@ -47,7 +47,7 @@ export function RTLSupport() {
         <div className="l_flow__lg">
           <div className="l_flow__xs">
             <div>
-              <Text size="lg" as="span" color="primary" contrast="low">
+              <Text size="lg" as="span" color="pri" contrast="low">
                 Effortless RTL Experiences:
               </Text>
               <Heading as="h2" size="3xl" transform="uppercase">

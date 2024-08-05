@@ -123,9 +123,9 @@ export const BadgeTypes = () => {
   return (
     <div className="l_flow_md">
       <Flex gap="sm">
-        <Badge type="dot" color="danger" />
-        <Badge type="numeric" number={15} max={15} color="danger" />
-        <Badge type="icon" icon={<Check />} color="danger" />
+        <Badge type="dot" color="dan" />
+        <Badge type="numeric" number={15} max={15} color="dan" />
+        <Badge type="icon" icon={<Check />} color="dan" />
       </Flex>
     </div>
   )
@@ -147,8 +147,8 @@ export const BadgeVariants = () => {
   return (
     <div className="l_flow_md">
       <Flex gap="sm">
-        <Badge variant="solid" color="danger" />
-        <Badge variant="mixed" number={15} max={15} color="danger" />
+        <Badge variant="solid" color="dan" />
+        <Badge variant="mixed" number={15} max={15} color="dan" />
       </Flex>
     </div>
   )
@@ -165,14 +165,14 @@ The number prop is required for the numeric type. It determines the numeric valu
 export const BadgeNumericMaxValue = () => {
   return (
     <Flex gap="sm">
-      <Badge type="numeric" number={15} color="danger" />
-      <Badge type="numeric" number={150} color="success" />
-      <Badge type="numeric" number={5} color="warning" />
-      <Badge type="numeric" number={0} color="primary" />
-      <Badge type="numeric" showZero number={0} color="danger" />
+      <Badge type="numeric" number={15} color="dan" />
+      <Badge type="numeric" number={150} color="suc" />
+      <Badge type="numeric" number={5} color="war" />
+      <Badge type="numeric" number={0} color="pri" />
+      <Badge type="numeric" showZero number={0} color="dan" />
       <Badge type="numeric" number={12211} color="brown" />
       <Badge type="numeric" number={1500} color="purple" />
-      <Badge type="numeric" number={15} color="secondary" />
+      <Badge type="numeric" number={15} color="sec" />
       <Badge type="numeric" number={15} color="bg" />
     </Flex>
   )
@@ -189,14 +189,14 @@ The max prop is required for the numeric type. It determines the maximum value t
 export const BadgeNumericMaxValue = () => {
   return (
     <Flex gap="sm">
-      <Badge type="numeric" number={15} max={10} color="danger" />
-      <Badge type="numeric" number={150} max={100} color="success" />
-      <Badge type="numeric" number={5} max={0} color="warning" />
-      <Badge type="numeric" number={0} max={15} color="primary" />
-      <Badge type="numeric" showZero number={0} max={15} color="danger" />
+      <Badge type="numeric" number={15} max={10} color="dan" />
+      <Badge type="numeric" number={150} max={100} color="suc" />
+      <Badge type="numeric" number={5} max={0} color="war" />
+      <Badge type="numeric" number={0} max={15} color="pri" />
+      <Badge type="numeric" showZero number={0} max={15} color="dan" />
       <Badge type="numeric" number={12211} max={10000} color="brown" />
       <Badge type="numeric" number={1500} max={100} color="purple" />
-      <Badge type="numeric" number={15} max={1} color="secondary" />
+      <Badge type="numeric" number={15} max={1} color="sec" />
       <Badge type="numeric" number={15} max={15} color="bg" />
     </Flex>
   )
@@ -218,29 +218,29 @@ code Example
 ```tsx showLineNumbers title="Badge.tsx"
 export const BadgeDotColor = () => {
   return (
-    <Paper className="playground" borderColor="opacity-6" p="sm" flow="sm" background="bg-3" corner="sm">
+    <Paper className="playground" borderColor="opa-6" p="sm" flow="sm" background="bg-3" corner="sm">
       <Flex gap="sm">
-        <Badge type="numeric" number={15} max={15} color="danger" />
-        <Badge type="numeric" number={15} max={15} color="success" />
-        <Badge type="numeric" number={15} max={15} color="warning" />
-        <Badge type="numeric" number={15} max={15} color="primary" />
-        <Badge type="numeric" number={15} max={15} color="secondary" />
+        <Badge type="numeric" number={15} max={15} color="dan" />
+        <Badge type="numeric" number={15} max={15} color="suc" />
+        <Badge type="numeric" number={15} max={15} color="war" />
+        <Badge type="numeric" number={15} max={15} color="pri" />
+        <Badge type="numeric" number={15} max={15} color="sec" />
         <Badge type="numeric" number={15} max={15} color="bg" />
       </Flex>
       <Flex gap="sm">
-        <Badge type="icon" icon={<Check />} color="danger" />
-        <Badge type="icon" icon={<Check />} color="success" />
-        <Badge type="icon" icon={<Check />} color="warning" />
-        <Badge type="icon" icon={<Check />} color="primary" />
-        <Badge type="icon" icon={<Check />} color="secondary" />
+        <Badge type="icon" icon={<Check />} color="dan" />
+        <Badge type="icon" icon={<Check />} color="suc" />
+        <Badge type="icon" icon={<Check />} color="war" />
+        <Badge type="icon" icon={<Check />} color="pri" />
+        <Badge type="icon" icon={<Check />} color="sec" />
         <Badge type="icon" icon={<Check />} color="bg" />
       </Flex>
       <Flex gap="sm">
-        <Badge type="dot" color="danger" />
-        <Badge type="dot" color="success" />
-        <Badge type="dot" color="warning" />
-        <Badge type="dot" color="primary" />
-        <Badge type="dot" color="secondary" />
+        <Badge type="dot" color="dan" />
+        <Badge type="dot" color="suc" />
+        <Badge type="dot" color="war" />
+        <Badge type="dot" color="pri" />
+        <Badge type="dot" color="sec" />
         <Badge type="dot" color="bg" />
       </Flex>
     </Paper>

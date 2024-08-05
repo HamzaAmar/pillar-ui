@@ -76,9 +76,9 @@ export const SizeInputFile = () => {
 export const ColorInputFile = () => {
   return (
     <Flex gap="sm" direction="column">
-      <InputFile color="primary" variant="bordered" />
-      <InputFile color="warning" variant="bordered" />
-      <InputFile color="secondary" variant="outline" />
+      <InputFile color="pri" variant="bordered" />
+      <InputFile color="war" variant="bordered" />
+      <InputFile color="sec" variant="outline" />
       <InputFile color="bg" variant="filled" />
     </Flex>
   )

@@ -81,13 +81,13 @@ export const InputCorners = () => {
 export const InputColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
-      <Input color="primary" variant="bordered" autoFocus placeholder="Focus" />
-      <Input color="warning" variant="bordered" autoFocus placeholder="Normal" />
-      <Input color="secondary" variant="outline" autoFocus placeholder="Disabled" />
+      <Input color="pri" variant="bordered" autoFocus placeholder="Focus" />
+      <Input color="war" variant="bordered" autoFocus placeholder="Normal" />
+      <Input color="sec" variant="outline" autoFocus placeholder="Disabled" />
       <Input color="bg" variant="filled" autoFocus placeholder="isInvalid" />
-      <Input color="success" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
+      <Input color="suc" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
       <Input
-        color="danger"
+        color="dan"
         variant="bordered"
         autoFocus
         prefixInput={'https://'}

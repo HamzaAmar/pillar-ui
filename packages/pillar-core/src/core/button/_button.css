@@ -16,7 +16,7 @@
   gap: var(--s-2xs);
 
   &:hover {
-    background-color: var(--clr-4);
+    background-color: var(--c-4);
   }
   &:active {
     transform: translateY(-1px) scale(1.01);
@@ -34,10 +34,10 @@
   /* &:is(.u_solid,.u_shadow):hover */
   &.u_solid:hover,
   &.u_shadow:hover {
-    background-color: var(--clr-10);
+    background-color: var(--c-10);
   }
   &.u_outline:hover {
-    background-color: var(--clr-4);
+    background-color: var(--c-4);
   }
 
   /*

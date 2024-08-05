@@ -58,8 +58,8 @@ function MyComponent() {
         label="password"
         hint="password must be between 6 to 30 character"
       />
-      <Checkbox color="primary" onChange={handleToggle} label="I agree to the terms and conditions" />
-      <Button icon={<Icons.Send name="heart" size={24} color="danger" />}>Register</Button>
+      <Checkbox color="pri" onChange={handleToggle} label="I agree to the terms and conditions" />
+      <Button icon={<Icons.Send name="heart" size={24} color="dan" />}>Register</Button>
     </form>
   )
 }

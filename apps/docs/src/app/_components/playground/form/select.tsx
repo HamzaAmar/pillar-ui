@@ -58,19 +58,19 @@ export const SelectCorners = () => {
 export const SelectColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
-      <Select color="danger">
+      <Select color="dan">
         <Options />
       </Select>
-      <Select color="warning">
+      <Select color="war">
         <Options />
       </Select>
-      <Select color="success">
+      <Select color="suc">
         <Options />
       </Select>
-      <Select color="secondary">
+      <Select color="sec">
         <Options />
       </Select>
-      <Select color="primary">
+      <Select color="pri">
         <Options />
       </Select>
       <Select color="bg">

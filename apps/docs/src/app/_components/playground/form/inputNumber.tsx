@@ -57,12 +57,12 @@ export const InputNumberCorners = () => {
 export const InputNumberColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
-      <InputNumber color="primary" variant="bordered" autoFocus placeholder="Focus" />
-      <InputNumber color="warning" variant="bordered" autoFocus placeholder="Normal" />
-      <InputNumber color="secondary" variant="outline" autoFocus placeholder="Disabled" />
+      <InputNumber color="pri" variant="bordered" autoFocus placeholder="Focus" />
+      <InputNumber color="war" variant="bordered" autoFocus placeholder="Normal" />
+      <InputNumber color="sec" variant="outline" autoFocus placeholder="Disabled" />
       <InputNumber color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <InputNumber
-        color="success"
+        color="suc"
         variant="bordered"
         autoFocus
         prefixInput={<User width="16" />}

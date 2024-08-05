@@ -3,7 +3,7 @@ import type { ComponentPropsWithRef, ReactNode, ReactElement, AriaAttributes } f
 import type { TypographyProps } from '../typography'
 
 type Variant = 'filled' | 'outline' | 'bordered'
-type Status = 'danger' | 'success' | 'warning' | 'primary' | 'text'
+type Status = 'dan' | 'suc' | 'war' | 'pri' | 'text'
 type Direction = 'row' | 'column'
 
 interface FormFieldSharedProps {

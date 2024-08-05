@@ -5,12 +5,12 @@ import React from 'react'
 export const BreadcrumbPlayGround = () => {
   return (
     <Paper border p="sm" background="bg-3" corner="sm">
-      <Avatar title="Success!" color="danger" />
-      <Avatar title="Success!" color="warning" />
-      <Avatar title="Success!" color="success" />
-      <Avatar title="Success!" color="primary" />
+      <Avatar title="Success!" color="dan" />
+      <Avatar title="Success!" color="war" />
+      <Avatar title="Success!" color="suc" />
+      <Avatar title="Success!" color="pri" />
       <Avatar title="Success!" color="bg" />
-      <Avatar title="Success!" color="secondary" />
+      <Avatar title="Success!" color="sec" />
     </Paper>
   )
 }
@@ -179,7 +179,7 @@ export const BreadcrumbIcons = () => {
 export const BreadcrumbColors = () => {
   return (
     <Paper border p="sm" background="bg-3" corner="sm">
-      <Breadcrumb color="danger">
+      <Breadcrumb color="dan">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -187,7 +187,7 @@ export const BreadcrumbColors = () => {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="warning">
+      <Breadcrumb color="war">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -195,7 +195,7 @@ export const BreadcrumbColors = () => {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="success">
+      <Breadcrumb color="suc">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -203,7 +203,7 @@ export const BreadcrumbColors = () => {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="secondary">
+      <Breadcrumb color="sec">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -211,7 +211,7 @@ export const BreadcrumbColors = () => {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="primary">
+      <Breadcrumb color="pri">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>

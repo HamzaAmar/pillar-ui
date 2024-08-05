@@ -5,12 +5,12 @@ import React from 'react'
 export const AvatarPlayGround = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="bg-3" corner="sm" items="center">
-      <Avatar title="Success!" color="danger" />
-      <Avatar title="Success!" color="warning" />
-      <Avatar title="Success!" color="success" />
-      <Avatar title="Success!" color="primary" />
+      <Avatar title="Success!" color="dan" />
+      <Avatar title="Success!" color="war" />
+      <Avatar title="Success!" color="suc" />
+      <Avatar title="Success!" color="pri" />
       <Avatar title="Success!" color="bg" />
-      <Avatar title="Success!" color="secondary" />
+      <Avatar title="Success!" color="sec" />
     </Paper>
   )
 }
@@ -18,13 +18,13 @@ export const AvatarColors = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="bg-3" corner="sm">
       <Avatar title="John Doe" />
-      <Avatar color="danger" title="John Doe" />
-      <Avatar color="success" title="John Doe" />
-      <Avatar color="warning" title="John Doe" />
-      <Avatar color="secondary" title="John Doe" />
-      <Avatar color="primary" title="John Doe" />
+      <Avatar color="dan" title="John Doe" />
+      <Avatar color="suc" title="John Doe" />
+      <Avatar color="war" title="John Doe" />
+      <Avatar color="sec" title="John Doe" />
+      <Avatar color="pri" title="John Doe" />
       <Avatar color="bg" title="John Doe" />
-      <Avatar color="opacity" title="John Doe" />
+      <Avatar color="opa" title="John Doe" />
     </Paper>
   )
 }
@@ -211,7 +211,7 @@ export function AvatarGroupContext() {
         <Avatar title="Success!" />
         <Avatar title="Success!" />
       </AvatarGroup>
-      <AvatarGroup color="danger">
+      <AvatarGroup color="dan">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />

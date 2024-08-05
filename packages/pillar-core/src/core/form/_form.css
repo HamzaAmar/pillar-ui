@@ -22,7 +22,7 @@
   text-transform: var(--form-field-transform);
 
   &:has(.f-i:focus):not(.f-i_cnt-bordered) {
-    outline: 2px solid var(--clr-9);
+    outline: 2px solid var(--c-9);
     outline-offset: -1px;
   }
   &:has([aria-invalid='true']) {
@@ -84,7 +84,7 @@
     border-radius: 100px;
   }
   &::after {
-    background-color: var(--clr-9, var(--pri-9));
+    background-color: var(--c-9, var(--pri-9));
     transform: scaleX(0);
     transition: transform 0.2s;
   }
@@ -300,13 +300,13 @@
 }
 
 .fi-f {
-  background-color: var(--clr-7, var(--bg-7));
+  background-color: var(--c-7, var(--bg-7));
   font-size: 0.9em;
   padding: 0.25rem 1rem;
   cursor: pointer;
 
   .f-i_cnt:not([data-disabled]) &:hover {
-    background-color: var(--clr-8, var(--bg-8));
+    background-color: var(--c-8, var(--bg-8));
   }
 }
 

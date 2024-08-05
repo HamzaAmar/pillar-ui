@@ -20,29 +20,29 @@ export function PaginationColor() {
     <div>
       <div className="l_flow__md">
         <Pagination count={10} />
-        <Pagination count={10} color="danger" />
-        <Pagination count={10} color="success" />
-        <Pagination count={10} color="warning" />
-        <Pagination count={10} color="primary" />
-        <Pagination count={10} color="secondary" />
+        <Pagination count={10} color="dan" />
+        <Pagination count={10} color="suc" />
+        <Pagination count={10} color="war" />
+        <Pagination count={10} color="pri" />
+        <Pagination count={10} color="sec" />
         <Pagination count={10} color="bg" />
       </div>
       <div className="l_flow__md">
         <Pagination count={10} variant="soft" />
-        <Pagination count={10} variant="soft" color="danger" />
-        <Pagination count={10} variant="soft" color="success" />
-        <Pagination count={10} variant="soft" color="warning" />
-        <Pagination count={10} variant="soft" color="primary" />
-        <Pagination count={10} variant="soft" color="secondary" />
+        <Pagination count={10} variant="soft" color="dan" />
+        <Pagination count={10} variant="soft" color="suc" />
+        <Pagination count={10} variant="soft" color="war" />
+        <Pagination count={10} variant="soft" color="pri" />
+        <Pagination count={10} variant="soft" color="sec" />
         <Pagination count={10} variant="soft" color="bg" />
       </div>
       <div className="l_flow__md">
         <Pagination count={10} />
-        <Pagination count={10} variant="solid" color="danger" />
-        <Pagination count={10} variant="solid" color="success" />
-        <Pagination count={10} variant="solid" color="warning" />
-        <Pagination count={10} variant="solid" color="primary" />
-        <Pagination count={10} variant="solid" color="secondary" />
+        <Pagination count={10} variant="solid" color="dan" />
+        <Pagination count={10} variant="solid" color="suc" />
+        <Pagination count={10} variant="solid" color="war" />
+        <Pagination count={10} variant="solid" color="pri" />
+        <Pagination count={10} variant="solid" color="sec" />
         <Pagination count={10} variant="solid" color="bg" />
       </div>
     </div>
@@ -52,11 +52,11 @@ export function PaginationColor() {
 export function PaginationVariant() {
   return (
     <div className="l_flow__md">
-      <Pagination count={10} color="primary" />
-      <Pagination count={10} color="primary" variant="mixed" />
-      <Pagination count={10} color="primary" variant="soft" />
-      <Pagination count={10} color="primary" variant="solid" />
-      <Pagination count={10} color="primary" variant="text" />
+      <Pagination count={10} color="pri" />
+      <Pagination count={10} color="pri" variant="mixed" />
+      <Pagination count={10} color="pri" variant="soft" />
+      <Pagination count={10} color="pri" variant="solid" />
+      <Pagination count={10} color="pri" variant="text" />
     </div>
   )
 }
@@ -65,11 +65,11 @@ export function PaginationCustomStyle() {
   return (
     <div className="l_flow__md">
       <Pagination count={10} />
-      <Pagination count={10} color="danger" />
-      <Pagination count={10} color="success" />
-      <Pagination count={10} color="warning" />
-      <Pagination count={10} color="primary" />
-      <Pagination count={10} color="secondary" />
+      <Pagination count={10} color="dan" />
+      <Pagination count={10} color="suc" />
+      <Pagination count={10} color="war" />
+      <Pagination count={10} color="pri" />
+      <Pagination count={10} color="sec" />
       <Pagination count={10} color="bg" />
     </div>
   )

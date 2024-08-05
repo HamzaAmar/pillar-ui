@@ -62,7 +62,7 @@ Heading.displayName = 'Heading'
 
 export const Link = forwardRef(({ children, ...rest }, forwardedRef) => {
   return (
-    <Text ref={forwardedRef} color="primary" contrast="low" className="t-y_lnk" as="a" {...rest}>
+    <Text ref={forwardedRef} color="pri" contrast="low" className="t-y_lnk" as="a" {...rest}>
       {children}
     </Text>
   )

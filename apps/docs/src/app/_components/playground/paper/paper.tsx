@@ -4,12 +4,12 @@ import React from 'react'
 export const PaperPlayGround = () => {
   return (
     <Paper className="playground" border p="sm" background="bg-3" corner="sm">
-      <Avatar title="Success!" color="danger" />
-      <Avatar title="Success!" color="warning" />
-      <Avatar title="Success!" color="success" />
-      <Avatar title="Success!" color="primary" />
+      <Avatar title="Success!" color="dan" />
+      <Avatar title="Success!" color="war" />
+      <Avatar title="Success!" color="suc" />
+      <Avatar title="Success!" color="pri" />
       <Avatar title="Success!" color="bg" />
-      <Avatar title="Success!" color="secondary" />
+      <Avatar title="Success!" color="sec" />
     </Paper>
   )
 }
@@ -18,27 +18,27 @@ export const PaperBackground = () => {
   return (
     <Paper as={Flex} wrap gap="sm" className="playground" border p="sm" background="bg-3" corner="sm">
       <Paper border width="30-char" ratio="square" />
-      <Paper border width="30-char" ratio="square" background="danger" />
-      <Paper border width="30-char" ratio="square" background="danger-5" />
-      <Paper border width="30-char" ratio="square" background="danger-10" />
-      <Paper border width="30-char" ratio="square" background="success-5" />
-      <Paper border width="30-char" ratio="square" background="success-8" />
-      <Paper border width="30-char" ratio="square" background="success-11" />
-      <Paper border width="30-char" ratio="square" background="primary-12" />
-      <Paper border width="30-char" ratio="square" background="primary-10" />
-      <Paper border width="30-char" ratio="square" background="primary-8" />
+      <Paper border width="30-char" ratio="square" background="dan" />
+      <Paper border width="30-char" ratio="square" background="dan-5" />
+      <Paper border width="30-char" ratio="square" background="dan-10" />
+      <Paper border width="30-char" ratio="square" background="suc-5" />
+      <Paper border width="30-char" ratio="square" background="suc-8" />
+      <Paper border width="30-char" ratio="square" background="suc-11" />
+      <Paper border width="30-char" ratio="square" background="pri-12" />
+      <Paper border width="30-char" ratio="square" background="pri-10" />
+      <Paper border width="30-char" ratio="square" background="pri-8" />
       <Paper border width="30-char" ratio="square" background="bg-1" />
       <Paper border width="30-char" ratio="square" background="bg-4" />
       <Paper border width="30-char" ratio="square" background="bg-8" />
-      <Paper border width="30-char" ratio="square" background="warning-4" />
-      <Paper border width="30-char" ratio="square" background="warning-8" />
-      <Paper border width="30-char" ratio="square" background="warning-12" />
-      <Paper border width="30-char" ratio="square" background="secondary-3" />
-      <Paper border width="30-char" ratio="square" background="secondary-8" />
-      <Paper border width="30-char" ratio="square" background="secondary-12" />
-      <Paper border width="30-char" ratio="square" background="opacity-4" />
-      <Paper border width="30-char" ratio="square" background="opacity-7" />
-      <Paper border width="30-char" ratio="square" background="opacity-11" />
+      <Paper border width="30-char" ratio="square" background="war-4" />
+      <Paper border width="30-char" ratio="square" background="war-8" />
+      <Paper border width="30-char" ratio="square" background="war-12" />
+      <Paper border width="30-char" ratio="square" background="sec-3" />
+      <Paper border width="30-char" ratio="square" background="sec-8" />
+      <Paper border width="30-char" ratio="square" background="sec-12" />
+      <Paper border width="30-char" ratio="square" background="opa-4" />
+      <Paper border width="30-char" ratio="square" background="opa-7" />
+      <Paper border width="30-char" ratio="square" background="opa-11" />
     </Paper>
   )
 }
@@ -49,31 +49,31 @@ export const PaperColors = () => {
       <Paper background="bg-5" p="xs">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="danger">
+      <Paper background="bg-5" p="xs" color="dan">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="danger-5">
+      <Paper background="bg-5" p="xs" color="dan-5">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="danger-10">
+      <Paper background="bg-5" p="xs" color="dan-10">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="success-5">
+      <Paper background="bg-5" p="xs" color="suc-5">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="success-8">
+      <Paper background="bg-5" p="xs" color="suc-8">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="success-11">
+      <Paper background="bg-5" p="xs" color="suc-11">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="primary-12">
+      <Paper background="bg-5" p="xs" color="pri-12">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="primary-10">
+      <Paper background="bg-5" p="xs" color="pri-10">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="primary-8">
+      <Paper background="bg-5" p="xs" color="pri-8">
         Hello
       </Paper>
       <Paper background="bg-5" p="xs" color="bg-1">
@@ -85,31 +85,31 @@ export const PaperColors = () => {
       <Paper background="bg-5" p="xs" color="bg-8">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="warning-4">
+      <Paper background="bg-5" p="xs" color="war-4">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="warning-8">
+      <Paper background="bg-5" p="xs" color="war-8">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="warning-12">
+      <Paper background="bg-5" p="xs" color="war-12">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="secondary-3">
+      <Paper background="bg-5" p="xs" color="sec-3">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="secondary-8">
+      <Paper background="bg-5" p="xs" color="sec-8">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="secondary-12">
+      <Paper background="bg-5" p="xs" color="sec-12">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="opacity-4">
+      <Paper background="bg-5" p="xs" color="opa-4">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="opacity-7">
+      <Paper background="bg-5" p="xs" color="opa-7">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" height="60px" color="opacity-11">
+      <Paper background="bg-5" p="xs" height="60px" color="opa-11">
         Hello
       </Paper>
     </Paper>

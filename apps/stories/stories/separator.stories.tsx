@@ -12,11 +12,11 @@ export default meta
 export const SeparatorColors = () => {
   return (
     <div className="l_flow__md">
-      <Separator color="danger" />
-      <Separator color="warning" />
-      <Separator color="success" />
-      <Separator color="secondary" />
-      <Separator color="primary" />
+      <Separator color="dan" />
+      <Separator color="war" />
+      <Separator color="suc" />
+      <Separator color="sec" />
+      <Separator color="pri" />
       <Separator color="bg" />
     </div>
   )

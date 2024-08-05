@@ -4,12 +4,12 @@ import React from 'react'
 export const SpinnerPlayGround = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="bg-3" corner="sm" items="center">
-      <Spinner color="danger" />
-      <Spinner color="warning" />
-      <Spinner color="success" />
-      <Spinner color="primary" />
+      <Spinner color="dan" />
+      <Spinner color="war" />
+      <Spinner color="suc" />
+      <Spinner color="pri" />
       <Spinner color="bg" />
-      <Spinner color="secondary" />
+      <Spinner color="sec" />
     </Paper>
   )
 }
@@ -48,19 +48,19 @@ export const SpinnerInvert = () => {
   return (
     <Paper border p="sm" flow="sm" background="bg-3" corner="sm">
       <Flex gap="sm" items="center">
-        <Spinner color="success" />
-        <Spinner color="danger" />
-        <Spinner color="warning" />
-        <Spinner color="primary" />
-        <Spinner color="secondary" />
+        <Spinner color="suc" />
+        <Spinner color="dan" />
+        <Spinner color="war" />
+        <Spinner color="pri" />
+        <Spinner color="sec" />
         <Spinner color="bg" />
       </Flex>
       <Flex gap="sm" items="center">
-        <Spinner invert color="success" />
-        <Spinner invert color="danger" />
-        <Spinner invert color="warning" />
-        <Spinner invert color="primary" />
-        <Spinner invert color="secondary" />
+        <Spinner invert color="suc" />
+        <Spinner invert color="dan" />
+        <Spinner invert color="war" />
+        <Spinner invert color="pri" />
+        <Spinner invert color="sec" />
         <Spinner invert color="bg" />
       </Flex>
     </Paper>
@@ -70,11 +70,11 @@ export const SpinnerInvert = () => {
 export const SpinnerColors = () => {
   return (
     <Paper as={Flex} gap="sm" wrap items="center" border p="sm" background="bg-3" corner="sm">
-      <Spinner color="success" />
-      <Spinner color="danger" />
-      <Spinner color="warning" />
-      <Spinner color="primary" />
-      <Spinner color="secondary" />
+      <Spinner color="suc" />
+      <Spinner color="dan" />
+      <Spinner color="war" />
+      <Spinner color="pri" />
+      <Spinner color="sec" />
       <Spinner color="bg" />
     </Paper>
   )

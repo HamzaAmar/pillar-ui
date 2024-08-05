@@ -86,27 +86,27 @@ export const BlockquoteCorner = () => {
 export const BlockquoteColor = () => {
   return (
     <div className="l_flow__md">
-      <Blockquote color="danger">
+      <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="success">
+      <Blockquote color="suc">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="warning">
+      <Blockquote color="war">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="primary">
+      <Blockquote color="pri">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="secondary">
+      <Blockquote color="sec">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
@@ -123,21 +123,21 @@ export const BlockquoteColor = () => {
 export const BlockquoteWithCite = () => {
   return (
     <div className="l_flow__md">
-      <Blockquote color="danger">
+      <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
         <BlockquoteCite title="Hello world" />
       </Blockquote>
 
-      <Blockquote color="danger">
+      <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
         <BlockquoteCite title="Hello world" align="end" />
       </Blockquote>
 
-      <Blockquote color="danger">
+      <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
@@ -150,13 +150,13 @@ export const BlockquoteWithCite = () => {
 export const BlockquoteCustomStyle = () => {
   return (
     <Flex gap="sm">
-      <Blockquote color="danger" className="u_warning">
+      <Blockquote color="dan" className="u_warning">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
         <BlockquoteCite title="Hello world" align="end" />
       </Blockquote>
-      <Blockquote style={{ background: 'red' }} color="danger">
+      <Blockquote style={{ background: 'red' }} color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?

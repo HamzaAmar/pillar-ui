@@ -111,7 +111,7 @@
 //       size,
 //       variant = 'bordered',
 //       corner = 'sm',
-//       color = 'primary',
+//       color = 'pri',
 //       ...rest
 //     },
 //     ref

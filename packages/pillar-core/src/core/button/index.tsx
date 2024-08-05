@@ -13,7 +13,7 @@ import type { ButtonGroupProps, ButtonProps, IconButtonProps } from './button.ty
 export const Button = forwardRef((props, forwardedRef) => {
   const {
     children,
-    color = 'primary',
+    color = 'pri',
     corner,
     variant = 'solid',
     size,
@@ -76,7 +76,7 @@ export const IconButton = forwardRef(
       icon,
       title,
       corner,
-      color = 'primary',
+      color = 'pri',
       size = 'md',
       variant = 'transparent',
       className,
@@ -113,7 +113,7 @@ export const ButtonGroup = forwardRef(
       icon,
       title,
       corner = 'sharp',
-      color = 'primary',
+      color = 'pri',
       size = 'md',
       variant = 'transparent',
       className,

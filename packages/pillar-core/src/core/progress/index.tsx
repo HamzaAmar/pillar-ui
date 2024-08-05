@@ -15,7 +15,7 @@ export const ProgressCircle = ({
   max = 100,
   value,
   label,
-  color = 'primary',
+  color = 'pri',
   ...rest
 }: ProgressCircleProps) => {
   const progress = ((value - min) / (max - min)) * 100
@@ -48,7 +48,7 @@ export const ProgressCircle = ({
 export const ProgressBar = ({
   showValue,
   value,
-  color = 'primary',
+  color = 'pri',
   size = 'md',
   label,
   min = 0,
@@ -77,7 +77,7 @@ export const ProgressBar = ({
   )
 }
 
-export const ProgressBarStackItem = ({ color = 'primary', value }: ProgressBarStackItemProps) => {
+export const ProgressBarStackItem = ({ color = 'pri', value }: ProgressBarStackItemProps) => {
   return <div className={`pr-s_itm u_${color}`} style={{ width: `${value}%` }} />
 }
 

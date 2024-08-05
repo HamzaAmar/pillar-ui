@@ -10,7 +10,7 @@ import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
 export const Alert = forwardRef((props, forwardedRef) => {
   const {
-    color = 'danger',
+    color = 'dan',
     message,
     size,
     title,

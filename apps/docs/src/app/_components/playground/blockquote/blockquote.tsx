@@ -41,19 +41,19 @@ export const BlockquoteCorners = () => {
 export const BlockquoteColors = () => {
   return (
     <Paper p="sm" background="bg-2" corner="sm" flow="sm">
-      <Blockquote color="danger" cite="John Doe">
+      <Blockquote color="dan" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="warning" cite="John Doe">
+      <Blockquote color="war" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="success" cite="John Doe">
+      <Blockquote color="suc" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="primary" cite="John Doe">
+      <Blockquote color="pri" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="secondary" cite="John Doe">
+      <Blockquote color="sec" cite="John Doe">
         This is the quoted text.
       </Blockquote>
       <Blockquote color="bg" cite="John Doe">
@@ -94,21 +94,21 @@ export const BlockquoteSizes = () => {
 export const CiteBlockquote = () => {
   return (
     <div className="l_flow__md">
-      <Blockquote color="danger">
+      <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
         <BlockquoteCite title="Hello world" />
       </Blockquote>
 
-      <Blockquote color="danger">
+      <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
         <BlockquoteCite title="Hello world" align="end" />
       </Blockquote>
 
-      <Blockquote color="danger">
+      <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?

@@ -22,7 +22,7 @@
   }
 
   &:hover > .c-h {
-    box-shadow: 0 0 0 0.125em var(--clr-7, var(--pri-7));
+    box-shadow: 0 0 0 0.125em var(--c-7, var(--pri-7));
   }
 }
 
@@ -35,8 +35,8 @@
   }
   &:checked + .c-h,
   &:indeterminate + .c-h {
-    background-color: var(--clr-9, none);
-    color: var(--clr-1); /* Responsible For The Color Of The Check Icon stroke  white in checked state */
+    background-color: var(--c-9, none);
+    color: var(--c-1); /* Responsible For The Color Of The Check Icon stroke  white in checked state */
   }
 
   &:disabled + .c-h {

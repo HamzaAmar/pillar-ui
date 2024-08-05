@@ -4,12 +4,12 @@ import React from 'react'
 export const SwitchPlayGround = () => {
   return (
     <Paper className="playground" as={Flex} wrap items="center" gap="sm" border p="sm" background="bg-3" corner="sm">
-      <Avatar title="Success!" color="danger" />
-      <Avatar title="Success!" color="warning" />
-      <Avatar title="Success!" color="success" />
-      <Avatar title="Success!" color="primary" />
+      <Avatar title="Success!" color="dan" />
+      <Avatar title="Success!" color="war" />
+      <Avatar title="Success!" color="suc" />
+      <Avatar title="Success!" color="pri" />
       <Avatar title="Success!" color="bg" />
-      <Avatar title="Success!" color="secondary" />
+      <Avatar title="Success!" color="sec" />
     </Paper>
   )
 }
@@ -33,11 +33,11 @@ export const SwitchSizes = () => {
 export const SwitchDefaultPressed = () => {
   return (
     <Paper as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
-      <Switch label="Hello" defaultPressed color="danger" />
-      <Switch label="Hello" defaultPressed color="warning" />
-      <Switch label="Hello" defaultPressed color="success" />
-      <Switch label="Hello" defaultPressed color="primary" />
-      <Switch label="Hello" defaultPressed color="secondary" />
+      <Switch label="Hello" defaultPressed color="dan" />
+      <Switch label="Hello" defaultPressed color="war" />
+      <Switch label="Hello" defaultPressed color="suc" />
+      <Switch label="Hello" defaultPressed color="pri" />
+      <Switch label="Hello" defaultPressed color="sec" />
       <Switch label="Hello" defaultPressed color="bg" />
     </Paper>
   )
@@ -68,11 +68,11 @@ export const SwitchCorners = () => {
 export const SwitchColors = () => {
   return (
     <Paper as={Flex} wrap gap="sm" items="center" className="playground" border p="sm" background="bg-3" corner="sm">
-      <Switch label="Hello" color="danger" />
-      <Switch label="Hello" color="warning" />
-      <Switch label="Hello" color="success" />
-      <Switch label="Hello" color="primary" />
-      <Switch label="Hello" color="secondary" />
+      <Switch label="Hello" color="dan" />
+      <Switch label="Hello" color="war" />
+      <Switch label="Hello" color="suc" />
+      <Switch label="Hello" color="pri" />
+      <Switch label="Hello" color="sec" />
       <Switch label="Hello" color="bg" />
     </Paper>
   )

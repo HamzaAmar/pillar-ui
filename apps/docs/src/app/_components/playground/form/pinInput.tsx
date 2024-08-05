@@ -48,9 +48,9 @@ export const PinInputCorners = () => {
 export const PinInputColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
-      <PinInput color="primary" />
-      <PinInput color="warning" />
-      <PinInput color="secondary" />
+      <PinInput color="pri" />
+      <PinInput color="war" />
+      <PinInput color="sec" />
       <PinInput color="bg" />
     </Paper>
   )

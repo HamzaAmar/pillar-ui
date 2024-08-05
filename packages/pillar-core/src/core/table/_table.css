@@ -12,29 +12,29 @@
 
 .t-a-c,
 .t-a-c .column {
-  border: var(--clr-6) 1px solid;
+  border: var(--c-6) 1px solid;
 }
 
 .t-a-striped {
   & .row__body:nth-child(odd) {
-    background-color: var(--clr-4);
+    background-color: var(--c-4);
   }
 }
 .t-a-soft {
   & .row {
-    background-color: var(--clr-5);
+    background-color: var(--c-5);
   }
 }
 .t-a-head-color {
   & .row__head {
-    background-color: var(--clr-8);
-    color: var(--clr-12);
+    background-color: var(--c-8);
+    color: var(--c-12);
   }
 }
 
 .row {
-  border-block-end: var(--clr-6) 1px solid;
-  background-color: var(--clr-1);
+  border-block-end: var(--c-6) 1px solid;
+  background-color: var(--c-1);
   width: 100%;
 }
 

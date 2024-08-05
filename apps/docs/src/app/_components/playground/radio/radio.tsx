@@ -4,12 +4,12 @@ import React from 'react'
 export const RadioPlayGround = () => {
   return (
     <Paper className="playground" as={Flex} wrap gap="sm" border p="sm" background="bg-3" corner="sm" items="center">
-      <Avatar title="Success!" color="danger" />
-      <Avatar title="Success!" color="warning" />
-      <Avatar title="Success!" color="success" />
-      <Avatar title="Success!" color="primary" />
+      <Avatar title="Success!" color="dan" />
+      <Avatar title="Success!" color="war" />
+      <Avatar title="Success!" color="suc" />
+      <Avatar title="Success!" color="pri" />
       <Avatar title="Success!" color="bg" />
-      <Avatar title="Success!" color="secondary" />
+      <Avatar title="Success!" color="sec" />
     </Paper>
   )
 }
@@ -20,9 +20,9 @@ export const RadioSizes = () => {
       <Radio size="3xs" name="red" label="Red" />
       <Radio size="2xs" name="green" label="Green" />
       <Radio size="xs" name="orange" label="Orange" />
-      <Radio size="sm" name="primary" label="primary" />
+      <Radio size="sm" name="pri" label="pri" />
       <Radio size="lg" name="bg" label="Slate" />
-      <Radio size="3xl" name="secondary" label="Secondary" />
+      <Radio size="3xl" name="sec" label="Secondary" />
     </Paper>
   )
 }
@@ -30,9 +30,9 @@ export const RadioSizes = () => {
 export const RadioVariants = () => {
   return (
     <Paper className="playground" as={Flex} gap="sm" items="center" border p="sm" background="bg-3" corner="sm">
-      <Radio color="secondary" name="secondary" label="Secondary" />
-      <Radio variant="outline" color="secondary" name="secondary2" label="Secondary" />
-      <Radio variant="soft" color="secondary" name="secondary3" label="Secondary" />
+      <Radio color="sec" name="sec" label="Secondary" />
+      <Radio variant="outline" color="sec" name="sec2" label="Secondary" />
+      <Radio variant="soft" color="sec" name="sec3" label="Secondary" />
     </Paper>
   )
 }
@@ -72,12 +72,12 @@ export const RadioLabel = () => {
 export const RadioColors = () => {
   return (
     <Paper className="playground" border p="sm" as={Flex} items="center" gap="sm" background="bg-3" corner="sm">
-      <Radio color="danger" name="red" label="Red" />
-      <Radio color="success" name="green" label="Green" />
-      <Radio color="warning" name="orange" label="Orange" />
-      <Radio color="primary" name="primary" label="Primary" />
+      <Radio color="dan" name="red" label="Red" />
+      <Radio color="suc" name="green" label="Green" />
+      <Radio color="war" name="orange" label="Orange" />
+      <Radio color="pri" name="pri" label="Primary" />
       <Radio color="bg" name="bg" label="Slate" />
-      <Radio color="secondary" name="secondary" label="Secondary" />
+      <Radio color="sec" name="sec" label="Secondary" />
     </Paper>
   )
 }

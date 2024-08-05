@@ -13,14 +13,30 @@ function AccordionBase(props: any) {
   return (
     <Accordion {...props}>
       <AccordionItem value={1}>
-        <AccordionButton>Hello</AccordionButton>
+        <AccordionButton>
+          <div>
+            <Text weight="medium">Nice to Meet You</Text>
+            <Text size="2xs">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
+              voluptatem obcaecati temporibus
+            </Text>
+          </div>
+        </AccordionButton>
         <AccordionPanel>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt hic debitis, neque accusamus atque
           provident facilis vel ipsa illo officia aliquid dolore veritat iente at cum dolores.
         </AccordionPanel>
       </AccordionItem>
       <AccordionItem value={2}>
-        <AccordionButton>Hello</AccordionButton>
+        <AccordionButton>
+          <div>
+            <Text weight="medium">Nice to Meet You</Text>
+            <Text size="2xs">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
+              voluptatem obcaecati temporibus
+            </Text>
+          </div>
+        </AccordionButton>
         <AccordionPanel>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos laborum distinctio officiis a eaque
           perspiciatis itaque, fugiat quaerat! Natus beatae eius ullam sed repellendus aliquam provident quod fugiat
@@ -28,7 +44,15 @@ function AccordionBase(props: any) {
         </AccordionPanel>
       </AccordionItem>
       <AccordionItem value={3}>
-        <AccordionButton>Hello</AccordionButton>
+        <AccordionButton>
+          <div>
+            <Text weight="medium">Nice to Meet You</Text>
+            <Text size="2xs">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
+              voluptatem obcaecati temporibus
+            </Text>
+          </div>
+        </AccordionButton>
         <AccordionPanel>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error odio
           animi mollitia? Blanditiis

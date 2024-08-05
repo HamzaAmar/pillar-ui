@@ -35,7 +35,7 @@ export function Hero() {
       </div>
 
       <Flex gap="sm">
-        <Button as={Link} href="/docs/getting-started/create-react-app" icon={<Booking />}>
+        <Button as={Link} href="/docs/getting-started/cra" icon={<Booking />}>
           Get Started
         </Button>
 

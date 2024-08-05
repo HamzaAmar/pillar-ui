@@ -37,19 +37,19 @@
 /* Avatar Variants */
 
 .a-v-soft {
-  --bg: var(--clr-3);
-  color: var(--clr-11);
+  --bg: var(--c-3);
+  color: var(--c-11);
 }
 
 .a-v-solid {
-  --bg: var(--clr-8);
-  color: var(--clr-12);
+  --bg: var(--c-8);
+  color: var(--c-12);
 }
 .a-v-outline,
 .a-v-dashed {
-  --bg: var(--clr-3);
+  --bg: var(--c-3);
   padding: 3px;
-  border: 2px solid var(--clr-9);
+  border: 2px solid var(--c-9);
 }
 
 .a-v-dashed {

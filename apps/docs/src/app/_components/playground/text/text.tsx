@@ -102,29 +102,29 @@ export const TextAlign = () => {
 export const TextColors = () => {
   return (
     <Paper border p="sm" flow="sm" background="bg-3" corner="sm">
-      <Text color="danger">Hello World</Text>
-      <Text color="success">Hello World</Text>
-      <Text color="warning">Hello World</Text>
-      <Text color="primary">Hello World</Text>
+      <Text color="dan">Hello World</Text>
+      <Text color="suc">Hello World</Text>
+      <Text color="war">Hello World</Text>
+      <Text color="pri">Hello World</Text>
       <Text color="bg">Hello World</Text>
-      <Text color="secondary">Hello World</Text>
+      <Text color="sec">Hello World</Text>
 
-      <Text contrast="low" color="danger">
+      <Text contrast="low" color="dan">
         Hello World
       </Text>
-      <Text contrast="low" color="success">
+      <Text contrast="low" color="suc">
         Hello World
       </Text>
-      <Text contrast="low" color="warning">
+      <Text contrast="low" color="war">
         Hello World
       </Text>
-      <Text contrast="low" color="primary">
+      <Text contrast="low" color="pri">
         Hello World
       </Text>
       <Text contrast="low" color="bg">
         Hello World
       </Text>
-      <Text contrast="low" color="secondary">
+      <Text contrast="low" color="sec">
         Hello World
       </Text>
     </Paper>

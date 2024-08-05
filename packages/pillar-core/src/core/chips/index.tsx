@@ -7,7 +7,7 @@ import type { ChipsProps } from './chips.type'
 export const Chips = forwardRef((props, ref) => {
   const {
     size,
-    color = 'primary',
+    color = 'pri',
     as: Tag = 'span',
     icon,
     iconPosition = 'start',

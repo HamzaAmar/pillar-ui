@@ -10,7 +10,7 @@ export function PillarSupport() {
           md"
         >
           <div className="l_flow__2xs">
-            <Text color="primary" contrast="low" size="lg">
+            <Text color="pri" contrast="low" size="lg">
               Framework Harmony:
             </Text>
             <Heading className="highlight" transform="uppercase" as="h2" size="3xl">

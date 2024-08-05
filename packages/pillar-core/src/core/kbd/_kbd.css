@@ -1,6 +1,6 @@
 .k-d {
   border-bottom-width: 0.175em;
-  box-shadow: inset 1px 1px 0.175em var(--clr-6, var(--bg-6));
+  box-shadow: inset 1px 1px 0.175em var(--c-6, var(--bg-6));
   border: 0.075em solid transparent;
   padding: 0.125em 0.25em;
   line-height: 1;

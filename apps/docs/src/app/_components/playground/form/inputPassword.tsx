@@ -66,12 +66,12 @@ export const InputPasswordCorners = () => {
 export const InputPasswordColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
-      <InputPassword color="primary" variant="bordered" autoFocus placeholder="Focus" />
-      <InputPassword color="warning" variant="bordered" autoFocus placeholder="Normal" />
-      <InputPassword color="secondary" variant="outline" autoFocus placeholder="Disabled" />
+      <InputPassword color="pri" variant="bordered" autoFocus placeholder="Focus" />
+      <InputPassword color="war" variant="bordered" autoFocus placeholder="Normal" />
+      <InputPassword color="sec" variant="outline" autoFocus placeholder="Disabled" />
       <InputPassword color="bg" variant="filled" autoFocus placeholder="isInvalid" />
       <InputPassword
-        color="success"
+        color="suc"
         variant="bordered"
         autoFocus
         prefixInput={<User width="16" />}
@@ -104,15 +104,10 @@ export const SizeIconsPassword = () => {
 export const InputPasswordCustomIcon = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
+      <InputPassword placeholder="enter your password" color="pri" visibleIcon={<Lock />} hiddenIcon={<LockOff />} />
       <InputPassword
         placeholder="enter your password"
-        color="primary"
-        visibleIcon={<Lock />}
-        hiddenIcon={<LockOff />}
-      />
-      <InputPassword
-        placeholder="enter your password"
-        color="warning"
+        color="war"
         visibleIcon={<OpenSource />}
         hiddenIcon={<Close />}
       />

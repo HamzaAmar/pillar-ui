@@ -6,12 +6,12 @@ export const AlertPlayGround = () => {
   return (
     <div>
       <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
-        <Alert title="Success!" color="danger" />
-        <Alert title="Success!" color="warning" />
-        <Alert title="Success!" color="success" />
-        <Alert title="Success!" color="primary" />
+        <Alert title="Success!" color="dan" />
+        <Alert title="Success!" color="war" />
+        <Alert title="Success!" color="suc" />
+        <Alert title="Success!" color="pri" />
         <Alert title="Success!" color="bg" />
-        <Alert title="Success!" color="secondary" />
+        <Alert title="Success!" color="sec" />
       </Paper>
     </div>
   )
@@ -19,12 +19,12 @@ export const AlertPlayGround = () => {
 export const AlertColors = () => {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
-      <Alert title="Success!" color="danger" />
-      <Alert title="Success!" color="warning" />
-      <Alert title="Success!" color="success" />
-      <Alert title="Success!" color="primary" />
+      <Alert title="Success!" color="dan" />
+      <Alert title="Success!" color="war" />
+      <Alert title="Success!" color="suc" />
+      <Alert title="Success!" color="pri" />
       <Alert title="Success!" color="bg" />
-      <Alert title="Success!" color="secondary" />
+      <Alert title="Success!" color="sec" />
     </Paper>
   )
 }
@@ -132,8 +132,8 @@ export const AlertInline = () => {
 export const AlertCustomStyle = () => {
   return (
     <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
-      <Alert color="danger" title="hello" className="u_secondary" />
-      <Alert color="danger" title="hello" style={{ background: 'success' }} />
+      <Alert color="dan" title="hello" className="u_secondary" />
+      <Alert color="dan" title="hello" style={{ background: 'green' }} />
     </Paper>
   )
 }

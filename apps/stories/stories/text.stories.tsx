@@ -209,40 +209,40 @@ export function TextAligns() {
 export function TextColors() {
   return (
     <div className="l_flow">
-      <Text color="danger" contrast="high">
+      <Text color="dan" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
 
-      <Text color="secondary">
+      <Text color="sec">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="success">
+      <Text color="suc">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="warning">
+      <Text color="war">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="primary">
+      <Text color="pri">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
       <Text color="bg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
 
-      <Text color="danger" contrast="low">
+      <Text color="dan" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
 
-      <Text color="secondary" contrast="low">
+      <Text color="sec" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="success" contrast="low">
+      <Text color="suc" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="warning" contrast="low">
+      <Text color="war" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="primary" contrast="low">
+      <Text color="pri" contrast="low">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
       <Text color="bg" contrast="low">

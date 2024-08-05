@@ -17,7 +17,7 @@
   position: absolute;
   inset-inline-start: 0;
   top: 0;
-  background-image: linear-gradient(to right, var(--clr-10), var(--clr-9));
+  background-image: linear-gradient(to right, var(--c-10), var(--c-9));
   border-radius: inherit;
 }
 
@@ -45,7 +45,7 @@
 .pr-c_bar {
   font-size: 1em;
   fill: none;
-  stroke: var(--clr-9);
+  stroke: var(--c-9);
   stroke-linecap: round;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
@@ -74,7 +74,7 @@
 
 .pr-s_itm {
   height: 100%;
-  background-color: var(--clr-10);
+  background-color: var(--c-10);
 }
 .pr-s_cnt {
   position: relative;
@@ -83,7 +83,7 @@
     content: '';
     width: 0.625rem;
     height: 0.625rem;
-    background-color: var(--clr-10);
+    background-color: var(--c-10);
     border-radius: 50%;
   }
 }

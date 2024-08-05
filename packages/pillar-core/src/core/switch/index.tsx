@@ -9,7 +9,7 @@ import { classnames } from '@pillar-ui/utils'
 
 export const Switch = forwardRef((props, ref) => {
   const {
-    color = 'primary',
+    color = 'pri',
     size,
     corner,
     label,

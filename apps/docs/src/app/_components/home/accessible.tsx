@@ -5,7 +5,7 @@ export function Accessible() {
   return (
     <Flex direction="column" justify="center" className="section" gap="2xl">
       <div>
-        <Text color="primary" contrast="low" size="lg">
+        <Text color="pri" contrast="low" size="lg">
           Our Commitment
         </Text>
         <Heading transform="uppercase" className="highlight" as="h2" size="2xl">

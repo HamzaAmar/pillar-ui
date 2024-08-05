@@ -17,7 +17,7 @@
   }
 
   &.u_soft {
-    border-inline-color: var(--clr-9);
+    border-inline-color: var(--c-9);
   }
 }
 

@@ -1,5 +1,5 @@
 .b-l {
-  border-inline-start: 4px solid var(--clr-9);
+  border-inline-start: 4px solid var(--c-9);
   background-clip: padding-box;
   padding: 1.5em;
   background-color: var(--bg-3);

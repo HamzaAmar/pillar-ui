@@ -4,12 +4,12 @@ import React from 'react'
 export const SeparatorPlayGround = () => {
   return (
     <Paper className="playground" flow="sm" border p="sm" background="bg-3" corner="sm">
-      <Separator color="danger" />
-      <Separator color="warning" />
-      <Separator color="success" />
-      <Separator color="primary" />
+      <Separator color="dan" />
+      <Separator color="war" />
+      <Separator color="suc" />
+      <Separator color="pri" />
       <Separator color="bg" />
-      <Separator color="secondary" />
+      <Separator color="sec" />
     </Paper>
   )
 }
@@ -43,11 +43,11 @@ export const SeparatorThickness = () => {
 export const SeparatorColors = () => {
   return (
     <Paper className="playground" border p="sm" flow="sm" background="bg-3" corner="sm">
-      <Separator color="success" />
-      <Separator color="danger" />
-      <Separator color="warning" />
-      <Separator color="primary" />
-      <Separator color="secondary" />
+      <Separator color="suc" />
+      <Separator color="dan" />
+      <Separator color="war" />
+      <Separator color="pri" />
+      <Separator color="sec" />
       <Separator color="bg" />
     </Paper>
   )

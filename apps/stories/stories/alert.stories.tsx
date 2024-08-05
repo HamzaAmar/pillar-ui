@@ -25,11 +25,11 @@ function AlertBase({
 export const AlertColors = () => {
   return (
     <Flex gap="sm" direction="column">
-      <AlertBase color="danger" />
-      <AlertBase color="warning" />
-      <AlertBase color="success" />
-      <AlertBase color="secondary" />
-      <AlertBase color="primary" />
+      <AlertBase color="dan" />
+      <AlertBase color="war" />
+      <AlertBase color="suc" />
+      <AlertBase color="sec" />
+      <AlertBase color="pri" />
       <AlertBase color="bg" />
     </Flex>
   )
@@ -44,7 +44,7 @@ export const AlertControlled = () => {
   return (
     <Flex gap="sm" direction="column">
       <Button onClick={onClose}>{open ? 'Hide' : 'Open'} The Alert</Button>
-      <AlertBase color="danger" visible={open} onClose={onClose} closable />
+      <AlertBase color="dan" visible={open} onClose={onClose} closable />
     </Flex>
   )
 }
@@ -112,7 +112,7 @@ export const AlertVariant = () => {
     <div className="l_flow__md">
       {Variants.map((variant) => (
         <Flex key={variant} direction="column" gap="sm">
-          <AlertBase variant={variant} color="warning" />
+          <AlertBase variant={variant} color="war" />
         </Flex>
       ))}
     </div>
@@ -122,10 +122,10 @@ export const AlertVariant = () => {
 export const AlertIcon = () => {
   return (
     <Flex direction="column" gap="sm">
-      <AlertBase icon={<CircleWarning width="20" />} color="danger" />
-      <AlertBase icon={<CircleCheck width="20" />} color="success" />
-      <AlertBase icon={<CircleWarning width="20" />} color="warning" />
-      <AlertBase icon={<CircleInfo width="20" />} color="info" />
+      <AlertBase icon={<CircleWarning width="20" />} color="dan" />
+      <AlertBase icon={<CircleCheck width="20" />} color="suc" />
+      <AlertBase icon={<CircleWarning width="20" />} color="war" />
+      <AlertBase icon={<CircleInfo width="20" />} color="inf" />
     </Flex>
   )
 }
@@ -156,16 +156,16 @@ export const AlertInline = () => {
 export const AlertTitleIcon = () => {
   return (
     <Flex direction="column" gap="sm">
-      <Alert color="danger" title="hello" />
-      <Alert color="success" message="hello world something is wrong in the app here we go" />
-      <Alert color="warning" icon={<CircleWarning width="20" />} title="hello" />
+      <Alert color="dan" title="hello" />
+      <Alert color="suc" message="hello world something is wrong in the app here we go" />
+      <Alert color="war" icon={<CircleWarning width="20" />} title="hello" />
       <Alert
-        color="warning"
+        color="war"
         icon={<CircleWarning width="20" />}
         message="hello world something is wrong in the app here we go"
       />
       <Alert
-        color="warning"
+        color="war"
         icon={<CircleWarning width="20" />}
         title="hello"
         message="hello world something is wrong in the app here we go"
@@ -177,14 +177,14 @@ export const AlertTitleIcon = () => {
 export const AlertCustomStyle = () => {
   return (
     <Flex direction="column" gap="sm">
-      <Alert color="danger" title="hello" style={{ backgroundColor: 'red' }} />
-      <Alert color="danger" title="hello" style={{ backgroundColor: 'green' }} closable />
-      <Alert color="danger" title="hello" style={{ backgroundColor: 'orange' }} variant="outline" />
-      <Alert color="danger" title="hello" style={{ backgroundColor: 'purple' }} variant="soft" />
-      <Alert color="danger" title="hello" className="u_secondary" />
-      <Alert color="danger" title="hello" className="u_secondary" closable />
-      <Alert color="danger" title="hello" className="u_secondary" variant="outline" />
-      <Alert color="danger" title="hello" className="u_secondary" variant="soft" />
+      <Alert color="dan" title="hello" style={{ backgroundColor: 'red' }} />
+      <Alert color="dan" title="hello" style={{ backgroundColor: 'green' }} closable />
+      <Alert color="dan" title="hello" style={{ backgroundColor: 'orange' }} variant="outline" />
+      <Alert color="dan" title="hello" style={{ backgroundColor: 'purple' }} variant="soft" />
+      <Alert color="dan" title="hello" className="u_secondary" />
+      <Alert color="dan" title="hello" className="u_secondary" closable />
+      <Alert color="dan" title="hello" className="u_secondary" variant="outline" />
+      <Alert color="dan" title="hello" className="u_secondary" variant="soft" />
     </Flex>
   )
 }

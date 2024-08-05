@@ -83,29 +83,29 @@ export const HeadingAlign = () => {
 export const HeadingColors = () => {
   return (
     <Paper className="playground" border p="sm" flow="md" background="bg-3" corner="sm">
-      <Heading color="danger">Hello World</Heading>
-      <Heading color="success">Hello World</Heading>
-      <Heading color="warning">Hello World</Heading>
-      <Heading color="primary">Hello World</Heading>
+      <Heading color="dan">Hello World</Heading>
+      <Heading color="suc">Hello World</Heading>
+      <Heading color="war">Hello World</Heading>
+      <Heading color="pri">Hello World</Heading>
       <Heading color="bg">Hello World</Heading>
-      <Heading color="secondary">Hello World</Heading>
+      <Heading color="sec">Hello World</Heading>
 
-      <Heading contrast="low" color="danger">
+      <Heading contrast="low" color="dan">
         Hello World
       </Heading>
-      <Heading contrast="low" color="success">
+      <Heading contrast="low" color="suc">
         Hello World
       </Heading>
-      <Heading contrast="low" color="warning">
+      <Heading contrast="low" color="war">
         Hello World
       </Heading>
-      <Heading contrast="low" color="primary">
+      <Heading contrast="low" color="pri">
         Hello World
       </Heading>
       <Heading contrast="low" color="bg">
         Hello World
       </Heading>
-      <Heading contrast="low" color="secondary">
+      <Heading contrast="low" color="sec">
         Hello World
       </Heading>
     </Paper>

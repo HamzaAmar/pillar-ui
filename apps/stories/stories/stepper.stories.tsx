@@ -126,12 +126,12 @@ export const StepperCorners = () => {
 export const StepperColors = () => {
   return (
     <div className="l_flow__md">
-      <StepperBase color="danger" />
-      <StepperBase color="warning" />
-      <StepperBase color="success" />
-      <StepperBase color="secondary" />
+      <StepperBase color="dan" />
+      <StepperBase color="war" />
+      <StepperBase color="suc" />
+      <StepperBase color="sec" />
       <StepperBase color="bg" />
-      <StepperBase color="primary" />
+      <StepperBase color="pri" />
     </div>
   )
 }

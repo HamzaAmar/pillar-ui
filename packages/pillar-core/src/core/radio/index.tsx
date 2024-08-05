@@ -17,7 +17,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
   const {
     label,
     id,
-    color = provider?.color ?? 'primary',
+    color = provider?.color ?? 'pri',
     size = provider?.size ?? 'md',
     name = provider?.name,
     showLabel = false,
@@ -77,7 +77,7 @@ export const Radio = (props: RadioProps) => {
   const {
     label,
     id,
-    color = ctx?.color ?? 'primary',
+    color = ctx?.color ?? 'pri',
     size = ctx?.size ?? 'md',
     name = ctx?.name,
     variant = 'solid',

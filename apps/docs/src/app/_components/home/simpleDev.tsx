@@ -6,7 +6,7 @@ export function SimplifyDevelopment() {
     <Paper as={Flex} items="center" gap="lg" className="section">
       <div className="simplify-dev--container l_flow__xl">
         <div>
-          <Text color="primary" contrast="low" size="lg">
+          <Text color="pri" contrast="low" size="lg">
             Deliver Projects Faster
           </Text>
           <Heading className="highlight" as="h2" size="3xl" transform="capitalize">

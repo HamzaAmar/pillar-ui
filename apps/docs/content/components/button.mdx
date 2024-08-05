@@ -26,19 +26,19 @@ Example usage:
 ```tsx showLineNumbers title="Button.tsx"
 function ButtonColors(){
     return(
-        <Button color='danger' >Hello World</Button>
+        <Button color="dan" >Hello World</Button>
         <Button color='orange' >Hello World</Button>
-        <Button color='success' >Hello World</Button>
-        <Button color='primary' >Hello World</Button>
-        <Button color='secondary' >Hello World</Button>
+        <Button color="suc" >Hello World</Button>
+        <Button color="pri" >Hello World</Button>
+        <Button color="sec" >Hello World</Button>
         <Button color='bg' >Hello World</Button>
 
         // ===== Icon Button Section=====
-        <IconButton color='danger' />
+        <IconButton color="dan" />
         <IconButton color='orange' />
-        <IconButton color='success' />
-        <IconButton color='primary' />
-        <IconButton color='secondary' />
+        <IconButton color="suc" />
+        <IconButton color="pri" />
+        <IconButton color="sec" />
         <IconButton color='bg' />
     )
 }
@@ -191,7 +191,7 @@ import { Close, Maximun, Minimum } from '@pillar-ui/icons'
 
 function ButtonIcon() {
   return (
-    <Paper borderColor="opacity-6" flow="sm" p="sm" background="bg-3" corner="sm">
+    <Paper borderColor="opa-6" flow="sm" p="sm" background="bg-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
         <Button icon={<Close />} iconPosition="end">
           Hello World
@@ -222,19 +222,19 @@ Example usage:
 function ButtonIcon() {
   return (
     <Paper>
-      <Button fluid color="danger">
+      <Button fluid color="dan">
         Hello World
       </Button>
       <Button fluid color="orange">
         Hello World
       </Button>
-      <Button fluid color="success">
+      <Button fluid color="suc">
         Hello World
       </Button>
-      <Button fluid color="primary">
+      <Button fluid color="pri">
         Hello World
       </Button>
-      <Button fluid color="secondary">
+      <Button fluid color="sec">
         Hello World
       </Button>
       <Button fluid color="bg">
@@ -255,13 +255,13 @@ Same as Button.
 function IconButtonStates() {
   return (
     <Paper as={Flex} items="center" gap="xs">
-      <Button state="idle" color="success">
+      <Button state="idle" color="suc">
         Idle
       </Button>
-      <Button state="loading" color="success">
+      <Button state="loading" color="suc">
         Loading
       </Button>
-      <Button disabled color="success">
+      <Button disabled color="suc">
         Disabled
       </Button>
     </Paper>
@@ -283,10 +283,10 @@ import { Button } from '@pillar-ui/icons'
 function ButtonsCustomStyle() {
   return (
     <Flex items="center" gap="xs">
-      <Button style={{ background: 'orange' }} state="idle" color="success">
+      <Button style={{ background: 'orange' }} state="idle" color="suc">
         Hello world
       </Button>
-      <Button className="u_secondary" color="success">
+      <Button className="u_secondary" color="suc">
         Hello world
       </Button>
     </Flex>

@@ -9,7 +9,6 @@ type Shadow = Corner
 export type Ratio = 'square' | 'landscape' | 'portrait' | 'widescreen' | 'ultrawide' | 'golden'
 export interface PaperProps {
   background?: ColorShade
-  // color : 'danger' | 'danger' | 'success' | 'success' | 'orange' | 'warning' | 'primary'
   color?: ColorShade
   // corner types 'sharp' | 'xs' | 'sm'  | 'md' | 'lg' | 'xl'| 'circle' | 'full'
   corner?: Corner | CornerBlob | CornerHand

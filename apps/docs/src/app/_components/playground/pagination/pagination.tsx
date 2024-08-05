@@ -5,11 +5,11 @@ export const PaginationPlayGround = () => {
   return (
     <Paper as={Flex} wrap gap="sm" border p="sm" background="bg-3" corner="sm" items="center">
       <Pagination count={10} />
-      <Pagination count={10} color="danger" />
-      <Pagination count={10} color="success" />
-      <Pagination count={10} color="warning" />
-      <Pagination count={10} color="primary" />
-      <Pagination count={10} color="secondary" />
+      <Pagination count={10} color="dan" />
+      <Pagination count={10} color="suc" />
+      <Pagination count={10} color="war" />
+      <Pagination count={10} color="pri" />
+      <Pagination count={10} color="sec" />
       <Pagination count={10} color="bg" />
     </Paper>
   )
@@ -73,12 +73,12 @@ export const PaginationColors = () => {
   return (
     <Paper border p="sm" flow="sm" background="bg-3" corner="sm">
       <Pagination count={10} title="Esc" />
-      <Pagination count={10} title="Esc" color="danger" />
-      <Pagination count={10} title="Esc" color="success" />
-      <Pagination count={10} title="Esc" color="warning" />
-      <Pagination count={10} title="Esc" color="primary" />
+      <Pagination count={10} title="Esc" color="dan" />
+      <Pagination count={10} title="Esc" color="suc" />
+      <Pagination count={10} title="Esc" color="war" />
+      <Pagination count={10} title="Esc" color="pri" />
       <Pagination count={10} title="Esc" color="bg" />
-      <Pagination count={10} title="Esc" color="secondary" />
+      <Pagination count={10} title="Esc" color="sec" />
     </Paper>
   )
 }

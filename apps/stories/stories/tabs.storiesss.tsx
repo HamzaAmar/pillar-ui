@@ -77,11 +77,11 @@
 // export const TabColor = () => {
 //   return (
 //     <Flex direction="column" gap="sm">
-//       <TabBase color="danger" defaultValue={1} />
-//       <TabBase color="warning" defaultValue={1} />
-//       <TabBase color="success" defaultValue={1} />
-//       <TabBase color="primary" defaultValue={1} />
-//       <TabBase color="secondary" defaultValue={1} />
+//       <TabBase color="dan" defaultValue={1} />
+//       <TabBase color="war" defaultValue={1} />
+//       <TabBase color="suc" defaultValue={1} />
+//       <TabBase color="pri" defaultValue={1} />
+//       <TabBase color="sec" defaultValue={1} />
 //       <TabBase color="bg" defaultValue={1} />
 //     </Flex>
 //   )
@@ -100,35 +100,35 @@
 //   return (
 //     <Grid grid="1fr 1fr" gap="sm">
 //       <Flex direction="column" gap="sm">
-//         <TabBase variant="solid" color="danger" defaultValue={1} />
-//         <TabBase variant="solid" color="warning" defaultValue={1} />
-//         <TabBase variant="solid" color="success" defaultValue={1} />
-//         <TabBase variant="solid" color="primary" defaultValue={1} />
-//         <TabBase variant="solid" color="secondary" defaultValue={1} />
+//         <TabBase variant="solid" color="dan" defaultValue={1} />
+//         <TabBase variant="solid" color="war" defaultValue={1} />
+//         <TabBase variant="solid" color="suc" defaultValue={1} />
+//         <TabBase variant="solid" color="pri" defaultValue={1} />
+//         <TabBase variant="solid" color="sec" defaultValue={1} />
 //         <TabBase variant="solid" color="bg" defaultValue={1} />
 //       </Flex>
 //       <Flex direction="column" gap="sm">
-//         <TabBase variant="outline" color="danger" defaultValue={1} />
-//         <TabBase variant="outline" color="warning" defaultValue={1} />
-//         <TabBase variant="outline" color="success" defaultValue={1} />
-//         <TabBase variant="outline" color="primary" defaultValue={1} />
-//         <TabBase variant="outline" color="secondary" defaultValue={1} />
+//         <TabBase variant="outline" color="dan" defaultValue={1} />
+//         <TabBase variant="outline" color="war" defaultValue={1} />
+//         <TabBase variant="outline" color="suc" defaultValue={1} />
+//         <TabBase variant="outline" color="pri" defaultValue={1} />
+//         <TabBase variant="outline" color="sec" defaultValue={1} />
 //         <TabBase variant="outline" color="bg" defaultValue={1} />
 //       </Flex>
 //       <Flex direction="column" gap="sm">
-//         <TabBase variant="soft" color="danger" defaultValue={1} />
-//         <TabBase variant="soft" color="warning" defaultValue={1} />
-//         <TabBase variant="soft" color="success" defaultValue={1} />
-//         <TabBase variant="soft" color="primary" defaultValue={1} />
-//         <TabBase variant="soft" color="secondary" defaultValue={1} />
+//         <TabBase variant="soft" color="dan" defaultValue={1} />
+//         <TabBase variant="soft" color="war" defaultValue={1} />
+//         <TabBase variant="soft" color="suc" defaultValue={1} />
+//         <TabBase variant="soft" color="pri" defaultValue={1} />
+//         <TabBase variant="soft" color="sec" defaultValue={1} />
 //         <TabBase variant="soft" color="bg" defaultValue={1} />
 //       </Flex>
 //       <Flex direction="column" gap="sm">
-//         <TabBase color="danger" defaultValue={1} />
-//         <TabBase color="warning" defaultValue={1} />
-//         <TabBase color="success" defaultValue={1} />
-//         <TabBase color="primary" defaultValue={1} />
-//         <TabBase color="secondary" defaultValue={1} />
+//         <TabBase color="dan" defaultValue={1} />
+//         <TabBase color="war" defaultValue={1} />
+//         <TabBase color="suc" defaultValue={1} />
+//         <TabBase color="pri" defaultValue={1} />
+//         <TabBase color="sec" defaultValue={1} />
 //         <TabBase color="bg" defaultValue={1} />
 //       </Flex>
 //     </Grid>

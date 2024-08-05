@@ -94,24 +94,24 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="xs">
           Striped Table danger
         </Heading>
-        <NormalTableExample color="danger" variant="striped" />
+        <NormalTableExample color="dan" variant="striped" />
 
         <Heading as="h2" size="xs">
           Striped Table success
         </Heading>
-        <NormalTableExample color="success" variant="striped" />
+        <NormalTableExample color="suc" variant="striped" />
         <Heading as="h2" size="xs">
           Striped Table Secondary
         </Heading>
-        <NormalTableExample color="secondary" variant="striped" />
+        <NormalTableExample color="sec" variant="striped" />
         <Heading as="h2" size="xs">
           Striped Table Orange
         </Heading>
-        <NormalTableExample color="warning" variant="striped" />
+        <NormalTableExample color="war" variant="striped" />
         <Heading as="h2" size="xs">
           Striped Table primary
         </Heading>
-        <NormalTableExample color="primary" variant="striped" />
+        <NormalTableExample color="pri" variant="striped" />
       </Flex>
 
       <Heading size="sm">Default Table</Heading>
@@ -119,40 +119,40 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="xs">
           Default Table danger
         </Heading>
-        <NormalTableExample color="danger" />
+        <NormalTableExample color="dan" />
 
         <Heading as="h2" size="xs">
           Default Table success
         </Heading>
-        <NormalTableExample color="success" />
+        <NormalTableExample color="suc" />
         <Heading as="h2" size="xs">
           Default Table secondary
         </Heading>
-        <NormalTableExample color="secondary" />
+        <NormalTableExample color="sec" />
         <Heading as="h2" size="xs">
           Default Table primary
         </Heading>
-        <NormalTableExample color="secondary" />
+        <NormalTableExample color="sec" />
       </Flex>
       <Heading size="sm">Soft Table</Heading>
       <Flex wrap gap="xs">
         <Heading as="h2" size="xs">
           Soft Table danger
         </Heading>
-        <NormalTableExample variant="soft" color="danger" />
+        <NormalTableExample variant="soft" color="dan" />
 
         <Heading as="h2" size="xs">
           Soft Table success
         </Heading>
-        <NormalTableExample variant="soft" color="success" />
+        <NormalTableExample variant="soft" color="suc" />
         <Heading as="h2" size="xs">
           Soft Table secondary
         </Heading>
-        <NormalTableExample variant="soft" color="secondary" />
+        <NormalTableExample variant="soft" color="sec" />
         <Heading as="h2" size="xs">
           Soft Table primary
         </Heading>
-        <NormalTableExample variant="soft" color="primary" />
+        <NormalTableExample variant="soft" color="pri" />
       </Flex>
       <NormalTableExample variant="soft" />
       <Heading size="sm">Head Color Table</Heading>
@@ -160,20 +160,20 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="xs">
           Head Color Table danger
         </Heading>
-        <NormalTableExample variant="head-color" color="danger" />
+        <NormalTableExample variant="head-color" color="dan" />
 
         <Heading as="h2" size="xs">
           Head Color Table success
         </Heading>
-        <NormalTableExample variant="head-color" color="success" />
+        <NormalTableExample variant="head-color" color="suc" />
         <Heading as="h2" size="xs">
           Head Color Table secondary
         </Heading>
-        <NormalTableExample variant="head-color" color="secondary" />
+        <NormalTableExample variant="head-color" color="sec" />
         <Heading as="h2" size="xs">
           Head Color Table primary
         </Heading>
-        <NormalTableExample variant="head-color" color="primary" />
+        <NormalTableExample variant="head-color" color="pri" />
       </Flex>
       <NormalTableExample variant="head-color" />
     </Flex>

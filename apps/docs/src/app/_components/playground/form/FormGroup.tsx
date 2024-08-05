@@ -29,17 +29,17 @@ export const FormGroupTitle = () => {
 export const FormGroupColors = () => {
   return (
     <Paper flow="sm" className="playground" border p="sm" background="bg-3" corner="sm">
-      <FormGroup title="User" color="danger">
+      <FormGroup title="User" color="dan">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="User" color="success">
+      <FormGroup title="User" color="suc">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="User" color="secondary">
+      <FormGroup title="User" color="sec">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />

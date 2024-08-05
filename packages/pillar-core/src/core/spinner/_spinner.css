@@ -18,7 +18,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  color: var(--clr-10);
+  color: var(--c-10);
   border: min(var(--border), 0.5em) solid transparent;
   border-top-color: var(--border-color);
   border-left-color: var(--border-color);

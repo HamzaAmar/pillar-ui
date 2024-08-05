@@ -14,7 +14,7 @@ import { Alert } from '@pillar-ui/core'
 function(){
     return(
         <Alert
-            color="success"
+            color="suc"
             size="md"
             corner="rounded"
             title="Success!"
@@ -48,12 +48,12 @@ Example usage:
 ```tsx showLineNumbers title="Alert.tsx"
 function AlertColors(){
     return(
-        <Alert title="Success!" color='danger' />
-        <Alert title="Success!" color='warning' />
-        <Alert title="Success!" color='success' />
-        <Alert title="Success!" color='primary' />
+        <Alert title="Success!" color="dan" />
+        <Alert title="Success!" color="war" />
+        <Alert title="Success!" color="suc" />
+        <Alert title="Success!" color="pri" />
         <Alert title="Success!" color='bg' />
-        <Alert title="Success!" color='secondary' />
+        <Alert title="Success!" color="sec" />
     )
 }
 
@@ -167,7 +167,7 @@ Example usage:
 <AlertIcons />
 
 ```tsx showLineNumbers title="Alert.tsx"
-<Paper borderColor="opacity-6" flow="sm" p="sm" background="bg-3" corner="sm">
+<Paper borderColor="opa-6" flow="sm" p="sm" background="bg-3" corner="sm">
   <Alert icon={<CircleCheck width="32" />} title="Success!" />
   <Alert icon={<CircleCheck width="32" />} title="Success!" />
   <Alert icon={<CircleCheck width="48" />} title="Success!" message="Your prefered description" />
@@ -183,7 +183,7 @@ Example usage:
 <AlertClosable />
 
 ```tsx showLineNumbers title="Alert.tsx"
-<Paper borderColor="opacity-6" flow="sm" p="sm" background="bg-3" corner="sm">
+<Paper borderColor="opa-6" flow="sm" p="sm" background="bg-3" corner="sm">
   <Alert closable title="Success!" />
   <Alert closable title="Success!" message="you have an error in the start of the program" />
   <Alert closable message="you have an error in the start of the program!" />
