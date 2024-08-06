@@ -1,4 +1,4 @@
-import { Star, TextIncrease, Space, Code, Mouse, PlayerPause, EyeCheck } from '@pillar-ui/icons'
+import { Star, TextIncrease, Space, Code, Mouse, PlayerPause, EyeCheck, Palette } from '@pillar-ui/icons'
 
 export const USER_DATA = {
   en: {
@@ -69,8 +69,8 @@ export const FEATURES = [
 export const ACCESSIBILITY = [
   {
     id: 'high-contrast',
-    title: 'High Contrast Mode',
-    description: 'Designed for high contrast mode, ensuring readability for visually impaired users.',
+    title: 'Windows High Contrast Support',
+    description: 'Built-in high contrast mode ensures your site is accessible to everyone.',
     icon: <Star width="24" stroke="var(--pri-11)" />,
   },
   {
@@ -108,6 +108,12 @@ export const ACCESSIBILITY = [
     title: 'Semantic Markup',
     description: 'Uses semantic HTML for accessibility and structure.',
     icon: <Code width="24" stroke="var(--pri-11)" />,
+  },
+  {
+    id: 'colorblind-friendly',
+    title: 'Color blind Friendly Design',
+    description: 'Does not rely on color alone to convey information, ensuring accessibility for colorblind users.',
+    icon: <Palette width="24" stroke="var(--pri-11)" />, // You might want a more suitable icon here.
   },
 ]
 

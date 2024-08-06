@@ -6,10 +6,10 @@ export function Accessible() {
     <Flex direction="column" justify="center" className="section" gap="2xl">
       <div>
         <Text color="pri" contrast="low" size="lg">
-          Our Commitment
+          Pillar UI The Intuitive React UI Library
         </Text>
         <Heading transform="uppercase" className="highlight" as="h2" size="2xl">
-          Building Accessible Experiences
+          For Building Accessible Applications Effortlessly
         </Heading>
       </div>
       <Grid gap="md" grid="1fr 1fr 1fr" lg="1fr 1fr" sm="1fr">
