@@ -1,5 +1,11 @@
 # @pillar/utils
 
+## 0.7.3
+
+### Patch Changes
+
+- add build proccess before release.
+
 ## 0.7.2
 
 ### Patch Changes

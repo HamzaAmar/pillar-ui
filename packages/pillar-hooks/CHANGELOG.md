@@ -1,5 +1,11 @@
 # @pillar/hooks
 
+## 0.6.3
+
+### Patch Changes
+
+- add build proccess before release.
+
 ## 0.6.2
 
 ### Patch Changes
