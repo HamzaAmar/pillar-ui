@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import { Metadata, Viewport } from 'next'
 import { DOMAIN } from '~/constant/domain'
 import { Footer, Header, NextThemeProvider } from './_components'
 import type { ReactNode } from 'react'
@@ -69,4 +69,8 @@ export const metadata: Metadata = {
     site: '@pillar_ui',
     creator: 'Hamza Miloud Amar',
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#3e63dd',
 }

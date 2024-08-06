@@ -15,10 +15,33 @@ export async function generateStaticParams() {
 function Page({ params }: SlugParamsProps) {
   const component = getComponentBySlug(params.slug)
   if (!component) notFound()
-  const { content, headings, ...rest } = component
-
+  const { content, headings, lastModified, publishedAt, ...rest } = component
+  const img = `${DOMAIN}/pillar.png`
+  const directory = component.type === 'core' ? 'components' : component.type
   return (
     <>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            headline: component.title,
+            datePublished: publishedAt,
+            dateModified: lastModified,
+            description: component.excerpt,
+            image: img,
+            codeRepository: '',
+            url: `${DOMAIN}/docs/${directory}/${component.slug}`,
+            author: {
+              '@type': 'Organization',
+              name: 'Pillar UI',
+              url: 'https://www.pillar-ui.com/',
+            },
+          }),
+        }}
+      />
       <div>
         <DocHeader root="pillar-core/src/core" {...rest} />
         <div className="section prose l_flow__md">
@@ -38,21 +61,33 @@ export async function generateMetadata({ params }: SlugParamsProps): Promise<Met
     return
   }
 
-  let { title, excerpt: description, slug } = post
-
+  let { title, excerpt: description, slug, lastModified, publishedAt } = post
+  const img = `${DOMAIN}/assets/favicon/logo-512X512.png`
   return {
     title,
     description,
+    other: {
+      'article:modified_time': lastModified,
+    },
+
     openGraph: {
       title,
       description,
       type: 'article',
-      url: `${DOMAIN}/docs/components/${slug}`,
+      publishedTime: publishedAt,
+      url: `${DOMAIN}/blogs/${slug}`,
+
+      images: [
+        {
+          url: img,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: [img],
     },
   }
 }

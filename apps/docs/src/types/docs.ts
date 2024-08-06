@@ -18,6 +18,7 @@ export interface SharedDocs {
   headings: Headings
   directory?: string
   lastModified: string
+  publishedAt: string
 }
 
 export interface Component extends SharedDocs {
