@@ -28,10 +28,10 @@ export function DarkMode() {
 
       <svg
         stroke="var(--bg-8)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-miterlimit="1.5"
-        stroke-width="12"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit="1.5"
+        strokeWidth="12"
         viewBox="0 0 265 265"
         width="265"
         fill="none"
@@ -39,7 +39,7 @@ export function DarkMode() {
         <path d="M181 104c-22-43-93-33-103 13-7 29 19 48 23 75h59l8-21c5-11 13-18 15-30 3-11 3-27-2-37Z" />
         <path
           d="m100 228-1-25c0-3 0-7 3-9 4-4 10-4 15-4h28c5 0 11-1 15 1s5 8 5 12c1 7 3 23-3 28-4 4-10 5-15 5-13 2-47 1-47-8Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path d="m135 237-1 13M31 169l14-7M31 74l16 10M134 35V15M214 79l20-12M203 168l15 14" />
       </svg>

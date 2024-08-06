@@ -10,10 +10,10 @@ export function Hero() {
           <svg
             className="pillar--title-container"
             stroke="var(--bg-9)"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-miterlimit="1.5"
-            stroke-width="4.1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.5"
+            strokeWidth="4.1"
             viewBox="0 0 458 152"
             fill="none"
           >

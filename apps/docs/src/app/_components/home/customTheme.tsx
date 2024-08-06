@@ -28,17 +28,11 @@ export function CustomTheme() {
       <svg viewBox="0 0 490 490" height="491" fill="none">
         <path
           fill="var(--bg-1)"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="m381 112-13-7c-19-7-43-2-62-1l-86 3c-17 1-35 0-52 2-19 3-39-3-57 6-26 13-25 33-25 60l1 108c0 17 1 41 3 58 4 24 25 49 53 48 52 1 109-2 159-4 22 0 49-1 71-7 35-11 32-67 31-95 0-8-4-113-9-142-1-5-2-13-5-18"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
-        <g
-          stroke="var(--bg-8)"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-miterlimit="1.5"
-          stroke-width="10.2"
-        >
+        <g stroke="var(--bg-8)" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="1.5" strokeWidth="10.2">
           <path d="m381 112-13-7c-19-7-43-2-62-1l-86 3c-17 1-35 0-52 2-19 3-39-3-57 6-26 13-25 33-25 60l1 108c0 17 1 41 3 58 4 24 25 49 53 48 52 1 109-2 159-4 22 0 49-1 71-7 35-11 32-67 31-95 0-8-4-113-9-142-1-5-2-13-5-18" />
           <path d="M349 133c-13-2-29 0-38 0-26-1-52 2-78 2-23 1-47 0-69 2-19 3-47-2-47 22l1 86c0 18-4 37-1 55 2 10 6 19 16 21s21 1 31 0l36-1c30-1 140-6 156-8 15-4 18-28 18-40-2-36-3-76-7-123" />
           <path d="M178 165c-13-5-22 9-24 20-1 10 7 20 16 23 5 2 12 3 17 1 21-7 20-37-1-43M133 316c3-10 9-20 16-28 7-9 14-19 25-24 42-21 83 13 102 49" />
