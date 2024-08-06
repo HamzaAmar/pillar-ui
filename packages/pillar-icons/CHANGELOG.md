@@ -1,5 +1,11 @@
 # @pillar/icons
 
+## 0.7.2
+
+### Patch Changes
+
+- fix: add global .npmignore file to try to fix the problem of content those not send to npm
+
 ## 0.7.1
 
 ### Patch Changes

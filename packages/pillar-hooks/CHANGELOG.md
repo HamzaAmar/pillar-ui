@@ -1,5 +1,11 @@
 # @pillar/hooks
 
+## 0.6.2
+
+### Patch Changes
+
+- fix: add global .npmignore file to try to fix the problem of content those not send to npm
+
 ## 0.6.1
 
 ### Patch Changes

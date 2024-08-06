@@ -1,5 +1,11 @@
 # @pillar/core
 
+## 0.8.3
+
+### Patch Changes
+
+- fix: add global .npmignore file to try to fix the problem of content those not send to npm
+
 ## 0.8.2
 
 ### Patch Changes
