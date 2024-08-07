@@ -1,17 +1,12 @@
 import { Flex, Heading, Text, Paper } from '~/component/core/pillar'
+import { SectionHeading } from '~/component/core/sectionHeading'
 
 export function CustomTheme() {
   return (
     <Paper as={Flex} items="center" justify="center" flow="xl" className="section hello-world">
       <div className="l_flow__md">
-        <div>
-          <Text size="lg" as="span" color="pri" contrast="low">
-            Change Theme
-          </Text>
-          <Heading as="h2" size="3xl" transform="uppercase">
-            Custom your perfect look in seconds!
-          </Heading>
-        </div>
+        <SectionHeading subheading="Change Theme" heading=" Custom your perfect look in seconds!" />
+
         <div className="l_flow__lg">
           <Text className="dark--description" color="bg" contrast="low" size="xl">
             Customize your interface to showcase your personal flair. Adjust CSS variables for colors, fonts, and

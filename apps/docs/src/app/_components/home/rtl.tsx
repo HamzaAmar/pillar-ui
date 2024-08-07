@@ -1,5 +1,6 @@
 import { Button, Flex, Heading, Text, Grid, Paper, Avatar } from '~/component/core/pillar'
 import { FEATURES, USER_DATA } from './data'
+import { SectionHeading } from '~/component/core/sectionHeading'
 
 function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
   const { jobTitle, description, followers, fullName, likes } = USER_DATA[type].user
@@ -47,12 +48,10 @@ export function RTLSupport() {
         <div className="l_flow__lg">
           <div className="l_flow__xs">
             <div>
-              <Text size="lg" as="span" color="pri" contrast="low">
-                Effortless RTL Experiences:
-              </Text>
-              <Heading as="h2" size="3xl" transform="uppercase">
-                Right-to-Left Support Built Right In
-              </Heading>
+              <SectionHeading
+                subheading="Build Global-Ready React UIs with Pillar UI's"
+                heading="Seamless Right to Left Support (Out of the Box!)"
+              />
             </div>
 
             <Text size="xl" color="bg" contrast="low">
@@ -62,7 +61,7 @@ export function RTLSupport() {
 
           <Grid grid="1fr 1fr" md="1fr" gap="sm" className="feature-list">
             {FEATURES.map(({ id, title, description, icon }) => (
-              <Flex key={id} as="li" gap="sm" className="feature--item">
+              <Flex key={id} as="article" gap="sm" className="feature--item">
                 <span className="feature-icon">{icon}</span>
                 <div>
                   <Heading>{title}</Heading>

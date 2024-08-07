@@ -1,19 +1,13 @@
 import { Flex, Heading, Text, Paper } from '~/component/core/pillar'
 import { useTheme } from 'next-themes'
 import SwitchMode from './switchMode'
+import { SectionHeading } from '~/component/core/sectionHeading'
 export function DarkMode() {
   return (
     <Paper items="center" justify="between" as={Flex} flow="lg" className="section">
       <div className="l_flow__lg">
         <div className="l_flow__md">
-          <div className="l_flow__2xs">
-            <Text size="lg" color="pri" contrast="low">
-              Subtle, Soothing, Smart
-            </Text>
-            <Heading className="highlight" size="3xl" transform="uppercase" as="h2">
-              Night Mode: Effortless Elegance
-            </Heading>
-          </div>
+          <SectionHeading subheading=" Subtle, Soothing, Smart" heading=" Night Mode: Effortless Elegance" />
           <Text className="dark--description" color="bg" contrast="low" size="xl">
             Switch to dark mode with ease. Our useDarkMode hook ensures a smooth, flicker-free experience, compatible
             with major frameworks.

@@ -1,6 +1,7 @@
 import { Flex, Heading, Text, Button, Grid, IconButton } from '~/component/core/pillar'
 import { SUPPORTED } from './data'
 import { Discord, Github, Twitter } from '@pillar-ui/icons'
+import { SectionHeading } from '~/component/core/sectionHeading'
 export function PillarSupport() {
   return (
     <Flex gap="xl" justify="evenly" className="simplify-dev--container section">
@@ -9,14 +10,8 @@ export function PillarSupport() {
           className="l_flow__
           md"
         >
-          <div className="l_flow__2xs">
-            <Text color="pri" contrast="low" size="lg">
-              Framework Harmony:
-            </Text>
-            <Heading className="highlight" transform="uppercase" as="h2" size="3xl">
-              Effortless Integration with Pillar UI
-            </Heading>
-          </div>
+          <SectionHeading subheading="Framework Harmony:" heading="Effortless Integration with Pillar UI" />
+
           <Text color="bg" contrast="low" size="xl" className="dark--description">
             Pillar UI adapts to your workflow, enhancing your projects with ease. Stay ahead of the curve with support
             for emerging technologies.

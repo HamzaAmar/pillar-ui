@@ -12,12 +12,12 @@ import { useDrawer } from '../drawerProvider'
 const Header = () => {
   const { booleanValue, setTrue, setFalse } = useBooleanState(false)
   const { open, toggleDrawer } = useDrawer() ?? {}
-  const menu = useBooleanState(false)
+  // const menu = useBooleanState(false)
   const { toggleDirection } = useDirection()
 
   return (
     <Flex className="header" as="header" justify="between" items="center" gap="sm">
-      <Link className="l_flex-1" href="/">
+      <Link className="l_flex-1" href="/" aria-label="Home">
         <Logo width="100px" className="header--logo" />
       </Link>
 

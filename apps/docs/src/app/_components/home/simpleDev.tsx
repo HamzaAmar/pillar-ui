@@ -1,18 +1,13 @@
 import { Flex, Heading, Text, Paper, Grid } from '~/component/core/pillar'
 import { SIMPLE_DEVELOPMENT } from './data'
+import { SectionHeading } from '~/component/core/sectionHeading'
 
 export function SimplifyDevelopment() {
   return (
     <Paper as={Flex} items="center" gap="lg" className="section">
       <div className="simplify-dev--container l_flow__xl">
-        <div>
-          <Text color="pri" contrast="low" size="lg">
-            Deliver Projects Faster
-          </Text>
-          <Heading className="highlight" as="h2" size="3xl" transform="capitalize">
-            Effortless UI with Pillar UI
-          </Heading>
-        </div>
+        <SectionHeading subheading="Deliver Projects Faster" heading="Effortless UI with Pillar UI" />
+
         <Grid grid="1fr 1fr" md="1fr" gap="md">
           {SIMPLE_DEVELOPMENT.map(({ title, id, description }) => (
             <div className="article--item l_flow__2xs" key={id}>

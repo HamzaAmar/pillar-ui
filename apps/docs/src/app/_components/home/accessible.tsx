@@ -1,17 +1,14 @@
 import { Grid, Flex, Heading, Text, Paper } from '~/component/core/pillar'
 import { ACCESSIBILITY } from './data'
+import { SectionHeading } from '~/component/core/sectionHeading'
 
 export function Accessible() {
   return (
     <Flex direction="column" justify="center" className="section" gap="2xl">
-      <div>
-        <Text color="pri" contrast="low" size="lg">
-          Pillar UI The Intuitive React UI Library
-        </Text>
-        <Heading transform="uppercase" className="highlight" as="h2" size="2xl">
-          For Building Accessible Applications Effortlessly
-        </Heading>
-      </div>
+      <SectionHeading
+        subheading="Pillar UI The Intuitive React UI Library"
+        heading="For Building Accessible Applications Effortlessly"
+      />
       <Grid gap="md" grid="1fr 1fr 1fr" lg="1fr 1fr" sm="1fr">
         {ACCESSIBILITY.map(({ id, title, description, icon }) => (
           <Paper className="article--item" key={id} flow="2xs">
