@@ -17,14 +17,23 @@
   z-index: 200;
 
   & ul {
-    margin: 0;
     padding: 0;
+    margin: 0;
     list-style: none;
+    &:not(.menu-bar--nested) {
+      padding: 1rem 0;
+    }
   }
 }
 
 .table-of-content--wrapper {
   border-inline-start: 1px solid var(--opa-6);
+}
+
+.aside--list-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .menu-bar {

@@ -1,19 +1,30 @@
 'use client'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { Component, useState } from 'react'
 import { Flex } from '~/component/core/pillar'
-import { ChevronDown } from '@pillar-ui/icons'
+import { Book, Bridge, ChevronDown, ColorPicker, Eye, Fish, Help, Palette, Star } from '@pillar-ui/icons'
 // import type { MenuItemData } from './aside.type'
 import { Item } from './listItem'
 import { useDrawer } from '../drawerProvider'
 import { usePathname } from 'next/navigation'
 import { getAll } from '~/api/docs'
+import { Components } from '@pillar-ui/icons'
 
 export interface DocsProps {
   data: ReturnType<typeof getAll>
 }
 
 type MenuItemData = keyof ReturnType<typeof getAll>
+
+const ICONS = {
+  components: <Components width={24} />,
+  hooks: <Fish width={24} />,
+  utils: <Help width={24} />,
+  tutorials: <Book width={24} />,
+  themes: <Palette width={24} />,
+  features: <Star width={24} />,
+  getStarted: <Bridge width={24} />,
+}
 
 const MenuBar = ({ data }: DocsProps) => {
   const { open } = useDrawer() ?? {}
@@ -41,7 +52,13 @@ const MenuBar = ({ data }: DocsProps) => {
 
             return (
               <li className="l_flow__md" key={key}>
-                <Item {...linkOrButtonConfig} level={2} isActive={current === key && !contents} title={key}>
+                <Item
+                  {...linkOrButtonConfig}
+                  level={2}
+                  isActive={current === key && !contents}
+                  icon={ICONS[key]}
+                  title={key}
+                >
                   {contents && <ChevronDown width="16" />}
                 </Item>
                 {contents && (
