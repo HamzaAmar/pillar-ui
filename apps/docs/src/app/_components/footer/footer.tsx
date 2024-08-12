@@ -15,8 +15,10 @@ const footer = () => {
           </Text>
         </div>
         <nav className="l_flow__sm">
-          <Heading transform="capitalize">Project</Heading>
-          <ul className="l_flow__xs">
+          <Text transform="capitalize" size="md" weight="medium">
+            Project
+          </Text>
+          <ul className="footer-list l_flow__xs">
             <li>
               <Text
                 transform="capitalize"
@@ -68,9 +70,11 @@ const footer = () => {
           </ul>
         </nav>
         <nav className="l_flow__sm">
-          <Heading transform="capitalize">Community</Heading>
+          <Text transform="capitalize" size="md" weight="medium">
+            Community
+          </Text>
 
-          <ul className="l_flow__xs">
+          <ul className="footer-list l_flow__xs">
             <li>
               <Text
                 transform="capitalize"
@@ -125,9 +129,11 @@ const footer = () => {
           </ul>
         </nav>
         <nav className="l_flow__sm">
-          <Heading transform="capitalize">Help</Heading>
+          <Text transform="capitalize" size="md" weight="medium">
+            Help
+          </Text>
 
-          <ul className="l_flow__xs">
+          <ul className="footer-list l_flow__xs">
             <li>
               <Text
                 transform="capitalize"

@@ -64,7 +64,9 @@ export function RTLSupport() {
               <Flex key={id} as="article" gap="sm" className="feature--item">
                 <span className="feature-icon">{icon}</span>
                 <div>
-                  <Heading>{title}</Heading>
+                  <Text weight="medium" size="md">
+                    {title}
+                  </Text>
                   <Text contrast="low" color="bg">
                     {description}
                   </Text>

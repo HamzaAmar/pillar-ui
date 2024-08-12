@@ -30,14 +30,18 @@ export function PillarSupport() {
       </div>
       <div className="support--second l_flow__sm">
         <div className="get-started l_flow__sm">
-          <Heading>Lets Getting Start</Heading>
+          <Text weight="medium" size="lg">
+            Lets Getting Start
+          </Text>
           <Text size="sm" color="bg" contrast="low">
             Build faster and lighter. Experience the power of our streamlined design system.
           </Text>
           <Button>Get Started</Button>
         </div>
         <div className="get-started l_flow__sm">
-          <Heading>Community</Heading>
+          <Text weight="medium" size="lg">
+            Community
+          </Text>
           <Text size="sm" color="bg" contrast="low">
             Get involved in our community. Everyone is welcome!
           </Text>
