@@ -1,41 +1,33 @@
-.l_direction-column {
+.l_fl-column {
   flex-direction: column;
 }
 
-.l_flex-wrap {
+.l_fl-wrap {
   flex-wrap: wrap;
 }
 
-.l_flex-none {
+.l_fl-none {
   flex: none;
 }
 
-.l_flex-1 {
+.l_fl-1 {
   flex: 1;
 }
 
-.l_flex-2 {
+.l_fl-2 {
   flex: 2;
 }
 
-.l_flex-auto {
+.l_fl-auto {
   flex: auto;
 }
 
-.l_flex {
+.l_fl {
   display: flex;
 }
 
-.l_flex-inline {
+.l_fl-inline {
   display: inline-flex;
-}
-
-.l_justify-self-end {
-  justify-self: end;
-}
-
-.l_justify-self-center {
-  justify-self: center;
 }
 
 .l_grid {

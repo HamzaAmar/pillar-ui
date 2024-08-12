@@ -17,13 +17,11 @@
 }
 
 .rc {
-  width: 1.25em;
-  height: 1.25em;
+  --eq-s: 1.25em;
   border-radius: 50%;
   position: relative;
   border: 1px solid var(--bg-7);
   margin-top: 2px;
-  flex: none;
 
   &:hover {
     border-color: var(--c-9);

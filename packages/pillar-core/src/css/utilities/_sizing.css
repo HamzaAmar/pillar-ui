@@ -22,42 +22,48 @@
   aspect-ratio: 1.618/1;
 }
 
-.u_width-25-char {
+.u_w-25-char {
   width: min(25ch, 100%);
 }
 
-.u_width-30-char {
+.u_w-30-char {
   width: min(30ch, 100%);
 }
 
-.u_width-45-char {
+.u_w-45-char {
   width: min(45ch, 100%);
 }
 
-.u_width-60-char {
+.u_w-60-char {
   width: min(60ch, 100%);
 }
 
-.u_width-75-char {
+.u_w-75-char {
   width: min(75ch, 100%);
 }
 
-.u_width-90-char {
+.u_w-90-char {
   width: min(90ch, 100%);
 }
 
-.u_width-half {
+.u_w-half {
   width: 50%;
 }
 
-.u_width-one-third {
+.u_w-one-third {
   width: 33.3%;
 }
 
-.u_width-full {
+.u_w-full {
   width: 100%;
 }
 
-.u_width-fit-content {
+.u_w-fit-content {
   width: fit-content;
+}
+
+.u_same-sz {
+  width: var(--eq-s, 1rem);
+  min-width: var(--eq-s, 1rem);
+  aspect-ratio: 1;
 }

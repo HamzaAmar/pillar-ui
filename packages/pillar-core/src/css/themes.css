@@ -182,32 +182,10 @@
     Border Theme Section
    ------------------------------------------------------------------------------------------------------
    */
-  --border-size-thin: 1px;
+  /* --border-size-thin: 1px;
   --border-size-medium: 2px;
   --border-size-bold: 5px;
-  --border-size-exta-bold: 10px;
-
-  --rad-sharp: 0;
-  --rad-xs: 0.125em;
-  --rad-sm: 0.25em;
-  --rad-md: 0.5em;
-  --rad-lg: 0.75em;
-  --rad-xl: 1em;
-  --rad-round: 50%;
-  --rad-full: 1e5px;
-
-  --rad-h-1: 255px 15px 225px 15px / 15px 225px 15px 255px;
-  --rad-h-2: 125px 10px 20px 185px / 25px 205px 205px 25px;
-  --rad-h-3: 15px 255px 15px 225px / 225px 15px 255px 15px;
-  --rad-h-4: 15px 25px 155px 25px / 225px 150px 25px 115px;
-  --rad-h-5: 250px 25px 15px 20px / 15px 80px 105px 115px;
-  --rad-h-6: 28px 100px 20px 15px / 150px 30px 205px 225px;
-
-  --rad-b-1: 30% 70% 70% 30% / 53% 30% 70% 47%;
-  --rad-b-2: 53% 47% 34% 66% / 63% 46% 54% 37%;
-  --rad-b-3: 37% 63% 56% 44% / 49% 56% 44% 51%;
-  --rad-b-4: 63% 37% 37% 63% / 43% 37% 63% 57%;
-  --rad-b-5: 49% 51% 48% 52% / 57% 44% 56% 43%;
+  --border-size-exta-bold: 10px; */
 }
 
 .dark {

@@ -1,16 +1,16 @@
-.u_t__uppercase {
+.u_t-uppercase {
   text-transform: uppercase;
 }
 
-.u_t__lowercase {
+.u_t-lowercase {
   text-transform: lowercase;
 }
 
-.u_t__capitalize {
+.u_t-capitalize {
   text-transform: capitalize;
 }
 
-.u_t__first-letter-only::first-letter {
+.u_t-first-letter-only::first-letter {
   text-transform: uppercase;
 }
 
@@ -18,19 +18,19 @@
       Align Text Style Section
   */
 
-.u_t__center {
+.u_t-center {
   text-align: center;
 }
 
-.u_t__end {
+.u_t-end {
   text-align: end;
 }
 
-.u_t__start {
+.u_t-start {
   text-align: start;
 }
 
-.u_t__justify {
+.u_t-justify {
   text-align: justify;
 }
 
@@ -38,15 +38,15 @@
       Align Text Decoration Section
   */
 
-.u_t__over {
+.u_t-over {
   text-decoration: overline;
 }
 
-.u_t__under {
+.u_t-under {
   text-decoration: underline;
 }
 
-.u_t__through {
+.u_t-through {
   text-decoration: line-through;
 }
 
@@ -54,18 +54,18 @@
       Align Text Decoration Section
   */
 
-.u_leading__normal {
+.u_t-normal {
   line-height: 1;
 }
 
-.u_leading__sm {
+.u_t-sm {
   line-height: 1.25;
 }
 
-.u_leading__md {
+.u_t-md {
   line-height: 1.5;
 }
 
-.u_leading__lg {
+.u_t-lg {
   line-height: 1.75;
 }

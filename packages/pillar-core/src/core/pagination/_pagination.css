@@ -1,6 +1,6 @@
 .p-a_btn {
   padding: 0.25rem;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1;
   min-width: 2em;
   color: var(--c-12);
   /* overflow: hidden; */

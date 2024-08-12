@@ -8,7 +8,7 @@
   width: 100%;
   height: 0.25em;
   border-radius: 100px;
-  background-color: var(--opa-6);
+  background: var(--opa-6);
   position: relative;
 }
 
@@ -17,7 +17,7 @@
   position: absolute;
   inset-inline-start: 0;
   top: 0;
-  background-image: linear-gradient(to right, var(--c-10), var(--c-9));
+  background: linear-gradient(to right, var(--c-10), var(--c-9));
   border-radius: inherit;
 }
 
@@ -74,7 +74,7 @@
 
 .pr-s_itm {
   height: 100%;
-  background-color: var(--c-10);
+  background: var(--c-10);
 }
 .pr-s_cnt {
   position: relative;
@@ -83,7 +83,7 @@
     content: '';
     width: 0.625rem;
     height: 0.625rem;
-    background-color: var(--c-10);
+    background: var(--c-10);
     border-radius: 50%;
   }
 }

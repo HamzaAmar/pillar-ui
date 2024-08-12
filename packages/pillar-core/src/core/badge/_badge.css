@@ -1,11 +1,9 @@
 .b-a {
   --flex: inline-flex;
+  --eq-s: 1.75em;
 
   font-weight: 500;
   text-decoration: none;
-  min-width: var(--badge-size, 1.75em);
-  max-width: fit-content;
-  height: var(--badge-size, 1.75em);
   padding: 0.125em;
   line-height: 1;
   border: 1px solid transparent;
@@ -24,7 +22,7 @@
 }
 
 .b-a_dot {
-  --badge-size: 0.5em;
+  --eq-s: 0.5em;
 }
 
 .b-a_cnt {

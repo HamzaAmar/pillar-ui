@@ -44,7 +44,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forw
         aria-checked={isIndeterminate ? 'mixed' : rest.checked}
         {...rest}
       />
-      <span className="c-h u_center">{icon}</span>
+      <span className="c-h u_same-sz u_center">{icon}</span>
       <div className={classNames}>{label}</div>
     </label>
   )

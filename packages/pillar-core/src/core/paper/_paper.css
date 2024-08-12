@@ -1,4 +1,3 @@
 .p-p {
   border-radius: var(--border-radius, var(--paper-rad), 0);
-  box-shadow: var(--box-shadow);
 }

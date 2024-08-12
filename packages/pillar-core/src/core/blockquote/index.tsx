@@ -15,7 +15,7 @@ export const BlockquoteCite = ({ title, ...rest }: CiteProps) => {
 
 export const Blockquote = forwardRef(
   ({ children, icon = <Quotes />, size, color = 'pri', corner, className, cite, ...rest }, ref) => {
-    const classNames = classnames(`b-l u_${color} l_flow__xs`, {
+    const classNames = classnames(`b-l u_${color} l_f-xs u_sh-2xs`, {
       [className!]: !!className,
       [`u_f-${size}`]: !!size,
       [`u_rad-${corner}`]: !!corner,

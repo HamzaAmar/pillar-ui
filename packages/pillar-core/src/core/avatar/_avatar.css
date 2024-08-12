@@ -1,6 +1,7 @@
 .a-v {
   /* TODO: CHECK IF IT INLINE FLEX OR The Cache  */
   --flex: inline-flex;
+  --eq-s: 2.75em;
 
   /* overflow: hidden; */
   padding: 0;
@@ -22,15 +23,8 @@
   }
 }
 
-.a-v_img,
-.a-v_flb {
-  --img-size: 2.75em;
-  width: var(--img-size);
-  height: var(--img-size);
-}
-
 .a-v_img {
-  --img-size: 100%;
+  /* width: 100%; */
   object-fit: cover;
 }
 

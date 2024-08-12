@@ -32,11 +32,11 @@ export const Paper = forwardRef((props, ref) => {
   } = props
 
   const classNames = classnames(`p-p`, {
-    [`u_shadow-${shadow}`]: !!shadow,
-    [`l_flow__${flow}`]: !!flow,
+    [`u_sh-${shadow}`]: !!shadow,
+    [`l_f-${flow}`]: !!flow,
     [`u_rad-${corner}`]: !!corner,
-    [`u_padding-${p}`]: !!p,
-    [`u_margin-${m}`]: !!m,
+    [`u_pa-${p}`]: !!p,
+    [`u_ma-${m}`]: !!m,
     [`u_width-${width}`]: !!width,
     [`u_${ratio}`]: !!ratio,
     [`u_border`]: !!border,

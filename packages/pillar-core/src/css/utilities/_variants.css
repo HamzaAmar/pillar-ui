@@ -1,6 +1,6 @@
 .u_solid,
 .u_shadow {
-  background-color: var(--c-9);
+  background: var(--c-9);
   color: white;
 }
 
@@ -17,12 +17,12 @@
 }
 
 .u_soft {
-  background-color: var(--c-3);
+  background: var(--c-3);
 }
 
 .u_mixed {
   border-color: var(--c-8);
-  background-color: var(--c-3);
+  background: var(--c-3);
 }
 
 .u_text {

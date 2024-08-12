@@ -1,10 +1,10 @@
 .b-l {
   border-inline-start: 4px solid var(--c-9);
-  background-clip: padding-box;
+  /* background-clip: ;
+  background-color: ; */
   padding: 1.5em;
-  background-color: var(--bg-3);
+  background: padding-box var(--bg-3);
   position: relative;
-  box-shadow: 1px 2px 4px -2px var(--opa-2);
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are

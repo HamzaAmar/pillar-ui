@@ -77,7 +77,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
   const [isError, setIsError] = useState(!image)
 
   const content = isError ? (
-    <span className="a-v_flb u_center">{fallback}</span>
+    <span className="u_center">{fallback}</span>
   ) : (
     <img
       className="a-v_img"
@@ -93,7 +93,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
     />
   )
 
-  const classNames = classnames(`a-v a-v_flb a-v-${variant} u_${color} u_center`, {
+  const classNames = classnames(`a-v a-v-${variant} u_${color} u_same-sz u_center`, {
     [`u_${animate}`]: !!animate,
     [`u_f-${size}`]: !!size,
     [`u_rad-${corner}`]: !!corner,

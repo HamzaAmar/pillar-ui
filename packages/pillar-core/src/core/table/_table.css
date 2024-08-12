@@ -17,24 +17,24 @@
 
 .t-a-striped {
   & .row__body:nth-child(odd) {
-    background-color: var(--c-4);
+    background: var(--c-4);
   }
 }
 .t-a-soft {
   & .row {
-    background-color: var(--c-5);
+    background: var(--c-5);
   }
 }
 .t-a-head-color {
   & .row__head {
-    background-color: var(--c-8);
+    background: var(--c-8);
     color: var(--c-12);
   }
 }
 
 .row {
   border-block-end: var(--c-6) 1px solid;
-  background-color: var(--c-1);
+  background: var(--c-1);
   width: 100%;
 }
 

@@ -41,10 +41,10 @@ export const Flex = forwardRef((props, forwardedRef) => {
     [`u_justify-${justify}`]: !!justify && justify !== 'start',
     [`u_items-${items}`]: !!items,
     // [`u_flex-${flex}`]: !!items,
-    [`l_direction-${direction}`]: !!direction && direction !== 'row',
-    'l_flex-wrap': !!wrap,
+    [`l_fl-${direction}`]: !!direction && direction !== 'row',
+    'l_fl-wrap': !!wrap,
     'u_flex-inline': !!inline,
-    [`u_space-${gap}`]: !!gap,
+    [`u_sp-${gap}`]: !!gap,
     [`f-l-gap`]: !!gap,
     [`${className}`!]: !!className,
   })

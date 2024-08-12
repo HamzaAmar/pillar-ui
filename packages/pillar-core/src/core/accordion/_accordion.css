@@ -29,11 +29,11 @@
   border-radius: var(--acn-rad, 0);
   font-size: var(--acn-size, 1em);
   &.u_outline {
-    background-color: var(--c-2);
+    background: var(--c-2);
   }
   &.u_solid {
     border-color: var(--c-9);
-    background-color: var(--c-9);
+    background: var(--c-9);
   }
 }
 
@@ -66,13 +66,13 @@
 .a-c_btn {
   width: 100%;
   text-align: start;
-  background-color: transparent;
+  background: transparent;
   padding: 0.5em;
   color: currentColor;
   transform: none;
 
   &:hover {
-    background-color: var(--opa-3);
+    background: var(--opa-3);
   }
   & svg {
     transition: transform 0.25s;

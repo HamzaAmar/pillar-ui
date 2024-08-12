@@ -29,14 +29,14 @@
     color: var(--dan-11);
     border-color: var(--dan-9);
     outline-color: var(--dan-9);
-    background-color: var(--dan-3);
+    background: var(--dan-3);
     input::placeholder {
       color: var(--dan-11);
     }
   }
 
   &:has(:disabled) {
-    background-color: var(--bg-7) !important;
+    background: var(--bg-7) !important;
     cursor: not-allowed;
     border-color: var(--opa-1);
   }
@@ -64,13 +64,13 @@
 }
 .f-i_cnt-filled {
   border-color: var(--opa-11);
-  background-color: var(--bg-1);
+  background: var(--bg-1);
 }
 
 .f-i_cnt-bordered {
   border: none;
   outline: 2px solid transparent;
-  background-color: var(--opa-2);
+  background: var(--opa-2);
 
   &::before,
   &::after {
@@ -80,11 +80,11 @@
     position: absolute;
     bottom: 0;
     inset-inline-start: 0;
-    background-color: var(--opa-7);
+    background: var(--opa-7);
     border-radius: 100px;
   }
   &::after {
-    background-color: var(--c-9, var(--pri-9));
+    background: var(--c-9, var(--pri-9));
     transform: scaleX(0);
     transition: transform 0.2s;
   }
@@ -111,7 +111,7 @@
   width: 100%;
 
   &:has(:read-only) .f-i_cnt {
-    background-color: var(--bg-5);
+    background: var(--bg-5);
   }
 }
 
@@ -124,7 +124,7 @@
   appearance: none;
   flex: 1;
   min-width: 0;
-  background-color: transparent;
+  background: transparent;
   outline: none;
   cursor: inherit;
   font-size: 1em;
@@ -183,13 +183,13 @@
 }
 .fi-n-btn {
   line-height: 0;
-  background-color: var(--bg-7);
+  background: var(--bg-7);
   height: 50%;
   &:active {
-    background-color: var(--opa-8);
+    background: var(--opa-8);
   }
   &:hover {
-    background-color: var(--bg-8);
+    background: var(--bg-8);
   }
 }
 
@@ -207,7 +207,7 @@
     box-shadow: inset 0 0 16px var(--opa-8);
   }
   &:hover {
-    background-color: var(--bg-5);
+    background: var(--bg-5);
   }
   & svg {
     width: 20px;
@@ -286,7 +286,7 @@
 }
 
 .fi-se {
-  background-color: var(--bg-1);
+  background: var(--bg-1);
   width: 100%;
   padding-inline: 0.75rem;
 }
@@ -300,13 +300,13 @@
 }
 
 .fi-f {
-  background-color: var(--c-7, var(--bg-7));
+  background: var(--c-7, var(--bg-7));
   font-size: 0.9em;
   padding: 0.25rem 1rem;
   cursor: pointer;
 
   .f-i_cnt:not([data-disabled]) &:hover {
-    background-color: var(--c-8, var(--bg-8));
+    background: var(--c-8, var(--bg-8));
   }
 }
 

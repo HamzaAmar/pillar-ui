@@ -6,7 +6,7 @@ import type { BadgeProps } from './badge.type'
 
 export const Badge = forwardRef((props, ref) => {
   let { variant = 'solid', color = 'pri', as: Tag = 'div', type = 'numeric', size, corner, className, ...rest } = props
-  const classNames = classnames(`b-a u_${variant} u_center u_${color} `, {
+  const classNames = classnames(`b-a u_${variant} u_center u_${color} u_same-sz`, {
     'b-a_dot': type === 'dot',
     [className!]: !!className,
     [`u_f-${size}`]: !!size,

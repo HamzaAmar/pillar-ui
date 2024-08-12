@@ -45,7 +45,7 @@ export const SkeletonText = forwardRef((props, ref) => {
     )
   })
   return (
-    <div className="l_flow__xs" style={{ width: '100%' }}>
+    <div className="l_f-xs" style={{ width: '100%' }}>
       {isLoading ? linesComp : children}
     </div>
   )

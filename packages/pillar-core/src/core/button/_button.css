@@ -16,13 +16,13 @@
   gap: var(--s-2xs);
 
   &:hover {
-    background-color: var(--c-4);
+    background: var(--c-4);
   }
   &:active {
     transform: translateY(-1px) scale(1.01);
   }
   &:disabled {
-    background-color: var(--bg-5);
+    background: var(--bg-5);
     color: var(--bg-11);
     pointer-events: none;
     border-color: var(--bg-5);
@@ -34,10 +34,10 @@
   /* &:is(.u_solid,.u_shadow):hover */
   &.u_solid:hover,
   &.u_shadow:hover {
-    background-color: var(--c-10);
+    background: var(--c-10);
   }
   &.u_outline:hover {
-    background-color: var(--c-4);
+    background: var(--c-4);
   }
 
   /*
@@ -45,7 +45,7 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--button-rad, var(--rad-sm));
+  border-radius: var(--button-rad, 0.25em);
   font-size: var(--button-size, 0.875rem);
   text-transform: var(--button-transform, capitalize);
 }
@@ -79,7 +79,7 @@
 .b-u-transparent {
   border: 1px solid var(--opa-6);
   &:hover {
-    background-color: var(--opa-6);
+    background: var(--opa-6);
   }
   &:focus-visible {
     outline: 2px dashed var(--opa-11);

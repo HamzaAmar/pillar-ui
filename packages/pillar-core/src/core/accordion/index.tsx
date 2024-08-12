@@ -37,7 +37,7 @@ export const Accordion = forwardRef((props, forwardedRef) => {
   const classNames = classnames(`a-c`, {
     [`u_${color}`]: !!color,
     [`u_f-${size}`]: !!size,
-    l_flow__sm: !!separate,
+    'l_f-sm': !!separate,
     [className!]: !!className,
   })
   const accordionContext = { ...state, variant, corner }

@@ -46,7 +46,7 @@ function useField(props: any) {
   const suffixInputElement = !!suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
 
   const classNames = classnames(`f-i_cnt f-i_cnt-${variant} u_${color}`, {
-    [`u_t__${transform}`]: !!transform,
+    [`u_t-${transform}`]: !!transform,
     'f-i_cnt-fluid': !!fluid,
     [`u_f-${size}`]: corner,
     [`u_rad-${corner}`]: corner,
@@ -245,9 +245,9 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = classnames(`f-i_cnt f-i_cnt-${variant} u_flex u_space-xs u_${color}`, {
+  const className = classnames(`f-i_cnt f-i_cnt-${variant} u_flex u_sp-xs u_${color}`, {
     [`u_rad-${corner}`]: !!corner,
-    [`u_t__${transform}`]: !!transform,
+    [`u_t-${transform}`]: !!transform,
     [`u_f-${size}`]: !!size,
   })
 

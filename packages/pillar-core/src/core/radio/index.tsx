@@ -90,7 +90,7 @@ export const Radio = (props: RadioProps) => {
   return (
     <Flex inline gap="xs" as="label" className={`r-a_cnt u_f-${size} u_${color}`} htmlFor={idOrLabel}>
       <input type="radio" name={name} className="r-a u_sr" id={idOrLabel} {...rest} />
-      <span className={`rc rc__${variant} u_circle`} />
+      <span className={`rc rc__${variant} u_same-sz`} />
       <span className="r-a_lbl">{label}</span>
     </Flex>
   )

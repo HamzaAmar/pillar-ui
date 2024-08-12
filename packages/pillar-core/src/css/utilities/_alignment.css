@@ -82,3 +82,11 @@
 .u_content-evenly {
   align-content: space-evenly;
 }
+
+.u_justify-self-end {
+  justify-self: end;
+}
+
+.u_justify-self-center {
+  justify-self: center;
+}

@@ -51,7 +51,7 @@ export const Alert = forwardRef((props, forwardedRef) => {
     [`u_f-${size}`]: !!size,
   })
 
-  const _title = title && <div className="u_t__capitalize u_leading__md u_f-medium">{title}</div>
+  const _title = title && <div className="u_t-capitalize u_t-md u_f-medium">{title}</div>
   const _message = message && <span>{message}</span>
 
   const closeIcon = closable && (
@@ -60,7 +60,7 @@ export const Alert = forwardRef((props, forwardedRef) => {
 
   return (
     <Flex ref={forwardedRef} gap="xs" className={classNames} role="alert" {...rest}>
-      {icon && <span className="u_items-self u_leading__normal">{icon}</span>}
+      {icon && <span className="u_items-self u_t-normal">{icon}</span>}
       <div data-inline={!!inline} className="a-l_cnt u_center">
         {_title}
         {_message}

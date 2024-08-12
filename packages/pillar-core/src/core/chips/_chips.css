@@ -1,10 +1,10 @@
 .c-i {
   --flex: inline-flex;
-  height: fit-content;
   border: 1px solid transparent;
   font-weight: 500;
   line-height: 1;
   gap: var(--s-xs);
+  height: fit-content;
   width: fit-content;
   max-width: 25ch;
   padding: 0.125em 0.25em;
