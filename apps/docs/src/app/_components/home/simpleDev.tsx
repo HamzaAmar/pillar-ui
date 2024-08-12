@@ -5,12 +5,12 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 export function SimplifyDevelopment() {
   return (
     <Paper as={Flex} items="center" gap="lg" className="section">
-      <div className="simplify-dev--container l_flow__xl">
+      <div className="simplify-dev--container l_f-xl">
         <SectionHeading subheading="Deliver Projects Faster" heading="Effortless UI with Pillar UI" />
 
         <Grid grid="1fr 1fr" md="1fr" gap="md">
           {SIMPLE_DEVELOPMENT.map(({ title, id, description }) => (
-            <div className="article--item l_flow__2xs" key={id}>
+            <div className="article--item l_f-2xs" key={id}>
               <Heading as="h3">{title}</Heading>
               <Text transform="capitalize" color="bg" contrast="low">
                 {description}

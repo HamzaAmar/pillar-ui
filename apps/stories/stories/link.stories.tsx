@@ -14,7 +14,7 @@ export default meta
 
 export function LinkSizes() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" size="3xs">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
@@ -48,7 +48,7 @@ export function LinkSizes() {
 
 export function LinkWeights() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" weight="thin">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
@@ -79,7 +79,7 @@ export function LinkWeights() {
 }
 export function LinkTruncates() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" size="3xl" truncate={1}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
@@ -106,7 +106,7 @@ export function LinkTruncates() {
 
 export function LinkTrasforms() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" transform="lowercase">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
@@ -125,7 +125,7 @@ export function LinkTrasforms() {
 
 export function LinkDecorations() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" decoration="through">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
@@ -141,7 +141,7 @@ export function LinkDecorations() {
 
 export function LinkFontStyles() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" fontStyle="italic">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
@@ -157,7 +157,7 @@ type Contrast = 'low' | 'high'
 
 export function LinkAligns() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" align="start">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
@@ -173,7 +173,7 @@ export function LinkAligns() {
 
 export function LinkColors() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" color="dan" contrast="high">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
@@ -218,7 +218,7 @@ export function LinkColors() {
 
 export function LinkLeadings() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" leading="normal">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
@@ -239,7 +239,7 @@ export function LinkLeadings() {
 
 export function LinkRTL() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Link href="#" dir="rtl">
         مُرَاكُش اموراكوش، «أرض الله») تسمى أيضًا بالمدينة الحمراء وعاصمة النخيل، هي ثالث أكبر مدينة في المملكة المغربية
         من ناحية عدد السكان. وهي عاصمة جهة مراكش آسفي. تقع مراكش على بعد 580 كم (360 ميل) جنوب شرق طنجة، 327 كم (203
@@ -255,7 +255,7 @@ export function LinkRTL() {
 
 export function LinkInsideParagraph() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Text>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia tempora blanditiis? Fugiat eum
         consequatur, veritatis consequuntur debitis asperiores deleniti earum! Voluptas adipisci cupiditate quis quia

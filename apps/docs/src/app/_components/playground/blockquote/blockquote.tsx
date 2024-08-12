@@ -93,7 +93,7 @@ export const BlockquoteSizes = () => {
 
 export const CiteBlockquote = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?

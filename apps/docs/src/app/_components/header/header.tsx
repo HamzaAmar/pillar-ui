@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <Flex className="header" as="header" justify="between" items="center" gap="sm">
-      <Link className="l_flex-1" href="/" aria-label="Home">
+      <Link className="l_fl-1" href="/" aria-label="Home">
         <Logo width="100px" className="header--logo" />
       </Link>
 
@@ -27,9 +27,9 @@ const Header = () => {
         data-show={booleanValue}
         justify="between"
         gap="sm"
-        className="header--input-search l_flex-2"
+        className="header--input-search u_center l_fl-2"
       >
-        <div className="l_flex-1">
+        <div className="l_fl-1">
           <InputSearch fluid name="search" placeholder="Search" aria-label="search" />
         </div>
         <IconButton
@@ -42,7 +42,7 @@ const Header = () => {
         />
       </Flex>
 
-      <Flex className="l_flex-1" items="center" justify="end" gap="xs">
+      <Flex className="l_fl-1" items="center" justify="end" gap="xs">
         <IconButton size="sm" onClick={setTrue} className="only-mobile" icon={<ListSearch />} title={'Show Search'} />
         <IconButton size="sm" onClick={toggleDirection} icon={<TextRtl />} title={'Go to Pillar Github Page'} />
         <SwitchMode />

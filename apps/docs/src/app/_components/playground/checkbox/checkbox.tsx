@@ -112,7 +112,7 @@ const ParentCheckbox = ({ children }: any) => {
         isIndeterminate={isIndeterminate}
         onChange={handleToggleAll}
       />
-      <ul style={{ listStyle: 'none' }} className="l_flow__3xs">
+      <ul style={{ listStyle: 'none' }} className="l_f-3xs">
         {React.Children.map(children, (child, index) => (
           <li>
             {React.cloneElement(child, {

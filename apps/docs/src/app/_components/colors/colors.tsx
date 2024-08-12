@@ -15,7 +15,7 @@ function ColorItem({ item, value }: ColorItem) {
   return (
     <Grid as={Paper} border items="center" grid="4rem 1fr auto" gap="sm">
       <Text size="sm">{item} </Text>
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <Grid justify="center" grid="repeat(12, 1fr) x auto 30px 30px" gap="xs">
           {Array.from({ length: 12 }, (_, index) => (
             <Text align="center" size="sm" key={`${item}-${index + 1}`} weight="medium" color="bg" contrast="low">

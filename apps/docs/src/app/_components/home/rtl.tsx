@@ -5,7 +5,7 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
   const { jobTitle, description, followers, fullName, likes } = USER_DATA[type].user
   return (
-    <article dir={type === 'ar' ? 'rtl' : 'ltr'} className="user--article l_flow__sm">
+    <article dir={type === 'ar' ? 'rtl' : 'ltr'} className="user--article l_f-sm">
       <Flex items="center" justify="between" gap="xs">
         <Flex gap="sm">
           <Avatar variant="dashed" />
@@ -45,8 +45,8 @@ export function RTLSupport() {
   return (
     <Paper as={Grid} grid="1.7fr 1fr" lg="1fr" items="center" gap="md" className="section rtl--support">
       <div className="rtl--support--content">
-        <div className="l_flow__lg">
-          <div className="l_flow__xs">
+        <div className="l_f-lg">
+          <div className="l_f-xs">
             <div>
               <SectionHeading
                 subheading="Build Global-Ready React UIs with Pillar UI's"
@@ -92,7 +92,7 @@ export function RTLSupport() {
         </svg>
       </div>
 
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <Article type="ar" />
         <Article />
       </div>

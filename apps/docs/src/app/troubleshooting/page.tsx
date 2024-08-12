@@ -11,7 +11,7 @@ const troubleshooting = () => {
         through them. This Troubleshooting section aims to provide solutions to some common roadblocks you might
         encounter while integrating and using the Pillar UI library in your React applications.
       </Text>
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <Heading as="h2" size="lg">
           Installation Issues
         </Heading>
@@ -61,7 +61,7 @@ const troubleshooting = () => {
         </Text>
       </div>
 
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <Heading as="h2" size="lg">
           Styling and Appearance Issues
         </Heading>
@@ -96,7 +96,7 @@ const troubleshooting = () => {
         </Text>
       </div>
 
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <Heading as="h2" size="lg">
           Component Integration Issues
         </Heading>
@@ -130,7 +130,7 @@ const troubleshooting = () => {
         </Text>
       </div>
 
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <Heading as="h2" size="lg">
           General Issues
         </Heading>
@@ -165,7 +165,7 @@ const troubleshooting = () => {
         </Text>
       </div>
 
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <Heading as="h2" size="lg">
           Further Assistance
         </Heading>

@@ -4,10 +4,10 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 export function CustomTheme() {
   return (
     <Paper as={Flex} items="center" justify="center" flow="xl" className="section hello-world">
-      <div className="l_flow__md">
+      <div className="l_f-md">
         <SectionHeading subheading="Change Theme" heading=" Custom your perfect look in seconds!" />
 
-        <div className="l_flow__lg">
+        <div className="l_f-lg">
           <Text className="dark--description" color="bg" contrast="low" size="xl">
             Customize your interface to showcase your personal flair. Adjust CSS variables for colors, fonts, and
             layouts to craft a design that’s unmistakably your own.

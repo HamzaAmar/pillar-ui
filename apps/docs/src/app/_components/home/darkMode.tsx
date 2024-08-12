@@ -5,8 +5,8 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 export function DarkMode() {
   return (
     <Paper items="center" justify="between" as={Flex} flow="lg" className="section">
-      <div className="l_flow__lg">
-        <div className="l_flow__md">
+      <div className="l_f-lg">
+        <div className="l_f-md">
           <SectionHeading subheading=" Subtle, Soothing, Smart" heading=" Night Mode: Effortless Elegance" />
           <Text className="dark--description" color="bg" contrast="low" size="xl">
             Switch to dark mode with ease. Our useDarkMode hook ensures a smooth, flicker-free experience, compatible

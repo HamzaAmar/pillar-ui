@@ -164,12 +164,12 @@ export const AccordionCorners = () => {
 export const AccordionType = () => {
   return (
     <Paper className="playground" flow="xl" p="sm" background="bg-3" corner="sm">
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <Heading>Accordion Type Single</Heading>
         <AccordionBase type="single" />
       </div>
 
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <Heading>Accordion Type Multiple</Heading>
         <AccordionBase type="multiple" />
       </div>

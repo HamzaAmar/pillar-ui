@@ -56,7 +56,7 @@ export function SwitchColorsDefault() {
 
 export function SwitchCorners() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Heading>With Props</Heading>
       <Flex gap="sm" items="center">
         <Switch label="Hello" corner="sharp" />

@@ -42,7 +42,7 @@ export const ChipsColor = () => (
 const VARIANTS = ['solid', 'mixed', 'soft', 'outline'] as const
 
 export const ChipsVariants = () => (
-  <div className="l_flow__md">
+  <div className="l_f-md">
     {VARIANTS.map((variant) => (
       <Flex key={variant} gap="xs">
         <Chips color="dan" variant={variant}>
@@ -252,7 +252,7 @@ export const ChipsRefForwarded = () => {
 
 export function ChipsCornerDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm">
         <Paper corner="sharp">
           <Chips>Hello</Chips>

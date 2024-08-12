@@ -11,7 +11,7 @@ export default meta
 
 export const BlockquoteSize = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Blockquote size="3xs">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
@@ -50,7 +50,7 @@ export const BlockquoteSize = () => {
 
 export const BlockquoteCorner = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Blockquote corner="sharp">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam alias voluptatibus pariatur nesciunt odio.
         Veniam quos iure laboriosam sed? Sit modi velit ut est sint, accusamus eveniet quibusdam! Cupiditate, corporis?
@@ -85,7 +85,7 @@ export const BlockquoteCorner = () => {
 
 export const BlockquoteColor = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
@@ -122,7 +122,7 @@ export const BlockquoteColor = () => {
 
 export const BlockquoteWithCite = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Blockquote color="dan">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
@@ -168,7 +168,7 @@ export const BlockquoteCustomStyle = () => {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm">
         <Paper corner="sharp">
           <Blockquote size="3xs">

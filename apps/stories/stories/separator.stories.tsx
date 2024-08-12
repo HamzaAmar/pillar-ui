@@ -11,7 +11,7 @@ export default meta
 
 export const SeparatorColors = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Separator color="dan" />
       <Separator color="war" />
       <Separator color="suc" />
@@ -24,7 +24,7 @@ export const SeparatorColors = () => {
 
 export const SeparatorThickness = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Separator thickness="3xs" />
       <Separator thickness="2xs" />
       <Separator thickness="xs" />
@@ -40,7 +40,7 @@ export const SeparatorThickness = () => {
 
 export const SeparatorCorner = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Separator corner="full" thickness="3xs" />
       <Separator corner="full" thickness="2xs" />
       <Separator corner="full" thickness="xs" />
@@ -56,7 +56,7 @@ export const SeparatorCorner = () => {
 
 export const SeparatorSeparator = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Separator title="OR" corner="xl" thickness="3xs" />
       <Separator title="OR" corner="xl" thickness="2xs" />
       <Separator title="OR" corner="xl" thickness="xs" />
@@ -72,7 +72,7 @@ export const SeparatorSeparator = () => {
 
 export const SeparatorDirection = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Separator title="OR" direction="horizontal" />
       <Separator title="OR" direction="horizontal" position="center" />
       <Separator title="OR" direction="horizontal" position="end" />

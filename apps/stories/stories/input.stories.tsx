@@ -43,7 +43,7 @@ export const FilledInput = () => {
 
 export const OutlineInput = () => {
   return (
-    <div className="l_flow__lg">
+    <div className="l_f-lg">
       <Flex gap="sm" direction="column">
         <Input autoFocus placeholder="Focus" />
         <Input placeholder="Normal" />

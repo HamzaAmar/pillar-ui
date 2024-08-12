@@ -50,7 +50,7 @@ const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text']
 
 export function IconButtonsVariants() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       {VARIANTS.map((variant) => (
         <Flex key={variant} gap="sm">
           <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="suc" />
@@ -67,7 +67,7 @@ export function IconButtonsVariants() {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm">
         <Paper corner="sharp">
           <IconButton title="Hello world" icon={<ThumbUp />} color="pri" />

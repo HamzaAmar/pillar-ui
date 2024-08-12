@@ -106,7 +106,7 @@ export const CodeLong = () => {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm" direction="column">
         <Paper corner="sharp">
           <Code color="dan">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -169,6 +169,23 @@ export function ButtonCornerDefaults() {
         </Paper>
         <Code color="dan">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
+    </div>
+  )
+}
+
+export function CodeCornerDefaults() {
+  return (
+    <div className="l_f-sm">
+      <Code color="dan">{`const animals = ['pigs', 'goats', 'sheep'];
+                        const count = animals.push('cows');
+                        console.log(count);
+                        // Expected output: 4
+                        console.log(animals);
+                        // Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+                        animals.push('chickens', 'cats', 'dogs');
+                        console.log(animals);
+                        // Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs","pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]`}</Code>
     </div>
   )
 }

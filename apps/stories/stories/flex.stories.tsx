@@ -29,7 +29,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100p
 
 export const FlexGap = () => {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="2xs">{boxes}</Flex>
       <Flex gap="xs">{boxes}</Flex>
       <Flex gap="sm">{boxes}</Flex>
@@ -43,7 +43,7 @@ export const FlexGap = () => {
 
 export const FlexWrap = () => {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="2xs" wrap>
         {boxes}
         {boxes}
@@ -78,7 +78,7 @@ export const FlexWrap = () => {
 
 export const FlexDirection = () => {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm">{boxes}</Flex>
       <Flex gap="sm" direction="column">
         {boxes}
@@ -89,7 +89,7 @@ export const FlexDirection = () => {
 
 export const FlexJustify = () => {
   return (
-    <div className="l_flow__lg">
+    <div className="l_f-lg">
       <Flex gap="sm">{boxes}</Flex>
       <Flex gap="sm" justify="center">
         {boxes}
@@ -112,7 +112,7 @@ export const FlexJustify = () => {
 
 export const FlexItems = () => {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex as={Paper} height="100px" background="bg-5" gap="sm" items="center">
         Hello
       </Flex>
@@ -129,13 +129,13 @@ export const FlexItems = () => {
 export const FlexNested = () => {
   return (
     <Flex gap="sm" direction="column">
-      <Box className="l_flex-1">header</Box>
+      <Box className="l_fl-1">header</Box>
       <Flex gap="sm">
-        <Box className="l_flex-1">sidebar</Box>
-        <Box className="l_flex-2">main</Box>
-        <Box className="l_flex-1">sidebar</Box>
+        <Box className="l_fl-1">sidebar</Box>
+        <Box className="l_fl-2">main</Box>
+        <Box className="l_fl-1">sidebar</Box>
       </Flex>
-      <Box className="l_flex-1">footer</Box>
+      <Box className="l_fl-1">footer</Box>
     </Flex>
   )
 }

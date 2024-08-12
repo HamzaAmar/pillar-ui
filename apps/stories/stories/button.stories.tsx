@@ -47,7 +47,7 @@ const SIZES = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'] as cons
 
 export function ButtonsIcons() {
   return (
-    <div className="l_flow__xl">
+    <div className="l_f-xl">
       {SIZES.map((size) => (
         <div key={size}>
           <Text weight="bold" size="2xl">
@@ -125,7 +125,7 @@ export function ButtonsTransforms() {
 
 export function ButtonsVariants() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       {VARIANTS.map((variant) => (
         <Flex key={variant} gap="sm">
           <Button color="suc" variant={variant}>
@@ -154,7 +154,7 @@ export function ButtonsVariants() {
 
 export function ButtonsCorners() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <h1>Regular</h1>
       <Flex gap="sm" wrap>
         <Button corner="sharp" color="suc">
@@ -359,7 +359,7 @@ export function ButtonsLength() {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm">
         <Paper corner="sharp">
           <Button color="suc">Green</Button>
@@ -428,7 +428,7 @@ export function ButtonCornerDefaults() {
 
 export function ButtonTransformDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
         <Button transform="uppercase" color="suc">
           green
@@ -447,7 +447,7 @@ export function ButtonTransformDefaults() {
 }
 export function ButtonSizeDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm" style={{ '--button-size': '8px' } as CSSProperties}>
         <Button size="2xs" color="suc">
           green

@@ -15,7 +15,7 @@ export default meta
 
 export const BadgeSize = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Flex items="center" gap="sm">
         <Badge size="3xs" type="numeric" number={15} max={15} />
         <Badge size="2xs" type="numeric" number={15} max={15} />
@@ -54,7 +54,7 @@ const VARIANTS = ['solid', 'mixed'] as const
 
 export const BadgeVariantNumeric = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       {VARIANTS.map((variant) => (
         <Flex items="center" gap="sm">
           <Badge size="3xs" type="numeric" variant={variant} number={15} max={15} />
@@ -73,7 +73,7 @@ export const BadgeVariantNumeric = () => {
 
 export const BadgeVariantDot = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       {VARIANTS.map((variant) => (
         <Flex items="center" gap="sm">
           <Badge size="3xs" type="dot" variant={variant} />
@@ -92,7 +92,7 @@ export const BadgeVariantDot = () => {
 
 export const BadgeVariantIcon = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       {VARIANTS.map((variant) => (
         <Flex items="center" gap="sm">
           <Badge size="3xs" type="icon" variant={variant} icon={<Apple />} />
@@ -124,7 +124,7 @@ export const BadgeNumericColor = () => {
 
 export const BadgeHighContrastColor = () => {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm">
         <Badge type="numeric" number={15} max={15} color="dan" />
         <Badge type="numeric" number={15} max={15} color="suc" />
@@ -147,7 +147,7 @@ export const BadgeHighContrastColor = () => {
 
 export const BadgeCorner = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Flex gap="sm">
         <Badge type="numeric" corner="sharp" number={15} max={15} color="dan" />
         <Badge type="numeric" corner="xs" number={15} max={15} color="suc" />
@@ -281,7 +281,7 @@ export const BadgePolymorphic = () => {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm" style={{ '--badge-rad': '0' } as CSSProperties}>
         <Paper corner="sharp">
           <Badge type="numeric" number={15} max={15} />

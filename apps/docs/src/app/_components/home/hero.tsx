@@ -23,7 +23,7 @@ export function Hero() {
         </Text>
         Your Comprehensive, Accessible UI Toolkit with Hooks, Icons, and Utilities
       </h1>
-      <div className="l_flow__md">
+      <div className="l_f-md">
         <p className="hero--text">
           A comprehensive set of reusable UI components, React hooks, icons and utilities for building React
           applications quickly and easily.

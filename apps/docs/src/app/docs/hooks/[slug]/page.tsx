@@ -20,7 +20,7 @@ export default function Blog({ params }: SlugParamsProps) {
     <>
       <div>
         <DocHeader root="pillar-hooks/src" {...rest} />
-        <div className="section prose l_flow__md">
+        <div className="section prose l_f-md">
           <CustomMDX source={content} />
         </div>
       </div>

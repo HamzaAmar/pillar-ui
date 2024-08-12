@@ -8,7 +8,7 @@ const meta: Meta<typeof Avatar> = {
   component: Avatar,
 }
 export default meta
-const image = 'https://picsum.photos/id/128/100/100'
+const image = 'https://picsum.photos/id/128/300/300'
 
 export function AvatarsSizes() {
   return (
@@ -69,7 +69,7 @@ export const AvatarRefForwarded = () => {
 
 export function AvatarsCorners() {
   return (
-    <div className="l_flow__xl">
+    <div className="l_f-xl">
       <Flex gap="xs" items="center">
         <Avatar corner="sharp" title="Hello" />
         <Avatar corner="xs" title="Hello" />
@@ -126,7 +126,7 @@ export function AvatarsAnimations() {
 
 export function AvatarsColors() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Flex gap="xs" items="center">
         <Avatar color="dan" variant="solid" image={image} title="Hello" />
         <Avatar color="dan" variant="solid" title="Hello" />
@@ -169,7 +169,7 @@ export function AvatarsColors() {
 
 export function AvatarsVariants() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Flex gap="xs" items="center">
         <Avatar variant="solid" title="Hello" />
         <Avatar variant="soft" title="Hello" />
@@ -188,7 +188,7 @@ export function AvatarsVariants() {
 
 export function AvatarGroupVariants() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <AvatarGroup limit={4} layout="stack">
         <Avatar title="Hello" />
         <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
@@ -225,7 +225,7 @@ export function AvatarGroupVariants() {
 
 export function AvatarGroupCustom() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <AvatarGroup limit={6} layout="stack" color="dan" variant="outline" fallback={<DotsHorizontal width="20" />}>
         <Avatar title="Hello" />
         <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
@@ -242,7 +242,7 @@ export function AvatarGroupCustom() {
 
 export function AvatarPolymorphic() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Avatar title="Hello" as="button" onClick={() => alert('Hello world my name is hazma')} />
       <Avatar as="a" href="#" image="https://picsum.photos/id/128/100/100" title="Hello" />
       <Avatar fallback={<DotsHorizontal width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
@@ -252,7 +252,7 @@ export function AvatarPolymorphic() {
 
 export function AvatarCustomStyle() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Avatar title="Hello" className="u_brown" />
       <Avatar title="Hello" style={{ background: 'red', color: 'white' }} />
     </div>
@@ -261,7 +261,7 @@ export function AvatarCustomStyle() {
 
 export function AvatarCornerDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm">
         <Paper corner="sharp">
           <Avatar title="Hello" />

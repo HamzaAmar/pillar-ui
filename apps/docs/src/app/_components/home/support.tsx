@@ -5,9 +5,9 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 export function PillarSupport() {
   return (
     <Flex gap="xl" justify="evenly" className="simplify-dev--container section">
-      <div className="l_flow__2xl">
+      <div className="l_f-2xl">
         <div
-          className="l_flow__
+          className="l_f-
           md"
         >
           <SectionHeading subheading="Framework Harmony:" heading="Effortless Integration with Pillar UI" />
@@ -28,8 +28,8 @@ export function PillarSupport() {
           ))}
         </Grid>
       </div>
-      <div className="support--second l_flow__sm">
-        <div className="get-started l_flow__sm">
+      <div className="support--second l_f-sm">
+        <div className="get-started l_f-sm">
           <Text weight="medium" size="lg">
             Lets Getting Start
           </Text>
@@ -38,7 +38,7 @@ export function PillarSupport() {
           </Text>
           <Button>Get Started</Button>
         </div>
-        <div className="get-started l_flow__sm">
+        <div className="get-started l_f-sm">
           <Text weight="medium" size="lg">
             Community
           </Text>

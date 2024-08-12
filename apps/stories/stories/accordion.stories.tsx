@@ -75,7 +75,7 @@ export const AlertCollapse = () => {
 
 export const AlertColors = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Grid grid="1fr 1fr 1fr" gap="lg">
         <AccordionBase color="dan" />
         <AccordionBase color="suc" />
@@ -138,7 +138,7 @@ export const AlertColors = () => {
 
 export const AlertVariants = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <AccordionBase variant="solid" />
       <AccordionBase variant="soft" />
       <AccordionBase variant="outline" />
@@ -148,7 +148,7 @@ export const AlertVariants = () => {
 
 export const AlertSizes = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <AccordionBase size="2xs" />
       <AccordionBase size="xs" />
       <AccordionBase size="sm" />
@@ -162,7 +162,7 @@ export const AlertSizes = () => {
 
 export const AlertCorners = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <AccordionBase separate color="bg" variant="solid" corner="sharp" />
       <AccordionBase separate color="bg" variant="soft" corner="sm" />
       <AccordionBase separate color="bg" variant="outline" corner="md" />
@@ -217,7 +217,7 @@ export const AccordionStyle = () => {
 
 export function AlertSizeDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex direction="column" gap="sm">
         <AccordionBase />
         <Paper style={{ '--accordion-size': '2rem' } as CSSProperties}>

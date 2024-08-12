@@ -113,13 +113,13 @@ export const FlexNested = () => {
   return (
     <Paper className="playground" flow="sm" border p="sm" background="bg-3" corner="sm">
       <Flex gap="sm" direction="column">
-        <Box className="l_flex-1">header</Box>
+        <Box className="l_fl-1">header</Box>
         <Flex gap="sm">
-          <Box className="l_flex-1">sidebar</Box>
-          <Box className="l_flex-2">main</Box>
-          <Box className="l_flex-1">sidebar</Box>
+          <Box className="l_fl-1">sidebar</Box>
+          <Box className="l_fl-2">main</Box>
+          <Box className="l_fl-1">sidebar</Box>
         </Flex>
-        <Box className="l_flex-1">footer</Box>
+        <Box className="l_fl-1">footer</Box>
       </Flex>
     </Paper>
   )

@@ -46,7 +46,7 @@ const Icons = () => {
   }
 
   return (
-    <div className="l_flow__sm icons">
+    <div className="l_f-sm icons">
       <Flex className="icons-scroll" as={Paper} p="sm" gap="sm">
         {CATEGORIES.map((category) => (
           <Button
@@ -58,7 +58,7 @@ const Icons = () => {
           </Button>
         ))}
       </Flex>
-      <div className="l_flow__sm" style={{ '--button-corner': 0 } as CSSProperties}>
+      <div className="l_f-sm" style={{ '--button-corner': 0 } as CSSProperties}>
         <Heading as="h2">
           Number of Icons In {current}: {lists.length}
         </Heading>

@@ -51,7 +51,7 @@ const MenuBar = ({ data }: DocsProps) => {
               : { as: 'button', onClick: () => toggleMenuItemSelection(key) }
 
             return (
-              <li className="l_flow__md" key={key}>
+              <li className="l_f-md" key={key}>
                 <Item
                   {...linkOrButtonConfig}
                   level={2}

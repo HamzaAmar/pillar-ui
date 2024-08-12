@@ -133,7 +133,7 @@ export const TextColors = () => {
 
 export function TextTrucates() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Text size="3xl" truncate={1}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!

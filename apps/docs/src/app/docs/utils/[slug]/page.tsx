@@ -24,7 +24,7 @@ export default function Blog({ params }: SlugParamsProps) {
     <>
       <div>
         <DocHeader root="pillar-utils/src" {...rest} />
-        <div className="section prose l_flow__md">
+        <div className="section prose l_f-md">
           <CustomMDX source={content} />
         </div>
       </div>

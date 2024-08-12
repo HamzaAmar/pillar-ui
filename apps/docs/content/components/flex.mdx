@@ -38,7 +38,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100p
 
 export const FlexGap = () => {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="2xs">{boxes}</Flex>
       <Flex gap="xs">{boxes}</Flex>
       <Flex gap="sm">{boxes}</Flex>
@@ -122,7 +122,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100p
 
 export const FlexDirection = () => {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex gap="sm">{boxes}</Flex>
       <Flex gap="sm" direction="column">
         {boxes}
@@ -161,7 +161,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100p
 
 export const FlexJustify = () => {
   return (
-    <div className="l_flow__lg">
+    <div className="l_f-lg">
       <Flex gap="sm">{boxes}</Flex>
       <Flex gap="sm" justify="center">
         {boxes}
@@ -212,7 +212,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100p
 
 export const FlexItems = () => {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex as={Paper} height="100px" background="bg-5" gap="sm" items="center">
         Hello
       </Flex>

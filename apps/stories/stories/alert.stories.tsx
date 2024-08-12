@@ -109,7 +109,7 @@ const Variants = ['shadow', 'solid', 'outline', 'soft', 'mixed']
 
 export const AlertVariant = () => {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       {Variants.map((variant) => (
         <Flex key={variant} direction="column" gap="sm">
           <AlertBase variant={variant} color="war" />
@@ -200,7 +200,7 @@ export const AlertIsomerphic = () => {
 
 export function AlertCornerDefaults() {
   return (
-    <div className="l_flow__sm">
+    <div className="l_f-sm">
       <Flex direction="column" gap="sm">
         <AlertBase variant="solid" />
       </Flex>

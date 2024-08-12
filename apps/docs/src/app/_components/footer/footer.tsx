@@ -1,6 +1,6 @@
 import React from 'react'
 import { default as Logo } from '../logo'
-import { Text, Grid, Paper, Heading, Code } from '~/component/core/pillar'
+import { Text, Grid, Paper } from '~/component/core/pillar'
 import Link from 'next/link'
 
 const footer = () => {
@@ -14,11 +14,11 @@ const footer = () => {
             tools designed with accessibility and scalability in mind. Empower your web applications effortlessly
           </Text>
         </div>
-        <nav className="l_flow__sm">
+        <nav className="l_f-sm">
           <Text transform="capitalize" size="md" weight="medium">
             Project
           </Text>
-          <ul className="footer-list l_flow__xs">
+          <ul className="footer-list l_f-xs">
             <li>
               <Text
                 transform="capitalize"
@@ -69,12 +69,12 @@ const footer = () => {
             </li>
           </ul>
         </nav>
-        <nav className="l_flow__sm">
+        <nav className="l_f-sm">
           <Text transform="capitalize" size="md" weight="medium">
             Community
           </Text>
 
-          <ul className="footer-list l_flow__xs">
+          <ul className="footer-list l_f-xs">
             <li>
               <Text
                 transform="capitalize"
@@ -128,12 +128,12 @@ const footer = () => {
             </li>
           </ul>
         </nav>
-        <nav className="l_flow__sm">
+        <nav className="l_f-sm">
           <Text transform="capitalize" size="md" weight="medium">
             Help
           </Text>
 
-          <ul className="footer-list l_flow__xs">
+          <ul className="footer-list l_f-xs">
             <li>
               <Text
                 transform="capitalize"

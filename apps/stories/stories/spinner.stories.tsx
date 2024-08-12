@@ -55,7 +55,7 @@ export function SpinnerThickness() {
 
 export function SpinnerInvert() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Flex gap="sm" items="center">
         <Spinner color="suc" />
         <Spinner color="dan" />

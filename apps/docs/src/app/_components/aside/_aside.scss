@@ -1,8 +1,8 @@
 .aside--list-item[data-active='true'] {
-  background-color: var(--pri-3);
+  background: var(--pri-3);
   color: var(--pri-12);
   &::before {
-    background-color: var(--pri-9);
+    background: var(--pri-9);
   }
 }
 
@@ -13,7 +13,7 @@
   top: 5rem;
   overflow-y: auto;
   max-height: calc(100vh - 5rem);
-  background-color: var(--bg-1);
+  background: var(--bg-1);
   z-index: 200;
 
   & ul {

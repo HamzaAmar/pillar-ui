@@ -23,7 +23,7 @@ export const ProgressPlayGround = () => {
 export const ProgressSizes = () => {
   return (
     <Paper flow="sm" border p="sm" background="bg-3" corner="sm">
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <ProgressBar size="2xs" value={90} label="hello" />
         <ProgressBar size="xs" value={90} label="hello" />
         <ProgressBar size="sm" value={90} label="hello" />
@@ -89,7 +89,7 @@ export const ProgressLabel = () => {
 export const ProgressColors = () => {
   return (
     <Paper flow="sm" border p="sm" background="bg-3" corner="sm">
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <ProgressBar color="dan" value={90} label="hello" />
         <ProgressBar color="suc" value={90} label="hello" />
         <ProgressBar color="war" value={90} label="hello" />
@@ -131,7 +131,7 @@ export const ProgressColors = () => {
 export const ProgressMin = () => {
   return (
     <Paper flow="sm" border p="sm" background="bg-3" corner="sm">
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <ProgressBar value={50} min={0} label="hello" />
         <ProgressBar value={500} min={0} label="hello" />
         <ProgressBar value={250} min={-100} label="hello" />
@@ -148,7 +148,7 @@ export const ProgressMin = () => {
 export const ProgressMax = () => {
   return (
     <Paper flow="sm" border p="sm" background="bg-3" corner="sm">
-      <div className="l_flow__sm">
+      <div className="l_f-sm">
         <ProgressBar value={50} max={1000} label="hello" />
         <ProgressBar value={500} max={100} label="hello" />
         <ProgressBar value={250} max={50} label="hello" />

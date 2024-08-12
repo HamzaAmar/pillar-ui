@@ -15,7 +15,7 @@ export default meta
 
 export function PaperBackground() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Paper>Hello</Paper>
       <Paper background="dan">Hello</Paper>
       <Paper background="dan-8">Hello</Paper>
@@ -31,7 +31,7 @@ export function PaperBackground() {
 
 export function PaperPadding() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Flex>
         <Paper p="2xs" background="dan">
           Hello
@@ -80,7 +80,7 @@ export function PaperPadding() {
 
 export function PaperCorner() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Paper p="sm" background="bg-4">
         Hello
       </Paper>
@@ -111,7 +111,7 @@ export function PaperCorner() {
 
 export function PaperShadow() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Paper p="sm">Hello</Paper>
 
       <Paper p="sm" shadow="xs">
@@ -135,7 +135,7 @@ export function PaperShadow() {
 
 export function PaperColors() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Paper p="sm" background="bg-4" color="dan-11">
         Hello
       </Paper>
@@ -160,7 +160,7 @@ export function PaperColors() {
 
 export function PaperWidths() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Paper background="dan-4" color="dan">
         Hello
       </Paper>
@@ -185,7 +185,7 @@ export function PaperWidths() {
 
 export function PaperHeights() {
   return (
-    <div className="l_flow__md">
+    <div className="l_f-md">
       <Paper height="100px" background="dan-4" color="dan">
         Hello
       </Paper>
