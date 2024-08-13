@@ -10,28 +10,6 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 Before diving into the installation, let's provide a brief overview of what this page will cover. In this guide, you'll learn how to get started with Pillar, a comprehensive library for building modern web applications. We'll walk you through the installation process, adding styles, customizing the theming, and enhancing your developer experience. By the end, you'll be ready to use Pillar's components, icons, utilities, and hooks to create stunning web user interfaces.
 
-## Table of Contents
-
-- [Installation](#installation)
-  - [Step 1: Install Node.js and npm](#step-1-install-nodejs-and-npm)
-  - [Step 2: Install Pillar Packages](#step-2-install-pillar-packages)
-  - [Step 3: Adding Styles](#step-3-adding-styles)
-  - [Step 4: Customize the Theming](#step-4-customize-the-theming)
-- [Developer Experience](#developer-experience)
-  - [Responsive Variables](#responsive-variables)
-  - [Preventing Repetition](#preventing-repetition)
-  - [Customization and Extensibility](#customization-and-extensibility)
-- [Get Ready](#get-ready)
-- [Next Steps](#next-steps)
-  - [Explore Component Documentation](#explore-component-documentation)
-  - [Dive into Utilities, Hooks, and Icons](#dive-into-utilities-hooks-and-icons)
-  - [Build Real-world Projects](#build-real-world-projects)
-  - [Contribute and Give Feedback](#contribute-and-give-feedback)
-  - [Stay Updated](#stay-updated)
-- [Troubleshooting](#troubleshooting)
-  - [Troubleshooting Section](#troubleshooting-section)
-  - [Further Assistance](#further-assistance)
-
 ## Installation
 
 To start using Pillar in your project, follow these simple steps:
@@ -157,66 +135,76 @@ Once you have customized your Pillar UI theme and set the desired variables, you
 you can import icons, utilities, or hooks based on your requirements. Here are some examples:
 
 ```tsx
-import { Button, Paper, Flex, InputPassword, FormController, Input } from '@pillar-ui/core'
-import { Envelop } from '@pillar-ui/icons'
+import { Button, Paper, InputPassword, FormController, Input } from '@pillar-ui/core'
+import { Envelop, Lock } from '@pillar-ui/icons'
 import { toCapitalize } from '@pillar-ui/utils'
-import { useDarkMode } from '@pillar-ui/hooks'
-
-interface FormValues {
-  email: string
-  password: string
-}
+import { useState } from 'react'
+import '@pillar-ui/core/main.css'
 
 function App() {
-  const [formData, setFormData] = useState<FormValues>({
-    email: '',
-    password: '',
-  })
+  const [formData, setFormData] = useState({})
   const [error, setError] = useState({})
 
-  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+  function handleChange(event) {
     const { name, value } = event.target
     const newValue = name === 'email' ? toCapitalize(value) : value
     setFormData((prevFormValues) => ({ ...prevFormValues, [name]: newValue }))
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e) {
     e.preventDefault()
 
-    const form = e.target as HTMLFormElement
+    const form = e.target
 
     if (form.checkValidity()) {
-      setErrors({})
+      setError({})
     } else {
-      const validationErrors: { [key: string]: string } = {}
+      const validationErrors = {}
 
       for (let i = 0; i < form.elements.length; i++) {
-        const field = form.elements[i] as HTMLInputElement
+        const field = form.elements[i]
         if (!field.checkValidity()) {
           validationErrors[field.name] = field.validationMessage
         }
       }
 
-      setErrors(validationErrors)
+      setError(validationErrors)
     }
+
+    console.log(formData)
   }
 
   return (
-    <Paper as={Flex} width="100vw" height="100vh" justify="center" items="center" p="sm">
-      <Paper as="form" onSubmit={handleSubmit} width="min(320px , 60vw)" borderColor="opa-6" p="sm">
-        <FormController required label="Email">
+    <Paper className="u_center">
+      <Paper as="form" flow="sm" onSubmit={handleSubmit} width="60-char" border>
+        <FormController required label="Name" error={error.name}>
           <Input
-            value={formData.email}
-            name="email"
+            value={formData.name}
+            name="name"
             onChange={handleChange}
             placeholder="Default Input"
             suffix={<Envelop />}
           />
         </FormController>
-        <FormController required minLength={7} label="Email" hint="Enter your password (at least 7 characters)">
+        <FormController required label="Email" error={error.email}>
+          <Input
+            prefixInput={<Envelop width={16} />}
+            value={formData.email}
+            name="email"
+            onChange={handleChange}
+            placeholder="Default Input"
+          />
+        </FormController>
+        <FormController
+          error={error.password}
+          required
+          minLength={7}
+          label="Password"
+          hint="Enter your password (at least 7 characters)"
+        >
           <InputPassword value={formData.password} name="password" onChange={handleChange} />
         </FormController>
-        <Button> Login </Button>
+        <Button icon={<Lock />}> Login </Button>
       </Paper>
     </Paper>
   )

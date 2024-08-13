@@ -1,4 +1,4 @@
-import { Button } from '@/app/components/core/pillar'
+import { Button } from '../components/core/pillar'
 
 export default function Home() {
   return (

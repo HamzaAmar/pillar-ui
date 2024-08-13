@@ -3859,7 +3859,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pillar-ui/core@npm:*, @pillar-ui/core@workspace:packages/pillar-core":
+"@pillar-ui/core@npm:*, @pillar-ui/core@workspace:^, @pillar-ui/core@workspace:packages/pillar-core":
   version: 0.0.0-use.local
   resolution: "@pillar-ui/core@workspace:packages/pillar-core"
   dependencies:
@@ -3954,7 +3954,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pillar-ui/icons@npm:*, @pillar-ui/icons@workspace:packages/pillar-icons":
+"@pillar-ui/icons@npm:*, @pillar-ui/icons@workspace:^, @pillar-ui/icons@workspace:packages/pillar-icons":
   version: 0.0.0-use.local
   resolution: "@pillar-ui/icons@workspace:packages/pillar-icons"
   dependencies:
@@ -17752,6 +17752,8 @@ __metadata:
   resolution: "pillar-monorepo@workspace:."
   dependencies:
     "@changesets/cli": "npm:^2.27.7"
+    "@pillar-ui/core": "workspace:^"
+    "@pillar-ui/icons": "workspace:^"
     alex: "npm:^11.0.1"
     eslint-config-custom: "npm:*"
     husky: "npm:^8.0.3"
