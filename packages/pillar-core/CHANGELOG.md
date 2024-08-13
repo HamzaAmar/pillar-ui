@@ -1,5 +1,25 @@
 # @pillar/core
 
+## 0.8.5
+
+### Patch Changes
+
+- # UI Refinement Improvements
+
+  **Release Notes:**
+
+  This release focuses on enhancing the visual experience of our product:
+
+  - **change Contrast props:** We've made adjustments to contrast props to be low boolean.
+  - **Streamlined Pillar Core:** The core size of pillar elements has been reduced through optimized CSS classes, resulting in a cleaner and more compact layout.
+  - **Documentation and Storybook Update:** Outdated CSS classes in the documentation and Storybook have been replaced with the latest versions to maintain consistency.
+
+  **Commits:**
+
+  - 94fc724 (HEAD -> main) refactor: change contrast props to low
+  - 4fdb406 refactor:improve pillar core size to be smaller by making classes smaller and better
+  - f591db5 fix: change to the new css class in docs and stories
+
 ## 0.8.4
 
 ### Patch Changes
