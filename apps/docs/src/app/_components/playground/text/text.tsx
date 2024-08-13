@@ -109,22 +109,22 @@ export const TextColors = () => {
       <Text color="bg">Hello World</Text>
       <Text color="sec">Hello World</Text>
 
-      <Text contrast="low" color="dan">
+      <Text low color="dan">
         Hello World
       </Text>
-      <Text contrast="low" color="suc">
+      <Text low color="suc">
         Hello World
       </Text>
-      <Text contrast="low" color="war">
+      <Text low color="war">
         Hello World
       </Text>
-      <Text contrast="low" color="pri">
+      <Text low color="pri">
         Hello World
       </Text>
-      <Text contrast="low" color="bg">
+      <Text low color="bg">
         Hello World
       </Text>
-      <Text contrast="low" color="sec">
+      <Text low color="sec">
         Hello World
       </Text>
     </Paper>

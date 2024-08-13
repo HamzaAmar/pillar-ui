@@ -8,7 +8,7 @@ export default function Custom404() {
       <Heading size="3xl" weight="bold">
         404 - Page Not Found
       </Heading>
-      <Text contrast="low" size="lg">
+      <Text low size="lg">
         The page you&apos;re looking for has wandered into the digital abyss. But worry not! The UI guardians are here
         to guide you back.
       </Text>

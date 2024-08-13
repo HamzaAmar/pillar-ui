@@ -17,7 +17,7 @@ export const Text = forwardRef((props, forwardedRef) => {
     decoration,
     color,
     fontStyle,
-    contrast = 'high',
+    low = false,
     children,
     width,
     ...rest
@@ -34,12 +34,11 @@ export const Text = forwardRef((props, forwardedRef) => {
     [`u_f-${fontStyle}`]: !!fontStyle,
     [`u_${color}`]: !!color,
     [`u_width-${width}`]: !!width,
+    [`t-y-low`]: low,
     [`${className}`]: !!className,
   })
-  const contrastLvl = contrast === 'high' ? 12 : 11
   const _style = {
     ...(truncate && { '--line-numbers': props.truncate }),
-    ...(color && { '--color-text': `var(--${color}-${contrastLvl})` }),
   } as CSSProperties
 
   return (
@@ -62,7 +61,7 @@ Heading.displayName = 'Heading'
 
 export const Link = forwardRef(({ children, ...rest }, forwardedRef) => {
   return (
-    <Text ref={forwardedRef} color="pri" contrast="low" className="t-y_lnk" as="a" {...rest}>
+    <Text ref={forwardedRef} color="pri" low className="t-y_lnk" as="a" {...rest}>
       {children}
     </Text>
   )

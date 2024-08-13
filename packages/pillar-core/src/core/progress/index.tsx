@@ -98,7 +98,7 @@ export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProp
       <Flex as="ul" wrap gap="md">
         {_children?.map(({ children, color }, index) => (
           <Flex items="center" gap="2xs" as="li" className={`pr-s_cnt u_${color}`} key={index}>
-            <Text as="span" color="bg" size="sm" contrast="low">
+            <Text as="span" color="bg" size="sm" low>
               {children}
             </Text>
           </Flex>

@@ -90,22 +90,22 @@ export const HeadingColors = () => {
       <Heading color="bg">Hello World</Heading>
       <Heading color="sec">Hello World</Heading>
 
-      <Heading contrast="low" color="dan">
+      <Heading low color="dan">
         Hello World
       </Heading>
-      <Heading contrast="low" color="suc">
+      <Heading low color="suc">
         Hello World
       </Heading>
-      <Heading contrast="low" color="war">
+      <Heading low color="war">
         Hello World
       </Heading>
-      <Heading contrast="low" color="pri">
+      <Heading low color="pri">
         Hello World
       </Heading>
-      <Heading contrast="low" color="bg">
+      <Heading low color="bg">
         Hello World
       </Heading>
-      <Heading contrast="low" color="sec">
+      <Heading low color="sec">
         Hello World
       </Heading>
     </Paper>

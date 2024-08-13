@@ -209,7 +209,7 @@ export function TextAligns() {
 export function TextColors() {
   return (
     <div className="l_flow">
-      <Text color="dan" contrast="high">
+      <Text color="dan">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
 
@@ -229,23 +229,23 @@ export function TextColors() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
 
-      <Text color="dan" contrast="low">
+      <Text color="dan" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
 
-      <Text color="sec" contrast="low">
+      <Text color="sec" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="suc" contrast="low">
+      <Text color="suc" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="war" contrast="low">
+      <Text color="war" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="pri" contrast="low">
+      <Text color="pri" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="bg" contrast="low">
+      <Text color="bg" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
     </div>

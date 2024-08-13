@@ -109,22 +109,22 @@ export const LinkColors = () => {
       <Link color="bg">Hello World</Link>
       <Link color="sec">Hello World</Link>
 
-      <Link contrast="low" color="dan">
+      <Link low color="dan">
         Hello World
       </Link>
-      <Link contrast="low" color="suc">
+      <Link low color="suc">
         Hello World
       </Link>
-      <Link contrast="low" color="war">
+      <Link low color="war">
         Hello World
       </Link>
-      <Link contrast="low" color="pri">
+      <Link low color="pri">
         Hello World
       </Link>
-      <Link contrast="low" color="bg">
+      <Link low color="bg">
         Hello World
       </Link>
-      <Link contrast="low" color="sec">
+      <Link low color="sec">
         Hello World
       </Link>
     </Paper>

@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import type { CharWidth, Color, Size } from '../../types'
 
-type Contrast = 'low' | 'high'
 type FontStyle = 'italic' | 'oblique'
 type Align = 'start' | 'center' | 'end'
 type Decoration = 'through' | 'under' | 'over'
@@ -32,7 +31,7 @@ export interface TypographyProps {
   children?: ReactNode
   weight?: Weight
   color?: Color
-  contrast?: Contrast
+  low?: boolean
   fontStyle?: FontStyle
   decoration?: Decoration
   leading?: Leading

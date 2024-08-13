@@ -12,7 +12,7 @@ export function SimplifyDevelopment() {
           {SIMPLE_DEVELOPMENT.map(({ title, id, description }) => (
             <div className="article--item l_f-2xs" key={id}>
               <Heading as="h3">{title}</Heading>
-              <Text transform="capitalize" color="bg" contrast="low">
+              <Text transform="capitalize" color="bg" low>
                 {description}
               </Text>
             </div>

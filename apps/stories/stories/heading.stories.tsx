@@ -209,7 +209,7 @@ export function HeadingAligns() {
 export function HeadingColors() {
   return (
     <div className="l_f-md">
-      <Heading color="dan" contrast="high">
+      <Heading color="dan">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
 
@@ -229,22 +229,22 @@ export function HeadingColors() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
 
-      <Heading color="dan" contrast="low">
+      <Heading color="dan" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="sec" contrast="low">
+      <Heading color="sec" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="suc" contrast="low">
+      <Heading color="suc" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="war" contrast="low">
+      <Heading color="war" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="pri" contrast="low">
+      <Heading color="pri" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="bg" contrast="low">
+      <Heading color="bg" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
     </div>

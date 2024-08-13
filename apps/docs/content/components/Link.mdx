@@ -158,7 +158,7 @@ export function LinkAligns() {
 - Default: `primary`
 - Options: `danger` | `warning` | `success` | `primary` | `bgcece` | `primary` | `secondary`
 
-The color prop sets the color of the text . The available options are: red, brown, purple, secondary, green, orange, primary, and bgcece. The contrast prop sets the contrast level between the text and the background color. When contrast is set to "high", the text has a higher contrast with the background, making it easier to read, while when contrast is set to "low", the text has lower contrast with the background, which can make it more difficult to read the default is `high`.
+The color prop sets the color of the text .The contrast prop adjusts the contrast between heading text and its background. The default ensures high contrast for optimal readability. Using the low prop reduces contrast, which can impact accessibility for some users.
 
 Example:
 
@@ -168,7 +168,7 @@ Example:
 export function LinkColors() {
   return (
     <div className="l_flow">
-      <Link color="dan" contrast="high">
+      <Link color="dan">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
       <Link color="sec">
@@ -187,22 +187,22 @@ export function LinkColors() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
 
-      <Link color="dan" contrast="low">
+      <Link color="dan" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link color="sec" contrast="low">
+      <Link color="sec" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link color="suc" contrast="low">
+      <Link color="suc" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link color="war" contrast="low">
+      <Link color="war" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link color="pri" contrast="low">
+      <Link color="pri" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link color="bgcece" contrast="low">
+      <Link color="bgcece" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
     </div>

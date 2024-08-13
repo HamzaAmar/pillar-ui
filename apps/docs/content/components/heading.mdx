@@ -158,7 +158,7 @@ export function HeadingAligns() {
 - Default: `primary`
 - Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
 
-The color prop sets the color of the heading . The available options are: red, brown, purple, secondary, green, orange, primary, and bg. The contrast prop sets the contrast level between the heading and the background color. When contrast is set to "high", the heading has a higher contrast with the background, making it easier to read, while when contrast is set to "low", the heading has lower contrast with the background, which can make it more difficult to read the default is `high`.
+The color prop sets the color of the heading . The contrast prop adjusts the contrast between heading text and its background. The default ensures high contrast for optimal readability. Using the low prop reduces contrast, which can impact accessibility for some users.
 
 Example:
 
@@ -168,7 +168,7 @@ Example:
 export function HeadingColors() {
   return (
     <div className="l_flow">
-      <Heading color="dan" contrast="high">
+      <Heading color="dan">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
       <Heading color="sec">
@@ -187,22 +187,22 @@ export function HeadingColors() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
 
-      <Heading color="dan" contrast="low">
+      <Heading color="dan" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="sec" contrast="low">
+      <Heading color="sec" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="suc" contrast="low">
+      <Heading color="suc" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="war" contrast="low">
+      <Heading color="war" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="pri" contrast="low">
+      <Heading color="pri" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="bg" contrast="low">
+      <Heading color="bg" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
     </div>

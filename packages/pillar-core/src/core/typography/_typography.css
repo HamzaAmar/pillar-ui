@@ -1,7 +1,11 @@
 .t-y {
-  color: var(--color-text);
+  color: var(--c-12);
   font-size: var(--typography-size, inherit);
   text-transform: var(--typography-transform, inherit);
+}
+
+.t-y-low {
+  color: var(--c-11);
 }
 
 .t-y_hdg {

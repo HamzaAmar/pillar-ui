@@ -29,7 +29,7 @@ export function Hero() {
           applications quickly and easily.
         </p>
 
-        <Text color="bg" contrast="low">
+        <Text color="bg" low>
           Currently, this library only supports React, but we are actively working on adding support for (Qwik, and Vue)
         </Text>
       </div>

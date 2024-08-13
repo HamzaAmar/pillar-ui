@@ -47,7 +47,7 @@ export const StepperStep = (props: StepProps) => {
         <Text id={labelledbyID} weight="medium" size="sm">
           {title}
         </Text>
-        <Text id={describedbyID} size="xs" color="bg" contrast="low">
+        <Text id={describedbyID} size="xs" color="bg" low>
           {description}
         </Text>
       </div>

@@ -174,23 +174,23 @@ export function LinkAligns() {
 export function LinkColors() {
   return (
     <div className="l_f-md">
-      <Link href="#" color="dan" contrast="high">
+      <Link href="#" color="dan">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
 
-      <Link href="#" color="sec" contrast="high">
+      <Link href="#" color="sec">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="suc" contrast="high">
+      <Link href="#" color="suc">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="war" contrast="high">
+      <Link href="#" color="war">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="pri" contrast="high">
+      <Link href="#" color="pri">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="bg" contrast="high">
+      <Link href="#" color="bg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
 

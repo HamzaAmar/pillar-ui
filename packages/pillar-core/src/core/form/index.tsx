@@ -349,7 +349,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
         {title}
       </Flex>
 
-      <Text as={Flex} color="bg" size="xs" contrast="low" items="center">
+      <Text as={Flex} color="bg" size="xs" low items="center">
         {hasValue ? _value : 'No file Choose'}
       </Text>
     </Grid>
