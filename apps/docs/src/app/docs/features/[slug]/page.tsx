@@ -17,8 +17,10 @@ function Features({ params }: SlugParamsProps) {
   const { content, headings } = feature
   return (
     <>
-      <div className="section docs--content  prose l_f-md">
-        <CustomMDX source={content} />
+      <div className="section docs--content prose">
+        <div className="l_f-md">
+          <CustomMDX source={content} />
+        </div>
       </div>
 
       {<TableOfContent contents={headings} />}

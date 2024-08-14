@@ -65,11 +65,11 @@ const Icons = () => {
           </Button>
         ))}
       </Flex>
-      <div className="l_f-sm" style={{ '--button-corner': 0 } as CSSProperties}>
+      <div className="u_pa-lg l_f-lg">
         <Heading as="h2">
           Number of Icons In {current}: {lists.length}
         </Heading>
-        <Grid gap="sm" grid="repeat(auto-fit, minmax(130px, 1fr)">
+        <Grid gap="sm" grid="repeat(auto-fit, minmax(140px, 1fr)">
           {lists.map((item) => (
             <IconsItem item={item} />
           ))}

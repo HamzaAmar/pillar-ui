@@ -19,8 +19,10 @@ function GettingStarted({ params }: SlugParamsProps) {
   const { content, headings, ...rest } = feature
   return (
     <>
-      <div className="section docs--content prose l_f-md">
-        <CustomMDX source={content} />
+      <div className="section docs--content prose">
+        <div className="l_f-sm">
+          <CustomMDX source={content} />
+        </div>
       </div>
 
       {<TableOfContent contents={headings} />}
