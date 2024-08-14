@@ -5,6 +5,7 @@ import { getAll } from '~/api/docs'
 interface LayoutProps {
   children: ReactNode
 }
+
 const Layout = ({ children }: LayoutProps) => {
   const data = getAll()
   return (

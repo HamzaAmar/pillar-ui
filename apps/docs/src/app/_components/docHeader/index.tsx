@@ -7,7 +7,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
   const typeName = type === 'core' ? 'Components' : type[0].toUpperCase() + type.slice(1)
 
   return (
-    <Paper flow="lg" p="sm">
+    <Paper className="docs--header" flow="lg" p="sm">
       <Heading size="2xl">{title} documentation</Heading>
       <Text color="bg" low size="sm" weight="medium">
         {excerpt}
@@ -45,7 +45,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
       <Flex gap="sm" wrap>
         <Button
           as="a"
-          href={`https://github.com/HamzaAmar/pillar-ui/b/main/packages/${root}/${directory}`}
+          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
           target="_blank"
           color="bg"
           icon={<Github strokeWidth={2} />}

@@ -44,7 +44,6 @@ export function useScrollSpy(selectors: string) {
 }
 const TableOfContent = ({ contents }: { contents: HeadingProps[] | null }) => {
   const activeId = useScrollSpy('h2,h3,h4,h5')
-  console.log('this is the value of the contents from the table of contents', contents)
   return (
     <nav className="table-of-content--wrapper aside l_flow lg-hide">
       <Paper p="xs" as={Flex} gap="sm" items="center">

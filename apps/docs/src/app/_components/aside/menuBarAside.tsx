@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { Flex } from '~/component/core/pillar'
-import { Book, Bridge, ChevronDown, Fish, Help, Palette, Star } from '@pillar-ui/icons'
+import { Book, Bridge, ChevronDown, Fish, Help, Palette, PictureInPicture, Star } from '@pillar-ui/icons'
 // import type { MenuItemData } from './aside.type'
 import { Item } from './listItem'
 import { useDrawer } from '../drawerProvider'
@@ -23,7 +23,7 @@ const ICONS = {
   tutorials: <Book width={24} />,
   themes: <Palette width={24} />,
   features: <Star width={24} />,
-  getStarted: <Bridge width={24} />,
+  'getting-started': <Bridge width={24} />,
 }
 
 const MenuBar = ({ data }: DocsProps) => {
@@ -57,7 +57,7 @@ const MenuBar = ({ data }: DocsProps) => {
                   level={2}
                   isActive={current === key && !contents}
                   icon={ICONS[key]}
-                  title={key}
+                  title={key === 'getting-started' ? 'Getting Started' : key}
                 >
                   {contents && <ChevronDown width="16" />}
                 </Item>
@@ -82,6 +82,16 @@ const MenuBar = ({ data }: DocsProps) => {
               </li>
             )
           })}
+          <li>
+            <Item
+              as={Link}
+              href="/docs/icons"
+              level={2}
+              isActive={current === 'icons'}
+              icon={<PictureInPicture width={24} />}
+              title={'Icons'}
+            />
+          </li>
         </ul>
       </nav>
     </Flex>

@@ -2,3 +2,9 @@
   display: grid;
   grid-template-columns: auto minmax(1px, 1fr) auto;
 }
+
+@media (max-width: 768px) {
+  .docs--section {
+    grid-template-columns: minmax(1px, 1fr);
+  }
+}

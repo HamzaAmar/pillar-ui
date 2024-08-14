@@ -19,7 +19,7 @@ function GettingStarted({ params }: SlugParamsProps) {
   const { content, headings, ...rest } = feature
   return (
     <>
-      <div className="section prose l_f-md">
+      <div className="section docs--content prose l_f-md">
         <CustomMDX source={content} />
       </div>
 

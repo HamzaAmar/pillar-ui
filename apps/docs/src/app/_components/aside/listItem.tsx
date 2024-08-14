@@ -1,4 +1,4 @@
-import { ForwardRefComponent, Flex } from '~/component/core/pillar'
+import { ForwardRefComponent, Flex, Text } from '~/component/core/pillar'
 import { forwardRef, CSSProperties } from 'react'
 
 import type { ListItemProps } from './aside.type'
@@ -9,7 +9,7 @@ export const Item = forwardRef(({ title, level = 1, isActive, children, as: Tag 
       <Flex as={Tag} ref={ref} className="aside--list-link" {...rest}>
         <div className="aside--list-icon">
           {icon}
-          <span>{title}</span>
+          <Text transform="capitalize">{title}</Text>
         </div>
         <span>{children}</span>
       </Flex>

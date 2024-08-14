@@ -117,21 +117,21 @@ export function getFeatureBySlug(s: string) {
 }
 
 export function getAll() {
+  const getStarted = getGetStarted()
   const components = getComponents()
   const hooks = getHooks()
   const features = getFeatures()
   const utils = getUtils()
   const tutorials = getTutorials()
   const themes = getThemes()
-  const getStarted = getGetStarted()
 
   return {
+    'getting-started': getStarted,
+    themes,
+    features,
     components,
     hooks,
-    features,
     utils,
     tutorials,
-    themes,
-    getStarted,
   }
 }

@@ -13,7 +13,7 @@ export interface SharedDocs {
   excerpt: string
   content: string
   slug: string
-  type: 'core' | 'hooks' | 'utils' | 'tutorials' | 'getting-started' | 'features' | 'themes'
+  type: 'core' | 'hooks' | 'utils' | 'tutorials' | 'getting-started' | 'features' | 'themes' | 'icons'
   readingTime: ReadTimeResults
   headings: Headings
   directory?: string

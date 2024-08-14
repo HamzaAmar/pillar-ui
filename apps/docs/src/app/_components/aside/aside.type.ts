@@ -8,7 +8,7 @@ export interface HeadingProps {
 export interface ListItemProps extends Omit<HeadingProps, 'slug'> {
   isActive: boolean
   children?: ReactNode
-  icon?: string
+  icon?: ReactNode
 }
 
 export interface MenuItemProps {

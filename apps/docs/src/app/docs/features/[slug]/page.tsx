@@ -17,7 +17,7 @@ function Features({ params }: SlugParamsProps) {
   const { content, headings } = feature
   return (
     <>
-      <div className="section prose l_f-md">
+      <div className="section docs--content  prose l_f-md">
         <CustomMDX source={content} />
       </div>
 

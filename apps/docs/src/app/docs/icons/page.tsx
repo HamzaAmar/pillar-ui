@@ -16,13 +16,20 @@ const IconsItem = ({ item }: { item: ItemProps }) => {
   const [name, Icon] = item
 
   return (
-    <Flex as={Paper} background="bg-5" direction="column" items="center" key={name!}>
-      <Flex as={Paper} p="xs" direction="column" items="center">
+    <Flex
+      as={Paper}
+      background="bg-5"
+      className="u_rad-md l_f-sm u_pa-sm"
+      direction="column"
+      items="center"
+      key={name!}
+    >
+      <div className="icon--info l_fl-column u_center">
         <Icon width="30" />
         <Text weight="medium" size="xs">
           {name}
         </Text>
-      </Flex>
+      </div>
       <Button onClick={() => copy(`<${name} width='20'/>`)} fluid>
         {copied ? 'Copied' : 'Copy'}
       </Button>

@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 function Page({ params }: SlugParamsProps) {
   const component = getComponentBySlug(params.slug)
   if (!component) notFound()
-  const { content, headings, lastModified, publishedAt, ...rest } = component
+  const { content, headings, lastModified, publishedAt, title, ...rest } = component
   const img = `${DOMAIN}/pillar.png`
   const directory = component.type === 'core' ? 'components' : component.type
   return (
@@ -42,8 +42,8 @@ function Page({ params }: SlugParamsProps) {
           }),
         }}
       />
-      <div>
-        <DocHeader root="pillar-core/src/core" {...rest} />
+      <div className="docs--content l_f-lg">
+        <DocHeader root="pillar-core/src/core" title={`Pillar UI React ${title} Component`} {...rest} />
         <div className="section prose l_f-md">
           <CustomMDX source={content} />
         </div>
