@@ -1,6 +1,6 @@
-import { renderHook, act } from '@testing-library/react'
-import { useRovingIndex, getNextIndex, getPreviousIndex } from '.'
-import { describe, expect, it, vi } from 'vitest'
+// import { renderHook, act } from '@testing-library/react'
+import { getNextIndex, getPreviousIndex } from '.'
+import { describe, expect, it } from 'vitest'
 
 describe('getPreviousIndex function tests', () => {
   // Test cases when loop is true

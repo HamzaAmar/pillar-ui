@@ -4,7 +4,7 @@ import { Button, Flex, Heading, Tabs, Tab, TabList, TabPanel, TabPanels, Grid } 
 import type { TabProps } from '@pillar-ui/core'
 import { ArrowDown } from '@pillar-ui/icons'
 
-const meta: Meta<typeof Chips> = {
+const meta: Meta<typeof Tabs> = {
   title: 'Components/Tabs',
   component: Tabs,
 } as Meta<typeof Tabs>

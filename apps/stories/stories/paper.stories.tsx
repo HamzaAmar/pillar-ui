@@ -151,6 +151,18 @@ export function PaperWidths() {
       <Paper background="dan-4" color="dan">
         Hello
       </Paper>
+      <Paper width="25" background="suc-4" color="suc">
+        Hello
+      </Paper>
+      <Paper width="50" background="war-4" color="war">
+        Hello
+      </Paper>
+      <Paper width="75" background="sec-4" color="sec">
+        Hello
+      </Paper>
+      <Paper width="100" background="sec-4" color="sec">
+        Hello
+      </Paper>
       <Paper width="30-char" background="suc-4" color="suc">
         Hello
       </Paper>
@@ -166,16 +178,84 @@ export function PaperWidths() {
       <Paper width="90-char" background="pri-4" color="pri">
         Hello
       </Paper>
-      <Paper width="fit-content" background="pri-4" color="pri">
+      <Paper width="fit" background="pri-4" color="pri">
         Hello
       </Paper>
-      <Paper width="full" background="pri-4" color="pri">
+      <Paper width="24px" background="pri-4" color="pri">
         Hello
       </Paper>
-      <Paper width="one-third" background="pri-4" color="pri">
+      <Paper width="48px" background="pri-4" color="pri">
         Hello
       </Paper>
-      <Paper width="half" background="pri-4" color="pri">
+      <Paper width="192px" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper width="384px" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper width="screen" background="pri-4" color="pri">
+        Hello
+      </Paper>
+    </div>
+  )
+}
+
+export function PaperRatio() {
+  return (
+    <div className="l_f-md">
+      <Paper width="30-char" ratio="1" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper width="30-char" ratio="16-9" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper width="30-char" ratio="18-5" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper width="30-char" ratio="3-4" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper width="30-char" ratio="4-3" background="pri-4" color="pri">
+        Hello
+      </Paper>{' '}
+      <Paper width="30-char" ratio="golden" background="pri-4" color="pri">
+        Hello
+      </Paper>
+    </div>
+  )
+}
+
+export function PaperHeight() {
+  return (
+    <div className="l_f-md">
+      <Paper height="25" background="suc-4" color="suc">
+        Hello
+      </Paper>
+      <Paper height="50" background="war-4" color="war">
+        Hello
+      </Paper>
+      <Paper height="75" background="sec-4" color="sec">
+        Hello
+      </Paper>
+      <Paper height="100" background="sec-4" color="sec">
+        Hello
+      </Paper>
+      <Paper height="fit" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper height="24px" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper height="48px" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper height="192px" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper height="384px" background="pri-4" color="pri">
+        Hello
+      </Paper>
+      <Paper height="screen" background="pri-4" color="pri">
         Hello
       </Paper>
     </div>

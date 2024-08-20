@@ -52,11 +52,14 @@ type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'first-letter-only'
 
 type CharWidth = '25-char' | '30-char' | '45-char' | '60-char' | '75-char' | '90-char'
 
-type Width = CharWidth | 'half' | 'one-third' | 'full' | 'fit-content'
+type Width = CharWidth | '25' | '50' | '75' | '100' | 'fit' | '24px' | '48px' | '96px' | '192px' | '384px' | 'screen'
+
+type Height = '25' | '50' | '75' | '100' | 'fit' | '24px' | '48px' | '96px' | '192px' | '384px' | 'h-screen'
 
 export type {
   CharWidth,
   Width,
+  Height,
   Color,
   Size,
   Corner,

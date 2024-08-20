@@ -28,7 +28,6 @@ export const Paper = forwardRef((props, ref) => {
     style = {},
     className,
     border,
-    size,
     ...rest
   } = props
 
@@ -38,9 +37,9 @@ export const Paper = forwardRef((props, ref) => {
     [`u_rad-${corner}`]: !!corner,
     [`u_pa-${p}`]: !!p,
     [`u_ma-${m}`]: !!m,
-    [`u_s-${size}`]: !!size,
     [`u_w-${width}`]: !!width,
-    [`u_${ratio}`]: !!ratio,
+    [`u_h-${height}`]: !!height,
+    [`u_ratio-${ratio}`]: !!ratio,
     [`u_border`]: !!border,
     [className!]: !!className,
   })
