@@ -30,20 +30,18 @@ export const Button = forwardRef((props, forwardedRef) => {
 
   const classNames = classnames(`b-u u_${variant} u_${color} u_center`, {
     [className!]: !!className,
-    btn__fluid: !!fluid,
-    [`u_transform__${transform}`]: !!transform,
+    'b-u-fluid': !!fluid,
+    [`u_t-${transform}`]: !!transform,
     [`u_f-${size}`]: !!size,
     [`u_rad-${corner}`]: !!corner,
   })
 
   const isLoading = state === 'loading'
 
-  const _disabled = disabled || isLoading
-
   const content = (
     <>
       {iconPosition === 'start' && icon}
-      <span className="btn--text u_truncate">{children}</span>
+      <span className="b-u_txt u_truncate">{children}</span>
       {iconPosition === 'end' && icon}
     </>
   )
@@ -56,7 +54,7 @@ export const Button = forwardRef((props, forwardedRef) => {
   )
 
   return (
-    <Tag disabled={_disabled} ref={forwardedRef} className={classNames} {...rest}>
+    <Tag disabled={disabled || isLoading} ref={forwardedRef} className={classNames} {...rest}>
       {isLoading ? loadingContent : content}
     </Tag>
   )

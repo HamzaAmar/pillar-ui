@@ -1,27 +1,27 @@
 /* Spacing Style Section Start */
-.u_sp-2xs {
-  --spacing: var(--s-2xs);
+.u_gap-2xs {
+  gap: var(--s-2xs);
 }
-.u_sp-xs {
-  --spacing: var(--s-xs);
+.u_gap-xs {
+  gap: var(--s-xs);
 }
-.u_sp-sm {
-  --spacing: var(--s-sm);
+.u_gap-sm {
+  gap: var(--s-sm);
 }
-.u_sp-md {
-  --spacing: var(--s-md);
+.u_gap-md {
+  gap: var(--s-md);
 }
-.u_sp-lg {
-  --spacing: var(--s-lg);
+.u_gap-lg {
+  gap: var(--s-lg);
 }
-.u_sp-xl {
-  --spacing: var(--s-xl);
+.u_gap-xl {
+  gap: var(--s-xl);
 }
-.u_sp-2xl {
-  --spacing: var(--s-2xl);
+.u_gap-2xl {
+  gap: var(--s-2xl);
 }
-.u_sp-3xl {
-  --spacing: var(--s-3xl);
+.u_gap-3xl {
+  gap: var(--s-3xl);
 }
 /* Spacing Style Section End */
 

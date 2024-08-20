@@ -21,4 +21,5 @@ export interface PaperProps {
   height?: CSSProperties['height']
   border?: boolean
   ratio?: Ratio
+  size: 'viewport' | 'relative'
 }

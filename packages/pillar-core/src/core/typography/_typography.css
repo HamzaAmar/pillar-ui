@@ -13,9 +13,7 @@
 }
 
 .t-y_lnk {
-  cursor: pointer;
   padding: 2px;
-  text-decoration: none;
   color: var(--pri-11);
   &:hover {
     text-decoration: underline var(--pri-9) clamp(1px, 0.1em, 2px);

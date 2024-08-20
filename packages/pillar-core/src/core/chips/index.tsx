@@ -21,7 +21,7 @@ export const Chips = forwardRef((props, ref) => {
   const _className = classnames(`c-i u_${variant} u_${color} u_center`, {
     [className!]: !!className,
     [`u_f-${size}`]: !!size,
-    [`u_transform__${transform}`]: !!transform,
+    [`u_t-${transform}`]: !!transform,
     [`u_rad-${corner}`]: !!corner,
   })
 

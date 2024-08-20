@@ -2,23 +2,9 @@
   width: fit-content;
 }
 .cb-f {
-  appearance: none;
-  background: none;
   border: 1px solid var(--opa-6);
   border-radius: inherit;
   padding: 0.25rem 1rem;
-
-  /* Firefox */
-  &[type='number'] {
-    -moz-appearance: textfield;
-  }
-
-  /* Chrome, Safari, Edge, Opera */
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
 }
 
 .c-b {

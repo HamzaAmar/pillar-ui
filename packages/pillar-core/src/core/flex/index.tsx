@@ -15,7 +15,7 @@ export const FlexItem = forwardRef(
 
     return (
       <Tag
-        style={{ '--flex': `${grow} ${shrink} ${basis}`, order } as CSSProperties}
+        style={{ '--fx': `${grow} ${shrink} ${basis}`, order } as CSSProperties}
         ref={ref}
         className={classNames}
         {...rest}
@@ -38,14 +38,13 @@ export const Flex = forwardRef((props, forwardedRef) => {
   const { children, justify, items, flex, direction, wrap, inline, as: Tag = 'div', gap, className, ...rest } = props
 
   const classNames = classnames('f-l', {
-    [`u_justify-${justify}`]: !!justify && justify !== 'start',
-    [`u_items-${items}`]: !!items,
-    // [`u_flex-${flex}`]: !!items,
+    [`u_jus-${justify}`]: !!justify && justify !== 'start',
+    [`u_it-${items}`]: !!items,
+    // [`l_fl-${flex}`]: !!items,
     [`l_fl-${direction}`]: !!direction && direction !== 'row',
     'l_fl-wrap': !!wrap,
-    'u_flex-inline': !!inline,
-    [`u_sp-${gap}`]: !!gap,
-    [`f-l-gap`]: !!gap,
+    'l_fl-inline': !!inline,
+    [`u_gap-${gap}`]: !!gap,
     [`${className}`!]: !!className,
   })
 

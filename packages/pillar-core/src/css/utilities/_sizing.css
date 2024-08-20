@@ -62,8 +62,18 @@
   width: fit-content;
 }
 
-.u_same-sz {
+.u_s-equal {
   width: var(--eq-s, 1rem);
   min-width: var(--eq-s, 1rem);
   aspect-ratio: 1;
+}
+
+.u_s-vp {
+  width: 100vw;
+  height: 100vh;
+}
+
+.u_s-rel {
+  height: 100%;
+  width: 100%;
 }

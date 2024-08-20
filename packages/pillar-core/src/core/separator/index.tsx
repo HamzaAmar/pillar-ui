@@ -25,7 +25,7 @@ export const Separator = forwardRef((props, ref) => {
     ...(isVertical && { direction: 'column' }),
   }
 
-  const classNames = classnames(`s-e s-e-${direction} u_size-${thickness} u_${color}`, {
+  const classNames = classnames(`s-e s-e-${direction} u_f-${thickness} u_${color}`, {
     [className!]: !!className,
     [`u_rad-${corner}`]: !!corner,
   })

@@ -52,7 +52,7 @@
 
 .c-h {
   --eq-s: 1.25em;
-  --flex: inline-flex;
+  --fx: inline-flex;
 
   border: 1px solid var(--opa-6);
   border-radius: 0.25em;

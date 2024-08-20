@@ -1,12 +1,12 @@
-import { forwardRef } from 'react'
-import { classnames } from '@pillar-ui/utils'
-import { Close } from '@pillar-ui/icons'
 import { useControllableState } from '@pillar-ui/hooks'
-import { Flex } from '../flex'
+import { Close } from '@pillar-ui/icons'
+import { classnames } from '@pillar-ui/utils'
+import { forwardRef } from 'react'
 import { IconButton } from '../button'
+import { Flex } from '../flex'
 
-import type { AlertProps } from './alert.type'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
+import type { AlertProps } from './alert.type'
 
 export const Alert = forwardRef((props, forwardedRef) => {
   const {
@@ -60,7 +60,7 @@ export const Alert = forwardRef((props, forwardedRef) => {
 
   return (
     <Flex ref={forwardedRef} gap="xs" className={classNames} role="alert" {...rest}>
-      {icon && <span className="u_items-self u_t-normal">{icon}</span>}
+      {icon && <span className="u_it-self u_t-normal">{icon}</span>}
       <div data-inline={!!inline} className="a-l_cnt u_center">
         {_title}
         {_message}

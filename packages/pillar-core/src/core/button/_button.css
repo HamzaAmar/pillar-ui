@@ -1,5 +1,5 @@
 .b-u {
-  --flex: inline-flex;
+  --fx: inline-flex;
 
   height: fit-content;
   border: 1px solid transparent;
@@ -11,8 +11,8 @@
   transform-origin: bottom center;
   text-decoration: none;
   letter-spacing: 0.5px;
+  flex: none;
   line-height: 1.3;
-  text-align: start;
   gap: var(--s-2xs);
 
   &:hover {
@@ -50,7 +50,7 @@
   text-transform: var(--button-transform, capitalize);
 }
 
-.b-u_text {
+.b-u_txt {
   font-size: 0.9em;
 }
 

@@ -39,29 +39,6 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  appearance: none;
-  border: none;
-}
-input,
-textarea,
-select {
-  font-family: var(--mono-font);
-}
-
-button {
-  background: transparent;
-  user-select: none;
-}
-
-button,
-a {
-  cursor: pointer;
-}
 
 body {
   color: var(--bg-12);

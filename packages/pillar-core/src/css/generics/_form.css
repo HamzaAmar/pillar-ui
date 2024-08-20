@@ -1,0 +1,32 @@
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  appearance: none;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+button {
+  user-select: none;
+}
+
+button,
+a {
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px dashed var(--pri-9);
+  }
+}

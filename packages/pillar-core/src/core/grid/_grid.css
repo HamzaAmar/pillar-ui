@@ -1,5 +1,4 @@
 .g-r {
-  gap: var(--spacing);
   --columns: var(--regular-columns);
   --rows: var(--regular-rows);
   --areas: var(--regular-areas);

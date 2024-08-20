@@ -44,7 +44,7 @@ export const AvatarGroup = forwardRef((props, forwardRef) => {
         })}
       </AvatarProvider>
 
-      {restCount && <Avatar {...contextProps} fallback={<div className="u_size-sm u_f-medium">{restCount}+</div>} />}
+      {restCount && <Avatar {...contextProps} fallback={<div className="u_f-sm u_f-medium">{restCount}+</div>} />}
     </Tag>
   )
 }) as ForwardRefComponent<'div', AvatarGroupProps>
@@ -93,7 +93,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
     />
   )
 
-  const classNames = classnames(`a-v a-v-${variant} u_${color} u_same-sz u_center`, {
+  const classNames = classnames(`a-v a-v-${variant} u_${color} u_s-equal u_center`, {
     [`u_${animate}`]: !!animate,
     [`u_f-${size}`]: !!size,
     [`u_rad-${corner}`]: !!corner,

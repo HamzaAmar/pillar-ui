@@ -1,5 +1,4 @@
 .a-l {
-  /* width: 100%; */
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
 
@@ -10,15 +9,6 @@
   */
   border-radius: var(--alert-rad, 0);
   font-size: var(--alert-size, 1rem);
-
-  &.u_solid,
-  &.u_soft {
-    border-inline-start: 3px solid var(--opa-8);
-  }
-
-  &.u_soft {
-    border-inline-start-color: var(--c-9);
-  }
 }
 
 .a-l_itm {

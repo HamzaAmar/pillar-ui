@@ -38,7 +38,7 @@ export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: 
       />
 
       <button
-        className="flex u_items-center c-b"
+        className="flex u_it-center c-b"
         type="button"
         onClick={() => increment()}
         aria-label="Increment value"

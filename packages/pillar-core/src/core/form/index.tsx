@@ -245,7 +245,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = classnames(`f-i_cnt f-i_cnt-${variant} u_flex u_sp-xs u_${color}`, {
+  const className = classnames(`f-i_cnt f-i_cnt-${variant} l_fl u_gap-xs u_${color}`, {
     [`u_rad-${corner}`]: !!corner,
     [`u_t-${transform}`]: !!transform,
     [`u_f-${size}`]: !!size,
@@ -349,7 +349,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
         {title}
       </Flex>
 
-      <Text as={Flex} color="bg" size="xs" low items="center">
+      <Text className="l_fl u_f-xs u_it-center" color="bg" low>
         {hasValue ? _value : 'No file Choose'}
       </Text>
     </Grid>

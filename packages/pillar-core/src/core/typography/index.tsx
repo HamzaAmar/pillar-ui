@@ -33,7 +33,7 @@ export const Text = forwardRef((props, forwardedRef) => {
     [`u_t-${leading}`]: !!leading,
     [`u_f-${fontStyle}`]: !!fontStyle,
     [`u_${color}`]: !!color,
-    [`u_width-${width}`]: !!width,
+    [`u_w-${width}`]: !!width,
     [`t-y-low`]: low,
     [`${className}`]: !!className,
   })

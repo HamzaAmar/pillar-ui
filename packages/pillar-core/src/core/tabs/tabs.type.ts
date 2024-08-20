@@ -23,10 +23,12 @@ export interface TabProps {
   value: number
 }
 
+export interface TabPanelsProps {}
+
 export interface TabListProps {}
 
 export interface TabsProviderProps extends TabsBase {
   handleSelect: (value: number) => void
-  handleKeySelect: ({ key, preventDefault }: KeyboardEvent) => void
+  // handleKeySelect: ({ key, preventDefault }: KeyboardEvent) => void
   selected: number
 }

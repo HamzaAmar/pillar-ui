@@ -8,7 +8,7 @@ export const Code = forwardRef((props, ref) => {
 
   const classNames = classnames(`c-o u_soft u_${color} `, {
     [`u_f-${size}`]: !!size,
-    [`u_transform__${transform}`]: !!transform,
+    [`u_t-${transform}`]: !!transform,
     [`u_rad-${corner}`]: !!corner,
     [className!]: !!className,
   })
