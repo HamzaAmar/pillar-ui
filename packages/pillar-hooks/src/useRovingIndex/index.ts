@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useCallback } from 'react'
 import { useDirection } from '../useDirection'
 
 export interface FocusedIndex {
@@ -16,14 +16,14 @@ export interface UseRovingIndexOptions {
   counts?: number
 }
 
-const getPreviousIndex = (index: number, itemCount: number, loop: boolean) => {
+export const getPreviousIndex = (index: number, itemCount: number, loop: boolean) => {
   if (loop) {
     return index === 0 ? itemCount - 1 : index - 1
   }
   return Math.max(index - 1, 0)
 }
 
-const getNextIndex = (index: number, itemCount: number, loop: boolean) => {
+export const getNextIndex = (index: number, itemCount: number, loop: boolean) => {
   if (loop) {
     return index === itemCount - 1 ? 0 : index + 1
   }
@@ -34,7 +34,6 @@ export const useRovingIndex = (
   itemCount: number,
   { loop = true, defaultIndex = 0, direction = 'both' }: UseRovingIndexOptions = {}
 ) => {
-  const elementRef = useRef<HTMLElement>(null)
   const [focusedIndex, setFocusedIndex] = useState(defaultIndex)
   const { isLtr } = useDirection()
 
@@ -90,19 +89,6 @@ export const useRovingIndex = (
     },
     [handleIndexChange, focusedIndex, itemCount, loop, direction, isLtr]
   )
-
-  useEffect(() => {
-    const currentRef = elementRef.current
-
-    if (currentRef) {
-      currentRef.addEventListener('keydown', handleKeyEvent)
-    }
-    return () => {
-      if (currentRef) {
-        currentRef.removeEventListener('keydown', handleKeyEvent)
-      }
-    }
-  }, [handleKeyEvent])
 
   return { focusedIndex, handleIndexChange, handleKeyEvent }
 }
