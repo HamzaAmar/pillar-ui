@@ -15,6 +15,21 @@ const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text']
 
 export const Playground: StoryObj<typeof Button> = {}
 
+export function HtmlButton() {
+  return (
+    <Flex gap="sm">
+      <button>Green</button>
+      <button>Green</button>
+      <button>Green</button>
+      <button>Green</button>
+      <button>Green</button>
+      <button>Green</button>
+      <button>Green</button>
+      <button>Green</button>
+    </Flex>
+  )
+}
+
 export function ButtonsColors() {
   return (
     <Flex gap="sm">

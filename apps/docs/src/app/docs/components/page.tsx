@@ -2,10 +2,10 @@ import React from 'react'
 import { Paper, Grid, Text } from '~/component/core/pillar'
 import Link from 'next/link'
 import { getComponents } from '~/api/docs'
-import { Metadata } from 'next'
 
 async function Page() {
   const components = getComponents()
+
   return (
     <Paper as={Grid} m="md" grid="repeat(4, 1fr)" gap="sm">
       {components.map((component) => (
