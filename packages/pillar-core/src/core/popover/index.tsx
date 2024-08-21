@@ -137,10 +137,10 @@ export function Popover({
         ReactDOM.createPortal(
           <div
             ref={popoverRef}
-            className={`p-p p-p--${width} u_f-${size} u_rad-${corner}`}
+            className={`p-o p-o-${width} u_f-${size} u_rad-${corner}`}
             style={{ ...popoverStyle, ...positionStyle }}
           >
-            <div className="p-p_c">{children}</div>
+            <div className="p-o_c">{children}</div>
           </div>,
           document.body
         )}

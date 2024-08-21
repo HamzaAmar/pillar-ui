@@ -34,10 +34,11 @@
   /* &:is(.u_solid,.u_shadow):hover */
   &.u_solid:hover,
   &.u_shadow:hover {
-    background: var(--c-10);
+    /* background: var(--c-10); */
+    background: var(--c-11);
   }
   &.u_outline:hover {
-    background: var(--c-4);
+    background: var(--c-5);
   }
 
   /*

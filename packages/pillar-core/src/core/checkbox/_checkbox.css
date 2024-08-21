@@ -27,6 +27,7 @@
 }
 
 .c-h_el {
+  background-color: red;
   &:checked:disabled + .c-h {
     color: var(--bg-5);
   }

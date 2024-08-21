@@ -10,6 +10,7 @@
      considerations with HSL in large themes. Might revisit HSL for specific cases.
   */
 
+  /* removed color from the old colors list: 1-2-4 and reordering them again  */
   --pri-1: var(--pri-l-1, #fdfdfe);
   --pri-2: var(--pri-l-2, #f7f9ff);
   --pri-3: var(--pri-l-3, #edf2fe);
@@ -135,26 +136,6 @@
 
   /*
    ------------------------------------------------------------------------------------------------------
-    Shadow Theme Section
-   ------------------------------------------------------------------------------------------------------
-   */
-
-  --shad-2xs: var(--c-shad-2xs, 0 1px 2px -1px var(--opa-6));
-  --shad-xs: var(--c-shad-xs, 0 2px 4px -2px var(--opa-6));
-  --shad-sm: var(--c-shad-sm, 0 4px 8px -4px var(--opa-6));
-  --shad-md: var(--c-shad-md, 0 6px 12px -6px var(--opa-6));
-  --shad-lg: var(--c-shad-lg, 0 8px 16px -8px var(--opa-6));
-  --shad-xl: var(--c-shad-xl, 0 12px 24px -12px var(--opa-6));
-  --shad-2xl: var(--c-shad-2xl, 0 16px 32px -16px var(--opa-6));
-  --shad-in-out: var(
-    --c-shad-in-out,
-    inset 0 0 0.75rem var(--opa-6),
-    1px 1px 3px var(--opa-6),
-    -1px -1px 2px var(--opa-6)
-  );
-
-  /*
-   ------------------------------------------------------------------------------------------------------
     Font Theme Section
    ------------------------------------------------------------------------------------------------------
    */
@@ -163,11 +144,11 @@
   --body-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu,
     Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Lucida Grande', Helvetica, Arial, sans-serif;
-  --heading-font: var(--custom-heading-font, var(--body-font));
+  --heading-font: var(--h-font, var(--body-font));
   --mono-font: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono,
     Source Code Pro, monospace;
 
-  /* Font Size varaibles */
+  /* Font Size variables */
   --f-3xs: var(--c-f-3xs, clamp(0.54rem, calc(0.83rem + -0.28vw), 0.77rem));
   --f-2xs: var(--c-f-2xs, clamp(0.65rem, calc(0.86rem + -0.21vw), 0.82rem));
   --f-xs: var(--c-f-xs, clamp(0.78rem, calc(0.9rem + -0.12vw), 0.88rem));

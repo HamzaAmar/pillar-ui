@@ -22,7 +22,6 @@
   position: relative;
   border: 1px solid var(--bg-7);
   margin-top: 2px;
-
   &:hover {
     border-color: var(--c-9);
   }
@@ -34,15 +33,15 @@
       outline-offset: -0.75em;
     }
 
-    & + .rc__solid {
+    & + .rc-solid {
       outline: 0.45em var(--c-9) solid;
       outline-offset: -0.45em;
     }
-    & + .rc__outline {
+    & + .rc-outline {
       outline: 0.35em var(--c-9) solid;
       border-color: var(--c-9);
     }
-    & + .rc__soft {
+    & + .rc-soft {
       outline: 0.35em var(--c-11) solid;
       border-color: var(--c-5);
       background: var(--c-5);
