@@ -1,5 +1,22 @@
 # @pillar/icons
 
+## 0.7.4
+
+### Patch Changes
+
+- This patch release focuses on bug fixes and improvements to enhance stability and performance.
+
+  **Key Changes:**
+
+  - **Bug Fixes:**
+    - Resolved issues that occurred after upgrading the UI (`ed29c7b`).
+    - Fixed core component problems (`dd7e94c`).
+  - **Refactoring and Optimizations:**
+    - Reduced the CSS size of the Pillar core component and updated development packages (`94b61cb`).
+    - Improved documentation pages' padding and styling (`04a972a`, `6d1e1c6`).
+    - Simplified the 'getStarter' documentation (`0766b83`).
+    - Removed React components from component titles (`67df5c7`).
+
 ## 0.7.3
 
 ### Patch Changes
