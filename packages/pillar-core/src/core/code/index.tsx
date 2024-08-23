@@ -1,3 +1,5 @@
+'use client'
+
 import { forwardRef } from 'react'
 import { CodeProps } from './code.type'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'

@@ -1,4 +1,5 @@
-// this classnames is a little bit different than the the classic one it return obj not a string
+'use client'
+
 import { CSSProperties, forwardRef } from 'react'
 import type { TypographyProps } from './typography.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'

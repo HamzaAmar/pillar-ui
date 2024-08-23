@@ -1,5 +1,6 @@
-import { useControllableState } from '@pillar-ui/hooks'
+'use client'
 
+import { useControllableState } from '@pillar-ui/hooks'
 import { SwitchProps } from './switch.type'
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'

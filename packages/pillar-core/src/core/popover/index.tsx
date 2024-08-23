@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, useEffect, useRef, useLayoutEffect, useCallback } from 'react'
 import ReactDOM from 'react-dom'
 import { useClickOutside } from '@pillar-ui/hooks'

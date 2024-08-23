@@ -1,3 +1,5 @@
+'use client'
+
 import { forwardRef, useId, useState } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProps, TabPanelsProps } from './tabs.type'

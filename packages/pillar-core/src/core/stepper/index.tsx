@@ -1,3 +1,5 @@
+'use client'
+
 import { Children, isValidElement, createElement, useId } from 'react'
 import type { ReactNode } from 'react'
 import { Flex } from '../flex'

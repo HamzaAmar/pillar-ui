@@ -1,3 +1,5 @@
+'use client'
+
 import { ChevronDown, Eye, EyeOff, X } from '@pillar-ui/icons'
 import { useBooleanState, useControllableState, useComposedRefs } from '@pillar-ui/hooks'
 import { classnames, createContext } from '@pillar-ui/utils'

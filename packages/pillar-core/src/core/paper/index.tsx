@@ -1,3 +1,5 @@
+'use client'
+
 import { forwardRef } from 'react'
 import type { CSSProperties } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'

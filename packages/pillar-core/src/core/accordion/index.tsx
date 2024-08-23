@@ -1,3 +1,5 @@
+'use client'
+
 import { Children, cloneElement, forwardRef, isValidElement, useId } from 'react'
 import { classnames, createContext } from '@pillar-ui/utils'
 import { ChevronDown } from '@pillar-ui/icons'

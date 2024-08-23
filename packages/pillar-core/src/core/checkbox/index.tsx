@@ -1,3 +1,5 @@
+'use client'
+
 import { Check, Minus } from '@pillar-ui/icons'
 import { classnames } from '@pillar-ui/utils'
 import { useComposedRefs } from '@pillar-ui/hooks'

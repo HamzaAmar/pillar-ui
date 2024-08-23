@@ -1,3 +1,5 @@
+'use client'
+
 import { useId } from 'react'
 import type { CustomRadioProps, RadioContextProps, RadioGroupProps, RadioProps } from './radio.type'
 import { Flex } from '../flex'

@@ -1,4 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
+'use client'
+
 import { Children, forwardRef, useState } from 'react'
 import { Photos } from '@pillar-ui/icons'
 import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
@@ -79,6 +80,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
   const content = isError ? (
     <span className="u_center">{fallback}</span>
   ) : (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       className="a-v_img"
       ref={(node) => {
