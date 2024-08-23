@@ -164,7 +164,7 @@ export function PaperWidths() {
       <Paper background="dan-4" color="dan">
         Hello
       </Paper>
-      <Paper width="half" background="suc-4" color="suc">
+      <Paper width="50" background="suc-4" color="suc">
         Hello
       </Paper>
       <Paper width="25-char" background="war-4" color="war">
@@ -189,7 +189,7 @@ export function PaperHeights() {
       <Paper height="100px" background="dan-4" color="dan">
         Hello
       </Paper>
-      <Paper height="5rem" background="suc-4" color="suc">
+      <Paper height="96px" background="suc-4" color="suc">
         Hello
       </Paper>
       <Paper height="20ch" background="war-4" color="war">
