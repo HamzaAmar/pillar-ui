@@ -1,5 +1,3 @@
-'use client'
-
 import { forwardRef, useEffect, useId, useRef, useState } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { TooltipContentProps, TooltipContext, TooltipProps } from './tooltip.type'

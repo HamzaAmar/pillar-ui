@@ -1,5 +1,3 @@
-'use client'
-
 import { ReactNode, forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { classnames } from '@pillar-ui/utils'

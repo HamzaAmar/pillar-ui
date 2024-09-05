@@ -1,5 +1,3 @@
-'use client'
-
 import { CSSProperties, forwardRef } from 'react'
 import type * as SkeletonType from './skeleton.type'
 import { classnames } from '@pillar-ui/utils'

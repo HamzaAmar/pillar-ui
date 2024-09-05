@@ -1,9 +1,6 @@
-'use client'
-
-import { Children, cloneElement, forwardRef, isValidElement, useId } from 'react'
+import { Children, cloneElement, forwardRef, isValidElement, useId, useState } from 'react'
 import { classnames, createContext } from '@pillar-ui/utils'
 import { ChevronDown } from '@pillar-ui/icons'
-import { useAccordion } from './useAccordion'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type {
@@ -13,7 +10,39 @@ import type {
   AccordionItemProps,
   AccordionPanelProps,
   AccordionProps,
+  Value,
 } from './accordion.type'
+
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////
+  Accordion  Custom Hook
+///////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+function useAccordion({ type, collapsible }: AccordionProps) {
+  const [activeItems, setActiveItems] = useState<Value | Value[]>(type === 'multiple' ? [] : -1)
+
+  function isItemOpen(value: Value) {
+    return Array.isArray(activeItems) ? activeItems.includes(value) : activeItems === value
+  }
+
+  function toggleAccordion(currentIndex: Value) {
+    if (isItemOpen(currentIndex) && !collapsible) {
+      if (Array.isArray(activeItems) && activeItems.length === 1) return
+      if (activeItems === currentIndex) return
+    }
+
+    if (Array.isArray(activeItems)) {
+      const newState = isItemOpen(currentIndex)
+        ? activeItems.filter((value) => currentIndex !== value)
+        : [...activeItems, currentIndex]
+      return setActiveItems(newState)
+    }
+    setActiveItems((val) => (currentIndex === val ? -1 : currentIndex))
+  }
+
+  return { activeItems, setActiveItems, toggleAccordion, isItemOpen }
+}
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////

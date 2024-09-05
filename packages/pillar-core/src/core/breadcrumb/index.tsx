@@ -1,5 +1,3 @@
-'use client'
-
 import { forwardRef } from 'react'
 import { Flex } from '../flex'
 import type { BreadcrumbProps, BreadcrumbItemProps, BreadcrumbContextProps, CurrentPage } from './breadcrumb.type'

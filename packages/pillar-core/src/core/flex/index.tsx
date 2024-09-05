@@ -1,5 +1,3 @@
-'use client'
-
 import { CSSProperties, forwardRef } from 'react'
 import type { FlexItemProps, FlexProps } from './flex.type'
 import { classnames } from '@pillar-ui/utils'

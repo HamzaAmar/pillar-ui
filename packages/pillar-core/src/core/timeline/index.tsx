@@ -1,5 +1,3 @@
-'use client'
-
 import { createContext } from '@pillar-ui/utils'
 import { Flex } from '../flex'
 import { Grid } from '../grid'

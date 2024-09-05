@@ -1,5 +1,3 @@
-'use client'
-
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { ListItemProps, ListProps } from './list.type'

@@ -1,5 +1,3 @@
-'use client'
-
 import { classnames } from '@pillar-ui/utils'
 import { forwardRef } from 'react'
 

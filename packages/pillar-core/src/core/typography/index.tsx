@@ -1,5 +1,3 @@
-'use client'
-
 import { CSSProperties, forwardRef } from 'react'
 import type { TypographyProps } from './typography.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'

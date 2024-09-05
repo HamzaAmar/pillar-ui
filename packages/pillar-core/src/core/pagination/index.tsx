@@ -1,5 +1,3 @@
-'use client'
-
 import { forwardRef } from 'react'
 import { Button } from '../button'
 import { ChevronDown, DotsHorizontal } from '@pillar-ui/icons'

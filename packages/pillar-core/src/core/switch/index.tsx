@@ -1,5 +1,3 @@
-'use client'
-
 import { useControllableState } from '@pillar-ui/hooks'
 import { SwitchProps } from './switch.type'
 import { forwardRef } from 'react'

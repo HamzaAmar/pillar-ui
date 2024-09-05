@@ -1,5 +1,3 @@
-'use client'
-
 import { Children, forwardRef, useState } from 'react'
 import { Photos } from '@pillar-ui/icons'
 import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'

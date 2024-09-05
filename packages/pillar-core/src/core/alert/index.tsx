@@ -1,5 +1,3 @@
-'use client'
-
 import { useControllableState } from '@pillar-ui/hooks'
 import { Close } from '@pillar-ui/icons'
 import { classnames } from '@pillar-ui/utils'

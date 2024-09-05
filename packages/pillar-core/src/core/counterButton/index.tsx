@@ -1,5 +1,3 @@
-'use client'
-
 import { useCounter } from '@pillar-ui/hooks' // Adjust the import path as needed
 import { Flex } from '../flex'
 import { Minus, Plus } from '@pillar-ui/icons'
