@@ -13,9 +13,6 @@
     "module": "esnext",
     "resolveJsonModule": true,
     "target": "es5",
-    "noEmit": true,
-    "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"]
-    }
+    "noEmit": true
   }
 }
