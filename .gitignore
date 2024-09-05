@@ -16,6 +16,7 @@ packages/pillar-core/css
 public/sitemap.xml
 public/feed.xml
 .vercel
+.yarn
 
 # Contentlayer
 .contentlayer/
