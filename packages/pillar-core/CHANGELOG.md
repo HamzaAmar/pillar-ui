@@ -1,5 +1,32 @@
 # @pillar/core
 
+## 0.9.0
+
+### Minor Changes
+
+- # New Pillar Core Release
+
+  Add New Release to Core to fix this issue https://github.com/HamzaAmar/pillar-ui/issues/88
+
+  **New Features:**
+
+  - **Reconfigured Tsup:** Tsup has been reconfigured to work seamlessly with components and leverage 'use client' functionality.
+  - **Post-Build Script:** A post-build script has been added to automatically insert 'use client' after the Tsup build process.
+
+  **Improvements:**
+
+  - **Improved Husky File Error:** The Husky file error message has been improved for better readability by removing the heading.
+
+  **Refactoring:**
+
+  - **Removed Direct 'use client'**: Instances of 'use client' added directly to files have been removed.
+
+  **Chore:**
+
+  - **Added .yarn to gitignore:** The .yarn directory has been added to the .gitignore file.
+
+  **This release primarily focuses on enhancing the build process and improving the developer experience when working with components and the 'use client' directive.**
+
 ## 0.8.6
 
 ### Patch Changes
