@@ -1,5 +1,19 @@
 # @pillar/core
 
+## 0.9.1
+
+### Patch Changes
+
+- # Add Use Client And Fix all error related to [#88](https://github.com/HamzaAmar/pillar-ui/issues/88)
+
+  ## Fixes
+
+      - Removed wildcard exports from the root to prevent server components issues.
+      - Removed the `export` from the stepper provider.
+      - Removed the file that reused `use client` because Pillar supports it by default.
+
+  **Overall, these changes aim to enhance stability and compatibility by resolving potential conflicts and streamlining the codebase.**
+
 ## 0.9.0
 
 ### Minor Changes
