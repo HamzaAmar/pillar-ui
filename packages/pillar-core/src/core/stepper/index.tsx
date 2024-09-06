@@ -6,7 +6,7 @@ import type { StepperContextProps, StepperProps, StepProps } from './stepper.typ
 import { Check } from '@pillar-ui/icons'
 import { createContext } from '@pillar-ui/utils'
 
-export const [StepperProvider, useStepperContext] = createContext<StepperContextProps>({ name: 'Stepper' })
+const [StepperProvider, useStepperContext] = createContext<StepperContextProps>({ name: 'Stepper' })
 
 export const StepperStep = (props: StepProps) => {
   const context = useStepperContext()
