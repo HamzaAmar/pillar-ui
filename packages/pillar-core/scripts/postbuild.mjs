@@ -2,17 +2,18 @@ import * as fs from 'node:fs/promises'
 import * as path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const __filename = fileURLToPath(import.meta.url) // get the resolved path to the file
-const __dirname = path.dirname(__filename) // get the name of the directory
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 const DIST_PATH = path.join(__dirname, '..', 'dist', 'core')
 
 // Function to add "use client" to a file
 async function addUseClient(filePath) {
   try {
-    const content = await fs.readFile(filePath, 'utf8')
-    if (!content.trim().startsWith('"use client";')) {
-      const newContent = '"use client";\n' + content
-      await fs.writeFile(filePath, newContent)
+    const data = await fs.readFile(filePath, 'utf8')
+    const isNotExist = !data.trim().startsWith("'use client';")
+    if (isNotExist) {
+      const updatedContent = `'use client';\n${data}`
+      await fs.writeFile(filePath, updatedContent, 'utf8')
     } else {
       console.log(`'use client' already present in ${filePath}`)
     }
@@ -39,3 +40,4 @@ export async function injectUseClient(dir = DIST_PATH) {
     console.error(`Error processing directory ${dir}:`, error)
   }
 }
+// injectUseClient()
