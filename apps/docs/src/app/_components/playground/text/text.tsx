@@ -1,4 +1,4 @@
-import { Text, Flex, Paper } from '~/component/core/pillar'
+import { Text, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const TextPlayGround = () => {

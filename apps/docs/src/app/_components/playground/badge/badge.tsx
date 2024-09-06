@@ -1,5 +1,5 @@
 import { Alien, Apple, Check, ChevronDown, LetterSpacing, Plane, Plus } from '@pillar-ui/icons'
-import { Avatar, Badge, Flex, Paper } from '~/component/core/pillar'
+import { Avatar, Badge, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const BadgePlayGround = () => {

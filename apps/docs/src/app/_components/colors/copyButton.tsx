@@ -1,6 +1,6 @@
 'use client'
 
-import { IconButton } from '~/component/core/pillar'
+import { IconButton } from '@pillar-ui/core'
 import { useCopyToClipboard } from '~/hooks/pillar'
 import { Check, Copy } from '@pillar-ui/icons'
 import { Colors } from '~/constant/colors/colors.type'

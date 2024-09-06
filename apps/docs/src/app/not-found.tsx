@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button, Flex, Heading, Text } from '~/component/core/pillar'
+import { Button, Flex, Heading, Text } from '@pillar-ui/core'
 
 export default function Custom404() {
   return (

@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading, Flex, Paper } from '~/component/core/pillar'
+import { Heading, Flex, Paper } from '@pillar-ui/core'
 import { ListNumber } from '@pillar-ui/icons'
 import React, { useState, useRef, useEffect } from 'react'
 import { Item } from './listItem'

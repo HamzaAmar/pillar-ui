@@ -1,4 +1,4 @@
-import { Flex, Heading, Text, Paper } from '~/component/core/pillar'
+import { Flex, Heading, Text, Paper } from '@pillar-ui/core'
 import { SectionHeading } from '~/component/core/sectionHeading'
 
 export function CustomTheme() {

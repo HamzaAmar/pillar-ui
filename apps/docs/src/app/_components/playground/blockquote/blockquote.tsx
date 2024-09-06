@@ -1,4 +1,4 @@
-import { Blockquote, BlockquoteCite, Paper } from '~/component/core/pillar'
+import { Blockquote, BlockquoteCite, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const BlockquotePlayGround = () => {

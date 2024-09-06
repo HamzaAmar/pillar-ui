@@ -1,4 +1,4 @@
-import { Grid, Flex, Heading, Text, Paper } from '~/component/core/pillar'
+import { Grid, Flex, Heading, Text, Paper } from '@pillar-ui/core'
 import { ACCESSIBILITY } from './data'
 import { SectionHeading } from '~/component/core/sectionHeading'
 

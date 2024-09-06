@@ -1,4 +1,4 @@
-import { Heading, Text } from './pillar'
+import { Heading, Text } from '@pillar-ui/core'
 
 interface SectionHeadingProps {
   subheading: string

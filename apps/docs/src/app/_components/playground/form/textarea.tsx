@@ -1,4 +1,4 @@
-import { Paper, Textarea } from '~/component/core/pillar'
+import { Paper, Textarea } from '@pillar-ui/core'
 import { Eye, User } from '@pillar-ui/icons'
 
 export const TextareaFilled = () => {

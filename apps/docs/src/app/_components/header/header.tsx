@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { default as Logo } from '../logo'
-import { Flex, IconButton, InputSearch, Paper } from '~/component/core/pillar'
+import { Flex, IconButton, InputSearch, Paper } from '@pillar-ui/core'
 import { Sun, TextRtl, Menu, ListSearch, Close } from '@pillar-ui/icons'
 import Link from 'next/link'
 import { useBooleanState, useDirection } from '~/hooks/pillar'

@@ -1,7 +1,7 @@
 'use client'
 import React, { CSSProperties, useState } from 'react'
 import * as ICONS from '@pillar-ui/icons'
-import { Button, Flex, Grid, Heading, Paper, Text } from '~/component/core/pillar'
+import { Button, Flex, Grid, Heading, Paper, Text } from '@pillar-ui/core'
 import { useCopyToClipboard } from '~/hooks/pillar'
 import iconJson from './icons.json'
 import { Metadata } from 'next'

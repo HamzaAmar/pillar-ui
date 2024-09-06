@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, Text, Grid, Paper, Avatar } from '~/component/core/pillar'
+import { Button, Flex, Heading, Text, Grid, Paper, Avatar } from '@pillar-ui/core'
 import { FEATURES, USER_DATA } from './data'
 import { SectionHeading } from '~/component/core/sectionHeading'
 

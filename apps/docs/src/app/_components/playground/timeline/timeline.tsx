@@ -1,4 +1,4 @@
-import { Timeline, Paper, TimelineProps, Heading, Text, Avatar, TimelineItem } from '~/component/core/pillar'
+import { Timeline, Paper, TimelineProps, Heading, Text, Avatar, TimelineItem } from '@pillar-ui/core'
 import { Cross } from '@pillar-ui/icons'
 import React from 'react'
 

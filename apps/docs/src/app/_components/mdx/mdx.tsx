@@ -1,4 +1,4 @@
-import { Table, Alert, TableColumn, TableRow } from '~/component/core/pillar'
+import { Table, Alert, TableColumn, TableRow } from '@pillar-ui/core'
 import React from 'react'
 
 import Image, { ImageProps } from 'next/image'

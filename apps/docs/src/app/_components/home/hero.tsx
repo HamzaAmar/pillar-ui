@@ -1,6 +1,6 @@
 import { Booking, Discord, Dollar, Github, Linkdin, Youtube } from '@pillar-ui/icons'
 import Link from 'next/link'
-import { Button, Flex, IconButton, Text } from '~/component/core/pillar'
+import { Button, Flex, IconButton, Text } from '@pillar-ui/core'
 
 export function Hero() {
   return (

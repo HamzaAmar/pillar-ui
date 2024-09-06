@@ -1,6 +1,6 @@
 'use client'
 
-import { Avatar, Checkbox, Flex, Paper } from '~/component/core/pillar'
+import { Avatar, Checkbox, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 import { useCheckboxGroup } from '~/hooks/pillar'
 

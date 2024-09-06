@@ -1,4 +1,4 @@
-import { Input, Paper } from '~/component/core/pillar'
+import { Input, Paper } from '@pillar-ui/core'
 import { Eye, User } from '@pillar-ui/icons'
 
 export const InputFilled = () => {

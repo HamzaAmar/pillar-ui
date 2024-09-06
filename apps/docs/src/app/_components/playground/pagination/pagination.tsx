@@ -1,4 +1,4 @@
-import { Pagination, Flex, Paper } from '~/component/core/pillar'
+import { Pagination, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const PaginationPlayGround = () => {

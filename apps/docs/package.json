@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean:next": "rimraf  next",
+    "clean:next": "rimraf .next",
     "clean:turbo": "rimraf .turbo",
     "clean:modules": "rimraf node_modules",
     "clean": "npm-run-all clean:turbo clean:modules clean:next",

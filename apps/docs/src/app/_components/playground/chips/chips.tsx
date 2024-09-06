@@ -1,5 +1,5 @@
 import { Close } from '@pillar-ui/icons'
-import { Avatar, Chips, Flex, Paper } from '~/component/core/pillar'
+import { Avatar, Chips, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const ChipsPlayGround = () => {

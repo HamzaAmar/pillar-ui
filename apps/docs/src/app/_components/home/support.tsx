@@ -1,4 +1,4 @@
-import { Flex, Heading, Text, Button, Grid, IconButton } from '~/component/core/pillar'
+import { Flex, Heading, Text, Button, Grid, IconButton } from '@pillar-ui/core'
 import { SUPPORTED } from './data'
 import { Discord, Github, Twitter } from '@pillar-ui/icons'
 import { SectionHeading } from '~/component/core/sectionHeading'

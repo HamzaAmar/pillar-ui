@@ -1,4 +1,4 @@
-import { Avatar, Code, Flex, Paper } from '~/component/core/pillar'
+import { Avatar, Code, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const CodePlayGround = () => {

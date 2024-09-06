@@ -1,4 +1,4 @@
-import { InputNumber, Paper } from '~/component/core/pillar'
+import { InputNumber, Paper } from '@pillar-ui/core'
 import { User } from '@pillar-ui/icons'
 
 export const InputNumberFilled = () => {

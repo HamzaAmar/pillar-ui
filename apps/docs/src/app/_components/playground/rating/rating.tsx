@@ -1,4 +1,4 @@
-import { Rating, Paper } from '~/component/core/pillar'
+import { Rating, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const RatingPlayGround = () => {

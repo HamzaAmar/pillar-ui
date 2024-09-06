@@ -1,5 +1,4 @@
-import { Flex, Heading, Text, Paper } from '~/component/core/pillar'
-import { useTheme } from 'next-themes'
+import { Flex, Text, Paper } from '@pillar-ui/core'
 import SwitchMode from './switchMode'
 import { SectionHeading } from '~/component/core/sectionHeading'
 export function DarkMode() {

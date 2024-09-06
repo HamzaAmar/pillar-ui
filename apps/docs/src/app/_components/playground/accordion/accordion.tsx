@@ -1,12 +1,4 @@
-import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
-  Heading,
-  Paper,
-  Text,
-} from '~/component/core/pillar'
+import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Heading, Paper, Text } from '@pillar-ui/core'
 import React from 'react'
 
 function AccordionBase(props: any) {

@@ -1,5 +1,5 @@
 import { CircleCheck, CircleWarning } from '@pillar-ui/icons'
-import { Alert, Paper } from '~/component/core/pillar'
+import { Alert, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const AlertPlayGround = () => {

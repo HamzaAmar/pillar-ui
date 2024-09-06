@@ -1,4 +1,4 @@
-import { Heading, Paper, Text } from '~/component/core/pillar'
+import { Heading, Paper, Text } from '@pillar-ui/core'
 import { Metadata } from 'next'
 import React from 'react'
 

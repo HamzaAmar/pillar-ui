@@ -1,5 +1,5 @@
 import React from 'react'
-import { PinInput, Paper } from '~/component/core/pillar'
+import { PinInput, Paper } from '@pillar-ui/core'
 
 export const PinInputFilled = () => {
   return (

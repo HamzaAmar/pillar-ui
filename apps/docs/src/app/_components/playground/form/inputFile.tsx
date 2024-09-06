@@ -1,4 +1,4 @@
-import { InputFile, Paper } from '~/component/core/pillar'
+import { InputFile, Paper } from '@pillar-ui/core'
 
 export const InputFileFilled = () => {
   return (

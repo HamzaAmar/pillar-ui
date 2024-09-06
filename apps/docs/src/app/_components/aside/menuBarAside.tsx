@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Flex } from '~/component/core/pillar'
+import { Flex } from '@pillar-ui/core'
 import { Book, Bridge, ChevronDown, Fish, Help, Palette, PictureInPicture, Star } from '@pillar-ui/icons'
 // import type { MenuItemData } from './aside.type'
 import { Item } from './listItem'

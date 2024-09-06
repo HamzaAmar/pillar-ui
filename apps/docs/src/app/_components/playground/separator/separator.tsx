@@ -1,4 +1,4 @@
-import { Separator, Paper } from '~/component/core/pillar'
+import { Separator, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const SeparatorPlayGround = () => {

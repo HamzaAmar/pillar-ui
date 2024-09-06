@@ -1,6 +1,6 @@
 import React from 'react'
 import { COLORS } from '../../../constant/colors'
-import { Text, Paper, Grid } from '~/component/core/pillar'
+import { Text, Paper, Grid } from '@pillar-ui/core'
 import type { Colors as ColorsType } from '~/constant/colors/colors.type'
 import { default as CopyButton } from './copyButton'
 

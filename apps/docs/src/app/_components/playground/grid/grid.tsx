@@ -1,4 +1,4 @@
-import { Avatar, Grid, GridItem, Paper } from '~/component/core/pillar'
+import { Avatar, Grid, GridItem, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 const Box = (props: any) => {

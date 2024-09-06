@@ -1,4 +1,4 @@
-import { Flex, Grid, Heading, Paper, Text, Button, Chips } from '~/component/core/pillar'
+import { Flex, Grid, Heading, Paper, Text, Button, Chips } from '@pillar-ui/core'
 import { Github } from '@pillar-ui/icons'
 import React from 'react'
 import { DocHeaderProps } from './docHeader.type'

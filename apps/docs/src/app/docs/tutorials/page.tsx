@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Grid, Text } from '~/component/core/pillar'
+import { Paper, Grid, Text } from '@pillar-ui/core'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { getTutorials } from '~/api/docs'

@@ -1,4 +1,4 @@
-import { Avatar, Kbd, Flex, Paper } from '~/component/core/pillar'
+import { Avatar, Kbd, Flex, Paper } from '@pillar-ui/core'
 import React from 'react'
 
 export const KbdPlayGround = () => {

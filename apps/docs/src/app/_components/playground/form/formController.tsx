@@ -1,4 +1,4 @@
-import { Input, FormController, FormControllerProps, Paper } from '~/component/core/pillar'
+import { Input, FormController, FormControllerProps, Paper } from '@pillar-ui/core'
 
 const BaseFormController = (props: Omit<FormControllerProps, 'children'>) => {
   return (

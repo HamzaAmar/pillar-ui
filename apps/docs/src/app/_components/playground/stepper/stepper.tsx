@@ -1,6 +1,6 @@
 'use client'
 
-import { Flex, Paper, Stepper, Heading, Text, Button, StepperProps, StepperStep } from '~/component/core/pillar'
+import { Flex, Paper, Stepper, Heading, Text, Button, StepperProps, StepperStep } from '@pillar-ui/core'
 import { useStepper } from '~/hooks/pillar'
 import { Home, Settings, User } from '@pillar-ui/icons'
 import React from 'react'

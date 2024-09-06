@@ -1,4 +1,4 @@
-import { Paper, Select } from '~/component/core/pillar'
+import { Paper, Select } from '@pillar-ui/core'
 
 const Options = () => {
   return (

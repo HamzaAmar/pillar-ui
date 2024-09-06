@@ -1,4 +1,4 @@
-import { ForwardRefComponent, Flex, Text } from '~/component/core/pillar'
+import { ForwardRefComponent, Flex, Text } from '@pillar-ui/core'
 import { forwardRef, CSSProperties } from 'react'
 
 import type { ListItemProps } from './aside.type'
