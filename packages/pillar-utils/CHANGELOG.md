@@ -1,5 +1,13 @@
 # @pillar/utils
 
+## 0.8.1
+
+### Patch Changes
+
+- # Fix Classname Triming Issue
+
+  - trim the string and number of the classNames params before adding them to the array
+
 ## 0.8.0
 
 ### Minor Changes
