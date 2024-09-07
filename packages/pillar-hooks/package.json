@@ -50,10 +50,12 @@
   "peerDependencies": {
     "react": "^18.0.0"
   },
+  "dependencies": {
+    "@pillar-ui/utils": "*"
+  },
   "devDependencies": {
     "@pillar-ui/eslint": "*",
     "@pillar-ui/tsconfig": "*",
-    "@pillar-ui/utils": "*",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
     "@types/react": "^18.3.3",
