@@ -33,9 +33,9 @@ export const Switch = forwardRef((props, ref) => {
   }
 
   const classNames = cx(`s-w u_${color}`, {
-    [className!]: !!className,
     [`u_rad-${corner}`]: !!corner,
     [`u_f-${size}`]: !!size,
+    [className!]: !!className,
   })
 
   return (

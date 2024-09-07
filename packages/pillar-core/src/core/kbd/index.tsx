@@ -9,6 +9,7 @@ export const Kbd = forwardRef(
       [`u_t-${transform}`]: !!transform,
       [`u_f-${size}`]: !!size,
       [`u_rad-${corner}`]: !!corner,
+      [className!]: !!className,
     })
     return (
       <kbd ref={ref} className={classNames} {...rest}>
