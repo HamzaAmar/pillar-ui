@@ -8,7 +8,7 @@ export function cx(...args: Args[]): string {
   for (let arg of args) {
     if (arg == null) continue
     else if (typeof arg === 'string' || typeof arg === 'number') {
-      classNames.push(arg.toString())
+      classNames.push(arg.toString().trim())
     } else if (Array.isArray(arg)) {
       arg.forEach((value) => value && classNames.push(value.toString()))
     } else {

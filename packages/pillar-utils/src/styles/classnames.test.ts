@@ -39,7 +39,7 @@ describe('cx function', () => {
   })
 
   it('should handle empty strings', () => {
-    expect(cx('', 'foo', '')).toBe('foo')
+    expect(cx('', ' foo ', '')).toBe('foo')
   })
 
   it('should handle all falsy values', () => {
@@ -48,9 +48,5 @@ describe('cx function', () => {
 
   it('should handle repeated values', () => {
     expect(cx('foo', 'foo', 'bar', 'foo')).toBe('foo foo bar foo')
-  })
-
-  it('should trim the result', () => {
-    expect(cx(' foo ', ' bar ')).toBe('foo bar')
   })
 })
