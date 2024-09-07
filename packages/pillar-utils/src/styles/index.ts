@@ -1,31 +1,19 @@
 type ObjectType = Record<string, boolean>
 
-type ClassNamesArg = string | number | ObjectType | Array<string | number> | null
+type Args = string | number | ObjectType | Array<string | number | ObjectType | null | undefined> | null | undefined
 
-function processStringOrNumber(arg: string | number, arr: string[]) {
-  arr.push(arg.toString())
-}
+export function cx(...args: Args[]): string {
+  let classNames: string[] = []
 
-function processArray(arg: Array<string | number>, arr: string[]) {
-  arg.forEach((value) => value && arr.push(value.toString()))
-}
-
-function processObject(arg: ObjectType, arr: string[]) {
-  Object.entries(arg).forEach(([key, value]) => value && arr.push(key))
-}
-
-export function classnames(...args: ClassNamesArg[]) {
-  let classNamesArray: string[] = []
-
-  args.forEach((arg: ClassNamesArg) => {
-    if (arg == null) return
+  for (let arg of args) {
+    if (arg == null) continue
     else if (typeof arg === 'string' || typeof arg === 'number') {
-      processStringOrNumber(arg, classNamesArray)
+      classNames.push(arg.toString())
     } else if (Array.isArray(arg)) {
-      processArray(arg, classNamesArray)
+      arg.forEach((value) => value && classNames.push(value.toString()))
     } else {
-      processObject(arg, classNamesArray)
+      Object.entries(arg).forEach(([key, value]) => value && classNames.push(key))
     }
-  })
-  return classNamesArray.join(' ').trim()
+  }
+  return classNames.join(' ').trim()
 }

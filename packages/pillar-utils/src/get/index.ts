@@ -1,11 +1,13 @@
-export function getScreenCoordinates(): { width: number; height: number } {
+type Coord = { width: number; height: number }
+
+export function getScreenCoordinates(): Coord {
   return {
     width: window.screen.width,
     height: window.screen.height,
   }
 }
 
-export function getViewportCoordinates(): { width: number; height: number } {
+export function getViewportCoordinates(): Coord {
   return {
     width: window.innerWidth,
     height: window.innerHeight,
