@@ -1,5 +1,27 @@
 # @pillar/utils
 
+## 0.8.0
+
+### Minor Changes
+
+- # Key Improvements
+
+  - **Performance Boost:** Significant enhancements to the `utils` module, leading to improved overall application performance (`08b83f1`).
+  - **Reduced Bundle Size:** The `pillar-ui/core` package has been optimized, resulting in a smaller bundle size for faster loading times (`4236adb`).
+  - **Bug Fixes:**
+    - Addressed a missing `className` issue in the KDB component (`2690c8b`).
+    - Resolved missing dependencies and peer dependencies (`ebde610`).
+
+  ## Other Changes
+
+  - **New Benchmark Script:** Introduced a new script for benchmarking the `classnames` functions to aid in future performance optimizations (`50bc866`).
+  - **TSUP Config Update:** Removed `tsx` from `useDirection` in the TSUP configuration (`ee65764`).
+  - **Next Example Update:** The Next.js example project has been updated to align with the latest changes in the library (`42bc566`).
+
+  ## Additional Notes
+
+  - This release includes refactoring efforts that improve code maintainability and set the foundation for future enhancements.
+
 ## 0.7.4
 
 ### Patch Changes
