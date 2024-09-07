@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react'
 import { useLocalStorage } from '.'
-import { storageService } from './storageService'
+import { storageService } from '.'
 
 // Helper function to clear local storage before each test
 const clearLocalStorage = () => {

@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 type Direction = 'ltr' | 'rtl'
 const DIRECTION = 'direction'
 
-const codeToRunOnHead = `function(){alert('Hello')}`
-
 export function getDirectionInitial(element: HTMLElement): Direction {
   const rootDirection = window.getComputedStyle(element).direction as Direction
   const localStorageMode = localStorage.getItem?.(DIRECTION) as Direction
@@ -62,9 +60,9 @@ export function useDirection(element?: HTMLElement) {
       window.localStorage.setItem(DIRECTION, nextDirection)
       return nextDirection
     })
+
     root.dir = direction === 'ltr' ? 'rtl' : 'ltr'
   }
   const isLtr = direction === 'ltr' ? true : false
-  const directionScript = <script dangerouslySetInnerHTML={{ __html: codeToRunOnHead }} />
-  return { isLtr, direction, directionScript, toggleDirection }
+  return { isLtr, direction, toggleDirection }
 }
