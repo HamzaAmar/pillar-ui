@@ -1,6 +1,6 @@
 import { CSSProperties, forwardRef } from 'react'
 import type { FlexItemProps, FlexProps } from './flex.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
 /*
@@ -11,7 +11,7 @@ import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
 export const FlexItem = forwardRef(
   ({ children, grow = 0, shrink = 1, basis = 'auto', order, as: Tag = 'div', ...rest }, ref) => {
-    const classNames = classnames()
+    const classNames = cx()
 
     return (
       <Tag
@@ -37,7 +37,7 @@ FlexItem.displayName = 'FlexItem'
 export const Flex = forwardRef((props, forwardedRef) => {
   const { children, justify, items, flex, direction, wrap, inline, as: Tag = 'div', gap, className, ...rest } = props
 
-  const classNames = classnames('f-l', {
+  const classNames = cx('f-l', {
     [`u_jus-${justify}`]: !!justify && justify !== 'start',
     [`u_it-${items}`]: !!items,
     // [`l_fl-${flex}`]: !!items,

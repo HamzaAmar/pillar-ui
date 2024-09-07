@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import { Spinner } from '../spinner'
 import type { ButtonGroupProps, ButtonProps, IconButtonProps } from './button.type'
 
@@ -28,7 +28,7 @@ export const Button = forwardRef((props, forwardedRef) => {
     ...rest
   } = props
 
-  const classNames = classnames(`b-u u_${variant} u_${color} u_center`, {
+  const classNames = cx(`b-u u_${variant} u_${color} u_center`, {
     [className!]: !!className,
     'b-u-fluid': !!fluid,
     [`u_t-${transform}`]: !!transform,
@@ -73,7 +73,7 @@ export const IconButton = forwardRef(
     { icon, title, corner, color = 'bg', size = 'md', variant = 'transparent', className, as: Tag = 'button', ...rest },
     forwardedRef
   ) => {
-    const iconButtonClassName = classnames(`b-u bu-i u_${variant} u_${color} u_center`, {
+    const iconButtonClassName = cx(`b-u bu-i u_${variant} u_${color} u_center`, {
       [className!]: !!className,
       [`u_f-${size}`]: !!size,
       [`u_rad-${corner}`]: !!corner,
@@ -110,7 +110,7 @@ export const ButtonGroup = forwardRef(
     },
     forwardedRef
   ) => {
-    const classNames = classnames(`bu-g b-u u_${color} u_center`, {
+    const classNames = cx(`bu-g b-u u_${color} u_center`, {
       [className!]: !!className,
       [`u_f-${size}`]: !!size,
       [`u_rad-${corner}`]: !!corner,

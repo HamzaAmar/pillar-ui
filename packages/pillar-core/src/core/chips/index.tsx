@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { ChipsProps } from './chips.type'
@@ -18,7 +18,7 @@ export const Chips = forwardRef((props, ref) => {
     children,
     ...rest
   } = props
-  const _className = classnames(`c-i u_${variant} u_${color} u_center`, {
+  const _className = cx(`c-i u_${variant} u_${color} u_center`, {
     [className!]: !!className,
     [`u_f-${size}`]: !!size,
     [`u_t-${transform}`]: !!transform,

@@ -1,6 +1,6 @@
 import { CSSProperties, forwardRef } from 'react'
 import type * as SkeletonType from './skeleton.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 
 /*
@@ -11,7 +11,7 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 
 export const SkeletonAvatar = forwardRef((props, ref) => {
   const { size = 'xl', corner = 'full', children, isLoading = true, className, ...rest } = props
-  const classNames = classnames(`s-k s-k_avt u_f-${size} u_rad-${corner}`, {
+  const classNames = cx(`s-k s-k_avt u_f-${size} u_rad-${corner}`, {
     [className!]: !!className,
   })
   return isLoading ? <div className={classNames} ref={ref} {...rest} /> : <div>{children}</div>
@@ -28,7 +28,7 @@ SkeletonAvatar.displayName = 'SkeletonAvatar'
 export const SkeletonText = forwardRef((props, ref) => {
   const { size = 'md', lines = 2.5, className, children, isLoading = true, as: Tag = 'div', ...rest } = props
   const ceilNumber = Math.ceil(lines)
-  const classNames = classnames(`s-k s-k_txt u_f-${size}`, { [className!]: !!className })
+  const classNames = cx(`s-k s-k_txt u_f-${size}`, { [className!]: !!className })
   const linesComp = Array.from({ length: ceilNumber }, (_, index) => {
     const decimalPercentage = (lines - Math.floor(lines)) * 100
     const isLast = ceilNumber === index + 1
@@ -61,7 +61,7 @@ SkeletonText.displayName = 'SkeletonAvatar'
 
 export const SkeletonButton = forwardRef((props, ref) => {
   const { size = 'md', as: Tag = 'div', className, isLoading, children, ...rest } = props
-  const classNames = classnames(`s-k s-k_btn u_f-${size}`, { [className!]: !!className })
+  const classNames = cx(`s-k s-k_btn u_f-${size}`, { [className!]: !!className })
   const content = <Tag ref={ref} className={classNames} {...rest} />
   return <>{isLoading ? content : children}</>
 }) as ForwardRefComponent<'div', SkeletonType.SkeletonButtonProps>
@@ -77,7 +77,7 @@ SkeletonButton.displayName = 'SkeletonButton'
 export const Skeleton = forwardRef((props, ref) => {
   const { height = '10rem', as: Tag = 'div', className, isLoading, children, ...rest } = props
   const _style = { '--height': height } as CSSProperties
-  const classNames = classnames('s-k s-k_box', { [className!]: !!className })
+  const classNames = cx('s-k s-k_box', { [className!]: !!className })
   const content = <Tag ref={ref} style={_style} className={classNames} {...rest} />
   return <>{isLoading ? content : children}</>
 }) as ForwardRefComponent<'div', SkeletonType.SkeletonProps>

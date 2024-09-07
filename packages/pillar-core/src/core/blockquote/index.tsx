@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import type { BlockquoteProps, CiteProps } from './blockquote.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import { Quotes } from '@pillar-ui/icons'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import { Text } from '../typography'
@@ -15,7 +15,7 @@ export const BlockquoteCite = ({ title, ...rest }: CiteProps) => {
 
 export const Blockquote = forwardRef(
   ({ children, icon = <Quotes />, size, color = 'pri', corner, className, cite, ...rest }, ref) => {
-    const classNames = classnames(`b-l u_${color} l_f-xs u_sh-2xs`, {
+    const classNames = cx(`b-l u_${color} l_f-xs u_sh-2xs`, {
       [className!]: !!className,
       [`u_f-${size}`]: !!size,
       [`u_rad-${corner}`]: !!corner,

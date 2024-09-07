@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import { Flex } from '../flex'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import type { RatingProps } from './rating.type'
 
 const ICONS = {
@@ -17,7 +17,7 @@ export const Rating = ({
   icon = 'star',
   ...props
 }: RatingProps) => {
-  const classNames = classnames(`r-t u_${color}`, {
+  const classNames = cx(`r-t u_${color}`, {
     [`u_f-${size}`]: !!size,
   })
   return (
@@ -38,7 +38,7 @@ export const Rating = ({
           })}
       </svg>
 
-      <figcaption className={classnames('u_f-medium', { u_sr: !!hideTitle })}>{title}</figcaption>
+      <figcaption className={cx('u_f-medium', { u_sr: !!hideTitle })}>{title}</figcaption>
     </Flex>
   )
 }

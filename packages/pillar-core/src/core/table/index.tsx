@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { TableColumnProps, TableProps, TableRowProps } from './table.type'
 
@@ -8,7 +8,7 @@ export const TableColumn = forwardRef(
     return (
       <Comp
         ref={forwardedRef}
-        className={classnames('col', {
+        className={cx('col', {
           [`u_f-${weight}`]: weight !== 'normal',
           [className!]: !!className,
         })}
@@ -46,7 +46,7 @@ export const Table = ({
   return (
     <div className="t-a_cnt">
       <table
-        className={classnames(`t-a u_f-${size} t-a-${variant}  u_${color}`, {
+        className={cx(`t-a u_f-${size} t-a-${variant}  u_${color}`, {
           table__border: !!showBorder,
         })}
         {...rest}

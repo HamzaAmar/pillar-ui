@@ -29,7 +29,7 @@ export const TabList = forwardRef(({ children, ...rest }, ref) => {
     </Flex>
   )
 }) as ForwardRefComponent<'div', TabListProps>
-TabList.displayName = 'Pillar-TabList'
+TabList.displayName = 'TabList'
 
 /*
 ===============================================================================================
@@ -56,7 +56,7 @@ export const Tab = forwardRef(({ title, value, ...rest }, ref) => {
     </button>
   )
 }) as ForwardRefComponent<'button', TabProps>
-Tab.displayName = 'Pillar-Tab'
+Tab.displayName = 'Tab'
 
 /*
 ===============================================================================================
@@ -75,7 +75,7 @@ export const TabPanel = forwardRef((props, ref) => {
     </div>
   )
 }) as ForwardRefComponent<'div', TabPanelProps>
-TabPanel.displayName = 'Pillar-TabPanel'
+TabPanel.displayName = 'TabPanel'
 
 /*
 ===============================================================================================
@@ -92,7 +92,7 @@ export const TabPanels = forwardRef((props, ref) => {
     </div>
   )
 }) as ForwardRefComponent<'div', TabPanelsProps>
-TabPanels.displayName = 'Pillar-TabPanels'
+TabPanels.displayName = 'TabPanels'
 
 /*
 ===============================================================================================
@@ -146,6 +146,6 @@ export const Tabs = forwardRef(
   }
 ) as ForwardRefComponent<'div', TabsProps>
 
-Tabs.displayName = 'Pillar-Paper'
+Tabs.displayName = 'Paper'
 
 export type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProps }

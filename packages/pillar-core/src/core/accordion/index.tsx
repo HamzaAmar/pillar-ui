@@ -1,5 +1,5 @@
 import { Children, cloneElement, forwardRef, isValidElement, useId, useState } from 'react'
-import { classnames, createContext } from '@pillar-ui/utils'
+import { cx, createContext } from '@pillar-ui/utils'
 import { ChevronDown } from '@pillar-ui/icons'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
@@ -65,7 +65,7 @@ export const Accordion = forwardRef((props, forwardedRef) => {
   } = props
   const state = useAccordion(props)
 
-  const classNames = classnames(`a-c`, {
+  const classNames = cx(`a-c`, {
     [`u_${color}`]: !!color,
     [`u_f-${size}`]: !!size,
     'l_f-sm': !!separate,
@@ -106,7 +106,7 @@ export const AccordionItem = forwardRef(({ children, value, className, ...rest }
   const id = useId()
   const itemContextValue = { id, value }
   const { corner, variant } = useAccordionContext() ?? {}
-  const classNames = classnames(`a-c_itm u_${variant} `, {
+  const classNames = cx(`a-c_itm u_${variant} `, {
     [`u_rad-${corner}`]: !!corner,
     [className!]: !!className,
   })
@@ -130,7 +130,7 @@ export const AccordionButton = forwardRef((props, ref) => {
   const { value, id: idContext } = useAccordionItemContext() ?? {}
   const { toggleAccordion, isItemOpen } = useAccordionContext() ?? {}
   const { children, id = idContext, icon = <ChevronDown width="1em" />, className, ...rest } = props
-  const classNames = classnames('a-c_btn u_between', { [className!]: !!className })
+  const classNames = cx('a-c_btn u_between', { [className!]: !!className })
   return (
     <button
       type="button"
@@ -160,7 +160,7 @@ export const AccordionPanel = forwardRef((props, ref) => {
   const { value } = useAccordionItemContext() ?? {}
   const { isItemOpen, id } = useAccordionContext() ?? {}
 
-  const _className = classnames('a-c_pnl', { [className!]: !!className })
+  const _className = cx('a-c_pnl', { [className!]: !!className })
 
   return (
     <div id={id} data-open={isItemOpen?.(value!)} className={_className} ref={ref} {...rest}>
@@ -169,7 +169,7 @@ export const AccordionPanel = forwardRef((props, ref) => {
   )
 }) as ForwardRefComponent<'div', AccordionPanelProps>
 
-AccordionPanel.displayName = 'Pillar-AccordionPanel'
+AccordionPanel.displayName = 'AccordionPanel'
 
 Accordion.displayName = 'Accordion'
 

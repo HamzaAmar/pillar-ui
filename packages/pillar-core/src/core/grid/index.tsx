@@ -1,4 +1,4 @@
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import { forwardRef } from 'react'
 
 import type { CSSProperties } from 'react'
@@ -30,7 +30,7 @@ export const GridItem = forwardRef((props, forwardedRef) => {
   let [lgColumn, lgRow] = lg?.split(' x ') ?? []
   let [xlColumn, xlRow] = xl?.split(' x ') ?? []
 
-  const classNames = classnames('g-r_i', {
+  const classNames = cx('g-r_i', {
     className: !!className,
     [`xs_grid-column`]: !!xsColumn,
     [`sm_grid-column`]: !!smColumn,
@@ -92,7 +92,7 @@ export const Grid = forwardRef((props, forwardedRef) => {
   let [lgColumns, lgRows] = lg?.split(' x ') ?? []
   let [xlColumns, xlRows] = xl?.split(' x ') ?? []
 
-  const classNames = classnames('g-r', {
+  const classNames = cx('g-r', {
     [`u_jus-${justify}`]: !!justify,
     [`u_it-${items}`]: !!items,
     [`u_gap-${gap}`]: !!gap,

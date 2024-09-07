@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { SeparatorProps } from './separator.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import { Flex, FlexProps } from '../flex'
 
 export const Separator = forwardRef((props, ref) => {
@@ -25,7 +25,7 @@ export const Separator = forwardRef((props, ref) => {
     ...(isVertical && { direction: 'column' }),
   }
 
-  const classNames = classnames(`s-e s-e-${direction} u_f-${thickness} u_${color}`, {
+  const classNames = cx(`s-e s-e-${direction} u_f-${thickness} u_${color}`, {
     [className!]: !!className,
     [`u_rad-${corner}`]: !!corner,
   })

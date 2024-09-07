@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import type { CustomRadioProps, RadioContextProps, RadioGroupProps, RadioProps } from './radio.type'
 import { Flex } from '../flex'
-import { classnames, createContext } from '@pillar-ui/utils'
+import { cx, createContext } from '@pillar-ui/utils'
 import { CircleCheck } from '@pillar-ui/icons'
 
 /*
@@ -31,7 +31,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
 
   const labelDirection = direction === 'column' ? { direction: 'column' as 'column' } : {}
 
-  // const radioClassName = classnames(`rc u_circle`)
+  // const radioClassName = cx(`rc u_circle`)
   return (
     <Flex as="label" className={`r-a_c u_${color}`} htmlFor={idOrLabel} {...labelDirection} gap="xs" items="center">
       <input type="radio" name={name} className="r-a" id={idOrLabel} {...rest} />
@@ -39,7 +39,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
         {children}
         <CircleCheck className="rc_i" width={20} />
       </span>
-      <span className={classnames(`r-a_la`, { u_sr: !showLabel })}>{label}</span>
+      <span className={cx(`r-a_la`, { u_sr: !showLabel })}>{label}</span>
     </Flex>
   )
 }
@@ -55,7 +55,7 @@ export const RadioGroup = ({ direction = 'column', children, label, showLabel, i
 
   return (
     <fieldset role="radiogroup" className="ra-g">
-      <legend className={classnames('form-group--legend', { u_sr: !showLabel })}>{label}</legend>
+      <legend className={cx('form-group--legend', { u_sr: !showLabel })}>{label}</legend>
 
       {/* TODO: ADD DEFAULT  TO RADIO GROUP  */}
 

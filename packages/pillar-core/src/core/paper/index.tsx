@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import type { CSSProperties } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { PaperProps } from './paper.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 
 // Helper function to generate CSS variable
 function getCSSVariable(value: string | undefined, initial: number = 9) {
@@ -31,7 +31,7 @@ export const Paper = forwardRef((props, ref) => {
     ...rest
   } = props
 
-  const classNames = classnames(`p-p`, {
+  const classNames = cx(`p-p`, {
     [`u_sh-${shadow}`]: !!shadow,
     [`l_f-${flow}`]: !!flow,
     [`u_rad-${corner}`]: !!corner,

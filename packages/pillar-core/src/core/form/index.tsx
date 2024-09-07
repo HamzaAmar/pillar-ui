@@ -1,6 +1,6 @@
 import { ChevronDown, Eye, EyeOff, X } from '@pillar-ui/icons'
 import { useBooleanState, useControllableState, useComposedRefs } from '@pillar-ui/hooks'
-import { classnames, createContext } from '@pillar-ui/utils'
+import { cx, createContext } from '@pillar-ui/utils'
 import { ChangeEvent, RefObject, forwardRef, useId, useRef, useState } from 'react'
 
 import type {
@@ -45,7 +45,7 @@ function useField(props: any) {
   const prefixInputElement = !!prefixInput && <span className="fi-p_cnt f-i-pre u_center">{prefixInput}</span>
   const suffixInputElement = !!suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
 
-  const classNames = classnames(`f-i_cnt f-i_cnt-${variant} u_${color}`, {
+  const classNames = cx(`f-i_cnt f-i_cnt-${variant} u_${color}`, {
     [`u_t-${transform}`]: !!transform,
     'f-i_cnt-fluid': !!fluid,
     [`u_f-${size}`]: corner,
@@ -198,7 +198,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
   )
 })
 
-InputSearch.displayName = 'Pillar/InputSearch'
+InputSearch.displayName = 'InputSearch'
 
 /*
 ===================================================================================================
@@ -245,7 +245,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = classnames(`f-i_cnt f-i_cnt-${variant} l_fl u_gap-xs u_${color}`, {
+  const className = cx(`f-i_cnt f-i_cnt-${variant} l_fl u_gap-xs u_${color}`, {
     [`u_rad-${corner}`]: !!corner,
     [`u_t-${transform}`]: !!transform,
     [`u_f-${size}`]: !!size,
@@ -381,8 +381,8 @@ export const FormController = (props: FormControllerProps) => {
   const fieldLabel = `${label}${rest.required ? ' *' : ''}`
   return (
     <FormControllerProvider {...values}>
-      <Flex direction="column" className={classnames('fc-o u_f-xs', { [className!]: !!className })}>
-        <label className={classnames('u_f-medium u_f-sm', { u_sr: !!hideLabel })} htmlFor={id}>
+      <Flex direction="column" className={cx('fc-o u_f-xs', { [className!]: !!className })}>
+        <label className={cx('u_f-medium u_f-sm', { u_sr: !!hideLabel })} htmlFor={id}>
           {fieldLabel}
         </label>
         {hint && <span id={hintID}>{hint}</span>}
@@ -408,12 +408,12 @@ export const FormGroup = ({
 }: FormGroupProps) => {
   return (
     <fieldset
-      className={classnames('f-g_cnt', {
+      className={cx('f-g_cnt', {
         'f-g-hide-border ': !!hideBorder,
       })}
     >
-      <legend className={classnames('f-g_legend', { u_sr: !!hideTitle })}>{title}</legend>
-      <Flex gap="sm" className={classnames('f-g', { 'f-g-fluid': !!rest.fluid })} items="start" direction={direction}>
+      <legend className={cx('f-g_legend', { u_sr: !!hideTitle })}>{title}</legend>
+      <Flex gap="sm" className={cx('f-g', { 'f-g-fluid': !!rest.fluid })} items="start" direction={direction}>
         <FormGroupProvider {...rest}>{children}</FormGroupProvider>
       </Flex>
     </fieldset>

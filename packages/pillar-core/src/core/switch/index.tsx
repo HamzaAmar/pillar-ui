@@ -2,7 +2,7 @@ import { useControllableState } from '@pillar-ui/hooks'
 import { SwitchProps } from './switch.type'
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 
 // TODO: Try to add Switch Variant
 
@@ -32,7 +32,7 @@ export const Switch = forwardRef((props, ref) => {
     setPressed((current) => !current)
   }
 
-  const classNames = classnames(`s-w u_${color}`, {
+  const classNames = cx(`s-w u_${color}`, {
     [className!]: !!className,
     [`u_rad-${corner}`]: !!corner,
     [`u_f-${size}`]: !!size,

@@ -1,5 +1,5 @@
 import { Check, Minus } from '@pillar-ui/icons'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import { useComposedRefs } from '@pillar-ui/hooks'
 import { useEffect, useRef, forwardRef } from 'react'
 
@@ -31,8 +31,8 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forw
   }, [isIndeterminate])
 
   const ref = useComposedRefs(forwardedRef, checkboxRef)
-  const classNamesRoot = classnames('c-h_cnt', { [`u_f-${size}`]: !!size, [`u_${color}`]: !!color })
-  const classNames = classnames('c-h_lbl', { u_sr: !!showLabel })
+  const classNamesRoot = cx('c-h_cnt', { [`u_f-${size}`]: !!size, [`u_${color}`]: !!color })
+  const classNames = cx('c-h_lbl', { u_sr: !!showLabel })
 
   return (
     <label className={classNamesRoot}>

@@ -1,7 +1,7 @@
 import { CSSProperties, forwardRef } from 'react'
 import type { TypographyProps } from './typography.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 
 export const Text = forwardRef((props, forwardedRef) => {
   const {
@@ -22,7 +22,7 @@ export const Text = forwardRef((props, forwardedRef) => {
     ...rest
   } = props
 
-  const classNames = classnames(`t-y`, {
+  const classNames = cx(`t-y`, {
     [`u_f-${size}`]: !!size,
     [`u_truncate`]: !!truncate,
     [`u_t-${transform}`]: !!transform,

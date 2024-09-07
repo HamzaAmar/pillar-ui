@@ -1,12 +1,12 @@
 import { ReactNode, forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 
 import type { BadgeProps } from './badge.type'
 
 export const Badge = forwardRef((props, ref) => {
   let { variant = 'solid', color = 'pri', as: Tag = 'div', type = 'numeric', size, corner, className, ...rest } = props
-  const classNames = classnames(`b-a u_${variant} u_center u_${color} u_s-equal`, {
+  const classNames = cx(`b-a u_${variant} u_center u_${color} u_s-equal`, {
     'b-a_dot': type === 'dot',
     [className!]: !!className,
     [`u_f-${size}`]: !!size,
@@ -39,6 +39,6 @@ export const Badge = forwardRef((props, ref) => {
   )
 }) as ForwardRefComponent<'div', BadgeProps>
 
-Badge.displayName = 'Pillar-Badge'
+Badge.displayName = 'Badge'
 
 export type { BadgeProps } from './badge.type'

@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import { Flex } from '../flex'
 import type { BreadcrumbProps, BreadcrumbItemProps, BreadcrumbContextProps, CurrentPage } from './breadcrumb.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import { createContext } from '@pillar-ui/utils'
 
 /* 
@@ -20,7 +20,7 @@ export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   const { separator: contextSeparator = '/' } = useBreadcrumbContext() ?? {}
   const { as = 'a', children, current, separator = contextSeparator, className, ...rest } = props
   const currentPage: CurrentPage = current ? { 'aria-current': 'page' } : {}
-  const classNames = classnames(`b-r_lnk`, { [className!]: !!className })
+  const classNames = cx(`b-r_lnk`, { [className!]: !!className })
 
   return (
     <Flex as="li" gap="sm" className={`b-r_itm`}>
@@ -47,7 +47,7 @@ BreadcrumbItem.displayName = 'BreadcrumbItem'
 export const Breadcrumb = forwardRef((props, ref) => {
   const { children, separator, size, color = 'bg', className, as: Tag = 'nav', ...rest } = props
   const breadcrumbContext = { separator }
-  const classNames = classnames(`u_${color}`, {
+  const classNames = cx(`u_${color}`, {
     [`u_f-${size}`]: !!size,
     [className!]: !!className,
   })

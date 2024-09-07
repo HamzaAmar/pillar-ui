@@ -1,7 +1,7 @@
 import { Children, forwardRef, useState } from 'react'
 import { Photos } from '@pillar-ui/icons'
 import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
-import { classnames, createContext } from '@pillar-ui/utils'
+import { cx, createContext } from '@pillar-ui/utils'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 
 const [AvatarProvider, useAvatarContext] = createContext<AvatarGroupContextProps>({ name: 'Avatar' })
@@ -93,7 +93,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
     />
   )
 
-  const classNames = classnames(`a-v a-v-${variant} u_${color} u_s-equal u_center`, {
+  const classNames = cx(`a-v a-v-${variant} u_${color} u_s-equal u_center`, {
     [`u_${animate}`]: !!animate,
     [`u_f-${size}`]: !!size,
     [`u_rad-${corner}`]: !!corner,

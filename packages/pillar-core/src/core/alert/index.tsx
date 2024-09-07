@@ -1,6 +1,6 @@
 import { useControllableState } from '@pillar-ui/hooks'
 import { Close } from '@pillar-ui/icons'
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import { forwardRef } from 'react'
 import { IconButton } from '../button'
 import { Flex } from '../flex'
@@ -45,7 +45,7 @@ export const Alert = forwardRef((props, forwardedRef) => {
   }
 
   // u_f is used to set the font size based on the size we size the component
-  const classNames = classnames(`a-l u_${variant} u_${color}`, {
+  const classNames = cx(`a-l u_${variant} u_${color}`, {
     [className!]: !!className,
     [`u_rad-${corner}`]: !!corner,
     [`u_f-${size}`]: !!size,
@@ -70,6 +70,6 @@ export const Alert = forwardRef((props, forwardedRef) => {
   )
 }) as ForwardRefComponent<'div', AlertProps>
 
-Alert.displayName = 'Pillar-Alert'
+Alert.displayName = 'Alert'
 
 export type { AlertProps } from './alert.type'

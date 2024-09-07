@@ -10,7 +10,7 @@ const [PaginationProvider, usePaginationContext] = createContext<PaginationConte
 })
 
 import type { PaginationContextProps, PaginationItem, PaginationProps } from './pagination.type'
-import { classnames, createContext } from '@pillar-ui/utils'
+import { cx, createContext } from '@pillar-ui/utils'
 
 const Item = forwardRef((props, forwardedRef) => {
   const context = usePaginationContext()
@@ -26,7 +26,7 @@ const Item = forwardRef((props, forwardedRef) => {
     ...rest
   } = props
 
-  const _classNames = classnames('p-a_btn u_center', { className: !!className })
+  const _classNames = cx('p-a_btn u_center', { className: !!className })
 
   return (
     <li>

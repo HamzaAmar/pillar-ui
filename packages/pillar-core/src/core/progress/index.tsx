@@ -1,4 +1,4 @@
-import { classnames } from '@pillar-ui/utils'
+import { cx } from '@pillar-ui/utils'
 import { Flex } from '../flex'
 import { Text } from '../typography'
 import { Children, isValidElement } from 'react'
@@ -60,7 +60,7 @@ export const ProgressBar = ({
   return (
     <div className={`u_${color}`}>
       <Flex justify="end">
-        <div className={classnames(`u_f-${size}`, { ' u_sr': !showValue })}>{MaxValue}%</div>
+        <div className={cx(`u_f-${size}`, { ' u_sr': !showValue })}>{MaxValue}%</div>
       </Flex>
       <div
         role="progressbar"
