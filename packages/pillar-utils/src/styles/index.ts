@@ -6,7 +6,7 @@ export function cx(...args: Args[]): string {
   let classNames: string[] = []
 
   for (let arg of args) {
-    if (arg == null) continue
+    if (arg == null || !arg) continue
     else if (typeof arg === 'string' || typeof arg === 'number') {
       classNames.push(arg.toString().trim())
     } else if (Array.isArray(arg)) {
