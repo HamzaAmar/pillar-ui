@@ -59,9 +59,7 @@
   },
   "peerDependencies": {
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "dependencies": {
+    "react-dom": "^18.0.0",
     "@pillar-ui/hooks": "*"
   },
   "devDependencies": {
