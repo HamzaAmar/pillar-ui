@@ -1,6 +1,5 @@
-import { ChevronDown, Eye, EyeOff, X } from '@pillar-ui/icons'
 import { useBooleanState, useControllableState, useComposedRefs } from '@pillar-ui/hooks'
-import { cx, createContext } from '@pillar-ui/utils'
+import { cx, context } from '../utils'
 import { ChangeEvent, RefObject, forwardRef, useId, useRef, useState } from 'react'
 
 import type {
@@ -18,12 +17,12 @@ import type {
 } from './form.type'
 import { Flex } from '../flex'
 import { Grid } from '../grid'
-import { Text } from '../typography'
+import { ChevronDown, Close, Eye, EyeOff } from '../icons'
 
-const [FormControllerProvider, useFormController] = createContext<FormControllerContextProps>({
+const [FormControllerProvider, useFormController] = context<FormControllerContextProps>({
   name: 'FormController',
 })
-const [FormGroupProvider, useFormGroup] = createContext<FormGroupContextProps>({ name: 'FormGroup' })
+const [FormGroupProvider, useFormGroup] = context<FormGroupContextProps>({ name: 'FormGroup' })
 
 function useField(props: any) {
   const { hasError, describedby, ...ctx } = useFormController() ?? {}
@@ -192,7 +191,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
       <input type="search" ref={mergedRef} {...fieldProps} className="f-i fi-s" />
       <Flex as="span" items="center" className="fi-s_suf">
         {suffixInputElement}
-        <X onClick={handleInputClick} className="fi-s_icn" transform="translate(-8,0)" />
+        <Close onClick={handleInputClick} className="fi-s_icn" transform="translate(-8,0)" />
       </Flex>
     </div>
   )
@@ -349,9 +348,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
         {title}
       </Flex>
 
-      <Text className="l_fl u_f-xs u_it-center" color="bg" low>
-        {hasValue ? _value : 'No file Choose'}
-      </Text>
+      <span className="t-y l_fl u_f-xs u_it-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
     </Grid>
   )
 })
@@ -389,7 +386,7 @@ export const FormController = (props: FormControllerProps) => {
         {children}
         {error && (
           <div className="f-c_err u_center" id={messageID} role="alert">
-            <span className="f-c_icn">{<X type="circle" width="16" />}</span>
+            <span className="f-c_icn">{<Close type="circle" width="16" />}</span>
             <span> {error}</span>
           </div>
         )}

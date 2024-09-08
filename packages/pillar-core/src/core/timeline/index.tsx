@@ -1,12 +1,12 @@
-import { createContext } from '@pillar-ui/utils'
+import { context } from '../utils'
 import { Flex } from '../flex'
 import { Grid } from '../grid'
 
 import type { TimelineContextProps, TimelineItemProps, TimelineProps } from './timeline.type'
 
-const [TimelineProvider, useTimeline] = createContext<TimelineContextProps>({
+const [TimelineProvider, useTimeline] = context<TimelineContextProps>({
   name: 'Timeline',
-  isContextRequired: true,
+  isRequired: true,
 })
 
 export const TimelineItem = (props: TimelineItemProps) => {

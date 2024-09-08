@@ -1,8 +1,7 @@
 import { useId } from 'react'
 import type { CustomRadioProps, RadioContextProps, RadioGroupProps, RadioProps } from './radio.type'
 import { Flex } from '../flex'
-import { cx, createContext } from '@pillar-ui/utils'
-import { CircleCheck } from '@pillar-ui/icons'
+import { cx, context } from '../utils'
 
 /*
 ===================================================================================================
@@ -10,7 +9,7 @@ import { CircleCheck } from '@pillar-ui/icons'
 ===================================================================================================
 */
 
-const [RadioProvider, useRadioContext] = createContext<RadioContextProps>({ name: 'Radio' })
+const [RadioProvider, useRadioContext] = context<RadioContextProps>({ name: 'Radio' })
 
 export const CustomRadio = (props: CustomRadioProps) => {
   const provider = useRadioContext() ?? {}
@@ -37,7 +36,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
       <input type="radio" name={name} className="r-a" id={idOrLabel} {...rest} />
       <span className={`rc_c ${className}`}>
         {children}
-        <CircleCheck className="rc_i" width={20} />
+        {/* <CircleCheck className="rc_i" width={20} /> */}
       </span>
       <span className={cx(`r-a_la`, { u_sr: !showLabel })}>{label}</span>
     </Flex>

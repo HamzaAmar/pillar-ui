@@ -1,6 +1,5 @@
 import { Children, cloneElement, forwardRef, isValidElement, useId, useState } from 'react'
-import { cx, createContext } from '@pillar-ui/utils'
-import { ChevronDown } from '@pillar-ui/icons'
+import { cx, context } from '../utils'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type {
@@ -12,6 +11,7 @@ import type {
   AccordionProps,
   Value,
 } from './accordion.type'
+import { ChevronDown } from '../icons'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -93,13 +93,13 @@ export const Accordion = forwardRef((props, forwardedRef) => {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const [AccordionItemProvider, useAccordionItemContext] = createContext<AccordionItemContextProps>({
+const [AccordionItemProvider, useAccordionItemContext] = context<AccordionItemContextProps>({
   name: 'AccordionItem',
-  isContextRequired: true,
+  isRequired: true,
 })
-const [AccordionProvider, useAccordionContext] = createContext<AccordionContextProps>({
+const [AccordionProvider, useAccordionContext] = context<AccordionContextProps>({
   name: 'Accordion',
-  isContextRequired: true,
+  isRequired: true,
 })
 
 export const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) => {

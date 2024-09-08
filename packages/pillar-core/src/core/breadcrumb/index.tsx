@@ -2,8 +2,7 @@ import { forwardRef } from 'react'
 import { Flex } from '../flex'
 import type { BreadcrumbProps, BreadcrumbItemProps, BreadcrumbContextProps, CurrentPage } from './breadcrumb.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { cx } from '@pillar-ui/utils'
-import { createContext } from '@pillar-ui/utils'
+import { cx, context } from '../utils'
 
 /* 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -11,9 +10,9 @@ import { createContext } from '@pillar-ui/utils'
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const [BreadcrumbProvider, useBreadcrumbContext] = createContext<BreadcrumbContextProps>({
+const [BreadcrumbProvider, useBreadcrumbContext] = context<BreadcrumbContextProps>({
   name: 'Breadcrumb',
-  isContextRequired: true,
+  isRequired: true,
 })
 
 export const BreadcrumbItem = forwardRef((props, forwardedRef) => {

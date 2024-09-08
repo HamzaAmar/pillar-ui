@@ -1,6 +1,7 @@
 .a-l {
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
+  width: fit-content;
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are

@@ -8,11 +8,11 @@
   color: var(--c-11);
 }
 
-.t-y_hdg {
+.t-y_heading {
   font-size: calc(var(--typography-size, 1rem) * 1.25);
 }
 
-.t-y_lnk {
+.t-y_link {
   padding: 2px;
   color: var(--pri-11);
   &:hover {

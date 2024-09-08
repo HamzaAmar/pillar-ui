@@ -1,8 +1,8 @@
 import { useCounter } from '@pillar-ui/hooks' // Adjust the import path as needed
 import { Flex } from '../flex'
-import { Minus, Plus } from '@pillar-ui/icons'
 
 import type { CounterButtonProps } from './counterButton.type'
+import { Minus, Plus } from '../icons'
 
 export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: CounterButtonProps) => {
   const { count, setCount, increment, decrement } = useCounter({

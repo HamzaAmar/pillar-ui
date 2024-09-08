@@ -1,6 +1,4 @@
-import { cx } from '@pillar-ui/utils'
-import { Flex } from '../flex'
-import { Text } from '../typography'
+import { cx } from '../utils'
 import { Children, isValidElement } from 'react'
 import type {
   ProgressCircleProps,
@@ -59,9 +57,9 @@ export const ProgressBar = ({
 
   return (
     <div className={`u_${color}`}>
-      <Flex justify="end">
+      <div className="f-l u_jus-end">
         <div className={cx(`u_f-${size}`, { ' u_sr': !showValue })}>{MaxValue}%</div>
-      </Flex>
+      </div>
       <div
         role="progressbar"
         aria-valuemax={100}
@@ -92,18 +90,14 @@ export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProp
   })
   return (
     <div className="l_flow-sm">
-      <Flex gap="2xs" className={`pr-b pr-s u_f-${size}`}>
-        {children}
-      </Flex>
-      <Flex as="ul" wrap gap="md">
+      <div className={`f-l u_gap-2xs pr-b pr-s u_f-${size}`}>{children}</div>
+      <ul className="f-l u_gap-md l_fl-wrap">
         {_children?.map(({ children, color }, index) => (
-          <Flex items="center" gap="2xs" as="li" className={`pr-s_cnt u_${color}`} key={index}>
-            <Text as="span" color="bg" size="sm" low>
-              {children}
-            </Text>
-          </Flex>
+          <li className={`pr-s_cnt f-l u_it-center u_gap-2xs u_${color}`} key={index}>
+            <span className="u_bg t-y-low u_f-sm">{children}</span>
+          </li>
         ))}
-      </Flex>
+      </ul>
     </div>
   )
 }

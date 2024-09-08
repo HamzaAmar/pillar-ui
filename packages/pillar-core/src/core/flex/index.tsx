@@ -1,6 +1,6 @@
 import { CSSProperties, forwardRef } from 'react'
 import type { FlexItemProps, FlexProps } from './flex.type'
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
 /*

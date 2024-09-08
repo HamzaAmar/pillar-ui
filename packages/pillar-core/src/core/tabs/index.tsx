@@ -2,7 +2,7 @@ import { forwardRef, useId, useState } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProps, TabPanelsProps } from './tabs.type'
 import { Flex } from '../flex'
-import { createContext } from '@pillar-ui/utils'
+import { context } from '../utils'
 
 /*
 ===============================================================================================
@@ -10,7 +10,7 @@ import { createContext } from '@pillar-ui/utils'
 ===============================================================================================
 */
 
-const [TabsProvider, useTabsContext] = createContext<TabsProviderProps>({ name: 'Tabs' })
+const [TabsProvider, useTabsContext] = context<TabsProviderProps>({ name: 'Tabs' })
 
 export const TabList = forwardRef(({ children, ...rest }, ref) => {
   const { direction } = useTabsContext() ?? {}

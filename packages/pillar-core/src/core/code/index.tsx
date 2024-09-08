@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { CodeProps } from './code.type'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 
 export const Code = forwardRef((props, ref) => {
   const { as: Tag = 'code', color = 'bg', size = 'sm', corner, children, transform, className, ...rest } = props

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { ListItemProps, ListProps } from './list.type'
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 
 export const ListItem = ({ children }: ListItemProps) => {
   return <li>{children}</li>

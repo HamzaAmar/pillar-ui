@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { TableColumnProps, TableProps, TableRowProps } from './table.type'
 

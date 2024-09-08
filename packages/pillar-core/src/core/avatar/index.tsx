@@ -1,10 +1,10 @@
 import { Children, forwardRef, useState } from 'react'
-import { Photos } from '@pillar-ui/icons'
 import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
-import { cx, createContext } from '@pillar-ui/utils'
+import { cx, context } from '../utils'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
+import { User } from '../icons'
 
-const [AvatarProvider, useAvatarContext] = createContext<AvatarGroupContextProps>({ name: 'Avatar' })
+const [AvatarProvider, useAvatarContext] = context<AvatarGroupContextProps>({ name: 'Avatar' })
 
 /*  
 =================================================================================
@@ -65,7 +65,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
     size = ctx?.size,
     corner = ctx?.corner,
     color = ctx?.color ?? 'pri',
-    fallback = ctx?.fallback ?? <Photos strokeWidth="1.5" width="max(1.5em, 10px)" />,
+    fallback = ctx?.fallback ?? <User strokeWidth="1.5" width="max(1.5em, 10px)" />,
     image = '',
     className,
     title,

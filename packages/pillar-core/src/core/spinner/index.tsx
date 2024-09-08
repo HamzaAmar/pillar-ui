@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react'
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 import { SpinnerProps } from './spinner.type'
 
 export const Spinner = ({ color = 'pri', size, thickness = '2px', invert = false, ...rest }: SpinnerProps) => {

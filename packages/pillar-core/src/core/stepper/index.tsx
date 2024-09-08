@@ -1,12 +1,11 @@
 import { Children, isValidElement, createElement, useId } from 'react'
 import type { ReactNode } from 'react'
 import { Flex } from '../flex'
-import { Text } from '../typography'
 import type { StepperContextProps, StepperProps, StepProps } from './stepper.type'
-import { Check } from '@pillar-ui/icons'
-import { createContext } from '@pillar-ui/utils'
+import { context } from '../utils'
+import { Check } from '../icons'
 
-const [StepperProvider, useStepperContext] = createContext<StepperContextProps>({ name: 'Stepper' })
+const [StepperProvider, useStepperContext] = context<StepperContextProps>({ name: 'Stepper' })
 
 export const StepperStep = (props: StepProps) => {
   const context = useStepperContext()
@@ -44,12 +43,12 @@ export const StepperStep = (props: StepProps) => {
         )}
       </button>
       <div className="s-t_cnt">
-        <Text id={labelledbyID} weight="medium" size="sm">
+        <p id={labelledbyID} className="u_f-sm u_f-medium">
           {title}
-        </Text>
-        <Text id={describedbyID} size="xs" color="bg" low>
+        </p>
+        <p id={describedbyID} className="u_f-xs u_bg t-y-low">
           {description}
-        </Text>
+        </p>
       </div>
     </Flex>
   )

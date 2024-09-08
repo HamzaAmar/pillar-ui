@@ -1,16 +1,15 @@
 import { forwardRef } from 'react'
 import { Button } from '../button'
-import { ChevronDown, DotsHorizontal } from '@pillar-ui/icons'
 import { usePagination } from '@pillar-ui/hooks'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-
-const [PaginationProvider, usePaginationContext] = createContext<PaginationContextProps>({
-  name: 'Pagination',
-  isContextRequired: true,
-})
-
 import type { PaginationContextProps, PaginationItem, PaginationProps } from './pagination.type'
-import { cx, createContext } from '@pillar-ui/utils'
+import { cx, context } from '../utils'
+import { ChevronDown, DotsHorizontal } from '../icons'
+
+const [PaginationProvider, usePaginationContext] = context<PaginationContextProps>({
+  name: 'Pagination',
+  isRequired: true,
+})
 
 const Item = forwardRef((props, forwardedRef) => {
   const context = usePaginationContext()

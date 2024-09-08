@@ -1,9 +1,9 @@
-import { Check, Minus } from '@pillar-ui/icons'
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 import { useComposedRefs } from '@pillar-ui/hooks'
 import { useEffect, useRef, forwardRef } from 'react'
 
 import type { CheckboxProps } from './checkbox.type'
+import { Check, Minus } from '../icons'
 
 const ICON_PROPS = { strokeWidth: 2, 'aria-hidden': true, focusable: false, className: 'c-h_icn' }
 

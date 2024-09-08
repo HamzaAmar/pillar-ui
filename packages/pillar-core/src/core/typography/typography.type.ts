@@ -35,8 +35,9 @@ export interface TypographyProps {
   fontStyle?: FontStyle
   decoration?: Decoration
   leading?: Leading
-  truncate?: number
+  truncate?: '1' | '2' | '3' | '4' | '5' | '6'
   width?: CharWidth
+  variant: 'text' | 'heading' | 'link'
 }
 
 // interface MultiLineTypographyTruncate extends TypographyBaseProps {

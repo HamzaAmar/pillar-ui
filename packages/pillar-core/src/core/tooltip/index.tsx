@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useId, useRef, useState } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { TooltipContentProps, TooltipContext, TooltipProps } from './tooltip.type'
-import { createContext } from '@pillar-ui/utils'
+import { context } from '../utils'
 import { useComposedRefs } from '@pillar-ui/hooks'
 import { Popover } from '../popover'
 
@@ -11,9 +11,9 @@ import { Popover } from '../popover'
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const [TooltipProvider, useTooltipContext] = createContext<TooltipContext>({
+const [TooltipProvider, useTooltipContext] = context<TooltipContext>({
   name: 'TooltipRoot',
-  isContextRequired: true,
+  isRequired: true,
 })
 
 export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, size = 'sm', ...rest }, forwardedRef) => {

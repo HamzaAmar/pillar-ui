@@ -1,7 +1,7 @@
-import { CSSProperties, forwardRef } from 'react'
+import { forwardRef } from 'react'
 import type { TypographyProps } from './typography.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 
 export const Text = forwardRef((props, forwardedRef) => {
   const {
@@ -14,6 +14,7 @@ export const Text = forwardRef((props, forwardedRef) => {
     leading,
     align,
     decoration,
+    variant = 'text',
     color,
     fontStyle,
     low = false,
@@ -24,7 +25,7 @@ export const Text = forwardRef((props, forwardedRef) => {
 
   const classNames = cx(`t-y`, {
     [`u_f-${size}`]: !!size,
-    [`u_truncate`]: !!truncate,
+    [`u_truncate-${truncate}`]: !!truncate,
     [`u_t-${transform}`]: !!transform,
     [`u_t-${align}`]: !!align,
     [`u_f-${weight}`]: !!weight,
@@ -34,14 +35,12 @@ export const Text = forwardRef((props, forwardedRef) => {
     [`u_${color}`]: !!color,
     [`u_w-${width}`]: !!width,
     [`t-y-low`]: low,
+    [`t-y_${variant}`]: variant !== 'text',
     [`${className}`]: !!className,
   })
-  const _style = {
-    ...(truncate && { '--line-numbers': props.truncate }),
-  } as CSSProperties
 
   return (
-    <Tag style={_style} className={classNames} ref={forwardedRef} {...rest}>
+    <Tag className={classNames} ref={forwardedRef} {...rest}>
       {children}
     </Tag>
   )

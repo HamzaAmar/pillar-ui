@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { SeparatorProps } from './separator.type'
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 import { Flex, FlexProps } from '../flex'
 
 export const Separator = forwardRef((props, ref) => {

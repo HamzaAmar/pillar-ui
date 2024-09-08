@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import type { CSSProperties } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { PaperProps } from './paper.type'
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 
 // Helper function to generate CSS variable
 function getCSSVariable(value: string | undefined, initial: number = 9) {

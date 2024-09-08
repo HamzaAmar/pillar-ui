@@ -1,4 +1,4 @@
-import { cx } from '@pillar-ui/utils'
+import { cx } from '../utils'
 import { forwardRef } from 'react'
 
 import type { CSSProperties } from 'react'
