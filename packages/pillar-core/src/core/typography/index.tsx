@@ -14,7 +14,6 @@ export const Text = forwardRef((props, forwardedRef) => {
     leading,
     align,
     decoration,
-    variant = 'text',
     color,
     fontStyle,
     low = false,
@@ -35,7 +34,6 @@ export const Text = forwardRef((props, forwardedRef) => {
     [`u_${color}`]: !!color,
     [`u_w-${width}`]: !!width,
     [`t-y-low`]: low,
-    [`t-y_${variant}`]: variant !== 'text',
     [`${className}`]: !!className,
   })
 
@@ -49,7 +47,7 @@ Text.displayName = 'Text'
 
 export const Heading = forwardRef(({ as: Tag = 'h1', children, ...rest }, forwardedRef) => {
   return (
-    <Text as={Tag} className="t-y_hdg" ref={forwardedRef} {...rest}>
+    <Text as={Tag} className="t-y_heading" ref={forwardedRef} {...rest}>
       {children}
     </Text>
   )
@@ -59,7 +57,7 @@ Heading.displayName = 'Heading'
 
 export const Link = forwardRef(({ children, ...rest }, forwardedRef) => {
   return (
-    <Text ref={forwardedRef} color="pri" low className="t-y_lnk" as="a" {...rest}>
+    <Text ref={forwardedRef} color="pri" low className="t-y_link" as="a" {...rest}>
       {children}
     </Text>
   )

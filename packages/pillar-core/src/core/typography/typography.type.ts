@@ -37,7 +37,7 @@ export interface TypographyProps {
   leading?: Leading
   truncate?: '1' | '2' | '3' | '4' | '5' | '6'
   width?: CharWidth
-  variant: 'text' | 'heading' | 'link'
+  // variant: 'text' | 'heading' | 'link'
 }
 
 // interface MultiLineTypographyTruncate extends TypographyBaseProps {
