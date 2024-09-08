@@ -80,20 +80,20 @@ export function LinkWeights() {
 export function LinkTruncates() {
   return (
     <div className="l_f-md">
-      <Link href="#" size="3xl" truncate={1}>
+      <Link href="#" size="3xl" truncate="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl" truncate={2}>
+      <Link href="#" size="3xl" truncate="2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl" truncate={3}>
+      <Link href="#" size="3xl" truncate="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl" truncate={4}>
+      <Link href="#" size="3xl" truncate="4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
 
-      <Link href="#" size="3xl" truncate={5}>
+      <Link href="#" size="3xl" truncate="5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
 
