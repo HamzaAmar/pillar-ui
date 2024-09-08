@@ -1,6 +1,6 @@
 {
   "name": "@pillar-ui/core",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "description": "@pillar-ui/core is a lightweight and comprehensive UI component library packed with reusable and customizable UI components designed for modern web development. Our components adhere to best practices, ensuring a consistent and accessible user experience across your applications, without sacrificing performance.",
   "author": {
     "name": "Hamza Miloud Amar",
@@ -60,7 +60,7 @@
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "@pillar-ui/hooks": "^0.7.1"
+    "@pillar-ui/hooks": "^0.7.2"
   },
   "devDependencies": {
     "@pillar-ui/eslint": "*",
