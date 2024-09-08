@@ -8,7 +8,7 @@ export { Flex, FlexItem } from './core/flex'
 export { Grid, GridItem } from './core/grid'
 export { Spinner } from './core/spinner'
 export { Switch } from './core/switch'
-export { Heading, Link, Text } from './core/typography'
+export { Text, Heading, Link } from './core/typography'
 export { Breadcrumb, BreadcrumbItem } from './core/breadcrumb'
 export { Checkbox } from './core/checkbox'
 export { Radio, RadioGroup, CustomRadio } from './core/radio'
@@ -40,6 +40,7 @@ export { Blockquote, BlockquoteCite } from './core/blockquote'
 export { List, ListItem } from './core/list'
 export { Tooltip, TooltipContent, TooltipTrigger } from './core/tooltip'
 export { CounterButton } from './core/counterButton'
+export { context, cx } from './core/utils'
 
 // ====================================== TYPES  ===========================================
 

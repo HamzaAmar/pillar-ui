@@ -1,8 +1,34 @@
 /* /// TRUNCATE TEXT UTILITY */
 
-.u_truncate {
+.u_truncate-1,
+.u_truncate-2,
+.u_truncate-3,
+.u_truncate-4,
+.u_truncate-5,
+.u_truncate-6 {
+  --lns: 1;
   display: -webkit-box;
-  -webkit-line-clamp: var(--line-numbers, 1);
+  -webkit-line-clamp: var(--lns);
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.u_truncate-2 {
+  --lns: 2;
+}
+
+.u_truncate-3 {
+  --lns: 3;
+}
+
+.u_truncate-4 {
+  --lns: 4;
+}
+
+.u_truncate-5 {
+  --lns: 5;
+}
+
+.u_truncate-6 {
+  --lns: 6;
 }

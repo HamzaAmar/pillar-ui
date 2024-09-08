@@ -62,9 +62,7 @@
     "react-dom": "^18.0.0"
   },
   "dependencies": {
-    "@pillar-ui/hooks": "*",
-    "@pillar-ui/icons": "*",
-    "@pillar-ui/utils": "*"
+    "@pillar-ui/hooks": "*"
   },
   "devDependencies": {
     "@pillar-ui/eslint": "*",
