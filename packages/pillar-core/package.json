@@ -58,9 +58,9 @@
     "type:check": "tsc --noEmit"
   },
   "peerDependencies": {
+    "@pillar-ui/hooks": "^0.7.2",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "@pillar-ui/hooks": "^0.7.2"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@pillar-ui/eslint": "*",
