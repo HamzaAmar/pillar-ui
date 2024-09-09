@@ -5,4 +5,5 @@ export interface SpinnerProps {
   size?: Size
   thickness?: string
   invert?: boolean
+  className?: string
 }
