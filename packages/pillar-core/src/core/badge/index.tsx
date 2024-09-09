@@ -6,7 +6,7 @@ import type { BadgeProps } from './badge.type'
 
 export const Badge = forwardRef((props, ref) => {
   let { variant = 'solid', color = 'pri', as: Tag = 'div', type = 'numeric', size, corner, className, ...rest } = props
-  const classNames = cx(`b-a u_${variant} u_center u_${color} u_s-equal`, {
+  const classNames = cx(`b-a u_${variant} u_center u_${color}`, {
     'b-a_dot': type === 'dot',
     [`u_f-${size}`]: !!size,
     [`u_rad-${corner}`]: !!corner,
@@ -21,16 +21,14 @@ export const Badge = forwardRef((props, ref) => {
    * Consider look for discriminated union to understand the problem Correctly.
    */
   let displayValue: ReactNode
-  const isNumeric = props.type === 'numeric'
 
-  if (isNumeric) {
-    const { number, max } = props
-    displayValue = max && number > max ? `${max}+` : number.toString()
+  if (props.type === 'numeric') {
+    const { number, max, showZero } = props
+    if (!number && !showZero) return null
+    displayValue = max && number > max ? `${max}+` : `${number}`
   } else if (props.type === 'icon') {
     displayValue = props.icon
   }
-
-  if (isNumeric && !props.number && !props.showZero) return null
 
   return (
     <Tag ref={ref} className={classNames} {...rest}>

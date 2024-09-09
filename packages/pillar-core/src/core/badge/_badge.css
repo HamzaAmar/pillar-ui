@@ -1,7 +1,8 @@
 .b-a {
+  --ba-s: 1.75em;
   --fx: inline-flex;
-  --eq-s: 1.75em;
-
+  min-width: var(--ba-s);
+  height: var(--ba-s);
   font-weight: 500;
   text-decoration: none;
   padding: 0.125em;
@@ -22,7 +23,7 @@
 }
 
 .b-a_dot {
-  --eq-s: 0.5em;
+  --ba-s: 0.5em;
 }
 
 .b-a_cnt {
