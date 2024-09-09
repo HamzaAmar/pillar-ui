@@ -34,6 +34,7 @@ export interface ButtonProps extends Omit<BaseButton, 'corner'> {
   children: ReactNode
   shadow?: boolean
   corner?: Corner | CornerHand
+  loadingText?: string
 }
 
 export interface IconButtonProps extends BaseButton {

@@ -10,55 +10,57 @@ import type { ButtonGroupProps, ButtonProps, IconButtonProps } from './button.ty
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const Button = forwardRef((props, forwardedRef) => {
-  const {
-    children,
-    color = 'pri',
-    corner,
-    variant = 'solid',
-    size,
-    state = 'idle',
-    icon,
-    iconPosition = 'start',
-    className,
-    disabled,
-    transform,
-    fluid,
-    as: Tag = 'button',
-    ...rest
-  } = props
+export const Button = forwardRef(
+  (
+    {
+      children,
+      color = 'pri',
+      corner,
+      variant = 'solid',
+      size,
+      state = 'idle',
+      icon,
+      iconPosition = 'start',
+      className,
+      disabled,
+      transform,
+      fluid,
+      as: Tag = 'button',
+      loadingText = 'Loading...',
+      ...rest
+    },
+    forwardedRef
+  ) => {
+    const classNames = cx(`b-u u_${variant} u_${color} u_center`, {
+      'b-u-fluid': !!fluid,
+      [`u_t-${transform}`]: !!transform,
+      [`u_f-${size}`]: !!size,
+      [`u_rad-${corner}`]: !!corner,
+      [className!]: !!className,
+    })
 
-  const classNames = cx(`b-u u_${variant} u_${color} u_center`, {
-    [className!]: !!className,
-    'b-u-fluid': !!fluid,
-    [`u_t-${transform}`]: !!transform,
-    [`u_f-${size}`]: !!size,
-    [`u_rad-${corner}`]: !!corner,
-  })
+    const isLoading = state === 'loading'
 
-  const isLoading = state === 'loading'
+    const content = isLoading ? (
+      <>
+        <Spinner color="bg" size={size} />
+        <span>{loadingText}</span>
+      </>
+    ) : (
+      <>
+        {iconPosition === 'start' && icon}
+        <span className="b-u_txt u_truncate">{children}</span>
+        {iconPosition === 'end' && icon}
+      </>
+    )
 
-  const content = (
-    <>
-      {iconPosition === 'start' && icon}
-      <span className="b-u_txt u_truncate">{children}</span>
-      {iconPosition === 'end' && icon}
-    </>
-  )
-
-  const loadingContent = (
-    <>
-      <Spinner color="bg" size={size} />
-      <span> Loading... </span>
-    </>
-  )
-
-  return (
-    <Tag disabled={disabled || isLoading} ref={forwardedRef} className={classNames} {...rest}>
-      {isLoading ? loadingContent : content}
-    </Tag>
-  )
-}) as ForwardRefComponent<'button', ButtonProps>
+    return (
+      <Tag disabled={disabled || isLoading} ref={forwardedRef} className={classNames} {...rest}>
+        {content}
+      </Tag>
+    )
+  }
+) as ForwardRefComponent<'button', ButtonProps>
 
 Button.displayName = 'Button'
 
@@ -73,14 +75,14 @@ export const IconButton = forwardRef(
     { icon, title, corner, color = 'bg', size = 'md', variant = 'transparent', className, as: Tag = 'button', ...rest },
     forwardedRef
   ) => {
-    const iconButtonClassName = cx(`b-u bu-i u_${variant} u_${color} u_center`, {
-      [className!]: !!className,
+    const classnames = cx(`b-u bu-i u_${variant} u_${color} u_center`, {
       [`u_f-${size}`]: !!size,
       [`u_rad-${corner}`]: !!corner,
+      [className!]: !!className,
     })
 
     return (
-      <Tag aria-label={title} className={iconButtonClassName} ref={forwardedRef} {...rest}>
+      <Tag aria-label={title} className={classnames} ref={forwardedRef} {...rest}>
         {icon}
       </Tag>
     )
