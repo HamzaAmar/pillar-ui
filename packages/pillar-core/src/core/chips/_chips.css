@@ -6,11 +6,8 @@
   gap: var(--s-xs);
   height: fit-content;
   width: fit-content;
-  max-width: 25ch;
+  max-width: 35ch;
   padding: 0.125em 0.25em;
-  & svg {
-    width: 0.85em;
-  }
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -24,4 +21,7 @@
 
 .c-i_cnt {
   font-size: 0.875em;
+  & svg {
+    width: 0.85em;
+  }
 }

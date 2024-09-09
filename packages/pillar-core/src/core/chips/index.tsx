@@ -18,18 +18,16 @@ export const Chips = forwardRef((props, ref) => {
     children,
     ...rest
   } = props
-  const _className = cx(`c-i u_${variant} u_${color} u_center`, {
-    [className!]: !!className,
+  const _className = cx(`c-i u_${variant} u_${color}`, {
     [`u_f-${size}`]: !!size,
     [`u_t-${transform}`]: !!transform,
     [`u_rad-${corner}`]: !!corner,
+    [className!]: !!className,
   })
 
   return (
     <Tag ref={ref} className={_className} {...rest}>
-      {icon && iconPosition === 'start' && icon}
-      <span className="c-i_cnt u_truncate">{children}</span>
-      {icon && iconPosition === 'end' && icon}
+      <span className="c-i_cnt u_gap-3xs u_truncate u_center">{children} </span>
     </Tag>
   )
 }) as ForwardRefComponent<'span', ChipsProps>
