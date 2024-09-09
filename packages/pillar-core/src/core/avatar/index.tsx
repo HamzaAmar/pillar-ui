@@ -12,41 +12,44 @@ Avatar Group Component
 =================================================================================
 */
 
-export const AvatarGroup = forwardRef((props, forwardRef) => {
-  const {
-    limit,
-    size = 'md',
-    layout = 'stack',
-    variant = 'soft',
-    color = 'pri',
-    corner = 'full',
-    fallback,
-    animate,
-    children,
-    as: Tag = 'div',
-    ...rest
-  } = props
+export const AvatarGroup = forwardRef(
+  (
+    {
+      limit,
+      size = 'md',
+      layout = 'stack',
+      variant = 'soft',
+      color = 'pri',
+      corner = 'full',
+      fallback,
+      animate,
+      children,
+      as: Tag = 'div',
+      ...rest
+    },
+    forwardRef
+  ) => {
+    const childCount = Children.count(children)
 
-  const childCount = Children.count(children)
+    const restCount = limit && limit < childCount ? childCount - limit : null
 
-  const restCount = limit && limit < childCount ? childCount - limit : null
+    const maxCount = limit ? Math.min(limit, childCount) : childCount
 
-  const maxCount = limit ? Math.min(limit, childCount) : childCount
+    const contextProps = { color, corner, size, animate, variant, fallback }
 
-  const contextProps = { color, corner, size, animate, variant, fallback }
+    return (
+      <Tag ref={forwardRef} className={`av-g av-g av-g-${layout}`} {...rest}>
+        <AvatarProvider {...contextProps}>
+          {Array.from(new Array(maxCount)).map((_, index) => {
+            return Children.toArray(children)[index]
+          })}
+        </AvatarProvider>
 
-  return (
-    <Tag ref={forwardRef} className={`av-g av-g av-g-${layout}`} {...rest}>
-      <AvatarProvider {...contextProps}>
-        {Array.from(new Array(maxCount)).map((_, index) => {
-          return Children.toArray(children)[index]
-        })}
-      </AvatarProvider>
-
-      {restCount && <Avatar {...contextProps} fallback={<div className="u_f-sm u_f-medium">{restCount}+</div>} />}
-    </Tag>
-  )
-}) as ForwardRefComponent<'div', AvatarGroupProps>
+        {restCount && <Avatar {...contextProps} fallback={<div className="u_f-sm u_f-medium">{restCount}+</div>} />}
+      </Tag>
+    )
+  }
+) as ForwardRefComponent<'div', AvatarGroupProps>
 
 AvatarGroup.displayName = 'AvatarGroup'
 
@@ -78,7 +81,6 @@ export const Avatar = forwardRef((props, forwardRef) => {
   const content = isError ? (
     <span className="u_center">{fallback}</span>
   ) : (
-    // eslint-disable-next-line @next/next/no-img-element
     <img
       className="a-v_img"
       ref={(node) => {

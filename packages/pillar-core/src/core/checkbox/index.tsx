@@ -32,7 +32,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forw
 
   const ref = useComposedRefs(forwardedRef, checkboxRef)
   const classNamesRoot = cx('c-h_cnt', { [`u_f-${size}`]: !!size, [`u_${color}`]: !!color })
-  const classNames = cx('c-h_lbl', { u_sr: !!showLabel })
 
   return (
     <label className={classNamesRoot}>
@@ -45,7 +44,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forw
         {...rest}
       />
       <span className="c-h u_s-equal u_center">{icon}</span>
-      <div className={classNames}>{label}</div>
+      <div className={cx('c-h_lbl', { u_sr: !!showLabel })}>{label}</div>
     </label>
   )
 })

@@ -11,51 +11,54 @@ function getCSSVariable(value: string | undefined, initial: number = 9) {
   return `var(--${color}-${degree}, none)`
 }
 
-export const Paper = forwardRef((props, ref) => {
-  let {
-    as: Tag = 'div',
-    background,
-    color,
-    p,
-    m,
-    shadow,
-    width,
-    height,
-    corner,
-    flow,
-    ratio,
-    children,
-    style = {},
-    className,
-    border,
-    ...rest
-  } = props
+export const Paper = forwardRef(
+  (
+    {
+      as: Tag = 'div',
+      background,
+      color,
+      p,
+      m,
+      shadow,
+      width,
+      height,
+      corner,
+      flow,
+      ratio,
+      children,
+      style = {},
+      className,
+      border,
+      ...rest
+    },
+    ref
+  ) => {
+    const classNames = cx(`p-p`, {
+      [`u_sh-${shadow}`]: !!shadow,
+      [`l_f-${flow}`]: !!flow,
+      [`u_rad-${corner}`]: !!corner,
+      [`u_pa-${p}`]: !!p,
+      [`u_ma-${m}`]: !!m,
+      [`u_w-${width}`]: !!width,
+      [`u_h-${height}`]: !!height,
+      [`u_ratio-${ratio}`]: !!ratio,
+      [`u_border`]: !!border,
+      [className!]: !!className,
+    })
 
-  const classNames = cx(`p-p`, {
-    [`u_sh-${shadow}`]: !!shadow,
-    [`l_f-${flow}`]: !!flow,
-    [`u_rad-${corner}`]: !!corner,
-    [`u_pa-${p}`]: !!p,
-    [`u_ma-${m}`]: !!m,
-    [`u_w-${width}`]: !!width,
-    [`u_h-${height}`]: !!height,
-    [`u_ratio-${ratio}`]: !!ratio,
-    [`u_border`]: !!border,
-    [className!]: !!className,
-  })
+    const _style: CSSProperties = {
+      background: getCSSVariable(background),
+      color: getCSSVariable(color, 12),
+      ...style,
+    }
 
-  const _style: CSSProperties = {
-    background: getCSSVariable(background),
-    color: getCSSVariable(color, 12),
-    ...style,
+    return (
+      <Tag style={_style} className={classNames} ref={ref} {...rest}>
+        {children}
+      </Tag>
+    )
   }
-
-  return (
-    <Tag style={_style} className={classNames} ref={ref} {...rest}>
-      {children}
-    </Tag>
-  )
-}) as ForwardRefComponent<'div', PaperProps>
+) as ForwardRefComponent<'div', PaperProps>
 
 Paper.displayName = 'Paper'
 

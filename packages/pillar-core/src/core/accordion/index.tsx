@@ -21,26 +21,20 @@ import { ChevronDown } from '../icons'
 
 function useAccordion({ type, collapsible }: AccordionProps) {
   const [activeItems, setActiveItems] = useState<Value | Value[]>(type === 'multiple' ? [] : -1)
-
-  function isItemOpen(value: Value) {
-    return Array.isArray(activeItems) ? activeItems.includes(value) : activeItems === value
-  }
+  const isItemOpen = (value: Value) =>
+    Array.isArray(activeItems) ? activeItems.includes(value) : activeItems === value
 
   function toggleAccordion(currentIndex: Value) {
-    if (isItemOpen(currentIndex) && !collapsible) {
+    const isOpen = isItemOpen(currentIndex)
+
+    if (isOpen && !collapsible) {
       if (Array.isArray(activeItems) && activeItems.length === 1) return
       if (activeItems === currentIndex) return
     }
-
-    if (Array.isArray(activeItems)) {
-      const newState = isItemOpen(currentIndex)
-        ? activeItems.filter((value) => currentIndex !== value)
-        : [...activeItems, currentIndex]
-      return setActiveItems(newState)
-    }
-    setActiveItems((val) => (currentIndex === val ? -1 : currentIndex))
+    Array.isArray(activeItems)
+      ? setActiveItems(isOpen ? activeItems.filter((v) => v !== currentIndex) : [...activeItems, currentIndex])
+      : setActiveItems((val) => (currentIndex === val ? -1 : currentIndex))
   }
-
   return { activeItems, setActiveItems, toggleAccordion, isItemOpen }
 }
 
@@ -95,11 +89,11 @@ export const Accordion = forwardRef((props, forwardedRef) => {
 
 const [AccordionItemProvider, useAccordionItemContext] = context<AccordionItemContextProps>({
   name: 'AccordionItem',
-  isRequired: true,
+  required: true,
 })
 const [AccordionProvider, useAccordionContext] = context<AccordionContextProps>({
   name: 'Accordion',
-  isRequired: true,
+  required: true,
 })
 
 export const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) => {
@@ -142,7 +136,7 @@ export const AccordionButton = forwardRef((props, ref) => {
       {...rest}
     >
       {children}
-      {icon}
+      {<span className="u_w-fit">{icon}</span>}
     </button>
   )
 }) as ForwardRefComponent<'button', AccordionButtonProps>

@@ -12,7 +12,7 @@ import { cx, context } from '../utils'
 
 const [BreadcrumbProvider, useBreadcrumbContext] = context<BreadcrumbContextProps>({
   name: 'Breadcrumb',
-  isRequired: true,
+  required: true,
 })
 
 export const BreadcrumbItem = forwardRef((props, forwardedRef) => {

@@ -1,4 +1,5 @@
 .r-t {
+  width: fit-content;
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to

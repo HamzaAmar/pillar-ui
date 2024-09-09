@@ -8,7 +8,7 @@ import { ChevronDown, DotsHorizontal } from '../icons'
 
 const [PaginationProvider, usePaginationContext] = context<PaginationContextProps>({
   name: 'Pagination',
-  isRequired: true,
+  required: true,
 })
 
 const Item = forwardRef((props, forwardedRef) => {

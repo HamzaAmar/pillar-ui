@@ -5,14 +5,14 @@ interface CreateContextParams<T> {
   name: string
   initValue?: T
   error?: string
-  isRequired?: boolean
+  required?: boolean
 }
 
 export function context<T extends object | null>({
   name,
   initValue,
   error = 'useContext must be used within a Provider.',
-  isRequired = false,
+  required = false,
 }: CreateContextParams<T>) {
   const CTX = createContext<T | undefined>(initValue)
 
@@ -22,7 +22,7 @@ export function context<T extends object | null>({
 
   function useContextCustom() {
     const context = useContext(CTX)
-    if (!context && isRequired) console.warn(error)
+    if (!context && required) console.warn(error)
     return context
   }
 

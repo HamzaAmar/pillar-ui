@@ -1,5 +1,4 @@
 /* eslint-disable react/no-array-index-key */
-import { Flex } from '../flex'
 import { cx } from '../utils'
 import type { RatingProps } from './rating.type'
 
@@ -17,11 +16,11 @@ export const Rating = ({
   icon = 'star',
   ...props
 }: RatingProps) => {
-  const classNames = cx(`r-t u_${color}`, {
+  const classNames = cx(`r-t u_${color} u_gap-xs u_center`, {
     [`u_f-${size}`]: !!size,
   })
   return (
-    <Flex as="figure" gap="sm" items="center" className={classNames} {...props}>
+    <figure className={classNames} {...props}>
       <svg viewBox={`0 0 ${24 * 5} 24`} aria-hidden="true" focusable="false">
         {Array(5)
           .fill('')
@@ -39,7 +38,7 @@ export const Rating = ({
       </svg>
 
       <figcaption className={cx('u_f-medium', { u_sr: !!hideTitle })}>{title}</figcaption>
-    </Flex>
+    </figure>
   )
 }
 

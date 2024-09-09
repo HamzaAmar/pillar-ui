@@ -72,9 +72,9 @@ export const Stepper = ({ children, color = 'bg', active = 0, completeComponent,
 
   return (
     <div className="s-t_cnt l_flow">
-      <Flex justify="between" className={`s-t u_${color}`}>
+      <div className={`s-t u_${color} u_between`}>
         <StepperProvider {...rest}> {_children}</StepperProvider>
-      </Flex>
+      </div>
       <div>{content}</div>
     </div>
   )

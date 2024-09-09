@@ -1,12 +1,11 @@
 import { context } from '../utils'
-import { Flex } from '../flex'
 import { Grid } from '../grid'
 
 import type { TimelineContextProps, TimelineItemProps, TimelineProps } from './timeline.type'
 
 const [TimelineProvider, useTimeline] = context<TimelineContextProps>({
   name: 'Timeline',
-  isRequired: true,
+  required: true,
 })
 
 export const TimelineItem = (props: TimelineItemProps) => {
@@ -16,9 +15,7 @@ export const TimelineItem = (props: TimelineItemProps) => {
   return (
     <Grid grid="1.25em 1fr" gap="sm" className={`t-i_itm  t-i_itm-${variant}`}>
       <div className="t-i_line">
-        <Flex justify="center" items="center" className={`t-i_bullet u_rad-${corner}`}>
-          {bullet}
-        </Flex>
+        <div className={`t-i_bullet u_rad-${corner} u_center`}>{bullet}</div>
       </div>
       <div>{children}</div>
     </Grid>

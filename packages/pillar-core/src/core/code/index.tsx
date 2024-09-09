@@ -3,22 +3,22 @@ import { CodeProps } from './code.type'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import { cx } from '../utils'
 
-export const Code = forwardRef((props, ref) => {
-  const { as: Tag = 'code', color = 'bg', size = 'sm', corner, children, transform, className, ...rest } = props
+export const Code = forwardRef(
+  ({ as: Tag = 'code', color = 'bg', size, corner, children, transform, className, ...rest }, ref) => {
+    const classNames = cx(`c-o u_soft u_${color}`, {
+      [`u_f-${size}`]: !!size,
+      [`u_t-${transform}`]: !!transform,
+      [`u_rad-${corner}`]: !!corner,
+      [className!]: !!className,
+    })
 
-  const classNames = cx(`c-o u_soft u_${color} `, {
-    [`u_f-${size}`]: !!size,
-    [`u_t-${transform}`]: !!transform,
-    [`u_rad-${corner}`]: !!corner,
-    [className!]: !!className,
-  })
-
-  return (
-    <Tag ref={ref} className={classNames} {...rest}>
-      {children}
-    </Tag>
-  )
-}) as ForwardRefComponent<'code', CodeProps>
+    return (
+      <Tag ref={ref} className={classNames} {...rest}>
+        {children}
+      </Tag>
+    )
+  }
+) as ForwardRefComponent<'code', CodeProps>
 
 Code.displayName = 'Code'
 

@@ -13,7 +13,7 @@ import { Popover } from '../popover'
 
 const [TooltipProvider, useTooltipContext] = context<TooltipContext>({
   name: 'TooltipRoot',
-  isRequired: true,
+  required: true,
 })
 
 export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, size = 'sm', ...rest }, forwardedRef) => {
@@ -110,7 +110,7 @@ TooltipTrigger.displayName = 'TooltipTrigger'
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const TooltipContent = forwardRef(({ children, as: Tag = 'div', ...rest }, forwardedRef) => {
+export const TooltipContent = forwardRef(({ children, as: Tag = 'div', ...rest }) => {
   const { open, handleClose, id, triggerRef, size } = useTooltipContext() ?? {}
 
   return (
@@ -118,7 +118,7 @@ export const TooltipContent = forwardRef(({ children, as: Tag = 'div', ...rest }
       isOpen={open!}
       onClose={handleClose!}
       triggerElement={triggerRef!}
-      ref={forwardedRef}
+      // ref={forwardedRef}
       id={id}
       width="auto"
       role="tooltip"

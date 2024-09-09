@@ -1,5 +1,5 @@
 import { CSSProperties, forwardRef } from 'react'
-import type * as SkeletonType from './skeleton.type'
+import type * as ST from './skeleton.type'
 import { cx } from '../utils'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 
@@ -9,13 +9,14 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const SkeletonAvatar = forwardRef((props, ref) => {
-  const { size = 'xl', corner = 'full', children, isLoading = true, className, ...rest } = props
-  const classNames = cx(`s-k s-k_avt u_f-${size} u_rad-${corner}`, {
-    [className!]: !!className,
-  })
-  return isLoading ? <div className={classNames} ref={ref} {...rest} /> : <div>{children}</div>
-}) as ForwardRefComponent<'div', SkeletonType.SkeletonAvatarProps>
+export const SkeletonAvatar = forwardRef(
+  ({ size = 'xl', corner = 'full', children, isLoading = true, className, ...rest }, ref) => {
+    const classNames = cx(`s-k s-k_avt u_f-${size} u_rad-${corner}`, {
+      [className!]: !!className,
+    })
+    return isLoading ? <div className={classNames} ref={ref} {...rest} /> : <div>{children}</div>
+  }
+) as ForwardRefComponent<'div', ST.SkeletonAvatarProps>
 
 SkeletonAvatar.displayName = 'SkeletonAvatar'
 
@@ -25,31 +26,32 @@ SkeletonAvatar.displayName = 'SkeletonAvatar'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const SkeletonText = forwardRef((props, ref) => {
-  const { size = 'md', lines = 2.5, className, children, isLoading = true, as: Tag = 'div', ...rest } = props
-  const ceilNumber = Math.ceil(lines)
-  const classNames = cx(`s-k s-k_txt u_f-${size}`, { [className!]: !!className })
-  const linesComp = Array.from({ length: ceilNumber }, (_, index) => {
-    const decimalPercentage = (lines - Math.floor(lines)) * 100
-    const isLast = ceilNumber === index + 1
-    const textWidth = !isLast ? '100%' : `${decimalPercentage || 100}%`
+export const SkeletonText = forwardRef(
+  ({ size = 'md', lines = 2.5, className, children, isLoading = true, as: Tag = 'div', ...rest }, ref) => {
+    const ceilNumber = Math.ceil(lines)
+    const classNames = cx(`s-k s-k_txt u_f-${size}`, { [className!]: !!className })
+    const linesComp = Array.from({ length: ceilNumber }, (_, index) => {
+      const decimalPercentage = (lines - Math.floor(lines)) * 100
+      const isLast = ceilNumber === index + 1
+      const textWidth = !isLast ? '100%' : `${decimalPercentage || 100}%`
 
+      return (
+        <Tag
+          ref={ref}
+          key={index}
+          style={{ '--text-width': textWidth } as CSSProperties}
+          className={classNames}
+          {...rest}
+        />
+      )
+    })
     return (
-      <Tag
-        ref={ref}
-        key={index}
-        style={{ '--text-width': textWidth } as CSSProperties}
-        className={classNames}
-        {...rest}
-      />
+      <div className="l_f-xs" style={{ width: '100%' }}>
+        {isLoading ? linesComp : children}
+      </div>
     )
-  })
-  return (
-    <div className="l_f-xs" style={{ width: '100%' }}>
-      {isLoading ? linesComp : children}
-    </div>
-  )
-}) as ForwardRefComponent<'div', SkeletonType.SkeletonTextProps>
+  }
+) as ForwardRefComponent<'div', ST.SkeletonTextProps>
 
 SkeletonText.displayName = 'SkeletonAvatar'
 
@@ -59,12 +61,13 @@ SkeletonText.displayName = 'SkeletonAvatar'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const SkeletonButton = forwardRef((props, ref) => {
-  const { size = 'md', as: Tag = 'div', className, isLoading, children, ...rest } = props
-  const classNames = cx(`s-k s-k_btn u_f-${size}`, { [className!]: !!className })
-  const content = <Tag ref={ref} className={classNames} {...rest} />
-  return <>{isLoading ? content : children}</>
-}) as ForwardRefComponent<'div', SkeletonType.SkeletonButtonProps>
+export const SkeletonButton = forwardRef(
+  ({ size = 'md', as: Tag = 'div', className, isLoading, children, ...rest }, ref) => {
+    const classNames = cx(`s-k s-k_btn u_f-${size}`, { [className!]: !!className })
+
+    return isLoading ? <Tag ref={ref} className={classNames} {...rest} /> : children
+  }
+) as ForwardRefComponent<'div', ST.SkeletonButtonProps>
 
 SkeletonButton.displayName = 'SkeletonButton'
 
@@ -78,9 +81,9 @@ export const Skeleton = forwardRef((props, ref) => {
   const { height = '10rem', as: Tag = 'div', className, isLoading, children, ...rest } = props
   const _style = { '--height': height } as CSSProperties
   const classNames = cx('s-k s-k_box', { [className!]: !!className })
-  const content = <Tag ref={ref} style={_style} className={classNames} {...rest} />
-  return <>{isLoading ? content : children}</>
-}) as ForwardRefComponent<'div', SkeletonType.SkeletonProps>
+
+  return isLoading ? <Tag ref={ref} style={_style} className={classNames} {...rest} /> : children
+}) as ForwardRefComponent<'div', ST.SkeletonProps>
 
 Skeleton.displayName = 'Skeleton'
 

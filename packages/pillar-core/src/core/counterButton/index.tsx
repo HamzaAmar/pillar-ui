@@ -1,5 +1,4 @@
 import { useCounter } from '@pillar-ui/hooks' // Adjust the import path as needed
-import { Flex } from '../flex'
 
 import type { CounterButtonProps } from './counterButton.type'
 import { Minus, Plus } from '../icons'
@@ -13,18 +12,16 @@ export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: 
   })
 
   return (
-    <Flex gap="sm" className="c-b_cnt">
-      <Flex
-        as="button"
-        items="center"
-        className="c-b"
+    <div className="f-l u_gap-sm c-b_cnt">
+      <button
+        className="c-b u_center"
         type="button"
         onClick={() => decrement()}
         aria-label="Decrement value"
         disabled={count <= min}
       >
         <Minus width="1em" />
-      </Flex>
+      </button>
 
       <input
         className="cb-f"
@@ -38,7 +35,7 @@ export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: 
       />
 
       <button
-        className="flex u_it-center c-b"
+        className="c-b u_center"
         type="button"
         onClick={() => increment()}
         aria-label="Increment value"
@@ -46,7 +43,7 @@ export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: 
       >
         <Plus width="1em" />
       </button>
-    </Flex>
+    </div>
   )
 }
 

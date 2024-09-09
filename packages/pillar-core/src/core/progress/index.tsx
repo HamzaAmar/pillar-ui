@@ -89,7 +89,7 @@ export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProp
     return { children, color: rest.color }
   })
   return (
-    <div className="l_flow-sm">
+    <div>
       <div className={`f-l u_gap-2xs pr-b pr-s u_f-${size}`}>{children}</div>
       <ul className="f-l u_gap-md l_fl-wrap">
         {_children?.map(({ children, color }, index) => (
