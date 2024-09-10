@@ -1,5 +1,50 @@
 # @pillar/core
 
+## 0.10.3
+
+### Patch Changes
+
+- # Release Notes
+
+  **Release Date:** September 10, 2024
+
+  **Summary:**
+
+  This release focuses on code refactoring and optimization, with a strong emphasis on reducing component size and improving overall code structure.
+
+  **Key Changes:**
+
+  - **Improved Module Structure:** Nest type declarations inside export/require statements, promoting better organization and maintainability.
+  - **Reduced Component Footprint:** Optimized the size and complexity of several core components, including buttons, alerts, badges, chips, and spinners.
+  - **Code Cleanup:** Removed unused code (list component) and resolved warnings (type placement).
+  - **Dependency Management:** Addressed lock file issues for smoother project setup.
+
+  **Detailed Changes:**
+
+  - **7559f0f:** Fixed nested type declarations within export/require.
+  - **fbdcc3f:** Resolved lock file problems.
+  - **6bccd91:** Moved types to the top to eliminate warnings.
+  - **7c682b9:** Refactored badge story and removed the list component.
+  - **b204d3c:** Removed the list component from index and style.
+  - **34e4420:** Reduced core components' size.
+  - **8260896:** Removed the list component.
+  - **95e024b:** Reduced the spinner component code.
+  - **3875d58:** Reduced the chips component code.
+  - **4842b9f:** Reduced the button component code.
+  - **b705b21:** Improved and reduced the alert components.
+  - **b32358e:** Improved and reduced the badge component.
+
+  **Future Plans:**
+
+  - Continue to refine and optimize core components.
+  - Expand the component library with new features.
+  - Enhance documentation and examples.
+
+  **Thank you for using our project!**
+
+- Updated dependencies
+  - @pillar-ui/hooks@0.7.3
+
 ## 0.10.2
 
 ### Patch Changes
