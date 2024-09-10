@@ -209,7 +209,7 @@ export const BadgeNumericMaxValue = () => {
   return (
     <Flex gap="sm">
       <Badge type="numeric" number={15} max={10} color="dan" />
-      <Badge type="numeric" number={150} max={100} color="suc" />
+      <Badge type="numeric" number={1500} max={1000} color="suc" />
       <Badge type="numeric" number={5} max={0} color="war" />
       <Badge type="numeric" number={0} max={15} color="pri" />
       <Badge type="numeric" showZero number={0} max={15} color="dan" />
