@@ -1,5 +1,13 @@
 # @pillar/core
 
+## 0.10.4
+
+### Patch Changes
+
+- # Pillar Core Patch
+
+  Add @pillar-ui/hooks as a peerDeps to The @pillar-ui/core.
+
 ## 0.10.3
 
 ### Patch Changes
