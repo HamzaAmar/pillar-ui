@@ -15,9 +15,9 @@
   "version": "0.7.2",
   "sideEffects": false,
   "license": "MIT",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist/**"
   ],
@@ -30,9 +30,9 @@
   "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "scripts": {
