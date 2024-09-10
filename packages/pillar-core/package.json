@@ -63,13 +63,13 @@
     "type:check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@pillar-ui/hooks": "^0.7.3",
+    "@pillar-ui/hooks": "0.7.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@pillar-ui/hooks": "*",
     "@pillar-ui/eslint": "*",
+    "@pillar-ui/hooks": "*",
     "@pillar-ui/tsconfig": "*",
     "@types/node": "^22.5.3",
     "@types/react": "^18.3.3",

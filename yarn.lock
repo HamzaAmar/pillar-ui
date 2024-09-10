@@ -3025,7 +3025,7 @@ __metadata:
   resolution: "@pillar-ui/core@workspace:packages/pillar-core"
   dependencies:
     "@pillar-ui/eslint": "npm:*"
-    "@pillar-ui/hooks": "npm:^0.7.0"
+    "@pillar-ui/hooks": "npm:*"
     "@pillar-ui/tsconfig": "npm:*"
     "@types/node": "npm:^22.5.3"
     "@types/react": "npm:^18.3.3"
@@ -3045,6 +3045,7 @@ __metadata:
     tsup: "npm:^8.2.4"
     typescript: "npm:^5.5.4"
   peerDependencies:
+    "@pillar-ui/hooks": 0.7.3
     react: ^18.0.0
     react-dom: ^18.0.0
   languageName: unknown
@@ -3089,7 +3090,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pillar-ui/hooks@npm:*, @pillar-ui/hooks@npm:^0.7.0, @pillar-ui/hooks@workspace:packages/pillar-hooks":
+"@pillar-ui/hooks@npm:*, @pillar-ui/hooks@workspace:packages/pillar-hooks":
   version: 0.0.0-use.local
   resolution: "@pillar-ui/hooks@workspace:packages/pillar-hooks"
   dependencies:
