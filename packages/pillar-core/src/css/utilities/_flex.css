@@ -1,11 +1,10 @@
-.u_center {
+.u_center,
+.u_between {
   display: var(--fx, flex);
   justify-content: center;
-  align-items: center;
+  align-items: var(--itm, center);
 }
 
 .u_between {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
