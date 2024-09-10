@@ -58,12 +58,13 @@
     "type:check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@pillar-ui/hooks": "^0.7.2",
+    "@pillar-ui/hooks": "^0.7.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@pillar-ui/eslint": "*",
+    "@pillar-ui/hooks": "^0.7.0",
     "@pillar-ui/tsconfig": "*",
     "@types/node": "^22.5.3",
     "@types/react": "^18.3.3",
@@ -81,7 +82,6 @@
     "sass": "^1.77.8",
     "terser": "^5.31.6",
     "tsup": "^8.2.4",
-    "typescript": "^5.5.4",
-    "@pillar-ui/hooks": "*"
+    "typescript": "^5.5.4"
   }
 }
