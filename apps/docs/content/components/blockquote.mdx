@@ -17,7 +17,7 @@ mponent used to display quoted text with an optional citation. It allows you to 
 
 Type: string
 Default: `md`
-Options: `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
+Options: `sharp` `xs` `sm` `md` `lg` `circle` `full`
 The size prop determines the corners of the Blockquote. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 The corner prop determines the border radius of the Blockquote. It accepts any of the Corner types defined in your library, including (sharp, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
@@ -60,7 +60,7 @@ function CornerCorners() {
 
 Type: Color (string)
 Default: `primary`
-Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
+Options: `danger` `warning` `success` `primary` `secondary` `bg`
 
 You can customize the color of the blockquote by passing a color prop to the Blockquote component.
 
@@ -99,7 +99,7 @@ function BlockquoteColor() {
 
 Type: Size (string)
 Default: `md`
-Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
 
 You can customize the size of the blockquote by passing a size prop to the Blockquote component.
 
@@ -142,7 +142,7 @@ function BlockquoteSize() {
 The `Blockquote.Cite` subcomponent is a specialized element for attributing the quoted content to its source.
 
 - `title` (string): The text of the citation (e.g., author name, source title).
-- `align` (`start`| `center`| `end`) default `start`: Controls the horizontal alignment of the citation (`start`, `center`, or `end`; default is `start`).
+- `align` (`start``center``end`) default `start`: Controls the horizontal alignment of the citation (`start`, `center`, or `end`; default is `start`).
 
 ** Example Usage **
 

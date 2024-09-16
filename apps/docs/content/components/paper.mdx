@@ -36,7 +36,7 @@ The Paper component accepts the following props:
 
 - Type: string
 - Default: none
-- Options: `danger` | `warning` | `success` | `primary` | `bg` | `primary` | `secondary` | `opacity`
+- Options: `danger` `warning` `success` `primary` `bg` `primary` `secondary` `opacity`
 
 The background prop determines the background color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it defaults to the white color.
 
@@ -86,7 +86,7 @@ function PaperBackgrounds(){
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `bg` | `primary` | `secondary`
+- Options: `danger` `warning` `success` `bg` `primary` `secondary`
 
 The color prop determines the text color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it `inherit` the of its parent.
 
@@ -185,7 +185,7 @@ function PaperColors() {
 **corner**
 Type: string
 Default: md
-Options: sharp | xs | sm | md | lg | xl | circle | full
+Options: sharp xs sm md lg xl circle full
 
 The corner prop determines the border radius of the Paper component. It accepts any of the Corner types defined in our library, including (sharp, xs, sm, md, lg, xl, circle, full). If not provided, it defaults to the md corner.
 
@@ -263,7 +263,7 @@ function PaperCorners() {
 **padding**
 Type: string
 Default: md
-Options: 2xs | xs | sm | md | lg | xl
+Options: 2xs xs sm md lg xl
 
 The padding prop determines the padding size of the Paper component. It accepts any of the Size types defined in our library. If not provided, it defaults to the md padding.
 
@@ -346,7 +346,7 @@ function PaperPadding() {
 **margin**
 Type: string
 Default: md
-Options: 2xs | xs | sm | md | lg | xl
+Options: 2xs xs sm md lg xl
 
 The margin prop determines the margin size of the Paper component. It accepts any of the Size types defined in our library. If not provided, it defaults to the md padding.
 
@@ -392,7 +392,7 @@ function PaperMargin() {
 **flow**
 Type: string
 Default: md
-Options: xs | sm | md | lg | xl
+Options: xs sm md lg xl
 The flow prop determines the space between the Paper and its surrounding elements. It accepts any of the Size types defined in our library, excluding (2xl, 2xs). If not provided, it defaults to the md spacing.
 
 Example usage:
@@ -438,7 +438,7 @@ function PaperSpacing() {
 **shadow**
 Type: string
 Default: none
-Options: none | xs | sm | md | lg | xl
+Options: none xs sm md lg xl
 The shadow prop determines the shadow of the Paper. It accepts any of the Shadow types defined in our library, including (none, xs, sm, md, lg, xl). If not provided, it defaults to the none shadow.
 
 Example usage:
@@ -474,17 +474,17 @@ function PaperShadow() {
 The Paper component provides a convenient width prop for controlling its horizontal dimensions. This prop accepts specific string values that correspond to predefined width classes.
 **Available Width Classes:**
 
-| Class Name    | Description                                                                 |
-| ------------- | --------------------------------------------------------------------------- |
-| `30-char`     | Sets the width to a minimum of 30 characters or 100%, whichever is smaller. |
-| `45-char`     | Sets the width to a minimum of 45 characters or 100%, whichever is smaller. |
-| `60-char`     | Sets the width to a minimum of 60 characters or 100%, whichever is smaller. |
-| `75-char`     | Sets the width to a minimum of 75 characters or 100%, whichever is smaller. |
-| `90-char`     | Sets the width to a minimum of 90 characters or 100%, whichever is smaller. |
-| `half`        | Sets the width to 50%.                                                      |
-| `one-third`   | Sets the width to 33.3%.                                                    |
-| `full`        | Sets the width to 100%.                                                     |
-| `fit-content` | Sets the width to the content's intrinsic width.                            |
+| Class Name Description                                                                |
+| ------------------------------------------------------------------------------------- |
+| `30-char` Sets the width to a minimum of 30 characters or 100%, whichever is smaller. |
+| `45-char` Sets the width to a minimum of 45 characters or 100%, whichever is smaller. |
+| `60-char` Sets the width to a minimum of 60 characters or 100%, whichever is smaller. |
+| `75-char` Sets the width to a minimum of 75 characters or 100%, whichever is smaller. |
+| `90-char` Sets the width to a minimum of 90 characters or 100%, whichever is smaller. |
+| `half` Sets the width to 50%.                                                         |
+| `one-third` Sets the width to 33.3%.                                                  |
+| `full` Sets the width to 100%.                                                        |
+| `fit-content` Sets the width to the content's intrinsic width.                        |
 
 **Example Usage:**
 

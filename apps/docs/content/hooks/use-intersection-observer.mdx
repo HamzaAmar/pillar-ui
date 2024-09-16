@@ -23,7 +23,7 @@ import { useIntersectionObserver } from '@pillar-ui/hooks'
 
 The useIntersectionObserver hook takes three parameters:
 
-- `ref: React.RefObject<HTMLElement> | Array<React.RefObject<HTMLElement>>`: A ref object or an array of ref objects for the element(s) you want to observe the intersection of.
+- `ref: React.RefObject<HTMLElement> Array<React.RefObject<HTMLElement>>`: A ref object or an array of ref objects for the element(s) you want to observe the intersection of.
 - `options: IntersectionObserverOptions`: An object containing options for the Intersection Observer. It uses the same options as the `IntersectionObserver` constructor. You can refer to the [Intersection Observer API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for more details on the available options.
 - `callback: IntersectionObserverCallback`: A callback function that will be called whenever the intersection of the observed element(s) changes. The callback receives two parameters - `entries` (an array of `IntersectionObserverEntry` objects) and `observer` (the Intersection Observer instance). You can refer to the [Intersection Observer API documentation](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) for more details on the `IntersectionObserverEntry` object.
 

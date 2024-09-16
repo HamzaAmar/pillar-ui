@@ -33,11 +33,11 @@ import { usePersistentCallback } from '@pillar-ui/hooks'
 
 The usePersistentCallback hook takes a single parameter:
 
-- `callback: T | undefined`: The callback function that you want to make persistent.
+- `callback: T undefined`: The callback function that you want to make persistent.
 
 ## Returned Value
 
-The usePersistentCallback hook returns the persisted callback function of type `T | undefined`. The returned function has references to the previous versions of the `callback` argument, ensuring its stability across renders. It is important to note that the returned callback may be `undefined` if the input `callback` is `undefined` or not of function type.
+The usePersistentCallback hook returns the persisted callback function of type `T undefined`. The returned function has references to the previous versions of the `callback` argument, ensuring its stability across renders. It is important to note that the returned callback may be `undefined` if the input `callback` is `undefined` or not of function type.
 
 ## Usage
 

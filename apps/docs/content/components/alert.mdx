@@ -8,28 +8,6 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Usage
-
-```tsx showLineNumbers title="Alert.tsx"
-import { Alert } from '@pillar-ui/core'
-function(){
-    return(
-        <Alert
-            color="suc"
-            size="md"
-            corner="rounded"
-            title="Success!"
-            message="Your action was successful."
-            variant="filled"
-            inline={false}
-            icon={<CheckCircleIcon />}
-            closable={true}
-        />
-        ;
-    )
-}
-```
-
 ## Props
 
 The Alert component accepts the following props:
@@ -38,54 +16,23 @@ The Alert component accepts the following props:
 
 - Type: string
 - Default: `primary`
-- Options: `danger` | `warning` | `success` | `primary` | `secondary` | `bg`
+- Options: `danger` `warning` `success` `primary` `secondary` `bg`
 
 The color prop determines the background color of the Alert. It accepts any of the Color types defined in our library see options above. If not provided, it defaults to the primary color.
 
 Example usage:
 
-<AlertColors />
-
-```tsx showLineNumbers title="Alert.tsx"
-function AlertColors(){
-    return(
-        <Alert title="Success!" color="dan" />
-        <Alert title="Success!" color="war" />
-        <Alert title="Success!" color="suc" />
-        <Alert title="Success!" color="pri" />
-        <Alert title="Success!" color='bg' />
-        <Alert title="Success!" color="sec" />
-    )
-}
-
-```
+<Alerts.color />
 
 ### Size
 
 - Type: string
 - Default: `md`
-- Options: `2xs` | `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
 
 The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 Example usage:
-
-<AlertSizes />
-
-```tsx showLineNumbers title="Alert.tsx"
-function AlerSizes(){
-    return(
-        <Alert title="Success!" size='3xs' />
-        <Alert title="Success!" size='2xs' />
-        <Alert title="Success!" size='xs' />
-        <Alert title="Success!" size='md' />
-        <Alert title="Success!" size='lg' />
-        <Alert title="Success!" size='xl' />
-        <Alert title="Success!" size='2xl' />
-        <Alert title="Success!" size='3xl' />
-    )
-}
-```
 
 ### Variant
 
@@ -93,50 +40,18 @@ The variant prop determines the visual style of the alert. The following are the
 
 Type: string
 Default: `solid`
-Options: `solid` | `outline` | `soft` | `mixed`
-
-<AlertVariants />
-
-```tsx showLineNumbers title="Alert.tsx"
-export const AlertVariant = () => {
-  return (
-    <Flex direction="column" gap="sm">
-      <AlertBase variant="solid" />
-      <AlertBase variant="outline" />
-      <AlertBase variant="soft" />
-      <AlertBase variant="mixed" />
-    </Flex>
-  )
-}
-```
+Options: `solid` `outline` `soft` `mixed`
 
 ### Corner
 
 Type: string
 Default: `md`
-Options: `sharp` | `xs` | `sm` | `md` | `lg` | `circle` | `full`
+Options: `sharp` `xs` `sm` `md` `lg` `circle` `full`
 The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 The corner prop determines the border radius of the Alert. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
 Example usage:
-
-<AlertCorners />
-
-```tsx showLineNumbers title="Alert.tsx"
-function AlerCorners(){
-    return(
-        <Alert title="Success!" corner='sharp' />
-        <Alert title="Success!" corner='xs' />
-        <Alert title="Success!" corner='md' />
-        <Alert title="Success!" corner='lg' />
-        <Alert title="Success!" corner='xl' />
-        <Alert title="Success!" corner='circle' />
-        <Alert title="Success!" corner='full' />
-    )
-}
-
-```
 
 ### Content
 
@@ -144,36 +59,10 @@ The content of the Alert the text displayed as the Alert's title. If not provide
 
 Example usage:
 
-<AlertContent />
-
-```tsx showLineNumbers title="Alert.tsx"
-function(){
-    return(
-        <div>
-            <Alert title="Success!" />
-            <Alert icon={<CheckCircle />}  title="Success!" />
-            <Alert message="Success!" />
-            <Alert title="Success!" message='Your prefered description' />
-            <Alert icon={<CheckCircle />}  title="Success!"  message='Your prefered description' />
-        </div>
-    )
-}
-```
-
 ### Icon
 
 The icon prop allows you to display an icon alongside the Alert. It accepts any ReactNode, such as an icon from the @pillar-ui/icons package. If no icon is provided, no icon will be displayed.
 Example usage:
-
-<AlertIcons />
-
-```tsx showLineNumbers title="Alert.tsx"
-<Paper borderColor="opa-6" flow="sm" p="sm" background="bg-3" corner="sm">
-  <Alert icon={<CircleCheck width="32" />} title="Success!" />
-  <Alert icon={<CircleCheck width="32" />} title="Success!" />
-  <Alert icon={<CircleCheck width="48" />} title="Success!" message="Your prefered description" />
-</Paper>
-```
 
 ### Closable
 
@@ -181,48 +70,10 @@ The closable prop determines whether the Alert should be closable by the user. I
 
 Example usage:
 
-<AlertClosable />
-
-```tsx showLineNumbers title="Alert.tsx"
-<Paper borderColor="opa-6" flow="sm" p="sm" background="bg-3" corner="sm">
-  <Alert closable title="Success!" />
-  <Alert closable title="Success!" message="you have an error in the start of the program" />
-  <Alert closable message="you have an error in the start of the program!" />
-</Paper>
-```
-
 ### Inline
 
 The inline prop determines how the alert is displayed. If set to true, the alert will be displayed horizontally, which is useful for short alerts that do not take up a lot of space, such as notifications or messages. If not set or set to false, the alert will be displayed as a vertically.
 Example usage:
-
-<AlertInline />
-
-```tsx showLineNumbers title="Alert.tsx"
-<Flex direction="column" gap="sm">
-  <Alert title="hello" message="you have an error in the start of the program" inline />
-  <Alert title="hello" message="you have an error in the start of the program" inline />
-  <Alert
-    title="hello"
-    message="you have an error in the start of the program you have an error in the start of the program you have an error in the start of the program  of the program you have an error in the start of the program"
-    inline
-  />
-  <Alert
-    title="hello"
-    message="you have an error in the start of the program"
-    inline
-    icon={<CircleWarning width="20" />}
-  />
-  <Alert title="hello" message="you have an error in the start of the program" inline closable />
-  <Alert
-    title="hello"
-    message="you have an error in the start of the program"
-    inline
-    icon={<CircleWarning width="20" />}
-    closable
-  />
-</Flex>
-```
 
 ## Accessibility
 
@@ -264,4 +115,4 @@ If the Alert component is not behaving as expected, it may be due to an incorrec
 
 The Alert component is a powerful tool for displaying messages to the user in a clear and effective way. By customizing its appearance and behavior using props, the Alert component can be tailored to meet the specific needs of an application.
 
-We hope this documentation helps you understand and use the Alert component in your projects! If you have any questions or need further assistance, don't hesitate to ask.
+We hope this documentation helps you understand and use the Alert component in your projects! If you have any questions or need further assistance, don't hesitate to ask. \*/}
