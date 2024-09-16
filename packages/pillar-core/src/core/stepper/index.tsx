@@ -67,7 +67,7 @@ export const Stepper = ({ children, color = 'bg', active = 0, completeComponent,
 
   const _content: ReactNode[] = []
 
-  const content = Children.map(children, (child, step) => {
+  const steps = Children.map(children, (child, step) => {
     if (!isValidElement(child)) return child
 
     _content.push(child.props.children)
@@ -79,14 +79,14 @@ export const Stepper = ({ children, color = 'bg', active = 0, completeComponent,
     })
   })
 
-  const activeContent = _content[active] ?? completeComponent
+  const currentContent = _content[active] ?? completeComponent
 
   return (
     <div className="s-t_cnt l_flow">
-      <div className={`s-t u_${color} u_between`}>
-        <StepperProvider {...rest}> {activeContent}</StepperProvider>
+      <div className={`f-l s-t u_${color} u_between`}>
+        <StepperProvider {...rest}> {steps}</StepperProvider>
       </div>
-      <div>{content}</div>
+      <div>{currentContent}</div>
     </div>
   )
 }
