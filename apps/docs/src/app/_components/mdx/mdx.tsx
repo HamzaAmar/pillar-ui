@@ -9,8 +9,16 @@ import { highlight } from 'sugar-high'
 import { toSlug } from '~/utils/slug'
 import * as playground from '../playground'
 import { Colors } from '../colors'
+import { DocsCode } from '../code'
 
 type CustomLinkProps = {} & Omit<LinkProps, 'href'> & React.AnchorHTMLAttributes<HTMLAnchorElement>
+
+function getStringFromChildren(children: React.ReactNode): string | null {
+  if (React.isValidElement(children) && children.type === 'code') {
+    return children.props.children
+  }
+  return null
+}
 
 function CustomLink(props: CustomLinkProps) {
   let href = props.href!
@@ -37,10 +45,12 @@ function RoundedImage(props: RoundedImageProps) {
   return <Image alt={props.altText} {...props} />
 }
 
-async function Code({ children, className, ...props }: { children: string; className: string }) {
-  let codeHTML = highlight(children)
+async function Code({ children, ...props }: { children: string; className: string }) {
+  const code = getStringFromChildren(children)
+  if (code === null) return <pre {...props}>{children}</pre>
+  let codeHTML = highlight(code)
 
-  return <code className={`${className} code--section`} dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
+  return <DocsCode code={code} codeHTML={codeHTML} />
 }
 
 function createHeading(level: number) {
@@ -73,7 +83,7 @@ let components = {
   h5: createHeading(5),
   h6: createHeading(6),
   a: CustomLink,
-  code: Code,
+  pre: Code,
   Table,
   TableColumn,
   TableRow,

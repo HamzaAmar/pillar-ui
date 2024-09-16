@@ -29,14 +29,24 @@
 
 pre {
   overflow-x: auto;
-  &:has(.code--section) {
-    background-color: var(--bg-3);
-    border-radius: 0.75rem;
-    border: 1px solid var(--bg-6);
-    padding: 0.375rem 1rem;
-    font-size: 0.925rem;
-    max-height: 80vh;
-    max-width: 100%;
+  position: relative;
+  background-color: var(--bg-3);
+  border-radius: 0.75rem;
+  border: 1px solid var(--bg-6);
+  padding: 0.375rem 1rem;
+  font-size: 0.925rem;
+  max-height: 80vh;
+  max-width: 100%;
+  width: 100%;
+  &:hover .code--copy {
+    opacity: 1;
+  }
+
+  & .code--copy {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    opacity: 0;
   }
 
   .code--section {
