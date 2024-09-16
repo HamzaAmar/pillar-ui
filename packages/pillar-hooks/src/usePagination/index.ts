@@ -74,10 +74,10 @@ export function usePagination({ initial = 1, max, perView = 5 }: UsePaginationPr
     }
     // when the step is in this range [1, perView]
     else if (step >= 1 && step < perView) {
-      ranges = [...range(1, 5), '.', max]
+      ranges = [...range(1, perView), '.', max]
     }
     // when the step is in this range [max - perView + 1, max] example max = 10 perView = 5 [6, 10]
-    else if (step <= max && step > max - perView) {
+    else if (step <= max && step > max - perView + 1) {
       ranges = [1, '.', ...range(max - 4, max)]
     } else {
       ranges = [1, '.', ...range(step - 1, step + 1), '.', max]
