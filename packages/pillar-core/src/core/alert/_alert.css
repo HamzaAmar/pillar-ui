@@ -1,7 +1,6 @@
 .a-l {
   padding: 0.5em 1em;
   border: 1px solid transparent;
-  width: fit-content;
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -12,10 +11,6 @@
   font-size: var(--alert-size, 1rem);
 }
 
-.a-l_itm {
-  margin-inline-start: auto;
-}
-
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
   Alert Variants Section
@@ -23,12 +18,13 @@
 */
 
 .a-l_cnt {
+  --a-d: column;
   font-size: 0.925em;
-  &[data-inline='true'] {
-    gap: var(--s-xs);
-  }
-  &[data-inline='false'] {
-    flex-direction: column;
-    align-items: initial;
-  }
+  flex-direction: var(--a-d);
+  flex: 1;
+  gap: var(--s-2xs);
+}
+
+.al_in {
+  --a-d: row;
 }

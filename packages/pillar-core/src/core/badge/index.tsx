@@ -1,12 +1,12 @@
 import { ReactNode, forwardRef } from 'react'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { cx } from '../utils'
 
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { BadgeProps } from './badge.type'
 
 export const Badge = forwardRef((props, ref) => {
   let { variant = 'solid', color = 'pri', as: Tag = 'div', type = 'numeric', size, corner, className, ...rest } = props
-  const classNames = cx(`b-a u_${variant} u_center u_${color}`, {
+  const classNames = cx(`b-a shd u_${variant} u_center u_${color}`, {
     'b-a_dot': type === 'dot',
     [`u_f-${size}`]: !!size,
     [`u_rad-${corner}`]: !!corner,
@@ -24,7 +24,7 @@ export const Badge = forwardRef((props, ref) => {
 
   if (props.type === 'numeric') {
     const { number, max, showZero } = props
-    if (!number && !showZero) return null
+    if (!number && !showZero) return
     displayValue = max && number > max ? `${max}+` : `${number}`
   } else if (props.type === 'icon') {
     displayValue = props.icon

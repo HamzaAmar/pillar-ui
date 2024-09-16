@@ -39,6 +39,7 @@ export { Code } from './core/code'
 export { Blockquote, BlockquoteCite } from './core/blockquote'
 export { Tooltip, TooltipContent, TooltipTrigger } from './core/tooltip'
 export { CounterButton } from './core/counterButton'
+// export { MenuButton } from './core/menuButton'
 export { context, cx } from './core/utils'
 
 // ====================================== TYPES  ===========================================

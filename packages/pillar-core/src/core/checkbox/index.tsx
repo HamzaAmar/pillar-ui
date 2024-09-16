@@ -1,6 +1,6 @@
 import { cx } from '../utils'
 import { useComposedRefs } from '@pillar-ui/hooks'
-import { useEffect, useRef, forwardRef } from 'react'
+import { forwardRef } from 'react'
 
 import type { CheckboxProps } from './checkbox.type'
 import { Check, Minus } from '../icons'
@@ -11,26 +11,20 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forw
   let {
     name,
     label,
-    icon = <Check {...ICON_PROPS} />,
     size,
     color,
     showLabel,
     isIndeterminate = false,
+    icon = isIndeterminate ? <Minus {...ICON_PROPS} /> : <Check {...ICON_PROPS} />,
     ...rest
   } = props
 
-  const checkboxRef = useRef<HTMLInputElement>(null)
-  icon = isIndeterminate ? <Minus {...ICON_PROPS} /> : icon
-
-  useEffect(() => {
-    if (checkboxRef.current) {
-      if (isIndeterminate) {
-        checkboxRef.current.indeterminate = Boolean(isIndeterminate)
-      }
+  const ref = useComposedRefs(forwardedRef, (element: HTMLInputElement | null) => {
+    if (element && isIndeterminate) {
+      element.indeterminate = !!isIndeterminate
     }
-  }, [isIndeterminate])
+  })
 
-  const ref = useComposedRefs(forwardedRef, checkboxRef)
   const classNamesRoot = cx('c-h_cnt', { [`u_f-${size}`]: !!size, [`u_${color}`]: !!color })
 
   return (

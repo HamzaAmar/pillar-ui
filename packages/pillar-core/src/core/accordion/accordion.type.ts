@@ -28,7 +28,7 @@ export interface UseAccordionReturns {
   state: Value | Value[]
   setState: Dispatch<SetStateAction<Value | Value[]>>
   toggleAccordion: (currentIndex: Value) => void
-  isItemOpen: (value: Value) => boolean
+  isOpen: (value: Value) => boolean
 }
 
 export interface AccordionContextProps extends Partial<UseAccordionReturns> {

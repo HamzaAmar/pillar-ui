@@ -1,7 +1,8 @@
 input,
 button,
 textarea,
-select {
+select,
+button {
   font: inherit;
   appearance: none;
   border: none;
@@ -18,10 +19,6 @@ input[type='number'] {
   }
 }
 
-button {
-  user-select: none;
-}
-
 button,
 a {
   cursor: pointer;
@@ -29,4 +26,23 @@ a {
   &:focus-visible {
     outline: 2px dashed var(--pri-9);
   }
+}
+
+.shd,
+code {
+  --f: fit-content;
+  user-select: none;
+  width: var(--sh-s, var(--f));
+  height: var(--sh-s, var(--f));
+  border: 1px solid transparent;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.125em 0.25em;
+  /* line-height: 1; */
+  /* white-space: nowrap; */
+}
+
+code {
+  background-color: var(--bg-6);
+  border-radius: 0.25rem;
 }

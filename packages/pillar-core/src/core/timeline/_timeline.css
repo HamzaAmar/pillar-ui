@@ -4,7 +4,7 @@
 }
 
 .t-i_line {
-  border-inline-start: var(--c-9) 0.15em var(--timeline-variant);
+  border-inline-start: var(--c-9) 0.15em var(--ti-v);
   width: 0.15em;
 }
 
@@ -30,11 +30,11 @@ Variant Section Style Start
 */
 
 .t-i_itm-solid {
-  --timeline-variant: solid;
+  --ti-v: solid;
 }
 .t-i_itm-dotted {
-  --timeline-variant: dotted;
+  --ti-v: dotted;
 }
 .t-i_itm-dashed {
-  --timeline-variant: dashed;
+  --ti-v: dashed;
 }

@@ -17,19 +17,18 @@ export const StepperStep = (props: StepProps) => {
     icon,
     corner = context?.corner ?? 'full',
     size = context?.size ?? 'md',
-    setActive = context!.setActive,
+    setActive = context?.setActive,
   } = props
 
   const id = useId()
   const labelledbyID = `label-${id}`
   const describedbyID = `description-${id}`
 
-  const content = icon ?? step
   return (
     <Flex data-state={state} items="center" className={`s-t_step step__${size}`}>
       <button
         type="button"
-        onClick={() => setActive(step!)}
+        onClick={() => setActive?.(step!)}
         className={`s-t_btn u_rad-${corner} u_center u_f-medium`}
         aria-labelledby={labelledbyID}
         aria-describedby={describedbyID}
@@ -39,7 +38,7 @@ export const StepperStep = (props: StepProps) => {
             <Check />
           </div>
         ) : (
-          content
+          (icon ?? step)
         )}
       </button>
       <div className="s-t_cnt">
@@ -55,25 +54,37 @@ export const StepperStep = (props: StepProps) => {
 }
 
 export const Stepper = ({ children, color = 'bg', active = 0, completeComponent, ...rest }: StepperProps) => {
-  let _content: ReactNode[] = []
+  // let _content: ReactNode[] = []
+  // // Rename Index to step to reduce code at createElement
+  // const _children = Children.map(children, (child, step) => {
+  //   if (!isValidElement(child)) return child
+  //   const state = active === step ? 'current' : active > step ? 'complete' : 'inactive'
+  //   const { children, ...rest } = child.props
+  //   _content.push(children)
+  //   return createElement(child.type, { ...rest, state, step })
+  // })
+  // const content = _content[active] ?? completeComponent
 
-  const _children = Children.map(children, (child, index) => {
-    if (isValidElement(child)) {
-      const state = active === index ? 'current' : active > index ? 'complete' : 'inactive'
+  const _content: ReactNode[] = []
 
-      const { children, ...props } = child.props
-      _content.push(children)
-      return createElement(child.type, { ...props, state, step: index })
-    }
-    return child
+  const content = Children.map(children, (child, step) => {
+    if (!isValidElement(child)) return child
+
+    _content.push(child.props.children)
+
+    return createElement(child.type, {
+      ...child.props,
+      state: active === step ? 'current' : active > step ? 'complete' : 'inactive',
+      step,
+    })
   })
 
-  const content = _content[active] ?? completeComponent
+  const activeContent = _content[active] ?? completeComponent
 
   return (
     <div className="s-t_cnt l_flow">
       <div className={`s-t u_${color} u_between`}>
-        <StepperProvider {...rest}> {_children}</StepperProvider>
+        <StepperProvider {...rest}> {activeContent}</StepperProvider>
       </div>
       <div>{content}</div>
     </div>

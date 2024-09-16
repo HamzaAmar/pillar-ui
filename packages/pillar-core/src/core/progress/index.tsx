@@ -7,6 +7,8 @@ import type {
   ProgressBarStackProps,
 } from './progress.type'
 
+const circle = { cx: 50, cy: 50, r: 45 }
+
 export const ProgressCircle = ({
   size = 'md',
   min = 0,
@@ -26,15 +28,8 @@ export const ProgressCircle = ({
   return (
     <div className={`pr-c u_center u_f-${size} u_${color}`} {...rest}>
       <svg className="pr-c_svg" viewBox="0 0 100 100">
-        <circle className="pr-c_background" cx="50" cy="50" r="45" />
-        <circle
-          className={`pr-c_bar`}
-          cx="50"
-          cy="50"
-          r="45"
-          strokeDasharray={circumference}
-          strokeDashoffset={dashOffset}
-        />
+        <circle className="pr-c_background" {...circle} />
+        <circle className={`pr-c_bar`} {...circle} strokeDasharray={circumference} strokeDashoffset={dashOffset} />
         <text fill="black" className="pr-c_txt" x="50" y="50">
           {_value}%
         </text>
@@ -82,11 +77,9 @@ export const ProgressBarStackItem = ({ color = 'pri', value }: ProgressBarStackI
 export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProps) => {
   // TODO: Check IF you pass String If it can make an error
   const _children = Children.map(children, (child) => {
-    if (!isValidElement(child)) {
-      return
-    }
-    const { children, ...rest } = child?.props
-    return { children, color: rest.color }
+    if (!isValidElement(child)) return
+    const { children, color } = child?.props
+    return { children, color }
   })
   return (
     <div>

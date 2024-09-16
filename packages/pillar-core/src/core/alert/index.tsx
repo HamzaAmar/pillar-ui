@@ -2,7 +2,6 @@ import { useControllableState } from '@pillar-ui/hooks'
 import { cx } from '../utils'
 import { forwardRef } from 'react'
 import { IconButton } from '../button'
-import { Flex } from '../flex'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { AlertProps } from './alert.type'
@@ -34,43 +33,28 @@ export const Alert = forwardRef(
     })
 
     const handleToggle = () => {
-      if (closable && onClose) {
-        onClose()
-      } else {
-        setVisible(!isVisible)
-      }
+      closable && onClose ? onClose() : setVisible(!isVisible)
     }
 
-    // Hide the component if isVisible is true
-    if (!isVisible) {
-      return null
-    }
+    if (!isVisible) return
 
-    // u_f is used to set the font size based on the size we size the component
-    const classNames = cx(`a-l u_${variant} u_${color}`, {
+    const classNames = cx(`a-l f-l u_gap-xs u_${variant} u_${color}`, {
       [`u_rad-${corner}`]: !!corner,
       [`u_f-${size}`]: !!size,
       [className!]: !!className,
     })
 
     return (
-      <Flex ref={forwardedRef} gap="xs" className={classNames} role="alert" {...rest}>
-        {icon && <span className="u_it-self u_w-fit">{icon}</span>}
-        <div data-inline={!!inline} className="a-l_cnt u_center">
+      <div ref={forwardedRef} className={classNames} role="alert" {...rest}>
+        {icon && <span className="u_w-fit">{icon}</span>}
+        <div className={cx(`a-l_cnt f-l`, { al_in: !!inline })}>
           {title && <div className="u_t-capitalize u_t-md u_f-medium">{title}</div>}
           {message && <span>{message}</span>}
         </div>
         {closable && (
-          <IconButton
-            className="a-l_itm"
-            size="2xs"
-            onClick={handleToggle}
-            icon={<Close />}
-            title="close title"
-            color={color}
-          />
+          <IconButton size="2xs" onClick={handleToggle} icon={<Close />} title="close alert" color={color} />
         )}
-      </Flex>
+      </div>
     )
   }
 ) as ForwardRefComponent<'div', AlertProps>

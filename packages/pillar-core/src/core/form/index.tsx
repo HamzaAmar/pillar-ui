@@ -41,10 +41,10 @@ function useField(props: any) {
     ...restProps
   } = props
 
-  const prefixInputElement = !!prefixInput && <span className="fi-p_cnt f-i-pre u_center">{prefixInput}</span>
-  const suffixInputElement = !!suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
+  const prefix = !!prefixInput && <span className="fi-p_cnt f-i-pre u_center">{prefixInput}</span>
+  const suffix = !!suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
 
-  const classNames = cx(`f-i_cnt f-i_cnt-${variant} u_${color}`, {
+  const cls = cx(`f-i_cnt f-i_cnt-${variant} u_${color}`, {
     [`u_t-${transform}`]: !!transform,
     'f-i_cnt-fluid': !!fluid,
     [`u_f-${size}`]: corner,
@@ -52,9 +52,9 @@ function useField(props: any) {
   })
   const isError = hasError || isInvalid
 
-  const fieldProps = { ...ctx, ...restProps, 'aria-invalid': isError, 'aria-describedby': describedby }
+  const field = { ...ctx, ...restProps, 'aria-invalid': isError, 'aria-describedby': describedby }
 
-  return { classNames, fieldProps, prefixInputElement, suffixInputElement }
+  return { cls, field, prefix, suffix }
 }
 
 const handleStep =
@@ -81,13 +81,13 @@ function InputNumberButton({ onClick, title, direction = 'top' }: InputNumberBut
 */
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, forwardedRef) => {
-  const { classNames, prefixInputElement, suffixInputElement, fieldProps } = useField(props)
+  const { cls, prefix, suffix, field } = useField(props)
 
   return (
-    <div className={classNames}>
-      {prefixInputElement}
-      <textarea ref={forwardedRef} {...fieldProps} className="f-i"></textarea>
-      {suffixInputElement}
+    <div className={cls}>
+      {prefix}
+      <textarea ref={forwardedRef} {...field} className="f-i"></textarea>
+      {suffix}
     </div>
   )
 })
@@ -101,13 +101,13 @@ Textarea.displayName = 'Textarea'
 */
 
 export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
-  const { classNames, prefixInputElement, suffixInputElement, fieldProps } = useField(props)
+  const { cls, prefix, suffix, field } = useField(props)
 
   return (
-    <div className={classNames}>
-      {prefixInputElement}
-      <input ref={forwardedRef} type="text" {...fieldProps} className="f-i" />
-      {suffixInputElement}
+    <div className={cls}>
+      {prefix}
+      <input ref={forwardedRef} type="text" {...field} className="f-i" />
+      {suffix}
     </div>
   )
 })
@@ -121,14 +121,14 @@ Input.displayName = 'Input'
 */
 
 export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
-  const { classNames, prefixInputElement, fieldProps } = useField(props)
+  const { cls, prefix, field } = useField(props)
   const inputRef = useRef<HTMLInputElement>(null)
   const composedRef = useComposedRefs(inputRef, forwardedRef)
 
   return (
-    <div className={classNames}>
-      {prefixInputElement}
-      <input type="number" ref={composedRef} {...fieldProps} className="f-i" />
+    <div className={cls}>
+      {prefix}
+      <input type="number" ref={composedRef} {...field} className="f-i" />
       <div className="fi-n_cnt">
         <InputNumberButton onClick={handleStep(inputRef, 'stepUp')} title="Increase Value" />
         <InputNumberButton onClick={handleStep(inputRef, 'stepDown')} direction="bottom" title="Decrease Value" />
@@ -147,20 +147,20 @@ InputNumber.displayName = 'InputNumber'
 
 export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((props, forwardedRef) => {
   const { visibleIcon = <Eye width="16" />, hiddenIcon = <EyeOff width="16" />, ...restProps } = props
-  const { classNames, prefixInputElement, fieldProps } = useField(restProps)
-  const { booleanValue: showPassword, setToggle } = useBooleanState(false)
+  const { cls, prefix, field } = useField(restProps)
+  const { value, toggle } = useBooleanState(false)
   return (
-    <div className={classNames}>
-      {prefixInputElement}
-      <input type={showPassword ? 'text' : 'password'} ref={forwardedRef} {...fieldProps} className="f-i" />
+    <div className={cls}>
+      {prefix}
+      <input type={value ? 'text' : 'password'} ref={forwardedRef} {...field} className="f-i" />
 
       <button
-        aria-label={`${showPassword ? 'Hide' : 'Show '} Password`}
+        aria-label={`${value ? 'Hide' : 'Show '} Password`}
         type="button"
-        onClick={setToggle}
+        onClick={toggle}
         className="input--suf-content fi-p-btn u_center"
       >
-        {showPassword ? hiddenIcon : visibleIcon}
+        {value ? hiddenIcon : visibleIcon}
       </button>
     </div>
   )
@@ -175,7 +175,7 @@ InputPassword.displayName = 'InputPassword'
 */
 
 export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props, forwardedRef) => {
-  const { classNames, prefixInputElement, suffixInputElement, fieldProps } = useField(props)
+  const { cls, prefix, suffix, field } = useField(props)
 
   const inputRef = useRef<HTMLInputElement>(null)
   const mergedRef = useComposedRefs(inputRef, forwardedRef)
@@ -186,11 +186,11 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
   }
 
   return (
-    <div className={classNames}>
-      {prefixInputElement}
-      <input type="search" ref={mergedRef} {...fieldProps} className="f-i fi-s" />
+    <div className={cls}>
+      {prefix}
+      <input type="search" ref={mergedRef} {...field} className="f-i fi-s" />
       <Flex as="span" items="center" className="fi-s_suf">
-        {suffixInputElement}
+        {suffix}
         <Close onClick={handleInputClick} className="fi-s_icn" transform="translate(-8,0)" />
       </Flex>
     </div>
@@ -207,12 +207,12 @@ InputSearch.displayName = 'InputSearch'
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forwardedRef) => {
   const { children, ...restProps } = props
-  const { classNames, fieldProps } = useField(restProps)
+  const { cls, field } = useField(restProps)
 
   return (
-    <div className={classNames}>
-      <select ref={forwardedRef} {...fieldProps} className="f-i fi-se">
-        {children}{' '}
+    <div className={cls}>
+      <select ref={forwardedRef} {...field} className="f-i fi-se">
+        {children}
       </select>
       <span className="fi-s_icn">
         <ChevronDown width={16} />
@@ -319,7 +319,7 @@ PinInput.displayName = 'PinInput'
 
 export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
   const { value, title = 'Select File', ...restProps } = props
-  const { classNames, fieldProps } = useField(restProps)
+  const { cls, field } = useField(restProps)
 
   const inputRef = useRef<HTMLInputElement>(null)
   const composedRef = useComposedRefs(inputRef, forwardedRef)
@@ -328,7 +328,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
   const hasValue = Array.isArray(_value) ? _value.length !== 0 : !!_value
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    if (fieldProps.multiple) {
+    if (field.multiple) {
       const files = Array.from<File>(e.target.files ?? [])
 
       let filesNames = `files (${files.length}) : `
@@ -342,8 +342,8 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
     setValue(e.target.files?.[0].name ?? '')
   }
   return (
-    <Grid grid="auto 1fr" className={classNames} onClick={() => inputRef.current?.click()}>
-      <input type="file" ref={composedRef} {...fieldProps} className="u_sr" onChange={handleChange} />
+    <Grid grid="auto 1fr" className={cls} onClick={() => inputRef.current?.click()}>
+      <input type="file" ref={composedRef} {...field} className="u_sr" onChange={handleChange} />
       <Flex as="span" items="center" className="fi-f">
         {title}
       </Flex>
@@ -356,22 +356,31 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
 InputFile.displayName = 'InputFile'
 
 //
-export const FormController = (props: FormControllerProps) => {
-  const id = `form-${useId()}-field`
-  const { children, label, hideLabel, error, className, hint, ...rest } = props
-  const messageID = `${id}-message`
+export const FormController = ({
+  children,
+  label,
+  hideLabel,
+  error,
+  className,
+  hint,
+  ...rest
+}: FormControllerProps) => {
+  const id = `field-${useId()}`
+  const messageID = `${id}-msg`
   const hintID = `${id}-hint`
   const hasError = !!error
 
-  let describedby = ''
-  if (hasError) describedby += ` ${messageID}`
-  if (!!hint) describedby += ` ${hintID}`
-  const ariaDescribedby = describedby ? describedby.trim() : ''
+  // let describedby = ''
+  // if (hasError) describedby += ` ${messageID}`
+  // if (!!hint) describedby += ` ${hintID}`
+  // describedby = describedby ? describedby.trim() : ''
+
+  const describedby = [hasError && `${id}-msg`, hint && `${id}-hint`].filter(Boolean).join(' ') || ''
 
   const values = {
     ...rest,
     id,
-    describedby: ariaDescribedby,
+    describedby,
     hasError,
   }
 
@@ -386,7 +395,7 @@ export const FormController = (props: FormControllerProps) => {
         {children}
         {error && (
           <div className="f-c_err u_center" id={messageID} role="alert">
-            <span className="f-c_icn">{<Close type="circle" width="16" />}</span>
+            <span className="f-c_icn u_w-fit">{<Close type="circle" width="16" />}</span>
             <span> {error}</span>
           </div>
         )}

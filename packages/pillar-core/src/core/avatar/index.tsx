@@ -1,8 +1,9 @@
 import { Children, forwardRef, useState } from 'react'
-import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
 import { cx, context } from '../utils'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { User } from '../icons'
+
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
+import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './avatar.type'
 
 const [AvatarProvider, useAvatarContext] = context<AvatarGroupContextProps>({ name: 'Avatar' })
 
@@ -31,21 +32,20 @@ export const AvatarGroup = forwardRef(
   ) => {
     const childCount = Children.count(children)
 
-    const restCount = limit && limit < childCount ? childCount - limit : null
-
-    const maxCount = limit ? Math.min(limit, childCount) : childCount
+    const restCount = limit ? Math.max(0, childCount - limit) : 0
+    const length = childCount - restCount
 
     const contextProps = { color, corner, size, animate, variant, fallback }
 
     return (
       <Tag ref={forwardRef} className={`av-g av-g av-g-${layout}`} {...rest}>
         <AvatarProvider {...contextProps}>
-          {Array.from(new Array(maxCount)).map((_, index) => {
-            return Children.toArray(children)[index]
-          })}
+          {Array.from({ length }, (_, index) => Children.toArray(children)[index])}
         </AvatarProvider>
 
-        {restCount && <Avatar {...contextProps} fallback={<div className="u_f-sm u_f-medium">{restCount}+</div>} />}
+        {restCount ? (
+          <Avatar {...contextProps} fallback={<div className="u_f-sm u_f-medium">{restCount}+</div>} />
+        ) : null}
       </Tag>
     )
   }
@@ -78,9 +78,17 @@ export const Avatar = forwardRef((props, forwardRef) => {
 
   const [isError, setIsError] = useState(!image)
 
+  const classNames = cx(`a-v a-v-${variant} u_${color} u_s-equal u_center`, {
+    [`u_${animate}`]: !!animate,
+    [`u_f-${size}`]: !!size,
+    [`u_rad-${corner}`]: !!corner,
+    [className!]: !!className,
+  })
+
   const content = isError ? (
     <span className="u_center">{fallback}</span>
   ) : (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       className="a-v_img"
       ref={(node) => {
@@ -94,13 +102,6 @@ export const Avatar = forwardRef((props, forwardRef) => {
       alt={title}
     />
   )
-
-  const classNames = cx(`a-v a-v-${variant} u_${color} u_s-equal u_center`, {
-    [`u_${animate}`]: !!animate,
-    [`u_f-${size}`]: !!size,
-    [`u_rad-${corner}`]: !!corner,
-    [className!]: !!className,
-  })
 
   return (
     <Tag ref={forwardRef} className={classNames} {...rest}>

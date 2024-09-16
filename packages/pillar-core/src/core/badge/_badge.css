@@ -1,13 +1,8 @@
 .b-a {
-  --ba-s: 1.75em;
   --fx: inline-flex;
-  min-width: var(--ba-s);
-  height: var(--ba-s);
-  font-weight: 500;
-  text-decoration: none;
+  --sh-s: 1.75em;
   padding: 0.125em;
-  line-height: 1;
-  border: 1px solid transparent;
+  min-width: var(--sh-s);
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -23,7 +18,7 @@
 }
 
 .b-a_dot {
-  --ba-s: 0.5em;
+  --sh-s: 0.5em;
 }
 
 .b-a_cnt {

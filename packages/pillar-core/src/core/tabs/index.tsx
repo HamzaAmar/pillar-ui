@@ -1,8 +1,7 @@
 import { forwardRef, useId, useState } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProps, TabPanelsProps } from './tabs.type'
-import { Flex } from '../flex'
-import { context } from '../utils'
+import { context, cx } from '../utils'
 
 /*
 ===============================================================================================
@@ -14,19 +13,16 @@ const [TabsProvider, useTabsContext] = context<TabsProviderProps>({ name: 'Tabs'
 
 export const TabList = forwardRef(({ children, ...rest }, ref) => {
   const { direction } = useTabsContext() ?? {}
-  const flexDirection = direction === 'horizontal' ? ({ direction: 'column' } as const) : {}
   return (
-    <Flex
+    <div
       role="tablist"
-      {...flexDirection}
       aria-orientation={direction}
-      gap="xs"
-      className="t_ab_lst"
+      className={cx('t_ab_lst f-l u_gap-xs', { ['l_fl-column']: direction !== 'vertical' })}
       ref={ref}
       {...rest}
     >
       {children}
-    </Flex>
+    </div>
   )
 }) as ForwardRefComponent<'div', TabListProps>
 TabList.displayName = 'TabList'
@@ -38,17 +34,16 @@ TabList.displayName = 'TabList'
 */
 
 export const Tab = forwardRef(({ title, value, ...rest }, ref) => {
-  const context = useTabsContext()
-  const id = `${context?.id}-panel`
+  const { id, handleSelect, selected, variant, corner } = useTabsContext() ?? {}
 
   return (
     <button
-      onClick={() => context?.handleSelect(value)}
+      onClick={() => handleSelect?.(value)}
       type="button"
-      className={`t_ab t_ab-${context?.variant} u_rad-${context?.corner}`}
+      className={`t_ab t_ab-${variant} u_rad-${corner}`}
       role="tab"
-      aria-selected={context?.selected === value}
-      aria-controls={id}
+      aria-selected={selected === value}
+      aria-controls={`${id}-panel`}
       ref={ref}
       {...rest}
     >
@@ -66,11 +61,10 @@ Tab.displayName = 'Tab'
 
 export const TabPanel = forwardRef((props, ref) => {
   const { children, value, ...rest } = props
-  const context = useTabsContext()
-  const id = `${context?.id}-panel`
-  if (value !== context?.selected) return null
+  const { id, selected } = useTabsContext() ?? {}
+  if (value !== selected) return
   return (
-    <div id={id} role="tabpanel" ref={ref} {...rest}>
+    <div id={`${id}-panel`} role="tabpanel" ref={ref} {...rest}>
       {children}
     </div>
   )
@@ -134,13 +128,15 @@ export const Tabs = forwardRef(
       id,
     }
 
-    const flexDirection = direction === 'vertical' ? ({ direction: 'column' } as const) : {}
-
     return (
       <TabsProvider {...context}>
-        <Flex {...flexDirection} gap="sm" ref={ref} className={`u_${color} u_f-${size}`} {...rest}>
+        <div
+          ref={ref}
+          className={cx(`f-l u_gap-sm u_${color} u_f-${size}`, { ['l_fl-column']: direction === 'vertical' })}
+          {...rest}
+        >
           {children}
-        </Flex>
+        </div>
       </TabsProvider>
     )
   }

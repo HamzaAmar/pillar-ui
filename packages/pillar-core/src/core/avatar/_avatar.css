@@ -5,10 +5,11 @@
 
   /* overflow: hidden; */
   padding: 0;
-  border: 2px solid var(--bg-1);
-  background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(var(--bg-1), var(--bg-1));
-  background-clip: content-box, padding-box;
-  flex-shrink: 0;
+  /* border: 3px solid var(--bg-1); */
+  background:
+    linear-gradient(var(--av-b), var(--av-b)) content-box,
+    linear-gradient(var(--bg-1), var(--bg-1)) padding-box;
+  min-width: var(--eq-s);
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -31,18 +32,18 @@
 /* Avatar Variants */
 
 .a-v-soft {
-  --bg: var(--c-3);
+  --av-b: var(--c-3);
   color: var(--c-11);
 }
 
 .a-v-solid {
-  --bg: var(--c-8);
+  --av-b: var(--c-8);
   color: var(--c-12);
 }
 .a-v-outline,
 .a-v-dashed {
-  --bg: var(--c-3);
-  padding: 3px;
+  --av-b: var(--c-3);
+  padding: 2px;
   border: 2px solid var(--c-9);
 }
 

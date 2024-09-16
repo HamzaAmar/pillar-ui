@@ -2,7 +2,7 @@ import { forwardRef, useEffect, useId, useRef, useState } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { TooltipContentProps, TooltipContext, TooltipProps } from './tooltip.type'
 import { context } from '../utils'
-import { useComposedRefs } from '@pillar-ui/hooks'
+import { useBooleanState, useComposedRefs } from '@pillar-ui/hooks'
 import { Popover } from '../popover'
 
 /*
@@ -17,23 +17,21 @@ const [TooltipProvider, useTooltipContext] = context<TooltipContext>({
 })
 
 export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, size = 'sm', ...rest }, forwardedRef) => {
-  const [open, setOpen] = useState(false)
+  const { value, setFalse, setTrue, toggle, setValue } = useBooleanState()
   const triggerRef = useRef<HTMLButtonElement>(null)
   const id = useId()
 
-  function handleToggle() {
-    setOpen(!open)
+  const context = {
+    open: value,
+    setOpen: setValue,
+    handleOpen: setTrue,
+    handleClose: setFalse,
+    handleToggle: toggle,
+    triggerRef,
+    id,
+    delay,
+    size,
   }
-
-  function handleClose() {
-    setOpen(false)
-  }
-
-  function handleOpen() {
-    setOpen(true)
-  }
-
-  const context = { open, setOpen, handleOpen, handleClose, handleToggle, triggerRef, id, delay, size }
   return (
     <TooltipProvider {...context}>
       <div role="tooltip" ref={forwardedRef} {...rest}>
@@ -54,45 +52,36 @@ Tooltip.displayName = 'TooltipRoot'
 type TooltipType = ForwardRefComponent<'button', TooltipProps>
 
 export const TooltipTrigger = forwardRef(({ children, as: Tag = 'button', ...rest }, forwardedRef) => {
-  const ctx = useTooltipContext()
+  const { triggerRef, handleOpen = () => {}, delay, handleClose, id } = useTooltipContext() ?? {}
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null)
 
   // Hello can you please Help me cast the ctx!.triggerRef to be as the as type please
-  const ref = useComposedRefs(forwardedRef, ctx!.triggerRef)
+  const ref = useComposedRefs(forwardedRef, triggerRef)
 
-  useEffect(() => {
-    return () => {
-      if (timer) {
-        clearTimeout(timer)
-      }
+  useEffect(
+    () => () => {
+      timer && clearTimeout(timer)
+    },
+    [timer]
+  )
+
+  const handleTooltip = (action: 'open' | 'close') => () => {
+    timer && clearTimeout(timer)
+    if (action === 'open') {
+      const timeoutId = setTimeout(handleOpen, delay)
+      setTimer(timeoutId)
+    } else {
+      handleClose?.()
     }
-  }, [timer])
-
-  const showTooltip = () => {
-    if (timer) {
-      clearTimeout(timer)
-    }
-
-    const timeoutId = setTimeout(() => {
-      ctx!.handleOpen()
-    }, ctx!.delay)
-    setTimer(timeoutId)
-  }
-
-  const hideTooltip = () => {
-    if (timer) {
-      clearTimeout(timer)
-    }
-    ctx!.handleClose()
   }
 
   return (
     <Tag
-      onFocus={showTooltip}
-      onBlur={hideTooltip}
-      onMouseEnter={showTooltip}
-      onMouseLeave={hideTooltip}
-      aria-describedby={ctx!.id}
+      onFocus={handleTooltip('open')}
+      onBlur={handleTooltip('close')}
+      onMouseEnter={handleTooltip('open')}
+      onMouseLeave={handleTooltip('close')}
+      aria-describedby={id}
       type="button"
       ref={ref}
       {...rest}

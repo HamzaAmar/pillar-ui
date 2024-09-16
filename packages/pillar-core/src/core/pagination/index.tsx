@@ -51,15 +51,15 @@ Item.displayName = 'PaginationItem'
 export const Pagination = (props: PaginationProps) => {
   const { count = 10, ...rest } = props
 
-  const { currentStep, range, goToNextStep, goToPreviousStep, jumpToStep, isFirst, isLast } = usePagination({
-    totalPages: count,
+  const { step, range, goToNext, goToPrevious, jumpTo, isFirst, isLast } = usePagination({
+    max: count,
   })
 
   return (
     <nav className={`p-a u_${rest.color}`} aria-label="Pagination">
       <PaginationProvider {...rest}>
         <ul className="p-a_lst">
-          <Item disabled={isFirst} onClick={goToPreviousStep} active={currentStep} number={currentStep - 1}>
+          <Item disabled={isFirst} onClick={goToPrevious} active={step} number={step - 1}>
             <ChevronDown width="20" direction="left" />
           </Item>
           {range.map((item, index) =>
@@ -68,12 +68,13 @@ export const Pagination = (props: PaginationProps) => {
                 <DotsHorizontal width={16} />
               </li>
             ) : (
-              <Item key={index} active={currentStep} onClick={() => jumpToStep(item)} number={item}>
+              <Item key={index} active={step} onClick={() => jumpTo(item)} number={item}>
                 {item}
               </Item>
             )
           )}
-          <Item disabled={isLast} onClick={goToNextStep} active={currentStep} number={currentStep + 1}>
+
+          <Item disabled={isLast} onClick={goToNext} active={step} number={step + 1}>
             <ChevronDown width="20" direction="right" />
           </Item>
         </ul>

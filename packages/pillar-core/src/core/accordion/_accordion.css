@@ -8,6 +8,7 @@
   font-size: var(--font-size, var(--acn-size, 1em));
   & svg {
     width: 1em;
+    stroke: currentColor;
   }
 }
 
@@ -66,7 +67,6 @@
 .a-c_btn {
   width: 100%;
   text-align: start;
-  background: transparent;
   padding: 0.5em;
   color: currentColor;
   transform: none;

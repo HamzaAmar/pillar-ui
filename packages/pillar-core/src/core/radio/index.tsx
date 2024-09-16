@@ -1,6 +1,5 @@
 import { useId } from 'react'
 import type { CustomRadioProps, RadioContextProps, RadioGroupProps, RadioProps } from './radio.type'
-import { Flex } from '../flex'
 import { cx, context } from '../utils'
 
 /*
@@ -15,7 +14,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
   const provider = useRadioContext() ?? {}
   const {
     label,
-    id,
+    id = label,
     color = provider?.color ?? 'pri',
     size = provider?.size ?? 'md',
     name = provider?.name,
@@ -26,20 +25,16 @@ export const CustomRadio = (props: CustomRadioProps) => {
     ...rest
   } = props
 
-  const idOrLabel = id || label
-
-  const labelDirection = direction === 'column' ? { direction: 'column' as 'column' } : {}
-
-  // const radioClassName = cx(`rc u_circle`)
+  const classnames = cx(`f-l u_gap-xs u_it-center r-a_c u_${color}`, { [`l_fl-${direction}`]: !!direction })
   return (
-    <Flex as="label" className={`r-a_c u_${color}`} htmlFor={idOrLabel} {...labelDirection} gap="xs" items="center">
-      <input type="radio" name={name} className="r-a" id={idOrLabel} {...rest} />
+    <label className={classnames} htmlFor={id}>
+      <input type="radio" name={name} className="r-a" id={id} {...rest} />
       <span className={`rc_c ${className}`}>
         {children}
         {/* <CircleCheck className="rc_i" width={20} /> */}
       </span>
       <span className={cx(`r-a_la`, { u_sr: !showLabel })}>{label}</span>
-    </Flex>
+    </label>
   )
 }
 
@@ -52,15 +47,17 @@ export const CustomRadio = (props: CustomRadioProps) => {
 export const RadioGroup = ({ direction = 'column', children, label, showLabel, id, ...rest }: RadioGroupProps) => {
   /*TODO: ADD ERROR ACCESSIBILITY  */
 
+  const classnames = cx(`f-g f-l l_fl-wrap u_gap-sm u_it-start`, { [`l_fl-${direction}`]: !!direction })
+
   return (
     <fieldset role="radiogroup" className="ra-g">
-      <legend className={cx('form-group--legend', { u_sr: !showLabel })}>{label}</legend>
+      <legend className={cx('f-g_legend', { u_sr: !showLabel })}>{label}</legend>
 
       {/* TODO: ADD DEFAULT  TO RADIO GROUP  */}
 
-      <Flex wrap gap="sm" className="form-group" items="start" direction={direction}>
+      <div className={classnames}>
         <RadioProvider {...rest}>{children}</RadioProvider>
-      </Flex>
+      </div>
     </fieldset>
   )
 }
@@ -73,25 +70,24 @@ export const RadioGroup = ({ direction = 'column', children, label, showLabel, i
 
 export const Radio = (props: RadioProps) => {
   const ctx = useRadioContext()
+  const fallbackId = useId()
+
   const {
     label,
-    id,
+    id = fallbackId,
     color = ctx?.color ?? 'pri',
     size = ctx?.size ?? 'md',
     name = ctx?.name,
     variant = 'solid',
     ...rest
   } = props
-  const fallbackId = useId()
-
-  const idOrLabel = id || fallbackId
 
   return (
-    <Flex inline gap="xs" as="label" className={`r-a_cnt u_f-${size} u_${color}`} htmlFor={idOrLabel}>
-      <input type="radio" name={name} className="r-a u_sr" id={idOrLabel} {...rest} />
+    <label className={`l_fl-inline u_gap-xs r-a_cnt u_f-${size} u_${color}`} htmlFor={id}>
+      <input type="radio" name={name} className="r-a u_sr" id={id} {...rest} />
       <span className={`rc rc-${variant} u_s-equal`} />
       <span className="r-a_lbl">{label}</span>
-    </Flex>
+    </label>
   )
 }
 

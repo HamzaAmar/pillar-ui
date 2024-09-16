@@ -4,8 +4,8 @@ import type { KbdProps } from './kbd.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 
 export const Kbd = forwardRef(
-  ({ title, variant = 'solid', color = 'pri', size, corner, className, transform, ...rest }, ref) => {
-    const classNames = cx(`k-d u_${variant} u_${color}`, {
+  ({ title, variant = 'soft', color = 'bg', size, corner, className, transform, ...rest }, ref) => {
+    const classNames = cx(`k-d shd u_${variant} u_${color}`, {
       [`u_t-${transform}`]: !!transform,
       [`u_f-${size}`]: !!size,
       [`u_rad-${corner}`]: !!corner,

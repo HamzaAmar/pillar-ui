@@ -31,7 +31,7 @@ export const Button = forwardRef(
     },
     forwardedRef
   ) => {
-    const classNames = cx(`b-u u_${variant} u_${color} u_center`, {
+    const classNames = cx(`b-u shd u_${variant} u_${color} u_center`, {
       'b-u-fluid': !!fluid,
       [`u_t-${transform}`]: !!transform,
       [`u_f-${size}`]: !!size,
@@ -100,7 +100,7 @@ IconButton.displayName = 'IconButton'
 export const ButtonGroup = forwardRef(
   (
     {
-      icon,
+      children,
       title,
       corner = 'sharp',
       color = 'pri',
@@ -120,12 +120,12 @@ export const ButtonGroup = forwardRef(
 
     return (
       <Tag role="group" className={classNames} ref={forwardedRef} {...rest}>
-        {icon}
+        {children}
       </Tag>
     )
   }
 ) as ForwardRefComponent<'div', ButtonGroupProps>
 
-ButtonGroup.displayName = 'IconButton'
+ButtonGroup.displayName = 'ButtonGroup'
 
 export type { ButtonProps, IconButtonProps } from './button.type'

@@ -1,5 +1,6 @@
 import { Children, cloneElement, forwardRef, isValidElement, useId, useState } from 'react'
 import { cx, context } from '../utils'
+import { ChevronDown } from '../icons'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type {
@@ -11,7 +12,6 @@ import type {
   AccordionProps,
   Value,
 } from './accordion.type'
-import { ChevronDown } from '../icons'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -20,23 +20,31 @@ import { ChevronDown } from '../icons'
 */
 
 function useAccordion({ type, collapsible }: AccordionProps) {
-  const [activeItems, setActiveItems] = useState<Value | Value[]>(type === 'multiple' ? [] : -1)
-  const isItemOpen = (value: Value) =>
-    Array.isArray(activeItems) ? activeItems.includes(value) : activeItems === value
+  const [active, setActive] = useState<Value | Value[]>(type === 'multiple' ? [] : -1)
+  const isOpen = (value: Value) => (Array.isArray(active) ? active.includes(value) : active === value)
 
   function toggleAccordion(currentIndex: Value) {
-    const isOpen = isItemOpen(currentIndex)
+    const open = isOpen(currentIndex)
 
-    if (isOpen && !collapsible) {
-      if (Array.isArray(activeItems) && activeItems.length === 1) return
-      if (activeItems === currentIndex) return
+    if (open && !collapsible) {
+      if (Array.isArray(active) && active.length === 1) return
+      if (active === currentIndex) return
     }
-    Array.isArray(activeItems)
-      ? setActiveItems(isOpen ? activeItems.filter((v) => v !== currentIndex) : [...activeItems, currentIndex])
-      : setActiveItems((val) => (currentIndex === val ? -1 : currentIndex))
+    Array.isArray(active)
+      ? setActive(open ? active.filter((v) => v !== currentIndex) : [...active, currentIndex])
+      : setActive((val) => (currentIndex === val ? -1 : currentIndex))
   }
-  return { activeItems, setActiveItems, toggleAccordion, isItemOpen }
+  return { active, setActive, toggleAccordion, isOpen }
 }
+
+const [AccordionItemProvider, useAccordionItemContext] = context<AccordionItemContextProps>({
+  name: 'AccordionItem',
+  required: true,
+})
+const [AccordionProvider, useAccordionContext] = context<AccordionContextProps>({
+  name: 'Accordion',
+  required: true,
+})
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -70,11 +78,9 @@ export const Accordion = forwardRef((props, forwardedRef) => {
   return (
     <div ref={forwardedRef} className={classNames} {...rest}>
       <AccordionProvider {...accordionContext}>
-        {Children.map(children, (child, index) => {
-          if (!isValidElement(child)) {
-            return
-          }
-          return cloneElement(child, { value: index } as any)
+        {/* I use the value instead of the index to make this smaller */}
+        {Children.map(children, (child, value) => {
+          return isValidElement(child) ? cloneElement(child, { value } as any) : null
         })}
       </AccordionProvider>
     </div>
@@ -87,18 +93,9 @@ export const Accordion = forwardRef((props, forwardedRef) => {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-const [AccordionItemProvider, useAccordionItemContext] = context<AccordionItemContextProps>({
-  name: 'AccordionItem',
-  required: true,
-})
-const [AccordionProvider, useAccordionContext] = context<AccordionContextProps>({
-  name: 'Accordion',
-  required: true,
-})
-
 export const AccordionItem = forwardRef(({ children, value, className, ...rest }, ref) => {
   const id = useId()
-  const itemContextValue = { id, value }
+  const ctx = { id, value }
   const { corner, variant } = useAccordionContext() ?? {}
   const classNames = cx(`a-c_itm u_${variant} `, {
     [`u_rad-${corner}`]: !!corner,
@@ -107,7 +104,7 @@ export const AccordionItem = forwardRef(({ children, value, className, ...rest }
 
   return (
     <div ref={ref} className={classNames} {...rest}>
-      <AccordionItemProvider {...itemContextValue}>{children}</AccordionItemProvider>
+      <AccordionItemProvider {...ctx}>{children}</AccordionItemProvider>
     </div>
   )
 }) as ForwardRefComponent<'div', AccordionItemProps>
@@ -122,13 +119,13 @@ AccordionItem.displayName = 'AccordionItem'
 
 export const AccordionButton = forwardRef((props, ref) => {
   const { value, id: idContext } = useAccordionItemContext() ?? {}
-  const { toggleAccordion, isItemOpen } = useAccordionContext() ?? {}
+  const { toggleAccordion, isOpen } = useAccordionContext() ?? {}
   const { children, id = idContext, icon = <ChevronDown width="1em" />, className, ...rest } = props
   const classNames = cx('a-c_btn u_between', { [className!]: !!className })
   return (
     <button
       type="button"
-      aria-expanded={isItemOpen?.(value!)}
+      aria-expanded={isOpen?.(value!)}
       aria-controls={id}
       className={classNames}
       onClick={() => toggleAccordion?.(value!)}
@@ -152,12 +149,12 @@ AccordionButton.displayName = 'AccordionButton'
 export const AccordionPanel = forwardRef((props, ref) => {
   const { children, className, ...rest } = props
   const { value } = useAccordionItemContext() ?? {}
-  const { isItemOpen, id } = useAccordionContext() ?? {}
+  const { isOpen, id } = useAccordionContext() ?? {}
 
   const _className = cx('a-c_pnl', { [className!]: !!className })
 
   return (
-    <div id={id} data-open={isItemOpen?.(value!)} className={_className} ref={ref} {...rest}>
+    <div id={id} data-open={isOpen?.(value!)} className={_className} ref={ref} {...rest}>
       {children}
     </div>
   )
