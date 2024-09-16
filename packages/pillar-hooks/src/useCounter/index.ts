@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { clamp } from '@pillar-ui/utils'
 
 /**
  * A custom React hook to manage a counter with increment, decrement, and reset functions.
@@ -42,19 +41,25 @@ import { clamp } from '@pillar-ui/utils'
  *   );
  * }
  */
-export function useCounter(options?: UseCounterProps) {
-  const { value = 0, min = -Infinity, max = Infinity, step = 1, goToMaxOnExceed = false } = options ?? {}
+const clamp = (value: number, [min, max]: [number, number]) => Math.min(max, Math.max(min, value))
+
+export function useCounter({
+  value = 0,
+  min = -Infinity,
+  max = Infinity,
+  step = 1,
+  goToMaxOnExceed = false,
+}: UseCounterProps) {
   const [minValue, maxValue] = [Math.min(min, max), Math.max(min, max)]
 
   const initialValue = clamp(value, [minValue, maxValue])
-
   const [count, setCount] = useState(initialValue)
 
   /**
    * Increment the counter value by a specified amount.
    * @param {number} [amount = 1] - The amount to increment the counter (default: 1).
    */
-  const increment = (amount: number = step) => {
+  const increment = (amount = step) => {
     setCount((x) => {
       const count = x + amount
       if (!goToMaxOnExceed && count > maxValue) return x
@@ -66,7 +71,7 @@ export function useCounter(options?: UseCounterProps) {
    * Decrement the counter value by a specified amount.
    * @param {number} [amount = 1] - The amount to decrement the counter (default: 1).
    */
-  const decrement = (amount: number = step) => {
+  const decrement = (amount = step) => {
     setCount((x) => {
       const count = x - amount
       if (!goToMaxOnExceed && count < min) return x

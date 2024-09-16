@@ -4,7 +4,11 @@ import { usePersistentCallback } from '../usePersistentCallback'
 export type TimeoutType = ReturnType<typeof setTimeout> | null
 type TimeoutHandler = () => void
 
-const validateParameters = (callback: TimeoutHandler | undefined, delay: number) => {
+export const useTimeout = (callback: TimeoutHandler, delay: number = 150) => {
+  const savedCallback = useRef<TimeoutHandler>()
+  const timerRef = useRef<TimeoutType>(null)
+  const persistedCallback = usePersistentCallback(callback)
+
   if (typeof callback !== 'function') {
     throw new Error(`useTimeout: expects its parameter to be a function, but it received a [ ${typeof callback}`)
   }
@@ -15,14 +19,6 @@ const validateParameters = (callback: TimeoutHandler | undefined, delay: number)
   if (isNaN(delay)) {
     throw new Error('useTimeout: delay parameter cannot be NaN.')
   }
-}
-
-export const useTimeout = (callback: TimeoutHandler, delay: number = 150) => {
-  const savedCallback = useRef<TimeoutHandler>()
-  const timerRef = useRef<TimeoutType>(null)
-  const persistedCallback = usePersistentCallback(callback)
-
-  validateParameters(persistedCallback, delay)
 
   const clearTimer = useCallback(() => {
     if (timerRef.current) {

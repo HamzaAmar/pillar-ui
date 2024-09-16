@@ -3,112 +3,76 @@ import { useCallback, useState } from 'react'
 /**
  * A custom React hook to manage a stepper component with multiple steps.
  *
- * @param {number} maxSteps - The maximum number of steps in the sequence.
- * @param {number} [initialStep=0] - The initial step in the sequence (default is 0).
+ * @param {number} max - The maximum number of steps in the sequence.
+ * @param {number} [initial=0] - The initial step in the sequence (default is 0).
  *
  * @returns {{
- *   currentStep: number,         // The current active step in the sequence.
- *   setCurrentStep: (step: number) => void, // A function to set the current step.
- *   goToNextStep: () => void,    // A function to go to the next step in the sequence.
- *   goToPreviousStep: () => void, // A function to go to the previous step in the sequence.
- *   jumpToStep: (step: number) => void, // A function to jump to a specified step in the sequence.
- *   jumpToLastStep: () => void,  // A function to jump to the last step in the sequence.
- *   jumpToFirstStep: () => void, // A function to jump to the first step in the sequence.
- *   isFirst: boolean,            // A boolean indicating if the current step is the first step.
- *   isLast: boolean              // A boolean indicating if the current step is the last step.
+ *   step: number,         // The current active step in the sequence.
+ *   setStep: (step: number) => void, // A function to set the step step.
+ *   goToNext: () => void,    // A function to go to the next step in the sequence.
+ *   goToPrevious: () => void, // A function to go to the previous step in the sequence.
+ *   jumpTo: (step: number) => void, // A function to jump to a specified step in the sequence.
+ *   goToLast: () => void,  // A function to jump to the last step in the sequence.
+ *   goToFirst: () => void, // A function to jump to the first step in the sequence.
+ *   isFirst: boolean,            // A boolean indicating if the step step is the first step.
+ *   isLast: boolean              // A boolean indicating if the step step is the last step.
  * }}
  *   An object containing stepper information and utility functions.
- *   - **currentStep**: The current active step in the sequence.
- *   - **setCurrentStep**: A function to set the current step.
- *   - **goToNextStep**: A function to go to the next step in the sequence.
- *   - **goToPreviousStep**: A function to go to the previous step in the sequence.
- *   - **jumpToStep**: A function to jump to a specified step in the sequence.
- *   - **jumpToLastStep**: A function to jump to the last step in the sequence.
- *   - **jumpToFirstStep**: A function to jump to the first step in the sequence.
- *   - **isFirst**: `true` if the current step is the first step, otherwise `false`.
- *   - **isLast**: `true` if the current step is the last step, otherwise `false`.
+ *   - **step**: The step active step in the sequence.
+ *   - **setStep**: A function to set the step step.
+ *   - **goToNext**: A function to go to the next step in the sequence.
+ *   - **goToPrevious**: A function to go to the previous step in the sequence.
+ *   - **jumpTo**: A function to jump to a specified step in the sequence.
+ *   - **goToLast**: A function to jump to the last step in the sequence.
+ *   - **goToFirst**: A function to jump to the first step in the sequence.
+ *   - **isFirst**: `true` if the step step is the first step, otherwise `false`.
+ *   - **isLast**: `true` if the step step is the last step, otherwise `false`.
  *
  * @example
  * // Example usage in a functional component:
  * function StepperComponent() {
  *   const totalSteps = 3;
- *   const { currentStep, goToNextStep, goToPreviousStep, jumpToStep, isFirst, isLast } = useStepper(totalSteps);
+ *   const { step, goToNext, goToPrevious, jumpTo, isFirst, isLast } = useStepper(totalSteps);
  *
  *   return (
  *     <div>
- *       <h1>Step {currentStep}</h1>
- *       <button onClick={goToPreviousStep} disabled={isFirst}>
+ *       <h1>Step {step}</h1>
+ *       <button onClick={goToPrevious} disabled={isFirst}>
  *         Previous
  *       </button>
- *       <button onClick={goToNextStep} disabled={isLast}>
+ *       <button onClick={goToNext} disabled={isLast}>
  *         Next
  *       </button>
- *       <button onClick={() => jumpToStep(1)}>Go to Step 1</button>
- *       <button onClick={() => jumpToStep(2)}>Go to Step 2</button>
- *       <button onClick={() => jumpToStep(3)}>Go to Step 3</button>
+ *       <button onClick={() => jumpTo(1)}>Go to Step 1</button>
+ *       <button onClick={() => jumpTo(2)}>Go to Step 2</button>
+ *       <button onClick={() => jumpTo(3)}>Go to Step 3</button>
  *     </div>
  *   );
  * }
  */
-export function useStepper(maxSteps: number, initialStep: number = 0) {
-  const [currentStep, setCurrentStep] = useState(initialStep)
+export function useStepper(max: number, initial: number = 0) {
+  const [step, setStep] = useState(initial)
 
-  const goToNextStep = useCallback(() => {
-    setCurrentStep((step) => Math.min(step + 1, maxSteps))
-  }, [maxSteps])
+  const goToNext = useCallback(() => setStep((step) => Math.min(step + 1, max)), [max])
 
-  /**
-   * Goes to the previous step in the sequence.
-   */
-  const goToPreviousStep = useCallback(() => {
-    setCurrentStep((step) => Math.max(step - 1, initialStep))
-  }, [initialStep])
+  const goToPrevious = useCallback(() => setStep((step) => Math.max(step - 1, initial)), [initial])
 
-  /**
-   * Jumps to the specified step in the sequence.
-   *
-   * @param {number} step - The step to jump to.
-   */
-  const jumpToStep = useCallback(
-    (step: number) => {
-      if (step <= initialStep) {
-        console.warn(
-          `Your current step (${currentStep}) is smaller than your intended step size (${step}). We will reset you to step ${initialStep}.`
-        )
-        setCurrentStep(initialStep)
-        return
-      }
-      if (step > maxSteps) {
-        console.warn(
-          `Your current step (${step}) is bigger than your intended maxSteps (${maxSteps}). We will send you to last step ${maxSteps}.`
-        )
-        setCurrentStep(maxSteps)
-        return
-      }
-      setCurrentStep(step)
-    },
-    [initialStep, maxSteps, currentStep]
-  )
+  const jumpTo = useCallback((step: number) => setStep(Math.min(Math.max(step, initial), max)), [initial, max])
 
-  const jumpToLastStep = useCallback(() => {
-    setCurrentStep(maxSteps)
-  }, [maxSteps])
+  const goToLast = useCallback(() => setStep(max), [max])
 
-  const jumpToFirstStep = useCallback(() => {
-    setCurrentStep(initialStep)
-  }, [initialStep])
+  const goToFirst = useCallback(() => setStep(initial), [initial])
 
-  const isFirst = currentStep === initialStep
-  const isLast = currentStep === maxSteps
+  const [isFirst, isLast] = [step === initial, step === max]
 
   return {
-    currentStep,
-    setCurrentStep,
-    goToNextStep,
-    goToPreviousStep,
-    jumpToStep,
-    jumpToLastStep,
-    jumpToFirstStep,
+    step,
+    setStep,
+    goToNext,
+    goToPrevious,
+    jumpTo,
+    goToLast,
+    goToFirst,
     isFirst,
     isLast,
   }

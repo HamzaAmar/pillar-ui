@@ -55,9 +55,6 @@
   "peerDependencies": {
     "react": "^18.0.0"
   },
-  "dependencies": {
-    "@pillar-ui/utils": "*"
-  },
   "devDependencies": {
     "@pillar-ui/eslint": "*",
     "@pillar-ui/tsconfig": "*",

@@ -1,16 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
 import { usePersistentCallback } from '../usePersistentCallback'
 
-const validateParameters = (interval: number) => {
-  if (interval < 0) {
-    console.error('useInterval: The interval should not be smaller than 0.')
-  }
-
-  if (isNaN(interval)) {
-    console.error('useInterval: interval parameter cannot be NaN.')
-  }
-}
-
 /**
  * A custom React hook to create and manage an interval.
  *
@@ -52,7 +42,13 @@ export function useInterval(callback: () => void, interval: number = 150) {
   const intervalRef = useRef<number>()
   const persistedCallback = usePersistentCallback(callback)
 
-  validateParameters(interval)
+  if (interval < 0) {
+    console.error('useInterval: The interval should not be smaller than 0.')
+  }
+
+  if (isNaN(interval)) {
+    console.error('useInterval: interval parameter cannot be NaN.')
+  }
 
   const start = useCallback(() => {
     window.clearInterval(intervalRef.current)
@@ -73,11 +69,7 @@ export function useInterval(callback: () => void, interval: number = 150) {
   }, [])
 
   const toggle = useCallback(() => {
-    if (active) {
-      stop()
-    } else {
-      start()
-    }
+    active ? stop() : start()
   }, [stop, start, active])
 
   return { start, stop, toggle, active }

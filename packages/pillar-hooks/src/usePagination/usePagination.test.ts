@@ -2,55 +2,55 @@ import { renderHook } from '@testing-library/react'
 import { usePagination } from '.'
 
 describe('usePagination Test useCase', () => {
-  test('returns correct range and currentStep when maxPerView > totalPages', () => {
-    const totalPages = 10
-    const currentPage = 1
-    const maxPerView = 15
+  test('returns correct range and step when perView > max', () => {
+    const max = 10
+    const initial = 1
+    const perView = 15
 
-    const { result } = renderHook(() => usePagination({ totalPages, currentPage, maxPerView }))
+    const { result } = renderHook(() => usePagination({ max, initial, perView }))
 
-    const { range, currentStep } = result.current
+    const { range, step } = result.current
 
     expect(range).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-    expect(currentStep).toBe(1)
+    expect(step).toBe(1)
   })
 
-  test('returns correct range and currentStep when currentStep < maxPerView', () => {
-    const totalPages = 10
-    const currentPage = 3
-    const maxPerView = 5
+  test('returns correct range and step when step < perView', () => {
+    const max = 10
+    const initial = 3
+    const perView = 5
 
-    const { result } = renderHook(() => usePagination({ totalPages, currentPage, maxPerView }))
+    const { result } = renderHook(() => usePagination({ max, initial, perView }))
 
-    const { range, currentStep } = result.current
+    const { range, step } = result.current
 
     expect(range).toStrictEqual([1, 2, 3, 4, 5, '.', 10])
-    expect(currentStep).toBe(3)
+    expect(step).toBe(3)
   })
 
-  test('returns correct range and currentStep when currentStep > totalPages - maxPerView', () => {
-    const totalPages = 10
-    const currentPage = 8
-    const maxPerView = 5
+  test('returns correct range and step when step > max - perView', () => {
+    const max = 10
+    const initial = 8
+    const perView = 5
 
-    const { result } = renderHook(() => usePagination({ totalPages, currentPage, maxPerView }))
+    const { result } = renderHook(() => usePagination({ max, initial, perView }))
 
-    const { range, currentStep } = result.current
+    const { range, step } = result.current
 
     expect(range).toStrictEqual([1, '.', 6, 7, 8, 9, 10])
-    expect(currentStep).toBe(8)
+    expect(step).toBe(8)
   })
 
-  test('returns correct range and currentStep for a general use case', () => {
-    const totalPages = 10
-    const currentPage = 5
-    const maxPerView = 5
+  test('returns correct range and step for a general use case', () => {
+    const max = 10
+    const initial = 5
+    const perView = 5
 
-    const { result } = renderHook(() => usePagination({ totalPages, currentPage, maxPerView }))
+    const { result } = renderHook(() => usePagination({ max, initial, perView }))
 
-    const { range, currentStep } = result.current
+    const { range, step } = result.current
 
     expect(range).toStrictEqual([1, '.', 4, 5, 6, '.', 10])
-    expect(currentStep).toBe(5)
+    expect(step).toBe(5)
   })
 })

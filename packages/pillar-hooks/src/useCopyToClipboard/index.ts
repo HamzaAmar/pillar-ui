@@ -33,10 +33,11 @@ type CopyFn = (text: string) => Promise<boolean>
  *   );
  * }
  */
+type Initial = [CopiedValue, boolean]
+const initial: Initial = [null, false]
 
 export function useCopyToClipboard(timeout: number = 300) {
-  const [text, setText] = useState<CopiedValue>(null)
-  const [copied, setCopied] = useState<boolean>(false)
+  const [text, setText] = useState<Initial>(initial)
 
   /**
    * The copy function.
@@ -45,33 +46,23 @@ export function useCopyToClipboard(timeout: number = 300) {
    * @returns {Promise<boolean>} - A promise indicating whether the copy operation was successful.
    */
   const copy: CopyFn = async (text) => {
-    if (!navigator?.clipboard) {
-      console.warn('Clipboard not supported')
-      return false
-    }
-
-    // Try to save to clipboard then save it in the state if worked
     try {
+      if (!navigator.clipboard) throw new Error('Clipboard not supported')
       await navigator.clipboard.writeText(text)
-      setText(text)
-      setCopied(true)
+      setText([text, true])
       return true
     } catch (error) {
       console.warn('Copy failed', error)
-      setText(null)
-      setCopied(false)
+      setText(initial)
       return false
     }
   }
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setText(null)
-      setCopied(false)
-    }, timeout)
+    const timeoutId = setTimeout(() => setText(initial), timeout)
 
     return () => clearTimeout(timeoutId)
-  }, [timeout, copied])
+  }, [timeout])
 
-  return { text, copy, copied }
+  return { text: text[0], copy, copied: text[1] }
 }

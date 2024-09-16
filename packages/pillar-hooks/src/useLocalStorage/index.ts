@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { isBrowser, isFunction } from '@pillar-ui/utils'
 
 export const storageService = {
   getItem: (key: string): string | null => {
@@ -77,13 +76,13 @@ export function useLocalStorage<T>({
   deserialize = JSON.parse,
 }: UseLocalStorageParams<T>) {
   const [storedValue, setStoredValue] = useState<T>(() => {
-    if (!isBrowser) return initialValue
+    if (typeof window !== 'undefined') return initialValue
 
     return (storageService.getItem(key) ?? initialValue) as T
   })
 
   const setValue = (value: T) => {
-    const valueToStore = isFunction(value) ? value(storedValue) : value
+    const valueToStore = typeof value === 'function' ? value(storedValue) : value
     const isSet = storageService.setItem(key, serialize(valueToStore))
     if (isSet) setStoredValue(valueToStore)
   }

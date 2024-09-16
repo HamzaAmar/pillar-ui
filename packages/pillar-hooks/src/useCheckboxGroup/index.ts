@@ -57,32 +57,47 @@ import { ChangeEvent, useState } from 'react'
  *   );
  * }
  */
-export function useCheckboxGroup(initialCheckedState: boolean[] = []) {
+// export function useCheckboxGroup(initialCheckedState: boolean[] = []) {
+//   const [checkedItems, setCheckedItems] = useState(initialCheckedState)
+
+//   const isAllChecked = checkedItems.every(Boolean)
+//   const isIndeterminate = !isAllChecked && checkedItems.some(Boolean)
+
+//   /**
+//    * Handles the toggle action for all items in the checkbox group.
+//    * @param {React.ChangeEvent<HTMLInputElement>} event - The event triggered by the toggle action.
+//    */
+
+//   const handleToggleAll = (event: ChangeEvent<HTMLInputElement>) => {
+//     const checkAll = new Array(checkedItems.length).fill(event.target.checked)
+//     setCheckedItems(checkAll)
+//   }
+
+//   /**
+//    * Handles the toggle action for a specific item in the checkbox group.
+//    * @param {number} currentIndex - The index of the item to toggle.
+//    */
+//   function handleToggleItem(currentIndex: number) {
+//     const updatedCheckedItems = checkedItems.map((isChecked, index) =>
+//       index === currentIndex ? !isChecked : isChecked
+//     )
+//     setCheckedItems(updatedCheckedItems)
+//   }
+
+//   return { checkedItems, setCheckedItems, isIndeterminate, isAllChecked, handleToggleAll, handleToggleItem }
+// }
+
+export const useCheckboxGroup = (initialCheckedState: boolean[] = []) => {
   const [checkedItems, setCheckedItems] = useState(initialCheckedState)
 
   const isAllChecked = checkedItems.every(Boolean)
-  const isIndeterminate = !isAllChecked && checkedItems.some(Boolean)
+  const isIndeterminate = checkedItems.some(Boolean) && !isAllChecked
 
-  /**
-   * Handles the toggle action for all items in the checkbox group.
-   * @param {React.ChangeEvent<HTMLInputElement>} event - The event triggered by the toggle action.
-   */
+  const handleToggleAll = (event: ChangeEvent<HTMLInputElement>) =>
+    setCheckedItems(new Array(checkedItems.length).fill(event.target.checked))
 
-  const handleToggleAll = (event: ChangeEvent<HTMLInputElement>) => {
-    const checkAll = new Array(checkedItems.length).fill(event.target.checked)
-    setCheckedItems(checkAll)
-  }
+  const handleToggleItem = (currentIndex: number) =>
+    setCheckedItems(checkedItems.map((checked, idx) => (idx === currentIndex ? !checked : checked)))
 
-  /**
-   * Handles the toggle action for a specific item in the checkbox group.
-   * @param {number} currentIndex - The index of the item to toggle.
-   */
-  function handleToggleItem(currentIndex: number) {
-    const updatedCheckedItems = checkedItems.map((isChecked, index) =>
-      index === currentIndex ? !isChecked : isChecked
-    )
-    setCheckedItems(updatedCheckedItems)
-  }
-
-  return { checkedItems, setCheckedItems, isIndeterminate, isAllChecked, handleToggleAll, handleToggleItem }
+  return { checkedItems, setCheckedItems, isAllChecked, isIndeterminate, handleToggleAll, handleToggleItem }
 }

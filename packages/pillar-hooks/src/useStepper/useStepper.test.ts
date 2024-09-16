@@ -6,7 +6,7 @@ describe('useStepper custom hook', () => {
   test('should initialize with the correct initial step', () => {
     const { result } = renderHook(() => useStepper(10, 1))
 
-    expect(result.current.currentStep).toBe(1)
+    expect(result.current.step).toBe(1)
     expect(result.current.isFirst).toBe(true)
     expect(result.current.isLast).toBe(false)
   })
@@ -15,10 +15,10 @@ describe('useStepper custom hook', () => {
     const { result } = renderHook(() => useStepper(10, 1))
 
     act(() => {
-      result.current.jumpToLastStep()
+      result.current.goToLast()
     })
 
-    expect(result.current.currentStep).toBe(10)
+    expect(result.current.step).toBe(10)
     expect(result.current.isFirst).toBe(false)
     expect(result.current.isLast).toBe(true)
   })
@@ -27,10 +27,10 @@ describe('useStepper custom hook', () => {
     const { result } = renderHook(() => useStepper(10, 5))
 
     act(() => {
-      result.current.jumpToFirstStep()
+      result.current.goToFirst()
     })
 
-    expect(result.current.currentStep).toBe(5)
+    expect(result.current.step).toBe(5)
     expect(result.current.isFirst).toBe(true)
     expect(result.current.isLast).toBe(false)
   })
@@ -39,10 +39,10 @@ describe('useStepper custom hook', () => {
     const { result } = renderHook(() => useStepper(10, 5))
 
     act(() => {
-      result.current.jumpToStep(7)
+      result.current.jumpTo(7)
     })
 
-    expect(result.current.currentStep).toBe(7)
+    expect(result.current.step).toBe(7)
     expect(result.current.isFirst).toBe(false)
     expect(result.current.isLast).toBe(false)
   })
@@ -51,20 +51,20 @@ describe('useStepper custom hook', () => {
     const { result } = renderHook(() => useStepper(3, 1))
 
     act(() => {
-      result.current.goToNextStep()
+      result.current.goToNext()
     })
 
-    expect(result.current.currentStep).toBe(2)
+    expect(result.current.step).toBe(2)
   })
 
   test('should go to the previous step', () => {
     const { result } = renderHook(() => useStepper(3, 2))
 
     act(() => {
-      result.current.goToPreviousStep()
+      result.current.goToPrevious()
     })
 
-    expect(result.current.currentStep).toBe(2)
+    expect(result.current.step).toBe(2)
     expect(result.current.isFirst).toBe(true)
     expect(result.current.isLast).toBe(false)
   })
@@ -72,38 +72,38 @@ describe('useStepper custom hook', () => {
   test('should set isFirst and isLast correctly', () => {
     const { result } = renderHook(() => useStepper(10, 2))
 
-    expect(result.current.currentStep).toBe(2)
+    expect(result.current.step).toBe(2)
     expect(result.current.isFirst).toBe(true)
     expect(result.current.isLast).toBe(false)
 
     act(() => {
-      result.current.goToPreviousStep()
+      result.current.goToPrevious()
     })
-    expect(result.current.currentStep).toBe(2)
+    expect(result.current.step).toBe(2)
     expect(result.current.isFirst).toBe(true)
     expect(result.current.isLast).toBe(false)
 
     act(() => {
-      result.current.goToNextStep()
+      result.current.goToNext()
     })
 
-    expect(result.current.currentStep).toBe(3)
+    expect(result.current.step).toBe(3)
     expect(result.current.isFirst).toBe(false)
     expect(result.current.isLast).toBe(false)
 
     act(() => {
-      result.current.jumpToFirstStep()
+      result.current.goToFirst()
     })
 
-    expect(result.current.currentStep).toBe(2)
+    expect(result.current.step).toBe(2)
     expect(result.current.isFirst).toBe(true)
     expect(result.current.isLast).toBe(false)
 
     act(() => {
-      result.current.jumpToLastStep()
+      result.current.goToLast()
     })
 
-    expect(result.current.currentStep).toBe(10)
+    expect(result.current.step).toBe(10)
     expect(result.current.isFirst).toBe(false)
     expect(result.current.isLast).toBe(true)
   })

@@ -40,18 +40,15 @@ export function useControllableState<T>({
   controlledValue,
   defaultValue,
 }: UseControllableStateParams<T>): [T, Dispatch<SetStateAction<T>>] {
-  const isControlled = controlledValue !== undefined
-  const isControlledRef = useRef(isControlled)
+  const isControlledRef = useRef(controlledValue !== undefined)
 
-  const [state, setState] = useState<T>(() => {
-    if (isControlledRef.current) {
-      return controlledValue as T
-    }
-    if (typeof defaultValue === 'function') {
-      return (defaultValue as () => T)()
-    }
-    return defaultValue as T
-  })
+  const [state, setState] = useState<T>(() =>
+    isControlledRef.current
+      ? (controlledValue as T)
+      : typeof defaultValue === 'function'
+        ? (defaultValue as () => T)()
+        : (defaultValue as T)
+  )
 
   /**
    * The setter function.
@@ -60,9 +57,7 @@ export function useControllableState<T>({
    * @returns {void}
    */
   const set: Dispatch<SetStateAction<T>> = useCallback((newValue) => {
-    if (!isControlledRef.current) {
-      setState(newValue as T)
-    }
+    !isControlledRef.current && setState(newValue as T)
   }, [])
 
   return [isControlledRef.current ? (controlledValue as T) : state, set]

@@ -7,7 +7,7 @@ export interface FocusedIndex {
 }
 type Direction = 'horizontal' | 'vertical' | 'both'
 
-export type KeyEvent = 'ArrowUp' | 'ArrowDown' | 'ArrowLeft' | 'ArrowRight' | 'Enter' | 'Escape'
+export type KeyEvent = 'ArrowUp' | 'ArrowDown' | 'ArrowLeft' | 'ArrowRight'
 
 export interface UseRovingIndexOptions {
   loop?: boolean
@@ -16,19 +16,11 @@ export interface UseRovingIndexOptions {
   counts?: number
 }
 
-export const getPreviousIndex = (index: number, itemCount: number, loop: boolean) => {
-  if (loop) {
-    return index === 0 ? itemCount - 1 : index - 1
-  }
-  return Math.max(index - 1, 0)
-}
+export const getPreviousIndex = (index: number, itemCount: number, loop: boolean) =>
+  loop ? (index === 0 ? itemCount - 1 : index - 1) : Math.max(index - 1, 0)
 
-export const getNextIndex = (index: number, itemCount: number, loop: boolean) => {
-  if (loop) {
-    return index === itemCount - 1 ? 0 : index + 1
-  }
-  return Math.min(index + 1, itemCount - 1)
-}
+export const getNextIndex = (index: number, itemCount: number, loop: boolean) =>
+  loop ? (index === itemCount - 1 ? 0 : index + 1) : Math.min(index + 1, itemCount - 1)
 
 export const useRovingIndex = (
   itemCount: number,
@@ -37,55 +29,39 @@ export const useRovingIndex = (
   const [focusedIndex, setFocusedIndex] = useState(defaultIndex)
   const { isLtr } = useDirection()
 
-  // Validate input parameters
-  if (itemCount <= 0) {
-    throw new Error('useRovingIndex: itemCount must be a positive number.')
-  }
+  // if (itemCount <= 0) {
+  //   throw new Error('useRovingIndex: itemCount must be a positive number.')
+  // }
+  // if (defaultIndex < 0 || defaultIndex >= itemCount) {
+  //   throw new Error('useRovingIndex: defaultIndex is out of range.')
+  // }
 
-  if (defaultIndex < 0) {
-    throw new Error('useRovingIndex: defaultIndex must be a non-negative number.')
-  }
-
-  if (defaultIndex >= itemCount) {
-    throw new Error('useRovingIndex: defaultIndex is out of range.')
-  }
-
-  // Update the focused index
   const handleIndexChange = useCallback((index: number) => {
     setFocusedIndex(index)
   }, [])
 
-  // Handle keyboard events to control the focused index
   const handleKeyEvent = useCallback(
     ({ key, preventDefault }: KeyboardEvent) => {
-      const isArrowUp = key === 'ArrowUp'
-      const isArrowLeft = key === 'ArrowLeft'
-      const isArrowDown = key === 'ArrowDown'
-      const isArrowRight = key === 'ArrowRight'
-
-      if (!isArrowUp && !isArrowLeft && !isArrowDown && !isArrowRight) {
-        return
+      const changeIndex = (getIndex: typeof getPreviousIndex | typeof getNextIndex) => {
+        const nextIndex = getIndex(focusedIndex, itemCount, loop)
+        handleIndexChange(nextIndex)
+        preventDefault()
       }
-
-      preventDefault()
-
       const isHorizontal = direction === 'horizontal' || direction === 'both'
       const isVertical = direction === 'vertical' || direction === 'both'
       const getIndexForward = isLtr ? getNextIndex : getPreviousIndex
       const getIndexBackward = isLtr ? getPreviousIndex : getNextIndex
 
-      let nextIndex = focusedIndex
-
-      if (isArrowUp && isVertical) {
-        nextIndex = getPreviousIndex(focusedIndex, itemCount, loop)
-      } else if (isArrowLeft && isHorizontal) {
-        nextIndex = getIndexForward(focusedIndex, itemCount, loop)
-      } else if (isArrowDown && isVertical) {
-        nextIndex = getNextIndex(focusedIndex, itemCount, loop)
-      } else if (isArrowRight && isHorizontal) {
-        nextIndex = getIndexBackward(focusedIndex, itemCount, loop)
+      const keyMap: Record<KeyEvent, () => void> = {
+        ArrowUp: () => changeIndex(getPreviousIndex),
+        ArrowLeft: () => changeIndex(getIndexForward),
+        ArrowDown: () => changeIndex(getNextIndex),
+        ArrowRight: () => changeIndex(getIndexBackward),
       }
-      handleIndexChange(nextIndex)
+
+      if (key in keyMap && (isHorizontal || isVertical)) {
+        keyMap[key as KeyEvent]()
+      }
     },
     [handleIndexChange, focusedIndex, itemCount, loop, direction, isLtr]
   )
