@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes'
 import React, { useEffect } from 'react'
 
 export const SwitchMode = () => {
-  const { booleanValue: mounted, setTrue } = useBooleanState(false)
+  const { value: mounted, setTrue } = useBooleanState(false)
   const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {

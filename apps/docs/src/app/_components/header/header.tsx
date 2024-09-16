@@ -10,7 +10,7 @@ import { SwitchMode } from './switchMode'
 import { useDrawer } from '../drawerProvider'
 
 const Header = () => {
-  const { booleanValue, setTrue, setFalse } = useBooleanState(false)
+  const { value, setTrue, setFalse } = useBooleanState(false)
   const { open, toggleDrawer } = useDrawer() ?? {}
   // const menu = useBooleanState(false)
   const { toggleDirection } = useDirection()
@@ -24,7 +24,7 @@ const Header = () => {
       <Flex
         as={Paper}
         p="sm"
-        data-show={booleanValue}
+        data-show={value}
         justify="between"
         gap="sm"
         className="header--input-search u_center l_fl-2"
