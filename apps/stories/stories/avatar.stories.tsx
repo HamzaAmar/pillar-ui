@@ -189,17 +189,7 @@ export function AvatarsVariants() {
 export function AvatarGroupVariants() {
   return (
     <div className="l_f-md">
-      <AvatarGroup limit={4} layout="stack">
-        <Avatar title="Hello" />
-        <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
-        <Avatar image="https://picsum.photos/id/123/100/100" title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-      </AvatarGroup>
-      <AvatarGroup limit={4} variant="solid" layout="stack">
+      <AvatarGroup variant="solid" layout="stack">
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
@@ -214,7 +204,37 @@ export function AvatarGroupVariants() {
         <Avatar title="Hello" />
         <Avatar title="Hello" />
       </AvatarGroup>
-      <AvatarGroup variant="outline" layout="grid">
+    </div>
+  )
+}
+
+export function AvatarGroupLimit() {
+  return (
+    <div className="l_f-md">
+      <AvatarGroup limit={4} variant="solid" layout="stack">
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+      </AvatarGroup>
+      <AvatarGroup limit={4} layout="grid">
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+      </AvatarGroup>
+      <AvatarGroup limit={100} layout="grid">
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+        <Avatar title="Hello" />
+      </AvatarGroup>
+      <AvatarGroup limit={4} layout="grid">
+        <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />

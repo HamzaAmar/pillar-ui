@@ -22,7 +22,7 @@ const meta: Meta<typeof Skeleton> = {
 export default meta
 
 function useLoading() {
-  const { booleanValue: loading, setFalse } = useBooleanState(true)
+  const { value: loading, setFalse } = useBooleanState(true)
   const timerRef = useRef<NodeJS.Timeout>()
 
   useEffect(() => {

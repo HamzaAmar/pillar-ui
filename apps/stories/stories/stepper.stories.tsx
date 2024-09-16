@@ -27,11 +27,11 @@ const CompleteComponent = () => {
 }
 
 export const StepperIcon = () => {
-  const { currentStep, setCurrentStep, isFirst, isLast, goToNextStep, goToPreviousStep } = useStepper(3)
+  const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
     <Flex gap="lg" direction="column">
-      <Stepper active={currentStep} setActive={setCurrentStep} completeComponent={<CompleteComponent />}>
+      <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="bg" low>
@@ -55,10 +55,10 @@ export const StepperIcon = () => {
         </StepperStep>
       </Stepper>
       <Flex items="center" justify="center" gap="sm">
-        <Button disabled={isLast} onClick={goToNextStep}>
+        <Button disabled={isLast} onClick={goToNext}>
           Next
         </Button>
-        <Button disabled={isFirst} onClick={goToPreviousStep} variant="soft">
+        <Button disabled={isFirst} onClick={goToPrevious} variant="soft">
           Back
         </Button>
       </Flex>
@@ -67,17 +67,11 @@ export const StepperIcon = () => {
 }
 
 function StepperBase(props) {
-  const { currentStep, setCurrentStep, isFirst, isLast, goToNextStep, goToPreviousStep } = useStepper(3)
+  const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
     <Flex gap="lg" direction="column">
-      <Stepper
-        active={currentStep}
-        setActive={setCurrentStep}
-        corner="sharp"
-        {...props}
-        completeComponent={<CompleteComponent />}
-      >
+      <Stepper active={step} setActive={setStep} corner="sharp" {...props} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="bg" low>
@@ -98,10 +92,10 @@ function StepperBase(props) {
         </StepperStep>
       </Stepper>
       <Flex items="center" justify="center" gap="sm">
-        <Button disabled={isLast} onClick={goToNextStep}>
+        <Button disabled={isLast} onClick={goToNext}>
           Next
         </Button>
-        <Button disabled={isFirst} onClick={goToPreviousStep} variant="soft">
+        <Button disabled={isFirst} onClick={goToPrevious} variant="soft">
           Back
         </Button>
       </Flex>
@@ -137,11 +131,11 @@ export const StepperColors = () => {
 }
 
 export const DefaultStepper = () => {
-  const { currentStep, setCurrentStep, isFirst, isLast, goToNextStep, goToPreviousStep } = useStepper(3)
+  const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
     <Flex gap="lg" direction="column">
-      <Stepper active={currentStep} setActive={setCurrentStep} completeComponent={<CompleteComponent />}>
+      <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="xs">Hello World</Heading>
           <Text size="sm" color="bg" low>
@@ -166,10 +160,10 @@ export const DefaultStepper = () => {
       </Stepper>
 
       <Flex items="center" justify="center" gap="sm">
-        <Button disabled={isLast} onClick={goToNextStep}>
+        <Button disabled={isLast} onClick={goToNext}>
           Next{' '}
         </Button>
-        <Button disabled={isFirst} onClick={goToPreviousStep} variant="soft">
+        <Button disabled={isFirst} onClick={goToPrevious} variant="soft">
           Back
         </Button>
       </Flex>

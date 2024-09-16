@@ -1,6 +1,6 @@
 import React, { CSSProperties, useState } from 'react'
 import { Meta, StoryObj } from '@storybook/react'
-import { Alert, Button, Flex, Paper } from '@pillar-ui/core'
+import { Alert, Button, Flex, Heading, Paper } from '@pillar-ui/core'
 import { Check, CircleCheck, CircleInfo, CircleWarning } from '@pillar-ui/icons'
 
 const meta: Meta<typeof Alert> = {
@@ -201,19 +201,12 @@ export const AlertIsomerphic = () => {
 export function AlertCornerDefaults() {
   return (
     <div className="l_f-sm">
-      <Flex direction="column" gap="sm">
-        <AlertBase variant="solid" />
-      </Flex>
-
-      <Flex direction="column" gap="sm" style={{ '--alert-rad': '5px' } as CSSProperties}>
-        <AlertBase variant="solid" />
-      </Flex>
-      <Flex direction="column" gap="sm" style={{ '--alert-rad': '10px' } as CSSProperties}>
-        <AlertBase variant="solid" />
-      </Flex>
-
+      <Heading>Alert Corner 20px corner</Heading>
       <Flex direction="column" gap="sm" style={{ '--alert-rad': '20px' } as CSSProperties}>
         <AlertBase variant="solid" />
+        <AlertBase variant="soft" />
+        <AlertBase variant="outline" />
+        <AlertBase variant="text" />
       </Flex>
     </div>
   )
