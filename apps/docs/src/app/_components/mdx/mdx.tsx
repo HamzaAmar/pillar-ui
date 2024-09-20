@@ -7,9 +7,8 @@ import Link, { LinkProps } from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import { toSlug } from '~/utils/slug'
-import * as playground from '../playground'
 import { Colors } from '../colors'
-import { DocsCode } from '../code'
+import { DocsCode, Playground } from '../code'
 
 type CustomLinkProps = {} & Omit<LinkProps, 'href'> & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
@@ -50,7 +49,7 @@ async function Code({ children, ...props }: { children: string; className: strin
   if (code === null) return <pre {...props}>{children}</pre>
   let codeHTML = highlight(code)
 
-  return <DocsCode code={code} codeHTML={codeHTML} />
+  return <DocsCode code={code} html={codeHTML} />
 }
 
 function createHeading(level: number) {
@@ -87,7 +86,7 @@ let components = {
   Table,
   TableColumn,
   TableRow,
-  ...playground,
+  Playground,
   Colors,
   Alert,
 }

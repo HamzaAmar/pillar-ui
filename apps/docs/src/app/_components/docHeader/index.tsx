@@ -8,7 +8,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
 
   return (
     <Paper className="docs--header" flow="lg" p="sm">
-      <Heading size="2xl">{title} documentation</Heading>
+      <Heading size="2xl">{title} </Heading>
       <Text color="bg" low size="sm" weight="medium">
         {excerpt}
       </Text>

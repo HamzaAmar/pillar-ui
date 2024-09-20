@@ -27,7 +27,7 @@
 }
 
 .table-of-content--wrapper {
-  border-inline-start: 1px solid var(--opa-6);
+  border-inline-start: 1px solid var(--bg-4);
 }
 
 .aside--list-icon {
@@ -37,7 +37,6 @@
 }
 
 .menu-bar {
-  border-inline-end: 1px solid var(--opa-6);
   transition: transform 0.2s;
 
   &[data-mobile-open='true'] {

@@ -1,12 +1,12 @@
 .header {
   padding: 0 1rem;
-  border-bottom: 1px solid var(--bg-6);
+  border-bottom: 1px solid var(--bg-4);
   position: sticky;
   top: 0;
   left: 0;
   backdrop-filter: blur(20px);
   z-index: 13;
-  height: 5rem;
+  height: 4rem;
 }
 
 .only-mobile {

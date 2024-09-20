@@ -1,0 +1,134 @@
+.prose {
+  --sha-rad: 0.5rem;
+
+  --sh-class: var(--pri-11);
+  --sh-identifier: var(--suc-11);
+  --sh-sign: var(--bg-11);
+  --sh-property: var(--sec-11);
+  --sh-entity: var(--war-11);
+  --sh-jsxliterals: var(--bg-12);
+  --sh-string: var(--suc-10);
+  --sh-keyword: var(--dan-11);
+  --sh-comment: var(--bg-9);
+
+  ul li::marker {
+    color: var(--bg-11);
+    font-size: 0.85rem;
+  }
+  & nav:has(ul) {
+    margin: 0;
+    & li {
+      margin: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 500;
+  }
+
+  & :is(ul, ol) > * + * {
+    margin-top: var(--s-2xs);
+  }
+
+  ul,
+  ol {
+    margin-left: 0.5rem;
+  }
+}
+
+.code--section {
+  background-color: var(--bg-3);
+  border-radius: var(--sha-rad);
+  border: 1px solid var(--bg-6);
+
+  & > * {
+    padding: 0.375rem 1rem;
+  }
+
+  & pre {
+    overflow: auto;
+    height: 100%;
+    max-height: 80vh;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  & code {
+    counter-reset: sh-line-number;
+    font-size: 0;
+    background: none;
+    user-select: initial;
+    height: 100%;
+  }
+
+  .sh__line::before {
+    counter-increment: sh-line-number 1;
+    content: counter(sh-line-number);
+    margin-inline-end: 1.25rem;
+    color: hsl(0deg 0% 64%);
+    font-size: 0.85rem;
+    vertical-align: middle;
+  }
+
+  .sh__line {
+    border-inline-start: 4px solid transparent;
+    font-size: 0.875rem;
+    line-height: 1.75;
+
+    & > * {
+      display: inline-block;
+    }
+  }
+}
+
+.playground {
+  border: 1px solid var(--bg-6);
+  padding: 1.5rem;
+  gap: 1.5rem;
+  display: flex;
+  max-height: 500px;
+  border-radius: var(--sha-rad);
+  overflow: auto;
+}
+.playground-row {
+  align-items: center;
+  flex-wrap: wrap;
+}
+.playground-column {
+  flex-direction: column;
+}
+
+.code--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--opa-4);
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--dan-9);
+  border-radius: 50%;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--war-9);
+    top: 0;
+    left: 0.75rem;
+    border-radius: inherit;
+  }
+
+  &:after {
+    background-color: var(--suc-9);
+    left: 1.5rem;
+  }
+}

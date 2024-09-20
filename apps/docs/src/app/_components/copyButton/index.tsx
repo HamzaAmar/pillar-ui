@@ -10,10 +10,10 @@ interface CopyButtonProps extends Omit<ButtonProps, 'children'> {
 }
 
 export const CopyButton = ({ text, ...rest }: CopyButtonProps) => {
-  const { copied, copy } = useCopyToClipboard(5000)
+  const { copied, copy } = useCopyToClipboard(2500)
 
   return (
-    <Button {...rest} onClick={() => copy(text)}>
+    <Button {...rest} disabled={copied ? true : false} onClick={() => copy(text)}>
       {copied ? 'Copied' : 'Copy'}
     </Button>
   )

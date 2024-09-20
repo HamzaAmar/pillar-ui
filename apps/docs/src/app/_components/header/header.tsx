@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <Flex className="header" as="header" justify="between" items="center" gap="sm">
       <Link className="l_fl-1" href="/" aria-label="Home">
-        <Logo width="100px" className="header--logo" />
+        <Logo width="80px" className="header--logo" />
       </Link>
 
       <Flex
