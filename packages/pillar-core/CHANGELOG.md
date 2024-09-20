@@ -1,5 +1,14 @@
 # @pillar/core
 
+## 0.10.6
+
+### Patch Changes
+
+- # New Patch Release
+
+  - **Dependency Downgrade**: We have downgraded the "pillar hooks" dependency to version 0.7.3. Please review the dependency's changelog for any potential breaking changes or feature removals.
+  - **Icon Rotation**: A new feature has been added to allow for rotation of icons in different directions, enhancing visual customization options.
+
 ## 0.10.5
 
 ### Patch Changes
