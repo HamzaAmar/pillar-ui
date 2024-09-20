@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import type { Color, Corner, Size, Variant, Transform } from '../../types'
 
 export interface ChipsProps {
@@ -7,8 +7,6 @@ export interface ChipsProps {
   color?: Color
   corner?: Corner
   children: ReactNode
-  icon?: ReactElement
-  iconPosition?: 'start' | 'end'
   transform?: Transform
   highContrast?: boolean
 }
