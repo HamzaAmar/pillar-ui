@@ -69,8 +69,9 @@ export const FEATURES = [
 export const ACCESSIBILITY = [
   {
     id: 'high-contrast',
-    title: 'Windows High Contrast Support',
-    description: 'Built-in high contrast mode ensures your site is accessible to everyone.',
+    title: 'Support Windows High Contrast',
+    description:
+      'Our UI library supports windows high contrast mode out of the box without any additional configuration.',
     icon: <Star width="24" stroke="var(--pri-11)" />,
   },
   {

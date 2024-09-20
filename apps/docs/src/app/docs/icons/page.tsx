@@ -1,18 +1,15 @@
 'use client'
-import React, { CSSProperties, useState } from 'react'
+import React, { useState } from 'react'
 import * as ICONS from '@pillar-ui/icons'
 import { Button, Flex, Grid, Heading, Paper, Text } from '@pillar-ui/core'
-import { useCopyToClipboard } from '~/hooks/pillar'
 import iconJson from './icons.json'
-import { Metadata } from 'next'
+import { CopyButton } from '~/app/_components'
 
 const CATEGORIES: string[] = ['all', ...Object.keys(iconJson)]
 
 type ItemProps = [string, (props: ICONS.SvgType | ICONS.SvgWithDirection) => JSX.Element]
 
 const IconsItem = ({ item }: { item: ItemProps }) => {
-  const { copied, copy } = useCopyToClipboard(5000)
-
   const [name, Icon] = item
 
   return (
@@ -30,9 +27,7 @@ const IconsItem = ({ item }: { item: ItemProps }) => {
           {name}
         </Text>
       </div>
-      <Button onClick={() => copy(`<${name} width='20'/>`)} fluid>
-        {copied ? 'Copied' : 'Copy'}
-      </Button>
+      <CopyButton fluid text={`<${name} width='20'/>`} />
     </Flex>
   )
 }

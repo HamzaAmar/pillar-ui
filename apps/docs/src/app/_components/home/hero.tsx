@@ -21,16 +21,17 @@ export function Hero() {
           </svg>
           Pillar-ui
         </Text>
-        Your Comprehensive, Accessible UI Toolkit with Hooks, Icons, and Utilities
+        : Is a Lightweight, Accessible React UI Library
       </h1>
       <div className="l_f-md">
         <p className="hero--text">
-          A comprehensive set of reusable UI components, React hooks, icons and utilities for building React
+          A React UI library offering reusable ui components, React hooks, icons and utilities for building React
           applications quickly and easily.
         </p>
 
         <Text color="bg" low>
-          Currently, this library only supports React, but we are actively working on adding support for (Qwik, and Vue)
+          When building this library, we focused on two key aspects: accessibility and performance. You can assess the
+          library&apos;s size and compare it to other libraries to see the difference.{' '}
         </Text>
       </div>
 

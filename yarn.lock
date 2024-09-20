@@ -3025,7 +3025,7 @@ __metadata:
   resolution: "@pillar-ui/core@workspace:packages/pillar-core"
   dependencies:
     "@pillar-ui/eslint": "npm:*"
-    "@pillar-ui/hooks": "npm:*"
+    "@pillar-ui/hooks": "workspace:^"
     "@pillar-ui/tsconfig": "npm:*"
     "@types/node": "npm:^22.5.3"
     "@types/react": "npm:^18.3.3"
@@ -3090,7 +3090,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pillar-ui/hooks@npm:*, @pillar-ui/hooks@workspace:packages/pillar-hooks":
+"@pillar-ui/hooks@npm:*, @pillar-ui/hooks@workspace:^, @pillar-ui/hooks@workspace:packages/pillar-hooks":
   version: 0.0.0-use.local
   resolution: "@pillar-ui/hooks@workspace:packages/pillar-hooks"
   dependencies:

@@ -1,7 +1,6 @@
-import React, { Children } from 'react'
+import { renderToString } from 'react-dom/server'
 import { CopyButton } from '../copyButton'
 import { Paper } from '@pillar-ui/core'
-import { highlight } from 'sugar-high'
 
 interface DocsCodeProps {
   code: string
@@ -22,7 +21,7 @@ export const DocsCode = ({ code, codeHTML }: DocsCodeProps) => {
 }
 
 export const CodePlaygroundDocs = ({ children }: CodePlaygroundProps) => {
-  const strCode = ''
+  const strCode = renderToString(children)
   return (
     <section>
       <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">

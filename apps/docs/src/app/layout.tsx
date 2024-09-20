@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: '%s | Pillar UI library',
   },
   description:
-    'Pillar UI: A modern, accessible React component library for building beautiful, customizable, and lightning-fast web apps.',
+    'Pillar UI: React UI library for building beautiful, customizable, accessible, and lightning-fast web apps',
   keywords: [
     'TypeScript',
     'React',
