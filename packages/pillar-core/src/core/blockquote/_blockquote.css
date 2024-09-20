@@ -13,6 +13,10 @@
   */
   border-radius: var(--blockquote-rad, 0.25em);
   font-size: var(--blockquote-size, 1rem);
+
+  & cite {
+    display: block;
+  }
 }
 
 .b-l_quote {
@@ -23,8 +27,4 @@
     width: 1.25em;
     color: var(--opa-9);
   }
-}
-
-.b-l_cite {
-  display: block;
 }
