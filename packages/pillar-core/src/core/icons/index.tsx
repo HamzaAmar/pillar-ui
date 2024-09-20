@@ -1,6 +1,11 @@
 import type { SVGProps } from 'react'
 
+type Direction = 'bottom' | 'top' | 'left' | 'right'
 export interface SvgType extends SVGProps<SVGSVGElement> {}
+
+export interface SvgWithDirection extends SvgType {
+  direction?: Direction
+}
 
 export const svgProps = {
   viewBox: '0 0 24 24',
@@ -53,8 +58,8 @@ const Plus = (props: SvgType) => (
   </svg>
 )
 
-const ChevronDown = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+const ChevronDown = ({ direction = 'bottom', ...rest }: SvgWithDirection) => (
+  <svg className={`i-${direction}`} {...svgProps} {...rest}>
     <path d="m6 9 6 6 6-6" />
   </svg>
 )
