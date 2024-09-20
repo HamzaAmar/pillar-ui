@@ -1,5 +1,45 @@
 # @pillar/hooks
 
+## 0.7.4
+
+### Patch Changes
+
+- # new Release September 20, 2024
+
+  ## Major Features
+
+  - **Code Components:** Added code and copyButton components for use in the Code section of the mdx component.
+  - **Improved Button and Checkbox Styles:** Refactored button and checkbox styles for better consistency and appearance.
+  - **Code Playground Restructuring:** Restructured the doc file playground for use in both playground and code highlighting.
+  - **Pagination Bug Fix:** Fixed a pagination bug that prevented users from navigating back to previous pages.
+
+  ## Bug Fixes
+
+  - **Variant Undefined Issue:** Resolved an issue where the variant was undefined in the classname.
+  - **--opa Mistakes Value:** Corrected the value for the `--opa` mistake.
+  - **Stepper Bug:** Fixed a bug in the stepper and renamed the value for clarity.
+  - **Pagination Bug:** Fixed a bug that prevented users from navigating back to previous pages.
+  - **Code Bug:** Fixed a code bug by adding the code to the pre element.
+  - **Doc Issue:** Resolved an issue in the documentation after changes to the core.
+
+  ## Refactors
+
+  - **Removed Icon from Badge:** Removed the icon from the badge component.
+  - **Removed Cite Component:** Removed the cite component from the blockquote and set a default value for the icon.
+  - **Improved Component Detail Page Style:** Refactored the style of the component detail page.
+  - **Updated Content Files:** Upgraded content files to reflect the new changes in examples.
+  - **Changed Header and Home Component:** Modified the header and home components to support the new API.
+  - **Changed Stories:** Updated stories to work with the new changes.
+  - **Reduced Pillar Core Size:** Reduced the size of Pillar Core.
+  - **Reduced Pillar Hooks Size:** Reduced the size of Pillar Hooks.
+  - **Restructured Utils:** Restructured the utils and reduced its size.
+
+  ## Additional Notes
+
+  - **Yarn Lock File Upgrade:** Upgraded the yarn lock file to ensure compatibility with the latest dependencies.
+
+  This release includes significant improvements and bug fixes that enhance the overall functionality and usability of Pillar Core.
+
 ## 0.7.3
 
 ### Patch Changes
