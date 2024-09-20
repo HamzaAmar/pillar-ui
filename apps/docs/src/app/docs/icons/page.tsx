@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import * as ICONS from '@pillar-ui/icons'
 import { Button, Flex, Grid, Heading, Paper, Text } from '@pillar-ui/core'
 import iconJson from './icons.json'
@@ -27,7 +27,7 @@ const IconsItem = ({ item }: { item: ItemProps }) => {
           {name}
         </Text>
       </div>
-      <CopyButton fluid text={`<${name} width='20'/>`} />
+      {/* <CopyButton fluid text={`<${name} width='20'/>`} /> */}
     </Flex>
   )
 }
@@ -70,6 +70,7 @@ const Icons = () => {
           ))}
         </Grid>
       </div>
+      <h1>Hello</h1>
     </div>
   )
 }

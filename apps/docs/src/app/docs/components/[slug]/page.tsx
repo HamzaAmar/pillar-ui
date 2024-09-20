@@ -42,8 +42,8 @@ function Page({ params }: SlugParamsProps) {
           }),
         }}
       />
-      <div className="docs--content l_f-lg">
-        <DocHeader root="pillar-core/src/core" title={`Pillar UI React ${title} Component`} {...rest} />
+      <div className="docs--content">
+        <DocHeader root="pillar-core/src/core" title={title} {...rest} />
         <div className="section prose l_f-md">
           <CustomMDX source={content} />
         </div>
