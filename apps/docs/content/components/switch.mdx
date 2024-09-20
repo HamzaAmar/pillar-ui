@@ -18,126 +18,33 @@ The label prop sets the label for the switch.
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop sets the size of the switch. You can choose from a range of sizes including 3xs, 2xs, xs, sm, md, lg, xl, 2xl and 3xl.
 
-<SwitchSizes />
-
-```tsx showLineNumbers title="Switch.tsx"
-import { Flex, Switch } from '@pillar-ui/core'
-
-export function SwitchSizes() {
-  return (
-    <Flex gap="sm" items="center">
-      <Switch label="Hello" size="3xs" />
-      <Switch label="Hello" size="2xs" />
-      <Switch label="Hello" size="xs" />
-      <Switch label="Hello" size="sm" />
-      <Switch label="Hello" size="md" />
-      <Switch label="Hello" size="lg" />
-      <Switch label="Hello" size="xl" />
-      <Switch label="Hello" size="2xl" />
-      <Switch label="Hello" size="3xl" />
-    </Flex>
-  )
-}
-```
+<Playground name="switchSize" root="switch" />
 
 ### Color
 
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 The color prop sets the color of the switch. You can choose from a range of colors including red, orange, green, primary, purple, secondary, bg and brown.
 
-<SwitchColors />
-
-```tsx showLineNumbers title="Switch.tsx"
-import { Flex, Switch } from '@pillar-ui/core'
-
-export function SwitchSizes() {
-  return (
-    <Flex gap="sm" items="center">
-      <Switch label="Hello" color="dan" />
-      <Switch label="Hello" color="war" />
-      <Switch label="Hello" color="suc" />
-      <Switch label="Hello" color="pri" />
-      <Switch label="Hello" color="sec" />
-      <Switch label="Hello" color="bg" />
-    </Flex>
-  )
-}
-```
+<Playground name="switchColor" root="switch" />
 
 ### DefaultPressed
 
 The defaultPressed prop sets the default state of the switch. If set to true, the switch will be in the pressed state by default.
 
-<SwitchDefaultPressed />
-
-```tsx showLineNumbers title="Switch.tsx"
-import { Flex, Switch } from '@pillar-ui/core'
-
-export function SwitchDefault() {
-  return (
-    <Flex gap="sm" items="center">
-      <Switch label="Hello" defaultPressed color="dan" />
-      <Switch label="Hello" defaultPressed color="war" />
-      <Switch label="Hello" defaultPressed color="suc" />
-      <Switch label="Hello" defaultPressed color="pri" />
-      <Switch label="Hello" defaultPressed color="sec" />
-      <Switch label="Hello" defaultPressed color="bg" />
-    </Flex>
-  )
-}
-```
+<Playground name="switchDefaultPressed" root="switch" />
 
 ### Corner
 
 The corner prop sets the corner style of the switch. You can choose from a range of corner styles including sharp, xs, sm, md, lg, xl and full.
 
-<SwitchCorners />
-
-```tsx showLineNumbers title="Switch.tsx"
-import { Flex, Switch } from '@pillar-ui/core'
-
-export function SwitchDefault() {
-  return (
-    <Flex gap="sm" items="center">
-      <Switch label="Hello" corner="sharp" />
-      <Switch label="Hello" corner="xs" />
-      <Switch label="Hello" corner="sm" />
-      <Switch label="Hello" corner="md" />
-      <Switch label="Hello" corner="lg" />
-      <Switch label="Hello" corner="xl" />
-      <Switch label="Hello" corner="full" />
-    </Flex>
-  )
-}
-```
+<Playground name="switchCorner" root="switch" />
 
 ### Disabled
 
 The disabled prop disables the switch.
 
-<SwitchDisabled />
-
-```tsx showLineNumbers title="Switch.tsx"
-import { Flex, Switch } from '@pillar-ui/core'
-
-export function SwitchDefault() {
-  return (
-    <Flex gap="sm" items="center">
-      <Switch label="Hello" disabled />
-      <Switch label="Hello" disabled defaultPressed />
-    </Flex>
-  )
-}
-```
+<Playground name="switchDisabled" root="switch" />
 
 ## Use Case
 

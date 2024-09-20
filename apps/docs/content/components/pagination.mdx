@@ -14,106 +14,27 @@ The Pagination component accepts the following props:
 
 ### Color
 
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `bgce` `primary` `secondary`
-
 The color prop sets the color of the pagination buttons. You can choose from a range of colors including red, green, orange, primary, purple, secondary, bgce and brown.
 
-<PaginationColors />
-
-```tsx showLineNumbers title="Pagination.tsx"
-import { Flex, Pagination } from '@pillar-ui/core'
-
-export function PaginationDefault() {
-  return (
-    <Flex gap="sm" items="center">
-      <Pagination />
-      <Pagination color="dan" />
-      <Pagination color="suc" />
-      <Pagination color="war" />
-      <Pagination color="pri" />
-      <Pagination color="sec" />
-      <Pagination color="bgce" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="paginationColor" root="pagination" />
 
 ### Variant
 
 The variant prop sets the style of the pagination buttons. You can choose from three variants: default, soft and solid.
 
-<PaginationVariants />
-
-```tsx showLineNumbers title="Pagination.tsx"
-import { Flex, Pagination } from '@pillar-ui/core'
-
-export function PaginationDefault() {
-  return (
-    <Flex gap="sm" items="center">
-      <Pagination variant="soft" />
-      <Pagination variant="solid" />
-      <Pagination variant="outline" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="paginationVariant" root="pagination" />
 
 ### Corner
 
 The corner prop sets the corner style of the pagination buttons. You can choose from a range of corner styles including sharp, xs, sm, md, lg, xl and full.
 
-<PaginationCorners />
-
-```tsx showLineNumbers title="Pagination.tsx"
-import { Flex, Pagination } from '@pillar-ui/core'
-
-export function PaginationDefault() {
-  return (
-    <Flex gap="sm" items="center">
-      <Pagination />
-      <Pagination corner="full" />
-      <Pagination corner="xs" />
-      <Pagination corner="sm" />
-      <Pagination corner="md" />
-      <Pagination corner="lg" />
-      <Pagination corner="xl" />
-      <Pagination corner="circle" />
-      <Pagination corner="radius" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="paginationCorner" root="pagination" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop sets the size of the pagination buttons. You can choose from a range of sizes including 3xs, 2xs, xs, sm, md, lg, xl, 2xl and 3xl.
 
-<PaginationSizes />
-
-```tsx showLineNumbers title="Pagination.tsx"
-import { Flex, Pagination } from '@pillar-ui/core'
-
-export function PaginationDefault() {
-  return (
-    <Flex gap="sm" items="center">
-      <Pagination />
-      <Pagination size="2xs" />
-      <Pagination size="xs" />
-      <Pagination size="sm" />
-      <Pagination size="md" />
-      <Pagination size="lg" />
-      <Pagination size="xl" />
-      <Pagination size="2xl" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="paginationSize" root="pagination" />
 
 ## Use Case
 

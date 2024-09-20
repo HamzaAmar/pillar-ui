@@ -14,191 +14,37 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 A filled input is a type of input field that has a background color. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
-<InputNumberFilled />
-
-```tsx showLineNumbers title="InputNumber.tsx"
-export const FilledInputNumber = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Input aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
-      <Input aria-label="hello" placeholder="Normal" variant="filled" />
-      <Input aria-label="hello" disabled placeholder="Disabled" variant="filled" />
-      <Input aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
-      <Input aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <Input aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" variant="filled" />
-      <Input aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" variant="filled" />
-      <Input
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="inputNumberFilled" root="form/inputNumber" />
 
 ### Outline
 
 The outline variant of the input component is a type of input field that has a border around it. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
-<InputNumberOutline />
-
-```tsx showLineNumbers title="InputNumber.tsx"
-export const OutlineInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Input variant="outline" aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
-      <Input variant="outline" aria-label="hello" placeholder="Normal" variant="filled" />
-      <Input variant="outline" aria-label="hello" disabled placeholder="Disabled" variant="filled" />
-      <Input variant="outline" aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
-      <Input variant="outline" aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <Input
-        variant="outline"
-        aria-label="hello"
-        suffixInput={<User width="16" />}
-        placeholder="Error"
-        variant="filled"
-      />
-      <Input
-        variant="outline"
-        aria-label="hello"
-        prefixInput={<User width="16" />}
-        placeholder="Placeholder"
-        variant="filled"
-      />
-      <Input
-        variant="outline"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="inputNumberOutline" root="form/inputNumber" />
 
 ### Bordered
 
 The bordered variant of the input component is a type of input field that has a bottom border that visually separates the input from others and shows the edge of the input.
 
-<InputNumberBordered />
-
-```tsx showLineNumbers title="InputNumber.tsx"
-export const OutlineInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Input variant="bordered" aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
-      <Input variant="bordered" aria-label="hello" placeholder="Normal" variant="filled" />
-      <Input variant="bordered" aria-label="hello" disabled placeholder="Disabled" variant="filled" />
-      <Input variant="bordered" aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
-      <Input variant="bordered" aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <Input
-        variant="bordered"
-        aria-label="hello"
-        suffixInput={<User width="16" />}
-        placeholder="Error"
-        variant="filled"
-      />
-      <Input
-        variant="bordered"
-        aria-label="hello"
-        prefixInput={<User width="16" />}
-        placeholder="Placeholder"
-        variant="filled"
-      />
-      <Input
-        variant="bordered"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="inputNumberBordered" root="form/inputNumber" />
 
 ### Corner
 
 The corner prop is a prop that can be used to customize the corner radius of the Input component. Valid values for the corner prop are: `sharp` `xs` `sm` `md` `lg` `xl` `full`
 
-<InputNumberCorners />
-
-```tsx showLineNumbers title="InputNumber.tsx"
-export const CornerInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Input corner="sharp" placeholder="sharp" />
-      <Input corner="xs" placeholder="xs" />
-      <Input corner="sm" placeholder="sm" />
-      <Input corner="md" placeholder="md" />
-      <Input corner="lg" placeholder="lg" />
-      <Input corner="xl" placeholder="xl" />
-      <Input corner="full" placeholder="full" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="inputNumberCorner" root="form/inputNumber" />
 
 ### Color
 
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `secondary` `bgcece` `primary` `secondary`
-
 The color prop can be used to customize the color of the input's border when it is focused. Valid values for the color prop are: `primary` `purple` `secondary` `brown` `bgcece`
 
-<InputNumberColors />
-
-```tsx showLineNumbers title="InputNumber.tsx"
-export const ColorInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Input color="pri" variant="bordered" autoFocus placeholder="Focus" />
-      <Input color="war" variant="bordered" autoFocus placeholder="Normal" />
-      <Input color="sec" variant="outline" autoFocus placeholder="Disabled" />
-      <Input color="bg" variant="filled" autoFocus placeholder="isInvalid" />
-      <Input color="suc" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <Input
-        color="dan"
-        variant="bordered"
-        autoFocus
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="inputNumberColor" root="form/inputNumber" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop of the input component is used to change the size of the input field. The default size is medium `md`. The following values are supported: `sm` ,`lg`
 
-<InputNumberSizes />
-
-```tsx showLineNumbers title="InputNumber.tsx"
-import { Flex, Input } from '@pillar-ui/core'
-export const SizeInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Input size="sm" placeholder="Small(sm)" />
-      <Input placeholder="Medium (md default You don't need it)" />
-      <Input size="lg" placeholder="Large(lg)" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="inputNumberSize" root="form/inputNumber" />
 
 ### Step
 
@@ -206,58 +52,20 @@ The step prop of the InputNumber component is used to control the increment size
 
 Example
 
-<InputNumberStep />
-
-```tsx showLineNumbers title="InputNumber.tsx"
-export const StepInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <InputNumber step="1" size="sm" placeholder="Step 1" />
-      <InputNumber step="10" placeholder="Step 10" />
-      <InputNumber step=".1" size="lg" placeholder="Step 0.1" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="inputNumberStep" root="form/inputNumber" />
 
 ### Max
 
 The max prop of the InputNumber component is used to control the maximum value that can be entered into the input field. The default max value is Infinity, but you can also set a specific max value.
 Example
 
-<InputNumberMax />
-
-```tsx showLineNumbers title="InputNumber.tsx"
-export const StepInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <InputNumber step="1" max="10" size="sm" placeholder="Step 1" />
-      <InputNumber step="10" max="40" placeholder="Step 10" />
-      <InputNumber step=".1" max="1" size="lg" placeholder="Step 0.1" />
-      <InputNumber step=".5" max="10" size="lg" placeholder="Step 0.5" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="inputNumberMax" root="form/inputNumber" />
 
 ### Min
 
 The min prop of the InputNumber component is used to control the minimum value that can be entered into the input field. The default min value is -Infinity, but you can also set a specific min value.
 
-<InputNumberMin />
-
-```tsx showLineNumbers title="InputNumber.tsx"
-export const StepInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <InputNumber step="1" min="5" size="sm" placeholder="Step 1" />
-      <InputNumber step="10" min="40" placeholder="Step 10" />
-      <InputNumber step=".1" min="1" size="lg" placeholder="Step 0.1" />
-      <InputNumber step=".5" min="10" size="lg" placeholder="Step 0.5" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="inputNumberMin" root="form/inputNumber" />
 
 ## Best Practice
 

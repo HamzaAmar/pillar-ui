@@ -14,218 +14,31 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 This property provides you with the ability to manage and adjust the amount of space between the individual child elements within a Flex container. It allows you to fine-tune the spacing, ensuring optimal alignment and visual harmony between the flex items.
 
-- **Type:** string
-- **Options:** `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
-<FlexGap />
-
-```tsx showLineNumbers title="Flex.tsx"
-const Box = (props: any) => {
-  return (
-    <Paper
-      as={Flex}
-      justify="center"
-      items="center"
-      style={{ width: '30px', height: '30px' }}
-      background="bg-6"
-      corner="sm"
-      {...props}
-    />
-  )
-}
-
-const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
-
-export const FlexGap = () => {
-  return (
-    <div className="l_f-sm">
-      <Flex gap="2xs">{boxes}</Flex>
-      <Flex gap="xs">{boxes}</Flex>
-      <Flex gap="sm">{boxes}</Flex>
-      <Flex gap="md">{boxes}</Flex>
-      <Flex gap="lg">{boxes}</Flex>
-      <Flex gap="xl">{boxes}</Flex>
-      <Flex gap="2xl">{boxes}</Flex>
-    </div>
-  )
-}
-```
+<Playground name="flexGap" root="flex" />
 
 ### Wrap
 
 This option lets you decide if items inside a container should wrap to the next line when there's insufficient horizontal space to show them in a single row. This maintains content organization and readability, crucial for smaller screens or varying device sizes.
 
-- **Type:** boolean
-- **Default:** false
-
-<FlexWrap />
-
-```tsx showLineNumbers title="Flex.tsx"
-const Box = (props: any) => {
-  return (
-    <Paper
-      as={Flex}
-      justify="center"
-      items="center"
-      style={{ width: '30px', height: '30px' }}
-      background="bg-6"
-      corner="sm"
-      {...props}
-    />
-  )
-}
-
-const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
-
-export const FlexWrap = () => {
-  return (
-    <Paper className="playground" flow="sm" borderColor="opa-6" p="sm" background="bg-3" corner="sm">
-      <Flex wrap gap="sm">
-        {boxes}
-        {boxes}
-        {boxes}
-        {boxes}
-        {boxes}
-        {boxes}
-      </Flex>
-    </Paper>
-  )
-}
-```
+<Playground name="flexWrap" root="flex" />
 
 ### Direction
 
 This attribute defines the orientation in which the flexible items within a Flex container are laid out. It determines whether these items are arranged horizontally or vertically, influencing the overall flow and structure of the container's content.
 
-- **Type:** string
-- **Options:** `column` `row`
-- **Default:** `row`
-
-<FlexDirection />
-
-```tsx showLineNumbers title="Flex.tsx"
-const Box = (props: any) => {
-  return (
-    <Paper
-      as={Flex}
-      justify="center"
-      items="center"
-      style={{ width: '30px', height: '30px' }}
-      background="bg-6"
-      corner="sm"
-      {...props}
-    />
-  )
-}
-
-const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
-
-export const FlexDirection = () => {
-  return (
-    <div className="l_f-sm">
-      <Flex gap="sm">{boxes}</Flex>
-      <Flex gap="sm" direction="column">
-        {boxes}
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground name="flexDirection" root="flex" />
 
 ### Justify
 
 This property governs the positioning of child elements within a container along the horizontal axis. It enables you to control how the child items are aligned in relation to each other, influencing their placement in terms of left-to-right or right-to-left arrangement.
 
-- **Type:** string
-- **Options:** `start` `center` `end` `between` `around` `evenly`
-- **Default:** `start`
-
-<FlexJustify />
-
-```tsx showLineNumbers title="Flex.tsx"
-const Box = (props: any) => {
-  return (
-    <Paper
-      as={Flex}
-      justify="center"
-      items="center"
-      style={{ width: '30px', height: '30px' }}
-      background="bg-6"
-      corner="sm"
-      {...props}
-    />
-  )
-}
-
-const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
-
-export const FlexJustify = () => {
-  return (
-    <div className="l_f-lg">
-      <Flex gap="sm">{boxes}</Flex>
-      <Flex gap="sm" justify="center">
-        {boxes}
-      </Flex>
-      <Flex gap="sm" justify="end">
-        {boxes}
-      </Flex>
-      <Flex gap="sm" justify="between">
-        {boxes}
-      </Flex>
-      <Flex gap="sm" justify="around">
-        {boxes}
-      </Flex>
-      <Flex gap="sm" justify="evenly">
-        {boxes}
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground name="flexJustify" root="flex" />
 
 ### Items
 
 This property allows you to determine the positioning of child elements along the vertical axis within a container. It provides control over how the child items are aligned with respect to each other, influencing their arrangement from top to bottom or bottom to top.
 
-- **Type:** string
-- **Options:** `start` `center` `end`
-- **Default:** `start`
-
-<FlexItems />
-
-```tsx showLineNumbers title="Flex.tsx"
-const Box = (props: any) => {
-  return (
-    <Paper
-      as={Flex}
-      justify="center"
-      items="center"
-      style={{ width: '30px', height: '30px' }}
-      background="bg-6"
-      corner="sm"
-      {...props}
-    />
-  )
-}
-
-const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100px', height: '100px' }} key={index} />)
-
-export const FlexItems = () => {
-  return (
-    <div className="l_f-sm">
-      <Flex as={Paper} height="100px" background="bg-5" gap="sm" items="center">
-        Hello
-      </Flex>
-      <Flex as={Paper} height="100px" background="bg-5" gap="sm" items="end">
-        Hello
-      </Flex>
-      <Flex as={Paper} height="100px" background="bg-5" gap="sm">
-        Hello
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground name="flexItems" root="flex" />
 
 ### Best Practices
 

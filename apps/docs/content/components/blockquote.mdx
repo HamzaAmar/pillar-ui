@@ -22,120 +22,19 @@ The size prop determines the corners of the Blockquote. It accepts any of the Si
 
 The corner prop determines the border radius of the Blockquote. It accepts any of the Corner types defined in your library, including (sharp, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-Example usage:
-
-<BlockquoteCorners />
-
-```tsx showLineNumbers title="Accordion.tsx"
-function CornerCorners() {
-  return (
-    <div className="l_f-md">
-      <Blockquote corner="sharp" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote corner="xs" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote corner="sm" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote corner="md" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote corner="lg" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote corner="xl" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote corner="full" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="blockquoteCorner" root="blockquote" />
 
 ### Color
 
-Type: Color (string)
-Default: `primary`
-Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 You can customize the color of the blockquote by passing a color prop to the Blockquote component.
 
-<BlockquoteColors />
-
-```tsx showLineNumbers title="Blockquote.tsx"
-import { Blockquote } from '@pillar-ui/core'
-
-function BlockquoteColor() {
-  return (
-    <div className="l_f-md">
-      <Blockquote color="dan" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote color="war" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote color="suc" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote color="pri" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote color="sec" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote color="bg" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="blockquoteColor" root="blockquote" />
 
 ### Size
 
-Type: Size (string)
-Default: `md`
-Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 You can customize the size of the blockquote by passing a size prop to the Blockquote component.
 
-<BlockquoteSizes />
-
-```tsx showLineNumbers title="Blockquote.tsx"
-import { Blockquote } from '@pillar-ui/core'
-
-function BlockquoteSize() {
-  return (
-    <div className="l_f-md">
-      <Blockquote size="2xs" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote size="xs" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote size="sm" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote size="md" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote size="lg" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote size="xl" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-      <Blockquote size="2xl" cite="John Doe">
-        This is the quoted text.
-      </Blockquote>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="blockquoteSize" root="blockquote" />
 
 ### Cite
 
@@ -146,25 +45,7 @@ The `Blockquote.Cite` subcomponent is a specialized element for attributing the 
 
 ** Example Usage **
 
-<CiteBlockquote />
-
-```tsx showLineNumbers title="Blockquote.tsx"
-import { Blockquote } from '@pillar-ui/core'
-
-function BlockquoteCite() {
-  return (
-    <div className="l_f-md">
-      <Blockquote color="dan">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        {/* ... other text ... */}
-        <Blockquote.Cite title="Hello world" />
-      </Blockquote>
-
-      {/* ... other examples with alignment */}
-    </div>
-  )
-}
-```
+<Playground direction="column" name="blockquoteCite" root="blockquote" />
 
 ## Use Case
 

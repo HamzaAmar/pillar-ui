@@ -12,40 +12,15 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop controls the size of the heading. The following values are valid:
 
-Example:
-
-<HeadingSizes />
-
-```tsx showLineNumbers title="Heading.tsx"
-<Heading size="xs">Some heading.</Heading>
-<Heading size="sm">Some heading.</Heading>
-<Heading size="md">Some heading.</Heading>
-<Heading size="lg">Some heading.</Heading>
-<Heading size="xl">Some heading.</Heading>
-<Heading size="2xl">Some heading.</Heading>
-```
+<Playground direction="column" name="headingSize" root="heading" />
 
 ### Weight
 
 The weight prop controls the weight (boldness) of the heading. The following values are valid:
 
-Example:
-
-<HeadingWeight />
-
-```tsx showLineNumbers title="Heading.tsx"
-<Heading weight="thin">Some heading.</Heading>
-<Heading weight="extra-light">Some heading.</Heading>
-<Heading weight="normal">Some heading.</Heading>
-<Heading weight="bold">Some heading.</Heading>
-<Heading weight="extra-bold">Some heading.</Heading>
-```
+<Playground direction="column" name="headingWeight" root="heading" />
 
 ### Truncate
 
@@ -53,162 +28,19 @@ The truncate prop with the value of "multiline" will truncate the heading if it 
 
 truncate (optional): Determines whether the heading should be truncated and how it should be truncated. If the value is "singleline", the heading will be truncated to fit within a single line and display an ellipsis at the end of the truncated heading. If the value is "multiline", the heading will be truncated if it exceeds the specified numberLine prop value and display an ellipsis at the end of the last visible line.
 
-Example:
-
-<HeadingTrucates />
-
-```tsx showLineNumbers title="Heading.tsx"
-export function HeadingTrucates() {
-  return (
-    <div className="l_f-md">
-      <Heading size="3xl" truncate="1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-      <Heading size="3xl" truncate="2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-      <Heading size="3xl" truncate="3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-      <Heading size="3xl" truncate="4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-
-      <Heading size="3xl" truncate="5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-
-      <Heading size="3xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-    </div>
-  )
-}
-```
+<Playground name="headingTruncate" root="heading" />
 
 ### Align
 
 This property specifies the horizontal alignment of the heading within the parent element. It can take one of the following values:
 
-- start: The heading is aligned to the left (default).
-- center: The heading is centered horizontally.
-- end: The heading is aligned to the right.
-
-Example:
-
-<HeadingAlign />
-
-```tsx showLineNumbers title="Heading.tsx"
-export function HeadingAligns() {
-  return (
-    <div className="l_flow">
-      <Heading align="start">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-      <Heading align="center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-      <Heading align="end">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="headingAlign" root="heading" />
 
 ### Color
 
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 The color prop sets the color of the heading . The contrast prop adjusts the contrast between heading text and its background. The default ensures high contrast for optimal readability. Using the low prop reduces contrast, which can impact accessibility for some users.
 
-Example:
-
-<HeadingColors />
-
-```tsx showLineNumbers title="Heading.tsx"
-export function HeadingColors() {
-  return (
-    <div className="l_flow">
-      <Heading color="dan">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="sec">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="suc">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="war">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="pri">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="bg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-
-      <Heading color="dan" low>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="sec" low>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="suc" low>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="war" low>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="pri" low>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-      <Heading color="bg" low>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-      </Heading>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="headingColor" root="heading" />
 
 ### Leading
 
@@ -216,48 +48,15 @@ you can customize the leading (line height) of your heading by using the leading
 
 Example
 
-<HeadingLeading />
-
-```tsx showLineNumbers title="Heading.tsx"
-<Heading leading="normal">
-  This heading has a normal line height.
-</Heading>
-<Heading leading="sm">
-  This heading has a small line height.
-</Heading>
-<Heading leading="md">
-  This heading has a medium line height.
-</Heading>
-<Heading leading="lg">
-  This heading has a large line height.
-</Heading>
-
-```
+<Playground direction="column" name="headingLeading" root="heading" />
 
 By using the leading prop, you can easily adjust the line height of your heading to create a more visually appealing design.
 
 ### dir RTL language
 
-"dir": This prop sets the direction of the heading within the component. It accepts the values "rtl" for right-to-left direction or "ltr" for left-to-right direction. This prop is useful when displaying heading in languages that are read from right to left, such as Arabic or Hebrew.
+This prop sets the direction of the heading within the component. It accepts the values "rtl" for right-to-left direction or "ltr" for left-to-right direction. This prop is useful when displaying heading in languages that are read from right to left, such as Arabic or Hebrew.
 
-<HeadingRTL />
-
-```tsx showLineNumbers title="Heading.tsx"
-export function HeadingRTL() {
-  return (
-    <div className="l_flow">
-      <Heading dir="rtl">
-        مُرَاكُش اموراكوش، «أرض الله») تسمى أيضًا بالمدينة الحمراء وعاصمة النخيل، هي ثالث أكبر مدينة في المملكة المغربية
-        من ناحية عدد السكان. وهي عاصمة جهة مراكش آسفي. تقع مراكش على بعد 580 كم (360 ميل) جنوب شرق طنجة، 327 كم (203
-        ميل) جنوب شرق العاصمة المغربية الرباط، 239 كم (149 ميل) جنوب شرق الدار البيضاء، و 246 كم (153 ميل) شمال شرق
-        أكادير.
-      </Heading>
-      <Heading dir="rtl">ללמוד לקוד זה אחד הדברים הכי טובים שאני עושה כל חיי</Heading>
-      <Heading dir="rtl">ކޯޑް ކުރަން ދަސްކުރުމަކީ އަހަރެންގެ މުޅި އުމުރުގައި ވެސް ކުރި އެންމެ ރަނގަޅު ކަމެކެވެ</Heading>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="headingRTL" root="heading" />
 
 ## Use Case
 

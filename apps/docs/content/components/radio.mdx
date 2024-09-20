@@ -8,16 +8,6 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Usage
-
-```tsx showLineNumbers title="Paper.tsx"
-import { Radio } from '@pillar-ui/core'
-
-function RadioColors() {
-  return <Radio label="Option 1" />
-}
-```
-
 ## Props
 
 ### Label
@@ -26,145 +16,31 @@ The label prop is used to specify the text that appears next to the radio.
 
 Example:
 
-<RadioLabel />
-
-```tsx showLineNumbers title="Radio.tsx"
-<Checkbox label="Option 1" />
-```
+<Playground name="radioLabel" root="radio" />
 
 ### Color
 
 The color scheme to use for the radio button. Possible values are "primary", "secondary", "success", "warning", and "error". Defaults to "primary".
 
-<RadioColors />
-
-```tsx showLineNumbers title="Paper.tsx"
-import { Flex, Radio } from '@pillar-ui/core'
-
-export function RadioColors() {
-  return (
-    <div>
-      <Flex gap="sm" items="center">
-        <Radio color="dan" name="red" label="Red" />
-        <Radio color="suc" name="green" label="Green" />
-        <Radio color="war" name="orange" label="Orange" />
-        <Radio color="pri" name="pri" label="Primary" />
-        <Radio color="brown" name="brown" label="Brown" />
-        <Radio color="bg" name="bg" label="Slate" />
-        <Radio color="purple" name="purple" label="Purple" />
-        <Radio color="sec" name="sec" label="Secondary" />
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground name="radioColor" root="radio" />
 
 ### Variant
 
 The variant prop controls the visual appearance of the radio button by changing the way it is displayed when selected. It determines whether the radio button has a solid ring, an outline, or a soft background color when it is checked. This allows you to customize the look and feel of the radio button to better match the design of your application.
 
-<RadioVariants />
-
-```tsx showLineNumbers title="Paper.tsx"
-import { Flex, Radio } from '@pillar-ui/core'
-
-export function RadioVariants() {
-  return (
-    <div className="l_f-md">
-      <Flex gap="sm" items="center">
-        <Radio color="dan" name="red" label="Red" />
-        <Radio color="suc" name="green" label="Green" />
-        <Radio color="war" name="orange" label="Orange" />
-        <Radio color="pri" name="pri" label="Primary" />
-        <Radio color="brown" name="brown" label="Brown" />
-        <Radio color="bg" name="bg" label="Slate" />
-        <Radio color="purple" name="purple" label="Purple" />
-        <Radio color="sec" name="sec" label="Secondary" />
-      </Flex>
-      <Flex gap="sm" items="center">
-        <Radio variant="outline" color="dan" name="red2" label="Red" />
-        <Radio variant="outline" color="suc" name="green2" label="Green" />
-        <Radio variant="outline" color="war" name="orange2" label="Orange" />
-        <Radio variant="outline" color="pri" name="pri2" label="Primary" />
-        <Radio variant="outline" color="brown" name="brown2" label="Brown" />
-        <Radio variant="outline" color="bg" name="bg2" label="Slate" />
-        <Radio variant="outline" color="purple" name="purple2" label="Purple" />
-        <Radio variant="outline" color="sec" name="sec2" label="Secondary" />
-      </Flex>
-      <Flex gap="sm" items="center">
-        <Radio variant="soft" color="dan" name="red3" label="Red" />
-        <Radio variant="soft" color="suc" name="green3" label="Green" />
-        <Radio variant="soft" color="war" name="orange3" label="Orange" />
-        <Radio variant="soft" color="pri" name="pri3" label="Primary" />
-        <Radio variant="soft" color="brown" name="brown3" label="Brown" />
-        <Radio variant="soft" color="bg" name="bg3" label="Slate" />
-        <Radio variant="soft" color="purple" name="purple3" label="Purple" />
-        <Radio variant="soft" color="sec" name="sec3" label="Secondary" />
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground name="radioVariant" root="radio" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size of the radio button. Possible values are "2xs", "xs","sm", "md", "lg", "xl", '2xl'. Defaults to "md".
 
-<RadioSizes />
-
-```tsx showLineNumbers title="Paper.tsx"
-import { Flex, Radio } from '@pillar-ui/core'
-
-export function RadioSizes() {
-  return (
-    <Flex gap="sm" items="center">
-      <Radio size="3xs" name="red" label="Red" />
-      <Radio size="2xs" name="green" label="Green" />
-      <Radio size="xs" name="orange" label="Orange" />
-      <Radio size="sm" name="pri" label="pri" />
-      <Radio size="lg" name="bg" label="Slate" />
-      <Radio size="3xl" name="sec" label="Secondary" />
-    </Flex>
-  )
-}
-```
+<Playground name="radioSize" root="radio" />
 
 ### State
 
 The Radio component can be in several different states depending on its props:
 
-<RadioState />
-
-```tsx showLineNumbers title="Paper.tsx"
-export function RadioStates() {
-  return (
-    <div className="l_f-md">
-      <Flex gap="sm" items="center">
-        <Radio name="solid.default" label="Red" />
-        <Radio name="solid.defaultChecked" label="Red" defaultChecked />
-        <Radio name="solid.disabled" label="Red" disabled />
-        <Radio name="solid.disabled-default" label="Red" disabled defaultChecked />
-      </Flex>
-      <Flex gap="sm" items="center">
-        <Radio variant="soft" name="soft.default" label="Red" />
-        <Radio variant="soft" name="soft.defaultChecked" label="Red" defaultChecked />
-        <Radio variant="soft" name="soft.disabled" label="Red" disabled />
-        <Radio variant="soft" name="soft.disabled-default" label="Red" disabled defaultChecked />
-      </Flex>
-      <Flex gap="sm" items="center">
-        <Radio variant="outline" name="outline.default" label="Red" />
-        <Radio variant="outline" name="outline.defaultChecked" label="Red" defaultChecked />
-        <Radio variant="outline" name="outline.disabled" label="Red" disabled />
-        <Radio variant="outline" name="outline.disabled-default" label="Red" disabled defaultChecked />
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground name="radioState" root="radio" />
 
 ## use case
 

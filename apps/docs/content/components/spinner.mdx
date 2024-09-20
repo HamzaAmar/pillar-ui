@@ -14,120 +14,27 @@ The Spinner component accepts the following props:
 
 ### Color
 
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 The color prop sets the color of the spinner. You can choose from a range of colors including green, red, orange, primary, purple, secondary, brown and bg.
 
-<SpinnerColors />
-
-```tsx showLineNumbers title="Spinner.tsx"
-import { Spinner, Flex } from '@pillar-ui/core'
-
-export function SpinnerColors() {
-  return (
-    <Flex gap="sm">
-      <Spinner color="suc" />
-      <Spinner color="dan" />
-      <Spinner color="war" />
-      <Spinner color="pri" />
-      <Spinner color="sec" />
-      <Spinner color="bg" />
-    </Flex>
-  )
-}
-```
+<Playground name="spinnerColor" root="spinner" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop sets the size of the spinner. You can choose from a range of sizes including 3xs, 2xs, xs, sm, md, xl, 2xl and 3xl.
 
-<SpinnerSizes />
-
-```tsx showLineNumbers title="Spinner.tsx"
-import { Spinner, Flex } from '@pillar-ui/core'
-
-export function SpinnerSizes() {
-  return (
-    <Flex gap="sm" items="center">
-      <Spinner size="3xs" />
-      <Spinner size="2xs" />
-      <Spinner size="xs" />
-      <Spinner size="sm" />
-      <Spinner size="md" />
-      <Spinner size="xl" />
-      <Spinner size="2xl" />
-      <Spinner size="3xl" />
-    </Flex>
-  )
-}
-```
+<Playground name="spinnerSize" root="spinner" />
 
 ### Thickness
 
 The thickness prop sets the thickness of the spinner. You can set any thickness value in pixels.
 
-<SpinnerThickness />
-
-```tsx showLineNumbers title="Spinner.tsx"
-import { Spinner, Flex } from '@pillar-ui/core'
-
-export function SpinnerThickness() {
-  return (
-    <Flex gap="sm" items="center">
-      <Spinner thickness="1px" />
-      <Spinner thickness="2px" />
-      <Spinner thickness="3px" />
-      <Spinner thickness="4px" />
-      <Spinner thickness="5px" />
-      <Spinner thickness="6px" />
-      <Spinner thickness="200px" />
-    </Flex>
-  )
-}
-```
+<Playground name="spinnerThickness" root="spinner" />
 
 ### Invert
 
 The invert prop inverts the color of the spinner, which can be useful when the spinner's default color clashes with the background color.
 
-<SpinnerInvert />
-
-```tsx showLineNumbers title="Spinner.tsx"
-import { Spinner, Flex } from '@pillar-ui/core'
-
-export function SpinnerInvert() {
-  return (
-    <div className="l_f-md">
-      <Flex gap="sm" items="center">
-        <Spinner color="suc" />
-        <Spinner color="dan" />
-        <Spinner color="war" />
-        <Spinner color="pri" />
-        <Spinner color="purple" />
-        <Spinner color="sec" />
-        <Spinner color="brown" />
-        <Spinner color="bg" />
-      </Flex>
-      <Flex gap="sm" items="center">
-        <Spinner invert color="suc" />
-        <Spinner invert color="dan" />
-        <Spinner invert color="war" />
-        <Spinner invert color="pri" />
-        <Spinner invert color="purple" />
-        <Spinner invert color="sec" />
-        <Spinner invert color="brown" />
-        <Spinner invert color="bg" />
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground name="spinnerInvert" root="spinner" />
 
 ## Use Case
 

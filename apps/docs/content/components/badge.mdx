@@ -12,242 +12,35 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop determines the size of the Badge. It accepts the following values:
 
-<BadgeSizes />
-
-```tsx showLineNumbers title="Badge.tsx"
-export const BadgeSize = () => {
-  return (
-    <div className="l_f-md">
-      <Flex items="center" gap="sm">
-        <Badge size="3xs" type="numeric" number={15} max={15} />
-        <Badge size="2xs" type="numeric" number={15} max={15} />
-        <Badge size="xs" type="numeric" number={15} max={15} />
-        <Badge size="sm" type="numeric" number={15} max={15} />
-        <Badge size="md" type="numeric" number={15} max={15} />
-        <Badge size="lg" type="numeric" number={15} max={15} />
-        <Badge size="2xl" type="numeric" number={15} max={15} />
-        <Badge size="3xl" type="numeric" number={15} max={15} />
-      </Flex>
-      <Flex items="center" gap="sm">
-        <Badge size="3xs" type="icon" icon={<Check />} />
-        <Badge size="2xs" type="icon" icon={<Check />} />
-        <Badge size="xs" type="icon" icon={<Check />} />
-        <Badge size="sm" type="icon" icon={<Check />} />
-        <Badge size="md" type="icon" icon={<Check />} />
-        <Badge size="lg" type="icon" icon={<Check />} />
-        <Badge size="2xl" type="icon" icon={<Check />} />
-        <Badge size="3xl" type="icon" icon={<Check />} />
-      </Flex>
-      <Flex items="center" gap="sm">
-        <Badge size="3xs" type="dot" />
-        <Badge size="2xs" type="dot" />
-        <Badge size="xs" type="dot" />
-        <Badge size="sm" type="dot" />
-        <Badge size="md" type="dot" />
-        <Badge size="lg" type="dot" />
-        <Badge size="2xl" type="dot" />
-        <Badge size="3xl" type="dot" />
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="badgeSize" root="badge" />
 
 ### Corner
 
-Type: string
-Default: `md`
-Options: `sharp` `xs` `sm` `md` `lg` `circle` `full`
 The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 The corner prop determines the border radius of the Badge. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-<BadgeCorners />
-
-```tsx showLineNumbers title="Badge.tsx"
-export const BadgeSize = () => {
-  return (
-    <div className="l_f-md">
-      <Flex items="center" gap="sm">
-        <Badge size="3xs" type="numeric" number={15} max={15} />
-        <Badge size="2xs" type="numeric" number={15} max={15} />
-        <Badge size="xs" type="numeric" number={15} max={15} />
-        <Badge size="sm" type="numeric" number={15} max={15} />
-        <Badge size="md" type="numeric" number={15} max={15} />
-        <Badge size="lg" type="numeric" number={15} max={15} />
-        <Badge size="2xl" type="numeric" number={15} max={15} />
-        <Badge size="3xl" type="numeric" number={15} max={15} />
-      </Flex>
-      <Flex items="center" gap="sm">
-        <Badge size="3xs" type="icon" icon={<Check />} />
-        <Badge size="2xs" type="icon" icon={<Check />} />
-        <Badge size="xs" type="icon" icon={<Check />} />
-        <Badge size="sm" type="icon" icon={<Check />} />
-        <Badge size="md" type="icon" icon={<Check />} />
-        <Badge size="lg" type="icon" icon={<Check />} />
-        <Badge size="2xl" type="icon" icon={<Check />} />
-        <Badge size="3xl" type="icon" icon={<Check />} />
-      </Flex>
-      <Flex items="center" gap="sm">
-        <Badge size="3xs" type="dot" />
-        <Badge size="2xs" type="dot" />
-        <Badge size="xs" type="dot" />
-        <Badge size="sm" type="dot" />
-        <Badge size="md" type="dot" />
-        <Badge size="lg" type="dot" />
-        <Badge size="2xl" type="dot" />
-        <Badge size="3xl" type="dot" />
-      </Flex>
-    </div>
-  )
-}
-```
-
-### Types
-
-The type prop determines the type of Badge to render. It accepts the following values:
-
-- **numeric**: displays a numeric value.
-- **icon**: displays an icon.
-- **dot**: displays a dot.
-
-<BadgeTypes />
-
-```tsx showLineNumbers title="Badge.tsx"
-export const BadgeTypes = () => {
-  return (
-    <div className="l_flow_md">
-      <Flex gap="sm">
-        <Badge type="dot" color="dan" />
-        <Badge type="numeric" number={15} max={15} color="dan" />
-        <Badge type="icon" icon={<Check />} color="dan" />
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="badgeCorner" root="badge" />
 
 ### Variants
 
-Type: string
-Default: `solid`
-Options: `solid` `mixed`
-
 The variants prop determines the style of the Badge.
 
-<BadgeVariants />
-
-```tsx showLineNumbers title="Badge.tsx"
-export const BadgeVariants = () => {
-  return (
-    <div className="l_flow_md">
-      <Flex gap="sm">
-        <Badge variant="solid" color="dan" />
-        <Badge variant="mixed" number={15} max={15} color="dan" />
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="badgeVariant" root="badge" />
 
 ### Number
 
 The number prop is required for the numeric type. It determines the numeric value to display.
 
-<BadgeNumeric />
-
-```tsx showLineNumbers title="Badge.tsx"
-export const BadgeNumericMaxValue = () => {
-  return (
-    <Flex gap="sm">
-      <Badge type="numeric" number={15} color="dan" />
-      <Badge type="numeric" number={150} color="suc" />
-      <Badge type="numeric" number={5} color="war" />
-      <Badge type="numeric" number={0} color="pri" />
-      <Badge type="numeric" showZero number={0} color="dan" />
-      <Badge type="numeric" number={12211} color="brown" />
-      <Badge type="numeric" number={1500} color="purple" />
-      <Badge type="numeric" number={15} color="sec" />
-      <Badge type="numeric" number={15} color="bg" />
-    </Flex>
-  )
-}
-```
-
-### Max
-
-The max prop is required for the numeric type. It determines the maximum value that can be displayed. If the number prop is greater than max, the badge will display max+.
-
-<BadgeNumericMaxValue />
-
-```tsx showLineNumbers title="Badge.tsx"
-export const BadgeNumericMaxValue = () => {
-  return (
-    <Flex gap="sm">
-      <Badge type="numeric" number={15} max={10} color="dan" />
-      <Badge type="numeric" number={150} max={100} color="suc" />
-      <Badge type="numeric" number={5} max={0} color="war" />
-      <Badge type="numeric" number={0} max={15} color="pri" />
-      <Badge type="numeric" showZero number={0} max={15} color="dan" />
-      <Badge type="numeric" number={12211} max={10000} color="brown" />
-      <Badge type="numeric" number={1500} max={100} color="purple" />
-      <Badge type="numeric" number={15} max={1} color="sec" />
-      <Badge type="numeric" number={15} max={15} color="bg" />
-    </Flex>
-  )
-}
-```
+<Playground name="badgeNumeric" root="badge" />
 
 ### Color
 
-Type: Color (string)
-Default: `primary`
-Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 The color prop determines the color of the Badge. It accepts a string representing a color name or a color value in hex, rgb, rgba format.###
 
-code Example
-
-<BadgeColors />
-
-```tsx showLineNumbers title="Badge.tsx"
-export const BadgeDotColor = () => {
-  return (
-    <Paper className="playground" borderColor="opa-6" p="sm" flow="sm" background="bg-3" corner="sm">
-      <Flex gap="sm">
-        <Badge type="numeric" number={15} max={15} color="dan" />
-        <Badge type="numeric" number={15} max={15} color="suc" />
-        <Badge type="numeric" number={15} max={15} color="war" />
-        <Badge type="numeric" number={15} max={15} color="pri" />
-        <Badge type="numeric" number={15} max={15} color="sec" />
-        <Badge type="numeric" number={15} max={15} color="bg" />
-      </Flex>
-      <Flex gap="sm">
-        <Badge type="icon" icon={<Check />} color="dan" />
-        <Badge type="icon" icon={<Check />} color="suc" />
-        <Badge type="icon" icon={<Check />} color="war" />
-        <Badge type="icon" icon={<Check />} color="pri" />
-        <Badge type="icon" icon={<Check />} color="sec" />
-        <Badge type="icon" icon={<Check />} color="bg" />
-      </Flex>
-      <Flex gap="sm">
-        <Badge type="dot" color="dan" />
-        <Badge type="dot" color="suc" />
-        <Badge type="dot" color="war" />
-        <Badge type="dot" color="pri" />
-        <Badge type="dot" color="sec" />
-        <Badge type="dot" color="bg" />
-      </Flex>
-    </Paper>
-  )
-}
-```
+<Playground direction="column" name="badgeColor" root="badge" />
 
 ## Use Case
 

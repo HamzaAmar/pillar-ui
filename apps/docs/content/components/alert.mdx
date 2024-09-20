@@ -14,66 +14,49 @@ The Alert component accepts the following props:
 
 ### Color
 
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 The color prop determines the background color of the Alert. It accepts any of the Color types defined in our library see options above. If not provided, it defaults to the primary color.
 
-Example usage:
-
-<Alerts.color />
+<Playground direction="column" name="alertClosable" root="alert" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
-Example usage:
+<Playground direction="column" name="alertSize" root="alert" />
 
 ### Variant
 
 The variant prop determines the visual style of the alert. The following are the descriptions of the different variants:
 
-Type: string
-Default: `solid`
-Options: `solid` `outline` `soft` `mixed`
+<Playground direction="column" name="alertVariant" root="alert" />
 
 ### Corner
 
-Type: string
-Default: `md`
-Options: `sharp` `xs` `sm` `md` `lg` `circle` `full`
 The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 The corner prop determines the border radius of the Alert. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-Example usage:
+<Playground direction="column" name="alertCorner" root="alert" />
 
 ### Content
 
 The content of the Alert the text displayed as the Alert's title. If not provided, the title section of the Alert will not be displayed.
 
-Example usage:
+<Playground direction="column" name="alertContent" root="alert" />
 
 ### Icon
 
 The icon prop allows you to display an icon alongside the Alert. It accepts any ReactNode, such as an icon from the @pillar-ui/icons package. If no icon is provided, no icon will be displayed.
-Example usage:
+
+<Playground direction="column" name="alertIcon" root="alert" />
 
 ### Closable
 
 The closable prop determines whether the Alert should be closable by the user. If set to true, a close button will be displayed on the Alert. If not provided, it defaults to false.
 
-Example usage:
-
 ### Inline
 
 The inline prop determines how the alert is displayed. If set to true, the alert will be displayed horizontally, which is useful for short alerts that do not take up a lot of space, such as notifications or messages. If not set or set to false, the alert will be displayed as a vertically.
-Example usage:
 
 ## Accessibility
 

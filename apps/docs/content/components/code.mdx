@@ -14,78 +14,19 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 can be used to customize the corners of the code block. The corner prop accepts a string that can be one of the following values:
 
-- sharp: The code block will have sharp corners.
-- sm: The code block will have small, rounded corners.
-- md: The code block will have medium-sized, rounded corners.
-- lg: The code block will have large, rounded corners.
-- full: The code block will have rounded corners that fill the entire block.
-
-<CodeCorners />
-
-```tsx showLineNumbers title="Code.tsx"
-export const CodeCorners = () => {
-  return (
-    <Flex gap="sm" direction="column" justify="center">
-      <Code corner="sharp">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code corner="sm">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code corner="md">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code corner="lg">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code corner="full">{`console.log('Hello world Every thing is OK')`}</Code>
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="codeCorner" root="code" />
 
 ### Color
 
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 The color prop determines the color of the code. It accepts a string representing a color name or a color value in hex, rgb, rgba format.
 
-<CodeColors />
-
-```tsx showLineNumbers title="Code.tsx"
-export const CodeColors = () => {
-  return (
-    <Flex gap="sm" direction="column" justify="center">
-      <Code color="dan">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="suc">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="war">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="pri">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="bg">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="sec">{`console.log('Hello world Every thing is OK')`}</Code>
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="codeColor" root="code" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop determines the size of the code. It accepts a string representing a length in pixels.
 
-<CodeSizes />
-
-```tsx showLineNumbers title="Code.tsx"
-export const CodeSizes = () => {
-  return (
-    <Flex gap="sm" direction="column" justify="center">
-      <Code size="2xs">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="xs">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="sm">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="md">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="lg">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="xl">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="2xl">{`console.log('Hello world Every thing is OK')`}</Code>
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="codeSize" root="code" />
 
 ## Use Case
 

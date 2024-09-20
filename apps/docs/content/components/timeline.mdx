@@ -10,328 +10,41 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop determines the size of the Timeline. It accepts any of the Size types defined in your library, including (3xs, 2xs,xs, sm, md, and lg, xl, 2xl, 3xl). If not provided, it defaults to the md size.
 
 Example usage:
 
-<TimelineSizes />
-
-```tsx showLineNumbers title="Timeline.tsx"
-const Items = (props: Omit<TimelineItemProps, 'children'>) => {
-  return (
-    <>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-    </>
-  )
-}
-
-export const TimelineSize = () => {
-  return (
-    <Flex gap="sm">
-      <Timeline size="2xs">
-        <Items />
-      </Timeline>
-      <Timeline size="xs">
-        <Items />
-      </Timeline>
-      <Timeline size="sm">
-        <Items />
-      </Timeline>
-      <Timeline size="md">
-        <Items />
-      </Timeline>
-      <Timeline size="lg">
-        <Items />
-      </Timeline>
-      <Timeline size="xl">
-        <Items />
-      </Timeline>
-      <Timeline size="2xl">
-        <Items />
-      </Timeline>
-    </Flex>
-  )
-}
-```
+<Playground name="timelineSize" root="timeline" />
 
 ### Color
-
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `secondary` `bg`
 
 The color prop determines the color of the Timeline. It accepts a string representing a color name or a color value in hex, rgb, rgba format.###
 
 code Example
 
-<TimelineColors />
-
-```tsx
-const Items = (props: Omit<TimelineItemProps, 'children'>) => {
-  return (
-    <>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-    </>
-  )
-}
-
-export const TimelineColor = () => {
-  return (
-    <Flex gap="sm">
-      <Timeline color="bg">
-        <Items />
-      </Timeline>
-      <Timeline color="sec">
-        <Items />
-      </Timeline>
-      <Timeline color="pri">
-        <Items />
-      </Timeline>
-      <Timeline color="suc">
-        <Items />
-      </Timeline>
-      <Timeline color="dan">
-        <Items />
-      </Timeline>
-      <Timeline color="war">
-        <Items />
-      </Timeline>
-    </Flex>
-  )
-}
-```
+<Playground name="timelineColor" root="timeline" />
 
 ### Corner
 
-Type: string
-Default: `md`
-Options: `sharp` `xs` `sm` `md` `lg` `circle` `full`
 The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 The corner prop determines the border radius of the Timeline. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-<TimelineCorners />
-
-```tsx showLineNumbers title="Timeline.tsx"
-const Items = (props: Omit<TimelineItemProps, 'children'>) => {
-  return (
-    <>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-    </>
-  )
-}
-
-export const TimelineCorner = () => {
-  return (
-    <Grid columns="1fr 1fr 1fr" className="md_grid-two sm_grid-one" gap="lg">
-      <Timeline corner="sharp">
-        <Items />
-      </Timeline>
-      <Timeline corner="xs">
-        <Items />
-      </Timeline>
-      <Timeline>
-        <Items />
-      </Timeline>
-      <Timeline corner="md">
-        <Items />
-      </Timeline>
-      <Timeline corner="lg">
-        <Items />
-      </Timeline>
-      <Timeline corner="xl">
-        <Items />
-      </Timeline>
-      <Timeline corner="full">
-        <Items />
-      </Timeline>
-    </Grid>
-  )
-}
-```
+<Playground name="timelineCorner" root="timeline" />
 
 ### Variant
 
 The variant property specifies the type of border for a component. The possible values are:
 
-- **solid**: A solid border for the timeline Line.
-- **dotted**: A dotted border for the timeline Line.
-- **dashed**: A dashed border for the timeline Line.
-
 The default value is solid.
 
-<TimelineVariants />
-
-```tsx showLineNumbers title="Timeline.tsx"
-const Items = (props: Omit<TimelineItemProps, 'children'>) => {
-  return (
-    <>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-    </>
-  )
-}
-
-export const TimelineVariant = () => {
-  return (
-    <Grid columns="1fr 1fr 1fr" className="md_grid-two sm_grid-one" gap="lg">
-      <Timeline variant="solid">
-        <Items />
-      </Timeline>
-      <Timeline variant="dotted">
-        <Items />
-      </Timeline>
-      <Timeline variant="dashed">
-        <Items />
-      </Timeline>
-    </Grid>
-  )
-}
-```
+<Playground name="timelineVariant" root="timeline" />
 
 ### Bullet
 
 The bullet prop can be used to customize the appearance of the bullet. It accepts a React element, which can be used to change the color, size, and style of the bullet.
 
-<TimelineCustomBullet />
-
-```tsx showLineNumbers title="Timeline.tsx"
-export const TimelineCustomBullet = () => {
-  return (
-    <Timeline>
-      <Timeline.Item bullet={<Cross />}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item
-        bullet={<Avatar variant="image" size="xs" image="https://picsum.photos/id/152/40/40" title="hello" />}
-      >
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
-          Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
-          quae.
-        </Text>
-      </Timeline.Item>
-    </Timeline>
-  )
-}
-```
+<Playground name="timelineCustomBullet" root="timeline" />
 
 ## Use Case
 

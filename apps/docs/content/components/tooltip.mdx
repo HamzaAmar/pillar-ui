@@ -14,23 +14,6 @@ The Tooltip component is designed to enhance user experience by displaying addit
 
 ### Tooltip Example
 
-```jsx
-import Tooltip from 'your-tooltip-library'
-
-function App() {
-  return (
-    <div>
-      <Tooltip.Trigger>
-        <button>Hover me</button>
-      </Tooltip.Trigger>
-      <Tooltip.Content>This is a tooltip!</Tooltip.Content>
-    </div>
-  )
-}
-
-export default App
-```
-
 ## Tooltip Components
 
 The Tooltip component consists of two main parts: the Trigger and the Content.
@@ -41,21 +24,11 @@ The `Tooltip.Trigger` component represents the element that triggers the tooltip
 
 #### Example Usage
 
-```jsx
-<Tooltip.Trigger>
-  <button>Hover me</button>
-</Tooltip.Trigger>
-```
-
 ### Tooltip.Content
 
 The `Tooltip.Content` component contains the content that will be displayed inside the tooltip when the trigger element is interacted with.
 
 #### Example Usage
-
-```jsx
-<Tooltip.Content>This is a tooltip!</Tooltip.Content>
-```
 
 ## Props
 
@@ -73,15 +46,6 @@ The position where the tooltip will appear in relation to the trigger element.
 
 **Example Usage:**
 
-```tsx showLineNumbers title="App.tsx"
-<Tooltip position="bottom">
-  <Tooltip.Trigger>
-    <button>Hover me</button>
-  </Tooltip.Trigger>
-  <Tooltip.Content>This is a tooltip at the bottom.</Tooltip.Content>
-</Tooltip>
-```
-
 ### align
 
 The alignment of the tooltip within its position.
@@ -91,15 +55,6 @@ The alignment of the tooltip within its position.
 - Options: `start` `end` `center`
 
 **Example Usage:**
-
-```tsx showLineNumbers title="App.tsx"
-<Tooltip align="start">
-  <Tooltip.Trigger>
-    <button>Hover me</button>
-  </Tooltip.Trigger>
-  <Tooltip.Content>This is a tooltip aligned to the start.</Tooltip.Content>
-</Tooltip>
-```
 
 ### delay
 
@@ -112,15 +67,6 @@ The delay in milliseconds before the tooltip appears after interacting with the 
 
 **Example Usage:**
 
-```tsx showLineNumbers title="App.tsx"
-<Tooltip delay={300}>
-  <Tooltip.Trigger>
-    <button>Hover me</button>
-  </Tooltip.Trigger>
-  <Tooltip.Content>This is a tooltip with a delay of 300ms.</Tooltip.Content>
-</Tooltip>
-```
-
 ### Tooltip.Content
 
 The `Tooltip.Content` component accepts the following prop:
@@ -128,10 +74,6 @@ The `Tooltip.Content` component accepts the following prop:
 - `duration` (number, default: 200): The duration in milliseconds for the tooltip to remain visible after the trigger element is no longer interacted with.
 
   **Example Usage:**
-
-```tsx showLineNumbers title="App.tsx"
-<Tooltip.Content duration={500}>This is a tooltip that stays visible for 500ms after interaction.</Tooltip.Content>
-```
 
 ## Accessibility
 

@@ -16,106 +16,25 @@ The following are the props that can be used with the Checkbox component:
 
 The label prop is used to specify the text that appears next to the checkbox.
 
-Example:
-
-<CheckboxLabel />
-
-```tsx showLineNumbers title="Checkbox.tsx"
-<Checkbox label="Option 1" />
-```
+<Playground name="checkboxLabel" root="checkbox" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop determines the size of the Badge. It accepts the following values:
 
-<CheckboxSizes />
-
-```tsx showLineNumbers title="Checkbox.tsx"
-export const BadgeSize = () => {
-  return (
-    <div className="l_f-md">
-      <Flex items="center" gap="sm">
-        <Checkbox size="3xs" label="Option 1" />
-        <Checkbox size="2xs" label="Option 2" />
-        <Checkbox size="xs" label="Option 3" />
-        <Checkbox size="sm" label="Option 4" />
-        <Checkbox size="md" label="Option 5" />
-        <Checkbox size="lg" label="Option 6" />
-        <Checkbox size="2xl" label="Option 7" />
-        <Checkbox size="3xl" label="Option 8" />
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground name="checkboxSize" root="checkbox" />
 
 ### Color
 
-- Type: string
-- Default: `undefined`
-- Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 The color prop is used to specify the background color of the Checkbox component. It supports the following color options: danger, warning, success, brown, primary, secondary, purple, and bg.
 
-Example:
-
-<CheckboxColors />
-
-```tsx showLineNumbers title="Checkbox.tsx"
-export const CheckboxColor = () => {
-  return (
-    <Flex gap="sm" items="center">
-      <Checkbox name="hello" label="Options 1" />
-      <Checkbox name="hello" label="Options 2" color="dan" />
-      <Checkbox name="hello" label="Options 3" color="suc" />
-      <Checkbox name="hello" label="Options 4" color="war" />
-      <Checkbox name="hello" label="Options 5" color="pri" />
-      <Checkbox name="hello" label="Options 6" color="sec" />
-      <Checkbox name="hello" label="Options 7" color="bg" />
-    </Flex>
-  )
-}
-```
+<Playground name="checkboxColor" root="checkbox" />
 
 ### Disabled
 
 The disabled state of the Checkbox component is used to indicate that the checkbox cannot be interacted with. It is often used when the user is not allowed to select an option or when the option is not applicable in the current context. In this state, the checkbox appears grayed out and its label may also be grayed out to indicate that it is disabled.
-Example:
 
-<CheckboxDisabled />
-
-```tsx showLineNumbers title="Checkbox.tsx"
-export const CheckboxDisabled = () => {
-  return (
-    <div className="l_f-md">
-      <Flex gap="sm" items="center">
-        <Checkbox disabled name="hello" label="Hello" color="dan" />
-        <Checkbox disabled name="hello" label="Hello" color="suc" />
-        <Checkbox disabled name="hello" label="Hello" color="war" />
-        <Checkbox disabled name="hello" label="Hello" color="pri" />
-        <Checkbox disabled name="hello" label="Hello" color="sec" />
-        <Checkbox disabled name="hello" label="Hello" color="purple" />
-        <Checkbox disabled name="hello" label="Hello" color="brown" />
-        <Checkbox disabled name="hello" label="Hello" color="bg" />
-      </Flex>
-      <Flex gap="sm" items="center">
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="dan" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="suc" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="war" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="pri" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="sec" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="purple" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="brown" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="bg" />
-      </Flex>
-    </div>
-  )
-}
-```
+<Playground name="checkboxDisabled" root="checkbox" />
 
 ### DefaultChecked
 
@@ -123,52 +42,9 @@ The defaultChecked prop in the Checkbox component is used to set the initial che
 
 #### Usage
 
-<CheckboxDefaultCheck />
-
-```tsx showLineNumbers title="Checkbox.tsx"
-import { Flex, Checkbox } from '@pillar-ui/core'
-
-export const CheckboxDefaultCheckedColor = () => {
-  return (
-    <Flex gap="sm" items="center">
-      <Checkbox defaultChecked name="hello" label="Hello" color="dan" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="suc" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="war" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="pri" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="sec" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="bg" />
-    </Flex>
-  )
-}
-```
+<Playground name="checkboxDefaultChecked" root="checkbox" />
 
 Here's an example of using the defaultChecked prop with different colors in the Checkbox component:
-
-### Size:Size
-
-The size prop is used to set the size of the checkbox component. It accepts the following options: 3xs, 2xs, xs, sm, md, lg, xl, 2xl, and 3xl.
-
-<CheckboxSizes />
-
-```tsx showLineNumbers title="Checkbox.tsx"
-import { Flex, Checkbox } from '@pillar-ui/core'
-
-export const CheckboxSize = () => {
-  return (
-    <Flex gap="sm" items="center">
-      <Checkbox size="3xs" name="hello" label="Hello" color="suc" />
-      <Checkbox size="2xs" name="hello" label="Hello" color="suc" />
-      <Checkbox size="xs" name="hello" label="Hello" color="suc" />
-      <Checkbox size="sm" name="hello" label="Hello" color="suc" />
-      <Checkbox size="md" name="hello" label="Hello" color="war" />
-      <Checkbox size="lg" name="hello" label="Hello" color="pri" />
-      <Checkbox size="xl" name="hello" label="Hello" color="pri" />
-      <Checkbox size="2xl" name="hello" label="Hello" color="pri" />
-      <Checkbox size="3xl" name="hello" label="Hello" color="pri" />
-    </Flex>
-  )
-}
-```
 
 ### checkbox status
 
@@ -180,65 +56,11 @@ By default, when neither checked nor isIndeterminate props are set, the checkbox
 
 Examples
 
-<CheckboxStatus />
-
-```tsx showLineNumbers title="Checkbox.tsx"
-import { Checkbox } from '@pillar-ui/core'
-
-export const CheckboxStatus = () => {
-  return (
-    <Flex gap="sm" items="center">
-      <Checkbox name="hello" label="Hello" />
-      <Checkbox name="hello" label="Hello" checked />
-      <Checkbox name="hello" label="Hello" isIndeterminate />
-      <Checkbox name="hello" label="Hello" isIndeterminate checked />
-    </Flex>
-  )
-}
-```
+<Playground name="checkboxStatus" root="checkbox" />
 
 ### isIndeterminate
 
-<CheckboxIsIndeterminate />
-
-```tsx
-import { Checkbox } from '@pillar-ui/core'
-import { useCheckboxGroup } from '@pillar-ui/hooks'
-
-const ParentCheckbox = ({ children }: any) => {
-  const child = Array.from({ length: React.Children.count(children) }, () => false)
-  const { checkedItems, isAllChecked, isIndeterminate, handleToggleAll, handleToggleItem } = useCheckboxGroup(child)
-
-  return (
-    <>
-      <Checkbox
-        label="Parent Checkbox"
-        checked={isAllChecked}
-        isIndeterminate={isIndeterminate}
-        onChange={handleToggleAll}
-      />
-      <ul>
-        {React.Children.map(children, (child, index) => (
-          <li>
-            {React.cloneElement(child, {
-              checked: checkedItems[index],
-              onChange: () => handleToggleItem(index),
-            })}
-          </li>
-        ))}
-      </ul>
-    </>
-  )
-}
-
-export const CheckboxIsIndeterminate = () => (
-  <ParentCheckbox>
-    <Checkbox label="Child Checkbox 1" name="child1" />
-    <Checkbox label="Child Checkbox 2" name="child2" />
-    <Checkbox label="Child Checkbox 3" name="child3" />
-  </ParentCheckbox>
-)
-```
+<Playground direction="column" name="checkboxIsIndeterminate" root="checkbox" />
 
 ## Use Case
 

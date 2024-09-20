@@ -14,191 +14,37 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 A filled input is a type of input field that has a background color. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
-<TextareaFilled />
-
-```tsx showLineNumbers title="Textarea.tsx"
-export const FilledTextarea = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Textarea aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
-      <Textarea aria-label="hello" placeholder="Normal" variant="filled" />
-      <Textarea aria-label="hello" disabled placeholder="Disabled" variant="filled" />
-      <Textarea aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
-      <Textarea aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <Textarea aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" variant="filled" />
-      <Textarea aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" variant="filled" />
-      <Textarea
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="textareaFilled" root="form/textarea" />
 
 ### Outline
 
 The outline variant of the input component is a type of input field that has a border around it. This makes it easy for users to see where they are typing and to distinguish between input fields.
 
-<TextareaOutline />
-
-```tsx showLineNumbers title="Textarea.tsx"
-export const OutlineTextarea = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Textarea variant="outline" aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
-      <Textarea variant="outline" aria-label="hello" placeholder="Normal" variant="filled" />
-      <Textarea variant="outline" aria-label="hello" disabled placeholder="Disabled" variant="filled" />
-      <Textarea variant="outline" aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
-      <Textarea variant="outline" aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <Textarea
-        variant="outline"
-        aria-label="hello"
-        suffixInput={<User width="16" />}
-        placeholder="Error"
-        variant="filled"
-      />
-      <Textarea
-        variant="outline"
-        aria-label="hello"
-        prefixInput={<User width="16" />}
-        placeholder="Placeholder"
-        variant="filled"
-      />
-      <Textarea
-        variant="outline"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="textareaOutline" root="form/textarea" />
 
 ### Bordered
 
 The bordered variant of the input component is a type of input field that has a bottom border that visually separates the input from others and shows the edge of the input.
 
-<TextareaBordered />
-
-```tsx showLineNumbers title="Input.tsx"
-export const OutlineInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Textarea variant="bordered" aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
-      <Textarea variant="bordered" aria-label="hello" placeholder="Normal" variant="filled" />
-      <Textarea variant="bordered" aria-label="hello" disabled placeholder="Disabled" variant="filled" />
-      <Textarea variant="bordered" aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
-      <Textarea variant="bordered" aria-label="hello" isInvalid placeholder="Error" variant="filled" />
-      <Textarea
-        variant="bordered"
-        aria-label="hello"
-        suffixInput={<User width="16" />}
-        placeholder="Error"
-        variant="filled"
-      />
-      <Textarea
-        variant="bordered"
-        aria-label="hello"
-        prefixInput={<User width="16" />}
-        placeholder="Placeholder"
-        variant="filled"
-      />
-      <Textarea
-        variant="bordered"
-        aria-label="hello"
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-        variant="filled"
-      />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="textareaBordered" root="form/textarea" />
 
 ### Corner
 
 The corner prop is a prop that can be used to customize the corner radius of the Input component. Valid values for the corner prop are: `sharp` `xs` `sm` `md` `lg` `xl` `full`
 
-<TextareaCorners />
-
-```tsx showLineNumbers title="Input.tsx"
-export const CornerInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Textarea corner="sharp" placeholder="sharp" />
-      <Textarea corner="xs" placeholder="xs" />
-      <Textarea corner="sm" placeholder="sm" />
-      <Textarea corner="md" placeholder="md" />
-      <Textarea corner="lg" placeholder="lg" />
-      <Textarea corner="xl" placeholder="xl" />
-      <Textarea corner="full" placeholder="full" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="textareaCorner" root="form/textarea" />
 
 ### Color
 
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 The color prop can be used to customize the color of the input's border when it is focused. Valid values for the color prop are: `primary` `purple` `secondary` `brown` `bg`
 
-<TextareaColors />
-
-```tsx showLineNumbers title="Input.tsx"
-export const ColorInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Textarea color="pri" variant="bordered" autoFocus placeholder="Focus" />
-      <Textarea color="war" variant="bordered" autoFocus placeholder="Normal" />
-      <Textarea color="sec" variant="outline" autoFocus placeholder="Disabled" />
-      <Textarea color="bg" variant="filled" autoFocus placeholder="isInvalid" />
-      <Textarea color="suc" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <Textarea
-        color="dan"
-        variant="bordered"
-        autoFocus
-        prefixInput={'https://'}
-        suffixInput=".com"
-        defaultValue="Default Value"
-      />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="textareaColor" root="form/textarea" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop of the input component is used to change the size of the input field. The default size is medium `md`. The following values are supported: `sm` ,`lg`
 
-<TextareaSizes />
-
-```tsx showLineNumbers title="Input.tsx"
-import { Flex, Input } from '@pillar-ui/core'
-export const SizeInput = () => {
-  return (
-    <Flex gap="sm" direction="column">
-      <Textarea size="sm" placeholder="Small(sm)" />
-      <Textarea placeholder="Medium (md default You don't need it)" />
-      <Textarea size="lg" placeholder="Large(lg)" />
-    </Flex>
-  )
-}
-```
+<Playground direction="column" name="textareaSize" root="form/textarea" />
 
 ## Best Practice
 

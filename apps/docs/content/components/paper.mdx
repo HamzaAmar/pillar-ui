@@ -10,175 +10,23 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 ## Usage
 
-```tsx showLineNumbers title="Paper.tsx"
-import { Paper } from '@pillar-ui/core'
-function(){
-    return(
-        <Paper
-            background="gray-200"
-            color="gray-700"
-            corner="md"
-            padding="md"
-            shadow="sm"
-            width="full"
-        >
-            <p>Some content goes here...</p>
-        </Paper>
-    )
-}
-```
-
 ## Props
 
 The Paper component accepts the following props:
 
 ### Background
 
-- Type: string
-- Default: none
-- Options: `danger` `warning` `success` `primary` `bg` `primary` `secondary` `opacity`
-
 The background prop determines the background color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it defaults to the white color.
 
-Example usage:
-
-<PaperBackground />
-```tsx showLineNumbers title="Paper.tsx"
-function PaperBackgrounds(){
-    return(
-    <Paper
-      as={Flex}
-      gap="sm"
-      className="playground"
-      borderColor="opa-6"
-      p="sm"
-      background="bg-3"
-      corner="sm"
-    >
-      <Paper borderColor="opa-8" width="30-char" ratio='1' />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="dan" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="dan-5" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="dan-10" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="suc-5" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="suc-8" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="suc-11" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="pri-12" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="pri-10" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="pri-8" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="bg-1" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="bg-4" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="bg-8" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="war-4" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="war-8" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="war-12" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="sec-3" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="sec-8" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="sec-12" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="opa-4" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="opa-7" />
-      <Paper borderColor="opa-8" width="30-char" ratio='1' background="opa-11" />
-    </Paper>
-    )
-}
-```
+<Playground name="accordionCollapsible" root="accordion" />
 
 ### Color
-
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `bg` `primary` `secondary`
 
 The color prop determines the text color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it `inherit` the of its parent.
 
 We recommend using the color from step 11 or 12 because it provides high contrast against the background. It's important to always check color contrast when changing the background or paper color.
 
-Example usage:
-
-<PaperColors />
-
-```tsx showLineNumbers title="Paper.tsx"
-function PaperColors() {
-  return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      direction="column"
-      className="playground"
-      borderColor="opa-6"
-      p="sm"
-      background="bg-3"
-      corner="sm"
-    >
-      <Paper background="bg-5" p="xs">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="dan">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="dan-5">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="dan-10">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="suc-5">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="suc-8">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="suc-11">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="pri-12">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="pri-10">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="pri-8">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="bg-1">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="bg-4">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="bg-8">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="war-4">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="war-8">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="war-12">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="sec-3">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="sec-8">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="sec-12">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="opa-4">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" color="opa-7">
-        Hello
-      </Paper>
-      <Paper background="bg-5" p="xs" height="60px" color="opa-11">
-        Hello
-      </Paper>
-    </Paper>
-  )
-}
-```
+<Playground name="accordionCollapsible" root="accordion" />
 
 ### Corner
 
@@ -189,285 +37,31 @@ Options: sharp xs sm md lg xl circle full
 
 The corner prop determines the border radius of the Paper component. It accepts any of the Corner types defined in our library, including (sharp, xs, sm, md, lg, xl, circle, full). If not provided, it defaults to the md corner.
 
-Example usage:
-
-<PaperCorners />
-
-```tsx showLineNumbers title="Paper.tsx"
-function PaperCorners() {
-  return (
-    <>
-      <Paper p="xs" background="bg-5" corner="sharp">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="xs">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="md">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="lg">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="xl">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="circle">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="full">
-        Hello World
-      </Paper>
-
-      <Paper p="xs" background="bg-5" corner="blob-1">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="blob-2">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="blob-3">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="blob-4">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="blob-5">
-        Hello World
-      </Paper>
-
-      <Paper p="xs" background="bg-5" corner="hand-1">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="hand-2">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="hand-3">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="hand-4">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="hand-5">
-        Hello World
-      </Paper>
-      <Paper p="xs" background="bg-5" corner="hand-6">
-        Hello World
-      </Paper>
-    </>
-  )
-}
-```
+<Playground name="accordionCollapsible" root="accordion" />
 
 ### Padding
 
-**padding**
-Type: string
-Default: md
-Options: 2xs xs sm md lg xl
-
 The padding prop determines the padding size of the Paper component. It accepts any of the Size types defined in our library. If not provided, it defaults to the md padding.
 
-Example usage:
-
-<PaperPadding />
-
-```tsx showLineNumbers title="Paper.tsx"
-function PaperPadding() {
-  return (
-    <Paper
-      as={Flex}
-      gap="sm"
-      direction="column"
-      className="playground"
-      borderColor="opa-6"
-      p="sm"
-      background="bg-3"
-      corner="sm"
-    >
-      <Paper
-        style={{ display: 'flow-root' }}
-        className="u_center"
-        width="30-char"
-        ratio="16-9"
-        background="bg-5"
-        m="2xl"
-      >
-        2xl Margin
-      </Paper>
-      <Paper
-        style={{ display: 'flow-root' }}
-        className="u_center"
-        width="30-char"
-        ratio="16-9"
-        background="bg-5"
-        m="xl"
-      >
-        xl Margin
-      </Paper>
-      <Paper
-        style={{ display: 'flow-root' }}
-        className="u_center"
-        width="30-char"
-        ratio="16-9"
-        background="bg-5"
-        m="lg"
-      >
-        lg Margin
-      </Paper>
-
-      <Paper
-        style={{ display: 'flow-root' }}
-        className="u_center"
-        width="30-char"
-        ratio="16-9"
-        background="bg-5"
-        m="md"
-      >
-        md Margin
-      </Paper>
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="sm">
-        sm Margin
-      </Paper>
-
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="xs">
-        xs Margin
-      </Paper>
-
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="2xs">
-        2xs Margin
-      </Paper>
-    </Paper>
-  )
-}
-```
+<Playground name="accordionCollapsible" root="accordion" />
 
 ### Margin
 
-**margin**
-Type: string
-Default: md
-Options: 2xs xs sm md lg xl
-
 The margin prop determines the margin size of the Paper component. It accepts any of the Size types defined in our library. If not provided, it defaults to the md padding.
 
-Example usage:
-
-<PaperMargin />
-
-```tsx showLineNumbers title="Paper.tsx"
-function PaperMargin() {
-  return (
-    <Paper className="playground" borderColor="opa-6" p="sm" background="bg-3" corner="sm">
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="2xl">
-        2xl Margin
-      </Paper>
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="xl">
-        xl Margin
-      </Paper>
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="lg">
-        lg Margin
-      </Paper>
-
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="md">
-        md Margin
-      </Paper>
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="sm">
-        sm Margin
-      </Paper>
-
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="xs">
-        xs Margin
-      </Paper>
-
-      <Paper className="u_center" width="30-char" ratio="16-9" background="bg-5" m="2xs">
-        2xs Margin
-      </Paper>
-    </Paper>
-  )
-}
-```
+<Playground name="accordionCollapsible" root="accordion" />
 
 ### Flow
 
-**flow**
-Type: string
-Default: md
-Options: xs sm md lg xl
 The flow prop determines the space between the Paper and its surrounding elements. It accepts any of the Size types defined in our library, excluding (2xl, 2xs). If not provided, it defaults to the md spacing.
 
-Example usage:
-
-<PaperFlow />
-
-```tsx showLineNumbers title="Paper.tsx"
-function PaperSpacing() {
-  return (
-    <div>
-      <Paper background="bg-5" flow="xs">
-        <div>Flow xs</div>
-        <div>Flow xs</div>
-        <div>Flow xs</div>
-      </Paper>
-      <Paper background="bg-5" flow="sm">
-        <div>Flow sm</div>
-        <div>Flow sm</div>
-        <div>Flow sm</div>
-      </Paper>
-      <Paper background="bg-5" flow="md">
-        <div>Flow md</div>
-        <div>Flow md</div>
-        <div>Flow md</div>
-      </Paper>
-      <Paper background="bg-5" flow="lg">
-        <div>Flow lg</div>
-        <div>Flow lg</div>
-        <div>Flow lg</div>
-      </Paper>
-      <Paper background="bg-5" flow="xl">
-        <div>Flow xl</div>
-        <div>Flow xl</div>
-        <div>Flow xl</div>
-      </Paper>
-    </div>
-  )
-}
-```
+<Playground name="accordionCollapsible" root="accordion" />
 
 ### Shadow
 
-**shadow**
-Type: string
-Default: none
-Options: none xs sm md lg xl
 The shadow prop determines the shadow of the Paper. It accepts any of the Shadow types defined in our library, including (none, xs, sm, md, lg, xl). If not provided, it defaults to the none shadow.
 
-Example usage:
-
-<PaperShadow />
-
-```tsx showLineNumbers title="Paper.tsx"
-function PaperShadow() {
-  return (
-    <>
-      <Paper p="sm" background="bg-5" shadow="xs">
-        Hello
-      </Paper>
-      <Paper p="sm" background="bg-5" shadow="sm">
-        Hello
-      </Paper>
-      <Paper p="sm" background="bg-5" shadow="md">
-        Hello
-      </Paper>
-      <Paper p="sm" background="bg-5" shadow="lg">
-        Hello
-      </Paper>
-      <Paper p="sm" background="bg-5" shadow="xl">
-        Hello
-      </Paper>
-    </>
-  )
-}
-```
+<Playground name="accordionCollapsible" root="accordion" />
 
 ### Width
 
@@ -486,33 +80,7 @@ The Paper component provides a convenient width prop for controlling its horizon
 | `full` Sets the width to 100%.                                                        |
 | `fit-content` Sets the width to the content's intrinsic width.                        |
 
-**Example Usage:**
-
-<PaperWidth />
-```tsx showLineNumbers title="Paper.tsx"
-function PaperWidth() {
-  return (
-    <>
-    <Paper background="bg-5" width="30-char">
-        This Paper component will be 30 characters wide This Paper component will be 30 characters wide This Paper
-        component will be 30 characters wide.
-      </Paper>
-     <Paper background="bg-5" width="60-char">
-        This Paper component will be 60 characters wide This Paper component will be 60 characters wide This Paper
-        component will be 60 characters wide.
-      </Paper>
-      <Paper background="bg-5" width="90-char">
-        This Paper component will be 90 characters wide This Paper component will be 90 characters wide This Paper
-        component will be 90 characters wide.
-      </Paper>
-      <Paper background="bg-5" width="50">
-        This Paper component will take up half of its parent container This Paper component will take up half of its
-        parent container This Paper component will take up half of its parent container.
-      </Paper>
-    </>
-  )
-}
-```
+<Playground name="accordionCollapsible" root="accordion" />
 
 **How it Works:**
 
@@ -524,26 +92,7 @@ The prop leverage the CSS `min()` function to ensure the `Paper` component never
 - **(half, one-threadId,full):** Useful for proportional layouts where the `Paper` component should occupy a relative portion of its parent.
 - **`fit-content`:** Lets the content itself determine the width, which is handy for elements with varying content sizes.
 
-<Alert
-  color="war"
-  variant="soft"
-  title="Note: Using Utility Classes Independently"
-  message="You can also use these utility classes directly on other elements besides the Paper component. This allows you to apply consistent width behaviors throughout your application."
-/>
-**How it Works:**{' '}
-
-```tsx showLineNumbers title="Paper.tsx"
-function OtherComponentOrHTMLExample() {
-  return (
-    <>
-      <div className="u_width-60-char">This div will be 60 characters wide.</div>
-      <Flex className="u_width-60-char" justify="end">
-        This div will be 60 characters wide.
-      </Flex>
-    </>
-  )
-}
-```
+<Playground name="accordionCollapsible" root="accordion" />
 
 ## Use Case
 

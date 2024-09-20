@@ -1,5 +1,5 @@
 ---
-title: Blockquote
+title: Breadcrumb
 type: core
 excerpt: Enhance website navigation with a customizable Breadcrumb component for React. Easily guide users through your website's hierarchy and improve user experience.
 items: ['Breadcrumb', 'BreadcrumbItem']
@@ -8,291 +8,37 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Usage
-
-```tsx showLineNumbers title="Breadcrumb.tsx"
-import { Accordion, AccordionItem } from '@pillar-ui/core'
-
-function MyComponent() {
-  return (
-    <Accordion>
-      <AccordionItem title="Section 1">
-        <p>Content for section 1 goes here.</p>
-      </AccordionItem>
-      <AccordionItem title="Section 2">
-        <p>Content for section 2 goes here.</p>
-      </AccordionItem>
-      <AccordionItem title="Section 3">
-        <p>Content for section 3 goes here.</p>
-      </AccordionItem>
-    </Accordion>
-  )
-}
-```
-
 ## Props
 
 ## Separator
 
 The separator prop allows you to customize the separator between each BreadcrumbItem. You can pass a string, a React element, or a component to use as the separator.
 
-<BreadcrumbSeparator />
-
-```tsx showLineNumbers title="Breadcrumb.tsx"
-<div className="l_f-md">
-  <Breadcrumb separator="-">
-    <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-    <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-    <Breadcrumb.Item link="./" current>
-      breadcrumb
-    </Breadcrumb.Item>
-  </Breadcrumb>
-
-  <Breadcrumb separator="*">
-    <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-    <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-    <Breadcrumb.Item link="./" current>
-      breadcrumb
-    </Breadcrumb.Item>
-  </Breadcrumb>
-
-  <Breadcrumb separator={<Minus width={10} />}>
-    <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-    <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-    <Breadcrumb.Item link="./" current>
-      breadcrumb
-    </Breadcrumb.Item>
-  </Breadcrumb>
-</div>
-```
+<Playground direction="column" name="breadcrumbSeparator" root="breadcrumb" />
 
 In the example above, we pass a string (- and \*) as the separator in the first two examples, and a custom React component (Minus) as the separator in the third example. Note that the separator is only displayed between BreadcrumbItems, and not before the first or after the last item.
 
 ## Color
 
-Type: Color (string)
-Default: `primary`
-Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 You can customize the color of the breadcrumb by passing a color prop to the Breadcrumb component. The available colors are "red", "orange", "green", "secondary", "purple", "brown", "primary", and "bg". Here are some examples:
 
-<BreadcrumbColors />
-
-```tsx showLineNumbers title="Breadcrumb.tsx"
-import { Breadcrumb } from '@pillar-ui/core'
-
-function BreadcrumbColor() {
-  return (
-    <div className="l_f-md">
-      <Breadcrumb color="dan">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-
-      <Breadcrumb color="war">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-
-      <Breadcrumb color="suc">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-
-      <Breadcrumb color="sec">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-
-      <Breadcrumb color="pri">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-
-      <Breadcrumb color="bg">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="breadcrumbColor" root="breadcrumb" />
 
 ## Breadcrumb Icons
 
 You can add icons to your breadcrumb by passing an `icon` prop to the `Breadcrumb.Item` component. The icon can be any valid React element. Here are some examples:
 
-<BreadcrumbIcons />
-
-```tsx showLineNumbers title="Breadcrumb.tsx"
-export function BreadcrumbIcons() {
-  return (
-    <div className="l_f-md">
-      <Breadcrumb>
-        <Breadcrumb.Item link="../../..">
-          Home
-          <Home width={16} />
-        </Breadcrumb.Item>
-
-        <Breadcrumb.Item link="../..">
-          components
-          <Anchor width={16} />
-        </Breadcrumb.Item>
-
-        <Breadcrumb.Item link="../">
-          base-ui
-          <Home width={16} />
-        </Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-          <Link width={16} />
-        </Breadcrumb.Item>
-      </Breadcrumb>
-
-      <Breadcrumb>
-        <Breadcrumb.Item link="../../..">
-          <Home width={16} />
-          Home
-        </Breadcrumb.Item>
-
-        <Breadcrumb.Item link="../..">
-          <Anchor width={16} />
-          components
-        </Breadcrumb.Item>
-
-        <Breadcrumb.Item link="../">
-          <Home width={16} />
-          base-ui
-        </Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          <Link width={16} />
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-
-      <Breadcrumb>
-        <Breadcrumb.Item link="../../..">
-          <span className="u_visually-hidden">Home</span>
-          <Home width={16} />
-        </Breadcrumb.Item>
-
-        <Breadcrumb.Item link="../..">
-          components
-          <Anchor width={16} />
-        </Breadcrumb.Item>
-
-        <Breadcrumb.Item link="../">
-          base-ui
-          <Home width={16} />
-        </Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-          <Link width={16} />
-        </Breadcrumb.Item>
-      </Breadcrumb>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="breadcrumbIcon" root="breadcrumb" />
 
 This section demonstrates the use of icons for each Breadcrumb.Item in the Breadcrumb component. The icons are passed as children to each Breadcrumb.Item, and are displayed alongside the item text. The width prop is used to set the size of the icons.
 
 ## Sizes
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The Breadcrumb component supports the following sizes:
 
 You can set the size by passing the size prop to the Breadcrumb component with one of the above values. Here's an example of using the different sizes:
 
-<BreadcrumbSizes />
-
-```tsx showLineNumbers title="Breadcrumb.tsx"
-import { Breadcrumb } from 'base-ui'
-
-function BreadcrumbSize() {
-  return (
-    <div className="l_f-md">
-      <Breadcrumb size="2xs" separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb size="xs" separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb size="sm" separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb separator="-">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb size="md" separator="/">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb size="lg">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb size="xl">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb size="2xl">
-        <Breadcrumb.Item link="../..">components</Breadcrumb.Item>
-        <Breadcrumb.Item link="../">base-ui</Breadcrumb.Item>
-        <Breadcrumb.Item link="./" current>
-          breadcrumb
-        </Breadcrumb.Item>
-      </Breadcrumb>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="breadcrumbSize" root="breadcrumb" />
 
 ## Troubleshooting
 

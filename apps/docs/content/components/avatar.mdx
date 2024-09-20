@@ -8,32 +8,6 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Usage
-
-```tsx showLineNumbers title="Avatar.tsx"
-import { Avatar } from '@pillar-ui/core'
-function(){
-    return(
-        <Avatar
-            color="suc"
-            size="md"
-            corner="rounded"
-            title="Success!"
-            message="Your action was successful."
-            variant="filled"
-            inline={false}
-            icon={<CheckCircleIcon />}
-            closable={true}
-        />
-        ;
-    )
-}
-```
-
-Props
-
-Example:
-
 ## Props
 
 The Avatar component accepts the following props:
@@ -42,214 +16,51 @@ The Avatar component accepts the following props:
 
 An optional title to display as an alt to make the avatar accessible.
 
-Example usage:
-
-<AvatarColors />
-
-```tsx showLineNumbers title="Avatar.tsx"
-function AvatarColors() {
-  return (
-    <>
-      <Avatar title="John Doe" />
-      <Avatar color="dan" title="John Doe" />
-      <Avatar color="suc" title="John Doe" />
-      <Avatar color="war" title="John Doe" />
-      <Avatar color="sec" title="John Doe" />
-      <Avatar color="pri" title="John Doe" />
-      <Avatar color="bg" title="John Doe" />
-      <Avatar color="opa" title="John Doe" />
-    </>
-  )
-}
-```
+{/* <Playground name="avatarCorner" root="avatar" /> */}
 
 ### Image
 
 The image source to display in the avatar.
 
-Example:
-
-<AvatarImage />
-
-```tsx showLineNumbers title="Avatar.tsx"
-function AvatarImage() {
-  return (
-    <>
-      <Avatar image="https://picsum.photos/id/120/100/100" />
-      <Avatar image="/image/user.png" />
-      <Avatar image="/image/user.svg" />
-      // If no image Provided it show a fallback image
-      <Avatar />
-    </>
-  )
-}
-```
+<Playground name="avatarImage" root="avatar" />
 
 ### Icon
 
 The icon prop allows you to display an icon alongside the Avatar. It accepts any ReactNode. If not provided, no icon will be displayed.
 
-Example usage:
-
-<AvatarIcon />
-
-```tsx showLineNumbers title="Avatar.tsx"
-<Avatar icon={<CheckCircleIcon />} title="Success!" />
-```
+<Playground name="avatarIcon" root="avatar" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop determines the size of the Avatar. It accepts any of the Size types defined in your library, including (3xs, 2xs,xs, sm, md, and lg, xl, 2xl, 3xl). If not provided, it defaults to the md size.
 
-Example usage:
-
-<AvatarSizes />
-
-```tsx showLineNumbers title="Avatar.tsx"
-function AlerSizes() {
-  return (
-    <>
-      <Avatar image="https://picsum.photos/id/120/100/100" size="3xs" />
-      <Avatar image="https://picsum.photos/id/120/100/100" size="2xs" />
-      <Avatar image="https://picsum.photos/id/120/100/100" size="xs" />
-      <Avatar image="https://picsum.photos/id/120/100/100" size="md" />
-      <Avatar image="https://picsum.photos/id/120/100/100" size="lg" />
-      <Avatar image="https://picsum.photos/id/120/100/100" size="xl" />
-      <Avatar image="https://picsum.photos/id/120/100/100" size="2xl" />
-      <Avatar image="https://picsum.photos/id/120/100/100" size="3xl" />
-    </>
-  )
-}
-```
+<Playground name="avatarSize" root="avatar" />
 
 ### Corner
 
-Type: string
-Default: `md`
-Options: `sharp` `xs` `sm` `md` `lg` `circle` `full`
 The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 The corner prop determines the border radius of the Avatar. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-Example usage:
-
-<AvatarCorners />
-
-```tsx showLineNumbers title="Avatar.tsx"
-function AlerCorners() {
-  return (
-    <>
-      <Flex gap="xs" items="center">
-        <Avatar corner="sharp" title="Hello" />
-        <Avatar corner="xs" title="Hello" />
-        <Avatar corner="sm" title="Hello" />
-        <Avatar corner="md" title="Hello" />
-        <Avatar corner="lg" title="Hello" />
-        <Avatar corner="xl" title="Hello" />
-        <Avatar corner="full" title="Hello" />
-        <Avatar corner="blob-1" title="Hello" />
-        <Avatar corner="blob-2" title="Hello" />
-        <Avatar corner="blob-3" title="Hello" />
-        <Avatar corner="blob-4" title="Hello" />
-        <Avatar corner="blob-5" title="Hello" />
-        <Avatar corner="hand-1" title="Hello" />
-        <Avatar corner="hand-2" title="Hello" />
-        <Avatar corner="hand-3" title="Hello" />
-        <Avatar corner="hand-4" title="Hello" />
-        <Avatar corner="hand-5" title="Hello" />
-        <Avatar corner="hand-6" title="Hello" />
-      </Flex>
-      <Flex gap="xs" items="center">
-        <Avatar corner="sharp" image={image} title="Hello" />
-        <Avatar corner="xs" image={image} title="Hello" />
-        <Avatar corner="sm" image={image} title="Hello" />
-        <Avatar corner="md" image={image} title="Hello" />
-        <Avatar corner="lg" image={image} title="Hello" />
-        <Avatar corner="xl" image={image} title="Hello" />
-        <Avatar corner="full" image={image} title="Hello" />
-        <Avatar corner="blob-1" image={image} title="Hello" />
-        <Avatar corner="blob-2" image={image} title="Hello" />
-        <Avatar corner="blob-3" image={image} title="Hello" />
-        <Avatar corner="blob-4" image={image} title="Hello" />
-        <Avatar corner="blob-5" image={image} title="Hello" />
-        <Avatar corner="hand-1" image={image} title="Hello" />
-        <Avatar corner="hand-2" image={image} title="Hello" />
-        <Avatar corner="hand-3" image={image} title="Hello" />
-        <Avatar corner="hand-4" image={image} title="Hello" />
-        <Avatar corner="hand-5" image={image} title="Hello" />
-        <Avatar corner="hand-6" image={image} title="Hello" />
-      </Flex>
-    </>
-  )
-}
-```
+<Playground name="avatarCorner" root="avatar" />
 
 ### Variant
 
-Type: string
-Default: `solid`
-Options: `solid` `outline` `soft`
-
 The variant prop specifies the visual style of the Avatar component. It can be set to one of the four values: `solid`,`outline` ,`soft`
 
-Example usage:
-
-<AvatarVariants />
-
-```tsx showLineNumbers title="Avatar.tsx"
-function AlerVariants(){
-    return(
-      <Avatar variant="solid" />
-      <Avatar variant="soft" />
-      <Avatar variant="outline" />
-      <Avatar variant="dashed" />
-    )
-}
-
-```
+<Playground name="avatarVariant" root="avatar" />
 
 ### Animate
 
-Type: string
-Default: `undefined`
-Options: `zoom` `jump-x` `jump-y`
 The animate prop allows you to apply a predefined animation to the Avatar component, such as `zoom` or `jump`.
 
-Example usage:
-
-<AvatarAnimate />
-
-```tsx showLineNumbers title="Avatar.tsx"
-function AlertAnimate(){
-    return(
-      <Avatar animate="zoom" title="Success!" />
-      <Avatar animate="jump-x" title="Success!" />
-      <Avatar animate="jump-y" title="Success!" />
-    )
-}
-```
+<Playground name="avatarAnimate" root="avatar" />
 
 ## Avatars Fallback
 
-<AvatarFallback />
-
 The Avatar component is used to display a fallback image if the main image is not found. The fallback image can be a text string or an image file.
 
-```tsx showLineNumbers title="Avatar.tsx"
-export function AvatarsFallback() {
-  return (
-    <Flex gap="xs" items="center">
-      <Avatar title="Hello" />
-      <Avatar image="hello.s" title="Hello" />
-      <Avatar image="https://pisum" title="Hello" />
-    </Flex>
-  )
-}
-```
+<Playground name="avatarFallback" root="avatar" />
 
 There are a few reasons why an img tag might not render an image. Here are some of the most common reasons:
 
@@ -269,108 +80,19 @@ AvatarGroup is a component that groups multiple Avatar components with an option
 
 The maximum number of avatars to display.
 
-Example usage:
-
-<AvatarGroupLimit />
-
-```tsx showLineNumbers title="Avatar.tsx"
-function AlertGroupLimit() {
-  return (
-    <div>
-      <Avatar.Group limit={5}>
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group limit={5}>
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-      </Avatar.Group>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="avatarGroupLimit" root="avatar" />
 
 ### layoutstack' 'grid'
 
 The layout of the avatars. Can be one of stack or grid.
 
-Example usage:
-
-<AvatarGroupStack />
-
-```tsx showLineNumbers title="Avatar.tsx"
-function AlertGroupStack() {
-  return (
-    <div>
-      <Avatar.Group layout="stack">
-        <Avatar animate="jump-y" title="Success!" />
-        <Avatar animate="jump-y" title="Success!" />
-        <Avatar animate="jump-y" title="Success!" />
-        <Avatar animate="jump-y" title="Success!" />
-        <Avatar animate="jump-y" title="Success!" />
-        <Avatar animate="jump-y" title="Success!" />
-        <Avatar animate="jump-y" title="Success!" />
-        <Avatar animate="jump-y" title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group layout="grid">
-        <Avatar animate="jump-x" title="Success!" />
-        <Avatar animate="jump-x" title="Success!" />
-        <Avatar animate="jump-x" title="Success!" />
-        <Avatar animate="jump-x" title="Success!" />
-        <Avatar animate="jump-x" title="Success!" />
-        <Avatar animate="jump-x" title="Success!" />
-        <Avatar animate="jump-x" title="Success!" />
-        <Avatar animate="jump-x" title="Success!" />
-        <Avatar animate="jump-x" title="Success!" />
-      </Avatar.Group>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="avatarGroupStack" root="avatar" />
 
 ### Context Props
 
 The Avatar.Group component can be used to group multiple Avatar components together, and set common props such as color, corner, size, and variant for all the avatars in the group, instead of repeating them for each individual Avatar. This can help reduce repetition in your code and make it more efficient.
 
-Example usage:
-
-<AvatarGroupContext />
-
-```tsx showLineNumbers title="Avatar.tsx"
-function AlertGroupContext() {
-  return (
-    <div>
-      <Avatar.Group variant="outline">
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group size="xs">
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group corner="sharp">
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-      </Avatar.Group>
-      <Avatar.Group color="dan">
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-      </Avatar.Group>
-    </div>
-  )
-}
-```
+<Playground direction="column" name="avatarGroupContext" root="avatar" />
 
 ## Troubleshooting:
 

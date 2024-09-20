@@ -14,286 +14,45 @@ The Button component accepts the following props:
 
 ### Color
 
-- Type: string
-- Default: `primary`
-- Options: `danger` `warning` `success` `primary` `secondary` `bg`
-
 The color prop determines the background color of the Button. It accepts any of the Color types defined in your library, including primary, secondary, success, danger, warning, info, and light. If not provided, it defaults to the primary color.
 
-Example usage:
-
-<ButtonColors />
-
-```tsx showLineNumbers title="Button.tsx"
-function ButtonColors(){
-    return(
-        <Button color="dan" >Hello World</Button>
-        <Button color='orange' >Hello World</Button>
-        <Button color="suc" >Hello World</Button>
-        <Button color="pri" >Hello World</Button>
-        <Button color="sec" >Hello World</Button>
-        <Button color='bg' >Hello World</Button>
-
-        // ===== Icon Button Section=====
-        <IconButton color="dan" />
-        <IconButton color='orange' />
-        <IconButton color="suc" />
-        <IconButton color="pri" />
-        <IconButton color="sec" />
-        <IconButton color='bg' />
-    )
-}
-
-```
+<Playground name="buttonColor" root="button" />
 
 ### Size
 
-- Type: string
-- Default: `md`
-- Options: `2xs` `xs` `sm` `md` `lg` `xl` `2xl`
-
 The size prop determines the size of the Button. It accepts any of the Size types defined in your library, including (3xs, 2xs,xs, sm, md, and lg, xl, 2xl, 3xl). If not provided, it defaults to the md size.
 
-Example usage:
-
-<ButtonSizes />
-
-```tsx showLineNumbers title="Button.tsx"
-function ButtonSizes(){
-    return(
-        <Button size='3xs' >Hello World</Button>
-        <Button size='2xs' >Hello World</Button>
-        <Button size='xs' >Hello World</Button>
-        <Button size='md' >Hello World</Button>
-        <Button size='lg' >Hello World</Button>
-        <Button size='xl' >Hello World</Button>
-        <Button size='2xl' >Hello World</Button>
-        <Button size='3xl' >Hello World</Button>
-
-        // ===== Icon Button Section=====
-        <IconButton size='2xs' />
-        <IconButton size='xs' />
-        <IconButton size='xs' />
-        <IconButton size='md' />
-        <IconButton size='lg' />
-        <IconButton size='xl' />
-        <IconButton size='2xl' />
-
-    )
-}
-
-```
+<Playground name="buttonSize" root="button" />
 
 ### Corner
 
-- Type: string
-- Default: `sm`
-- Options: `sharp` `xs` `sm` `md` `lg``xl` `radius` `full`
-
 The corner prop determines the border radius of the Button. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-Example usage:
-
-<ButtonCorners />
-
-```tsx showLineNumbers title="Button.tsx"
-function ButtonCorners(){
-    return(
-        <Button corner='sharp' >Hello World</Button>
-        <Button corner='xs' >Hello World</Button>
-        <Button corner='md' >Hello World</Button>
-        <Button corner='lg' >Hello World</Button>
-        <Button corner='xl' >Hello World</Button>
-        <Button corner='circle' >Hello World</Button>
-        <Button corner='full' >Hello World</Button>
-
-        // ===== Icon Button Section=====
-         <IconButton corner='sharp' />
-        <IconButton corner='xs' />
-        <IconButton corner='md' />
-        <IconButton corner='lg' />
-        <IconButton corner='xl' />
-        <IconButton corner='circle' />
-        <IconButton corner='full' />
-
-    )
-}
-
-```
+<Playground name="buttonCorner" root="button" />
 
 ### Variant
 
-Type: string
-Default: `undefined`
-Options: `solid` `outline` `soft` `text` `link`
-
 The corner prop determines the border radius of the Button. It accepts any of the Corner types defined in your library, including (square, xs, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
-Example usage:
-
-<ButtonVariants />
-
-```tsx showLineNumbers title="Button.tsx"
-function ButtonVariants() {
-  return (
-    <>
-      <Button variant="solid">Hello World</Button>
-      <Button variant="soft">Hello World</Button>
-      <Button variant="outline">Hello World</Button>
-      <Button variant="text">Hello World</Button>
-      <Button variant="link">Hello World</Button>
-      <Button variant="mixed">Hello World</Button>
-    </>
-  )
-}
-```
+<Playground name="buttonVariant" root="button" />
 
 ### Icon
 
 The `corner` prop determines the border radius of the Button. It accepts any of the Corner types defined in your library, including (`square`, `xs`, `sm`, `md`, `xl`, `full`, `circle`), and pill. If not provided, it defaults to the square corner.
 
-Example usage:
-
-<ButtonIcons />
-
-```tsx showLineNumbers title="Button.tsx"
-import {Close,Maximun,Minimum } from '@pillar-ui/icons'
-
-function ButtonIcon(){
-    return(
-
-        <Button icon={<Close />} >Hello World</Button>
-        <Button icon={<Maximun />} >Hello World</Button>
-        <Button icon={<Minimum />} >Hello World</Button>
-
-        // ===== Icon Button Section=====
-        <IconButton icon={<Close />}  title='Close Modal' />
-        <IconButton icon={<Maximun />}  title='Active Picture In Picture Mode' />
-        <IconButton icon={<Minimum />}  title='disactive Picture In Picture Mode' />
-    )
-}
-
-```
-
-### IconPosition
-
-- Type: string
-- Default: `start`
-- Options: `start` `end`
-
-The `iconPosition` prop determines the position of the icon in relation to the button text. It can be one of `start` or `end`. By default, it is set to start.
-
-Example usage:
-
-<ButtonIconPosition />
-
-```tsx showLineNumbers title="Button.tsx"
-import { Close, Maximun, Minimum } from '@pillar-ui/icons'
-
-function ButtonIcon() {
-  return (
-    <Paper borderColor="opa-6" flow="sm" p="sm" background="bg-3" corner="sm">
-      <Flex gap="sm" items="center" wrap>
-        <Button icon={<Close />} iconPosition="end">
-          Hello World
-        </Button>
-        <Button icon={<Maximize />}>Hello World</Button>
-        <Button icon={<Minimize />} iconPosition="end">
-          Hello World
-        </Button>
-      </Flex>
-    </Paper>
-  )
-}
-```
+<Playground name="buttonIcon" root="button" />
 
 ### Fuild
 
-- Type: boolean
-- Default: `false`
-- Options: `true` `false`
-
 The `fluid` prop determines if the button should take up the full width of its container. By default, it is set to false.
 
-Example usage:
-
-<ButtonFluid />
-
-```tsx showLineNumbers title="Button.tsx"
-function ButtonIcon() {
-  return (
-    <Paper>
-      <Button fluid color="dan">
-        Hello World
-      </Button>
-      <Button fluid color="orange">
-        Hello World
-      </Button>
-      <Button fluid color="suc">
-        Hello World
-      </Button>
-      <Button fluid color="pri">
-        Hello World
-      </Button>
-      <Button fluid color="sec">
-        Hello World
-      </Button>
-      <Button fluid color="bg">
-        Hello World
-      </Button>
-    </Paper>
-  )
-}
-```
+<Playground name="buttonFluid" root="button" />
 
 ### State
 
 Same as Button.
 
-<ButtonsState />
-
-```tsx showLineNumbers title="IconButton.tsx"
-function IconButtonStates() {
-  return (
-    <Paper as={Flex} items="center" gap="xs">
-      <Button state="idle" color="suc">
-        Idle
-      </Button>
-      <Button state="loading" color="suc">
-        Loading
-      </Button>
-      <Button disabled color="suc">
-        Disabled
-      </Button>
-    </Paper>
-  )
-}
-```
-
-### Custom Style
-
-The "Custom Style" component offers a wide range of options for users to customize the visual appearance of various elements within their documents. In the example above, the component showcases two buttons within a flexible container.
-
-Example usage:
-
-<ButtonsCustomStyle />
-
-```tsx showLineNumbers title="Button.tsx"
-import { Button } from '@pillar-ui/icons'
-
-function ButtonsCustomStyle() {
-  return (
-    <Flex items="center" gap="xs">
-      <Button style={{ background: 'orange' }} state="idle" color="suc">
-        Hello world
-      </Button>
-      <Button className="u_secondary" color="suc">
-        Hello world
-      </Button>
-    </Flex>
-  )
-}
-```
+<Playground name="buttonState" root="button" />
 
 ## Use Case
 
