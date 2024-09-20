@@ -1,6 +1,6 @@
 import React, { CSSProperties, useState } from 'react'
 import { Meta, StoryObj } from '@storybook/react'
-import { Alert, Button, Flex, Heading, Paper } from '@pillar-ui/core'
+import { Alert, Button, Flex, Heading } from '@pillar-ui/core'
 import { Check, CircleCheck, CircleInfo, CircleWarning } from '@pillar-ui/icons'
 
 const meta: Meta<typeof Alert> = {

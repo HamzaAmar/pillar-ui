@@ -28,6 +28,10 @@ a {
   }
 }
 
+a {
+  color: var(--pri-11);
+}
+
 .shd,
 code {
   --f: fit-content;

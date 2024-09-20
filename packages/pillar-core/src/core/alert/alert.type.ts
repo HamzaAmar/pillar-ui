@@ -4,7 +4,7 @@ import type { Color, Corner, Variant, Size } from '../../types'
 export interface AlertProps {
   color?: Color
   size?: Size
-  corner?: Corner
+  corner?: Omit<Corner, 'circle'>
   title?: string
   message?: string
   variant?: Omit<Variant, 'transparent'>

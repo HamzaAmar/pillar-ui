@@ -1,6 +1,6 @@
 .c-h_lbl {
   font-size: 0.875em;
-  color: inherit;
+  /* color: inherit; */
 }
 
 .c-h_cnt {
@@ -54,7 +54,7 @@
   --eq-s: 1.25em;
   --fx: inline-flex;
 
-  border: 1px solid var(--opa-6);
+  border: 1px solid var(--opa-7);
   border-radius: 0.25em;
   color: transparent; /* Responsible For The Color Of The Check Icon stroke Default to transparent */
 }
@@ -66,10 +66,6 @@
 @media (forced-colors: active) {
   .c-h:has(:disabled) {
     color: GrayText;
-
-    /* & .c-h--label {
-      color: GrayText;
-    } */
 
     & .c-h {
       background: GrayText;

@@ -2,8 +2,7 @@
   --fx: inline-flex;
 
   padding: 0.5em 1.25em;
-  max-width: 100%;
-  min-width: 3rem;
+  min-width: clamp(3rem, fit-content, 100%);
   transition: transform 50ms cubic-bezier(0.68, 0.55, 0.265, -2);
   transform-origin: bottom center;
   letter-spacing: 0.5px;
@@ -26,10 +25,7 @@
     width: 1.1em;
     stroke-width: 1.5px;
   }
-  /* &:is(.u_solid,.u_shadow):hover */
-  &.u_solid:hover,
-  &.u_shadow:hover {
-    /* background: var(--c-10); */
+  &:is(.u_solid, .u_shadow):hover {
     background: var(--c-11);
   }
   &.u_outline:hover {
@@ -41,9 +37,9 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--button-rad, 0.25em);
-  font-size: var(--button-size, 0.875rem);
-  text-transform: var(--button-transform, capitalize);
+  border-radius: var(--bu-rad, 0.25em);
+  font-size: var(--bu-size, 0.875rem);
+  text-transform: var(--bu-transform, capitalize);
 }
 
 .b-u_txt {
