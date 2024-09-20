@@ -71,6 +71,7 @@ export const Accordion = forwardRef((props, forwardedRef) => {
     [`u_${color}`]: !!color,
     [`u_f-${size}`]: !!size,
     'l_f-sm': !!separate,
+    u_variant: !!variant,
     [className!]: !!className,
   })
   const accordionContext = { ...state, variant, corner }
@@ -97,7 +98,7 @@ export const AccordionItem = forwardRef(({ children, value, className, ...rest }
   const id = useId()
   const ctx = { id, value }
   const { corner, variant } = useAccordionContext() ?? {}
-  const classNames = cx(`a-c_itm u_${variant} `, {
+  const classNames = cx(`a-c_itm u_${variant}`, {
     [`u_rad-${corner}`]: !!corner,
     [className!]: !!className,
   })
