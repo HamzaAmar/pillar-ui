@@ -296,6 +296,10 @@
   }
 }
 
+.ff-t {
+  padding: 0 1em;
+}
+
 .fi-p {
   font-size: var(--font-size, var(--input-size, 1rem));
   width: 2.25em;

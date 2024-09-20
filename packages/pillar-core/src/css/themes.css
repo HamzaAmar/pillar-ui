@@ -198,18 +198,18 @@
   --bg-11: var(--bg-d-11, #b0b4ba);
   --bg-12: var(--bg-d-12, #edeef0);
 
-  --opa-1: var(--opa-d-1, #0deg);
-  --opa-2: var(--opa-d-2, #0deg);
-  --opa-3: var(--opa-d-3, #0deg);
-  --opa-4: var(--opa-d-4, #0deg);
-  --opa-5: var(--opa-d-5, #0deg);
-  --opa-6: var(--opa-d-6, #0deg);
-  --opa-7: var(--opa-d-7, #0deg);
-  --opa-8: var(--opa-d-8, #0deg);
-  --opa-9: var(--opa-d-9, #0deg);
-  --opa-10: var(--opa-d-10, #0deg);
-  --opa-11: var(--opa-d-11, #0deg);
-  --opa-12: var(--opa-d-12, #0deg);
+  --opa-1: var(--opa-d-1, #ffffff0d);
+  --opa-2: var(--opa-d-2, #ffffff1a);
+  --opa-3: var(--opa-d-3, #ffffff26);
+  --opa-4: var(--opa-d-4, #ffffff33);
+  --opa-5: var(--opa-d-5, #ffffff4d);
+  --opa-6: var(--opa-d-6, #ffffff66);
+  --opa-7: var(--opa-d-7, #ffffff80);
+  --opa-8: var(--opa-d-8, #ffffff99);
+  --opa-9: var(--opa-d-9, #ffffffb3);
+  --opa-10: var(--opa-d-10, #ffffffcc);
+  --opa-11: var(--opa-d-11, #ffffffe6);
+  --opa-12: var(--opa-d-12, #fffffff2);
 
   --dan-1: var(--dan-d-1, #191111);
   --dan-2: var(--dan-d-2, #201314);

@@ -44,7 +44,7 @@ function useField(props: any) {
   const prefix = !!prefixInput && <span className="fi-p_cnt f-i-pre u_center">{prefixInput}</span>
   const suffix = !!suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
 
-  const cls = cx(`f-i_cnt f-i_cnt-${variant} u_${color}`, {
+  const cls = cx(`f-i_cnt f-l f-i_cnt-${variant} u_${color}`, {
     [`u_t-${transform}`]: !!transform,
     'f-i_cnt-fluid': !!fluid,
     [`u_f-${size}`]: corner,
@@ -348,7 +348,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwar
         {title}
       </Flex>
 
-      <span className="t-y l_fl u_f-xs u_it-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
+      <span className="ff-t t-y l_fl  u_f-xs u_it-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
     </Grid>
   )
 })
