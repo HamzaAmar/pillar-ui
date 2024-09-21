@@ -1,5 +1,5 @@
-export { Accordion, AccordionButton, AccordionItem, AccordionPanel } from './core/accordion'
-export { Alert } from './core/alert'
+export { Accordion, AccordionButton, AccordionItem, AccordionPanel } from './core/accordion.client'
+export { Alert } from './core/alert.client'
 export { Avatar, AvatarGroup } from './core/avatar'
 export { Badge } from './core/badge'
 export { Button, IconButton, ButtonGroup } from './core/button'
@@ -40,7 +40,8 @@ export { Blockquote } from './core/blockquote'
 export { Tooltip, TooltipContent, TooltipTrigger } from './core/tooltip'
 export { CounterButton } from './core/counterButton'
 // export { MenuButton } from './core/menuButton'
-export { context, cx } from './core/utils'
+export { cx } from './core/cx'
+export { context } from './core/provider.client'
 
 // ====================================== TYPES  ===========================================
 
@@ -55,8 +56,8 @@ export type {
 
 export type { Color, Corner, Direction, Gradient, Size, Variant } from './types'
 
-export type { AccordionButtonProps } from './core/accordion'
-export type { AlertProps } from './core/alert'
+export type { AccordionButtonProps } from './core/accordion.client'
+export type { AlertProps } from './core/alert.client'
 export type { AvatarGroupProps, AvatarProps } from './core/avatar'
 export type { BadgeProps } from './core/badge'
 export type { ButtonProps, IconButtonProps } from './core/button'

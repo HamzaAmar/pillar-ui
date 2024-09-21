@@ -1,4 +1,4 @@
-import { cx } from '../utils'
+import { cx } from '../cx'
 import { forwardRef } from 'react'
 
 import type { CSSProperties } from 'react'

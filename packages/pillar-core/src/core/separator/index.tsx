@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { SeparatorProps } from './separator.type'
-import { cx } from '../utils'
+import { cx } from '../cx'
 
 export const Separator = forwardRef(
   (

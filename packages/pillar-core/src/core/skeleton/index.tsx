@@ -1,6 +1,6 @@
 import { CSSProperties, forwardRef } from 'react'
 import type * as ST from './skeleton.type'
-import { cx } from '../utils'
+import { cx } from '../cx'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 
 /*

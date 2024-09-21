@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { cx } from '../utils'
+import { cx } from '../cx'
 import { Spinner } from '../spinner'
 import type { ButtonGroupProps, ButtonProps, IconButtonProps } from './button.type'
 

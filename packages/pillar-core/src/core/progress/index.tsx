@@ -1,4 +1,4 @@
-import { cx } from '../utils'
+import { cx } from '../cx'
 import { Children, isValidElement } from 'react'
 import type {
   ProgressCircleProps,

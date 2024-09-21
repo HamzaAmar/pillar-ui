@@ -1,5 +1,5 @@
 import { ReactNode, forwardRef } from 'react'
-import { cx } from '../utils'
+import { cx } from '../cx'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { BadgeProps } from './badge.type'

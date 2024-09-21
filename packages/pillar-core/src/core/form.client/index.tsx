@@ -1,5 +1,6 @@
 import { useBooleanState, useControllableState, useComposedRefs } from '@pillar-ui/hooks'
-import { cx, context } from '../utils'
+import { cx } from '../cx'
+import { context } from '../provider.client'
 import { ChangeEvent, RefObject, forwardRef, useId, useRef, useState } from 'react'
 
 import type {

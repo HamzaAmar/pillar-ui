@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { cx } from '../utils'
+import { cx } from '../cx'
 import type { KbdProps } from './kbd.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 

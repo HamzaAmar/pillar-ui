@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react'
-import { cx } from '../utils'
+import { cx } from '../cx'
 import { SpinnerProps } from './spinner.type'
 
 export const Spinner = ({

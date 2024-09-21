@@ -1,4 +1,4 @@
-import { cx } from '../utils'
+import { cx } from '../cx'
 import { useComposedRefs } from '@pillar-ui/hooks'
 import { forwardRef } from 'react'
 

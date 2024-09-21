@@ -27,17 +27,17 @@ export async function injectUseClient(dir = DIST_PATH) {
   try {
     const items = await fs.readdir(dir)
     for (const item of items) {
-      console.log(
-        '----------------------------------------------------\n\n\n\n\n\n\n\n\n\n\n\n\n',
-        item,
-        '\n\n\n\n\n\n\n\n\n\n\n\n\n\n---------------------------------------------------'
-      )
-      const itemPath = path.join(dir, item)
-      const stats = await fs.stat(itemPath)
-      if (stats.isDirectory()) {
-        await injectUseClient(itemPath)
-      } else if (stats.isFile() && (item === 'index.js' || item === 'index.mjs')) {
-        await addUseClient(itemPath)
+      const hasClient = item.includes('.client')
+      if (hasClient) {
+        const itemPath = path.join(dir, item)
+        const stats = await fs.stat(itemPath)
+        const [isFile, isDirectory] = [stats.isFile(), stats.isDirectory()]
+
+        if (isDirectory) {
+          await injectUseClient(itemPath)
+        } else if (isFile && (item === 'index.js' || item === 'index.mjs')) {
+          await addUseClient(itemPath)
+        }
       }
     }
     console.log('Processing complete.')
@@ -45,4 +45,4 @@ export async function injectUseClient(dir = DIST_PATH) {
     console.error(`Error processing directory ${dir}:`, error)
   }
 }
-// injectUseClient()
+injectUseClient()

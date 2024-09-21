@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import type { TypographyProps } from './typography.type'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { cx } from '../utils'
+import { cx } from '../cx'
 
 export const Text = forwardRef(
   (

@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import type { CSSProperties } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { PaperProps } from './paper.type'
-import { cx } from '../utils'
+import { cx } from '../cx'
 
 // Helper function to generate CSS variable
 function getCSSVariable(value: string | undefined, initial: number = 9) {

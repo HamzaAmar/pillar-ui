@@ -1,4 +1,4 @@
-import { context } from '../utils'
+import { context } from '../provider.client'
 import { Grid } from '../grid'
 
 import type { TimelineContextProps, TimelineItemProps, TimelineProps } from './timeline.type'

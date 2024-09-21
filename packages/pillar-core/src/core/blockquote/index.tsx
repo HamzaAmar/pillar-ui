@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import type { BlockquoteProps } from './blockquote.type'
-import { cx } from '../utils'
+import { cx } from '../cx'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
 export const Blockquote = forwardRef(
