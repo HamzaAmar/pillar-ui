@@ -27,6 +27,11 @@ export async function injectUseClient(dir = DIST_PATH) {
   try {
     const items = await fs.readdir(dir)
     for (const item of items) {
+      console.log(
+        '----------------------------------------------------\n\n\n\n\n\n\n\n\n\n\n\n\n',
+        item,
+        '\n\n\n\n\n\n\n\n\n\n\n\n\n\n---------------------------------------------------'
+      )
       const itemPath = path.join(dir, item)
       const stats = await fs.stat(itemPath)
       if (stats.isDirectory()) {
