@@ -1,3 +1,5 @@
+'use client'
+
 import { ForwardRefComponent, Flex, Text } from '@pillar-ui/core'
 import { forwardRef, CSSProperties } from 'react'
 

@@ -2,7 +2,6 @@ import { Metadata, Viewport } from 'next'
 import { DOMAIN } from '~/constant/domain'
 import { Footer, Header, NextThemeProvider } from './_components'
 import type { ReactNode } from 'react'
-// import '@pillar-ui/core/main.css'
 import '../scss/main.scss'
 import { DrawerProvider } from './_components/drawerProvider'
 
