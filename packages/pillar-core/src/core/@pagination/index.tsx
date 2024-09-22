@@ -4,7 +4,7 @@ import { usePagination } from '@pillar-ui/hooks'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { PaginationContextProps, PaginationItem, PaginationProps } from './pagination.type'
 import { cx } from '../cx'
-import { context } from '../provider.client'
+import { context } from '../@provider'
 import { ChevronDown, DotsHorizontal } from '../icons'
 
 const [PaginationProvider, usePaginationContext] = context<PaginationContextProps>({

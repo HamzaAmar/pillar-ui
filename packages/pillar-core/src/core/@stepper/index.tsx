@@ -2,7 +2,7 @@ import { Children, isValidElement, createElement, useId } from 'react'
 import type { ReactNode } from 'react'
 import { Flex } from '../flex'
 import type { StepperContextProps, StepperProps, StepProps } from './stepper.type'
-import { context } from '../provider.client'
+import { context } from '../@provider'
 import { Check } from '../icons'
 
 const [StepperProvider, useStepperContext] = context<StepperContextProps>({ name: 'Stepper' })

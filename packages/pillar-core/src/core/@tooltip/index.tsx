@@ -1,9 +1,9 @@
 import { forwardRef, useEffect, useId, useRef, useState } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { TooltipContentProps, TooltipContext, TooltipProps } from './tooltip.type'
-import { context } from '../provider.client'
+import { context } from '../@provider'
 import { useBooleanState, useComposedRefs } from '@pillar-ui/hooks'
-import { Popover } from '../popover'
+import { Popover } from '../@popover'
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////

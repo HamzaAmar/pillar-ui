@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import type { CustomRadioProps, RadioContextProps, RadioGroupProps, RadioProps } from './radio.type'
 import { cx } from '../cx'
-import { context } from '../provider.client'
+import { context } from '../@provider'
 
 /*
 ===================================================================================================

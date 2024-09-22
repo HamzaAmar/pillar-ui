@@ -7,10 +7,10 @@
 
   &[aria-current='page'] {
     border-color: var(--opa-8);
-    outline: 2.5px solid var(--c-9);
+    outline: min(0.25em, 3px) solid var(--c-10);
     outline-offset: -2px;
     &.u_solid {
-      outline-color: var(--c-12);
+      outline-color: var(--c-11);
     }
   }
 }
@@ -27,6 +27,7 @@
 
 .p-a_lst {
   display: flex;
+  align-items: center;
   gap: var(--s-sm);
   list-style: none;
 }

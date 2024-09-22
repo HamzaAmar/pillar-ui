@@ -2,7 +2,7 @@ import { forwardRef, useId, useState } from 'react'
 import { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProps, TabPanelsProps } from './tabs.type'
 import { cx } from '../cx'
-import { context } from '../provider.client'
+import { context } from '../@provider'
 
 /*
 ===============================================================================================

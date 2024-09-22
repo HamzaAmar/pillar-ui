@@ -1,6 +1,6 @@
 import { Children, forwardRef, useState } from 'react'
 import { cx } from '../cx'
-import { context } from '../provider.client'
+import { context } from '../@provider'
 import { User } from '../icons'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'

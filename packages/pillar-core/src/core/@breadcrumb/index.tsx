@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { cx } from '../cx'
-import { context } from '../provider.client'
+import { context } from '../@provider'
 
 import type { BreadcrumbProps, BreadcrumbItemProps, BreadcrumbContextProps, CurrentPage } from './breadcrumb.type'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'

@@ -1,6 +1,6 @@
 import { Children, cloneElement, forwardRef, isValidElement, useId, useState } from 'react'
 import { cx } from '../cx'
-import { context } from '../provider.client'
+import { context } from '../@provider'
 import { ChevronDown } from '../icons'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
