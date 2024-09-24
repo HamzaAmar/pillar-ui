@@ -1,5 +1,5 @@
 .hero {
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100vh - 4rem);
   max-width: 1300px;
   padding: 2vw;
   margin: auto;
@@ -38,7 +38,7 @@
   z-index: 1;
   max-width: 100%;
   &:nth-child(even) {
-    background-color: var(--bg-2);
+    background: var(--bg-2);
   }
 }
 .rtl--support {

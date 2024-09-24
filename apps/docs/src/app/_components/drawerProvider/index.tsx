@@ -1,9 +1,9 @@
 'use client'
 
-import React, { ReactNode, createContext, useContext, useState } from 'react'
+import React, { type ReactNode, useState } from 'react'
+import { context } from '@pillar-ui/core'
 
 // Create the context with a default value of null
-const DrawerContext = createContext<ProviderProps | null>(null)
 
 interface DrawerProps {
   children: ReactNode
@@ -14,25 +14,21 @@ interface ProviderProps {
   toggleDrawer: () => void
 }
 
-export const DrawerProvider = ({ children }: DrawerProps) => {
+const [DrawerContext, useDrawer] = context<ProviderProps>({ name: 'Drawer' })
+
+const DrawerProvider = ({ children }: DrawerProps) => {
   const [open, setOpen] = useState(false)
 
   const toggleDrawer = () => {
     setOpen((prevOpen) => !prevOpen)
   }
 
-  const value: ProviderProps = {
+  const value = {
     open,
     toggleDrawer,
   }
 
-  return <DrawerContext.Provider value={value}>{children}</DrawerContext.Provider>
+  return <DrawerContext {...value}>{children}</DrawerContext>
 }
 
-export const useDrawer = () => {
-  const context = useContext(DrawerContext)
-  if (!context) {
-    return null
-  }
-  return context
-}
+export { useDrawer, DrawerProvider }

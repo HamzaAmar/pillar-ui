@@ -2,17 +2,7 @@ import { CopyButton } from '../copyButton'
 import { readExampleFile } from './readFile'
 import { highlight } from 'sugar-high'
 import dynamic from 'next/dynamic'
-
-interface DocsCodeProps {
-  code: string
-  html: string
-}
-
-interface PreviewProps {
-  root: string
-  name: string
-  direction?: 'column' | 'row'
-}
+import type { DocsCodeProps, PreviewProps } from './code.type'
 
 export const DocsCode = ({ code, html }: DocsCodeProps) => {
   return (
@@ -39,16 +29,12 @@ export const Playground = async ({ name, root, direction = 'row' }: PreviewProps
     })
   )
 
-  console.log(Component)
-
   return (
     <section className="l_f-sm">
       <div className={`playground playground-${direction}`}>
         <Component />
       </div>
-      <div>
-        <DocsCode code={content} html={html} />
-      </div>
+      <DocsCode code={content} html={html} />
     </section>
   )
 }

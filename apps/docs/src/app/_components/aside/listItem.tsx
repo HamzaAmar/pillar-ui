@@ -7,9 +7,9 @@ import type { ListItemProps } from './aside.type'
 
 export const Item = forwardRef(({ title, level = 1, isActive, children, as: Tag = 'button', icon, ...rest }, ref) => {
   return (
-    <div data-active={isActive} className="aside-item" style={{ '--lvl': level - 1 } as CSSProperties}>
-      <Flex as={Tag} ref={ref} className="aside-link" {...rest}>
-        <div className="aside-icon">
+    <div data-active={isActive} className="as-item" style={{ '--lvl': level - 1 } as CSSProperties}>
+      <Flex as={Tag} ref={ref} className="as-link" {...rest}>
+        <div className="as-icon">
           {icon}
           <Text transform="capitalize">{title}</Text>
         </div>

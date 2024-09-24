@@ -11,15 +11,9 @@
   --sh-keyword: var(--dan-11);
   --sh-comment: var(--bg-9);
 
-  ul li::marker {
+  & li::marker {
     color: var(--bg-11);
     font-size: 0.85rem;
-  }
-  & nav:has(ul) {
-    margin: 0;
-    & li {
-      margin: 0;
-    }
   }
 
   h1,

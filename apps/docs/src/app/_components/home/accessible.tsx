@@ -12,17 +12,15 @@ export function Accessible() {
       <Grid gap="md" grid="1fr 1fr 1fr" lg="1fr 1fr" sm="1fr">
         {ACCESSIBILITY.map(({ id, title, description, icon }) => (
           <Paper className="article--item" key={id} flow="2xs">
-            <div className="l_f-xs">
-              <Flex gap="sm" items="center">
-                <div className="article--icon-container u_center">{icon}</div>
-                <Heading as="h3" size="lg">
-                  {title}
-                </Heading>
-              </Flex>
-              <Text color="bg" low>
-                {description}!
-              </Text>
-            </div>
+            <Flex gap="sm" items="center">
+              <div className="article--icon-container u_center">{icon}</div>
+              <Heading as="h3" size="lg">
+                {title}
+              </Heading>
+            </Flex>
+            <Text color="bg" low>
+              {description}!
+            </Text>
           </Paper>
         ))}
       </Grid>

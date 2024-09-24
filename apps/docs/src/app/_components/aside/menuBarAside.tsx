@@ -38,7 +38,7 @@ const MenuBar = ({ data }: DocsProps) => {
 
   const KEYS = Object.keys(data) as MenuItemData[]
   return (
-    <Flex as="aside" data-mobile-open={open} direction="column" className="aside menu-bar l_flow custom-scroll">
+    <Flex as="aside" data-mobile-open={open} direction="column" className="as menu-bar l_flow custom-scroll">
       <nav>
         <ul>
           {KEYS.map((key) => {
@@ -59,7 +59,7 @@ const MenuBar = ({ data }: DocsProps) => {
                   {contents && <ChevronDown width="16" />}
                 </Item>
                 {contents && (
-                  <ul data-active={current?.includes(key) ?? false} className="menu-bar--nested">
+                  <ul data-active={current?.includes(key) ?? false} className="menu-nest">
                     {contents.map(({ slug, type, ...rest }) => {
                       const to = type === 'core' ? 'components' : type
 
