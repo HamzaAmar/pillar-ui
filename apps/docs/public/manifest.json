@@ -1,0 +1,25 @@
+{
+  "name": "Pillar UI Library",
+  "short_name": "Pillar UI",
+  "description": "Pillar UI: Lightweight and Accessible React UI Library for Building Beautiful, Customizable Web Applications.",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#317EFB",
+  "display": "standalone",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr"
+}

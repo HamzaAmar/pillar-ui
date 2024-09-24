@@ -34,9 +34,10 @@ export const metadata: Metadata = {
     template: '%s | Pillar UI library',
   },
   description:
-    'Pillar UI: React UI library for building beautiful, customizable, accessible, and lightning-fast web apps',
+    'Pillar UI: Lightweight and Accessible React UI Library for Building Beautiful, Customizable Web Applications',
   keywords: [
     'TypeScript',
+    'Next.js',
     'React',
     'Hooks Library',
     'Utils Library',
@@ -45,8 +46,30 @@ export const metadata: Metadata = {
     'React Component Library',
     'Design System',
     'UI library',
+    'React UI library',
     'Pillar UI',
+    'UI Design System',
     'react design system',
+    'Server Components',
+  ],
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#fcfcfd' },
+    { media: '(prefers-color-scheme: dark)', color: '#1c2024' },
+  ],
+
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-32x32.png',
+    apple: '/apple-touch-icon.png',
+  },
+
+  manifest: '/manifest.json',
+  creator: 'Hamza Miloud Amar',
+  authors: [
+    {
+      name: 'Hamza Miloud Amar',
+      url: 'https://www.miloudamar.com/',
+    },
   ],
   robots: {
     index: true,
@@ -55,11 +78,23 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pillar UI library',
     description:
-      'Pillar UI: A modern, accessible React component library for building beautiful, customizable, and lightning-fast web apps.',
+      'Pillar UI: Lightweight and Accessible React UI Library for Building Beautiful, Customizable Web Applications',
     url: DOMAIN,
     siteName: 'Pillar UI library',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${DOMAIN}/pillar.png`,
+        width: 1024,
+        height: 576,
+        alt: 'Pillar UI a Lightweight and Accessible React UI Library',
+      },
+    ],
+  },
+
+  alternates: {
+    canonical: DOMAIN,
   },
 
   twitter: {
@@ -67,9 +102,15 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@pillar_ui',
     creator: 'Hamza Miloud Amar',
+    images: [`${DOMAIN}/pillar.png`],
   },
 }
 
 export const viewport: Viewport = {
   themeColor: '#3e63dd',
+  viewportFit: 'cover',
+  width: 'device-width',
+  initialScale: 1.0,
+  maximumScale: 1.0,
+  userScalable: false,
 }
