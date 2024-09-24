@@ -57,9 +57,7 @@ export default Page
 
 export async function generateMetadata({ params }: SlugParamsProps): Promise<Metadata | undefined> {
   const post = getComponentBySlug(params.slug)
-  if (!post) {
-    return
-  }
+  if (!post) return {}
 
   let { title, excerpt: description, slug, lastModified, publishedAt } = post
   const img = `${DOMAIN}/assets/favicon/logo-512X512.png`
@@ -80,6 +78,7 @@ export async function generateMetadata({ params }: SlugParamsProps): Promise<Met
       images: [
         {
           url: img,
+          alt: post.title,
         },
       ],
     },
@@ -88,6 +87,7 @@ export async function generateMetadata({ params }: SlugParamsProps): Promise<Met
       title,
       description,
       images: [img],
+      creator: '@pillar_ui',
     },
   }
 }

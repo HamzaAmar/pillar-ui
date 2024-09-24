@@ -51,6 +51,7 @@ export async function generateMetadata({ params }: SlugParamsProps): Promise<Met
       card: 'summary_large_image',
       title,
       description,
+      creator: '@pillar_ui',
     },
   }
 }
