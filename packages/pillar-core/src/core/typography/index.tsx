@@ -1,8 +1,8 @@
 import { forwardRef } from 'react'
-import type { TypographyProps } from './typography.type'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { cx } from '../cx'
 
+import type { TypographyProps } from './typography.type'
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
 export const Text = forwardRef(
   (
     {
@@ -25,18 +25,18 @@ export const Text = forwardRef(
     forwardedRef
   ) => {
     const classNames = cx(`t-y`, {
-      [`u_f-${size}`]: !!size,
-      [`u_truncate-${truncate}`]: !!truncate,
-      [`u_t-${transform}`]: !!transform,
-      [`u_t-${align}`]: !!align,
-      [`u_f-${weight}`]: !!weight,
-      [`u_t-${decoration}`]: !!decoration,
-      [`u_t-${leading}`]: !!leading,
-      [`u_f-${fontStyle}`]: !!fontStyle,
-      [`u_${color}`]: !!color,
-      [`u_w-${width}`]: !!width,
+      [`u_f-${size}`]: size,
+      [`u_truncate-${truncate}`]: truncate,
+      [`u_t-${transform}`]: transform,
+      [`u_t-${align}`]: align,
+      [`u_f-${weight}`]: weight,
+      [`u_t-${decoration}`]: decoration,
+      [`u_t-${leading}`]: leading,
+      [`u_f-${fontStyle}`]: fontStyle,
+      [`u_${color}`]: color,
+      [`u_w-${width}`]: width,
       [`t-y-low`]: low,
-      [`${className}`]: !!className,
+      [`${className}`]: className,
     })
 
     return (

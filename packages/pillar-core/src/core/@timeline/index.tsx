@@ -1,5 +1,5 @@
-import { context } from '../@provider'
 import { Grid } from '../grid'
+import { context } from '../@provider'
 
 import type { TimelineContextProps, TimelineItemProps, TimelineProps } from './timeline.type'
 

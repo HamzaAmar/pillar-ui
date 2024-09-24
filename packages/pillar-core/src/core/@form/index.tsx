@@ -1,7 +1,5 @@
 import { useBooleanState, useControllableState, useComposedRefs } from '@pillar-ui/hooks'
-import { cx } from '../cx'
-import { context } from '../@provider'
-import { ChangeEvent, RefObject, forwardRef, useId, useRef, useState } from 'react'
+import { RefObject, forwardRef, useId, useRef, useState } from 'react'
 
 import type {
   FormControllerProps,
@@ -16,8 +14,10 @@ import type {
   InputSearchProps,
   InputNumberButtonProps,
 } from './form.type'
+import { cx } from '../cx'
 import { Flex } from '../flex'
 import { Grid } from '../grid'
+import { context } from '../@provider'
 import { ChevronDown, Close, Eye, EyeOff } from '../icons'
 
 const [FormControllerProvider, useFormController] = context<FormControllerContextProps>({
@@ -42,18 +42,17 @@ function useField(props: any) {
     ...restProps
   } = props
 
-  const prefix = !!prefixInput && <span className="fi-p_cnt f-i-pre u_center">{prefixInput}</span>
-  const suffix = !!suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
+  const prefix = prefixInput && <span className="fi-p_cnt f-i-pre u_center">{prefixInput}</span>
+  const suffix = suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
 
   const cls = cx(`f-i_cnt f-l f-i_cnt-${variant} u_${color}`, {
-    [`u_t-${transform}`]: !!transform,
-    'f-i_cnt-fluid': !!fluid,
+    [`u_t-${transform}`]: transform,
+    'f-i_cnt-fluid': fluid,
     [`u_f-${size}`]: corner,
     [`u_rad-${corner}`]: corner,
   })
-  const isError = hasError || isInvalid
 
-  const field = { ...ctx, ...restProps, 'aria-invalid': isError, 'aria-describedby': describedby }
+  const field = { ...ctx, ...restProps, 'aria-invalid': hasError || isInvalid, 'aria-describedby': describedby }
 
   return { cls, field, prefix, suffix }
 }
@@ -206,8 +205,7 @@ InputSearch.displayName = 'InputSearch'
 ===================================================================================================
 */
 
-export const Select = forwardRef<HTMLSelectElement, SelectProps>((props, forwardedRef) => {
-  const { children, ...restProps } = props
+export const Select = forwardRef<HTMLSelectElement, SelectProps>(({ children, ...restProps }, forwardedRef) => {
   const { cls, field } = useField(restProps)
 
   return (
@@ -246,9 +244,9 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     ...rest
   } = props
   const className = cx(`f-i_cnt f-i_cnt-${variant} l_fl u_gap-xs u_${color}`, {
-    [`u_rad-${corner}`]: !!corner,
-    [`u_t-${transform}`]: !!transform,
-    [`u_f-${size}`]: !!size,
+    [`u_rad-${corner}`]: corner,
+    [`u_t-${transform}`]: transform,
+    [`u_f-${size}`]: size,
   })
 
   console.log(forwardedRef)
@@ -258,10 +256,8 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
 
   const handleInputChange = (value: string, index: number) => {
     const newPin = [...pin]
-    const val = newPin[index] !== '' ? value[1] : value
-    newPin[index] = val
+    newPin[index] = newPin[index] !== '' ? value[1] : value
     setPin(newPin)
-    // Move focus to the next input when the current input is filled
     if (value && index < length - 1) {
       inputRefs.current[index + 1].focus()
     }
@@ -276,13 +272,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
   const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
     event.preventDefault()
     const pastedData = event.clipboardData.getData('text')
-    const newPin = [...pin]
-
-    for (let i = 0; i < length; i++) {
-      newPin[i] = pastedData[i] || ''
-    }
-
-    setPin(newPin)
+    setPin(Array.from({ length }, (_, i) => pastedData[i] || ''))
   }
 
   return (
@@ -318,41 +308,36 @@ PinInput.displayName = 'PinInput'
 ===================================================================================================
 */
 
-export const InputFile = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
-  const { value, title = 'Select File', ...restProps } = props
-  const { cls, field } = useField(restProps)
+export const InputFile = forwardRef<HTMLInputElement, InputProps>(
+  ({ value, title = 'Select File', ...restProps }, forwardedRef) => {
+    const { cls, field } = useField(restProps)
 
-  const inputRef = useRef<HTMLInputElement>(null)
-  const composedRef = useComposedRefs(inputRef, forwardedRef)
+    const inputRef = useRef<HTMLInputElement>(null)
+    const composedRef = useComposedRefs(inputRef, forwardedRef)
 
-  const [_value, setValue] = useControllableState({ controlledValue: value, defaultValue: null })
-  const hasValue = Array.isArray(_value) ? _value.length !== 0 : !!_value
+    const [_value, setValue] = useControllableState({ controlledValue: value, defaultValue: null })
+    const hasValue = Array.isArray(_value) ? _value.length !== 0 : !!_value
 
-  function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    if (field.multiple) {
-      const files = Array.from<File>(e.target.files ?? [])
-
-      let filesNames = `files (${files.length}) : `
-      for (let file of files) {
-        filesNames += `${file.name} `
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (field.multiple) {
+        const files = Array.from<File>(e.target.files ?? [])
+        setValue(`files (${files.length}) : ${files.map((file) => file.name).join(', ')}`)
+      } else {
+        setValue(e.target.files?.[0].name ?? '')
       }
-      setValue(filesNames)
-
-      return
     }
-    setValue(e.target.files?.[0].name ?? '')
-  }
-  return (
-    <Grid grid="auto 1fr" className={cls} onClick={() => inputRef.current?.click()}>
-      <input type="file" ref={composedRef} {...field} className="u_sr" onChange={handleChange} />
-      <Flex as="span" items="center" className="fi-f">
-        {title}
-      </Flex>
+    return (
+      <Grid grid="auto 1fr" className={cls} onClick={() => inputRef.current?.click()}>
+        <input type="file" ref={composedRef} {...field} className="u_sr" onChange={handleChange} />
+        <Flex as="span" items="center" className="fi-f">
+          {title}
+        </Flex>
 
-      <span className="ff-t t-y l_fl  u_f-xs u_it-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
-    </Grid>
-  )
-})
+        <span className="ff-t t-y l_fl  u_f-xs u_it-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
+      </Grid>
+    )
+  }
+)
 
 InputFile.displayName = 'InputFile'
 
@@ -367,16 +352,10 @@ export const FormController = ({
   ...rest
 }: FormControllerProps) => {
   const id = `field-${useId()}`
-  const messageID = `${id}-msg`
-  const hintID = `${id}-hint`
+  const [messageID, hintID] = [`${id}-msg`, `${id}-hint`]
   const hasError = !!error
 
-  // let describedby = ''
-  // if (hasError) describedby += ` ${messageID}`
-  // if (!!hint) describedby += ` ${hintID}`
-  // describedby = describedby ? describedby.trim() : ''
-
-  const describedby = [hasError && `${id}-msg`, hint && `${id}-hint`].filter(Boolean).join(' ') || ''
+  const describedby = [hasError && messageID, hint && hintID].filter(Boolean).join(' ') || ''
 
   const values = {
     ...rest,
@@ -388,8 +367,8 @@ export const FormController = ({
   const fieldLabel = `${label}${rest.required ? ' *' : ''}`
   return (
     <FormControllerProvider {...values}>
-      <Flex direction="column" className={cx('fc-o u_f-xs', { [className!]: !!className })}>
-        <label className={cx('u_f-medium u_f-sm', { u_sr: !!hideLabel })} htmlFor={id}>
+      <Flex direction="column" className={cx('fc-o u_f-xs', { [className!]: className })}>
+        <label className={cx('u_f-medium u_f-sm', { u_sr: hideLabel })} htmlFor={id}>
           {fieldLabel}
         </label>
         {hint && <span id={hintID}>{hint}</span>}
@@ -412,20 +391,14 @@ export const FormGroup = ({
   children,
   hideBorder,
   ...rest
-}: FormGroupProps) => {
-  return (
-    <fieldset
-      className={cx('f-g_cnt', {
-        'f-g-hide-border ': !!hideBorder,
-      })}
-    >
-      <legend className={cx('f-g_legend', { u_sr: !!hideTitle })}>{title}</legend>
-      <Flex gap="sm" className={cx('f-g', { 'f-g-fluid': !!rest.fluid })} items="start" direction={direction}>
-        <FormGroupProvider {...rest}>{children}</FormGroupProvider>
-      </Flex>
-    </fieldset>
-  )
-}
+}: FormGroupProps) => (
+  <fieldset className={cx('f-g_cnt', { 'f-g-hide-border': hideBorder })}>
+    <legend className={cx('f-g_legend', { u_sr: hideTitle })}>{title}</legend>
+    <Flex gap="sm" className={cx('f-g', { 'f-g-fluid': rest.fluid })} items="start" direction={direction}>
+      <FormGroupProvider {...rest}>{children}</FormGroupProvider>
+    </Flex>
+  </fieldset>
+)
 
 export type {
   FormControllerProps,

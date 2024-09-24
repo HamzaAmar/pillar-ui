@@ -1,6 +1,7 @@
-import { CSSProperties } from 'react'
 import { cx } from '../cx'
-import { SpinnerProps } from './spinner.type'
+
+import type { CSSProperties } from 'react'
+import type { SpinnerProps } from './spinner.type'
 
 export const Spinner = ({
   color = 'pri',
@@ -11,10 +12,10 @@ export const Spinner = ({
   ...rest
 }: SpinnerProps) => {
   const classnames = cx(`s-p u_${color}`, {
-    [`u_${color}`]: !!color,
+    [`u_${color}`]: color,
     ['s-p-invert']: invert,
-    [`u_f-${size}`]: !!size,
-    [className!]: !!className,
+    [`u_f-${size}`]: size,
+    [className!]: className,
   })
   return <div style={{ '--border': thickness } as CSSProperties} className={classnames} {...rest} />
 }

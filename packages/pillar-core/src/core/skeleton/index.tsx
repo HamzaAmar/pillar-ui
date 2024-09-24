@@ -1,7 +1,9 @@
-import { CSSProperties, forwardRef } from 'react'
-import type * as ST from './skeleton.type'
+import { forwardRef } from 'react'
 import { cx } from '../cx'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
+
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
+import type * as ST from './skeleton.type'
+import type { CSSProperties } from 'react'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -12,7 +14,7 @@ import { ForwardRefComponent } from '../../types/polymorphic.type'
 export const SkeletonAvatar = forwardRef(
   ({ size = 'xl', corner = 'full', children, isLoading = true, className, ...rest }, ref) => {
     const classNames = cx(`s-k s-k_avt u_f-${size} u_rad-${corner}`, {
-      [className!]: !!className,
+      [className!]: className,
     })
     return isLoading ? <div className={classNames} ref={ref} {...rest} /> : <div>{children}</div>
   }

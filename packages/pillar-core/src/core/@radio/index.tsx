@@ -26,7 +26,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
     ...rest
   } = props
 
-  const classnames = cx(`f-l u_gap-xs u_it-center r-a_c u_${color}`, { [`l_fl-${direction}`]: !!direction })
+  const classnames = cx(`f-l u_gap-xs u_it-center r-a_c u_${color}`, { [`l_fl-${direction}`]: direction })
   return (
     <label className={classnames} htmlFor={id}>
       <input type="radio" name={name} className="r-a" id={id} {...rest} />

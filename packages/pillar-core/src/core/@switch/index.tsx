@@ -1,9 +1,9 @@
 import { useControllableState } from '@pillar-ui/hooks'
-import { SwitchProps } from './switch.type'
 import { forwardRef } from 'react'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
 import { cx } from '../cx'
 
+import type { SwitchProps } from './switch.type'
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
 // TODO: Try to add Switch Variant
 
 export const Switch = forwardRef(
@@ -24,7 +24,7 @@ export const Switch = forwardRef(
   ) => {
     const [pressed, setPressed] = useControllableState<boolean>({
       controlledValue: pressedProp,
-      defaultValue: defaultPressed ?? false,
+      defaultValue: defaultPressed,
     })
 
     function switchPress() {
@@ -33,9 +33,9 @@ export const Switch = forwardRef(
     }
 
     const classNames = cx(`s-w u_${color}`, {
-      [`u_rad-${corner}`]: !!corner,
-      [`u_f-${size}`]: !!size,
-      [className!]: !!className,
+      [`u_rad-${corner}`]: corner,
+      [`u_f-${size}`]: size,
+      [className!]: className,
     })
 
     return (

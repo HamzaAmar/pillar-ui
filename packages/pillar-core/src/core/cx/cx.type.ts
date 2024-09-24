@@ -1,4 +1,4 @@
-type ObjectType = Record<string, boolean>
+type ObjectType = Record<string, any>
 
 export type CxArgs =
   | string

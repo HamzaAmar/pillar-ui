@@ -1,6 +1,7 @@
 import { createContext, useContext } from 'react'
+
 import type { ReactNode } from 'react'
-import { CreateContextParams } from './provider.type'
+import type { CreateContextParams } from './provider.type'
 
 export function context<T extends object | null>({
   name,
@@ -14,7 +15,7 @@ export function context<T extends object | null>({
     <CTX.Provider value={rest as T}>{children}</CTX.Provider>
   )
 
-  function useContextCustom() {
+  const useContextCustom = () => {
     const context = useContext(CTX)
     if (!context && required) console.warn(error)
     return context

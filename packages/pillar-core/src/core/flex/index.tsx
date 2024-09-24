@@ -1,8 +1,9 @@
-import { CSSProperties, forwardRef } from 'react'
-import type { FlexItemProps, FlexProps } from './flex.type'
+import { forwardRef } from 'react'
 import { cx } from '../cx'
-import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
+import type { FlexItemProps, FlexProps } from './flex.type'
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
+import type { CSSProperties } from 'react'
 /*
 ===============================================================================================
     Flex Item Core Component
@@ -38,14 +39,14 @@ export const Flex = forwardRef((props, forwardedRef) => {
   const { children, justify, items, flex, direction, wrap, inline, as: Tag = 'div', gap, className, ...rest } = props
 
   const classNames = cx('f-l', {
-    [`u_jus-${justify}`]: !!justify && justify !== 'start',
-    [`u_it-${items}`]: !!items,
-    // [`l_fl-${flex}`]: !!items,
-    [`l_fl-${direction}`]: !!direction && direction !== 'row',
-    'l_fl-wrap': !!wrap,
-    'l_fl-inline': !!inline,
-    [`u_gap-${gap}`]: !!gap,
-    [`${className}`!]: !!className,
+    [`u_jus-${justify}`]: justify && justify !== 'start',
+    [`u_it-${items}`]: items,
+    // [`l_fl-${flex}`]: items,
+    [`l_fl-${direction}`]: direction && direction !== 'row',
+    'l_fl-wrap': wrap,
+    'l_fl-inline': inline,
+    [`u_gap-${gap}`]: gap,
+    [`${className}`!]: className,
   })
 
   return (

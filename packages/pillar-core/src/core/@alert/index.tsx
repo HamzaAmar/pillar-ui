@@ -1,7 +1,7 @@
 import { useControllableState } from '@pillar-ui/hooks'
 import { cx } from '../cx'
-import { forwardRef } from 'react'
 import { IconButton } from '../button'
+import { forwardRef } from 'react'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { AlertProps } from './alert.type'
@@ -40,14 +40,14 @@ export const Alert = forwardRef(
 
     const classNames = cx(`a-l f-l u_gap-xs u_${variant} u_${color}`, {
       [`u_rad-${corner}`]: !!corner,
-      [`u_f-${size}`]: !!size,
-      [className!]: !!className,
+      [`u_f-${size}`]: size,
+      [className!]: className,
     })
 
     return (
       <div ref={forwardedRef} className={classNames} role="alert" {...rest}>
         {icon && <span className="u_w-fit">{icon}</span>}
-        <div className={cx(`a-l_cnt f-l`, { al_in: !!inline })}>
+        <div className={cx(`a-l_cnt f-l`, { al_in: inline })}>
           {title && <div className="u_t-capitalize u_t-md u_f-medium">{title}</div>}
           {message && <span>{message}</span>}
         </div>

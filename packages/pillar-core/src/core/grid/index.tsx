@@ -93,20 +93,20 @@ export const Grid = forwardRef((props, forwardedRef) => {
   let [xlColumns, xlRows] = xl?.split(' x ') ?? []
 
   const classNames = cx('g-r', {
-    [`u_jus-${justify}`]: !!justify,
-    [`u_it-${items}`]: !!items,
-    [`u_gap-${gap}`]: !!gap,
-    [className!]: !!className,
-    [`xs_grid-columns`]: !!xsColumns,
-    [`sm_grid-columns`]: !!smColumns,
-    [`md_grid-columns`]: !!mdColumns,
-    [`lg_grid-columns`]: !!lgColumns,
-    [`xl_grid-columns`]: !!xlColumns,
-    [`xs_grid-rows`]: !!xsRows,
-    [`sm_grid-rows`]: !!smRows,
-    [`md_grid-rows`]: !!mdRows,
-    [`lg_grid-rows`]: !!lgRows,
-    [`xl_grid-rows`]: !!xlRows,
+    [`u_jus-${justify}`]: justify,
+    [`u_it-${items}`]: items,
+    [`u_gap-${gap}`]: gap,
+    [className!]: className,
+    [`xs_grid-columns`]: xsColumns,
+    [`sm_grid-columns`]: smColumns,
+    [`md_grid-columns`]: mdColumns,
+    [`lg_grid-columns`]: lgColumns,
+    [`xl_grid-columns`]: xlColumns,
+    [`xs_grid-rows`]: xsRows,
+    [`sm_grid-rows`]: smRows,
+    [`md_grid-rows`]: mdRows,
+    [`lg_grid-rows`]: lgRows,
+    [`xl_grid-rows`]: xlRows,
   })
 
   const gridStyle = getStyles({

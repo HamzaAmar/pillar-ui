@@ -1,7 +1,8 @@
 import { forwardRef } from 'react'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
-import type { SeparatorProps } from './separator.type'
 import { cx } from '../cx'
+
+import type { SeparatorProps } from './separator.type'
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
 export const Separator = forwardRef(
   (
@@ -19,9 +20,9 @@ export const Separator = forwardRef(
     ref
   ) => {
     const classNames = cx(`s-e s-e-${direction} u_f-${thickness} f-l u_jus-${position} u_it-center u_${color}`, {
-      [`u_rad-${corner}`]: !!corner,
+      [`u_rad-${corner}`]: corner,
       'l_fl-column': direction === 'vertical',
-      [className!]: !!className,
+      [className!]: className,
     })
     return (
       <Tag className={classNames} ref={ref} {...rest}>

@@ -1,8 +1,9 @@
 import { forwardRef } from 'react'
-import type { CSSProperties } from 'react'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
-import type { PaperProps } from './paper.type'
 import { cx } from '../cx'
+
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
+import type { PaperProps } from './paper.type'
+import type { CSSProperties } from 'react'
 
 // Helper function to generate CSS variable
 function getCSSVariable(value: string | undefined, initial: number = 9) {
@@ -34,16 +35,16 @@ export const Paper = forwardRef(
     ref
   ) => {
     const classNames = cx(`p-p`, {
-      [`u_sh-${shadow}`]: !!shadow,
-      [`l_f-${flow}`]: !!flow,
-      [`u_rad-${corner}`]: !!corner,
-      [`u_pa-${p}`]: !!p,
-      [`u_ma-${m}`]: !!m,
-      [`u_w-${width}`]: !!width,
-      [`u_h-${height}`]: !!height,
-      [`u_ratio-${ratio}`]: !!ratio,
-      [`u_border`]: !!border,
-      [className!]: !!className,
+      [`u_sh-${shadow}`]: shadow,
+      [`l_f-${flow}`]: flow,
+      [`u_rad-${corner}`]: corner,
+      [`u_pa-${p}`]: p,
+      [`u_ma-${m}`]: m,
+      [`u_w-${width}`]: width,
+      [`u_h-${height}`]: height,
+      [`u_ratio-${ratio}`]: ratio,
+      [`u_border`]: border,
+      [className!]: className,
     })
 
     const _style: CSSProperties = {

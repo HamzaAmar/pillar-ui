@@ -10,10 +10,10 @@ export const Chips = forwardRef(
     ref
   ) => {
     const _className = cx(`c-i shd u_${variant} u_${color}`, {
-      [`u_f-${size}`]: !!size,
-      [`u_t-${transform}`]: !!transform,
-      [`u_rad-${corner}`]: !!corner,
-      [className!]: !!className,
+      [`u_f-${size}`]: size,
+      [`u_t-${transform}`]: transform,
+      [`u_rad-${corner}`]: corner,
+      [className!]: className,
     })
 
     return (

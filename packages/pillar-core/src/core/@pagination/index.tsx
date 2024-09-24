@@ -1,11 +1,12 @@
 import { forwardRef } from 'react'
-import { Button } from '../button'
-import { usePagination } from '@pillar-ui/hooks'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
-import type { PaginationContextProps, PaginationItem, PaginationProps } from './pagination.type'
 import { cx } from '../cx'
 import { context } from '../@provider'
+import { Button } from '../button'
+import { usePagination } from '@pillar-ui/hooks'
 import { ChevronDown, DotsHorizontal } from '../icons'
+
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
+import type { PaginationContextProps, PaginationItem, PaginationProps } from './pagination.type'
 
 const [PaginationProvider, usePaginationContext] = context<PaginationContextProps>({
   name: 'Pagination',
@@ -26,13 +27,11 @@ const Item = forwardRef((props, forwardedRef) => {
     ...rest
   } = props
 
-  const _classNames = cx('p-a_btn u_center', { className: !!className })
-
   return (
     <li>
       <Button
         variant={variant}
-        className={_classNames}
+        className={cx('p-a_btn u_center', { className: className })}
         size={size}
         color={color}
         corner={corner}
@@ -49,9 +48,7 @@ const Item = forwardRef((props, forwardedRef) => {
 
 Item.displayName = 'PaginationItem'
 
-export const Pagination = (props: PaginationProps) => {
-  const { count = 10, ...rest } = props
-
+export const Pagination = ({ count = 10, ...rest }: PaginationProps) => {
   const { step, range, goToNext, goToPrevious, jumpTo, isFirst, isLast } = usePagination({
     max: count,
   })

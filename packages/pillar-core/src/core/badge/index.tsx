@@ -1,16 +1,17 @@
-import { ReactNode, forwardRef } from 'react'
+import { forwardRef } from 'react'
 import { cx } from '../cx'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
+import type { ReactNode } from 'react'
 import type { BadgeProps } from './badge.type'
 
 export const Badge = forwardRef((props, ref) => {
   let { variant = 'solid', color = 'pri', as: Tag = 'div', type = 'numeric', size, corner, className, ...rest } = props
   const classNames = cx(`b-a shd u_${variant} u_center u_${color}`, {
     'b-a_dot': type === 'dot',
-    [`u_f-${size}`]: !!size,
-    [`u_rad-${corner}`]: !!corner,
-    [className!]: !!className,
+    [`u_f-${size}`]: size,
+    [`u_rad-${corner}`]: corner,
+    [className!]: className,
   })
 
   /**

@@ -1,8 +1,8 @@
 import { forwardRef } from 'react'
-import { ForwardRefComponent } from '../../types/polymorphic.type'
-import { cx } from '../cx'
-import { Spinner } from '../spinner'
+import { cx, Spinner } from '../..'
+
 import type { ButtonGroupProps, ButtonProps, IconButtonProps } from './button.type'
+import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -32,11 +32,11 @@ export const Button = forwardRef(
     forwardedRef
   ) => {
     const classNames = cx(`b-u shd u_${variant} u_${color} u_center`, {
-      'b-u-fluid': !!fluid,
-      [`u_t-${transform}`]: !!transform,
-      [`u_f-${size}`]: !!size,
-      [`u_rad-${corner}`]: !!corner,
-      [className!]: !!className,
+      'b-u-fluid': fluid,
+      [`u_t-${transform}`]: transform,
+      [`u_f-${size}`]: size,
+      [`u_rad-${corner}`]: corner,
+      [className!]: className,
     })
 
     const isLoading = state === 'loading'
@@ -76,9 +76,9 @@ export const IconButton = forwardRef(
     forwardedRef
   ) => {
     const classnames = cx(`b-u bu-i u_${variant} u_${color} u_center`, {
-      [`u_f-${size}`]: !!size,
-      [`u_rad-${corner}`]: !!corner,
-      [className!]: !!className,
+      [`u_f-${size}`]: size,
+      [`u_rad-${corner}`]: corner,
+      [className!]: className,
     })
 
     return (
@@ -113,9 +113,9 @@ export const ButtonGroup = forwardRef(
     forwardedRef
   ) => {
     const classNames = cx(`bu-g b-u u_${color} u_center`, {
-      [className!]: !!className,
-      [`u_f-${size}`]: !!size,
-      [`u_rad-${corner}`]: !!corner,
+      [className!]: className,
+      [`u_f-${size}`]: size,
+      [`u_rad-${corner}`]: corner,
     })
 
     return (

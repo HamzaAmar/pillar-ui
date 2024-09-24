@@ -7,41 +7,44 @@ import { Check, Minus } from '../icons'
 
 const ICON_PROPS = { strokeWidth: 2, 'aria-hidden': true, focusable: false, className: 'c-h_icn' }
 
-export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forwardedRef) => {
-  let {
-    name,
-    label,
-    size,
-    color,
-    showLabel,
-    isIndeterminate = false,
-    icon = isIndeterminate ? <Minus {...ICON_PROPS} /> : <Check {...ICON_PROPS} />,
-    ...rest
-  } = props
+export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
+  (
+    {
+      name,
+      label,
+      size,
+      color,
+      showLabel,
+      isIndeterminate = false,
+      icon = isIndeterminate ? <Minus {...ICON_PROPS} /> : <Check {...ICON_PROPS} />,
+      ...rest
+    },
+    forwardedRef
+  ) => {
+    const ref = useComposedRefs(forwardedRef, (element: HTMLInputElement | null) => {
+      if (element && isIndeterminate) {
+        element.indeterminate = !!isIndeterminate
+      }
+    })
 
-  const ref = useComposedRefs(forwardedRef, (element: HTMLInputElement | null) => {
-    if (element && isIndeterminate) {
-      element.indeterminate = !!isIndeterminate
-    }
-  })
+    const classNamesRoot = cx('c-h_cnt', { [`u_f-${size}`]: !!size, [`u_${color}`]: !!color })
 
-  const classNamesRoot = cx('c-h_cnt', { [`u_f-${size}`]: !!size, [`u_${color}`]: !!color })
-
-  return (
-    <label className={classNamesRoot}>
-      <input
-        type="checkbox"
-        ref={ref}
-        className="u_sr c-h_el"
-        name={name}
-        aria-checked={isIndeterminate ? 'mixed' : rest.checked}
-        {...rest}
-      />
-      <span className="c-h u_s-equal u_center">{icon}</span>
-      <div className={cx('c-h_lbl', { u_sr: !!showLabel })}>{label}</div>
-    </label>
-  )
-})
+    return (
+      <label className={classNamesRoot}>
+        <input
+          type="checkbox"
+          ref={ref}
+          className="u_sr c-h_el"
+          name={name}
+          aria-checked={isIndeterminate ? 'mixed' : rest.checked}
+          {...rest}
+        />
+        <span className="c-h u_s-equal u_center">{icon}</span>
+        <div className={cx('c-h_lbl', { u_sr: showLabel })}>{label}</div>
+      </label>
+    )
+  }
+)
 
 Checkbox.displayName = 'Checkbox'
 

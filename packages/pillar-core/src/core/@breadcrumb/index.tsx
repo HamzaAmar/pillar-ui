@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import { cx } from '../cx'
 import { context } from '../@provider'
 
-import type { BreadcrumbProps, BreadcrumbItemProps, BreadcrumbContextProps, CurrentPage } from './breadcrumb.type'
+import type { BreadcrumbProps, BreadcrumbItemProps, BreadcrumbContextProps } from './breadcrumb.type'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 /* 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -18,12 +18,11 @@ const [BreadcrumbProvider, useBreadcrumbContext] = context<BreadcrumbContextProp
 export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   const ctx = useBreadcrumbContext() ?? {}
   const { as: Tag = 'a', children, current, separator = ctx.separator ?? '/', className, ...rest } = props
-  const currentPage: CurrentPage = current ? { 'aria-current': 'page' } : {}
-  const classNames = cx(`b-r_lnk u_gap-2xs u_center`, { [className!]: !!className })
+  const classNames = cx(`b-r_lnk u_gap-2xs u_center`, { [className!]: className })
 
   return (
     <li className={`f-l u_gap-sm b-r_itm`}>
-      <Tag ref={forwardedRef} {...currentPage} className={classNames} {...rest}>
+      <Tag ref={forwardedRef} {...(current && { 'aria-current': 'page' })} className={classNames} {...rest}>
         {children}
       </Tag>
       {!current && (
@@ -43,22 +42,23 @@ BreadcrumbItem.displayName = 'BreadcrumbItem'
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const Breadcrumb = forwardRef((props, ref) => {
-  const { children, separator, size, color = 'bg', className, as: Tag = 'nav', ...rest } = props
-  const breadcrumbContext = { separator }
-  const classNames = cx(`f-l l_fl-wrap u_gap-sm u_${color}`, {
-    [`u_f-${size}`]: !!size,
-    [className!]: !!className,
-  })
+export const Breadcrumb = forwardRef(
+  ({ children, separator, size, color = 'bg', className, as: Tag = 'nav', ...rest }, ref) => {
+    const breadcrumbContext = { separator }
+    const classNames = cx(`f-l l_fl-wrap u_gap-sm u_${color}`, {
+      [`u_f-${size}`]: size,
+      [className!]: className,
+    })
 
-  return (
-    <Tag ref={ref} className="breadcrumb" aria-label="Breadcrumb" {...rest}>
-      <ol className={classNames}>
-        <BreadcrumbProvider {...breadcrumbContext}>{children}</BreadcrumbProvider>
-      </ol>
-    </Tag>
-  )
-}) as ForwardRefComponent<'nav', BreadcrumbProps>
+    return (
+      <Tag ref={ref} className="breadcrumb" aria-label="Breadcrumb" {...rest}>
+        <ol className={classNames}>
+          <BreadcrumbProvider {...breadcrumbContext}>{children}</BreadcrumbProvider>
+        </ol>
+      </Tag>
+    )
+  }
+) as ForwardRefComponent<'nav', BreadcrumbProps>
 
 Breadcrumb.displayName = 'Breadcrumb'
 

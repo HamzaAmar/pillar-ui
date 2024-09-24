@@ -1,6 +1,10 @@
 import { Children, cloneElement, forwardRef, isValidElement, useId, useState } from 'react'
-import { cx } from '../cx'
+
+// TODO: Docs BUild Failed when importing from index and get error of not a function
+// import { cx, context } from '../..'
 import { context } from '../@provider'
+import { cx } from '../cx'
+
 import { ChevronDown } from '../icons'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
@@ -53,41 +57,45 @@ const [AccordionProvider, useAccordionContext] = context<AccordionContextProps>(
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const Accordion = forwardRef((props, forwardedRef) => {
-  const {
-    children,
-    type = 'single',
-    collapsible,
-    color = 'bg',
-    variant,
-    size = 'md',
-    corner = 'sharp',
-    separate,
-    className,
-    ...rest
-  } = props
-  const state = useAccordion(props)
+export const Accordion = forwardRef(
+  (
+    {
+      children,
+      type = 'single',
+      collapsible,
+      color = 'bg',
+      variant,
+      size = 'md',
+      corner = 'sharp',
+      separate,
+      className,
+      ...rest
+    },
+    forwardedRef
+  ) => {
+    const state = useAccordion({ type, collapsible })
 
-  const classNames = cx(`a-c`, {
-    [`u_${color}`]: !!color,
-    [`u_f-${size}`]: !!size,
-    'l_f-sm': !!separate,
-    u_variant: !!variant,
-    [className!]: !!className,
-  })
-  const accordionContext = { ...state, variant, corner }
+    const classNames = cx(`a-c`, {
+      [`u_${color}`]: color,
+      [`u_f-${size}`]: size,
+      'l_f-sm': separate,
+      [`u_variant`]: variant,
+      [className!]: className,
+    })
+    const accordionContext = { ...state, variant, corner }
 
-  return (
-    <div ref={forwardedRef} className={classNames} {...rest}>
-      <AccordionProvider {...accordionContext}>
-        {/* I use the value instead of the index to make this smaller */}
-        {Children.map(children, (child, value) => {
-          return isValidElement(child) ? cloneElement(child, { value } as any) : null
-        })}
-      </AccordionProvider>
-    </div>
-  )
-}) as ForwardRefComponent<'div', AccordionProps>
+    return (
+      <div ref={forwardedRef} className={classNames} {...rest}>
+        <AccordionProvider {...accordionContext}>
+          {/* I use the value instead of the index to make this smaller */}
+          {Children.map(children, (child, value) => {
+            return isValidElement(child) ? cloneElement(child, { value } as any) : null
+          })}
+        </AccordionProvider>
+      </div>
+    )
+  }
+) as ForwardRefComponent<'div', AccordionProps>
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,9 +107,10 @@ export const AccordionItem = forwardRef(({ children, value, className, ...rest }
   const id = useId()
   const ctx = { id, value }
   const { corner, variant } = useAccordionContext() ?? {}
-  const classNames = cx(`a-c_itm u_${variant}`, {
-    [`u_rad-${corner}`]: !!corner,
-    [className!]: !!className,
+  const classNames = cx(`a-c_itm`, {
+    [`u_rad-${corner}`]: corner,
+    [`u_${variant}`]: variant,
+    [className!]: className,
   })
 
   return (
@@ -148,15 +157,18 @@ AccordionButton.displayName = 'AccordionButton'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const AccordionPanel = forwardRef((props, ref) => {
-  const { children, className, ...rest } = props
+export const AccordionPanel = forwardRef(({ children, className, ...rest }, ref) => {
   const { value } = useAccordionItemContext() ?? {}
   const { isOpen, id } = useAccordionContext() ?? {}
 
-  const _className = cx('a-c_pnl', { [className!]: !!className })
-
   return (
-    <div id={id} data-open={isOpen?.(value!)} className={_className} ref={ref} {...rest}>
+    <div
+      id={id}
+      data-open={isOpen?.(value!)}
+      className={cx('a-c_pnl', { [className!]: className })}
+      ref={ref}
+      {...rest}
+    >
       {children}
     </div>
   )

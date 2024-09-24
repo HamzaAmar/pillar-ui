@@ -1,7 +1,7 @@
 import { useCounter } from '@pillar-ui/hooks' // Adjust the import path as needed
+import { Minus, Plus } from '../icons'
 
 import type { CounterButtonProps } from './counterButton.type'
-import { Minus, Plus } from '../icons'
 
 const shared = { type: 'button', className: 'c-b u_center' } as const
 

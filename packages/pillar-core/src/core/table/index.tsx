@@ -1,5 +1,6 @@
 import { forwardRef } from 'react'
 import { cx } from '../cx'
+
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { TableColumnProps, TableProps, TableRowProps } from './table.type'
 
@@ -10,7 +11,7 @@ export const TableColumn = forwardRef(
         ref={forwardedRef}
         className={cx('col', {
           [`u_f-${weight}`]: weight !== 'normal',
-          [className!]: !!className,
+          [className!]: className,
         })}
         {...rest}
       >
@@ -47,7 +48,7 @@ export const Table = ({
     <div className="t-a_cnt">
       <table
         className={cx(`t-a u_f-${size} t-a-${variant}  u_${color}`, {
-          table__border: !!showBorder,
+          table__border: showBorder,
         })}
         {...rest}
       >

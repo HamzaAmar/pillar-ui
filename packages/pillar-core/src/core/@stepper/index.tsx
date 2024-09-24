@@ -1,9 +1,11 @@
 import { Children, isValidElement, createElement, useId } from 'react'
-import type { ReactNode } from 'react'
 import { Flex } from '../flex'
-import type { StepperContextProps, StepperProps, StepProps } from './stepper.type'
 import { context } from '../@provider'
+
 import { Check } from '../icons'
+
+import type { ReactNode } from 'react'
+import type { StepperContextProps, StepperProps, StepProps } from './stepper.type'
 
 const [StepperProvider, useStepperContext] = context<StepperContextProps>({ name: 'Stepper' })
 
@@ -21,8 +23,7 @@ export const StepperStep = (props: StepProps) => {
   } = props
 
   const id = useId()
-  const labelledbyID = `label-${id}`
-  const describedbyID = `description-${id}`
+  const [labelledbyID, describedbyID] = [`lbl-${id}`, `des-${id}`]
 
   return (
     <Flex data-state={state} items="center" className={`s-t_step step__${size}`}>

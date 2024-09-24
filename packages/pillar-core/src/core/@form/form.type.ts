@@ -15,6 +15,9 @@ interface FormFieldSharedProps {
   transform?: Transform
 }
 
+export interface FieldProps extends FormFieldSharedProps, AddonsProps {
+  children: ReactNode
+}
 interface SharedProps {
   required?: boolean
   disabled?: boolean
@@ -43,11 +46,17 @@ export interface PinInputProps extends Omit<ComponentPropsWithRef<'input'>, 'siz
   length?: number
 }
 
-export interface InputProps extends FormFieldSharedProps, Omit<ComponentPropsWithRef<'input'>, 'size' | 'color'> {
-  status?: Status
-  className?: string
+interface AddonsProps {
   prefixInput?: ReactNode | string
   suffixInput?: ReactNode | string
+}
+
+export interface InputProps
+  extends AddonsProps,
+    FormFieldSharedProps,
+    Omit<ComponentPropsWithRef<'input'>, 'size' | 'color'> {
+  status?: Status
+  className?: string
   isInvalid?: boolean
 }
 
@@ -58,9 +67,10 @@ export interface InputPasswordProps extends Omit<InputProps, 'suffixInput'> {
 
 export interface InputSearchProps extends InputProps {}
 
-export interface TextareaProps extends Omit<ComponentPropsWithRef<'textarea'>, 'size' | 'color'>, FormFieldSharedProps {
-  prefixInput?: ReactNode | string
-  suffixInput?: ReactNode | string
+export interface TextareaProps
+  extends AddonsProps,
+    Omit<ComponentPropsWithRef<'textarea'>, 'size' | 'color'>,
+    FormFieldSharedProps {
   isInvalid?: boolean
   status?: Status
 }
