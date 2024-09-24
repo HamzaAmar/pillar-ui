@@ -307,3 +307,19 @@ export const COMING_SUPPORT = [
     ),
   },
 ]
+
+export const strokes = {
+  stroke: 'var(--bg-9)',
+  strokeLinecap: 'round',
+  strokeLinejoin: 'round',
+  strokeMiterlimit: '1.5',
+  strokeWidth: '10.2',
+} as const
+
+export const filles = {
+  fill: 'var(--bg-1)',
+  fillRule: 'evenodd',
+  clipRule: 'evenodd',
+} as const
+
+export const allConfig = { ...strokes, ...filles } as const

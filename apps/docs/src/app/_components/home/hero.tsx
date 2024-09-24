@@ -5,11 +5,10 @@ import { Button, Flex, IconButton, Text } from '@pillar-ui/core'
 export function Hero() {
   return (
     <Flex as="section" direction="column" gap="xl" justify="center" className="section hero">
-      <h1 className="hero--heading">
-        <Text as="span" className="pillar--title">
+      <h1 className="hero-hdg">
+        <Text as="span" className="hero-ttl">
           <svg
-            className="pillar--title-container"
-            stroke="var(--bg-9)"
+            className="hero-svg"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="1.5"
@@ -24,7 +23,7 @@ export function Hero() {
         : Is a Lightweight, Accessible React UI Library
       </h1>
       <div className="l_f-md">
-        <p className="hero--text">
+        <p className="hero-txt">
           A React UI library offering reusable ui components, React hooks, icons and utilities for building React
           applications quickly and easily.
         </p>

@@ -1,5 +1,5 @@
 import { Button, Flex, Heading, Text, Grid, Paper, Avatar } from '@pillar-ui/core'
-import { FEATURES, USER_DATA } from './data'
+import { FEATURES, strokes, USER_DATA } from './data'
 import { SectionHeading } from '~/component/core/sectionHeading'
 
 function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
@@ -76,17 +76,7 @@ export function RTLSupport() {
           </Grid>
         </div>
 
-        <svg
-          className="direction-item--small"
-          stroke="var(--bg-6)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeMiterlimit="1.5"
-          strokeWidth="6.8"
-          viewBox="0 0 284 284"
-          width="500"
-          fill="none"
-        >
+        <svg className="direction-item--small" {...strokes} viewBox="0 0 284 284" width="500" fill="none">
           <path d="M131 129c13 4 47 19 30 38-18 21-64 8-53-23 4-12 25-15 36-16 32-5 63 2 95 7m-108-6c-27-7-57-1-83 10" />
           <path d="M45 111c0 13-9 27-17 36 18 1 29 5 39 20M234 107c6 11 14 19 23 28-13 4-23 15-30 26" />
         </svg>

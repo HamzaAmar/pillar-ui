@@ -47,40 +47,40 @@
   & > * {
     padding: 0.375rem 1rem;
   }
+}
 
-  & pre {
-    overflow: auto;
-    height: 100%;
-    max-height: 80vh;
-    max-width: 100%;
-    margin: 0;
-  }
+.doc-pre {
+  overflow: auto;
+  height: 100%;
+  max-height: 80vh;
+  max-width: 100%;
+  margin: 0;
+}
 
-  & code {
-    counter-reset: sh-line-number;
-    font-size: 0;
-    background: none;
-    user-select: initial;
-    height: 100%;
-  }
+.doc-code {
+  counter-reset: sh-line-number;
+  font-size: 0;
+  background: none;
+  user-select: initial;
+  height: 100%;
+}
 
-  .sh__line::before {
-    counter-increment: sh-line-number 1;
-    content: counter(sh-line-number);
-    margin-inline-end: 1.25rem;
-    color: hsl(0deg 0% 64%);
-    font-size: 0.85rem;
-    vertical-align: middle;
-  }
+.sh__line::before {
+  counter-increment: sh-line-number 1;
+  content: counter(sh-line-number);
+  margin-inline-end: 1.25rem;
+  color: hsl(0deg 0% 64%);
+  font-size: 0.85rem;
+  vertical-align: middle;
+}
 
-  .sh__line {
-    border-inline-start: 4px solid transparent;
-    font-size: 0.875rem;
-    line-height: 1.75;
+.sh__line {
+  border-inline-start: 4px solid transparent;
+  font-size: 0.875rem;
+  line-height: 1.75;
 
-    & > * {
-      display: inline-block;
-    }
+  & > * {
+    display: inline-block;
   }
 }
 

@@ -22,8 +22,8 @@ export const DocsCode = ({ code, html }: DocsCodeProps) => {
         <CopyButton size="2xs" className="code--copy" text={code} />
       </div>
 
-      <pre>
-        <code dangerouslySetInnerHTML={{ __html: html }} />
+      <pre className="doc-pre">
+        <code className="doc-code" dangerouslySetInnerHTML={{ __html: html }} />
       </pre>
     </div>
   )

@@ -45,11 +45,11 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
       <Flex gap="sm" wrap>
         <Button
           as="a"
-          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
-          target="_blank"
-          color="bg"
-          icon={<Github strokeWidth={2} />}
           size="xs"
+          color="bg"
+          target="_blank"
+          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
+          icon={<Github strokeWidth={2} />}
         >
           Go To {slug} Source Code
         </Button>

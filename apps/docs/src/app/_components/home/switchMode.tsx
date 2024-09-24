@@ -6,36 +6,28 @@ import { Moon, Sun } from '@pillar-ui/icons'
 import { useTheme } from 'next-themes'
 import React, { useEffect } from 'react'
 
+const svgs = { width: 30, ariaHidden: true, focusable: false }
+
 const SwitchMode = () => {
   const { value: mounted, setTrue } = useBooleanState(false)
   const { resolvedTheme, setTheme } = useTheme()
+
+  const isDark = resolvedTheme === 'dark'
 
   useEffect(() => {
     setTrue()
   }, [setTrue])
 
-  // TODO: Return Skeleton to avoid  Layout Shift
-  if (!mounted) {
-    return <Spinner size="lg" />
-  }
-
-  const nextMode = resolvedTheme === 'dark' ? 'light' : 'dark'
-
-  const icon =
-    resolvedTheme === 'dark' ? (
-      <Sun width="30" aria-hidden="true" focusable="false" />
-    ) : (
-      <Moon width="30" aria-hidden="true" focusable="false" />
-    )
+  const nextMode = isDark ? 'light' : 'dark'
+  const icon = isDark ? <Sun {...svgs} /> : <Moon {...svgs} />
 
   return (
     <Button
-      color={resolvedTheme ? 'pri' : 'bg'}
-      variant={resolvedTheme ? 'solid' : 'outline'}
       onClick={() => setTheme(nextMode)}
-      size="md"
+      size="sm"
       icon={icon}
       data-mode={resolvedTheme}
+      state={mounted ? 'idle' : 'loading'}
     >
       {nextMode}
     </Button>

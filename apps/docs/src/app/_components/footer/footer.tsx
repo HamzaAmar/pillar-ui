@@ -2,6 +2,42 @@ import React from 'react'
 import { default as Logo } from '../logo'
 import { Text, Grid, Paper } from '@pillar-ui/core'
 import Link from 'next/link'
+import { FooterItemProps } from './footer.type'
+import { FOOTER_ITEMS } from './footer.data'
+
+const FooterItem = ({ href, text, external = false }: FooterItemProps) => {
+  const rest = external ? { target: '_blank' } : {}
+  return (
+    <li>
+      <Text
+        transform="capitalize"
+        color="bg"
+        low
+        as={external ? 'a' : Link}
+        className="footer_link"
+        href={href}
+        {...rest}
+      >
+        {text}
+      </Text>
+    </li>
+  )
+}
+
+const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }) => {
+  return (
+    <nav className="l_f-sm">
+      <Text transform="capitalize" size="md" weight="medium">
+        {title}
+      </Text>
+      <ul className="footer-list l_f-xs">
+        {links.map(({ href, text, external }) => (
+          <FooterItem key={href} href={href} text={text} external={external} />
+        ))}
+      </ul>
+    </nav>
+  )
+}
 
 const footer = () => {
   return (
@@ -14,148 +50,9 @@ const footer = () => {
             tools designed with accessibility and scalability in mind. Empower your web applications effortlessly
           </Text>
         </div>
-        <nav className="l_f-sm">
-          <Text transform="capitalize" size="md" weight="medium">
-            Project
-          </Text>
-          <ul className="footer-list l_f-xs">
-            <li>
-              <Text transform="capitalize" color="bg" low as={Link} className="footer_link" href="/docs/components">
-                UI Components
-              </Text>
-            </li>
-            <li>
-              <Text transform="capitalize" color="bg" low as={Link} className="footer_link" href="/docs/icons">
-                Icons
-              </Text>
-            </li>
-            <li>
-              <Text transform="capitalize" color="bg" low as={Link} className="footer_link" href="/docs/hooks">
-                Hooks
-              </Text>
-            </li>
-            <li>
-              <Text transform="capitalize" color="bg" low as={Link} className="footer_link" href="/docs/utils">
-                Utils
-              </Text>
-            </li>
-          </ul>
-        </nav>
-        <nav className="l_f-sm">
-          <Text transform="capitalize" size="md" weight="medium">
-            Community
-          </Text>
-
-          <ul className="footer-list l_f-xs">
-            <li>
-              <Text
-                transform="capitalize"
-                color="bg"
-                low
-                as="a"
-                target="_blank"
-                className="footer_link"
-                href="https://discord.gg/GvB865nE"
-              >
-                Chat on Discord
-              </Text>
-            </li>
-            <li>
-              <Text
-                transform="capitalize"
-                color="bg"
-                low
-                as="a"
-                href="https://twitter.com/pillar_ui"
-                target="_blank"
-                className="footer_link"
-              >
-                Follow on Twitter
-              </Text>
-            </li>
-            <li>
-              <Text
-                transform="capitalize"
-                color="bg"
-                low
-                as="a"
-                className="footer_link"
-                href="https://github.com/HamzaAmar/pillar-ui"
-              >
-                {' '}
-                Follow on Github
-              </Text>
-            </li>
-            <li>
-              <Text
-                transform="capitalize"
-                color="bg"
-                low
-                as="a"
-                className="footer_link"
-                href="https://github.com/HamzaAmar/pillar-ui/discussions"
-              >
-                GitHub discussions
-              </Text>
-            </li>
-          </ul>
-        </nav>
-        <nav className="l_f-sm">
-          <Text transform="capitalize" size="md" weight="medium">
-            Help
-          </Text>
-
-          <ul className="footer-list l_f-xs">
-            <li>
-              <Text
-                transform="capitalize"
-                color="bg"
-                low
-                as="a"
-                className="footer_link"
-                href="https://github.com/HamzaAmar/pillar-ui/issues/new?assignees=&labels=&projects=&template=bug-report-for-docs.md&title="
-              >
-                Feature
-              </Text>
-            </li>
-            <li>
-              <Text
-                transform="capitalize"
-                color="bg"
-                low
-                as="a"
-                className="footer_link"
-                href="https://github.com/HamzaAmar/pillar-ui/issues/new?assignees=&labels=&projects=&template=feature_request.md&title="
-              >
-                Report Bugs
-              </Text>
-            </li>
-            <li>
-              <Text
-                transform="capitalize"
-                color="bg"
-                low
-                as="a"
-                className="footer_link"
-                href="https://github.com/HamzaAmar/pillar-ui/issues"
-              >
-                Github Issues
-              </Text>
-            </li>
-            <li>
-              <Text
-                transform="capitalize"
-                color="bg"
-                low
-                as="a"
-                className="footer_link"
-                href="https://github.com/HamzaAmar/pillar-ui/discussions"
-              >
-                GitHub discussions
-              </Text>
-            </li>
-          </ul>
-        </nav>
+        {FOOTER_ITEMS.map(({ title, links }) => (
+          <FooterNav key={title} title={title} links={links} />
+        ))}
       </Paper>
       <Paper className="u_center" p="xs">
         Pillar UI · Made by Hamza Miloud Amar

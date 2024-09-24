@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, IconButton, Spinner } from '@pillar-ui/core'
+import { IconButton, Spinner } from '@pillar-ui/core'
 import { useBooleanState } from '@pillar-ui/hooks'
 import { Moon, Sun } from '@pillar-ui/icons'
 import { useTheme } from 'next-themes'
@@ -28,5 +28,7 @@ export const SwitchMode = () => {
       <Moon aria-hidden="true" focusable="false" />
     )
 
-  return <IconButton size="sm" onClick={() => setTheme(nextMode)} icon={icon} title="Turn on light mode" />
+  return (
+    <IconButton variant="soft" size="sm" onClick={() => setTheme(nextMode)} icon={icon} title="Turn on light mode" />
+  )
 }

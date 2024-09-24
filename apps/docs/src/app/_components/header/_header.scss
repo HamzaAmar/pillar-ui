@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   backdrop-filter: blur(20px);
-  z-index: 13;
+  z-index: 100;
   height: 4rem;
 }
 
@@ -35,14 +35,3 @@
     width: 60px;
   }
 }
-
-// .menu {
-//   background-color: red;
-//   height: 100%;
-//   width: 100%;
-//   max-width: 360px;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   z-index: 10000000000;
-// }

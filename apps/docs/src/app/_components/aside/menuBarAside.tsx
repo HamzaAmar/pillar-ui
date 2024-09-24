@@ -32,11 +32,8 @@ const MenuBar = ({ data }: DocsProps) => {
   const path = pathname.split('/docs/').join('')
   const [current, setCurrent] = useState<string | null>(path)
 
-  function toggleMenuItemSelection(item: MenuItemData) {
-    setCurrent((current) => {
-      const isSelected = item === current || current?.includes(item)
-      return isSelected ? null : item
-    })
+  const toggleMenuItemSelection = (item: MenuItemData) => {
+    setCurrent((prev) => (prev === item || prev?.includes(item) ? null : item))
   }
 
   const KEYS = Object.keys(data) as MenuItemData[]

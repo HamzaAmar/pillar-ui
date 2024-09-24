@@ -3,7 +3,7 @@
 import React from 'react'
 import { default as Logo } from '../logo'
 import { Flex, IconButton, InputSearch, Paper } from '@pillar-ui/core'
-import { Sun, TextRtl, Menu, ListSearch, Close } from '@pillar-ui/icons'
+import { Menu, ListSearch, Close } from '@pillar-ui/icons'
 import Link from 'next/link'
 import { useBooleanState, useDirection } from '~/hooks/pillar'
 import { SwitchMode } from './switchMode'
@@ -11,9 +11,7 @@ import { useDrawer } from '../drawerProvider'
 
 const Header = () => {
   const { value, setTrue, setFalse } = useBooleanState(false)
-  const { open, toggleDrawer } = useDrawer() ?? {}
-  // const menu = useBooleanState(false)
-  const { toggleDirection } = useDirection()
+  const { toggleDrawer } = useDrawer() ?? {}
 
   return (
     <Flex className="header" as="header" justify="between" items="center" gap="sm">
@@ -43,18 +41,24 @@ const Header = () => {
       </Flex>
 
       <Flex className="l_fl-1" items="center" justify="end" gap="xs">
-        <IconButton size="sm" onClick={setTrue} className="only-mobile" icon={<ListSearch />} title={'Show Search'} />
-        <IconButton size="sm" onClick={toggleDirection} icon={<TextRtl />} title={'Go to Pillar Github Page'} />
         <SwitchMode />
-        {open != null ? (
-          <IconButton
-            size="sm"
-            onClick={toggleDrawer}
-            className="only-mobile"
-            icon={<Menu />}
-            title="Turn on light mode"
-          />
-        ) : null}
+        <IconButton
+          variant="soft"
+          size="sm"
+          onClick={setTrue}
+          className="only-mobile"
+          icon={<ListSearch />}
+          title={'Show Search'}
+        />
+
+        <IconButton
+          size="sm"
+          variant="soft"
+          onClick={toggleDrawer}
+          className="only-mobile"
+          icon={<Menu />}
+          title="Turn on light mode"
+        />
       </Flex>
     </Flex>
   )

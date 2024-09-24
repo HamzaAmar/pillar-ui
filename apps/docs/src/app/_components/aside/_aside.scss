@@ -10,11 +10,11 @@
   min-width: 200px;
   max-width: 220px;
   position: sticky;
-  top: 5rem;
+  top: 4rem;
   overflow-y: auto;
-  max-height: calc(100vh - 5rem);
+  max-height: calc(100vh - 4rem);
   background: var(--bg-1);
-  z-index: 200;
+  z-index: 50;
 
   & ul {
     padding: 0;
@@ -30,7 +30,7 @@
   border-inline-start: 1px solid var(--bg-4);
 }
 
-.aside--list-icon {
+.aside-icon {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -50,12 +50,12 @@
 @media (max-width: 768px) {
   .menu-bar {
     position: fixed;
-    height: calc(100% - 5rem);
+    height: calc(100% - 4rem);
     transform: translateX(-100%);
   }
 }
 
-.aside--list-item {
+.aside-item {
   position: relative;
   width: 100%;
   padding: 0.675rem;
@@ -76,7 +76,7 @@
   }
 }
 
-.aside--list-link {
+.aside-link {
   text-decoration: none;
   width: fit-content;
   padding: 0;
