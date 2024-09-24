@@ -60,7 +60,7 @@ const MenuBar = ({ data }: DocsProps) => {
                 </Item>
                 {contents && (
                   <ul data-active={current?.includes(key) ?? false} className="menu-nest">
-                    {contents.map(({ slug, type, ...rest }) => {
+                    {contents.map(({ slug, type, title }) => {
                       const to = type === 'core' ? 'components' : type
 
                       return (
@@ -70,7 +70,7 @@ const MenuBar = ({ data }: DocsProps) => {
                           level={3}
                           key={slug}
                           isActive={path === `${key}/${slug}`}
-                          {...rest}
+                          title={title}
                         />
                       )
                     })}

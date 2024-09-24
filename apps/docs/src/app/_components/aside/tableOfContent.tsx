@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading, Flex, Paper } from '@pillar-ui/core'
+import { Heading, Flex, Paper, Text } from '@pillar-ui/core'
 import { ListNumber } from '@pillar-ui/icons'
 import React, { useState, useRef, useEffect } from 'react'
 import { Item } from './listItem'
@@ -8,10 +8,6 @@ import Link from 'next/link'
 
 import type { HeadingProps } from './aside.type'
 import { usePathname } from 'next/navigation'
-
-const options: IntersectionObserverInit = {
-  rootMargin: '0% 0% -70% 0%',
-}
 
 // export function useScrollSpy(selectors: string) {
 //   const pathname = usePathname()
@@ -73,7 +69,9 @@ const TableOfContent = ({ contents }: { contents: HeadingProps[] | null }) => {
     <nav className="toc-wrapper as l_flow lg-hide">
       <Paper p="xs" as={Flex} gap="sm" items="center">
         <ListNumber width="20" />
-        <Heading size="sm">On This Page</Heading>
+        <Text weight="medium" size="sm">
+          On This Page
+        </Text>
       </Paper>
       <ul>
         {contents?.map(({ slug, ...rest }) => {
