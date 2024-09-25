@@ -1,5 +1,31 @@
 # @pillar/core
 
+## 0.10.7
+
+### Patch Changes
+
+- # Pillar UI Release Notes
+
+  ## Major Features
+
+  - **Improved SEO:** Enhanced site SEO by adding creator information to Twitter metadata.
+  - **Manifest Integration:** Implemented a manifest file for better web app functionality.
+
+  ## Bug Fixes
+
+  - **Dependency Removal:** Removed unused dependencies to streamline the project.
+  - **Props Spreading:** Fixed an issue with props being spread to the item list incorrectly.
+  - **CSS Optimization:** Reduced CSS size by removing unused styles.
+
+  ## Refactorings
+
+  - **Code Component Types:** Added types for the code component for improved maintainability.
+  - **CSS Optimization:** Further optimized the code components by removing unused CSS.
+  - **Core Components Size Reduction:** Reduced the size of core components for better performance.
+  - **Client Usage:** Added `useClient` to list items where necessary.
+  - **Directory Renaming:** Renamed directories that required the `useClient` hook to begin with `@`.
+  - **Client Directory Rename:** Renamed the client directory for better organization.
+
 ## 0.10.6
 
 ### Patch Changes
