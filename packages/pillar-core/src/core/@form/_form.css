@@ -28,6 +28,8 @@
     border-color: var(--dan-9);
     outline-color: var(--dan-9);
     background: var(--dan-3);
+    caret-color: var(--dan-9);
+
     input::placeholder {
       color: var(--dan-11);
     }
