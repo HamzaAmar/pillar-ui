@@ -40,8 +40,8 @@
     width: 1.35em;
   }
   &[aria-pressed='true'] {
-    background: var(--c-9);
-    border-color: var(--c-9);
+    background: var(--c9);
+    border-color: var(--c9);
     &:active::before {
       transform: translate(50%, -50%);
       width: 1.5em;

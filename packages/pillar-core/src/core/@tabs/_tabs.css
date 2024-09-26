@@ -22,7 +22,7 @@
       border-start-end-radius: 0;
       border-end-end-radius: 0;
       &[aria-selected='true'] {
-        border-inline-end-color: var(--c-9);
+        border-inline-end-color: var(--c9);
       }
     }
   }
@@ -32,7 +32,7 @@
       border-end-start-radius: 0;
       border-end-end-radius: 0;
       &[aria-selected='true'] {
-        border-block-end-color: var(--c-9);
+        border-block-end-color: var(--c9);
       }
     }
   }
@@ -46,14 +46,14 @@
 }
 
 .t_ab-solid[aria-selected='true'] {
-  background: var(--c-9);
+  background: var(--c9);
   color: white;
 }
 .t_ab-soft[aria-selected='true'] {
   border: 1px solid var(--O6);
   border-bottom: 0;
-  background: var(--c-4);
-  color: var(--c-12);
+  background: var(--c4);
+  color: var(--c12);
 }
 .t_ab-outline[aria-selected='true'] {
   border: 1px solid var(--O6);

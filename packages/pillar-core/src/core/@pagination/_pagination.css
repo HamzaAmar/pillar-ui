@@ -2,15 +2,15 @@
   padding: 0.25rem;
   aspect-ratio: 1;
   min-width: 2em;
-  color: var(--c-12);
+  color: var(--c12);
   /* overflow: hidden; */
 
   &[aria-current='page'] {
     border-color: var(--O8);
-    outline: min(0.25em, 3px) solid var(--c-10);
+    outline: min(0.25em, 3px) solid var(--c10);
     outline-offset: -2px;
     &.u_solid {
-      outline-color: var(--c-11);
+      outline-color: var(--c11);
     }
   }
 }

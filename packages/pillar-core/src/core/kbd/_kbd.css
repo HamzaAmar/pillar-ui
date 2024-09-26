@@ -1,6 +1,6 @@
 .k-d {
-  border-bottom: 0.15rem solid var(--c-8);
-  /* box-shadow: inset 1px 1px 0.175em var(--c-6, var(--B6)); */
+  border-bottom: 0.15rem solid var(--c8);
+  /* box-shadow: inset 1px 1px 0.175em var(--c6, var(--B6)); */
   /* 
   TODO: Because Of this line Repeated A lot Lets make a way to do it in its own class 
   and shared with all components need it

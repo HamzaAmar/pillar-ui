@@ -20,7 +20,7 @@
   text-transform: var(--field-transform);
 
   &:has(.f-i:focus):not(.f-i_cnt-bordered) {
-    outline: 2px solid var(--c-9);
+    outline: 2px solid var(--c9);
     outline-offset: -1px;
   }
   &:has([aria-invalid='true']) {
@@ -84,7 +84,7 @@
     border-radius: 100px;
   }
   &::after {
-    background: var(--c-9, var(--P9));
+    background: var(--c9, var(--P9));
     transform: scaleX(0);
     transition: transform 0.2s;
   }
@@ -288,13 +288,13 @@
 }
 
 .fi-f {
-  background: var(--c-7, var(--B7));
+  background: var(--c7, var(--B7));
   font-size: 0.9em;
   padding: 0.25rem 1rem;
   cursor: pointer;
 
   .f-i_cnt:not([data-disabled]) &:hover {
-    background: var(--c-8, var(--B8));
+    background: var(--c8, var(--B8));
   }
 }
 

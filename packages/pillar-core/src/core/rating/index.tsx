@@ -28,8 +28,8 @@ export const Rating = ({
             return (
               <path
                 key={index}
-                fill={rating > index ? 'var(--c-9)' : 'none'}
-                stroke="var(--c-9)"
+                fill={rating > index ? 'var(--c9)' : 'none'}
+                stroke="var(--c9)"
                 transform={`translate(${index * 24}, 0)`}
                 d={ICONS[icon]}
               />

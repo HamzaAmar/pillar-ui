@@ -23,7 +23,7 @@
   border: 1px solid var(--B7);
   margin-top: 2px;
   &:hover {
-    border-color: var(--c-9);
+    border-color: var(--c9);
   }
 }
 
@@ -34,17 +34,17 @@
     }
 
     & + .rc-solid {
-      outline: 0.45em var(--c-9) solid;
+      outline: 0.45em var(--c9) solid;
       outline-offset: -0.45em;
     }
     & + .rc-outline {
-      outline: 0.35em var(--c-9) solid;
-      border-color: var(--c-9);
+      outline: 0.35em var(--c9) solid;
+      border-color: var(--c9);
     }
     & + .rc-soft {
-      outline: 0.35em var(--c-11) solid;
-      border-color: var(--c-5);
-      background: var(--c-5);
+      outline: 0.35em var(--c11) solid;
+      border-color: var(--c5);
+      background: var(--c5);
     }
   }
 

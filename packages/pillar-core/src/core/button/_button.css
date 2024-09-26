@@ -10,7 +10,7 @@
   gap: var(--s-2xs);
 
   &:hover {
-    background: var(--c-4);
+    background: var(--c4);
   }
   &:active {
     transform: translateY(-1px) scale(1.01);
@@ -26,10 +26,10 @@
     stroke-width: 1.5px;
   }
   &:is(.u_solid, .u_shadow):hover {
-    background: var(--c-11);
+    background: var(--c11);
   }
   &.u_outline:hover {
-    background: var(--c-5);
+    background: var(--c5);
   }
 
   /*

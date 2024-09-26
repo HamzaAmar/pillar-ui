@@ -1,11 +1,11 @@
 .t-y {
-  color: var(--c-12);
+  color: var(--c12);
   font-size: var(--typography-size, inherit);
   text-transform: var(--typography-transform, inherit);
 }
 
 .t-y-low {
-  color: var(--c-11);
+  color: var(--c11);
 }
 
 .t-y_heading {
@@ -19,6 +19,6 @@
     text-decoration: underline var(--P9) clamp(1px, 0.1em, 2px);
   }
   &:focus-visible {
-    outline: 2px dashed var(--c-9);
+    outline: 2px dashed var(--c9);
   }
 }

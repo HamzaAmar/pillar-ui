@@ -1,11 +1,11 @@
 /* /// TRUNCATE TEXT UTILITY */
 /* truncate: Tr */
-.u_truncate-1,
-.u_truncate-2,
-.u_truncate-3,
-.u_truncate-4,
-.u_truncate-5,
-.u_truncate-6 {
+.T1,
+.T2,
+.T3,
+.T4,
+.T5,
+.T6 {
   --T: 1;
   display: -webkit-box;
   -webkit-line-clamp: var(--T);
@@ -13,22 +13,22 @@
   overflow: hidden;
 }
 
-.u_truncate-2 {
+.T2 {
   --T: 2;
 }
 
-.u_truncate-3 {
+.T3 {
   --T: 3;
 }
 
-.u_truncate-4 {
+.T4 {
   --T: 4;
 }
 
-.u_truncate-5 {
+.T5 {
   --T: 5;
 }
 
-.u_truncate-6 {
+.T6 {
   --T: 6;
 }

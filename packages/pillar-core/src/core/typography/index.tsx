@@ -26,7 +26,7 @@ export const Text = forwardRef(
   ) => {
     const classNames = cx(`t-y`, {
       [`u_f-${size}`]: size,
-      [`u_truncate-${truncate}`]: truncate,
+      [`T${truncate}`]: truncate,
       [`u_t-${transform}`]: transform,
       [`u_t-${align}`]: align,
       [`u_f-${weight}`]: weight,

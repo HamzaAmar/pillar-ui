@@ -11,15 +11,15 @@
     flex: none;
   }
   &[data-state='current'] .s-t_btn {
-    border-color: var(--c-10);
-    background: var(--c-9);
+    border-color: var(--c10);
+    background: var(--c9);
     color: white;
   }
 
   &[data-state='complete'] {
     & .s-t_btn {
-      background: var(--c-10);
-      border-color: var(--c-10);
+      background: var(--c10);
+      border-color: var(--c10);
       color: white;
     }
     & .s-t_icn {
@@ -27,7 +27,7 @@
       transition: transform 0.3s;
     }
     &::before {
-      background: var(--c-9);
+      background: var(--c9);
     }
   }
 
