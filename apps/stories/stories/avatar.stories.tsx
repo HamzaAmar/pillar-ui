@@ -128,40 +128,40 @@ export function AvatarsColors() {
   return (
     <div className="l_f-md">
       <Flex gap="xs" items="center">
-        <Avatar color="dan" variant="solid" image={image} title="Hello" />
-        <Avatar color="dan" variant="solid" title="Hello" />
-        <Avatar color="suc" variant="solid" title="Hello" />
-        <Avatar color="war" variant="solid" title="Hello" />
-        <Avatar color="sec" variant="solid" title="Hello" />
-        <Avatar color="pri" variant="solid" title="Hello" />
-        <Avatar color="bg" variant="solid" title="Hello" />
+        <Avatar color="d" variant="solid" image={image} title="Hello" />
+        <Avatar color="d" variant="solid" title="Hello" />
+        <Avatar color="s" variant="solid" title="Hello" />
+        <Avatar color="w" variant="solid" title="Hello" />
+        <Avatar color="se" variant="solid" title="Hello" />
+        <Avatar color="p" variant="solid" title="Hello" />
+        <Avatar color="b" variant="solid" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
-        <Avatar color="dan" variant="outline" image={image} title="Hello" />
-        <Avatar color="dan" variant="outline" title="Hello" />
-        <Avatar color="suc" variant="outline" title="Hello" />
-        <Avatar color="war" variant="outline" title="Hello" />
-        <Avatar color="sec" variant="outline" title="Hello" />
-        <Avatar color="pri" variant="outline" title="Hello" />
-        <Avatar color="bg" variant="outline" title="Hello" />
+        <Avatar color="d" variant="outline" image={image} title="Hello" />
+        <Avatar color="d" variant="outline" title="Hello" />
+        <Avatar color="s" variant="outline" title="Hello" />
+        <Avatar color="w" variant="outline" title="Hello" />
+        <Avatar color="se" variant="outline" title="Hello" />
+        <Avatar color="p" variant="outline" title="Hello" />
+        <Avatar color="b" variant="outline" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
-        <Avatar color="dan" variant="dashed" image={image} title="Hello" />
-        <Avatar color="dan" variant="dashed" title="Hello" />
-        <Avatar color="suc" variant="dashed" title="Hello" />
-        <Avatar color="war" variant="dashed" title="Hello" />
-        <Avatar color="sec" variant="dashed" title="Hello" />
-        <Avatar color="pri" variant="dashed" title="Hello" />
-        <Avatar color="bg" variant="dashed" title="Hello" />
+        <Avatar color="d" variant="dashed" image={image} title="Hello" />
+        <Avatar color="d" variant="dashed" title="Hello" />
+        <Avatar color="s" variant="dashed" title="Hello" />
+        <Avatar color="w" variant="dashed" title="Hello" />
+        <Avatar color="se" variant="dashed" title="Hello" />
+        <Avatar color="p" variant="dashed" title="Hello" />
+        <Avatar color="b" variant="dashed" title="Hello" />
       </Flex>
       <Flex gap="xs" items="center">
-        <Avatar color="dan" variant="soft" image={image} title="Hello" />
-        <Avatar color="dan" variant="soft" title="Hello" />
-        <Avatar color="suc" variant="soft" title="Hello" />
-        <Avatar color="war" variant="soft" title="Hello" />
-        <Avatar color="sec" variant="soft" title="Hello" />
-        <Avatar color="pri" variant="soft" title="Hello" />
-        <Avatar color="bg" variant="soft" title="Hello" />
+        <Avatar color="d" variant="soft" image={image} title="Hello" />
+        <Avatar color="d" variant="soft" title="Hello" />
+        <Avatar color="s" variant="soft" title="Hello" />
+        <Avatar color="w" variant="soft" title="Hello" />
+        <Avatar color="se" variant="soft" title="Hello" />
+        <Avatar color="p" variant="soft" title="Hello" />
+        <Avatar color="b" variant="soft" title="Hello" />
       </Flex>
     </div>
   )
@@ -246,7 +246,7 @@ export function AvatarGroupLimit() {
 export function AvatarGroupCustom() {
   return (
     <div className="l_f-md">
-      <AvatarGroup limit={6} layout="stack" color="dan" variant="outline" fallback={<DotsHorizontal width="20" />}>
+      <AvatarGroup limit={6} layout="stack" color="d" variant="outline" fallback={<DotsHorizontal width="20" />}>
         <Avatar title="Hello" />
         <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
         <Avatar fallback={<DotsHorizontal width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />

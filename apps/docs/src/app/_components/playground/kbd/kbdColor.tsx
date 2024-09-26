@@ -4,12 +4,12 @@ export const KbdColor = () => {
   return (
     <>
       <Kbd title="Esc" />
-      <Kbd title="Esc" color="dan" />
-      <Kbd title="Esc" color="suc" />
-      <Kbd title="Esc" color="war" />
-      <Kbd title="Esc" color="pri" />
-      <Kbd title="Esc" color="bg" />
-      <Kbd title="Esc" color="sec" />
+      <Kbd title="Esc" color="d" />
+      <Kbd title="Esc" color="s" />
+      <Kbd title="Esc" color="w" />
+      <Kbd title="Esc" color="p" />
+      <Kbd title="Esc" color="b" />
+      <Kbd title="Esc" color="se" />
     </>
   )
 }

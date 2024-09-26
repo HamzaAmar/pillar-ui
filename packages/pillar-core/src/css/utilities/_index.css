@@ -1,3 +1,17 @@
+/* Alignment: Ajc, Aji,Aai, Aac */
+/* animation: Az, Aj-x Aj-y */
+/* border: B */
+/* Color: Cp, Cse, Cw, Cs, Cd, Ci, Cb */
+/* Flex: Fc, Fb */
+/* Font: Fs, Fw, --fw, --fs */
+/* Radius: R, Rh, Rb, --R */
+/* Shadow: S */
+/* Size: Sw, Sh, Sr */
+/* Spacing: Sg, Sp, Spt, Spb, Spl, Spr, Sm, Smt, Smb, Sml, Smr, Sf */
+/* Text: Tt, Ta, Td, Lh */
+/* truncate: T */
+/* visual-hidden: Vsr */
+
 @import './_alignment.css';
 @import './_color.css';
 @import './_truncate.css';
@@ -8,7 +22,7 @@
 @import './_animation.css';
 @import './_flex.css';
 @import './_shadow.css';
-@import './_corner.css';
+@import './_radius.css';
 @import './_sizing.css';
 @import './_variants.css';
 @import './_border.css';

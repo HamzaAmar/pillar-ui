@@ -1,3 +1,5 @@
+/*Spacing: G, P, Pt, Pb, Pl, Pr, M, Mt, Mb, Ml, Mr */
+
 /* Spacing Style Section Start */
 .u_gap-2xs {
   gap: var(--s-2xs);
@@ -79,4 +81,38 @@
 
 .u_mt-auto {
   margin-top: auto;
+}
+
+.l_f-3xs > * + * {
+  margin-top: var(--s-3xs);
+}
+.l_f-2xs > * + * {
+  margin-top: var(--s-2xs);
+}
+
+.l_f-xs > * + * {
+  margin-top: var(--s-xs);
+}
+
+.l_f-sm > * + * {
+  margin-top: var(--s-sm);
+}
+
+.l_f-md > * + * {
+  margin-top: var(--s-md);
+}
+
+.l_f-lg > * + * {
+  margin-top: var(--s-lg);
+}
+.l_f-xl > * + * {
+  margin-top: var(--s-xl);
+}
+
+.l_f-2xl > * + * {
+  margin-top: var(--s-2xl);
+}
+
+.l_f-3xl > * + * {
+  margin-top: var(--s-3xl);
 }

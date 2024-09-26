@@ -18,7 +18,7 @@ export function Accessible() {
                 {title}
               </Heading>
             </Flex>
-            <Text color="bg" low>
+            <Text color="b" low>
               {description}!
             </Text>
           </Paper>

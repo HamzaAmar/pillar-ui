@@ -4,17 +4,11 @@ import { User } from '@pillar-ui/icons'
 export const InputNumberColor = () => {
   return (
     <>
-      <InputNumber color="pri" variant="bordered" autoFocus placeholder="Focus" />
-      <InputNumber color="war" variant="bordered" autoFocus placeholder="Normal" />
-      <InputNumber color="sec" variant="outline" autoFocus placeholder="Disabled" />
-      <InputNumber color="bg" variant="filled" autoFocus placeholder="isInvalid" />
-      <InputNumber
-        color="suc"
-        variant="bordered"
-        autoFocus
-        prefixInput={<User width="16" />}
-        placeholder="Placeholder"
-      />
+      <InputNumber color="p" variant="bordered" autoFocus placeholder="Focus" />
+      <InputNumber color="w" variant="bordered" autoFocus placeholder="Normal" />
+      <InputNumber color="se" variant="outline" autoFocus placeholder="Disabled" />
+      <InputNumber color="b" variant="filled" autoFocus placeholder="isInvalid" />
+      <InputNumber color="s" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
     </>
   )
 }

@@ -45,7 +45,7 @@ const footer = () => {
       <Paper background="bg-3" as={Grid} p="lg" gap="sm" grid="repeat(4, minmax(1px, 1fr))" xs="1fr" lg="1fr 1fr">
         <div>
           <Logo width={100} />
-          <Text transform="first-letter-only" color="bg" low>
+          <Text transform="first-letter-only" color="b" low>
             Your comprehensive solution for modern web development. Reusable UI components, React hooks, icons, and
             tools designed with accessibility and scalability in mind. Empower your web applications effortlessly
           </Text>

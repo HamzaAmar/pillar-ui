@@ -3,12 +3,12 @@ import { Separator } from '@pillar-ui/core'
 export const SeparatorColor = () => {
   return (
     <>
-      <Separator color="suc" />
-      <Separator color="dan" />
-      <Separator color="war" />
-      <Separator color="pri" />
-      <Separator color="sec" />
-      <Separator color="bg" />
+      <Separator color="s" />
+      <Separator color="d" />
+      <Separator color="w" />
+      <Separator color="p" />
+      <Separator color="se" />
+      <Separator color="b" />
     </>
   )
 }

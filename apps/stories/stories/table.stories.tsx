@@ -94,24 +94,24 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="xs">
           Striped Table danger
         </Heading>
-        <NormalTableExample color="dan" variant="striped" />
+        <NormalTableExample color="d" variant="striped" />
 
         <Heading as="h2" size="xs">
           Striped Table success
         </Heading>
-        <NormalTableExample color="suc" variant="striped" />
+        <NormalTableExample color="s" variant="striped" />
         <Heading as="h2" size="xs">
           Striped Table Secondary
         </Heading>
-        <NormalTableExample color="sec" variant="striped" />
+        <NormalTableExample color="se" variant="striped" />
         <Heading as="h2" size="xs">
           Striped Table Orange
         </Heading>
-        <NormalTableExample color="war" variant="striped" />
+        <NormalTableExample color="w" variant="striped" />
         <Heading as="h2" size="xs">
           Striped Table primary
         </Heading>
-        <NormalTableExample color="pri" variant="striped" />
+        <NormalTableExample color="p" variant="striped" />
       </Flex>
 
       <Heading size="sm">Default Table</Heading>
@@ -119,40 +119,40 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="xs">
           Default Table danger
         </Heading>
-        <NormalTableExample color="dan" />
+        <NormalTableExample color="d" />
 
         <Heading as="h2" size="xs">
           Default Table success
         </Heading>
-        <NormalTableExample color="suc" />
+        <NormalTableExample color="s" />
         <Heading as="h2" size="xs">
           Default Table secondary
         </Heading>
-        <NormalTableExample color="sec" />
+        <NormalTableExample color="se" />
         <Heading as="h2" size="xs">
           Default Table primary
         </Heading>
-        <NormalTableExample color="sec" />
+        <NormalTableExample color="se" />
       </Flex>
       <Heading size="sm">Soft Table</Heading>
       <Flex wrap gap="xs">
         <Heading as="h2" size="xs">
           Soft Table danger
         </Heading>
-        <NormalTableExample variant="soft" color="dan" />
+        <NormalTableExample variant="soft" color="d" />
 
         <Heading as="h2" size="xs">
           Soft Table success
         </Heading>
-        <NormalTableExample variant="soft" color="suc" />
+        <NormalTableExample variant="soft" color="s" />
         <Heading as="h2" size="xs">
           Soft Table secondary
         </Heading>
-        <NormalTableExample variant="soft" color="sec" />
+        <NormalTableExample variant="soft" color="se" />
         <Heading as="h2" size="xs">
           Soft Table primary
         </Heading>
-        <NormalTableExample variant="soft" color="pri" />
+        <NormalTableExample variant="soft" color="p" />
       </Flex>
       <NormalTableExample variant="soft" />
       <Heading size="sm">Head Color Table</Heading>
@@ -160,20 +160,20 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="xs">
           Head Color Table danger
         </Heading>
-        <NormalTableExample variant="head-color" color="dan" />
+        <NormalTableExample variant="head-color" color="d" />
 
         <Heading as="h2" size="xs">
           Head Color Table success
         </Heading>
-        <NormalTableExample variant="head-color" color="suc" />
+        <NormalTableExample variant="head-color" color="s" />
         <Heading as="h2" size="xs">
           Head Color Table secondary
         </Heading>
-        <NormalTableExample variant="head-color" color="sec" />
+        <NormalTableExample variant="head-color" color="se" />
         <Heading as="h2" size="xs">
           Head Color Table primary
         </Heading>
-        <NormalTableExample variant="head-color" color="pri" />
+        <NormalTableExample variant="head-color" color="p" />
       </Flex>
       <NormalTableExample variant="head-color" />
     </Flex>

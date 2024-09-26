@@ -112,12 +112,12 @@ export const BadgeVariantIcon = () => {
 export const BadgeNumericColor = () => {
   return (
     <Flex gap="sm">
-      <Badge type="numeric" number={15} max={15} color="dan" />
-      <Badge type="numeric" number={15} max={15} color="suc" />
-      <Badge type="numeric" number={15} max={15} color="war" />
-      <Badge type="numeric" number={15} max={15} color="pri" />
-      <Badge type="numeric" number={15} max={15} color="sec" />
-      <Badge type="numeric" number={15} max={15} color="bg" />
+      <Badge type="numeric" number={15} max={15} color="d" />
+      <Badge type="numeric" number={15} max={15} color="s" />
+      <Badge type="numeric" number={15} max={15} color="w" />
+      <Badge type="numeric" number={15} max={15} color="p" />
+      <Badge type="numeric" number={15} max={15} color="se" />
+      <Badge type="numeric" number={15} max={15} color="b" />
     </Flex>
   )
 }
@@ -126,20 +126,20 @@ export const BadgeHighContrastColor = () => {
   return (
     <div className="l_f-sm">
       <Flex gap="sm">
-        <Badge type="numeric" number={15} max={15} color="dan" />
-        <Badge type="numeric" number={15} max={15} color="suc" />
-        <Badge type="numeric" number={15} max={15} color="war" />
-        <Badge type="numeric" number={15} max={15} color="pri" />
-        <Badge type="numeric" number={15} max={15} color="sec" />
-        <Badge type="numeric" number={15} max={15} color="bg" />
+        <Badge type="numeric" number={15} max={15} color="d" />
+        <Badge type="numeric" number={15} max={15} color="s" />
+        <Badge type="numeric" number={15} max={15} color="w" />
+        <Badge type="numeric" number={15} max={15} color="p" />
+        <Badge type="numeric" number={15} max={15} color="se" />
+        <Badge type="numeric" number={15} max={15} color="b" />
       </Flex>
       <Flex gap="sm">
-        <Badge type="numeric" highContrast number={15} max={15} color="dan" />
-        <Badge type="numeric" highContrast number={15} max={15} color="suc" />
-        <Badge type="numeric" highContrast number={15} max={15} color="war" />
-        <Badge type="numeric" highContrast number={15} max={15} color="pri" />
-        <Badge type="numeric" highContrast number={15} max={15} color="sec" />
-        <Badge type="numeric" highContrast number={15} max={15} color="bg" />
+        <Badge type="numeric" highContrast number={15} max={15} color="d" />
+        <Badge type="numeric" highContrast number={15} max={15} color="s" />
+        <Badge type="numeric" highContrast number={15} max={15} color="w" />
+        <Badge type="numeric" highContrast number={15} max={15} color="p" />
+        <Badge type="numeric" highContrast number={15} max={15} color="se" />
+        <Badge type="numeric" highContrast number={15} max={15} color="b" />
       </Flex>
     </div>
   )
@@ -149,31 +149,31 @@ export const BadgeCorner = () => {
   return (
     <div className="l_f-md">
       <Flex gap="sm">
-        <Badge type="numeric" corner="sharp" number={15} max={15} color="dan" />
-        <Badge type="numeric" corner="xs" number={15} max={15} color="suc" />
-        <Badge type="numeric" corner="sm" number={15} max={15} color="war" />
-        <Badge type="numeric" corner="md" number={15} max={15} color="sec" />
-        <Badge type="numeric" corner="lg" number={15} max={15} color="sec" />
-        <Badge type="numeric" corner="circle" number={15} max={15} color="pri" />
-        <Badge type="numeric" corner="full" number={15} max={15} color="bg" />
+        <Badge type="numeric" corner="sharp" number={15} max={15} color="d" />
+        <Badge type="numeric" corner="xs" number={15} max={15} color="s" />
+        <Badge type="numeric" corner="sm" number={15} max={15} color="w" />
+        <Badge type="numeric" corner="md" number={15} max={15} color="se" />
+        <Badge type="numeric" corner="lg" number={15} max={15} color="se" />
+        <Badge type="numeric" corner="circle" number={15} max={15} color="p" />
+        <Badge type="numeric" corner="full" number={15} max={15} color="b" />
       </Flex>
       <Flex gap="sm">
-        <Badge type="icon" icon={<Check />} corner="sharp" color="dan" />
-        <Badge type="icon" icon={<Plus />} corner="xs" color="suc" />
-        <Badge type="icon" icon={<Plane />} corner="sm" color="war" />
-        <Badge type="icon" icon={<Apple />} corner="md" color="sec" />
-        <Badge type="icon" icon={<Alien />} corner="lg" color="sec" />
-        <Badge type="icon" icon={<ChevronDown />} corner="circle" color="pri" />
-        <Badge type="icon" icon={<LetterSpacing />} corner="full" color="bg" />
+        <Badge type="icon" icon={<Check />} corner="sharp" color="d" />
+        <Badge type="icon" icon={<Plus />} corner="xs" color="s" />
+        <Badge type="icon" icon={<Plane />} corner="sm" color="w" />
+        <Badge type="icon" icon={<Apple />} corner="md" color="se" />
+        <Badge type="icon" icon={<Alien />} corner="lg" color="se" />
+        <Badge type="icon" icon={<ChevronDown />} corner="circle" color="p" />
+        <Badge type="icon" icon={<LetterSpacing />} corner="full" color="b" />
       </Flex>
       <Flex gap="sm">
-        <Badge type="dot" corner="sharp" color="dan" />
-        <Badge type="dot" corner="xs" color="suc" />
-        <Badge type="dot" corner="sm" color="war" />
-        <Badge type="dot" corner="md" color="sec" />
-        <Badge type="dot" corner="lg" color="sec" />
-        <Badge type="dot" corner="circle" color="pri" />
-        <Badge type="dot" corner="full" color="bg" />
+        <Badge type="dot" corner="sharp" color="d" />
+        <Badge type="dot" corner="xs" color="s" />
+        <Badge type="dot" corner="sm" color="w" />
+        <Badge type="dot" corner="md" color="se" />
+        <Badge type="dot" corner="lg" color="se" />
+        <Badge type="dot" corner="circle" color="p" />
+        <Badge type="dot" corner="full" color="b" />
       </Flex>
     </div>
   )
@@ -182,12 +182,12 @@ export const BadgeCorner = () => {
 export const BadgeIconColor = () => {
   return (
     <Flex gap="sm">
-      <Badge type="icon" icon={<Check />} color="dan" />
-      <Badge type="icon" icon={<Check />} color="suc" />
-      <Badge type="icon" icon={<Check />} color="war" />
-      <Badge type="icon" icon={<Check />} color="pri" />
-      <Badge type="icon" icon={<Check />} color="sec" />
-      <Badge type="icon" icon={<Check />} color="bg" />
+      <Badge type="icon" icon={<Check />} color="d" />
+      <Badge type="icon" icon={<Check />} color="s" />
+      <Badge type="icon" icon={<Check />} color="w" />
+      <Badge type="icon" icon={<Check />} color="p" />
+      <Badge type="icon" icon={<Check />} color="se" />
+      <Badge type="icon" icon={<Check />} color="b" />
     </Flex>
   )
 }
@@ -195,12 +195,12 @@ export const BadgeIconColor = () => {
 export const BadgeDotColor = () => {
   return (
     <Flex gap="sm">
-      <Badge type="dot" color="dan" />
-      <Badge type="dot" color="suc" />
-      <Badge type="dot" color="war" />
-      <Badge type="dot" color="pri" />
-      <Badge type="dot" color="sec" />
-      <Badge type="dot" color="bg" />
+      <Badge type="dot" color="d" />
+      <Badge type="dot" color="s" />
+      <Badge type="dot" color="w" />
+      <Badge type="dot" color="p" />
+      <Badge type="dot" color="se" />
+      <Badge type="dot" color="b" />
     </Flex>
   )
 }
@@ -208,13 +208,13 @@ export const BadgeDotColor = () => {
 export const BadgeNumericMaxValue = () => {
   return (
     <Flex gap="sm">
-      <Badge type="numeric" number={15} max={10} color="dan" />
-      <Badge type="numeric" number={1500} max={1000} color="suc" />
-      <Badge type="numeric" number={5} max={0} color="war" />
-      <Badge type="numeric" number={0} max={15} color="pri" />
-      <Badge type="numeric" showZero number={0} max={15} color="dan" />
-      <Badge type="numeric" number={15} max={1} color="sec" />
-      <Badge type="numeric" number={15} max={15} color="bg" />
+      <Badge type="numeric" number={15} max={10} color="d" />
+      <Badge type="numeric" number={1500} max={1000} color="s" />
+      <Badge type="numeric" number={5} max={0} color="w" />
+      <Badge type="numeric" number={0} max={15} color="p" />
+      <Badge type="numeric" showZero number={0} max={15} color="d" />
+      <Badge type="numeric" number={15} max={1} color="se" />
+      <Badge type="numeric" number={15} max={15} color="b" />
     </Flex>
   )
 }
@@ -240,7 +240,7 @@ export const BadgeRefForwarded = () => {
 
   return (
     <Flex gap="sm">
-      <Badge ref={badgeRef} type="numeric" number={15} max={10} color="dan" />
+      <Badge ref={badgeRef} type="numeric" number={15} max={10} color="d" />
       <Button onClick={handleClick}>Number {count}</Button>
     </Flex>
   )

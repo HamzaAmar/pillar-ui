@@ -3,22 +3,22 @@ import { Blockquote } from '@pillar-ui/core'
 export const BlockquoteColor = () => {
   return (
     <>
-      <Blockquote color="dan" cite="John Doe">
+      <Blockquote color="d" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="war" cite="John Doe">
+      <Blockquote color="w" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="suc" cite="John Doe">
+      <Blockquote color="s" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="pri" cite="John Doe">
+      <Blockquote color="p" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="sec" cite="John Doe">
+      <Blockquote color="se" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="bg" cite="John Doe">
+      <Blockquote color="b" cite="John Doe">
         This is the quoted text.
       </Blockquote>
     </>

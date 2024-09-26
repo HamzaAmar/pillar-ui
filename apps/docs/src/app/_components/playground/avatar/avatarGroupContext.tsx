@@ -18,7 +18,7 @@ export function AvatarGroupContext() {
         <Avatar title="Success!" />
         <Avatar title="Success!" />
       </AvatarGroup>
-      <AvatarGroup color="dan">
+      <AvatarGroup color="d">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />

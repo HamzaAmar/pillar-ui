@@ -21,7 +21,7 @@
 */
 
 .a-c_itm {
-  border-block-end: 1px solid var(--bg-5);
+  border-block-end: 1px solid var(--B5);
   overflow: hidden;
 
   /*
@@ -52,7 +52,7 @@
 
 .a-c_pnl {
   padding: var(--ac-p);
-  color: var(--bg-12);
+  color: var(--B12);
   font-size: 0.85em;
 
   &[data-open='false'] {
@@ -74,7 +74,7 @@
   transform: none;
 
   &:hover {
-    background: var(--opa-3);
+    background: var(--O3);
   }
   & svg {
     transition: transform 0.25s;

@@ -1,34 +1,34 @@
 /* /// TRUNCATE TEXT UTILITY */
-
+/* truncate: Tr */
 .u_truncate-1,
 .u_truncate-2,
 .u_truncate-3,
 .u_truncate-4,
 .u_truncate-5,
 .u_truncate-6 {
-  --lns: 1;
+  --T: 1;
   display: -webkit-box;
-  -webkit-line-clamp: var(--lns);
+  -webkit-line-clamp: var(--T);
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .u_truncate-2 {
-  --lns: 2;
+  --T: 2;
 }
 
 .u_truncate-3 {
-  --lns: 3;
+  --T: 3;
 }
 
 .u_truncate-4 {
-  --lns: 4;
+  --T: 4;
 }
 
 .u_truncate-5 {
-  --lns: 5;
+  --T: 5;
 }
 
 .u_truncate-6 {
-  --lns: 6;
+  --T: 6;
 }

@@ -22,13 +22,13 @@
   }
 
   &:hover > .c-h {
-    box-shadow: 0 0 0 0.125em var(--c-7, var(--pri-7));
+    box-shadow: 0 0 0 0.125em var(--c-7, var(--P7));
   }
 }
 
 .c-h_el {
   &:checked:disabled + .c-h {
-    color: var(--bg-5);
+    color: var(--B5);
   }
   &[aria-checked='false'] + .c-h svg {
     display: none;
@@ -41,12 +41,12 @@
 
   &:disabled + .c-h {
     box-shadow: none;
-    border-color: var(--bg-10);
-    background: var(--bg-10);
+    border-color: var(--B10);
+    background: var(--B10);
     color: transparent; /* Responsible For The Color Of The Check Icon stroke  transparent in disabled state */
   }
   &:disabled ~ * {
-    color: var(--bg-10);
+    color: var(--B10);
   }
 }
 
@@ -54,7 +54,7 @@
   --eq-s: 1.25em;
   --fx: inline-flex;
 
-  border: 1px solid var(--opa-7);
+  border: 1px solid var(--O7);
   border-radius: 0.25em;
   color: transparent; /* Responsible For The Color Of The Check Icon stroke Default to transparent */
 }

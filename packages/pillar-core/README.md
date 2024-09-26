@@ -61,11 +61,11 @@ To change the primary color of your UI, follow these simple steps:
 
 1. Create a file named theme.css or any other preferred name.
 
-1. Inside theme.css, define the desired primary color using the `--pri-color` custom property. For example:
+1. Inside theme.css, define the desired primary color using the `--Pcolor` custom property. For example:
 
 ```css
 :root {
-  --pri-color: #ff0000; /* Replace with your desired primary color */
+  --Pcolor: #ff0000; /* Replace with your desired primary color */
 }
 ```
 

@@ -16,7 +16,7 @@
   }
 
   &[aria-orientation='horizontal'] {
-    border-inline-end: 1px solid var(--opa-6);
+    border-inline-end: 1px solid var(--O6);
 
     & .t_ab {
       border-start-end-radius: 0;
@@ -27,7 +27,7 @@
     }
   }
   &[aria-orientation='vertical'] {
-    border-block-end: 1px solid var(--opa-6);
+    border-block-end: 1px solid var(--O6);
     & .t_ab {
       border-end-start-radius: 0;
       border-end-end-radius: 0;
@@ -50,13 +50,13 @@
   color: white;
 }
 .t_ab-soft[aria-selected='true'] {
-  border: 1px solid var(--opa-6);
+  border: 1px solid var(--O6);
   border-bottom: 0;
   background: var(--c-4);
   color: var(--c-12);
 }
 .t_ab-outline[aria-selected='true'] {
-  border: 1px solid var(--opa-6);
+  border: 1px solid var(--O6);
   border-bottom: 0;
-  background: var(--bg-1);
+  background: var(--B1);
 }

@@ -16,10 +16,10 @@
     transform: translateY(-1px) scale(1.01);
   }
   &:disabled {
-    background: var(--bg-5);
-    color: var(--bg-11);
+    background: var(--B5);
+    color: var(--B11);
     pointer-events: none;
-    border-color: var(--bg-5);
+    border-color: var(--B5);
   }
   & svg {
     width: 1.1em;
@@ -71,11 +71,11 @@
 }
 
 .b-u-transparent {
-  border: 1px solid var(--opa-6);
+  border: 1px solid var(--O6);
   &:hover {
-    background: var(--opa-6);
+    background: var(--O6);
   }
   &:focus-visible {
-    outline: 2px dashed var(--opa-11);
+    outline: 2px dashed var(--O11);
   }
 }

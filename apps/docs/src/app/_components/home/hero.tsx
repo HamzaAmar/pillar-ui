@@ -28,7 +28,7 @@ export function Hero() {
           applications quickly and easily.
         </p>
 
-        <Text color="bg" low>
+        <Text color="b" low>
           When building this library, we focused on two key aspects: accessibility and performance. You can assess the
           library&apos;s size and compare it to other libraries to see the difference.{' '}
         </Text>
@@ -39,16 +39,16 @@ export function Hero() {
           Get Started
         </Button>
 
-        <Button color="bg" variant="outline" icon={<Dollar />}>
+        <Button color="b" variant="outline" icon={<Dollar />}>
           Donation
         </Button>
       </Flex>
 
       <Flex justify="end" gap="sm">
-        <IconButton color="bg" variant="soft" title="Go to Github" icon={<Github />} />
-        <IconButton color="bg" variant="soft" title="Go to Discord" icon={<Discord />} />
-        <IconButton color="bg" variant="soft" title="Go to Youtube" icon={<Youtube />} />
-        <IconButton color="bg" variant="soft" title="Go to Linkdin" icon={<Linkdin />} />
+        <IconButton color="b" variant="soft" title="Go to Github" icon={<Github />} />
+        <IconButton color="b" variant="soft" title="Go to Discord" icon={<Discord />} />
+        <IconButton color="b" variant="soft" title="Go to Youtube" icon={<Youtube />} />
+        <IconButton color="b" variant="soft" title="Go to Linkdin" icon={<Linkdin />} />
       </Flex>
     </Flex>
   )

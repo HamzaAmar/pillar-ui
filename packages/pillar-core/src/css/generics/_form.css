@@ -24,12 +24,12 @@ a {
   cursor: pointer;
 
   &:focus-visible {
-    outline: 2px dashed var(--pri-9);
+    outline: 2px dashed var(--P9);
   }
 }
 
 a {
-  color: var(--pri-11);
+  color: var(--P11);
 }
 
 .shd,
@@ -47,6 +47,6 @@ code {
 }
 
 code {
-  background-color: var(--bg-6);
+  background-color: var(--B6);
   border-radius: 0.25rem;
 }

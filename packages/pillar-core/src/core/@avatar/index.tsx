@@ -21,7 +21,7 @@ export const AvatarGroup = forwardRef(
       size = 'md',
       layout = 'stack',
       variant = 'soft',
-      color = 'pri',
+      color = 'p',
       corner = 'full',
       fallback,
       animate,
@@ -68,7 +68,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
     variant = ctx?.variant ?? 'soft',
     size = ctx?.size,
     corner = ctx?.corner,
-    color = ctx?.color ?? 'pri',
+    color = ctx?.color ?? 'p',
     fallback = ctx?.fallback ?? <User strokeWidth="1.5" width="max(1.5em, 10px)" />,
     image = '',
     className,
@@ -79,7 +79,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
 
   const [isError, setIsError] = useState(!image)
 
-  const classNames = cx(`a-v a-v-${variant} u_${color} u_s-equal u_center`, {
+  const classNames = cx(`a-v a-v-${variant} C${color} u_s-equal u_center`, {
     [`u_${animate}`]: animate,
     [`u_f-${size}`]: size,
     [`u_rad-${corner}`]: corner,

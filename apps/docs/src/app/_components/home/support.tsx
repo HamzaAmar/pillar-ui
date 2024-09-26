@@ -12,7 +12,7 @@ export function PillarSupport() {
         >
           <SectionHeading subheading="Framework Harmony:" heading="Effortless Integration with Pillar UI" />
 
-          <Text color="bg" low size="xl" className="dark--description">
+          <Text color="b" low size="xl" className="dark--description">
             Pillar UI adapts to your workflow, enhancing your projects with ease. Stay ahead of the curve with support
             for emerging technologies.
           </Text>
@@ -33,7 +33,7 @@ export function PillarSupport() {
           <Text weight="medium" size="lg">
             Lets Getting Start
           </Text>
-          <Text size="sm" color="bg" low>
+          <Text size="sm" color="b" low>
             Build faster and lighter. Experience the power of our streamlined design system.
           </Text>
           <Button>Get Started</Button>
@@ -42,7 +42,7 @@ export function PillarSupport() {
           <Text weight="medium" size="lg">
             Community
           </Text>
-          <Text size="sm" color="bg" low>
+          <Text size="sm" color="b" low>
             Get involved in our community. Everyone is welcome!
           </Text>
           <Flex gap="sm">

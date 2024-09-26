@@ -6,7 +6,7 @@ export const PaperColor = () => {
       <Paper background="bg-5" p="xs">
         Hello
       </Paper>
-      <Paper background="bg-5" p="xs" color="dan">
+      <Paper background="bg-5" p="xs" color="d">
         Hello
       </Paper>
       <Paper background="bg-5" p="xs" color="dan-5">

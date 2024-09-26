@@ -3,12 +3,12 @@ import { Switch } from '@pillar-ui/core'
 export const SwitchDefaultPressed = () => {
   return (
     <>
-      <Switch label="Hello" defaultPressed color="dan" />
-      <Switch label="Hello" defaultPressed color="war" />
-      <Switch label="Hello" defaultPressed color="suc" />
-      <Switch label="Hello" defaultPressed color="pri" />
-      <Switch label="Hello" defaultPressed color="sec" />
-      <Switch label="Hello" defaultPressed color="bg" />
+      <Switch label="Hello" defaultPressed color="d" />
+      <Switch label="Hello" defaultPressed color="w" />
+      <Switch label="Hello" defaultPressed color="s" />
+      <Switch label="Hello" defaultPressed color="p" />
+      <Switch label="Hello" defaultPressed color="se" />
+      <Switch label="Hello" defaultPressed color="b" />
     </>
   )
 }

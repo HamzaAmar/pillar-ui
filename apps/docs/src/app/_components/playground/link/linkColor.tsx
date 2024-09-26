@@ -3,29 +3,29 @@ import { Link } from '@pillar-ui/core'
 export const LinkColor = () => {
   return (
     <>
-      <Link color="dan">Hello World</Link>
-      <Link color="suc">Hello World</Link>
-      <Link color="war">Hello World</Link>
-      <Link color="pri">Hello World</Link>
+      <Link color="d">Hello World</Link>
+      <Link color="s">Hello World</Link>
+      <Link color="w">Hello World</Link>
+      <Link color="p">Hello World</Link>
       <Link color="bg">Hello World</Link>
-      <Link color="sec">Hello World</Link>
+      <Link color="se">Hello World</Link>
 
-      <Link low color="dan">
+      <Link low color="d">
         Hello World
       </Link>
-      <Link low color="suc">
+      <Link low color="s">
         Hello World
       </Link>
-      <Link low color="war">
+      <Link low color="w">
         Hello World
       </Link>
-      <Link low color="pri">
+      <Link low color="p">
         Hello World
       </Link>
       <Link low color="bg">
         Hello World
       </Link>
-      <Link low color="sec">
+      <Link low color="se">
         Hello World
       </Link>
     </>

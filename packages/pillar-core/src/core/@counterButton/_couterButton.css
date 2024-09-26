@@ -4,7 +4,7 @@
 
 .cb-f,
 .c-b {
-  border: 1px solid var(--opa-6);
+  border: 1px solid var(--O6);
   border-radius: inherit;
 }
 
@@ -13,9 +13,9 @@
 }
 
 .c-b {
-  background: var(--bg-1);
+  background: var(--B1);
 
   &:hover {
-    background: var(--bg-4);
+    background: var(--B4);
   }
 }

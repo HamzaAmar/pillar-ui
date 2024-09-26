@@ -1,104 +1,106 @@
-.u_pri {
-  --c-1: var(--pri-1);
-  --c-2: var(--pri-2);
-  --c-3: var(--pri-3);
-  --c-4: var(--pri-4);
-  --c-5: var(--pri-5);
-  --c-6: var(--pri-6);
-  --c-7: var(--pri-7);
-  --c-8: var(--pri-8);
-  --c-9: var(--pri-9);
-  --c-10: var(--pri-10);
-  --c-11: var(--pri-11);
-  --c-12: var(--pri-12);
+/* Color: Cp, Cse, Cw, Cs, Cd, Ci, Cb */
+
+.Cp {
+  --c-1: var(--P1);
+  --c-2: var(--P2);
+  --c-3: var(--P3);
+  --c-4: var(--P4);
+  --c-5: var(--P5);
+  --c-6: var(--P6);
+  --c-7: var(--P7);
+  --c-8: var(--P8);
+  --c-9: var(--P9);
+  --c-10: var(--P10);
+  --c-11: var(--P11);
+  --c-12: var(--P12);
 }
 
-.u_sec {
-  --c-1: var(--sec-1);
-  --c-2: var(--sec-2);
-  --c-3: var(--sec-3);
-  --c-4: var(--sec-4);
-  --c-5: var(--sec-5);
-  --c-6: var(--sec-6);
-  --c-7: var(--sec-7);
-  --c-8: var(--sec-8);
-  --c-9: var(--sec-9);
-  --c-10: var(--sec-10);
-  --c-11: var(--sec-11);
-  --c-12: var(--sec-12);
+.Cse {
+  --c-1: var(--Se1);
+  --c-2: var(--Se2);
+  --c-3: var(--Se3);
+  --c-4: var(--Se4);
+  --c-5: var(--Se5);
+  --c-6: var(--Se6);
+  --c-7: var(--Se7);
+  --c-8: var(--Se8);
+  --c-9: var(--Se9);
+  --c-10: var(--Se10);
+  --c-11: var(--Se11);
+  --c-12: var(--Se12);
 }
 
-.u_war {
-  --c-1: var(--war-1);
-  --c-2: var(--war-2);
-  --c-3: var(--war-3);
-  --c-4: var(--war-4);
-  --c-5: var(--war-5);
-  --c-6: var(--war-6);
-  --c-7: var(--war-7);
-  --c-8: var(--war-8);
-  --c-9: var(--war-9);
-  --c-10: var(--war-10);
-  --c-11: var(--war-11);
-  --c-12: var(--war-12);
+.Cw {
+  --c-1: var(--W1);
+  --c-2: var(--W2);
+  --c-3: var(--W3);
+  --c-4: var(--W4);
+  --c-5: var(--W5);
+  --c-6: var(--W6);
+  --c-7: var(--W7);
+  --c-8: var(--W8);
+  --c-9: var(--W9);
+  --c-10: var(--W10);
+  --c-11: var(--W11);
+  --c-12: var(--W12);
 }
 
-.u_suc {
-  --c-1: var(--suc-1);
-  --c-2: var(--suc-2);
-  --c-3: var(--suc-3);
-  --c-4: var(--suc-4);
-  --c-5: var(--suc-5);
-  --c-6: var(--suc-6);
-  --c-7: var(--suc-7);
-  --c-8: var(--suc-8);
-  --c-9: var(--suc-9);
-  --c-10: var(--suc-10);
-  --c-11: var(--suc-11);
-  --c-12: var(--suc-12);
+.Cs {
+  --c-1: var(--S1);
+  --c-2: var(--S2);
+  --c-3: var(--S3);
+  --c-4: var(--S4);
+  --c-5: var(--S5);
+  --c-6: var(--S6);
+  --c-7: var(--S7);
+  --c-8: var(--S8);
+  --c-9: var(--S9);
+  --c-10: var(--S10);
+  --c-11: var(--S11);
+  --c-12: var(--S12);
 }
 
-.u_dan {
-  --c-1: var(--dan-1);
-  --c-2: var(--dan-2);
-  --c-3: var(--dan-3);
-  --c-4: var(--dan-4);
-  --c-5: var(--dan-5);
-  --c-6: var(--dan-6);
-  --c-7: var(--dan-7);
-  --c-8: var(--dan-8);
-  --c-9: var(--dan-9);
-  --c-10: var(--dan-10);
-  --c-11: var(--dan-11);
-  --c-12: var(--dan-12);
+.Cd {
+  --c-1: var(--D1);
+  --c-2: var(--D2);
+  --c-3: var(--D3);
+  --c-4: var(--D4);
+  --c-5: var(--D5);
+  --c-6: var(--D6);
+  --c-7: var(--D7);
+  --c-8: var(--D8);
+  --c-9: var(--D9);
+  --c-10: var(--D10);
+  --c-11: var(--D11);
+  --c-12: var(--D12);
 }
 
-.u_inf {
-  --c-1: var(--inf-1);
-  --c-2: var(--inf-2);
-  --c-3: var(--inf-3);
-  --c-4: var(--inf-4);
-  --c-5: var(--inf-5);
-  --c-6: var(--inf-6);
-  --c-7: var(--inf-7);
-  --c-8: var(--inf-8);
-  --c-9: var(--inf-9);
-  --c-10: var(--inf-10);
-  --c-11: var(--inf-11);
-  --c-12: var(--inf-12);
+.Ci {
+  --c-1: var(--I1);
+  --c-2: var(--I2);
+  --c-3: var(--I3);
+  --c-4: var(--I4);
+  --c-5: var(--I5);
+  --c-6: var(--I6);
+  --c-7: var(--I7);
+  --c-8: var(--I8);
+  --c-9: var(--I9);
+  --c-10: var(--I10);
+  --c-11: var(--I11);
+  --c-12: var(--I12);
 }
 
-.u_bg {
-  --c-1: var(--bg-1);
-  --c-2: var(--bg-2);
-  --c-3: var(--bg-3);
-  --c-4: var(--bg-4);
-  --c-5: var(--bg-5);
-  --c-6: var(--bg-6);
-  --c-7: var(--bg-7);
-  --c-8: var(--bg-8);
-  --c-9: var(--bg-9);
-  --c-10: var(--bg-10);
-  --c-11: var(--bg-11);
-  --c-12: var(--bg-12);
+.Cb {
+  --c-1: var(--B1);
+  --c-2: var(--B2);
+  --c-3: var(--B3);
+  --c-4: var(--B4);
+  --c-5: var(--B5);
+  --c-6: var(--B6);
+  --c-7: var(--B7);
+  --c-8: var(--B8);
+  --c-9: var(--B9);
+  --c-10: var(--B10);
+  --c-11: var(--B11);
+  --c-12: var(--B12);
 }

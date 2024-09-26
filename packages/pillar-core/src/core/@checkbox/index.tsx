@@ -27,7 +27,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       }
     })
 
-    const classNamesRoot = cx('c-h_cnt', { [`u_f-${size}`]: !!size, [`u_${color}`]: !!color })
+    const classNamesRoot = cx('c-h_cnt', { [`u_f-${size}`]: !!size, [`C${color}`]: !!color })
 
     return (
       <label className={classNamesRoot}>

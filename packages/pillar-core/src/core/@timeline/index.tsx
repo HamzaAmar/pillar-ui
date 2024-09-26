@@ -22,9 +22,9 @@ export const TimelineItem = (props: TimelineItemProps) => {
   )
 }
 
-export const Timeline = ({ color = 'bg', size = 'sm', children, ...rest }: TimelineProps) => {
+export const Timeline = ({ color = 'b', size = 'sm', children, ...rest }: TimelineProps) => {
   return (
-    <div className={`t-i u_f-${size} u_${color}`}>
+    <div className={`t-i u_f-${size} C${color}`}>
       <TimelineProvider {...rest}>{children}</TimelineProvider>
     </div>
   )

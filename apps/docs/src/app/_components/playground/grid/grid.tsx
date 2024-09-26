@@ -22,12 +22,12 @@ const boxes = Array.from({ length: 5 }, (_, index) => (
 export const GridPlayGround = () => {
   return (
     <Paper className="playground" border p="sm" background="bg-3" corner="sm">
-      <Avatar title="Success!" color="dan" />
-      <Avatar title="Success!" color="war" />
-      <Avatar title="Success!" color="suc" />
-      <Avatar title="Success!" color="pri" />
-      <Avatar title="Success!" color="bg" />
-      <Avatar title="Success!" color="sec" />
+      <Avatar title="Success!" color="d" />
+      <Avatar title="Success!" color="w" />
+      <Avatar title="Success!" color="s" />
+      <Avatar title="Success!" color="p" />
+      <Avatar title="Success!" color="b" />
+      <Avatar title="Success!" color="se" />
     </Paper>
   )
 }
@@ -109,19 +109,19 @@ export const Item = () => {
   return (
     <Paper className="playground" border p="sm" background="bg-3" corner="sm">
       <Grid grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="sm">
-        <GridItem placement="2/4" style={{ background: 'var(--bg-8)' }}>
+        <GridItem placement="2/4" style={{ background: 'var(--B8)' }}>
           Header
         </GridItem>
-        <GridItem placement="span 1 x 1 / span 3" style={{ background: 'var(--bg-8)' }}>
+        <GridItem placement="span 1 x 1 / span 3" style={{ background: 'var(--B8)' }}>
           sidebar
         </GridItem>
-        <GridItem placement="2 / 3" style={{ background: 'var(--bg-8)' }}>
+        <GridItem placement="2 / 3" style={{ background: 'var(--B8)' }}>
           main
         </GridItem>
-        <GridItem placement="3 / 4" style={{ background: 'var(--bg-8)' }}>
+        <GridItem placement="3 / 4" style={{ background: 'var(--B8)' }}>
           sidebar
         </GridItem>
-        <GridItem placement="2 / span 2" style={{ background: 'var(--bg-8)' }}>
+        <GridItem placement="2 / span 2" style={{ background: 'var(--B8)' }}>
           Footer
         </GridItem>
       </Grid>
@@ -133,19 +133,19 @@ export const GridGrid = () => {
   return (
     <Paper className="playground" border p="sm" background="bg-3" corner="sm">
       <Grid grid="repeat(5, 1fr)" gap="sm">
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
-        <div style={{ height: '40px', background: 'var(--bg-6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
+        <div style={{ height: '40px', background: 'var(--B6)' }} />
       </Grid>
     </Paper>
   )

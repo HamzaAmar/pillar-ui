@@ -104,7 +104,7 @@ export const Tabs = forwardRef(
       size,
       variant = 'bordered',
       corner = 'sm',
-      color = 'pri',
+      color = 'p',
       ...rest
     },
     ref
@@ -133,7 +133,7 @@ export const Tabs = forwardRef(
       <TabsProvider {...context}>
         <div
           ref={ref}
-          className={cx(`f-l u_gap-sm u_${color} u_f-${size}`, { ['l_fl-column']: direction === 'vertical' })}
+          className={cx(`f-l u_gap-sm C${color} u_f-${size}`, { ['l_fl-column']: direction === 'vertical' })}
           {...rest}
         >
           {children}

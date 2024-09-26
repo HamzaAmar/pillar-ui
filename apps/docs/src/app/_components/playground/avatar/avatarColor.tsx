@@ -4,13 +4,13 @@ export const AvatarColor = () => {
   return (
     <>
       <Avatar title="John Doe" />
-      <Avatar color="dan" title="John Doe" />
-      <Avatar color="suc" title="John Doe" />
-      <Avatar color="war" title="John Doe" />
-      <Avatar color="sec" title="John Doe" />
-      <Avatar color="pri" title="John Doe" />
-      <Avatar color="bg" title="John Doe" />
-      <Avatar color="opa" title="John Doe" />
+      <Avatar color="d" title="John Doe" />
+      <Avatar color="s" title="John Doe" />
+      <Avatar color="w" title="John Doe" />
+      <Avatar color="se" title="John Doe" />
+      <Avatar color="p" title="John Doe" />
+      <Avatar color="b" title="John Doe" />
+      <Avatar color="o" title="John Doe" />
     </>
   )
 }

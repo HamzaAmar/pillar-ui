@@ -11,7 +11,7 @@ function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
           <Avatar variant="dashed" />
           <div>
             <Text>{fullName}</Text>
-            <Text color="bg" low size="xs">
+            <Text color="b" low size="xs">
               {jobTitle}
             </Text>
           </div>
@@ -19,7 +19,7 @@ function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
         <Button> {type === 'ar' ? 'تابع' : 'Follow'}</Button>
       </Flex>
       <div>
-        <Text className="article--description" color="bg" low size="sm">
+        <Text className="article--description" color="b" low size="sm">
           {description}
         </Text>
       </div>
@@ -54,7 +54,7 @@ export function RTLSupport() {
               />
             </div>
 
-            <Text size="xl" color="bg" low>
+            <Text size="xl" color="b" low>
               Our UI library ensures a welcoming experience for users worldwide.
             </Text>
           </div>

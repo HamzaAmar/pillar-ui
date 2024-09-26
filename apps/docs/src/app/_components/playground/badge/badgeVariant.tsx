@@ -5,15 +5,15 @@ export const BadgeVariant = () => {
   return (
     <>
       <Flex gap="xs" items="center">
-        <Badge type="dot" variant="solid" color="dan" />
-        <Badge type="numeric" variant="solid" number={15} max={15} color="dan" />
-        <Badge type="icon" variant="solid" icon={<Check />} color="dan" />
+        <Badge type="dot" variant="solid" color="d" />
+        <Badge type="numeric" variant="solid" number={15} max={15} color="d" />
+        <Badge type="icon" variant="solid" icon={<Check />} color="d" />
       </Flex>
 
       <Flex gap="xs" items="center">
-        <Badge type="dot" variant="mixed" color="dan" />
-        <Badge type="numeric" variant="mixed" number={15} max={15} color="dan" />
-        <Badge type="icon" variant="mixed" icon={<Check />} color="dan" />
+        <Badge type="dot" variant="mixed" color="d" />
+        <Badge type="numeric" variant="mixed" number={15} max={15} color="d" />
+        <Badge type="icon" variant="mixed" icon={<Check />} color="d" />
       </Flex>
     </>
   )

@@ -6,8 +6,8 @@ import type { ReactNode } from 'react'
 import type { BadgeProps } from './badge.type'
 
 export const Badge = forwardRef((props, ref) => {
-  let { variant = 'solid', color = 'pri', as: Tag = 'div', type = 'numeric', size, corner, className, ...rest } = props
-  const classNames = cx(`b-a shd u_${variant} u_center u_${color}`, {
+  let { variant = 'solid', color = 'p', as: Tag = 'div', type = 'numeric', size, corner, className, ...rest } = props
+  const classNames = cx(`b-a shd u_${variant} u_center C${color}`, {
     'b-a_dot': type === 'dot',
     [`u_f-${size}`]: size,
     [`u_rad-${corner}`]: corner,

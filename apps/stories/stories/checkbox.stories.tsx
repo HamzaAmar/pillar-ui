@@ -43,12 +43,12 @@ export const CheckboxColor = () => {
   return (
     <Flex gap="sm" items="center">
       <Checkbox name="hello" label="Transparent" />
-      <Checkbox name="hello" label="Danger" color="dan" />
-      <Checkbox name="hello" label="Success" color="suc" />
-      <Checkbox name="hello" label="Warning" color="war" />
-      <Checkbox name="hello" label="Primary" color="pri" />
-      <Checkbox name="hello" label="Secondary" color="sec" />
-      <Checkbox name="hello" label="bg" color="bg" />
+      <Checkbox name="hello" label="Danger" color="d" />
+      <Checkbox name="hello" label="Success" color="s" />
+      <Checkbox name="hello" label="Warning" color="w" />
+      <Checkbox name="hello" label="Primary" color="p" />
+      <Checkbox name="hello" label="Secondary" color="se" />
+      <Checkbox name="hello" label="bg" color="b" />
     </Flex>
   )
 }
@@ -57,20 +57,20 @@ export const CheckboxDisabled = () => {
   return (
     <div className="l_f-md">
       <Flex gap="sm" items="center">
-        <Checkbox disabled name="hello" label="Hello" color="dan" />
-        <Checkbox disabled name="hello" label="Hello" color="suc" />
-        <Checkbox disabled name="hello" label="Hello" color="war" />
-        <Checkbox disabled name="hello" label="Hello" color="pri" />
-        <Checkbox disabled name="hello" label="Hello" color="sec" />
-        <Checkbox disabled name="hello" label="Hello" color="bg" />
+        <Checkbox disabled name="hello" label="Hello" color="d" />
+        <Checkbox disabled name="hello" label="Hello" color="s" />
+        <Checkbox disabled name="hello" label="Hello" color="w" />
+        <Checkbox disabled name="hello" label="Hello" color="p" />
+        <Checkbox disabled name="hello" label="Hello" color="se" />
+        <Checkbox disabled name="hello" label="Hello" color="b" />
       </Flex>
       <Flex gap="sm" items="center">
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="dan" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="suc" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="war" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="pri" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="sec" />
-        <Checkbox disabled defaultChecked name="hello" label="Hello" color="bg" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="d" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="s" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="w" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="p" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="se" />
+        <Checkbox disabled defaultChecked name="hello" label="Hello" color="b" />
       </Flex>
     </div>
   )
@@ -79,12 +79,12 @@ export const CheckboxDisabled = () => {
 export const CheckboxDefaultCheckedColor = () => {
   return (
     <Flex gap="sm" items="center">
-      <Checkbox defaultChecked name="hello" label="Hello" color="dan" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="suc" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="war" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="pri" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="sec" />
-      <Checkbox defaultChecked name="hello" label="Hello" color="bg" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="d" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="s" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="w" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="p" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="se" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="b" />
     </Flex>
   )
 }
@@ -92,15 +92,15 @@ export const CheckboxDefaultCheckedColor = () => {
 export const CheckboxSize = () => {
   return (
     <Flex gap="sm" items="center">
-      <Checkbox size="3xs" name="hello" label="Hello" color="suc" />
-      <Checkbox size="2xs" name="hello" label="Hello" color="suc" />
-      <Checkbox size="xs" name="hello" label="Hello" color="suc" />
-      <Checkbox size="sm" name="hello" label="Hello" color="suc" />
-      <Checkbox size="md" name="hello" label="Hello" color="war" />
-      <Checkbox size="lg" name="hello" label="Hello" color="pri" />
-      <Checkbox size="xl" name="hello" label="Hello" color="pri" />
-      <Checkbox size="2xl" name="hello" label="Hello" color="pri" />
-      <Checkbox size="3xl" name="hello" label="Hello" color="pri" />
+      <Checkbox size="3xs" name="hello" label="Hello" color="s" />
+      <Checkbox size="2xs" name="hello" label="Hello" color="s" />
+      <Checkbox size="xs" name="hello" label="Hello" color="s" />
+      <Checkbox size="sm" name="hello" label="Hello" color="s" />
+      <Checkbox size="md" name="hello" label="Hello" color="w" />
+      <Checkbox size="lg" name="hello" label="Hello" color="p" />
+      <Checkbox size="xl" name="hello" label="Hello" color="p" />
+      <Checkbox size="2xl" name="hello" label="Hello" color="p" />
+      <Checkbox size="3xl" name="hello" label="Hello" color="p" />
     </Flex>
   )
 }

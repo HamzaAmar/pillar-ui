@@ -72,49 +72,49 @@ export const ACCESSIBILITY = [
     title: 'Support Windows High Contrast',
     description:
       'Our UI library supports windows high contrast mode out of the box without any additional configuration.',
-    icon: <Star width="24" stroke="var(--pri-11)" />,
+    icon: <Star width="24" stroke="var(--P11)" />,
   },
   {
     id: 'color-contrast',
     title: 'Color Contrast',
     description: 'Meets WCAG contrast guidelines for readability by all users.',
-    icon: <EyeCheck width="24" stroke="var(--pri-11)" />,
+    icon: <EyeCheck width="24" stroke="var(--P11)" />,
   },
   {
     id: 'reduce-animation',
     title: 'Reduce Motion',
     description: 'Option to minimize animations for users with motion sensitivity.',
-    icon: <PlayerPause width="24" stroke="var(--pri-11)" />,
+    icon: <PlayerPause width="24" stroke="var(--P11)" />,
   },
   {
     id: 'Keyboard Navigation',
     title: 'Keyboard Navigation',
     description: 'Full keyboard support for users who cannot use a mouse.',
-    icon: <Space width="24" stroke="var(--pri-11)" />,
+    icon: <Space width="24" stroke="var(--P11)" />,
   },
   {
     id: 'Text Resizing',
     title: 'Text Resizing',
     description: 'Supports text resizing for users with low vision.',
-    icon: <TextIncrease width="24" stroke="var(--pri-11)" />,
+    icon: <TextIncrease width="24" stroke="var(--P11)" />,
   },
   {
     id: 'Focus Indicators',
     title: 'Focus Indicators',
     description: 'Clear focus indicators for keyboard navigation.',
-    icon: <Mouse width="24" stroke="var(--pri-11)" />,
+    icon: <Mouse width="24" stroke="var(--P11)" />,
   },
   {
     id: 'Semantic Markup',
     title: 'Semantic Markup',
     description: 'Uses semantic HTML for accessibility and structure.',
-    icon: <Code width="24" stroke="var(--pri-11)" />,
+    icon: <Code width="24" stroke="var(--P11)" />,
   },
   {
     id: 'colorblind-friendly',
     title: 'Color blind Friendly Design',
     description: 'Does not rely on color alone to convey information, ensuring accessibility for colorblind users.',
-    icon: <Palette width="24" stroke="var(--pri-11)" />, // You might want a more suitable icon here.
+    icon: <Palette width="24" stroke="var(--P11)" />, // You might want a more suitable icon here.
   },
 ]
 
@@ -195,7 +195,7 @@ export const SUPPORTED = [
     slug: 'remix',
     title: 'Remix',
     icon: (
-      <svg width="120" fill="var(--bg-12)" preserveAspectRatio="xMidYMid" viewBox="0 0 512 128">
+      <svg width="120" fill="var(--B12)" preserveAspectRatio="xMidYMid" viewBox="0 0 512 128">
         <path d="M404.5 38.3v89.5h-32.3V38.3h32.3zm41.6-.1 14.7 21.2L476 38.2h33.2L477 80.7l35.1 47h-35.6l-17.8-24.3-17.7 24.3h-33.3L442.5 82l-32-44H446zM330 35.3c24.2 0 31.5 16.7 31.7 35.2v56.7h-32.3V76.5a63.2 63.2 0 0 0 0-.3l-.1-.7a53.3 53.3 0 0 0 0-.6l-.1-.6a45 45 0 0 0 0-.4v-.6l-.1-.6C328 65 325 61 317.4 61c-9.1 0-13 6.4-14 16.6l-.1.7-.2 4.6v44.3h-32.3V76a54.2 54.2 0 0 0 0-.4l-.1-.6v-.6l-.1-.7c-.9-8.3-4-12.6-12-12.6-10.4 0-14.2 8.7-14.2 21.9v44.3H212V37.7h32.2v13.5c4.8-9.8 14.4-15.9 27.7-15.9 15.8 0 24 7.3 27.7 17.7A32.1 32.1 0 0 1 330 35.3zm-170.4-2.8c29.3 0 45 20 45.4 44v9.8h-62.4c.8 11 8.8 16.2 18.6 16.2 8.6 0 14.2-2.9 17.2-9.7v-.3l26 2.4c-4.6 20.5-21 32-44.4 32-28.5 0-48.8-17.3-48.8-45.8a47 47 0 0 1 48.4-48.6zM60.4 0C92.9 0 109 15.5 109 40.2c0 18.5-11.4 30.6-26.8 32.6 13 2.6 20.6 10 22 24.8l.2 2.7.2 2.5.1 2.3.1 1.8.1 2.1.1 1.2v2l.1 1.7v1l.1 1.7v2.8l.1 2.7v4.4H72v-16.2l-.1-1.5v-.7l-.1-1.2-.1-1.3-.1-1.8-.2-1.4c-.9-13.5-6.3-17.2-16.2-17.7H53.8a54.4 54.4 0 0 0-.7 0H0V58.3h54.4c14.3 0 21.5-4.4 21.5-16 0-10.3-7.2-16.5-21.5-16.5H0V0h60.4zm-25 106.9c4.5 0 6.3 2.4 7 4.7v.4l.1.3v.3l.1.1V113.7l.1.2v12.6H0v-19.6h35.5zm123.8-51.1c-8.1 0-12.7 3.9-14.9 9.6l-.1.4-.2.5-.4 1.4-.1.5-.2 1-.1.4v.3l-.1.5v.2h31.2c-.4-8-5.6-14.8-15.1-14.8zM404.7 1.4V30H372V1.4h32.7z" />
       </svg>
     ),
@@ -204,7 +204,7 @@ export const SUPPORTED = [
     slug: 'next',
     title: 'Next',
     icon: (
-      <svg width="120" preserveAspectRatio="xMidYMid" viewBox="0 0 512 309" fill="var(--bg-12)">
+      <svg width="120" preserveAspectRatio="xMidYMid" viewBox="0 0 512 309" fill="var(--B12)">
         <path d="M120.8 80.6h96.6v7.6h-87.7V146H212v7.7h-82.4V217h88.7v7.7h-97.6V80.6zm105.2 0h10.3l45.5 63.4 46.4-63.4L391.4 0 287.6 150.7l53.5 74h-10.7l-48.6-67.4-49 67.5h-10.4l54-74.2-50.4-70zm119 7.6v-7.6h110v7.6h-50.7v136.6h-8.9V88.2H345zM0 80.6h11l152.6 228.3-63-84.1L9.3 91.5l-.4 133.3H0V80.6zm454 134.2a3.1 3.1 0 0 1-3-3.2c0-1.8 1.3-3.2 3-3.2 2 0 3.2 1.4 3.2 3.2 0 1.8-1.3 3.2-3.1 3.2zm8.8-8.5h4.7c0 2.6 2 4.3 4.7 4.3 3 0 4.8-1.8 4.8-5.3v-22h4.9v22c0 6.3-3.7 9.9-9.6 9.9-5.7 0-9.5-3.5-9.5-8.9zm25.4-.2h4.7c.5 3 3.3 4.8 7.5 4.8 3.9 0 6.7-2 6.7-4.8 0-2.4-1.8-3.8-6-4.7l-4-1c-5.5-1.3-8-4-8-8.6 0-5.6 4.4-9.2 11.2-9.2 6.3 0 11 3.6 11.2 8.9h-4.7c-.4-2.9-3-4.7-6.6-4.7-3.8 0-6.3 1.9-6.3 4.7 0 2.2 1.6 3.5 5.7 4.4l3.4.8c6.4 1.5 9 4.1 9 8.8 0 6-4.6 9.7-12 9.7-6.9 0-11.5-3.6-11.8-9.1z" />
       </svg>
     ),
@@ -243,7 +243,7 @@ export const SUPPORTED = [
     icon: (
       <svg width="80" fill="none" viewBox="0 0 60 60">
         <path
-          fill="var(--bg-1)"
+          fill="var(--B1)"
           fillRule="evenodd"
           d="M26.6.8C24.3 2 19.5 4.3 16.9 6c-2.6 1.7-2.3 3.4-3.4 4.5a89.4 89.4 0 0 1-6.8 5.7c-2.3 1.7-1.8 6.2-2.3 8L2 31.4c-.6 1.7 1.1 4 2.3 6.2s4 8.5 5.1 10.8c1.1 2.3 4.5 1.2 7.4 3.4a100.2 100.2 0 0 0 9.7 6.8c2.8 1.7 4 1.7 6.8 0 2.9-1.7 6.8-4.5 9.7-6.8 2.8-2.2 6.2-1.1 7.4-3.4l5.1-10.8c1.1-2.2 2.8-4.5 2.3-6.2L55.6 24c-.6-1.7 0-6.2-2.3-8a84.1 84.1 0 0 1-6.8-5.6c-2-1.8-1.1-2.8-3.4-4.5-2.3-1.7-7.4-4-9.7-5.1a7.3 7.3 0 0 0-6.8 0Z"
           clipRule="evenodd"
@@ -297,7 +297,7 @@ export const COMING_SUPPORT = [
     icon: (
       <svg viewBox="0 0 24 24" width="80" fill="none">
         <path
-          stroke="var(--war-10)"
+          stroke="var(--W10)"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
@@ -309,7 +309,7 @@ export const COMING_SUPPORT = [
 ]
 
 export const strokes = {
-  stroke: 'var(--bg-9)',
+  stroke: 'var(--B9)',
   strokeLinecap: 'round',
   strokeLinejoin: 'round',
   strokeMiterlimit: '1.5',
@@ -317,7 +317,7 @@ export const strokes = {
 } as const
 
 export const filles = {
-  fill: 'var(--bg-1)',
+  fill: 'var(--B1)',
   fillRule: 'evenodd',
   clipRule: 'evenodd',
 } as const

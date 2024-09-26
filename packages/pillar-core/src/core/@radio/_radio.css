@@ -11,7 +11,7 @@
 
   /* width: fit-content; */
   &:has(:disabled) {
-    color: var(--bg-11);
+    color: var(--B11);
     cursor: not-allowed;
   }
 }
@@ -20,7 +20,7 @@
   --eq-s: 1.25em;
   border-radius: 50%;
   position: relative;
-  border: 1px solid var(--bg-7);
+  border: 1px solid var(--B7);
   margin-top: 2px;
   &:hover {
     border-color: var(--c-9);
@@ -50,7 +50,7 @@
 
   &:disabled + .rc {
     filter: grayscale(1);
-    background: var(--bg-8);
+    background: var(--B8);
   }
 }
 

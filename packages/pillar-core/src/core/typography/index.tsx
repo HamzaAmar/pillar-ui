@@ -33,7 +33,7 @@ export const Text = forwardRef(
       [`u_t-${decoration}`]: decoration,
       [`u_t-${leading}`]: leading,
       [`u_f-${fontStyle}`]: fontStyle,
-      [`u_${color}`]: color,
+      [`C${color}`]: color,
       [`u_w-${width}`]: width,
       [`t-y-low`]: low,
       [`${className}`]: className,
@@ -60,7 +60,7 @@ Heading.displayName = 'Heading'
 
 export const Link = forwardRef(({ children, ...rest }, forwardedRef) => {
   return (
-    <Text ref={forwardedRef} color="pri" low className="t-y_link" as="a" {...rest}>
+    <Text ref={forwardedRef} color="p" low className="t-y_link" as="a" {...rest}>
       {children}
     </Text>
   )

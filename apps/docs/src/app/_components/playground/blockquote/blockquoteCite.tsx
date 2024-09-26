@@ -3,14 +3,14 @@ import { Blockquote, Text } from '@pillar-ui/core'
 export const BlockquoteCite = () => {
   return (
     <div className="l_f-md">
-      <Blockquote color="dan">
+      <Blockquote color="d">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
         <Text as="cite">Hamza Miloud Amar</Text>
       </Blockquote>
 
-      <Blockquote color="dan">
+      <Blockquote color="d">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
@@ -19,7 +19,7 @@ export const BlockquoteCite = () => {
         </Text>
       </Blockquote>
 
-      <Blockquote color="dan">
+      <Blockquote color="d">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?

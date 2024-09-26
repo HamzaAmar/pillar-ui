@@ -1,24 +1,26 @@
+/*Shadow: S */
+
 .u_sh-2xs {
-  box-shadow: var(--c-sha-2xs, 1px 1px 2px -1px var(--opa-5));
+  box-shadow: var(--c-sha-2xs, 1px 1px 2px -1px var(--O5));
 }
 .u_sh-xs {
-  box-shadow: var(--c-sha-xs, 1px 2px 4px -2px var(--opa-5));
+  box-shadow: var(--c-sha-xs, 1px 2px 4px -2px var(--O5));
 }
 .u_sh-sm {
-  box-shadow: var(--c-sha-sm, 2px 4px 8px -4px var(--opa-5));
+  box-shadow: var(--c-sha-sm, 2px 4px 8px -4px var(--O5));
 }
 .u_sh-md {
-  box-shadow: var(--c-sha-md, 3px 6px 12px -6px var(--opa-5));
+  box-shadow: var(--c-sha-md, 3px 6px 12px -6px var(--O5));
 }
 .u_sh-lg {
-  box-shadow: var(--c-sha-lg, 4px 8px 16px -8px var(--opa-5));
+  box-shadow: var(--c-sha-lg, 4px 8px 16px -8px var(--O5));
 }
 .u_sh-xl {
-  box-shadow: var(--c-sha-xl, 4px 12px 24px -12px var(--opa-5));
+  box-shadow: var(--c-sha-xl, 4px 12px 24px -12px var(--O5));
 }
 .u_sh-2xl {
-  box-shadow: var(--c-sha-2xl, 5px 16px 32px -16px var(--opa-5));
+  box-shadow: var(--c-sha-2xl, 5px 16px 32px -16px var(--O5));
 }
 .u_sh-in-out {
-  box-shadow: var(--c-sha-in-out, inset 0 0 0.75rem var(--opa-5), 1px 1px 3px var(--opa-5), -1px -1px 2px var(--opa-5));
+  box-shadow: var(--c-sha-in-out, inset 0 0 0.75rem var(--O5), 1px 1px 3px var(--O5), -1px -1px 2px var(--O5));
 }

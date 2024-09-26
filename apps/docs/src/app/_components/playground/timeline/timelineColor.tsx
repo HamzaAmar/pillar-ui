@@ -34,12 +34,12 @@ const TimelineBase = (props: Omit<TimelineProps, 'children'>) => {
 export const TimelineColor = () => {
   return (
     <>
-      <TimelineBase color="bg" />
-      <TimelineBase color="sec" />
-      <TimelineBase color="pri" />
-      <TimelineBase color="suc" />
-      <TimelineBase color="dan" />
-      <TimelineBase color="war" />
+      <TimelineBase color="b" />
+      <TimelineBase color="se" />
+      <TimelineBase color="p" />
+      <TimelineBase color="s" />
+      <TimelineBase color="d" />
+      <TimelineBase color="w" />
     </>
   )
 }

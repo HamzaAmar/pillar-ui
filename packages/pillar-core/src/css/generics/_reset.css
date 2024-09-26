@@ -42,10 +42,10 @@ picture {
 /* Inherit fonts for inputs and buttons */
 
 body {
-  color: var(--bg-12);
+  color: var(--B12);
 
   /* // Please Make Sure If you want to update This Background color you need to update .storybook/preview.js */
-  background: var(--bg-1);
+  background: var(--B1);
   -webkit-font-smoothing: antialiased;
   font-family: var(--custom-body-font, var(--body-font));
   font-weight: 400;

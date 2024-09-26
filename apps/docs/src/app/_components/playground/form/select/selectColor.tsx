@@ -14,19 +14,19 @@ const Options = () => {
 export const SelectColor = () => {
   return (
     <>
-      <Select color="dan">
+      <Select color="d">
         <Options />
       </Select>
-      <Select color="war">
+      <Select color="w">
         <Options />
       </Select>
-      <Select color="suc">
+      <Select color="s">
         <Options />
       </Select>
-      <Select color="sec">
+      <Select color="se">
         <Options />
       </Select>
-      <Select color="pri">
+      <Select color="p">
         <Options />
       </Select>
       <Select color="bg">

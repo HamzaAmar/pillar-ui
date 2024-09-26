@@ -24,21 +24,21 @@
     outline-offset: -1px;
   }
   &:has([aria-invalid='true']) {
-    color: var(--dan-11);
-    border-color: var(--dan-9);
-    outline-color: var(--dan-9);
-    background: var(--dan-3);
-    caret-color: var(--dan-9);
+    color: var(--D11);
+    border-color: var(--D9);
+    outline-color: var(--D9);
+    background: var(--D3);
+    caret-color: var(--D9);
 
     input::placeholder {
-      color: var(--dan-11);
+      color: var(--D11);
     }
   }
 
   &:has(:disabled) {
-    background: var(--bg-7) !important;
+    background: var(--B7) !important;
     cursor: not-allowed;
-    border-color: var(--opa-1);
+    border-color: var(--O1);
   }
 
   &:not(:has(.fi-p_cnt)) .f-i:not(.pin-input) {
@@ -60,17 +60,17 @@
 }
 
 .f-i_cnt-outline {
-  border-color: var(--bg-7);
+  border-color: var(--B7);
 }
 .f-i_cnt-filled {
-  border-color: var(--opa-11);
-  background: var(--bg-1);
+  border-color: var(--O11);
+  background: var(--B1);
 }
 
 .f-i_cnt-bordered {
   border: none;
   outline: 2px solid transparent;
-  background: var(--opa-2);
+  background: var(--O2);
 
   &::before,
   &::after {
@@ -80,11 +80,11 @@
     position: absolute;
     bottom: 0;
     inset-inline-start: 0;
-    background: var(--opa-7);
+    background: var(--O7);
     border-radius: 100px;
   }
   &::after {
-    background: var(--c-9, var(--pri-9));
+    background: var(--c-9, var(--P9));
     transform: scaleX(0);
     transition: transform 0.2s;
   }
@@ -99,10 +99,10 @@
     border: none;
     outline: none;
     &::after {
-      background: var(--dan-11);
+      background: var(--D11);
     }
     &::before {
-      background: var(--dan-5);
+      background: var(--D5);
     }
   }
 }
@@ -111,7 +111,7 @@
   width: 100%;
 
   &:has(:read-only) .f-i_cnt {
-    background: var(--bg-5);
+    background: var(--B5);
   }
 }
 
@@ -166,18 +166,18 @@
   flex-direction: column;
   width: 2.5rem;
   & * + * {
-    border-top: 1px solid var(--opa-6);
+    border-top: 1px solid var(--O6);
   }
 }
 .fi-n-btn {
   line-height: 0;
-  background: var(--bg-7);
+  background: var(--B7);
   height: 50%;
   &:active {
-    background: var(--opa-8);
+    background: var(--O8);
   }
   &:hover {
-    background: var(--bg-8);
+    background: var(--B8);
   }
 }
 
@@ -192,10 +192,10 @@
   min-height: 100%;
   padding: 0 0.5em;
   &:focus-visible {
-    box-shadow: inset 0 0 16px var(--opa-8);
+    box-shadow: inset 0 0 16px var(--O8);
   }
   &:hover {
-    background: var(--bg-5);
+    background: var(--B5);
   }
   & svg {
     width: 20px;
@@ -208,8 +208,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 .f-g_cnt {
-  color: var(--bg-11);
-  border: 1px solid var(--opa-6);
+  color: var(--B11);
+  border: 1px solid var(--O6);
 }
 
 .f-g-hide-border {
@@ -234,7 +234,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 /* .form-controller--required {
-  color: var(--dan-11);
+  color: var(--D11);
   margin-inline-start: 0.25em;
   line-height: 0;
   font-weight: bold;
@@ -261,7 +261,7 @@
 }
 
 .fi-s:hover {
-  stroke: var(--shared-color-8, var(--pri-10));
+  stroke: var(--shared-color-8, var(--P10));
 }
 
 .fi-s {
@@ -274,7 +274,7 @@
 }
 
 .fi-se {
-  background: var(--bg-1);
+  background: var(--B1);
   width: 100%;
   padding-inline: 0.75rem;
 }
@@ -283,18 +283,18 @@
   inset-inline-end: 0.5rem;
   top: 50%;
   transform: translateY(-50%);
-  stroke: var(--bg-11);
+  stroke: var(--B11);
   width: 1em;
 }
 
 .fi-f {
-  background: var(--c-7, var(--bg-7));
+  background: var(--c-7, var(--B7));
   font-size: 0.9em;
   padding: 0.25rem 1rem;
   cursor: pointer;
 
   .f-i_cnt:not([data-disabled]) &:hover {
-    background: var(--c-8, var(--bg-8));
+    background: var(--c-8, var(--B8));
   }
 }
 
@@ -307,12 +307,12 @@
   width: 2.25em;
   height: 2.25em;
   text-align: center;
-  box-shadow: inset 0 0 0 1px var(--opa-3);
+  box-shadow: inset 0 0 0 1px var(--O3);
   padding: 0 !important;
 }
 
 .f-c_err {
-  color: var(--dan-11);
+  color: var(--D11);
   width: fit-content;
   gap: var(--s-3xs);
 }

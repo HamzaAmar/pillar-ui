@@ -13,7 +13,7 @@ Enhance your project's visual appeal with customizable CSS gradient variables in
 
 ## Usage Gradient Variables
 
-These gradient variables are available for usage when applying themes to your CSS. Some of our components utilize these variables to support gradients under the hood, so you don't need to worry about them. However, if you want to use gradients in your custom components, you can reference these variables using the following names, for example: `var(--suc-gradient)`.
+These gradient variables are available for usage when applying themes to your CSS. Some of our components utilize these variables to support gradients under the hood, so you don't need to worry about them. However, if you want to use gradients in your custom components, you can reference these variables using the following names, for example: `var(--Sgradient)`.
 
 <Table>
   <TableRow type="head">
@@ -21,23 +21,23 @@ These gradient variables are available for usage when applying themes to your CS
     <TableColumn as="th">Description</TableColumn>
   </TableRow>
   <TableRow>
-    <TableColumn>`--suc-gradient`</TableColumn>
+    <TableColumn>`--Sgradient`</TableColumn>
     <TableColumn>Gradient variable for success-related elements.</TableColumn>
   </TableRow>
   <TableRow>
-    <TableColumn>`--sec-gradient`</TableColumn>
+    <TableColumn>`--Segradient`</TableColumn>
     <TableColumn>Gradient variable for secondary elements.</TableColumn>
   </TableRow>
   <TableRow>
-    <TableColumn>`--dan-gradient`</TableColumn>
+    <TableColumn>`--Dgradient`</TableColumn>
     <TableColumn>Gradient variable for elements associated with danger or errors.</TableColumn>
   </TableRow>
   <TableRow>
-    <TableColumn>`--war-gradient`</TableColumn>
+    <TableColumn>`--Wgradient`</TableColumn>
     <TableColumn>Gradient variable for warning-related elements.</TableColumn>
   </TableRow>
   <TableRow>
-    <TableColumn>`--bg-gradient`</TableColumn>
+    <TableColumn>`--Bgradient`</TableColumn>
     <TableColumn>Gradient variable for bg elements.</TableColumn>
   </TableRow>
   <TableRow>
@@ -62,11 +62,11 @@ These gradient variables are available for usage when applying themes to your CS
 
 The gradient variables define different gradients for various color combinations. Each variable represents a specific gradient style:
 
-- **--suc-gradient**: Gradient variable for success-related elements.
-- **--sec-gradient**: Gradient variable for secondary elements.
-- **--dan-gradient**: Gradient variable for elements associated with danger or errors.
-- **--war-gradient**: Gradient variable for warning-related elements.
-- **--bg-gradient**: Gradient variable for bg elements.
+- **--Sgradient**: Gradient variable for success-related elements.
+- **--Segradient**: Gradient variable for secondary elements.
+- **--Dgradient**: Gradient variable for elements associated with danger or errors.
+- **--Wgradient**: Gradient variable for warning-related elements.
+- **--Bgradient**: Gradient variable for bg elements.
 - **--mixed1-gradient**: Customizable gradient variable for mixed color combination 1.
 - **--mixed2-gradient**: Customizable gradient variable for mixed color combination 2.
 - **--mixed3-gradient**: Customizable gradient variable for mixed color combination 3.
@@ -76,15 +76,15 @@ The gradient variables define different gradients for various color combinations
 
 If you'd like to customize the gradient styles beyond the default values, you have the flexibility to do so. Simply override the existing gradient variables with your preferred gradient styles.
 
-For instance, if you want to modify the gradient colors for the `--suc-gradient`, you can achieve this by assigning a new `linear-gradient` value to the `--suc-gradient-custom` variable:
+For instance, if you want to modify the gradient colors for the `--Sgradient`, you can achieve this by assigning a new `linear-gradient` value to the `--Sgradient-custom` variable:
 
 ```css showLineNumbers title="themes.css"
 :root {
-  --suc-gradient-custom: linear-gradient(to right, #00ff00, #ff0000);
+  --Sgradient-custom: linear-gradient(to right, #00ff00, #ff0000);
 }
 ```
 
-In this example, we're customizing the --pri-gradient-custom and --sec-gradient-custom properties to define our own gradient styles for primary and secondary elements, respectively.
+In this example, we're customizing the --Pgradient-custom and --Segradient-custom properties to define our own gradient styles for primary and secondary elements, respectively.
 
 By updating these gradient variables, you can create unique gradient styles for different components and elements in your project.
 

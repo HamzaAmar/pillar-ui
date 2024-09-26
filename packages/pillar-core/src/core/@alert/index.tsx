@@ -10,7 +10,7 @@ import { Close } from '../icons'
 export const Alert = forwardRef(
   (
     {
-      color = 'dan',
+      color = 'd',
       message,
       size,
       title,
@@ -21,6 +21,7 @@ export const Alert = forwardRef(
       className,
       visible,
       defaultVisible = true,
+
       onClose,
       icon,
       ...rest
@@ -38,7 +39,7 @@ export const Alert = forwardRef(
 
     if (!isVisible) return
 
-    const classNames = cx(`a-l f-l u_gap-xs u_${variant} u_${color}`, {
+    const classNames = cx(`a-l f-l u_gap-xs u_${variant} C${color}`, {
       [`u_rad-${corner}`]: !!corner,
       [`u_f-${size}`]: size,
       [className!]: className,

@@ -161,22 +161,22 @@ export function PaperColors() {
 export function PaperWidths() {
   return (
     <div className="l_f-md">
-      <Paper background="dan-4" color="dan">
+      <Paper background="dan-4" color="d">
         Hello
       </Paper>
-      <Paper width="50" background="suc-4" color="suc">
+      <Paper width="50" background="suc-4" color="s">
         Hello
       </Paper>
-      <Paper width="25-char" background="war-4" color="war">
+      <Paper width="25-char" background="war-4" color="w">
         Hello
       </Paper>
-      <Paper width="45-char" background="sec-4" color="sec">
+      <Paper width="45-char" background="sec-4" color="se">
         Hello
       </Paper>
       <Paper width="75-char" background="bg-4" color="bg">
         Hello
       </Paper>
-      <Paper width="60-char" background="pri-4" color="pri">
+      <Paper width="60-char" background="pri-4" color="p">
         Hello
       </Paper>
     </div>
@@ -186,22 +186,22 @@ export function PaperWidths() {
 export function PaperHeights() {
   return (
     <div className="l_f-md">
-      <Paper height="100px" background="dan-4" color="dan">
+      <Paper height="100px" background="dan-4" color="d">
         Hello
       </Paper>
-      <Paper height="96px" background="suc-4" color="suc">
+      <Paper height="96px" background="suc-4" color="s">
         Hello
       </Paper>
-      <Paper height="20ch" background="war-4" color="war">
+      <Paper height="20ch" background="war-4" color="w">
         Hello
       </Paper>
-      <Paper height="30vmin" background="sec-4" color="sec">
+      <Paper height="30vmin" background="sec-4" color="se">
         Hello
       </Paper>
       <Paper height="min(100px, 8rem)" background="bg-4" color="bg">
         Hello
       </Paper>
-      <Paper background="pri-4" color="pri">
+      <Paper background="pri-4" color="p">
         Hello
       </Paper>
     </div>

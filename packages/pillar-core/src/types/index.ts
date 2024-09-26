@@ -4,10 +4,18 @@ type Size = '3xs' | '2xs' | CommonSize | '2xl' | '3xl'
 
 /**
  * Represents the color of a component.
- * @typedef {Size} Size
+ *
+ * @typedef {string} Color
+ * @property {Color} i - Info color (for informational messages)
+ * @property {Color} d - Danger color (for errors or alerts)
+ * @property {Color} s - Success color (for positive actions or confirmations)
+ * @property {Color} se - Secondary color (for less prominent elements)
+ * @property {Color} w - Warning color (for cautionary messages)
+ * @property {Color} p - Primary color (for main actions or branding)
+ * @property {Color} b - Background color (for backgrounds or containers)
+ * @property {Color} o - Opacity color (for Transparency element)
  */
-
-type Color = 'inf' | 'dan' | 'suc' | 'sec' | 'war' | 'pri' | 'bg' | 'opa' | undefined
+type Color = 'i' | 'd' | 's' | 'se' | 'w' | 'p' | 'b' | 'o' | undefined
 
 /**
  * Represents the color of a component.

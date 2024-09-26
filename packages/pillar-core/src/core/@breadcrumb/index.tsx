@@ -45,7 +45,7 @@ BreadcrumbItem.displayName = 'BreadcrumbItem'
 export const Breadcrumb = forwardRef(
   ({ children, separator, size, color = 'bg', className, as: Tag = 'nav', ...rest }, ref) => {
     const breadcrumbContext = { separator }
-    const classNames = cx(`f-l l_fl-wrap u_gap-sm u_${color}`, {
+    const classNames = cx(`f-l l_fl-wrap u_gap-sm C${color}`, {
       [`u_f-${size}`]: size,
       [className!]: className,
     })

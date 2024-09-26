@@ -9,7 +9,7 @@ import type { ForwardRefComponent } from '../../types/polymorphic.type'
 export const Switch = forwardRef(
   (
     {
-      color = 'pri',
+      color = 'p',
       size,
       corner,
       label,
@@ -32,7 +32,7 @@ export const Switch = forwardRef(
       else setPressed((current) => !current)
     }
 
-    const classNames = cx(`s-w u_${color}`, {
+    const classNames = cx(`s-w C${color}`, {
       [`u_rad-${corner}`]: corner,
       [`u_f-${size}`]: size,
       [className!]: className,

@@ -3,13 +3,13 @@ import { Button } from '@pillar-ui/core'
 export function ButtonState() {
   return (
     <>
-      <Button state="idle" color="suc">
+      <Button state="idle" color="s">
         Idle
       </Button>
-      <Button state="loading" color="suc">
+      <Button state="loading" color="s">
         Loading
       </Button>
-      <Button disabled color="suc">
+      <Button disabled color="s">
         Disabled
       </Button>
     </>

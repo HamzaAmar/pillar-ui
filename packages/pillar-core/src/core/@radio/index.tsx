@@ -16,7 +16,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
   const {
     label,
     id = label,
-    color = provider?.color ?? 'pri',
+    color = provider?.color ?? 'p',
     size = provider?.size ?? 'md',
     name = provider?.name,
     showLabel = false,
@@ -26,7 +26,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
     ...rest
   } = props
 
-  const classnames = cx(`f-l u_gap-xs u_it-center r-a_c u_${color}`, { [`l_fl-${direction}`]: direction })
+  const classnames = cx(`f-l u_gap-xs u_it-center r-a_c C${color}`, { [`l_fl-${direction}`]: direction })
   return (
     <label className={classnames} htmlFor={id}>
       <input type="radio" name={name} className="r-a" id={id} {...rest} />
@@ -76,7 +76,7 @@ export const Radio = (props: RadioProps) => {
   const {
     label,
     id = fallbackId,
-    color = ctx?.color ?? 'pri',
+    color = ctx?.color ?? 'p',
     size = ctx?.size ?? 'md',
     name = ctx?.name,
     variant = 'solid',
@@ -84,7 +84,7 @@ export const Radio = (props: RadioProps) => {
   } = props
 
   return (
-    <label className={`l_fl-inline u_gap-xs r-a_cnt u_f-${size} u_${color}`} htmlFor={id}>
+    <label className={`l_fl-inline u_gap-xs r-a_cnt u_f-${size} C${color}`} htmlFor={id}>
       <input type="radio" name={name} className="r-a u_sr" id={id} {...rest} />
       <span className={`rc rc-${variant} u_s-equal`} />
       <span className="r-a_lbl">{label}</span>

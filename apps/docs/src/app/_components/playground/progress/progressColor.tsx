@@ -4,37 +4,37 @@ export const ProgressColor = () => {
   return (
     <>
       <div className="l_f-sm">
-        <ProgressBar color="dan" value={90} label="hello" />
-        <ProgressBar color="suc" value={90} label="hello" />
-        <ProgressBar color="war" value={90} label="hello" />
-        <ProgressBar color="sec" value={90} label="hello" />
-        <ProgressBar color="bg" value={90} label="hello" />
-        <ProgressBar color="pri" value={90} label="hello" />
+        <ProgressBar color="d" value={90} label="hello" />
+        <ProgressBar color="s" value={90} label="hello" />
+        <ProgressBar color="w" value={90} label="hello" />
+        <ProgressBar color="se" value={90} label="hello" />
+        <ProgressBar color="b" value={90} label="hello" />
+        <ProgressBar color="p" value={90} label="hello" />
       </div>
 
       <Flex gap="sm" wrap>
-        <ProgressCircle color="dan" value={90} label="hello" />
-        <ProgressCircle color="suc" value={90} label="hello" />
-        <ProgressCircle color="war" value={90} label="hello" />
-        <ProgressCircle color="sec" value={90} label="hello" />
-        <ProgressCircle color="bg" value={90} label="hello" />
-        <ProgressCircle color="pri" value={90} label="hello" />
+        <ProgressCircle color="d" value={90} label="hello" />
+        <ProgressCircle color="s" value={90} label="hello" />
+        <ProgressCircle color="w" value={90} label="hello" />
+        <ProgressCircle color="se" value={90} label="hello" />
+        <ProgressCircle color="b" value={90} label="hello" />
+        <ProgressCircle color="p" value={90} label="hello" />
       </Flex>
 
       <ProgressBarStack label="Nice to meet you">
-        <ProgressBarStackItem label="CSS" color="dan" value={30}>
+        <ProgressBarStackItem label="CSS" color="d" value={30}>
           <button>CSS 30</button>
         </ProgressBarStackItem>
-        <ProgressBarStackItem label="HTML" color="suc" value={15}>
+        <ProgressBarStackItem label="HTML" color="s" value={15}>
           <button>HTML 15%</button>
         </ProgressBarStackItem>
-        <ProgressBarStackItem label="React" color="sec" value={25}>
+        <ProgressBarStackItem label="React" color="se" value={25}>
           <button>React 25%</button>
         </ProgressBarStackItem>
-        <ProgressBarStackItem label="Node" color="pri" value={15}>
+        <ProgressBarStackItem label="Node" color="p" value={15}>
           <button>Node 15%</button>
         </ProgressBarStackItem>
-        <ProgressBarStackItem label="SCSS" color="war" value={15}>
+        <ProgressBarStackItem label="SCSS" color="w" value={15}>
           <button>SCSS 15%</button>
         </ProgressBarStackItem>
       </ProgressBarStack>

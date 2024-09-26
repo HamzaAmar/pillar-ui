@@ -14,7 +14,7 @@ export const Button = forwardRef(
   (
     {
       children,
-      color = 'pri',
+      color = 'p',
       corner,
       variant = 'solid',
       size,
@@ -31,7 +31,7 @@ export const Button = forwardRef(
     },
     forwardedRef
   ) => {
-    const classNames = cx(`b-u shd u_${variant} u_${color} u_center`, {
+    const classNames = cx(`b-u shd u_${variant} C${color} u_center`, {
       'b-u-fluid': fluid,
       [`u_t-${transform}`]: transform,
       [`u_f-${size}`]: size,
@@ -43,7 +43,7 @@ export const Button = forwardRef(
 
     const content = isLoading ? (
       <>
-        <Spinner color="bg" size={size} />
+        <Spinner color="b" size={size} />
         <span>{loadingText}</span>
       </>
     ) : (
@@ -75,7 +75,7 @@ export const IconButton = forwardRef(
     { icon, title, corner, color = 'bg', size = 'md', variant = 'transparent', className, as: Tag = 'button', ...rest },
     forwardedRef
   ) => {
-    const classnames = cx(`b-u bu-i u_${variant} u_${color} u_center`, {
+    const classnames = cx(`b-u bu-i u_${variant} C${color} u_center`, {
       [`u_f-${size}`]: size,
       [`u_rad-${corner}`]: corner,
       [className!]: className,
@@ -103,7 +103,7 @@ export const ButtonGroup = forwardRef(
       children,
       title,
       corner = 'sharp',
-      color = 'pri',
+      color = 'p',
       size = 'md',
       variant = 'transparent',
       className,
@@ -112,7 +112,7 @@ export const ButtonGroup = forwardRef(
     },
     forwardedRef
   ) => {
-    const classNames = cx(`bu-g b-u u_${color} u_center`, {
+    const classNames = cx(`bu-g b-u C${color} u_center`, {
       [className!]: className,
       [`u_f-${size}`]: size,
       [`u_rad-${corner}`]: corner,

@@ -14,9 +14,9 @@
 
 .t-y_link {
   padding: 2px;
-  color: var(--pri-11);
+  color: var(--P11);
   &:hover {
-    text-decoration: underline var(--pri-9) clamp(1px, 0.1em, 2px);
+    text-decoration: underline var(--P9) clamp(1px, 0.1em, 2px);
   }
   &:focus-visible {
     outline: 2px dashed var(--c-9);

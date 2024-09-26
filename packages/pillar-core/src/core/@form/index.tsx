@@ -32,7 +32,7 @@ function useField(props: any) {
     size = groupCtx?.size,
     variant = groupCtx?.variant ?? 'outline',
     corner = groupCtx?.corner,
-    color = groupCtx?.color ?? 'pri',
+    color = groupCtx?.color ?? 'p',
     transform,
     fluid = groupCtx?.fluid,
     isInvalid,
@@ -45,7 +45,7 @@ function useField(props: any) {
   const prefix = prefixInput && <span className="fi-p_cnt f-i-pre u_center">{prefixInput}</span>
   const suffix = suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
 
-  const cls = cx(`f-i_cnt f-l f-i_cnt-${variant} u_${color}`, {
+  const cls = cx(`f-i_cnt f-l f-i_cnt-${variant} C${color}`, {
     [`u_t-${transform}`]: transform,
     'f-i_cnt-fluid': fluid,
     [`u_f-${size}`]: corner,
@@ -235,7 +235,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     size = groupCtx?.size ?? 'md',
     variant = groupCtx?.variant ?? 'outline',
     corner = groupCtx?.corner,
-    color = groupCtx?.color ?? 'pri',
+    color = groupCtx?.color ?? 'p',
     transform,
     fluid = groupCtx?.fluid,
     placeholder = '○',
@@ -243,7 +243,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = cx(`f-i_cnt f-i_cnt-${variant} l_fl u_gap-xs u_${color}`, {
+  const className = cx(`f-i_cnt f-i_cnt-${variant} l_fl u_gap-xs C${color}`, {
     [`u_rad-${corner}`]: corner,
     [`u_t-${transform}`]: transform,
     [`u_f-${size}`]: size,

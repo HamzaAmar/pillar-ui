@@ -1,6 +1,6 @@
 .header {
   padding: 0 1rem;
-  border-bottom: 1px solid var(--bg-4);
+  border-bottom: 1px solid var(--B4);
   position: sticky;
   top: 0;
   left: 0;
@@ -21,7 +21,7 @@
   .header--input-search {
     position: absolute;
     inset: 0;
-    background-color: var(--bg-1);
+    background-color: var(--B1);
     visibility: hidden;
     z-index: 1;
     &[data-show='true'] {

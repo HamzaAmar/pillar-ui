@@ -10,7 +10,7 @@ const breadcrumbsItems = [
 export const BreadcrumbColor = () => {
   return (
     <>
-      <Breadcrumb color="dan">
+      <Breadcrumb color="d">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}
@@ -18,7 +18,7 @@ export const BreadcrumbColor = () => {
         ))}
       </Breadcrumb>
 
-      <Breadcrumb color="war">
+      <Breadcrumb color="w">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}
@@ -26,7 +26,7 @@ export const BreadcrumbColor = () => {
         ))}
       </Breadcrumb>
 
-      <Breadcrumb color="suc">
+      <Breadcrumb color="s">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}
@@ -34,7 +34,7 @@ export const BreadcrumbColor = () => {
         ))}
       </Breadcrumb>
 
-      <Breadcrumb color="sec">
+      <Breadcrumb color="se">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}
@@ -42,7 +42,7 @@ export const BreadcrumbColor = () => {
         ))}
       </Breadcrumb>
 
-      <Breadcrumb color="pri">
+      <Breadcrumb color="p">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}

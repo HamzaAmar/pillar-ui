@@ -86,27 +86,27 @@ export const BlockquoteCorner = () => {
 export const BlockquoteColor = () => {
   return (
     <div className="l_f-md">
-      <Blockquote color="dan">
+      <Blockquote color="d">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="suc">
+      <Blockquote color="s">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="war">
+      <Blockquote color="w">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="pri">
+      <Blockquote color="p">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="sec">
+      <Blockquote color="se">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
@@ -123,21 +123,21 @@ export const BlockquoteColor = () => {
 export const BlockquoteWithCite = () => {
   return (
     <div className="l_f-md">
-      <Blockquote color="dan">
+      <Blockquote color="d">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
         <BlockquoteCite title="Hello world" />
       </Blockquote>
 
-      <Blockquote color="dan">
+      <Blockquote color="d">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
         <BlockquoteCite title="Hello world" align="end" />
       </Blockquote>
 
-      <Blockquote color="dan">
+      <Blockquote color="d">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
@@ -150,13 +150,13 @@ export const BlockquoteWithCite = () => {
 export const BlockquoteCustomStyle = () => {
   return (
     <Flex gap="sm">
-      <Blockquote color="dan" className="u_warning">
+      <Blockquote color="d" className="u_warning">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
         <BlockquoteCite title="Hello world" align="end" />
       </Blockquote>
-      <Blockquote style={{ background: 'red' }} color="dan">
+      <Blockquote style={{ background: 'red' }} color="d">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?

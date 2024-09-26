@@ -3,29 +3,29 @@ import { Heading } from '@pillar-ui/core'
 export const HeadingColor = () => {
   return (
     <>
-      <Heading color="dan">Hello World</Heading>
-      <Heading color="suc">Hello World</Heading>
-      <Heading color="war">Hello World</Heading>
-      <Heading color="pri">Hello World</Heading>
+      <Heading color="d">Hello World</Heading>
+      <Heading color="s">Hello World</Heading>
+      <Heading color="w">Hello World</Heading>
+      <Heading color="p">Hello World</Heading>
       <Heading color="bg">Hello World</Heading>
-      <Heading color="sec">Hello World</Heading>
+      <Heading color="se">Hello World</Heading>
 
-      <Heading low color="dan">
+      <Heading low color="d">
         Hello World
       </Heading>
-      <Heading low color="suc">
+      <Heading low color="s">
         Hello World
       </Heading>
-      <Heading low color="war">
+      <Heading low color="w">
         Hello World
       </Heading>
-      <Heading low color="pri">
+      <Heading low color="p">
         Hello World
       </Heading>
       <Heading low color="bg">
         Hello World
       </Heading>
-      <Heading low color="sec">
+      <Heading low color="se">
         Hello World
       </Heading>
     </>

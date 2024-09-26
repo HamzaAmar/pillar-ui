@@ -16,12 +16,12 @@ export const KbdColors = () => {
   return (
     <Flex gap="sm" items="center">
       <Kbd title="Esc" />
-      <Kbd title="Esc" color="dan" />
-      <Kbd title="Esc" color="suc" />
-      <Kbd title="Esc" color="war" />
-      <Kbd title="Esc" color="pri" />
-      <Kbd title="Esc" color="bg" />
-      <Kbd title="Esc" color="sec" />
+      <Kbd title="Esc" color="d" />
+      <Kbd title="Esc" color="s" />
+      <Kbd title="Esc" color="w" />
+      <Kbd title="Esc" color="p" />
+      <Kbd title="Esc" color="b" />
+      <Kbd title="Esc" color="se" />
     </Flex>
   )
 }
@@ -34,12 +34,12 @@ export const KbdVariants = () => {
       {Variants.map((variant) => (
         <Flex key={variant} gap="sm">
           <Kbd title="Esc" variant={variant} />
-          <Kbd title="Esc" variant={variant} color="dan" />
-          <Kbd title="Esc" variant={variant} color="suc" />
-          <Kbd title="Esc" variant={variant} color="war" />
-          <Kbd title="Esc" variant={variant} color="pri" />
-          <Kbd title="Esc" variant={variant} color="bg" />
-          <Kbd title="Esc" variant={variant} color="sec" />
+          <Kbd title="Esc" variant={variant} color="d" />
+          <Kbd title="Esc" variant={variant} color="s" />
+          <Kbd title="Esc" variant={variant} color="w" />
+          <Kbd title="Esc" variant={variant} color="p" />
+          <Kbd title="Esc" variant={variant} color="b" />
+          <Kbd title="Esc" variant={variant} color="se" />
         </Flex>
       ))}
     </div>

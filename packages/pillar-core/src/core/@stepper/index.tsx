@@ -54,7 +54,7 @@ export const StepperStep = (props: StepProps) => {
   )
 }
 
-export const Stepper = ({ children, color = 'bg', active = 0, completeComponent, ...rest }: StepperProps) => {
+export const Stepper = ({ children, color = 'b', active = 0, completeComponent, ...rest }: StepperProps) => {
   // let _content: ReactNode[] = []
   // // Rename Index to step to reduce code at createElement
   // const _children = Children.map(children, (child, step) => {
@@ -84,7 +84,7 @@ export const Stepper = ({ children, color = 'bg', active = 0, completeComponent,
 
   return (
     <div className="s-t_cnt l_flow">
-      <div className={`f-l s-t u_${color} u_between`}>
+      <div className={`f-l s-t C${color} u_between`}>
         <StepperProvider {...rest}> {steps}</StepperProvider>
       </div>
       <div>{currentContent}</div>

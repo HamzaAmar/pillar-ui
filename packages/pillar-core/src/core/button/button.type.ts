@@ -22,7 +22,7 @@ interface BaseButton {
  *
  * @param {Object} props - The props for the button.
  * @param {Size} [props.size='md'] - The size of the button.
- * @param {Color} [props.color="pri"] - The color of the button.
+ * @param {Color} [props.color="p"] - The color of the button.
  * @param {Corner} [props.corner='xs'] - The corner of the button.
  * @param {Variant} [props.variant='solid'] - The variant of the button.
  * @param {ReactElement} [props.icon]  - The icon of the button.

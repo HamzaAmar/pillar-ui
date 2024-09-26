@@ -1,6 +1,6 @@
 .p-o {
-  border: 1px solid var(--bg-6);
-  background: var(--bg-1);
+  border: 1px solid var(--B6);
+  background: var(--B1);
   position: absolute;
   z-index: 1000000000000000000000000000;
 }

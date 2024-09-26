@@ -47,7 +47,7 @@ export const Table = ({
   return (
     <div className="t-a_cnt">
       <table
-        className={cx(`t-a u_f-${size} t-a-${variant}  u_${color}`, {
+        className={cx(`t-a u_f-${size} t-a-${variant}  C${color}`, {
           table__border: showBorder,
         })}
         {...rest}

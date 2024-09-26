@@ -16,24 +16,24 @@ export const Playground = {}
 
 export const ChipsColor = () => (
   <Flex gap="xs">
-    <Chips color="dan" variant="solid">
+    <Chips color="d" variant="solid">
       Hello
     </Chips>
-    <Chips color="war" variant="solid">
+    <Chips color="w" variant="solid">
       Hello
     </Chips>
-    <Chips color="suc" variant="solid">
-      Hello
-    </Chips>
-
-    <Chips color="pri" variant="solid">
-      Hello
-    </Chips>
-    <Chips color="sec" variant="solid">
+    <Chips color="s" variant="solid">
       Hello
     </Chips>
 
-    <Chips color="bg" variant="solid">
+    <Chips color="p" variant="solid">
+      Hello
+    </Chips>
+    <Chips color="se" variant="solid">
+      Hello
+    </Chips>
+
+    <Chips color="b" variant="solid">
       Hello
     </Chips>
   </Flex>
@@ -45,23 +45,23 @@ export const ChipsVariants = () => (
   <div className="l_f-md">
     {VARIANTS.map((variant) => (
       <Flex key={variant} gap="xs">
-        <Chips color="dan" variant={variant}>
+        <Chips color="d" variant={variant}>
           Hello
         </Chips>
-        <Chips color="war" variant={variant}>
+        <Chips color="w" variant={variant}>
           Hello
         </Chips>
-        <Chips color="suc" variant={variant}>
+        <Chips color="s" variant={variant}>
           Hello
         </Chips>
 
-        <Chips color="pri" variant={variant}>
+        <Chips color="p" variant={variant}>
           Hello
         </Chips>
-        <Chips color="sec" variant={variant}>
+        <Chips color="se" variant={variant}>
           Hello
         </Chips>
-        <Chips color="bg" variant={variant}>
+        <Chips color="b" variant={variant}>
           Hello
         </Chips>
       </Flex>
@@ -228,14 +228,14 @@ export const ChipsRefForwarded = () => {
     if (chipsRef.current?.style) {
       const { style } = chipsRef.current
       if (count % 2 === 0) {
-        style.backgroundColor = 'var(--pri-8)'
-        style.borderColor = 'var(--pri-12)'
-        style.borderColor = 'var(--pri-11)'
+        style.backgroundColor = 'var(--P8)'
+        style.borderColor = 'var(--P12)'
+        style.borderColor = 'var(--P11)'
         return
       }
-      style.background = 'var(--sec-8)'
-      style.color = 'var(--sec-12)'
-      style.borderColor = 'var(--sec-11)'
+      style.background = 'var(--Se8)'
+      style.color = 'var(--Se12)'
+      style.borderColor = 'var(--Se11)'
       return
     }
   }

@@ -16,7 +16,7 @@
 }
 
 .hero-svg {
-  stroke: var(--pri-9);
+  stroke: var(--P9);
   position: absolute;
   left: -10%;
   width: 115%;
@@ -26,7 +26,7 @@
 .hero-txt {
   font-size: max(2.5vw, 1.75rem);
   line-height: 1.25;
-  color: var(--bg-11);
+  color: var(--B11);
 }
 
 // Here we go
@@ -38,7 +38,7 @@
   z-index: 1;
   max-width: 100%;
   &:nth-child(even) {
-    background: var(--bg-2);
+    background: var(--B2);
   }
 }
 .rtl--support {
@@ -59,7 +59,7 @@
 }
 
 .feature--item {
-  border: 1px solid var(--bg-5);
+  border: 1px solid var(--B5);
   padding: 0.75rem;
   border-radius: 0.75rem;
 }
@@ -73,15 +73,15 @@
 }
 .article--item {
   padding: 1.25rem;
-  border: 1px solid var(--bg-4);
+  border: 1px solid var(--B4);
   position: relative;
   z-index: 1;
   border-radius: 0.5rem;
-  background-color: var(--bg-1);
+  background-color: var(--B1);
 }
 
 .article--icon-container {
-  background-color: var(--pri-4);
+  background-color: var(--P4);
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -149,9 +149,9 @@
 .user--article,
 .get-started {
   padding: 0.75rem;
-  border: 1px solid var(--bg-4);
+  border: 1px solid var(--B4);
   border-radius: 0.5rem;
-  background-color: var(--bg-3);
+  background-color: var(--B3);
   height: fit-content;
 }
 

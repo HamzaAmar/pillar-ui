@@ -12,12 +12,12 @@ export default meta
 export const SeparatorColors = () => {
   return (
     <div className="l_f-md">
-      <Separator color="dan" />
-      <Separator color="war" />
-      <Separator color="suc" />
-      <Separator color="sec" />
-      <Separator color="pri" />
-      <Separator color="bg" />
+      <Separator color="d" />
+      <Separator color="w" />
+      <Separator color="s" />
+      <Separator color="se" />
+      <Separator color="p" />
+      <Separator color="b" />
     </div>
   )
 }

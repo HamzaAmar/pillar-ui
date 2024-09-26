@@ -16,7 +16,7 @@ export const ProgressCircle = ({
   max = 100,
   value,
   label,
-  color = 'pri',
+  color = 'p',
   ...rest
 }: ProgressCircleProps) => {
   const progress = ((value - min) / (max - min)) * 100
@@ -27,7 +27,7 @@ export const ProgressCircle = ({
   const dashOffset = circumference - (progress / 100) * circumference
 
   return (
-    <div className={`pr-c u_center u_f-${size} u_${color}`} {...rest}>
+    <div className={`pr-c u_center u_f-${size} C${color}`} {...rest}>
       <svg className="pr-c_svg" viewBox="0 0 100 100">
         <circle className="pr-c_background" {...circle} />
         <circle className={`pr-c_bar`} {...circle} strokeDasharray={circumference} strokeDashoffset={dashOffset} />
@@ -42,7 +42,7 @@ export const ProgressCircle = ({
 export const ProgressBar = ({
   showValue,
   value,
-  color = 'pri',
+  color = 'p',
   size = 'md',
   label,
   min = 0,
@@ -52,7 +52,7 @@ export const ProgressBar = ({
   const progress = ((MaxValue - min) / (max - min)) * 100
 
   return (
-    <div className={`u_${color}`}>
+    <div className={`C${color}`}>
       <div className="f-l u_jus-end">
         <div className={cx(`u_f-${size}`, { ' u_sr': !showValue })}>{MaxValue}%</div>
       </div>
@@ -71,8 +71,8 @@ export const ProgressBar = ({
   )
 }
 
-export const ProgressBarStackItem = ({ color = 'pri', value }: ProgressBarStackItemProps) => {
-  return <div className={`pr-s_itm u_${color}`} style={{ width: `${value}%` }} />
+export const ProgressBarStackItem = ({ color = 'p', value }: ProgressBarStackItemProps) => {
+  return <div className={`pr-s_itm C${color}`} style={{ width: `${value}%` }} />
 }
 
 export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProps) => {
@@ -87,7 +87,7 @@ export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProp
       <div className={`f-l u_gap-2xs pr-b pr-s u_f-${size}`}>{children}</div>
       <ul className="f-l u_gap-md l_fl-wrap">
         {_children?.map(({ children, color }, index) => (
-          <li className={`pr-s_cnt f-l u_it-center u_gap-2xs u_${color}`} key={index}>
+          <li className={`pr-s_cnt f-l u_it-center u_gap-2xs C${color}`} key={index}>
             <span className="u_bg t-y-low u_f-sm">{children}</span>
           </li>
         ))}

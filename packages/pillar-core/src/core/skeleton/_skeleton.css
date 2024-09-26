@@ -1,11 +1,11 @@
 .s-k {
-  background: var(--bg-7);
+  background: var(--B7);
   position: relative;
   overflow: hidden;
 
   &::before {
     content: '';
-    background: linear-gradient(to right, var(--opa-1), var(--opa-4), var(--opa-2));
+    background: linear-gradient(to right, var(--O1), var(--O4), var(--O2));
     width: 40%;
     height: 100%;
     position: absolute;

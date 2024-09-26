@@ -4,12 +4,12 @@ export const PaginationColor = () => {
   return (
     <>
       <Pagination count={10} title="Esc" />
-      <Pagination count={10} title="Esc" color="dan" />
-      <Pagination count={10} title="Esc" color="suc" />
-      <Pagination count={10} title="Esc" color="war" />
-      <Pagination count={10} title="Esc" color="pri" />
-      <Pagination count={10} title="Esc" color="bg" />
-      <Pagination count={10} title="Esc" color="sec" />
+      <Pagination count={10} title="Esc" color="d" />
+      <Pagination count={10} title="Esc" color="s" />
+      <Pagination count={10} title="Esc" color="w" />
+      <Pagination count={10} title="Esc" color="p" />
+      <Pagination count={10} title="Esc" color="b" />
+      <Pagination count={10} title="Esc" color="se" />
     </>
   )
 }

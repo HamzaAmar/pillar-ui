@@ -3,29 +3,29 @@ import { Text } from '@pillar-ui/core'
 export const TextColor = () => {
   return (
     <>
-      <Text color="dan">Hello World</Text>
-      <Text color="suc">Hello World</Text>
-      <Text color="war">Hello World</Text>
-      <Text color="pri">Hello World</Text>
+      <Text color="d">Hello World</Text>
+      <Text color="s">Hello World</Text>
+      <Text color="w">Hello World</Text>
+      <Text color="p">Hello World</Text>
       <Text color="bg">Hello World</Text>
-      <Text color="sec">Hello World</Text>
+      <Text color="se">Hello World</Text>
 
-      <Text low color="dan">
+      <Text low color="d">
         Hello World
       </Text>
-      <Text low color="suc">
+      <Text low color="s">
         Hello World
       </Text>
-      <Text low color="war">
+      <Text low color="w">
         Hello World
       </Text>
-      <Text low color="pri">
+      <Text low color="p">
         Hello World
       </Text>
       <Text low color="bg">
         Hello World
       </Text>
-      <Text low color="sec">
+      <Text low color="se">
         Hello World
       </Text>
     </>

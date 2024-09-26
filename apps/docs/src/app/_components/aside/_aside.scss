@@ -5,12 +5,12 @@
   top: 4rem;
   overflow-y: auto;
   max-height: calc(100vh - 4rem);
-  background: var(--bg-1);
+  background: var(--B1);
   z-index: 50;
 }
 
 .toc-wrapper {
-  border-inline-start: 1px solid var(--bg-4);
+  border-inline-start: 1px solid var(--B4);
 }
 
 .as-icon {
@@ -46,8 +46,8 @@
   border-inline-start: 3px solid transparent;
 
   &[data-active='true'] {
-    background: var(--pri-3);
-    border-color: var(--pri-9);
+    background: var(--P3);
+    border-color: var(--P9);
   }
 }
 
@@ -57,7 +57,7 @@
   justify-content: space-between;
   width: 100%;
   font-size: var(--f-xs);
-  color: var(--bg-11);
+  color: var(--B11);
   outline: none;
 }
 

@@ -22,19 +22,19 @@ export const ProgressSize = () => {
         <ProgressCircle size="2xl" value={95} label="hello" />
       </Flex>
       <ProgressBarStack size="sm" label="Nice to meet you">
-        <ProgressBarStackItem label="CSS" color="dan" value={30}>
+        <ProgressBarStackItem label="CSS" color="d" value={30}>
           <button>CSS 30</button>
         </ProgressBarStackItem>
-        <ProgressBarStackItem label="HTML" color="suc" value={15}>
+        <ProgressBarStackItem label="HTML" color="s" value={15}>
           <button>HTML 15%</button>
         </ProgressBarStackItem>
-        <ProgressBarStackItem label="React" color="sec" value={25}>
+        <ProgressBarStackItem label="React" color="se" value={25}>
           <button>React 25%</button>
         </ProgressBarStackItem>
-        <ProgressBarStackItem label="Node" color="pri" value={15}>
+        <ProgressBarStackItem label="Node" color="p" value={15}>
           <button>Node 15%</button>
         </ProgressBarStackItem>
-        <ProgressBarStackItem label="SCSS" color="war" value={15}>
+        <ProgressBarStackItem label="SCSS" color="w" value={15}>
           <button>SCSS 15%</button>
         </ProgressBarStackItem>
       </ProgressBarStack>

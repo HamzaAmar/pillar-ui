@@ -1,3 +1,5 @@
+/* Flex: C, B */
+
 .u_center,
 .u_between {
   display: var(--fx, flex);

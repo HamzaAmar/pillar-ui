@@ -1,3 +1,5 @@
+/*text:  Tt, Ta, Td, Lh */
+
 .u_t-uppercase {
   text-transform: uppercase;
 }
@@ -51,7 +53,7 @@
 }
 
 /*
-      Align Text Decoration Section
+      line-height Section
   */
 
 .u_t-normal {

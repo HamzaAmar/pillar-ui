@@ -20,30 +20,30 @@ export function PaginationColor() {
     <div>
       <div className="l_f-md">
         <Pagination count={10} />
-        <Pagination count={10} color="dan" />
-        <Pagination count={10} color="suc" />
-        <Pagination count={10} color="war" />
-        <Pagination count={10} color="pri" />
-        <Pagination count={10} color="sec" />
-        <Pagination count={10} color="bg" />
+        <Pagination count={10} color="d" />
+        <Pagination count={10} color="s" />
+        <Pagination count={10} color="w" />
+        <Pagination count={10} color="p" />
+        <Pagination count={10} color="se" />
+        <Pagination count={10} color="b" />
       </div>
       <div className="l_f-md">
         <Pagination count={10} variant="soft" />
-        <Pagination count={10} variant="soft" color="dan" />
-        <Pagination count={10} variant="soft" color="suc" />
-        <Pagination count={10} variant="soft" color="war" />
-        <Pagination count={10} variant="soft" color="pri" />
-        <Pagination count={10} variant="soft" color="sec" />
-        <Pagination count={10} variant="soft" color="bg" />
+        <Pagination count={10} variant="soft" color="d" />
+        <Pagination count={10} variant="soft" color="s" />
+        <Pagination count={10} variant="soft" color="w" />
+        <Pagination count={10} variant="soft" color="p" />
+        <Pagination count={10} variant="soft" color="se" />
+        <Pagination count={10} variant="soft" color="b" />
       </div>
       <div className="l_f-md">
         <Pagination count={10} />
-        <Pagination count={10} variant="solid" color="dan" />
-        <Pagination count={10} variant="solid" color="suc" />
-        <Pagination count={10} variant="solid" color="war" />
-        <Pagination count={10} variant="solid" color="pri" />
-        <Pagination count={10} variant="solid" color="sec" />
-        <Pagination count={10} variant="solid" color="bg" />
+        <Pagination count={10} variant="solid" color="d" />
+        <Pagination count={10} variant="solid" color="s" />
+        <Pagination count={10} variant="solid" color="w" />
+        <Pagination count={10} variant="solid" color="p" />
+        <Pagination count={10} variant="solid" color="se" />
+        <Pagination count={10} variant="solid" color="b" />
       </div>
     </div>
   )
@@ -52,11 +52,11 @@ export function PaginationColor() {
 export function PaginationVariant() {
   return (
     <div className="l_f-md">
-      <Pagination count={10} color="pri" />
-      <Pagination count={10} color="pri" variant="mixed" />
-      <Pagination count={10} color="pri" variant="soft" />
-      <Pagination count={10} color="pri" variant="solid" />
-      <Pagination count={10} color="pri" variant="text" />
+      <Pagination count={10} color="p" />
+      <Pagination count={10} color="p" variant="mixed" />
+      <Pagination count={10} color="p" variant="soft" />
+      <Pagination count={10} color="p" variant="solid" />
+      <Pagination count={10} color="p" variant="text" />
     </div>
   )
 }
@@ -65,12 +65,12 @@ export function PaginationCustomStyle() {
   return (
     <div className="l_f-md">
       <Pagination count={10} />
-      <Pagination count={10} color="dan" />
-      <Pagination count={10} color="suc" />
-      <Pagination count={10} color="war" />
-      <Pagination count={10} color="pri" />
-      <Pagination count={10} color="sec" />
-      <Pagination count={10} color="bg" />
+      <Pagination count={10} color="d" />
+      <Pagination count={10} color="s" />
+      <Pagination count={10} color="w" />
+      <Pagination count={10} color="p" />
+      <Pagination count={10} color="se" />
+      <Pagination count={10} color="b" />
     </div>
   )
 }

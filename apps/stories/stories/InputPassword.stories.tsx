@@ -87,12 +87,12 @@ export const SizeInput = () => {
 export const ColorInput = () => {
   return (
     <Flex gap="sm" direction="column">
-      <InputPassword color="pri" variant="bordered" autoFocus placeholder="Focus" />
-      <InputPassword color="war" variant="bordered" autoFocus placeholder="Normal" />
-      <InputPassword color="sec" variant="outline" autoFocus placeholder="Disabled" />
-      <InputPassword color="bg" variant="filled" autoFocus placeholder="isInvalid" />
-      <InputPassword color="suc" variant="bordered" autoFocus placeholder="Placeholder" />
-      <InputPassword color="dan" variant="bordered" autoFocus defaultValue="Default Value" />
+      <InputPassword color="p" variant="bordered" autoFocus placeholder="Focus" />
+      <InputPassword color="w" variant="bordered" autoFocus placeholder="Normal" />
+      <InputPassword color="se" variant="outline" autoFocus placeholder="Disabled" />
+      <InputPassword color="b" variant="filled" autoFocus placeholder="isInvalid" />
+      <InputPassword color="s" variant="bordered" autoFocus placeholder="Placeholder" />
+      <InputPassword color="d" variant="bordered" autoFocus defaultValue="Default Value" />
     </Flex>
   )
 }
@@ -100,18 +100,13 @@ export const ColorInput = () => {
 export const InputPasswordCustomIcon = () => {
   return (
     <Flex gap="sm" direction="column">
-      <InputPassword placeholder="enter your password" color="pri" visibleIcon={<Lock />} hiddenIcon={<LockOff />} />
-      <InputPassword
-        placeholder="enter your password"
-        color="war"
-        visibleIcon={<OpenSource />}
-        hiddenIcon={<Close />}
-      />
+      <InputPassword placeholder="enter your password" color="p" visibleIcon={<Lock />} hiddenIcon={<LockOff />} />
+      <InputPassword placeholder="enter your password" color="w" visibleIcon={<OpenSource />} hiddenIcon={<Close />} />
 
       <FormController label="Hello world" hint="The password need to be between 5 and 15" error="Nice Error Here">
         <InputPassword
           placeholder="enter your password"
-          color="war"
+          color="w"
           visibleIcon={<OpenSource />}
           hiddenIcon={<Close />}
         />

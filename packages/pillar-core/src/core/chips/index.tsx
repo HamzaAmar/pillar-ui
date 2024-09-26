@@ -6,10 +6,10 @@ import type { ChipsProps } from './chips.type'
 
 export const Chips = forwardRef(
   (
-    { size, color = 'pri', as: Tag = 'span', variant = 'solid', transform, corner, className, children, ...rest },
+    { size, color = 'p', as: Tag = 'span', variant = 'solid', transform, corner, className, children, ...rest },
     ref
   ) => {
-    const _className = cx(`c-i shd u_${variant} u_${color}`, {
+    const _className = cx(`c-i shd u_${variant} C${color}`, {
       [`u_f-${size}`]: size,
       [`u_t-${transform}`]: transform,
       [`u_rad-${corner}`]: corner,

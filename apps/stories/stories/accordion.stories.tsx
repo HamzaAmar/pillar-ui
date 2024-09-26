@@ -77,60 +77,60 @@ export const AlertColors = () => {
   return (
     <div className="l_f-md">
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase color="dan" />
-        <AccordionBase color="suc" />
-        <AccordionBase color="war" />
-        <AccordionBase color="pri" />
-        <AccordionBase color="sec" />
-        <AccordionBase color="bg" />
+        <AccordionBase color="d" />
+        <AccordionBase color="s" />
+        <AccordionBase color="w" />
+        <AccordionBase color="p" />
+        <AccordionBase color="se" />
+        <AccordionBase color="b" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase variant="soft" color="dan" />
-        <AccordionBase variant="soft" color="suc" />
-        <AccordionBase variant="soft" color="war" />
-        <AccordionBase variant="soft" color="pri" />
-        <AccordionBase variant="soft" color="sec" />
-        <AccordionBase variant="soft" color="bg" />
+        <AccordionBase variant="soft" color="d" />
+        <AccordionBase variant="soft" color="s" />
+        <AccordionBase variant="soft" color="w" />
+        <AccordionBase variant="soft" color="p" />
+        <AccordionBase variant="soft" color="se" />
+        <AccordionBase variant="soft" color="b" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase separate variant="soft" color="dan" />
-        <AccordionBase separate variant="soft" color="suc" />
-        <AccordionBase separate variant="soft" color="war" />
-        <AccordionBase separate variant="soft" color="pri" />
-        <AccordionBase separate variant="soft" color="sec" />
-        <AccordionBase separate variant="soft" color="bg" />
+        <AccordionBase separate variant="soft" color="d" />
+        <AccordionBase separate variant="soft" color="s" />
+        <AccordionBase separate variant="soft" color="w" />
+        <AccordionBase separate variant="soft" color="p" />
+        <AccordionBase separate variant="soft" color="se" />
+        <AccordionBase separate variant="soft" color="b" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase variant="outline" color="dan" />
-        <AccordionBase variant="outline" color="suc" />
-        <AccordionBase variant="outline" color="war" />
-        <AccordionBase variant="outline" color="pri" />
-        <AccordionBase variant="outline" color="sec" />
-        <AccordionBase variant="outline" color="bg" />
+        <AccordionBase variant="outline" color="d" />
+        <AccordionBase variant="outline" color="s" />
+        <AccordionBase variant="outline" color="w" />
+        <AccordionBase variant="outline" color="p" />
+        <AccordionBase variant="outline" color="se" />
+        <AccordionBase variant="outline" color="b" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase separate variant="outline" color="dan" />
-        <AccordionBase separate variant="outline" color="suc" />
-        <AccordionBase separate variant="outline" color="war" />
-        <AccordionBase separate variant="outline" color="pri" />
-        <AccordionBase separate variant="outline" color="sec" />
-        <AccordionBase separate variant="outline" color="bg" />
+        <AccordionBase separate variant="outline" color="d" />
+        <AccordionBase separate variant="outline" color="s" />
+        <AccordionBase separate variant="outline" color="w" />
+        <AccordionBase separate variant="outline" color="p" />
+        <AccordionBase separate variant="outline" color="se" />
+        <AccordionBase separate variant="outline" color="b" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase variant="solid" color="dan" />
-        <AccordionBase variant="solid" color="suc" />
-        <AccordionBase variant="solid" color="war" />
-        <AccordionBase variant="solid" color="pri" />
-        <AccordionBase variant="solid" color="sec" />
-        <AccordionBase variant="solid" color="bg" />
+        <AccordionBase variant="solid" color="d" />
+        <AccordionBase variant="solid" color="s" />
+        <AccordionBase variant="solid" color="w" />
+        <AccordionBase variant="solid" color="p" />
+        <AccordionBase variant="solid" color="se" />
+        <AccordionBase variant="solid" color="b" />
       </Grid>
       <Grid grid="1fr 1fr 1fr" gap="lg">
-        <AccordionBase separate variant="solid" color="dan" />
-        <AccordionBase separate variant="solid" color="suc" />
-        <AccordionBase separate variant="solid" color="war" />
-        <AccordionBase separate variant="solid" color="pri" />
-        <AccordionBase separate variant="solid" color="sec" />
-        <AccordionBase separate variant="solid" color="bg" />
+        <AccordionBase separate variant="solid" color="d" />
+        <AccordionBase separate variant="solid" color="s" />
+        <AccordionBase separate variant="solid" color="w" />
+        <AccordionBase separate variant="solid" color="p" />
+        <AccordionBase separate variant="solid" color="se" />
+        <AccordionBase separate variant="solid" color="b" />
       </Grid>
     </div>
   )
@@ -163,12 +163,12 @@ export const AlertSizes = () => {
 export const AlertCorners = () => {
   return (
     <div className="l_f-md">
-      <AccordionBase separate color="bg" variant="solid" corner="sharp" />
-      <AccordionBase separate color="bg" variant="soft" corner="sm" />
-      <AccordionBase separate color="bg" variant="outline" corner="md" />
-      <AccordionBase separate color="bg" variant="solid" corner="lg" />
-      <AccordionBase separate color="bg" variant="soft" corner="xl" />
-      <AccordionBase separate color="bg" variant="outline" corner="full" />
+      <AccordionBase separate color="b" variant="solid" corner="sharp" />
+      <AccordionBase separate color="b" variant="soft" corner="sm" />
+      <AccordionBase separate color="b" variant="outline" corner="md" />
+      <AccordionBase separate color="b" variant="solid" corner="lg" />
+      <AccordionBase separate color="b" variant="soft" corner="xl" />
+      <AccordionBase separate color="b" variant="outline" corner="full" />
     </div>
   )
 }

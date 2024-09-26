@@ -53,7 +53,7 @@ export function BreadcrumbSeparator() {
 export function BreadcrumbColor() {
   return (
     <div className="l_f-md">
-      <Breadcrumb color="dan">
+      <Breadcrumb color="d">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -61,7 +61,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="war">
+      <Breadcrumb color="w">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -69,7 +69,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="suc">
+      <Breadcrumb color="s">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -77,7 +77,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="sec">
+      <Breadcrumb color="se">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -85,7 +85,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="pri">
+      <Breadcrumb color="p">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -250,7 +250,7 @@ export function BreadcrumbCustomStyle() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb style={{ color: 'brown', background: 'var(--bg-5)' }} separator="*">
+      <Breadcrumb style={{ color: 'brown', background: 'var(--B5)' }} separator="*">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>

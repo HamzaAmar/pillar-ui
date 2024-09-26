@@ -77,12 +77,12 @@ export const TabSize = () => {
 export const TabColor = () => {
   return (
     <Flex direction="column" gap="sm">
-      <TabBase color="dan" defaultValue={1} />
-      <TabBase color="war" defaultValue={1} />
-      <TabBase color="suc" defaultValue={1} />
-      <TabBase color="pri" defaultValue={1} />
-      <TabBase color="sec" defaultValue={1} />
-      <TabBase color="bg" defaultValue={1} />
+      <TabBase color="d" defaultValue={1} />
+      <TabBase color="w" defaultValue={1} />
+      <TabBase color="s" defaultValue={1} />
+      <TabBase color="p" defaultValue={1} />
+      <TabBase color="se" defaultValue={1} />
+      <TabBase color="b" defaultValue={1} />
     </Flex>
   )
 }
@@ -100,36 +100,36 @@ export const TabVariants = () => {
   return (
     <Grid grid="1fr 1fr" gap="sm">
       <Flex direction="column" gap="sm">
-        <TabBase variant="solid" color="dan" defaultValue={1} />
-        <TabBase variant="solid" color="war" defaultValue={1} />
-        <TabBase variant="solid" color="suc" defaultValue={1} />
-        <TabBase variant="solid" color="pri" defaultValue={1} />
-        <TabBase variant="solid" color="sec" defaultValue={1} />
-        <TabBase variant="solid" color="bg" defaultValue={1} />
+        <TabBase variant="solid" color="d" defaultValue={1} />
+        <TabBase variant="solid" color="w" defaultValue={1} />
+        <TabBase variant="solid" color="s" defaultValue={1} />
+        <TabBase variant="solid" color="p" defaultValue={1} />
+        <TabBase variant="solid" color="se" defaultValue={1} />
+        <TabBase variant="solid" color="b" defaultValue={1} />
       </Flex>
       <Flex direction="column" gap="sm">
-        <TabBase variant="outline" color="dan" defaultValue={1} />
-        <TabBase variant="outline" color="war" defaultValue={1} />
-        <TabBase variant="outline" color="suc" defaultValue={1} />
-        <TabBase variant="outline" color="pri" defaultValue={1} />
-        <TabBase variant="outline" color="sec" defaultValue={1} />
-        <TabBase variant="outline" color="bg" defaultValue={1} />
+        <TabBase variant="outline" color="d" defaultValue={1} />
+        <TabBase variant="outline" color="w" defaultValue={1} />
+        <TabBase variant="outline" color="s" defaultValue={1} />
+        <TabBase variant="outline" color="p" defaultValue={1} />
+        <TabBase variant="outline" color="se" defaultValue={1} />
+        <TabBase variant="outline" color="b" defaultValue={1} />
       </Flex>
       <Flex direction="column" gap="sm">
-        <TabBase variant="soft" color="dan" defaultValue={1} />
-        <TabBase variant="soft" color="war" defaultValue={1} />
-        <TabBase variant="soft" color="suc" defaultValue={1} />
-        <TabBase variant="soft" color="pri" defaultValue={1} />
-        <TabBase variant="soft" color="sec" defaultValue={1} />
-        <TabBase variant="soft" color="bg" defaultValue={1} />
+        <TabBase variant="soft" color="d" defaultValue={1} />
+        <TabBase variant="soft" color="w" defaultValue={1} />
+        <TabBase variant="soft" color="s" defaultValue={1} />
+        <TabBase variant="soft" color="p" defaultValue={1} />
+        <TabBase variant="soft" color="se" defaultValue={1} />
+        <TabBase variant="soft" color="b" defaultValue={1} />
       </Flex>
       <Flex direction="column" gap="sm">
-        <TabBase color="dan" defaultValue={1} />
-        <TabBase color="war" defaultValue={1} />
-        <TabBase color="suc" defaultValue={1} />
-        <TabBase color="pri" defaultValue={1} />
-        <TabBase color="sec" defaultValue={1} />
-        <TabBase color="bg" defaultValue={1} />
+        <TabBase color="d" defaultValue={1} />
+        <TabBase color="w" defaultValue={1} />
+        <TabBase color="s" defaultValue={1} />
+        <TabBase color="p" defaultValue={1} />
+        <TabBase color="se" defaultValue={1} />
+        <TabBase color="b" defaultValue={1} />
       </Flex>
     </Grid>
   )

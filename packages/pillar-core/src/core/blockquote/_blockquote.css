@@ -3,7 +3,7 @@
   /* background-clip: ;
   background-color: ; */
   padding: 1.5em;
-  background: padding-box var(--bg-3);
+  background: padding-box var(--B3);
   position: relative;
 
   /*
@@ -25,6 +25,6 @@
   top: 0.25em;
   & svg {
     width: 1.25em;
-    color: var(--opa-9);
+    color: var(--O9);
   }
 }

@@ -36,7 +36,7 @@
     text-decoration: underline 1.2px;
   }
   &[aria-current='page'] {
-    color: var(--bg-10);
+    color: var(--B10);
     text-decoration: none;
     cursor: not-allowed;
   }

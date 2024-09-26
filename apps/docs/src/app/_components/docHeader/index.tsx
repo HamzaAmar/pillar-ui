@@ -9,14 +9,14 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
   return (
     <Paper className="docs--header" flow="lg" p="sm">
       <Heading size="2xl">{title} </Heading>
-      <Text color="bg" low size="sm" weight="medium">
+      <Text color="b" low size="sm" weight="medium">
         {excerpt}
       </Text>
 
       <Grid grid="auto minmax(0, 1fr)" sm="1fr" gap="md">
         {type === 'core' && (
           <>
-            <Text weight="medium" size="sm" color="bg" low>
+            <Text weight="medium" size="sm" color="b" low>
               Components:
             </Text>
             <Flex gap="sm" wrap>
@@ -24,14 +24,14 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
             </Flex>
           </>
         )}
-        <Text weight="medium" size="sm" color="bg" low>
+        <Text weight="medium" size="sm" color="b" low>
           Type
         </Text>
         <Flex gap="sm">
           <Chips>{typeName}</Chips>
         </Flex>
         <>
-          <Text weight="medium" size="sm" color="bg" low>
+          <Text weight="medium" size="sm" color="b" low>
             import
           </Text>
           <Flex gap="sm">

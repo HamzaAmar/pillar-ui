@@ -4,15 +4,15 @@ import { Check, Eye, Plus, Radar, User, Verified, Window, AspectRatio } from '@p
 export const BadgeIcon = () => {
   return (
     <>
-      <Badge type="icon" icon={<Check />} color="dan" />
-      <Badge type="icon" icon={<Eye />} color="suc" />
-      <Badge type="icon" icon={<User />} color="war" />
-      <Badge type="icon" icon={<Plus />} color="pri" />
-      <Badge type="icon" icon={<Verified />} color="dan" />
-      <Badge type="icon" icon={<Radar />} color="sec" />
-      <Badge type="icon" icon={<Window />} color="pri" />
-      <Badge type="icon" icon={<AspectRatio />} color="sec" />
-      <Badge type="icon" icon={<Check />} color="bg" />
+      <Badge type="icon" icon={<Check />} color="d" />
+      <Badge type="icon" icon={<Eye />} color="s" />
+      <Badge type="icon" icon={<User />} color="w" />
+      <Badge type="icon" icon={<Plus />} color="p" />
+      <Badge type="icon" icon={<Verified />} color="d" />
+      <Badge type="icon" icon={<Radar />} color="se" />
+      <Badge type="icon" icon={<Window />} color="p" />
+      <Badge type="icon" icon={<AspectRatio />} color="se" />
+      <Badge type="icon" icon={<Check />} color="b" />
     </>
   )
 }

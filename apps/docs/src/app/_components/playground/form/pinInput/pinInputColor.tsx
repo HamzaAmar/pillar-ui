@@ -3,10 +3,10 @@ import { PinInput } from '@pillar-ui/core'
 export const PinInputColor = () => {
   return (
     <>
-      <PinInput color="pri" />
-      <PinInput color="war" />
-      <PinInput color="sec" />
-      <PinInput color="bg" />
+      <PinInput color="p" />
+      <PinInput color="w" />
+      <PinInput color="se" />
+      <PinInput color="b" />
     </>
   )
 }

@@ -63,7 +63,7 @@ export const Accordion = forwardRef(
       children,
       type = 'single',
       collapsible,
-      color = 'bg',
+      color = 'B',
       variant,
       size = 'md',
       corner = 'sharp',
@@ -76,7 +76,7 @@ export const Accordion = forwardRef(
     const state = useAccordion({ type, collapsible })
 
     const classNames = cx(`a-c`, {
-      [`u_${color}`]: color,
+      [`C${color}`]: color,
       [`u_f-${size}`]: size,
       'l_f-sm': separate,
       [`u_variant`]: variant,

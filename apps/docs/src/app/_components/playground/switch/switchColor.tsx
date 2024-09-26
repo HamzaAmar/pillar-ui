@@ -3,12 +3,12 @@ import { Switch } from '@pillar-ui/core'
 export const SwitchColor = () => {
   return (
     <>
-      <Switch label="Hello" color="dan" />
-      <Switch label="Hello" color="war" />
-      <Switch label="Hello" color="suc" />
-      <Switch label="Hello" color="pri" />
-      <Switch label="Hello" color="sec" />
-      <Switch label="Hello" color="bg" />
+      <Switch label="Hello" color="d" />
+      <Switch label="Hello" color="w" />
+      <Switch label="Hello" color="s" />
+      <Switch label="Hello" color="p" />
+      <Switch label="Hello" color="se" />
+      <Switch label="Hello" color="b" />
     </>
   )
 }

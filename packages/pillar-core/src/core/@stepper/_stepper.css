@@ -39,21 +39,21 @@
     position: absolute;
     inset-inline-start: 0;
     top: 50%;
-    background: var(--bg-4);
+    background: var(--B4);
     z-index: -1;
   }
 }
 
 .s-t_cnt {
   padding: 0.5rem 1.5rem;
-  background: var(--bg-1);
+  background: var(--B1);
 }
 
 .s-t_btn {
   width: 2.75rem;
   height: 2.75rem;
-  background: var(--bg-4);
-  border: 2px solid var(--bg-6);
+  background: var(--B4);
+  border: 2px solid var(--B6);
   flex: none;
   border-radius: var(--border-rad);
   & svg {
