@@ -8,7 +8,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box key={index} />)
 export const FlexWrap = () => {
   return (
     <>
-      <Flex wrap gap="sm">
+      <Flex wrap gap="4">
         {boxes}
         {boxes}
         {boxes}

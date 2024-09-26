@@ -27,7 +27,7 @@ const FooterItem = ({ href, text, external = false }: FooterItemProps) => {
 const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }) => {
   return (
     <nav className="l_f-sm">
-      <Text transform="capitalize" size="md" weight="medium">
+      <Text transform="capitalize" gap="5" weight="medium">
         {title}
       </Text>
       <ul className="footer-list l_f-xs">
@@ -42,7 +42,7 @@ const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }
 const footer = () => {
   return (
     <footer>
-      <Paper background="b-3" as={Grid} p="lg" gap="sm" grid="repeat(4, minmax(1px, 1fr))" xs="1fr" lg="1fr 1fr">
+      <Paper background="b-3" as={Grid} p="lg" gap="4" grid="repeat(4, minmax(1px, 1fr))" xs="1fr" lg="1fr 1fr">
         <div>
           <Logo width={100} />
           <Text transform="first-letter-only" color="b" low>

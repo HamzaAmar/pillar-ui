@@ -15,7 +15,7 @@ export default meta
 
 export const FilledInputFile = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputFile aria-label="hello" autoFocus variant="filled" />
       <InputFile aria-label="hello" variant="filled" />
       <InputFile aria-label="hello" disabled variant="filled" />
@@ -27,7 +27,7 @@ export const FilledInputFile = () => {
 
 export const OutlineInputFile = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputFile autoFocus />
       <InputFile />
       <InputFile disabled />
@@ -39,7 +39,7 @@ export const OutlineInputFile = () => {
 
 export const BorderedInputFile = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputFile variant="bordered" autoFocus />
       <InputFile variant="bordered" />
       <InputFile variant="bordered" disabled />
@@ -51,7 +51,7 @@ export const BorderedInputFile = () => {
 
 export const CornerInputFile = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputFile corner="sharp" />
       <InputFile corner="xs" />
       <InputFile corner="sm" />
@@ -65,17 +65,17 @@ export const CornerInputFile = () => {
 
 export const SizeInputFile = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputFile size="sm" />
       <InputFile />
-      <InputFile size="lg" />
+      <InputFile gap="6" />
     </Flex>
   )
 }
 
 export const ColorInputFile = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputFile color="p" variant="bordered" />
       <InputFile color="w" variant="bordered" />
       <InputFile color="se" variant="outline" />
@@ -86,7 +86,7 @@ export const ColorInputFile = () => {
 
 export const MultipleFilesInput = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputFile multiple />
     </Flex>
   )

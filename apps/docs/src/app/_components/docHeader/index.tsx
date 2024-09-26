@@ -8,18 +8,18 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
 
   return (
     <Paper className="docs--header" flow="lg" p="sm">
-      <Heading size="2xl">{title} </Heading>
+      <Heading gap="8">{title} </Heading>
       <Text color="b" low size="sm" weight="medium">
         {excerpt}
       </Text>
 
-      <Grid grid="auto minmax(0, 1fr)" sm="1fr" gap="md">
+      <Grid grid="auto minmax(0, 1fr)" sm="1fr" gap="5">
         {type === 'core' && (
           <>
             <Text weight="medium" size="sm" color="b" low>
               Components:
             </Text>
-            <Flex gap="sm" wrap>
+            <Flex gap="4" wrap>
               {items?.map((item) => <Chips key={item}>{item}</Chips>)}
             </Flex>
           </>
@@ -27,14 +27,14 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
         <Text weight="medium" size="sm" color="b" low>
           Type
         </Text>
-        <Flex gap="sm">
+        <Flex gap="4">
           <Chips>{typeName}</Chips>
         </Flex>
         <>
           <Text weight="medium" size="sm" color="b" low>
             import
           </Text>
-          <Flex gap="sm">
+          <Flex gap="4">
             <code>
               import <b>{`{ ${title} }`}</b> from {`'@pillar-ui/${type}'`}
             </code>
@@ -42,10 +42,10 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
         </>
       </Grid>
 
-      <Flex gap="sm" wrap>
+      <Flex gap="4" wrap>
         <Button
           as="a"
-          size="xs"
+          gap="3"
           color="b"
           target="_blank"
           href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
@@ -60,7 +60,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
           variant="soft"
           color="b"
           icon={<Github strokeWidth={2} />}
-          size="xs"
+          gap="3"
         >
           Issues
         </Button>
@@ -71,7 +71,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
           variant="soft"
           color="b"
           icon={<Github strokeWidth={2} />}
-          size="xs"
+          gap="3"
         >
           discussions
         </Button>

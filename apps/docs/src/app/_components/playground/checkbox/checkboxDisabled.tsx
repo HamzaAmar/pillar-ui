@@ -3,7 +3,7 @@ import { Checkbox, Flex } from '@pillar-ui/core'
 export const CheckboxDisabled = () => {
   return (
     <>
-      <Flex gap="sm" items="center">
+      <Flex gap="4" items="center">
         <Checkbox disabled name="hello" label="Hello" color="d" />
         <Checkbox disabled name="hello" label="Hello" color="s" />
         <Checkbox disabled name="hello" label="Hello" color="w" />
@@ -11,7 +11,7 @@ export const CheckboxDisabled = () => {
         <Checkbox disabled name="hello" label="Hello" color="se" />
         <Checkbox disabled name="hello" label="Hello" color="b" />
       </Flex>
-      <Flex gap="sm" items="center">
+      <Flex gap="4" items="center">
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="d" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="s" />
         <Checkbox disabled defaultChecked name="hello" label="Hello" color="w" />

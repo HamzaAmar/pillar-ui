@@ -9,14 +9,14 @@ const breadcrumbsItems = [
 export const BreadcrumbSize = () => {
   return (
     <>
-      <Breadcrumb size="2xs" separator="-">
+      <Breadcrumb gap="2" separator="-">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}
           </BreadcrumbItem>
         ))}
       </Breadcrumb>
-      <Breadcrumb size="xs" separator="-">
+      <Breadcrumb gap="3" separator="-">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}
@@ -30,28 +30,28 @@ export const BreadcrumbSize = () => {
           </BreadcrumbItem>
         ))}
       </Breadcrumb>
-      <Breadcrumb size="md" separator="-">
+      <Breadcrumb gap="5" separator="-">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}
           </BreadcrumbItem>
         ))}
       </Breadcrumb>
-      <Breadcrumb size="lg" separator="-">
+      <Breadcrumb gap="6" separator="-">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}
           </BreadcrumbItem>
         ))}
       </Breadcrumb>
-      <Breadcrumb size="xl" separator="-">
+      <Breadcrumb gap="7" separator="-">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}
           </BreadcrumbItem>
         ))}
       </Breadcrumb>
-      <Breadcrumb size="2xl" separator="-">
+      <Breadcrumb gap="8" separator="-">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}

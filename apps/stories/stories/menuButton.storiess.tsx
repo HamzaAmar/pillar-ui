@@ -21,21 +21,21 @@ export function MenuButtonBase(props: any) {
 
 export const MenuButtonSize = () => {
   return (
-    <Flex gap="lg">
-      <MenuButtonBase size="2xs" />
-      <MenuButtonBase size="xs" />
+    <Flex gap="6">
+      <MenuButtonBase gap="2" />
+      <MenuButtonBase gap="3" />
       <MenuButtonBase size="sm" />
-      <MenuButtonBase size="md" />
-      <MenuButtonBase size="lg" />
-      <MenuButtonBase size="xl" />
-      <MenuButtonBase size="2xl" />
+      <MenuButtonBase gap="5" />
+      <MenuButtonBase gap="6" />
+      <MenuButtonBase gap="7" />
+      <MenuButtonBase gap="8" />
     </Flex>
   )
 }
 
 export const MenuButtonCorner = () => {
   return (
-    <Flex gap="lg">
+    <Flex gap="6">
       <MenuButtonBase corner="2xs" />
       <MenuButtonBase corner="xs" />
       <MenuButtonBase corner="sm" />
@@ -50,7 +50,7 @@ export const MenuButtonCorner = () => {
 export const MenuButtonItemCount = () => {
   const itemCounts = [1, 3, 5, 7]
   return (
-    <Flex gap="lg" direction="column" align="start">
+    <Flex gap="6" direction="column" align="start">
       {itemCounts.map((count) => (
         <MenuButtonBase
           key={count}

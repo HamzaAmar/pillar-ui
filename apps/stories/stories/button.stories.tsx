@@ -17,7 +17,7 @@ export const Playground: StoryObj<typeof Button> = {}
 
 export function HtmlButton() {
   return (
-    <Flex gap="sm">
+    <Flex gap="4">
       <button>Green</button>
       <button>Green</button>
       <button>Green</button>
@@ -32,7 +32,7 @@ export function HtmlButton() {
 
 export function ButtonsColors() {
   return (
-    <Flex gap="sm">
+    <Flex gap="4">
       <Button color="s">Green</Button>
       <Button color="w">Orange</Button>
       <Button color="d">Red</Button>
@@ -45,7 +45,7 @@ export function ButtonsColors() {
 
 export function ButtonsAsInline() {
   return (
-    <Flex gap="sm">
+    <Flex gap="4">
       <Button as="span">Inline Button</Button>
       <Button as="b">Inline Button</Button>
       <Button icon={<X />} as="a" href="#">
@@ -65,10 +65,10 @@ export function ButtonsIcons() {
     <div className="l_f-xl">
       {SIZES.map((size) => (
         <div key={size}>
-          <Text weight="bold" size="2xl">
+          <Text weight="bold" gap="8">
             {size} Button
           </Text>
-          <Flex gap="sm" wrap>
+          <Flex gap="4" wrap>
             <Button size={size}>No Icon Button</Button>
             <Button size={size} icon={<X />}>
               Icon Button
@@ -99,7 +99,7 @@ export function ButtonsTransforms() {
   return (
     <div>
       <h1>with Props</h1>
-      <Flex gap="sm" wrap>
+      <Flex gap="4" wrap>
         <Button transform="uppercase" color="s">
           Green
         </Button>
@@ -111,25 +111,25 @@ export function ButtonsTransforms() {
         </Button>
       </Flex>
       <h1>with Global Capitalize</h1>
-      <Flex gap="sm" style={{ '--button-transform': 'capitalize' } as CSSProperties}>
+      <Flex gap="4" style={{ '--button-transform': 'capitalize' } as CSSProperties}>
         <Button color="s">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
       </Flex>
       <h1>with Global lowercase</h1>
-      <Flex gap="sm" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
+      <Flex gap="4" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
         <Button color="s">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
       </Flex>
       <h1>with Global uppercase</h1>
-      <Flex gap="sm" style={{ '--button-transform': 'uppercase' } as CSSProperties}>
+      <Flex gap="4" style={{ '--button-transform': 'uppercase' } as CSSProperties}>
         <Button color="s">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
       </Flex>
       <h1>Default</h1>
-      <Flex gap="sm">
+      <Flex gap="4">
         <Button color="s">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
@@ -142,7 +142,7 @@ export function ButtonsVariants() {
   return (
     <div className="l_f-md">
       {VARIANTS.map((variant) => (
-        <Flex key={variant} gap="sm">
+        <Flex key={variant} gap="4">
           <Button color="s" variant={variant}>
             Green
           </Button>
@@ -171,7 +171,7 @@ export function ButtonsCorners() {
   return (
     <div className="l_f-md">
       <h1>Regular</h1>
-      <Flex gap="sm" wrap>
+      <Flex gap="4" wrap>
         <Button corner="sharp" color="s">
           Green
         </Button>
@@ -212,7 +212,7 @@ export function ButtonsCorners() {
       </Flex>
       <h1>Specify the button Corner circle</h1>
 
-      <Flex gap="sm" style={{ '--button-rad': '1000px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--button-rad': '1000px' } as CSSProperties}>
         <Button color="s">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
@@ -223,7 +223,7 @@ export function ButtonsCorners() {
 
       <h1>Specify the button Corner Medium</h1>
 
-      <Flex gap="sm" style={{ '--button-rad': 'var(--rad-md)' } as CSSProperties}>
+      <Flex gap="4" style={{ '--button-rad': 'var(--rad-md)' } as CSSProperties}>
         <Button color="s">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
@@ -237,23 +237,23 @@ export function ButtonsCorners() {
 
 export function ButtonSizes() {
   return (
-    <Flex gap="sm" items="center" wrap>
+    <Flex gap="4" items="center" wrap>
       <Button size="3xs" color="s">
         Green
       </Button>
-      <Button size="2xs" color="w">
+      <Button gap="2" color="w">
         Orange
       </Button>
-      <Button size="xs" color="d">
+      <Button gap="3" color="d">
         Red
       </Button>
       <Button size="sm" color="se">
         Secondary
       </Button>
-      <Button size="md" color="b">
+      <Button gap="5" color="b">
         bg
       </Button>
-      <Button size="lg" color="p">
+      <Button gap="6" color="p">
         Primary
       </Button>
     </Flex>
@@ -262,32 +262,32 @@ export function ButtonSizes() {
 
 export function ButtonsFluid() {
   return (
-    <Flex gap="md" direction="column">
+    <Flex gap="5" direction="column">
       <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xs" color="s">
         Green
       </Button>
-      <Button fluid icon={<ThumbDown />} size="2xs" color="w">
+      <Button fluid icon={<ThumbDown />} gap="2" color="w">
         Orange
       </Button>
-      <Button fluid icon={<Plus />} iconPosition="end" size="xs" color="d">
+      <Button fluid icon={<Plus />} iconPosition="end" gap="3" color="d">
         Red
       </Button>
       <Button fluid icon={<Github />} size="sm" color="se">
         Secondary
       </Button>
-      <Button fluid icon={<Eye />} iconPosition="end" size="md" color="b">
+      <Button fluid icon={<Eye />} iconPosition="end" gap="5" color="b">
         bg
       </Button>
-      <Button fluid icon={<ThumbUp />} size="lg" color="p">
+      <Button fluid icon={<ThumbUp />} gap="6" color="p">
         Primary
       </Button>
-      <Button fluid icon={<ThumbUp />} iconPosition="end" size="xl" color="s">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" gap="7" color="s">
         Purple
       </Button>
-      <Button fluid icon={<ThumbUp />} size="2xl" color="se">
+      <Button fluid icon={<ThumbUp />} gap="8" color="se">
         Brown
       </Button>
-      <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xl" color="se">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" gap="9" color="se">
         Brown
       </Button>
     </Flex>
@@ -296,7 +296,7 @@ export function ButtonsFluid() {
 
 export function ButtonsState() {
   return (
-    <Flex items="center" gap="xs">
+    <Flex items="center" gap="3">
       <Button state="idle" color="s">
         Idle
       </Button>
@@ -312,32 +312,32 @@ export function ButtonsState() {
 
 export function ButtonLoadingState() {
   return (
-    <Flex gap="sm" items="center" wrap>
+    <Flex gap="4" items="center" wrap>
       <Button state="loading" size="3xs" color="s">
         Green
       </Button>
-      <Button state="loading" size="2xs" color="w">
+      <Button state="loading" gap="2" color="w">
         Orange
       </Button>
-      <Button state="loading" size="xs" color="d">
+      <Button state="loading" gap="3" color="d">
         Red
       </Button>
       <Button state="loading" size="sm" color="se">
         Secondary
       </Button>
-      <Button state="loading" size="md" color="b">
+      <Button state="loading" gap="5" color="b">
         bg
       </Button>
-      <Button state="loading" size="lg" color="p">
+      <Button state="loading" gap="6" color="p">
         Primary
       </Button>
-      <Button state="loading" size="xl" color="s">
+      <Button state="loading" gap="7" color="s">
         Purple
       </Button>
-      <Button state="loading" size="2xl" color="se">
+      <Button state="loading" gap="8" color="se">
         Brown
       </Button>
-      <Button state="loading" size="3xl" color="se">
+      <Button state="loading" gap="9" color="se">
         Brown
       </Button>
     </Flex>
@@ -346,7 +346,7 @@ export function ButtonLoadingState() {
 
 export function ButtonsCustomStyle() {
   return (
-    <Flex items="center" gap="xs">
+    <Flex items="center" gap="3">
       <Button style={{ background: 'orange' }} state="idle" color="s">
         Hello world
       </Button>
@@ -359,7 +359,7 @@ export function ButtonsCustomStyle() {
 
 export function ButtonsLength() {
   return (
-    <Flex items="center" gap="xs" wrap>
+    <Flex items="center" gap="3" wrap>
       <Button state="idle" color="s">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam asperiores a vitae expedita nostrum
         perspiciatis est excepturi, eligendi facere vel quis, et in dolores eos voluptates libero, adipisci
@@ -375,7 +375,7 @@ export function ButtonsLength() {
 export function ButtonCornerDefaults() {
   return (
     <div className="l_f-sm">
-      <Flex gap="sm">
+      <Flex gap="4">
         <Paper corner="sharp">
           <Button color="s">Green</Button>
         </Paper>
@@ -391,7 +391,7 @@ export function ButtonCornerDefaults() {
         <Button color="s">Green</Button>
       </Flex>
 
-      <Flex gap="sm" style={{ '--button-rad': '5px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--button-rad': '5px' } as CSSProperties}>
         <Paper corner="sharp">
           <Button color="s">Green</Button>
         </Paper>
@@ -406,7 +406,7 @@ export function ButtonCornerDefaults() {
         </Paper>
         <Button color="s">Green</Button>
       </Flex>
-      <Flex gap="sm" style={{ '--button-rad': '10px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--button-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
           <Button color="s">Green</Button>
         </Paper>
@@ -422,7 +422,7 @@ export function ButtonCornerDefaults() {
         <Button color="s">Green</Button>
       </Flex>
 
-      <Flex gap="sm" style={{ '--button-rad': '20px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--button-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <Button color="s">Green</Button>
         </Paper>
@@ -444,7 +444,7 @@ export function ButtonCornerDefaults() {
 export function ButtonTransformDefaults() {
   return (
     <div className="l_f-sm">
-      <Flex gap="sm" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
+      <Flex gap="4" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
         <Button transform="uppercase" color="s">
           green
         </Button>
@@ -463,26 +463,26 @@ export function ButtonTransformDefaults() {
 export function ButtonSizeDefaults() {
   return (
     <div className="l_f-sm">
-      <Flex gap="sm" style={{ '--button-size': '8px' } as CSSProperties}>
-        <Button size="2xs" color="s">
+      <Flex gap="4" style={{ '--button-size': '8px' } as CSSProperties}>
+        <Button gap="2" color="s">
           green
         </Button>
-        <Button size="xs" color="s">
+        <Button gap="3" color="s">
           green
         </Button>
         <Button size="sm" color="s">
           green
         </Button>
-        <Button size="md" color="s">
+        <Button gap="5" color="s">
           green
         </Button>
-        <Button size="lg" color="s">
+        <Button gap="6" color="s">
           green
         </Button>
-        <Button size="xl" color="s">
+        <Button gap="7" color="s">
           green
         </Button>
-        <Button size="2xl" color="s">
+        <Button gap="8" color="s">
           green
         </Button>
         <Button color="s">Green</Button>

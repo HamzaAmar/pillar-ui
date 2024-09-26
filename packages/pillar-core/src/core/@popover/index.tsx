@@ -78,7 +78,7 @@ export function Popover({
   align = 'center',
   width = 'full',
   onClose,
-  corner = 'sm',
+  corner = '2',
   offset = 5,
 }: PopoverProps) {
   const [popoverStyle, setPopoverStyle] = useState({})

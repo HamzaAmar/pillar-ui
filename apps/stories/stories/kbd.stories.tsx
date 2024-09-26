@@ -14,7 +14,7 @@ export default meta
 
 export const KbdColors = () => {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Kbd title="Esc" />
       <Kbd title="Esc" color="d" />
       <Kbd title="Esc" color="s" />
@@ -32,7 +32,7 @@ export const KbdVariants = () => {
   return (
     <div className="l_f-md">
       {Variants.map((variant) => (
-        <Flex key={variant} gap="sm">
+        <Flex key={variant} gap="4">
           <Kbd title="Esc" variant={variant} />
           <Kbd title="Esc" variant={variant} color="d" />
           <Kbd title="Esc" variant={variant} color="s" />
@@ -48,22 +48,22 @@ export const KbdVariants = () => {
 
 export const KbdSizes = () => {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Kbd title="Esc" />
-      <Kbd title="Esc" size="2xs" />
-      <Kbd title="Esc" size="xs" />
+      <Kbd title="Esc" gap="2" />
+      <Kbd title="Esc" gap="3" />
       <Kbd title="Esc" size="sm" />
-      <Kbd title="Esc" size="md" />
-      <Kbd title="Esc" size="lg" />
-      <Kbd title="Esc" size="xl" />
-      <Kbd title="Esc" size="2xl" />
+      <Kbd title="Esc" gap="5" />
+      <Kbd title="Esc" gap="6" />
+      <Kbd title="Esc" gap="7" />
+      <Kbd title="Esc" gap="8" />
     </Flex>
   )
 }
 
 export const KbdCorners = () => {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Kbd title="Esc" corner="sharp" />
       <Kbd title="Esc" />
       <Kbd title="Esc" corner="xs" />
@@ -77,7 +77,7 @@ export const KbdCorners = () => {
 
 export const KbdInFlex = () => {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Kbd title="Esc" corner="sharp" />
       <Kbd title="Esc" />
       <Kbd title="Esc" corner="xs" />

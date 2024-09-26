@@ -16,24 +16,24 @@ const Items = (props: Omit<TimelineItemProps, 'children'>) => {
   return (
     <>
       <TimelineItem {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
       </TimelineItem>
       <TimelineItem {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
       </TimelineItem>
       <TimelineItem {...props}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
@@ -45,7 +45,7 @@ const Items = (props: Omit<TimelineItemProps, 'children'>) => {
 
 export const TimelineColor = () => {
   return (
-    <Flex gap="sm">
+    <Flex gap="4">
       <Timeline color="b">
         <Items />
       </Timeline>
@@ -71,7 +71,7 @@ export const TimelineColor = () => {
 
 export const TimelineCorner = () => {
   return (
-    <Grid grid="1fr 1fr 1fr" className="md_grid-two sm_grid-one" gap="lg">
+    <Grid grid="1fr 1fr 1fr" className="md_grid-two sm_grid-one" gap="6">
       <Timeline corner="sharp">
         <Items />
       </Timeline>
@@ -99,26 +99,26 @@ export const TimelineCorner = () => {
 
 export const TimelineSize = () => {
   return (
-    <Flex gap="sm">
-      <Timeline size="2xs">
+    <Flex gap="4">
+      <Timeline gap="2">
         <Items />
       </Timeline>
-      <Timeline size="xs">
+      <Timeline gap="3">
         <Items />
       </Timeline>
       <Timeline size="sm">
         <Items />
       </Timeline>
-      <Timeline size="md">
+      <Timeline gap="5">
         <Items />
       </Timeline>
-      <Timeline size="lg">
+      <Timeline gap="6">
         <Items />
       </Timeline>
-      <Timeline size="xl">
+      <Timeline gap="7">
         <Items />
       </Timeline>
-      <Timeline size="2xl">
+      <Timeline gap="8">
         <Items />
       </Timeline>
     </Flex>
@@ -127,7 +127,7 @@ export const TimelineSize = () => {
 
 export const TimelineVariant = () => {
   return (
-    <Flex gap="sm">
+    <Flex gap="4">
       <Timeline variant="solid">
         <Items />
       </Timeline>
@@ -139,32 +139,32 @@ export const TimelineVariant = () => {
       </Timeline>
       <Timeline variant="dashed">
         <TimelineItem variant="solid">
-          <Heading size="xs">Hello</Heading>
-          <Text size="xs">
+          <Heading gap="3">Hello</Heading>
+          <Text gap="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
         </TimelineItem>
         <TimelineItem variant="dotted">
-          <Heading size="xs">Hello</Heading>
-          <Text size="xs">
+          <Heading gap="3">Hello</Heading>
+          <Text gap="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
         </TimelineItem>
         <TimelineItem>
-          <Heading size="xs">Hello</Heading>
-          <Text size="xs">
+          <Heading gap="3">Hello</Heading>
+          <Text gap="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
         </TimelineItem>
         <TimelineItem>
-          <Heading size="xs">Hello</Heading>
-          <Text size="xs">
+          <Heading gap="3">Hello</Heading>
+          <Text gap="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
@@ -179,34 +179,34 @@ export const TimelineCustomBullet = () => {
   return (
     <Timeline>
       <TimelineItem bullet={<Cross />}>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
       </TimelineItem>
       <TimelineItem
-        bullet={<Avatar variant="image" size="xs" image="https://picsum.photos/id/152/40/40" title="hello" />}
+        bullet={<Avatar variant="image" gap="3" image="https://picsum.photos/id/152/40/40" title="hello" />}
       >
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
       </TimelineItem>
       <TimelineItem>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
       </TimelineItem>
       <TimelineItem>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.

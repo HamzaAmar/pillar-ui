@@ -11,7 +11,7 @@ import type {
 const circle = { cx: 50, cy: 50, r: 45 }
 
 export const ProgressCircle = ({
-  size = 'md',
+  size = '5',
   min = 0,
   max = 100,
   value,
@@ -43,7 +43,7 @@ export const ProgressBar = ({
   showValue,
   value,
   color = 'p',
-  size = 'md',
+  size = '5',
   label,
   min = 0,
   max = 100,
@@ -75,7 +75,7 @@ export const ProgressBarStackItem = ({ color = 'p', value }: ProgressBarStackIte
   return <div className={`pr-s_itm C${color}`} style={{ width: `${value}%` }} />
 }
 
-export const ProgressBarStack = ({ size = 'sm', children }: ProgressBarStackProps) => {
+export const ProgressBarStack = ({ size = '4', children }: ProgressBarStackProps) => {
   // TODO: Check IF you pass String If it can make an error
   const _children = Children.map(children, (child) => {
     if (!isValidElement(child)) return

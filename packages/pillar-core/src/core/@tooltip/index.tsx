@@ -16,7 +16,7 @@ const [TooltipProvider, useTooltipContext] = context<TooltipContext>({
   required: true,
 })
 
-export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, size = 'sm', ...rest }, forwardedRef) => {
+export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, size = '4', ...rest }, forwardedRef) => {
   const { value, setFalse, setTrue, toggle, setValue } = useBooleanState()
   const triggerRef = useRef<HTMLButtonElement>(null)
   const id = useId()

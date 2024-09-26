@@ -176,14 +176,14 @@ export function BreadcrumbIcons() {
 export function BreadcrumbSize() {
   return (
     <div className="l_f-md">
-      <Breadcrumb size="2xs" separator="-">
+      <Breadcrumb gap="2" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
-      <Breadcrumb size="xs" separator="-">
+      <Breadcrumb gap="3" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -206,7 +206,7 @@ export function BreadcrumbSize() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb size="md" separator="/">
+      <Breadcrumb gap="5" separator="/">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -214,21 +214,21 @@ export function BreadcrumbSize() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb size="lg">
+      <Breadcrumb gap="6">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
-      <Breadcrumb size="xl">
+      <Breadcrumb gap="7">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
-      <Breadcrumb size="2xl">
+      <Breadcrumb gap="8">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>

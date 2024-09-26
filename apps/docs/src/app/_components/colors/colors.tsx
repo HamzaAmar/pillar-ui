@@ -13,10 +13,10 @@ function ColorItem({ item, value }: ColorItem) {
   const { light, dark } = value
 
   return (
-    <Grid as={Paper} border items="center" grid="4rem 1fr auto" gap="sm">
+    <Grid as={Paper} border items="center" grid="4rem 1fr auto" gap="4">
       <Text size="sm">{item} </Text>
       <div className="l_f-sm">
-        <Grid justify="center" grid="repeat(12, 1fr) x auto 30px 30px" gap="xs">
+        <Grid justify="center" grid="repeat(12, 1fr) x auto 30px 30px" gap="3">
           {Array.from({ length: 12 }, (_, index) => (
             <Text align="center" size="sm" key={`${item}-${index + 1}`} weight="medium" color="b" low>
               {index + 1}

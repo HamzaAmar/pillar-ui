@@ -39,7 +39,7 @@ export const Table = ({
   color = 'b',
   variant = 'default',
   showBorder,
-  size = 'md',
+  size = '5',
   children,
 
   ...rest

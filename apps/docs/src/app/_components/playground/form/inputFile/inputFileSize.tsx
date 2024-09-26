@@ -3,11 +3,11 @@ import { InputFile } from '@pillar-ui/core'
 export const InputFileSize = () => {
   return (
     <>
-      <InputFile size="xs" />
+      <InputFile gap="3" />
       <InputFile size="sm" />
       <InputFile />
-      <InputFile size="lg" />
-      <InputFile size="xl" />
+      <InputFile gap="6" />
+      <InputFile gap="7" />
     </>
   )
 }

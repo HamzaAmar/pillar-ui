@@ -5,24 +5,24 @@ const TimelineBase = (props: Omit<TimelineProps, 'children'>) => {
   return (
     <Timeline {...props}>
       <TimelineItem>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
       </TimelineItem>
       <TimelineItem>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
       </TimelineItem>
       <TimelineItem>
-        <Heading size="xs">Hello</Heading>
-        <Text size="xs">
+        <Heading gap="3">Hello</Heading>
+        <Text gap="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.

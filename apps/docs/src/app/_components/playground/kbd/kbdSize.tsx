@@ -4,13 +4,13 @@ export const KbdSize = () => {
   return (
     <>
       <Kbd title="Esc" />
-      <Kbd title="Esc" size="2xs" />
-      <Kbd title="Esc" size="xs" />
+      <Kbd title="Esc" gap="2" />
+      <Kbd title="Esc" gap="3" />
       <Kbd title="Esc" size="sm" />
-      <Kbd title="Esc" size="md" />
-      <Kbd title="Esc" size="lg" />
-      <Kbd title="Esc" size="xl" />
-      <Kbd title="Esc" size="2xl" />
+      <Kbd title="Esc" gap="5" />
+      <Kbd title="Esc" gap="6" />
+      <Kbd title="Esc" gap="7" />
+      <Kbd title="Esc" gap="8" />
     </>
   )
 }

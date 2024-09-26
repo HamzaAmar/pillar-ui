@@ -11,7 +11,7 @@ export default meta
 
 export const CodeColors = () => {
   return (
-    <Flex gap="sm" direction="column" justify="center">
+    <Flex gap="4" direction="column" justify="center">
       <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="s">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="w">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -24,21 +24,21 @@ export const CodeColors = () => {
 
 export const CodeSizes = () => {
   return (
-    <Flex gap="sm" direction="column" justify="center">
-      <Code size="2xs">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="xs">{`console.log('Hello world Every thing is OK')`}</Code>
+    <Flex gap="4" direction="column" justify="center">
+      <Code gap="2">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code gap="3">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="sm">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="md">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="lg">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="xl">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="2xl">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code gap="5">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code gap="6">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code gap="7">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code gap="8">{`console.log('Hello world Every thing is OK')`}</Code>
     </Flex>
   )
 }
 
 export const CodeCorners = () => {
   return (
-    <Flex gap="sm" direction="column" justify="center">
+    <Flex gap="4" direction="column" justify="center">
       <Code corner="sharp">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code corner="sm">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code corner="md">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -50,7 +50,7 @@ export const CodeCorners = () => {
 
 export const CodeLong = () => {
   return (
-    <Flex gap="sm" direction="column" justify="center">
+    <Flex gap="4" direction="column" justify="center">
       <Code corner="sharp">
         {`<div>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione praesentium minima, commodi architecto
@@ -107,7 +107,7 @@ export const CodeLong = () => {
 export function ButtonCornerDefaults() {
   return (
     <div className="l_f-sm">
-      <Flex gap="sm" direction="column">
+      <Flex gap="4" direction="column">
         <Paper corner="sharp">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
@@ -123,7 +123,7 @@ export function ButtonCornerDefaults() {
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
 
-      <Flex gap="sm" direction="column" style={{ '--code-rad': '1px' } as CSSProperties}>
+      <Flex gap="4" direction="column" style={{ '--code-rad': '1px' } as CSSProperties}>
         <Paper corner="sharp">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
@@ -138,7 +138,7 @@ export function ButtonCornerDefaults() {
         </Paper>
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
-      <Flex gap="sm" direction="column" style={{ '--code-rad': '10px' } as CSSProperties}>
+      <Flex gap="4" direction="column" style={{ '--code-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
@@ -154,7 +154,7 @@ export function ButtonCornerDefaults() {
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
 
-      <Flex gap="sm" direction="column" style={{ '--code-rad': '20px' } as CSSProperties}>
+      <Flex gap="4" direction="column" style={{ '--code-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>

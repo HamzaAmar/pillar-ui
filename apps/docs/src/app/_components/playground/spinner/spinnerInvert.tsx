@@ -3,7 +3,7 @@ import { Flex, Spinner } from '@pillar-ui/core'
 export const SpinnerInvert = () => {
   return (
     <>
-      <Flex gap="sm" items="center">
+      <Flex gap="4" items="center">
         <Spinner color="s" />
         <Spinner color="d" />
         <Spinner color="w" />
@@ -11,7 +11,7 @@ export const SpinnerInvert = () => {
         <Spinner color="se" />
         <Spinner color="b" />
       </Flex>
-      <Flex gap="sm" items="center">
+      <Flex gap="4" items="center">
         <Spinner invert color="s" />
         <Spinner invert color="d" />
         <Spinner invert color="w" />

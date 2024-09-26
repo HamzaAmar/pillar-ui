@@ -4,13 +4,13 @@ export const AvatarSize = () => {
   return (
     <>
       <Avatar image="https://i.pravatar.cc/120?img=11" size="3xs" />
-      <Avatar image="https://i.pravatar.cc/120?img=12" size="2xs" />
-      <Avatar image="https://i.pravatar.cc/120?img=13" size="xs" />
-      <Avatar image="https://i.pravatar.cc/120?img=14" size="md" />
-      <Avatar image="https://i.pravatar.cc/120?img=15" size="lg" />
-      <Avatar image="https://i.pravatar.cc/120?img=16" size="xl" />
-      <Avatar image="https://i.pravatar.cc/120?img=17" size="2xl" />
-      <Avatar image="https://i.pravatar.cc/120?img=18" size="3xl" />
+      <Avatar image="https://i.pravatar.cc/120?img=12" gap="2" />
+      <Avatar image="https://i.pravatar.cc/120?img=13" gap="3" />
+      <Avatar image="https://i.pravatar.cc/120?img=14" gap="5" />
+      <Avatar image="https://i.pravatar.cc/120?img=15" gap="6" />
+      <Avatar image="https://i.pravatar.cc/120?img=16" gap="7" />
+      <Avatar image="https://i.pravatar.cc/120?img=17" gap="8" />
+      <Avatar image="https://i.pravatar.cc/120?img=18" gap="9" />
     </>
   )
 }

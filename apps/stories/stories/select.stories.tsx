@@ -14,7 +14,7 @@ export default meta
 
 export const FilledSelect = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Select aria-label="hello" autoFocus variant="filled">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -37,7 +37,7 @@ export const FilledSelect = () => {
 
 export const OutlineSelect = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Select autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -60,7 +60,7 @@ export const OutlineSelect = () => {
 
 export const BorderedSelect = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Select variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -83,7 +83,7 @@ export const BorderedSelect = () => {
 
 export const CornerSelect = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Select corner="sharp">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -118,7 +118,7 @@ export const CornerSelect = () => {
 
 export const SizeSelect = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Select size="sm">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -127,7 +127,7 @@ export const SizeSelect = () => {
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select size="lg">
+      <Select gap="6">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
@@ -137,7 +137,7 @@ export const SizeSelect = () => {
 
 export const ColorSelect = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Select color="p" variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>

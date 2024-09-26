@@ -14,23 +14,23 @@ export default meta
 
 export function SwitchSizes() {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Switch label="Hello" size="3xs" />
-      <Switch label="Hello" size="2xs" />
-      <Switch label="Hello" size="xs" />
+      <Switch label="Hello" gap="2" />
+      <Switch label="Hello" gap="3" />
       <Switch label="Hello" size="sm" />
-      <Switch label="Hello" size="md" />
-      <Switch label="Hello" size="lg" />
-      <Switch label="Hello" size="xl" />
-      <Switch label="Hello" size="2xl" />
-      <Switch label="Hello" size="3xl" />
+      <Switch label="Hello" gap="5" />
+      <Switch label="Hello" gap="6" />
+      <Switch label="Hello" gap="7" />
+      <Switch label="Hello" gap="8" />
+      <Switch label="Hello" gap="9" />
     </Flex>
   )
 }
 
 export function SwitchColors() {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Switch label="Hello" color="d" />
       <Switch label="Hello" color="w" />
       <Switch label="Hello" color="s" />
@@ -43,7 +43,7 @@ export function SwitchColors() {
 
 export function SwitchColorsDefault() {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Switch label="Hello" defaultPressed color="d" />
       <Switch label="Hello" defaultPressed color="w" />
       <Switch label="Hello" defaultPressed color="s" />
@@ -58,7 +58,7 @@ export function SwitchCorners() {
   return (
     <div className="l_f-md">
       <Heading>With Props</Heading>
-      <Flex gap="sm" items="center">
+      <Flex gap="4" items="center">
         <Switch label="Hello" corner="sharp" />
         <Switch label="Hello" corner="xs" />
         <Switch label="Hello" corner="sm" />
@@ -68,7 +68,7 @@ export function SwitchCorners() {
         <Switch label="Hello" corner="full" />
       </Flex>
       <Heading>With Border Radius .5rem</Heading>
-      <Flex gap="sm" items="center" style={{ '--switch-rad': '.5rem' } as CSSProperties}>
+      <Flex gap="4" items="center" style={{ '--switch-rad': '.5rem' } as CSSProperties}>
         <Switch label="Hello" />
         <Switch label="Hello" />
         <Switch label="Hello" />
@@ -79,7 +79,7 @@ export function SwitchCorners() {
       </Flex>
 
       <Heading>With Border Radius 1rem</Heading>
-      <Flex gap="sm" items="center" style={{ '--switch-rad': '2rem' } as CSSProperties}>
+      <Flex gap="4" items="center" style={{ '--switch-rad': '2rem' } as CSSProperties}>
         <Switch label="Hello" />
         <Switch label="Hello" />
         <Switch label="Hello" />
@@ -89,7 +89,7 @@ export function SwitchCorners() {
         <Switch label="Hello" />
       </Flex>
       <Heading>With Border Radius sharp</Heading>
-      <Flex gap="sm" items="center" style={{ '--switch-rad': 0 } as CSSProperties}>
+      <Flex gap="4" items="center" style={{ '--switch-rad': 0 } as CSSProperties}>
         <Switch label="Hello" />
         <Switch label="Hello" />
         <Switch label="Hello" />
@@ -104,7 +104,7 @@ export function SwitchCorners() {
 
 export function SwitchStates() {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Switch label="Hello" disabled />
       <Switch label="Hello" disabled defaultPressed />
       <Switch label="Hello" disabled />
@@ -120,7 +120,7 @@ export const SwitchControlled = () => {
     setPressed((pressed) => !pressed)
   }
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Button onClick={onPressedChange}>{pressed ? 'Pressed' : 'Unpressed'} The Switch</Button>
       <Switch color="d" label="hello" pressed={pressed} onPressedChange={onPressedChange} />
     </Flex>

@@ -4,17 +4,17 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 
 export function Accessible() {
   return (
-    <Flex direction="column" justify="center" className="section" gap="2xl">
+    <Flex direction="column" justify="center" className="section" gap="8">
       <SectionHeading
         subheading="Pillar UI The Intuitive React UI Library"
         heading="For Building Accessible Applications Effortlessly"
       />
-      <Grid gap="md" grid="1fr 1fr 1fr" lg="1fr 1fr" sm="1fr">
+      <Grid gap="5" grid="1fr 1fr 1fr" lg="1fr 1fr" sm="1fr">
         {ACCESSIBILITY.map(({ id, title, description, icon }) => (
           <Paper className="article--item" key={id} flow="2xs">
-            <Flex gap="sm" items="center">
+            <Flex gap="4" items="center">
               <div className="article--icon-container u_center">{icon}</div>
-              <Heading as="h3" size="lg">
+              <Heading as="h3" gap="6">
                 {title}
               </Heading>
             </Flex>

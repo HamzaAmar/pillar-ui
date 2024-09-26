@@ -18,7 +18,7 @@ export const AvatarGroup = forwardRef(
   (
     {
       limit,
-      size = 'md',
+      size = '5',
       layout = 'stack',
       variant = 'soft',
       color = 'p',

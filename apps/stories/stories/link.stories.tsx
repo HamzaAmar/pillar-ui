@@ -18,28 +18,28 @@ export function LinkSizes() {
       <Link href="#" size="3xs">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="2xs">
+      <Link href="#" gap="2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="xs">
+      <Link href="#" gap="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
       <Link href="#" size="sm">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="md">
+      <Link href="#" gap="5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="lg">
+      <Link href="#" gap="6">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="xl">
+      <Link href="#" gap="7">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="2xl">
+      <Link href="#" gap="8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl">
+      <Link href="#" gap="9">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
     </div>
@@ -80,24 +80,24 @@ export function LinkWeights() {
 export function LinkTruncates() {
   return (
     <div className="l_f-md">
-      <Link href="#" size="3xl" truncate="1">
+      <Link href="#" gap="9" truncate="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl" truncate="2">
+      <Link href="#" gap="9" truncate="2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl" truncate="3">
+      <Link href="#" gap="9" truncate="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="3xl" truncate="4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </Link>
-
-      <Link href="#" size="3xl" truncate="5">
+      <Link href="#" gap="9" truncate="4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
 
-      <Link href="#" size="3xl">
+      <Link href="#" gap="9" truncate="5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </Link>
+
+      <Link href="#" gap="9">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
     </div>

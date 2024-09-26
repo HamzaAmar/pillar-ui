@@ -16,11 +16,11 @@ export const BlockquoteSize = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
-      <Blockquote size="2xs">
+      <Blockquote gap="2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
-      <Blockquote size="xs">
+      <Blockquote gap="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
@@ -28,19 +28,19 @@ export const BlockquoteSize = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
-      <Blockquote size="md">
+      <Blockquote gap="5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
-      <Blockquote size="lg">
+      <Blockquote gap="6">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
-      <Blockquote size="2xl">
+      <Blockquote gap="8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
-      <Blockquote size="3xl">
+      <Blockquote gap="9">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
@@ -149,7 +149,7 @@ export const BlockquoteWithCite = () => {
 
 export const BlockquoteCustomStyle = () => {
   return (
-    <Flex gap="sm">
+    <Flex gap="4">
       <Blockquote color="d" className="u_warning">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
@@ -169,7 +169,7 @@ export const BlockquoteCustomStyle = () => {
 export function ButtonCornerDefaults() {
   return (
     <div className="l_f-sm">
-      <Flex gap="sm">
+      <Flex gap="4">
         <Paper corner="sharp">
           <Blockquote size="3xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
@@ -200,7 +200,7 @@ export function ButtonCornerDefaults() {
         </Blockquote>
       </Flex>
 
-      <Flex gap="sm" style={{ '--blockquote-rad': '0' } as CSSProperties}>
+      <Flex gap="4" style={{ '--blockquote-rad': '0' } as CSSProperties}>
         <Paper corner="sharp">
           <Blockquote size="3xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
@@ -230,7 +230,7 @@ export function ButtonCornerDefaults() {
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>
       </Flex>
-      <Flex gap="sm" style={{ '--blockquote-rad': '10px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--blockquote-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
           <Blockquote size="3xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
@@ -261,7 +261,7 @@ export function ButtonCornerDefaults() {
         </Blockquote>
       </Flex>
 
-      <Flex gap="sm" style={{ '--blockquote-rad': '20px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--blockquote-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <Blockquote size="3xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore

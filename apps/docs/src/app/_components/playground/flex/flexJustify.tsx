@@ -8,20 +8,20 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box key={index} />)
 export const FlexJustify = () => {
   return (
     <>
-      <Flex gap="sm">{boxes}</Flex>
-      <Flex gap="sm" justify="center">
+      <Flex gap="4">{boxes}</Flex>
+      <Flex gap="4" justify="center">
         {boxes}
       </Flex>
-      <Flex gap="sm" justify="end">
+      <Flex gap="4" justify="end">
         {boxes}
       </Flex>
-      <Flex gap="sm" justify="between">
+      <Flex gap="4" justify="between">
         {boxes}
       </Flex>
-      <Flex gap="sm" justify="around">
+      <Flex gap="4" justify="around">
         {boxes}
       </Flex>
-      <Flex gap="sm" justify="evenly">
+      <Flex gap="4" justify="evenly">
         {boxes}
       </Flex>
     </>

@@ -14,21 +14,21 @@ export default meta
 
 export const ProgressBarSize = () => {
   return (
-    <Flex direction="column" gap="sm" wrap>
-      <ProgressBar size="2xs" value={90} label="hello" />
-      <ProgressBar size="xs" value={90} label="hello" />
+    <Flex direction="column" gap="4" wrap>
+      <ProgressBar gap="2" value={90} label="hello" />
+      <ProgressBar gap="3" value={90} label="hello" />
       <ProgressBar size="sm" value={90} label="hello" />
-      <ProgressBar size="md" value={90} label="hello" />
-      <ProgressBar size="lg" value={90} label="hello" />
-      <ProgressBar size="xl" value={90} label="hello" />
-      <ProgressBar size="2xl" value={90} label="hello" />
+      <ProgressBar gap="5" value={90} label="hello" />
+      <ProgressBar gap="6" value={90} label="hello" />
+      <ProgressBar gap="7" value={90} label="hello" />
+      <ProgressBar gap="8" value={90} label="hello" />
     </Flex>
   )
 }
 
 export const ProgressBarColor = () => {
   return (
-    <Flex direction="column" gap="sm" wrap>
+    <Flex direction="column" gap="4" wrap>
       <ProgressBar color="d" value={90} label="hello" />
       <ProgressBar color="s" value={90} label="hello" />
       <ProgressBar color="w" value={90} label="hello" />
@@ -41,7 +41,7 @@ export const ProgressBarColor = () => {
 
 export const ProgressBarRange = () => {
   return (
-    <Flex direction="column" gap="sm" wrap>
+    <Flex direction="column" gap="4" wrap>
       <ProgressBar value={90} label="hello" />
       <ProgressBar min={50} max={100} value={70} label="hello" />
       <ProgressBar min={-100} max={100} value={80} label="hello" />
@@ -56,7 +56,7 @@ export const ProgressBarRange = () => {
 
 export const ProgressCircleRange = () => {
   return (
-    <Flex direction="column" gap="sm" wrap>
+    <Flex direction="column" gap="4" wrap>
       <ProgressCircle value={90} label="hello" />
       <ProgressCircle min={50} max={100} value={70} label="hello" />
       <ProgressCircle min={-100} max={100} value={80} label="hello" />
@@ -71,21 +71,21 @@ export const ProgressCircleRange = () => {
 
 export const ProgressCircleSize = () => {
   return (
-    <Flex gap="sm">
-      <ProgressCircle size="2xs" value={15} label="hello" />
-      <ProgressCircle size="xs" value={15} label="hello" />
+    <Flex gap="4">
+      <ProgressCircle gap="2" value={15} label="hello" />
+      <ProgressCircle gap="3" value={15} label="hello" />
       <ProgressCircle size="sm" value={30} label="hello" />
-      <ProgressCircle size="md" value={45} label="hello" />
-      <ProgressCircle size="lg" value={60} label="hello" />
-      <ProgressCircle size="xl" value={90} label="hello" />
-      <ProgressCircle size="2xl" value={95} label="hello" />
+      <ProgressCircle gap="5" value={45} label="hello" />
+      <ProgressCircle gap="6" value={60} label="hello" />
+      <ProgressCircle gap="7" value={90} label="hello" />
+      <ProgressCircle gap="8" value={95} label="hello" />
     </Flex>
   )
 }
 
 export const ProgressCircleColor = () => {
   return (
-    <Flex gap="sm">
+    <Flex gap="4">
       <ProgressCircle color="d" value={15} label="hello" />
       <ProgressCircle color="s" value={30} label="hello" />
       <ProgressCircle color="w" value={60} label="hello" />
@@ -120,15 +120,15 @@ function ProgressBarStackBase(props) {
 
 export const ProgressBarStackSizes = () => {
   return (
-    <Flex direction="column" gap="sm" wrap>
+    <Flex direction="column" gap="4" wrap>
       <ProgressBarStackBase size="3xs" />
-      <ProgressBarStackBase size="2xs" />
-      <ProgressBarStackBase size="xs" />
+      <ProgressBarStackBase gap="2" />
+      <ProgressBarStackBase gap="3" />
       <ProgressBarStackBase size="sm" />
-      <ProgressBarStackBase size="md" />
-      <ProgressBarStackBase size="xl" />
-      <ProgressBarStackBase size="2xl" />
-      <ProgressBarStackBase size="3xl" />
+      <ProgressBarStackBase gap="5" />
+      <ProgressBarStackBase gap="7" />
+      <ProgressBarStackBase gap="8" />
+      <ProgressBarStackBase gap="9" />
     </Flex>
   )
 }

@@ -19,7 +19,7 @@ const Box = (props: any) => {
 
 export const EqualColumns = () => {
   return (
-    <Grid gap="xs" grid="repeat(20, 1fr)">
+    <Grid gap="3" grid="repeat(20, 1fr)">
       {Array.from({ length: 288 }, (_, index) => (
         <Box style={{ height: '30px' }} key={index}>
           {index}
@@ -31,7 +31,7 @@ export const EqualColumns = () => {
 
 export const ResponsiveColumns = () => {
   return (
-    <Grid gap="xs" grid="repeat(12, 1fr)" lg="repeat(6, 1fr)" md="repeat(4, 1fr)" sm="1fr 1fr" xs="1fr">
+    <Grid gap="3" grid="repeat(12, 1fr)" lg="repeat(6, 1fr)" md="repeat(4, 1fr)" sm="1fr 1fr" xs="1fr">
       {Array.from({ length: 64 }, () => (
         <Box height="60px" />
       ))}
@@ -41,7 +41,7 @@ export const ResponsiveColumns = () => {
 
 export const ResponsiveColumn = () => {
   return (
-    <Grid gap="xs" grid="repeat(4, 1fr) x repeat(6, 1fr)" sm="1fr x repeat(4, 1fr)">
+    <Grid gap="3" grid="repeat(4, 1fr) x repeat(6, 1fr)" sm="1fr x repeat(4, 1fr)">
       <GridItem as={Box} placement="1/5" sm="1/2" height="48px">
         Hello
       </GridItem>
@@ -59,7 +59,7 @@ export const ResponsiveColumn = () => {
 }
 
 export const ComplexGridOne = () => (
-  <Grid style={{ height: '95vh' }} grid="150px 1fr 150px x 2rem minmax(6rem, 1fr) 2rem" gap="sm">
+  <Grid style={{ height: '95vh' }} grid="150px 1fr 150px x 2rem minmax(6rem, 1fr) 2rem" gap="4">
     <GridItem as={Box} placement="1 / -1">
       Header
     </GridItem>
@@ -79,7 +79,7 @@ export const ComplexGridOne = () => (
 )
 
 export const ComplexGridTwo = () => (
-  <Grid style={{ height: '95vh' }} grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="sm">
+  <Grid style={{ height: '95vh' }} grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="4">
     <GridItem as={Box} placement="2/4">
       Header
     </GridItem>
@@ -100,7 +100,7 @@ export const ComplexGridTwo = () => (
 
 export const GridColumns = () => {
   return (
-    <Grid grid=".5fr 2fr auto 100px" gap="sm">
+    <Grid grid=".5fr 2fr auto 100px" gap="4">
       <Box height="96px" />
       <Box height="96px" />
       <Box height="96px" />
@@ -119,7 +119,7 @@ export const GridColumns = () => {
 
 export const GridRows = () => {
   return (
-    <Grid style={{ height: '700px' }} grid="repeat(3, 1fr) x .5fr 2fr 100px" gap="sm">
+    <Grid style={{ height: '700px' }} grid="repeat(3, 1fr) x .5fr 2fr 100px" gap="4">
       <Box />
       <Box />
       <Box />

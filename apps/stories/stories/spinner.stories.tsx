@@ -12,7 +12,7 @@ export default meta
 
 export function SpinnerColors() {
   return (
-    <Flex gap="sm">
+    <Flex gap="4">
       <Spinner color="s" />
       <Spinner color="d" />
       <Spinner color="w" />
@@ -25,30 +25,30 @@ export function SpinnerColors() {
 
 export function SpinnerSizes() {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Spinner size="3xs" />
-      <Spinner size="2xs" />
-      <Spinner size="xs" />
+      <Spinner gap="2" />
+      <Spinner gap="3" />
       <Spinner size="sm" />
-      <Spinner size="md" />
-      <Spinner size="xl" />
-      <Spinner size="2xl" />
-      <Spinner size="3xl" />
+      <Spinner gap="5" />
+      <Spinner gap="7" />
+      <Spinner gap="8" />
+      <Spinner gap="9" />
     </Flex>
   )
 }
 
 export function SpinnerThickness() {
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Spinner size="3xs" thickness="1px" />
-      <Spinner size="2xs" thickness="2px" />
-      <Spinner size="xs" thickness="3px" />
+      <Spinner gap="2" thickness="2px" />
+      <Spinner gap="3" thickness="3px" />
       <Spinner size="sm" thickness="4px" />
-      <Spinner size="md" thickness="5px" />
-      <Spinner size="xl" thickness="2px" />
-      <Spinner size="2xl" thickness="2px" />
-      <Spinner size="3xl" thickness="200px" />
+      <Spinner gap="5" thickness="5px" />
+      <Spinner gap="7" thickness="2px" />
+      <Spinner gap="8" thickness="2px" />
+      <Spinner gap="9" thickness="200px" />
     </Flex>
   )
 }
@@ -56,7 +56,7 @@ export function SpinnerThickness() {
 export function SpinnerInvert() {
   return (
     <div className="l_f-md">
-      <Flex gap="sm" items="center">
+      <Flex gap="4" items="center">
         <Spinner color="s" />
         <Spinner color="d" />
         <Spinner color="w" />
@@ -64,7 +64,7 @@ export function SpinnerInvert() {
         <Spinner color="se" />
         <Spinner color="b" />
       </Flex>
-      <Flex gap="sm" items="center">
+      <Flex gap="4" items="center">
         <Spinner invert color="s" />
         <Spinner invert color="d" />
         <Spinner invert color="w" />

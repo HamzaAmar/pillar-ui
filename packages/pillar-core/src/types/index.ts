@@ -1,6 +1,6 @@
-type CommonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | undefined
+type CommonSize = '1' | '2' | '3' | '4' | '5' | '6' | undefined
 
-type Size = '3xs' | '2xs' | CommonSize | '2xl' | '3xl'
+type Size = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
 
 /**
  * Represents the color of a component.

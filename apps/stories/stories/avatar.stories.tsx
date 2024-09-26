@@ -12,32 +12,32 @@ const image = 'https://picsum.photos/id/128/300/300'
 
 export function AvatarsSizes() {
   return (
-    <Flex gap="xs" items="center">
+    <Flex gap="3" items="center">
       <Avatar image={image} size="3xs" title="Hello" />
-      <Avatar image={image} size="2xs" title="Hello" />
-      <Avatar image={image} size="xs" title="Hello" />
+      <Avatar image={image} gap="2" title="Hello" />
+      <Avatar image={image} gap="3" title="Hello" />
       <Avatar image={image} size="sm" title="Hello" />
-      <Avatar image={image} size="md" title="Hello" />
-      <Avatar image={image} size="lg" title="Hello" />
-      <Avatar image={image} size="xl" title="Hello" />
-      <Avatar image={image} size="2xl" title="Hello" />
-      <Avatar image={image} size="3xl" title="Hello" />
+      <Avatar image={image} gap="5" title="Hello" />
+      <Avatar image={image} gap="6" title="Hello" />
+      <Avatar image={image} gap="7" title="Hello" />
+      <Avatar image={image} gap="8" title="Hello" />
+      <Avatar image={image} gap="9" title="Hello" />
     </Flex>
   )
 }
 
 export function AvatarsFallback() {
   return (
-    <Flex gap="xs" items="center">
+    <Flex gap="3" items="center">
       <Avatar size="3xs" title="Hello" />
-      <Avatar image="hello.s" size="2xs" title="Hello" />
-      <Avatar image="https://pisum" size="xs" title="Hello" />
+      <Avatar image="hello.s" gap="2" title="Hello" />
+      <Avatar image="https://pisum" gap="3" title="Hello" />
       <Avatar size="sm" title="Hello" />
-      <Avatar size="md" title="Hello" />
-      <Avatar size="lg" title="Hello" />
-      <Avatar size="xl" title="Hello" />
-      <Avatar size="2xl" title="Hello" />
-      <Avatar size="3xl" title="Hello" />
+      <Avatar gap="5" title="Hello" />
+      <Avatar gap="6" title="Hello" />
+      <Avatar gap="7" title="Hello" />
+      <Avatar gap="8" title="Hello" />
+      <Avatar gap="9" title="Hello" />
     </Flex>
   )
 }
@@ -60,7 +60,7 @@ export const AvatarRefForwarded = () => {
   }
 
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       <Avatar ref={avatarRef} image="https://picsum.photos/id/128/100/100" title="Hello" />
       <Button onClick={handleClick}>Number {count}</Button>
     </Flex>
@@ -70,7 +70,7 @@ export const AvatarRefForwarded = () => {
 export function AvatarsCorners() {
   return (
     <div className="l_f-xl">
-      <Flex gap="xs" items="center">
+      <Flex gap="3" items="center">
         <Avatar corner="sharp" title="Hello" />
         <Avatar corner="xs" title="Hello" />
         <Avatar corner="sm" title="Hello" />
@@ -90,7 +90,7 @@ export function AvatarsCorners() {
         <Avatar corner="h-5" title="Hello" />
         <Avatar corner="h-6" title="Hello" />
       </Flex>
-      <Flex gap="xs" items="center">
+      <Flex gap="3" items="center">
         <Avatar corner="sharp" image={image} title="Hello" />
         <Avatar corner="xs" image={image} title="Hello" />
         <Avatar corner="sm" image={image} title="Hello" />
@@ -116,7 +116,7 @@ export function AvatarsCorners() {
 
 export function AvatarsAnimations() {
   return (
-    <Flex gap="xs" items="center">
+    <Flex gap="3" items="center">
       <Avatar image={image} animate="zoom" title="Hello" />
       <Avatar image={image} animate="jump-x" title="Hello" />
       <Avatar image={image} animate="jump-y" title="Hello" />
@@ -127,7 +127,7 @@ export function AvatarsAnimations() {
 export function AvatarsColors() {
   return (
     <div className="l_f-md">
-      <Flex gap="xs" items="center">
+      <Flex gap="3" items="center">
         <Avatar color="d" variant="solid" image={image} title="Hello" />
         <Avatar color="d" variant="solid" title="Hello" />
         <Avatar color="s" variant="solid" title="Hello" />
@@ -136,7 +136,7 @@ export function AvatarsColors() {
         <Avatar color="p" variant="solid" title="Hello" />
         <Avatar color="b" variant="solid" title="Hello" />
       </Flex>
-      <Flex gap="xs" items="center">
+      <Flex gap="3" items="center">
         <Avatar color="d" variant="outline" image={image} title="Hello" />
         <Avatar color="d" variant="outline" title="Hello" />
         <Avatar color="s" variant="outline" title="Hello" />
@@ -145,7 +145,7 @@ export function AvatarsColors() {
         <Avatar color="p" variant="outline" title="Hello" />
         <Avatar color="b" variant="outline" title="Hello" />
       </Flex>
-      <Flex gap="xs" items="center">
+      <Flex gap="3" items="center">
         <Avatar color="d" variant="dashed" image={image} title="Hello" />
         <Avatar color="d" variant="dashed" title="Hello" />
         <Avatar color="s" variant="dashed" title="Hello" />
@@ -154,7 +154,7 @@ export function AvatarsColors() {
         <Avatar color="p" variant="dashed" title="Hello" />
         <Avatar color="b" variant="dashed" title="Hello" />
       </Flex>
-      <Flex gap="xs" items="center">
+      <Flex gap="3" items="center">
         <Avatar color="d" variant="soft" image={image} title="Hello" />
         <Avatar color="d" variant="soft" title="Hello" />
         <Avatar color="s" variant="soft" title="Hello" />
@@ -170,13 +170,13 @@ export function AvatarsColors() {
 export function AvatarsVariants() {
   return (
     <div className="l_f-md">
-      <Flex gap="xs" items="center">
+      <Flex gap="3" items="center">
         <Avatar variant="solid" title="Hello" />
         <Avatar variant="soft" title="Hello" />
         <Avatar variant="outline" title="Hello" />
         <Avatar variant="dashed" title="Hello" />
       </Flex>
-      <Flex gap="xs" items="center">
+      <Flex gap="3" items="center">
         <Avatar image={image} variant="solid" title="Hello" />
         <Avatar image={image} variant="soft" title="Hello" />
         <Avatar image={image} variant="outline" title="Hello" />
@@ -282,7 +282,7 @@ export function AvatarCustomStyle() {
 export function AvatarCornerDefaults() {
   return (
     <div className="l_f-sm">
-      <Flex gap="sm">
+      <Flex gap="4">
         <Paper corner="sharp">
           <Avatar title="Hello" />
         </Paper>
@@ -298,7 +298,7 @@ export function AvatarCornerDefaults() {
         <Avatar title="Hello" />
       </Flex>
 
-      <Flex gap="sm" style={{ '--avatar-rad': '5px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--avatar-rad': '5px' } as CSSProperties}>
         <Paper corner="sharp">
           <Avatar title="Hello" />
         </Paper>
@@ -313,7 +313,7 @@ export function AvatarCornerDefaults() {
         </Paper>
         <Avatar title="Hello" />
       </Flex>
-      <Flex gap="sm" style={{ '--avatar-rad': '10px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--avatar-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
           <Avatar title="Hello" />
         </Paper>
@@ -329,7 +329,7 @@ export function AvatarCornerDefaults() {
         <Avatar title="Hello" />
       </Flex>
 
-      <Flex gap="sm" style={{ '--avatar-rad': '20px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--avatar-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
           <Avatar title="Hello" />
         </Paper>

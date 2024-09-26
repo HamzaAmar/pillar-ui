@@ -9,11 +9,11 @@ export function CustomTheme() {
         <SectionHeading subheading="Change Theme" heading=" Custom your perfect look in seconds!" />
 
         <div className="l_f-lg">
-          <Text className="dark--description" color="b" low size="xl">
+          <Text className="dark--description" color="b" low gap="7">
             Customize your interface to showcase your personal flair. Adjust CSS variables for colors, fonts, and
             layouts to craft a design that’s unmistakably your own.
           </Text>
-          <Text className="dark--description" color="b" low size="xl">
+          <Text className="dark--description" color="b" low gap="7">
             In the theme settings, you can enhance your user experience by customizing various elements. This includes
             adjusting the size, corner details, and text transformations. You can select specific areas within the
             entire tree structure to apply these style changes, ensuring a consistent and personalized look.

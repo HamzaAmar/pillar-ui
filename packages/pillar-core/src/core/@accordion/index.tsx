@@ -65,7 +65,7 @@ export const Accordion = forwardRef(
       collapsible,
       color = 'B',
       variant,
-      size = 'md',
+      size = '5',
       corner = 'sharp',
       separate,
       className,

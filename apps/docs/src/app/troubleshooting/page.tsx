@@ -5,14 +5,14 @@ import React from 'react'
 const troubleshooting = () => {
   return (
     <Paper flow="md" p="sm">
-      <Heading size="xl">Troubleshooting</Heading>
+      <Heading gap="7">Troubleshooting</Heading>
       <Text>
         Encountering challenges is a natural part of the development process, and we`&#39;`re here to help you navigate
         through them. This Troubleshooting section aims to provide solutions to some common roadblocks you might
         encounter while integrating and using the Pillar UI library in your React applications.
       </Text>
       <div className="l_f-sm">
-        <Heading as="h2" size="lg">
+        <Heading as="h2" gap="6">
           Installation Issues
         </Heading>
 
@@ -62,7 +62,7 @@ const troubleshooting = () => {
       </div>
 
       <div className="l_f-sm">
-        <Heading as="h2" size="lg">
+        <Heading as="h2" gap="6">
           Styling and Appearance Issues
         </Heading>
 
@@ -97,7 +97,7 @@ const troubleshooting = () => {
       </div>
 
       <div className="l_f-sm">
-        <Heading as="h2" size="lg">
+        <Heading as="h2" gap="6">
           Component Integration Issues
         </Heading>
 
@@ -131,7 +131,7 @@ const troubleshooting = () => {
       </div>
 
       <div className="l_f-sm">
-        <Heading as="h2" size="lg">
+        <Heading as="h2" gap="6">
           General Issues
         </Heading>
 
@@ -166,7 +166,7 @@ const troubleshooting = () => {
       </div>
 
       <div className="l_f-sm">
-        <Heading as="h2" size="lg">
+        <Heading as="h2" gap="6">
           Further Assistance
         </Heading>
 

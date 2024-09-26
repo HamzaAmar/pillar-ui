@@ -13,7 +13,7 @@ export default meta
 
 const CompleteComponent = () => {
   return (
-    <Flex items="center" justify="center" gap="xs" direction="column">
+    <Flex items="center" justify="center" gap="3" direction="column">
       <div style={{ color: 'white', background: 'var(--green-9)', padding: '.5rem', borderRadius: '1rem' }}>
         <Check width={60} />
       </div>
@@ -30,31 +30,31 @@ export const StepperIcon = () => {
   const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
-    <Flex gap="lg" direction="column">
+    <Flex gap="6" direction="column">
       <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
-          <Heading size="xs">Hello World</Heading>
+          <Heading gap="3">Hello World</Heading>
           <Text size="sm" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
-          <Heading size="xs">Hello World</Heading>
+          <Heading gap="3">Hello World</Heading>
           <Text size="sm" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
-          <Heading size="xs">Hello World</Heading>
+          <Heading gap="3">Hello World</Heading>
           <Text size="sm" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
       </Stepper>
-      <Flex items="center" justify="center" gap="sm">
+      <Flex items="center" justify="center" gap="4">
         <Button disabled={isLast} onClick={goToNext}>
           Next
         </Button>
@@ -70,28 +70,28 @@ function StepperBase(props) {
   const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
-    <Flex gap="lg" direction="column">
+    <Flex gap="6" direction="column">
       <Stepper active={step} setActive={setStep} corner="sharp" {...props} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
-          <Heading size="xs">Hello World</Heading>
+          <Heading gap="3">Hello World</Heading>
           <Text size="sm" color="b" low>
             Hello
           </Text>
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
-          <Heading size="xs">Hello World</Heading>
+          <Heading gap="3">Hello World</Heading>
           <Text size="sm" color="b" low>
             World
           </Text>
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
-          <Heading size="xs">Hello World</Heading>
+          <Heading gap="3">Hello World</Heading>
           <Text size="sm" color="b" low>
             Nice{' '}
           </Text>
         </StepperStep>
       </Stepper>
-      <Flex items="center" justify="center" gap="sm">
+      <Flex items="center" justify="center" gap="4">
         <Button disabled={isLast} onClick={goToNext}>
           Next
         </Button>
@@ -134,24 +134,24 @@ export const DefaultStepper = () => {
   const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
-    <Flex gap="lg" direction="column">
+    <Flex gap="6" direction="column">
       <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
-          <Heading size="xs">Hello World</Heading>
+          <Heading gap="3">Hello World</Heading>
           <Text size="sm" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
-          <Heading size="xs">Hello Nice</Heading>
+          <Heading gap="3">Hello Nice</Heading>
           <Text size="sm" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
-          <Heading size="xs">Nice to Meet You</Heading>
+          <Heading gap="3">Nice to Meet You</Heading>
           <Text size="sm" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
@@ -159,7 +159,7 @@ export const DefaultStepper = () => {
         </StepperStep>
       </Stepper>
 
-      <Flex items="center" justify="center" gap="sm">
+      <Flex items="center" justify="center" gap="4">
         <Button disabled={isLast} onClick={goToNext}>
           Next{' '}
         </Button>

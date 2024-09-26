@@ -19,21 +19,21 @@ export function TooltipBase(props: any) {
 
 export const TooltipSize = () => {
   return (
-    <Flex gap="lg">
-      <TooltipBase size="2xs" />
-      <TooltipBase size="xs" />
+    <Flex gap="6">
+      <TooltipBase gap="2" />
+      <TooltipBase gap="3" />
       <TooltipBase size="sm" />
-      <TooltipBase size="md" />
-      <TooltipBase size="lg" />
-      <TooltipBase size="xl" />
-      <TooltipBase size="2xl" />
+      <TooltipBase gap="5" />
+      <TooltipBase gap="6" />
+      <TooltipBase gap="7" />
+      <TooltipBase gap="8" />
     </Flex>
   )
 }
 
 export const TooltipCorner = () => {
   return (
-    <Flex gap="lg">
+    <Flex gap="6">
       <TooltipBase corner="2xs" />
       <TooltipBase corner="xs" />
       <TooltipBase corner="sm" />

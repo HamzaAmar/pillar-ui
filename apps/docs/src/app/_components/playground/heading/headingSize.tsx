@@ -3,13 +3,13 @@ import { Heading } from '@pillar-ui/core'
 export const HeadingSize = () => {
   return (
     <>
-      <Heading size="2xs">Hello World</Heading>
-      <Heading size="xs">Hello World</Heading>
+      <Heading gap="2">Hello World</Heading>
+      <Heading gap="3">Hello World</Heading>
       <Heading size="sm">Hello World</Heading>
-      <Heading size="md">Hello World</Heading>
-      <Heading size="lg">Hello World</Heading>
-      <Heading size="xl">Hello World</Heading>
-      <Heading size="2xl">Hello World</Heading>
+      <Heading gap="5">Hello World</Heading>
+      <Heading gap="6">Hello World</Heading>
+      <Heading gap="7">Hello World</Heading>
+      <Heading gap="8">Hello World</Heading>
     </>
   )
 }

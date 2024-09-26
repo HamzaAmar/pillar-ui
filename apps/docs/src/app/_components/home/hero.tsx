@@ -4,7 +4,7 @@ import { Button, Flex, IconButton, Text } from '@pillar-ui/core'
 
 export function Hero() {
   return (
-    <Flex as="section" direction="column" gap="xl" justify="center" className="section hero">
+    <Flex as="section" direction="column" gap="7" justify="center" className="section hero">
       <h1 className="hero-hdg">
         <Text as="span" className="hero-ttl">
           <svg
@@ -34,7 +34,7 @@ export function Hero() {
         </Text>
       </div>
 
-      <Flex gap="sm">
+      <Flex gap="4">
         <Button as={Link} href="/docs/getting-started/cra" icon={<Booking />}>
           Get Started
         </Button>
@@ -44,7 +44,7 @@ export function Hero() {
         </Button>
       </Flex>
 
-      <Flex justify="end" gap="sm">
+      <Flex justify="end" gap="4">
         <IconButton color="b" variant="soft" title="Go to Github" icon={<Github />} />
         <IconButton color="b" variant="soft" title="Go to Discord" icon={<Discord />} />
         <IconButton color="b" variant="soft" title="Go to Youtube" icon={<Youtube />} />

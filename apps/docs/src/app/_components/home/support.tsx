@@ -4,7 +4,7 @@ import { Discord, Github, Twitter } from '@pillar-ui/icons'
 import { SectionHeading } from '~/component/core/sectionHeading'
 export function PillarSupport() {
   return (
-    <Flex gap="xl" justify="evenly" className="simplify-dev--container section">
+    <Flex gap="7" justify="evenly" className="simplify-dev--container section">
       <div className="l_f-2xl">
         <div
           className="l_f-
@@ -12,7 +12,7 @@ export function PillarSupport() {
         >
           <SectionHeading subheading="Framework Harmony:" heading="Effortless Integration with Pillar UI" />
 
-          <Text color="b" low size="xl" className="dark--description">
+          <Text color="b" low gap="7" className="dark--description">
             Pillar UI adapts to your workflow, enhancing your projects with ease. Stay ahead of the curve with support
             for emerging technologies.
           </Text>
@@ -20,7 +20,7 @@ export function PillarSupport() {
         <Grid
           style={{ position: 'sticky', top: '8rem' }}
           items="center"
-          gap="xl"
+          gap="7"
           grid="repeat(auto-fit, minmax(180px, 1fr))"
         >
           {SUPPORTED.map(({ slug, icon }) => (
@@ -30,7 +30,7 @@ export function PillarSupport() {
       </div>
       <div className="support--second l_f-sm">
         <div className="get-started l_f-sm">
-          <Text weight="medium" size="lg">
+          <Text weight="medium" gap="6">
             Lets Getting Start
           </Text>
           <Text size="sm" color="b" low>
@@ -39,13 +39,13 @@ export function PillarSupport() {
           <Button>Get Started</Button>
         </div>
         <div className="get-started l_f-sm">
-          <Text weight="medium" size="lg">
+          <Text weight="medium" gap="6">
             Community
           </Text>
           <Text size="sm" color="b" low>
             Get involved in our community. Everyone is welcome!
           </Text>
-          <Flex gap="sm">
+          <Flex gap="4">
             <IconButton size="sm" icon={<Twitter />} title="Connect With Twitter" />
             <IconButton size="sm" icon={<Github />} title="Connect With Github" />
             <IconButton size="sm" icon={<Discord />} title="Connect With Twitter" />

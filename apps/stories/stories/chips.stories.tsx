@@ -15,7 +15,7 @@ export default meta
 export const Playground = {}
 
 export const ChipsColor = () => (
-  <Flex gap="xs">
+  <Flex gap="3">
     <Chips color="d" variant="solid">
       Hello
     </Chips>
@@ -44,7 +44,7 @@ const VARIANTS = ['solid', 'mixed', 'soft', 'outline'] as const
 export const ChipsVariants = () => (
   <div className="l_f-md">
     {VARIANTS.map((variant) => (
-      <Flex key={variant} gap="xs">
+      <Flex key={variant} gap="3">
         <Chips color="d" variant={variant}>
           Hello
         </Chips>
@@ -73,31 +73,31 @@ export const ChipsSize = () => (
   <div>
     <h1>With Props</h1>
 
-    <Flex gap="xs" items="center">
-      <Chips size="2xs" variant="outline">
+    <Flex gap="3" items="center">
+      <Chips gap="2" variant="outline">
         Hello
       </Chips>
-      <Chips size="xs" variant="outline">
+      <Chips gap="3" variant="outline">
         Hello
       </Chips>
       <Chips size="sm" variant="outline">
         Hello
       </Chips>
-      <Chips size="md" variant="outline">
+      <Chips gap="5" variant="outline">
         Hello
       </Chips>
-      <Chips size="lg" variant="outline">
+      <Chips gap="6" variant="outline">
         Hello
       </Chips>
-      <Chips size="xl" variant="outline">
+      <Chips gap="7" variant="outline">
         Hello
       </Chips>
-      <Chips size="2xl" variant="outline">
+      <Chips gap="8" variant="outline">
         Hello
       </Chips>
     </Flex>
     <h1>With 2rem</h1>
-    <Flex gap="xs" style={{ '--chip-size': '2rem' } as React.CSSProperties}>
+    <Flex gap="3" style={{ '--chip-size': '2rem' } as React.CSSProperties}>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
@@ -108,7 +108,7 @@ export const ChipsSize = () => (
       <Chips variant="outline">Hello</Chips>
     </Flex>
     <h1>With 1em</h1>
-    <Flex gap="xs" style={{ '--chip-size': '1em' } as React.CSSProperties}>
+    <Flex gap="3" style={{ '--chip-size': '1em' } as React.CSSProperties}>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
@@ -124,7 +124,7 @@ export const ChipsSize = () => (
 export const ChipsCorner = () => (
   <div className="l_fow__sm">
     <h1>With Props</h1>
-    <Flex gap="xs">
+    <Flex gap="3">
       <Chips corner="sharp" variant="outline">
         Hello
       </Chips>
@@ -151,7 +151,7 @@ export const ChipsCorner = () => (
       </Chips>
     </Flex>
     <h1>With 1rem radius</h1>
-    <Flex gap="xs" style={{ '--chip-rad': '1rem' } as React.CSSProperties}>
+    <Flex gap="3" style={{ '--chip-rad': '1rem' } as React.CSSProperties}>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
@@ -162,7 +162,7 @@ export const ChipsCorner = () => (
       <Chips variant="outline">Hello</Chips>
     </Flex>
     <h1>With Sharp</h1>
-    <Flex gap="xs" style={{ '--chip-rad': '0' } as React.CSSProperties}>
+    <Flex gap="3" style={{ '--chip-rad': '0' } as React.CSSProperties}>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
       <Chips variant="outline">Hello</Chips>
@@ -176,12 +176,12 @@ export const ChipsCorner = () => (
 )
 
 export const ChipsIcons = () => (
-  <Flex gap="xs" items="center">
-    <Chips size="2xs" variant="outline">
+  <Flex gap="3" items="center">
+    <Chips gap="2" variant="outline">
       Hello
       <Plus />
     </Chips>
-    <Chips size="xs" variant="outline">
+    <Chips gap="3" variant="outline">
       <Plus />
       Hello
     </Chips>
@@ -189,19 +189,19 @@ export const ChipsIcons = () => (
       Hello
       <Plus />
     </Chips>
-    <Chips size="md" variant="outline">
+    <Chips gap="5" variant="outline">
       <Plus />
       Hello
     </Chips>
-    <Chips size="lg" variant="outline">
+    <Chips gap="6" variant="outline">
       Hello
       <Plus />
     </Chips>
-    <Chips size="xl" variant="outline">
+    <Chips gap="7" variant="outline">
       <Plus />
       Hello
     </Chips>
-    <Chips size="2xl" variant="outline">
+    <Chips gap="8" variant="outline">
       Hello
       <DotsHorizontal />
     </Chips>
@@ -209,7 +209,7 @@ export const ChipsIcons = () => (
 )
 
 export const ChipsStrange = () => (
-  <Flex gap="xs" items="center">
+  <Flex gap="3" items="center">
     <Chips variant="outline">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse architecto recusandae quibusdam molestias velit
       corrupti, ullam blanditiis earum, pariatur, sunt delectus reiciendis! Rerum nesciunt optio perferendis unde
@@ -241,7 +241,7 @@ export const ChipsRefForwarded = () => {
   }
 
   return (
-    <Flex gap="sm">
+    <Flex gap="4">
       <Chips ref={chipsRef} variant="outline">
         Hello
       </Chips>
@@ -253,7 +253,7 @@ export const ChipsRefForwarded = () => {
 export function ChipsCornerDefaults() {
   return (
     <div className="l_f-sm">
-      <Flex gap="sm">
+      <Flex gap="4">
         <Paper corner="sharp">
           <Chips>Hello</Chips>
         </Paper>
@@ -269,7 +269,7 @@ export function ChipsCornerDefaults() {
         <Chips>Hello</Chips>
       </Flex>
 
-      <Flex gap="sm" style={{ '--chip-rad': '1px' } as React.CSSProperties}>
+      <Flex gap="4" style={{ '--chip-rad': '1px' } as React.CSSProperties}>
         <Paper corner="sharp">
           <Chips>Hello</Chips>
         </Paper>
@@ -284,7 +284,7 @@ export function ChipsCornerDefaults() {
         </Paper>
         <Chips>Hello</Chips>
       </Flex>
-      <Flex gap="sm" style={{ '--chip-rad': '8px' } as React.CSSProperties}>
+      <Flex gap="4" style={{ '--chip-rad': '8px' } as React.CSSProperties}>
         <Paper corner="sharp">
           <Chips>Hello</Chips>
         </Paper>
@@ -300,7 +300,7 @@ export function ChipsCornerDefaults() {
         <Chips>Hello</Chips>
       </Flex>
 
-      <Flex gap="sm" style={{ '--chip-rad': '20px' } as React.CSSProperties}>
+      <Flex gap="4" style={{ '--chip-rad': '20px' } as React.CSSProperties}>
         <Paper corner="sharp">
           <Chips>Hello</Chips>
         </Paper>

@@ -103,7 +103,7 @@ export const Tabs = forwardRef(
       defaultValue = 0,
       size,
       variant = 'bordered',
-      corner = 'sm',
+      corner = '2',
       color = 'p',
       ...rest
     },

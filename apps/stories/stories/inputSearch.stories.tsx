@@ -16,7 +16,7 @@ export default meta
 
 export const FilledInput = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputSearch
         aria-label="hello"
         autoFocus
@@ -35,7 +35,7 @@ export const FilledInput = () => {
 
 export const OutlineInput = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputSearch autoFocus placeholder="Focus" />
       <InputSearch placeholder="Normal" />
       <InputSearch disabled placeholder="Disabled" />
@@ -48,7 +48,7 @@ export const OutlineInput = () => {
 
 export const BorderedInput = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputSearch variant="bordered" autoFocus placeholder="Focus" />
       <InputSearch variant="bordered" placeholder="Normal" />
       <InputSearch variant="bordered" disabled placeholder="Disabled" />
@@ -61,7 +61,7 @@ export const BorderedInput = () => {
 
 export const CornerInput = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputSearch corner="sharp" placeholder="sharp" />
       <InputSearch corner="xs" placeholder="xs" />
       <InputSearch corner="sm" placeholder="sm" />
@@ -75,17 +75,17 @@ export const CornerInput = () => {
 
 export const SizeInput = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputSearch size="sm" placeholder="Small(sm)" />
       <InputSearch placeholder="Medium (md default You don't need it)" />
-      <InputSearch size="lg" placeholder="Large(lg)" />
+      <InputSearch gap="6" placeholder="Large(lg)" />
     </Flex>
   )
 }
 
 export const ColorInput = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <InputSearch color="p" variant="bordered" autoFocus placeholder="Focus" />
       <InputSearch color="w" variant="bordered" autoFocus placeholder="Normal" />
       <InputSearch color="se" variant="outline" autoFocus placeholder="Disabled" />

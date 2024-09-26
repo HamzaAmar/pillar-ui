@@ -52,9 +52,7 @@ export const Alert = forwardRef(
           {title && <div className="u_t-capitalize u_t-md u_f-medium">{title}</div>}
           {message && <span>{message}</span>}
         </div>
-        {closable && (
-          <IconButton size="2xs" onClick={handleToggle} icon={<Close />} title="close alert" color={color} />
-        )}
+        {closable && <IconButton size="2" onClick={handleToggle} icon={<Close />} title="close alert" color={color} />}
       </div>
     )
   }

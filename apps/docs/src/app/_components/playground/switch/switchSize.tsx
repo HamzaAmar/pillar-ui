@@ -4,14 +4,14 @@ export const SwitchSize = () => {
   return (
     <>
       <Switch label="Hello" size="3xs" />
-      <Switch label="Hello" size="2xs" />
-      <Switch label="Hello" size="xs" />
+      <Switch label="Hello" gap="2" />
+      <Switch label="Hello" gap="3" />
       <Switch label="Hello" size="sm" />
-      <Switch label="Hello" size="md" />
-      <Switch label="Hello" size="lg" />
-      <Switch label="Hello" size="xl" />
-      <Switch label="Hello" size="2xl" />
-      <Switch label="Hello" size="3xl" />
+      <Switch label="Hello" gap="5" />
+      <Switch label="Hello" gap="6" />
+      <Switch label="Hello" gap="7" />
+      <Switch label="Hello" gap="8" />
+      <Switch label="Hello" gap="9" />
     </>
   )
 }

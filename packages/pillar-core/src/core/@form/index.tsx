@@ -276,7 +276,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
   }
 
   return (
-    <Flex gap="sm" items="center">
+    <Flex gap="4" items="center">
       {Array.from({ length }, (_, index) => (
         <div className={className} key={index}>
           <input
@@ -394,7 +394,7 @@ export const FormGroup = ({
 }: FormGroupProps) => (
   <fieldset className={cx('f-g_cnt', { 'f-g-hide-border': hideBorder })}>
     <legend className={cx('f-g_legend', { u_sr: hideTitle })}>{title}</legend>
-    <Flex gap="sm" className={cx('f-g', { 'f-g-fluid': rest.fluid })} items="start" direction={direction}>
+    <Flex gap="4" className={cx('f-g', { 'f-g-fluid': rest.fluid })} items="start" direction={direction}>
       <FormGroupProvider {...rest}>{children}</FormGroupProvider>
     </Flex>
   </fieldset>

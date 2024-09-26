@@ -63,20 +63,20 @@ function TabBase(props) {
 
 export const TabSize = () => {
   return (
-    <Flex direction="column" gap="sm">
-      <TabBase size="2xs" defaultValue={1} />
+    <Flex direction="column" gap="4">
+      <TabBase gap="2" defaultValue={1} />
       <TabBase size="sm" defaultValue={1} />
-      <TabBase size="md" defaultValue={1} />
-      <TabBase size="lg" defaultValue={1} />
-      <TabBase size="xl" defaultValue={1} />
-      <TabBase size="2xl" defaultValue={1} />
+      <TabBase gap="5" defaultValue={1} />
+      <TabBase gap="6" defaultValue={1} />
+      <TabBase gap="7" defaultValue={1} />
+      <TabBase gap="8" defaultValue={1} />
     </Flex>
   )
 }
 
 export const TabColor = () => {
   return (
-    <Flex direction="column" gap="sm">
+    <Flex direction="column" gap="4">
       <TabBase color="d" defaultValue={1} />
       <TabBase color="w" defaultValue={1} />
       <TabBase color="s" defaultValue={1} />
@@ -89,7 +89,7 @@ export const TabColor = () => {
 
 export const TabDirection = () => {
   return (
-    <Flex direction="column" gap="sm">
+    <Flex direction="column" gap="4">
       <TabBase direction="vertical" defaultValue={1} />
       <TabBase direction="horizontal" defaultValue={1} />
     </Flex>
@@ -98,8 +98,8 @@ export const TabDirection = () => {
 
 export const TabVariants = () => {
   return (
-    <Grid grid="1fr 1fr" gap="sm">
-      <Flex direction="column" gap="sm">
+    <Grid grid="1fr 1fr" gap="4">
+      <Flex direction="column" gap="4">
         <TabBase variant="solid" color="d" defaultValue={1} />
         <TabBase variant="solid" color="w" defaultValue={1} />
         <TabBase variant="solid" color="s" defaultValue={1} />
@@ -107,7 +107,7 @@ export const TabVariants = () => {
         <TabBase variant="solid" color="se" defaultValue={1} />
         <TabBase variant="solid" color="b" defaultValue={1} />
       </Flex>
-      <Flex direction="column" gap="sm">
+      <Flex direction="column" gap="4">
         <TabBase variant="outline" color="d" defaultValue={1} />
         <TabBase variant="outline" color="w" defaultValue={1} />
         <TabBase variant="outline" color="s" defaultValue={1} />
@@ -115,7 +115,7 @@ export const TabVariants = () => {
         <TabBase variant="outline" color="se" defaultValue={1} />
         <TabBase variant="outline" color="b" defaultValue={1} />
       </Flex>
-      <Flex direction="column" gap="sm">
+      <Flex direction="column" gap="4">
         <TabBase variant="soft" color="d" defaultValue={1} />
         <TabBase variant="soft" color="w" defaultValue={1} />
         <TabBase variant="soft" color="s" defaultValue={1} />
@@ -123,7 +123,7 @@ export const TabVariants = () => {
         <TabBase variant="soft" color="se" defaultValue={1} />
         <TabBase variant="soft" color="b" defaultValue={1} />
       </Flex>
-      <Flex direction="column" gap="sm">
+      <Flex direction="column" gap="4">
         <TabBase color="d" defaultValue={1} />
         <TabBase color="w" defaultValue={1} />
         <TabBase color="s" defaultValue={1} />

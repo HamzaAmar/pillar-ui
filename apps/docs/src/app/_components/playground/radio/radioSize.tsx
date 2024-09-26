@@ -4,11 +4,11 @@ export const RadioSize = () => {
   return (
     <>
       <Radio size="3xs" name="red" label="Red" />
-      <Radio size="2xs" name="green" label="Green" />
-      <Radio size="xs" name="orange" label="Orange" />
+      <Radio gap="2" name="green" label="Green" />
+      <Radio gap="3" name="orange" label="Orange" />
       <Radio size="sm" name="primary" label="primary" />
-      <Radio size="lg" name="b" label="Slate" />
-      <Radio size="3xl" name="se" label="Secondary" />
+      <Radio gap="6" name="b" label="Slate" />
+      <Radio gap="9" name="se" label="Secondary" />
     </>
   )
 }

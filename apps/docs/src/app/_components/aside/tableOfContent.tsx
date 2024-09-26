@@ -67,7 +67,7 @@ const TableOfContent = ({ contents }: { contents: HeadingProps[] | null }) => {
   const activeId = useScrollSpy('h2,h3,h4,h5')
   return (
     <nav className="toc-wrapper as l_flow lg-hide">
-      <Paper p="xs" as={Flex} gap="sm" items="center">
+      <Paper p="xs" as={Flex} gap="4" items="center">
         <ListNumber width="20" />
         <Text weight="medium" size="sm">
           On This Page

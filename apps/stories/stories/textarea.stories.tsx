@@ -16,7 +16,7 @@ export default meta
 
 export const FilledTextarea = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Textarea autoFocus placeholder="Focus" variant="filled" />
       <Textarea placeholder="Normal" variant="filled" />
       <Textarea disabled placeholder="Disabled" variant="filled" />
@@ -30,7 +30,7 @@ export const FilledTextarea = () => {
 
 export const OutlineTextarea = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Textarea autoFocus placeholder="Focus" />
       <Textarea placeholder="Normal" />
       <Textarea disabled placeholder="Disabled" />
@@ -45,7 +45,7 @@ export const OutlineTextarea = () => {
 
 export const BorderedTextarea = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Textarea variant="bordered" autoFocus placeholder="Focus" />
       <Textarea variant="bordered" placeholder="Normal" />
       <Textarea variant="bordered" disabled placeholder="Disabled" />
@@ -59,7 +59,7 @@ export const BorderedTextarea = () => {
 
 export const CornerTextarea = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Textarea corner="sharp" placeholder="sharp" />
       <Textarea corner="xs" placeholder="xs" />
       <Textarea corner="sm" placeholder="sm" />
@@ -73,12 +73,12 @@ export const CornerTextarea = () => {
 
 export const SizeTextarea = () => {
   return (
-    <Flex gap="sm" direction="column">
+    <Flex gap="4" direction="column">
       <Textarea size="sm" placeholder="Small(sm)" />
       <Textarea placeholder="Medium (md default You don't need it)" />
-      <Textarea size="lg" placeholder="Large(lg)" />
-      <Textarea rows={10} size="lg" placeholder="Large(lg) with 10 rows" />
-      <Textarea rows={1} size="lg" placeholder="Large(lg) with 1 rows" />
+      <Textarea gap="6" placeholder="Large(lg)" />
+      <Textarea rows={10} gap="6" placeholder="Large(lg) with 10 rows" />
+      <Textarea rows={1} gap="6" placeholder="Large(lg) with 1 rows" />
     </Flex>
   )
 }

@@ -4,25 +4,25 @@ import { ZoomPlus } from '@pillar-ui/icons'
 export function ButtonSize() {
   return (
     <>
-      <Flex gap="sm" items="center" wrap>
+      <Flex gap="4" items="center" wrap>
         <Button size="3xs">Hello World</Button>
-        <Button size="2xs">Hello World</Button>
-        <Button size="xs">Hello World</Button>
-        <Button size="md">Hello World</Button>
-        <Button size="lg">Hello World</Button>
-        <Button size="xl">Hello World</Button>
-        <Button size="2xl">Hello World</Button>
-        <Button size="3xl">Hello World</Button>
+        <Button gap="2">Hello World</Button>
+        <Button gap="3">Hello World</Button>
+        <Button gap="5">Hello World</Button>
+        <Button gap="6">Hello World</Button>
+        <Button gap="7">Hello World</Button>
+        <Button gap="8">Hello World</Button>
+        <Button gap="9">Hello World</Button>
       </Flex>
 
-      <Flex gap="sm" items="center" wrap>
-        <IconButton title="Heelo" icon={<ZoomPlus />} size="2xs" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} size="xs" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} size="xs" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} size="md" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} size="lg" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} size="xl" />
-        <IconButton title="Heelo" icon={<ZoomPlus />} size="2xl" />
+      <Flex gap="4" items="center" wrap>
+        <IconButton title="Heelo" icon={<ZoomPlus />} gap="2" />
+        <IconButton title="Heelo" icon={<ZoomPlus />} gap="3" />
+        <IconButton title="Heelo" icon={<ZoomPlus />} gap="3" />
+        <IconButton title="Heelo" icon={<ZoomPlus />} gap="5" />
+        <IconButton title="Heelo" icon={<ZoomPlus />} gap="6" />
+        <IconButton title="Heelo" icon={<ZoomPlus />} gap="7" />
+        <IconButton title="Heelo" icon={<ZoomPlus />} gap="8" />
       </Flex>
     </>
   )

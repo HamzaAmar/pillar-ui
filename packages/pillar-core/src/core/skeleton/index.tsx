@@ -12,7 +12,7 @@ import type { CSSProperties } from 'react'
 */
 
 export const SkeletonAvatar = forwardRef(
-  ({ size = 'xl', corner = 'full', children, isLoading = true, className, ...rest }, ref) => {
+  ({ size = '6', corner = 'full', children, isLoading = true, className, ...rest }, ref) => {
     const classNames = cx(`s-k s-k_avt u_f-${size} u_rad-${corner}`, {
       [className!]: className,
     })
@@ -29,7 +29,7 @@ SkeletonAvatar.displayName = 'SkeletonAvatar'
 */
 
 export const SkeletonText = forwardRef(
-  ({ size = 'md', lines = 2.5, className, children, isLoading = true, as: Tag = 'div', ...rest }, ref) => {
+  ({ size = '5', lines = 2.5, className, children, isLoading = true, as: Tag = 'div', ...rest }, ref) => {
     const ceilNumber = Math.ceil(lines)
     const classNames = cx(`s-k s-k_txt u_f-${size}`, { [className!]: !!className })
     const linesComp = Array.from({ length: ceilNumber }, (_, index) => {
@@ -64,7 +64,7 @@ SkeletonText.displayName = 'SkeletonAvatar'
 */
 
 export const SkeletonButton = forwardRef(
-  ({ size = 'md', as: Tag = 'div', className, isLoading, children, ...rest }, ref) => {
+  ({ size = '5', as: Tag = 'div', className, isLoading, children, ...rest }, ref) => {
     const classNames = cx(`s-k s-k_btn u_f-${size}`, { [className!]: !!className })
 
     return isLoading ? <Tag ref={ref} className={classNames} {...rest} /> : children

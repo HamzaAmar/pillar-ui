@@ -4,7 +4,7 @@ import { Check } from '@pillar-ui/icons'
 export const BadgeColor = () => {
   return (
     <>
-      <Flex gap="sm">
+      <Flex gap="4">
         <Badge type="numeric" number={15} max={15} color="d" />
         <Badge type="numeric" number={15} max={15} color="s" />
         <Badge type="numeric" number={15} max={15} color="w" />
@@ -14,7 +14,7 @@ export const BadgeColor = () => {
         <Badge type="numeric" number={15} max={15} color="i" />
         <Badge type="numeric" number={15} max={15} />
       </Flex>
-      <Flex gap="sm">
+      <Flex gap="4">
         <Badge type="icon" color="d" icon={<Check />} />
         <Badge type="icon" color="s" icon={<Check />} />
         <Badge type="icon" color="w" icon={<Check />} />
@@ -24,7 +24,7 @@ export const BadgeColor = () => {
         <Badge type="icon" color="se" icon={<Check />} />
         <Badge type="icon" icon={<Check />} />
       </Flex>
-      <Flex gap="sm">
+      <Flex gap="4">
         <Badge type="dot" color="d" />
         <Badge type="dot" color="s" />
         <Badge type="dot" color="w" />

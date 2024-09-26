@@ -35,25 +35,25 @@ export const GridPlayGround = () => {
 export const GridGap = () => {
   return (
     <Paper className="playground" border p="sm" flow="md" background="b-3" corner="sm">
-      <Grid grid="repeat(4,30px)" gap="2xs">
+      <Grid grid="repeat(4,30px)" gap="2">
         {boxes}
       </Grid>
-      <Grid grid="repeat(4,30px)" gap="xs">
+      <Grid grid="repeat(4,30px)" gap="3">
         {boxes}
       </Grid>
-      <Grid grid="repeat(4,30px)" gap="sm">
+      <Grid grid="repeat(4,30px)" gap="4">
         {boxes}
       </Grid>
-      <Grid grid="repeat(4,30px)" gap="md">
+      <Grid grid="repeat(4,30px)" gap="5">
         {boxes}
       </Grid>
-      <Grid grid="repeat(4,30px)" gap="lg">
+      <Grid grid="repeat(4,30px)" gap="6">
         {boxes}
       </Grid>
-      <Grid grid="repeat(4,30px)" gap="xl">
+      <Grid grid="repeat(4,30px)" gap="7">
         {boxes}
       </Grid>
-      <Grid grid="repeat(4,30px)" gap="2xl">
+      <Grid grid="repeat(4,30px)" gap="8">
         {boxes}
       </Grid>
     </Paper>
@@ -63,22 +63,22 @@ export const GridGap = () => {
 export const GridJustify = () => {
   return (
     <Paper className="playground" border p="sm" background="b-3" corner="sm">
-      <Grid grid="repeat(5,1fr)" gap="sm">
+      <Grid grid="repeat(5,1fr)" gap="4">
         {boxes}
       </Grid>
-      <Grid grid="repeat(5,1fr)" gap="sm" justify="center">
+      <Grid grid="repeat(5,1fr)" gap="4" justify="center">
         {boxes}
       </Grid>
-      <Grid grid="repeat(5,1fr)" gap="sm" justify="end">
+      <Grid grid="repeat(5,1fr)" gap="4" justify="end">
         {boxes}
       </Grid>
-      <Grid grid="repeat(5,1fr)" gap="sm" justify="between">
+      <Grid grid="repeat(5,1fr)" gap="4" justify="between">
         {boxes}
       </Grid>
-      <Grid grid="repeat(5,1fr)" gap="sm" justify="around">
+      <Grid grid="repeat(5,1fr)" gap="4" justify="around">
         {boxes}
       </Grid>
-      <Grid grid="repeat(5,1fr)" gap="sm" justify="evenly">
+      <Grid grid="repeat(5,1fr)" gap="4" justify="evenly">
         {boxes}
       </Grid>
     </Paper>
@@ -88,11 +88,11 @@ export const GridJustify = () => {
 export const GridPlacement = () => {
   return (
     <Paper className="playground" border p="sm" background="b-3" corner="sm">
-      <Grid grid="5rem 1fr x 100px 400px 100px" gap="sm">
+      <Grid grid="5rem 1fr x 100px 400px 100px" gap="4">
         <GridItem placement="1 / 3" as={Box}>
           header
         </GridItem>
-        <GridItem placement="1 / 2 x 2 / 4" as={Grid} grid="4rem 1fr 4rem" gap="sm">
+        <GridItem placement="1 / 2 x 2 / 4" as={Grid} grid="4rem 1fr 4rem" gap="4">
           <Box className="l_fl-1">sidebar</Box>
           <Box className="l_fl-2">main</Box>
           <Box className="l_fl-1">sidebar</Box>
@@ -108,7 +108,7 @@ export const GridPlacement = () => {
 export const Item = () => {
   return (
     <Paper className="playground" border p="sm" background="b-3" corner="sm">
-      <Grid grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="sm">
+      <Grid grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="4">
         <GridItem placement="2/4" style={{ background: 'var(--B8)' }}>
           Header
         </GridItem>
@@ -132,7 +132,7 @@ export const Item = () => {
 export const GridGrid = () => {
   return (
     <Paper className="playground" border p="sm" background="b-3" corner="sm">
-      <Grid grid="repeat(5, 1fr)" gap="sm">
+      <Grid grid="repeat(5, 1fr)" gap="4">
         <div style={{ height: '40px', background: 'var(--B6)' }} />
         <div style={{ height: '40px', background: 'var(--B6)' }} />
         <div style={{ height: '40px', background: 'var(--B6)' }} />

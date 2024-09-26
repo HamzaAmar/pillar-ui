@@ -24,7 +24,7 @@ export const SizeInput = () => {
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
-      <FormGroup size="md" title="Name" direction="row">
+      <FormGroup gap="5" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />
@@ -35,7 +35,7 @@ export const SizeInput = () => {
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
-      <FormGroup size="lg" title="Name" direction="row">
+      <FormGroup gap="6" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />
@@ -168,7 +168,7 @@ export const StepInput = () => {
     <FormGroup title="number" direction="column">
       <InputNumber step="1" size="sm" placeholder="Step 1" />
       <InputNumber step="10" placeholder="Step 10" />
-      <InputNumber step=".1" size="lg" placeholder="Step 0.1" />
+      <InputNumber step=".1" gap="6" placeholder="Step 0.1" />
     </FormGroup>
   )
 }
@@ -178,7 +178,7 @@ export const StepAndMaxInput = () => {
     <FormGroup title="number" direction="column">
       <InputNumber step="1" max="10" size="sm" placeholder="Step 1 max 10" />
       <InputNumber step="10" max="100" placeholder="Step 10 max 100" />
-      <InputNumber step=".1" max=".5" size="lg" placeholder="Step 0.1 max 0.5" />
+      <InputNumber step=".1" max=".5" gap="6" placeholder="Step 0.1 max 0.5" />
     </FormGroup>
   )
 }
@@ -188,7 +188,7 @@ export const HideLabelFormGroup = () => {
     <FormGroup title="number" direction="column">
       <InputNumber step="1" max="10" size="sm" placeholder="Step 1 max 10" />
       <InputNumber step="10" max="100" placeholder="Step 10 max 100" />
-      <InputNumber step=".1" max=".5" size="lg" placeholder="Step 0.1 max 0.5" />
+      <InputNumber step=".1" max=".5" gap="6" placeholder="Step 0.1 max 0.5" />
     </FormGroup>
   )
 }

@@ -9,7 +9,7 @@ export const DocsCode = ({ code, html }: DocsCodeProps) => {
     <div className="code--section">
       <div className="code--header">
         <div className="dot" />
-        <CopyButton size="2xs" className="code--copy" text={code} />
+        <CopyButton gap="2" className="code--copy" text={code} />
       </div>
 
       <pre className="doc-pre">

@@ -9,8 +9,8 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box key={index} />)
 export const FlexDirection = () => {
   return (
     <>
-      <Flex gap="sm">{boxes}</Flex>
-      <Flex gap="sm" direction="column">
+      <Flex gap="4">{boxes}</Flex>
+      <Flex gap="4" direction="column">
         {boxes}
       </Flex>
     </>

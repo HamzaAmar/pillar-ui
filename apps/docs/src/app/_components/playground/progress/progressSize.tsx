@@ -4,22 +4,22 @@ export const ProgressSize = () => {
   return (
     <>
       <div className="l_f-sm">
-        <ProgressBar size="2xs" value={90} label="hello" />
-        <ProgressBar size="xs" value={90} label="hello" />
+        <ProgressBar gap="2" value={90} label="hello" />
+        <ProgressBar gap="3" value={90} label="hello" />
         <ProgressBar size="sm" value={90} label="hello" />
-        <ProgressBar size="md" value={90} label="hello" />
-        <ProgressBar size="lg" value={90} label="hello" />
-        <ProgressBar size="xl" value={90} label="hello" />
-        <ProgressBar size="2xl" value={90} label="hello" />
+        <ProgressBar gap="5" value={90} label="hello" />
+        <ProgressBar gap="6" value={90} label="hello" />
+        <ProgressBar gap="7" value={90} label="hello" />
+        <ProgressBar gap="8" value={90} label="hello" />
       </div>
-      <Flex wrap gap="sm">
-        <ProgressCircle size="2xs" value={15} label="hello" />
-        <ProgressCircle size="xs" value={15} label="hello" />
+      <Flex wrap gap="4">
+        <ProgressCircle gap="2" value={15} label="hello" />
+        <ProgressCircle gap="3" value={15} label="hello" />
         <ProgressCircle size="sm" value={30} label="hello" />
-        <ProgressCircle size="md" value={45} label="hello" />
-        <ProgressCircle size="lg" value={60} label="hello" />
-        <ProgressCircle size="xl" value={90} label="hello" />
-        <ProgressCircle size="2xl" value={95} label="hello" />
+        <ProgressCircle gap="5" value={45} label="hello" />
+        <ProgressCircle gap="6" value={60} label="hello" />
+        <ProgressCircle gap="7" value={90} label="hello" />
+        <ProgressCircle gap="8" value={95} label="hello" />
       </Flex>
       <ProgressBarStack size="sm" label="Nice to meet you">
         <ProgressBarStackItem label="CSS" color="d" value={30}>

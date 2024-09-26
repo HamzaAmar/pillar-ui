@@ -6,12 +6,12 @@ function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
   const { jobTitle, description, followers, fullName, likes } = USER_DATA[type].user
   return (
     <article dir={type === 'ar' ? 'rtl' : 'ltr'} className="user--article l_f-sm">
-      <Flex items="center" justify="between" gap="xs">
-        <Flex gap="sm">
+      <Flex items="center" justify="between" gap="3">
+        <Flex gap="4">
           <Avatar variant="dashed" />
           <div>
             <Text>{fullName}</Text>
-            <Text color="b" low size="xs">
+            <Text color="b" low gap="3">
               {jobTitle}
             </Text>
           </div>
@@ -23,7 +23,7 @@ function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
           {description}
         </Text>
       </div>
-      <Flex gap="md">
+      <Flex gap="5">
         <Text size="sm">
           <Text as="span" weight="medium">
             {likes}
@@ -43,7 +43,7 @@ function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
 
 export function RTLSupport() {
   return (
-    <Paper as={Grid} grid="1.7fr 1fr" lg="1fr" items="center" gap="md" className="section rtl--support">
+    <Paper as={Grid} grid="1.7fr 1fr" lg="1fr" items="center" gap="5" className="section rtl--support">
       <div className="rtl--support--content">
         <div className="l_f-lg">
           <div className="l_f-xs">
@@ -54,17 +54,17 @@ export function RTLSupport() {
               />
             </div>
 
-            <Text size="xl" color="b" low>
+            <Text gap="7" color="b" low>
               Our UI library ensures a welcoming experience for users worldwide.
             </Text>
           </div>
 
-          <Grid grid="1fr 1fr" md="1fr" gap="sm" className="feature-list">
+          <Grid grid="1fr 1fr" md="1fr" gap="4" className="feature-list">
             {FEATURES.map(({ id, title, description, icon }) => (
-              <Flex key={id} as="article" gap="sm" className="feature--item">
+              <Flex key={id} as="article" gap="4" className="feature--item">
                 <span className="feature-icon">{icon}</span>
                 <div>
-                  <Text weight="medium" size="md">
+                  <Text weight="medium" gap="5">
                     {title}
                   </Text>
                   <Text low color="b">

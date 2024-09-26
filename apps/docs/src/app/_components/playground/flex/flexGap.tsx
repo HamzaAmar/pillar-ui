@@ -8,13 +8,13 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box key={index} />)
 export const FlexGap = () => {
   return (
     <>
-      <Flex gap="2xs">{boxes}</Flex>
-      <Flex gap="xs">{boxes}</Flex>
-      <Flex gap="sm">{boxes}</Flex>
-      <Flex gap="md">{boxes}</Flex>
-      <Flex gap="lg">{boxes}</Flex>
-      <Flex gap="xl">{boxes}</Flex>
-      <Flex gap="2xl">{boxes}</Flex>
+      <Flex gap="2">{boxes}</Flex>
+      <Flex gap="3">{boxes}</Flex>
+      <Flex gap="4">{boxes}</Flex>
+      <Flex gap="5">{boxes}</Flex>
+      <Flex gap="6">{boxes}</Flex>
+      <Flex gap="7">{boxes}</Flex>
+      <Flex gap="8">{boxes}</Flex>
     </>
   )
 }

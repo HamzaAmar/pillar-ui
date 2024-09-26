@@ -3,11 +3,11 @@ import { PinInput } from '@pillar-ui/core'
 export const PinInputSize = () => {
   return (
     <>
-      <PinInput size="xs" />
+      <PinInput gap="3" />
       <PinInput size="sm" />
-      <PinInput size="md" />
-      <PinInput size="lg" />
-      <PinInput size="xl" />
+      <PinInput gap="5" />
+      <PinInput gap="6" />
+      <PinInput gap="7" />
     </>
   )
 }

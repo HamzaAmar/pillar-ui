@@ -8,11 +8,11 @@ export function DarkMode() {
       <div className="l_f-lg">
         <div className="l_f-md">
           <SectionHeading subheading=" Subtle, Soothing, Smart" heading=" Night Mode: Effortless Elegance" />
-          <Text className="dark--description" color="b" low size="xl">
+          <Text className="dark--description" color="b" low gap="7">
             Switch to dark mode with ease. Our useDarkMode hook ensures a smooth, flicker-free experience, compatible
             with major frameworks.
           </Text>
-          <Text className="dark--description" color="b" low size="xl">
+          <Text className="dark--description" color="b" low gap="7">
             Our styles are dark mode-ready from the start. Simply add <code>class=&quot;dark&quot;</code> to your
             elements, and watch them transform.
           </Text>

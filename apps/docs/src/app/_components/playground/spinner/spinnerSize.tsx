@@ -4,14 +4,14 @@ export const SpinnerSize = () => {
   return (
     <>
       <Spinner size="3xs" />
-      <Spinner size="2xs" />
-      <Spinner size="xs" />
+      <Spinner gap="2" />
+      <Spinner gap="3" />
       <Spinner size="sm" />
       <Spinner />
-      <Spinner size="lg" />
-      <Spinner size="xl" />
-      <Spinner size="2xl" />
-      <Spinner size="3xl" />
+      <Spinner gap="6" />
+      <Spinner gap="7" />
+      <Spinner gap="8" />
+      <Spinner gap="9" />
     </>
   )
 }
