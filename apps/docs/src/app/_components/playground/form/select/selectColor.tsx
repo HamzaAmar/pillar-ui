@@ -29,7 +29,7 @@ export const SelectColor = () => {
       <Select color="p">
         <Options />
       </Select>
-      <Select color="bg">
+      <Select color="b">
         <Options />
       </Select>
       <Select>

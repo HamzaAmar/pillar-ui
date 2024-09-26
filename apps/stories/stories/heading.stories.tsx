@@ -225,7 +225,7 @@ export function HeadingColors() {
       <Heading color="p">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="bg">
+      <Heading color="b">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
 

@@ -225,7 +225,7 @@ export function TextColors() {
       <Text color="p">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="bg">
+      <Text color="b">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
 

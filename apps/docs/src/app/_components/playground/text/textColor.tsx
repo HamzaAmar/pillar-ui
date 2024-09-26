@@ -7,7 +7,7 @@ export const TextColor = () => {
       <Text color="s">Hello World</Text>
       <Text color="w">Hello World</Text>
       <Text color="p">Hello World</Text>
-      <Text color="bg">Hello World</Text>
+      <Text color="b">Hello World</Text>
       <Text color="se">Hello World</Text>
 
       <Text low color="d">
@@ -22,7 +22,7 @@ export const TextColor = () => {
       <Text low color="p">
         Hello World
       </Text>
-      <Text low color="bg">
+      <Text low color="b">
         Hello World
       </Text>
       <Text low color="se">

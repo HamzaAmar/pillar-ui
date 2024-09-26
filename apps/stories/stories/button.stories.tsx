@@ -37,7 +37,7 @@ export function ButtonsColors() {
       <Button color="w">Orange</Button>
       <Button color="d">Red</Button>
       <Button color="se">Secondary</Button>
-      <Button color="bg">bg</Button>
+      <Button color="b">bg</Button>
       <Button color="p">Primary</Button>
     </Flex>
   )
@@ -184,7 +184,7 @@ export function ButtonsCorners() {
         <Button corner="md" color="se">
           Secondary
         </Button>
-        <Button corner="lg" color="bg">
+        <Button corner="lg" color="b">
           bg
         </Button>
         <Button corner="xl" color="p">
@@ -217,7 +217,7 @@ export function ButtonsCorners() {
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
         <Button color="se">Secondary</Button>
-        <Button color="bg">bg</Button>
+        <Button color="b">bg</Button>
         <Button color="p">Primary</Button>
       </Flex>
 
@@ -228,7 +228,7 @@ export function ButtonsCorners() {
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
         <Button color="se">Secondary</Button>
-        <Button color="bg">bg</Button>
+        <Button color="b">bg</Button>
         <Button color="p">Primary</Button>
       </Flex>
     </div>
@@ -250,7 +250,7 @@ export function ButtonSizes() {
       <Button size="sm" color="se">
         Secondary
       </Button>
-      <Button size="md" color="bg">
+      <Button size="md" color="b">
         bg
       </Button>
       <Button size="lg" color="p">
@@ -275,7 +275,7 @@ export function ButtonsFluid() {
       <Button fluid icon={<Github />} size="sm" color="se">
         Secondary
       </Button>
-      <Button fluid icon={<Eye />} iconPosition="end" size="md" color="bg">
+      <Button fluid icon={<Eye />} iconPosition="end" size="md" color="b">
         bg
       </Button>
       <Button fluid icon={<ThumbUp />} size="lg" color="p">
@@ -325,7 +325,7 @@ export function ButtonLoadingState() {
       <Button state="loading" size="sm" color="se">
         Secondary
       </Button>
-      <Button state="loading" size="md" color="bg">
+      <Button state="loading" size="md" color="b">
         bg
       </Button>
       <Button state="loading" size="lg" color="p">

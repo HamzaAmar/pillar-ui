@@ -190,7 +190,7 @@ export function LinkColors() {
       <Link href="#" color="p">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="bg">
+      <Link href="#" color="b">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
 
@@ -209,7 +209,7 @@ export function LinkColors() {
       <Link href="#" color="p">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="bg">
+      <Link href="#" color="b">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
     </div>

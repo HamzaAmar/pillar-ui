@@ -67,7 +67,7 @@ export function RTLSupport() {
                   <Text weight="medium" size="md">
                     {title}
                   </Text>
-                  <Text low color="bg">
+                  <Text low color="b">
                     {description}
                   </Text>
                 </div>

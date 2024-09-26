@@ -7,7 +7,7 @@ import type { ForwardRefComponent } from '../../types/polymorphic.type'
 export const Separator = forwardRef(
   (
     {
-      color = 'bg',
+      color = 'b',
       direction = 'horizontal',
       position = 'start',
       thickness = 'xs',

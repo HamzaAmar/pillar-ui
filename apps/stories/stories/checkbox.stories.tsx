@@ -48,7 +48,7 @@ export const CheckboxColor = () => {
       <Checkbox name="hello" label="Warning" color="w" />
       <Checkbox name="hello" label="Primary" color="p" />
       <Checkbox name="hello" label="Secondary" color="se" />
-      <Checkbox name="hello" label="bg" color="b" />
+      <Checkbox name="hello" label="b" color="b" />
     </Flex>
   )
 }

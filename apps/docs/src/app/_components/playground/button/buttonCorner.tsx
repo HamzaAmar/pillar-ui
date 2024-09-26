@@ -3,7 +3,7 @@ import { ZoomPlus } from '@pillar-ui/icons'
 
 export function ButtonCorner() {
   return (
-    <Paper className="playground" border flow="sm" p="sm" background="bg-3" corner="sm">
+    <Paper className="playground" border flow="sm" p="sm" background="b-3" corner="sm">
       <Flex gap="sm" items="center" wrap>
         <Button corner="sharp">Hello World</Button>
         <Button corner="xs">Hello World</Button>

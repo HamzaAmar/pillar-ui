@@ -46,7 +46,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
         <Button
           as="a"
           size="xs"
-          color="bg"
+          color="b"
           target="_blank"
           href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
           icon={<Github strokeWidth={2} />}
@@ -58,7 +58,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
           href="https://github.com/HamzaAmar/pillar-ui/issues"
           target="_blank"
           variant="soft"
-          color="bg"
+          color="b"
           icon={<Github strokeWidth={2} />}
           size="xs"
         >
@@ -69,7 +69,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
           href="https://github.com/HamzaAmar/pillar-ui/discussions"
           target="_blank"
           variant="soft"
-          color="bg"
+          color="b"
           icon={<Github strokeWidth={2} />}
           size="xs"
         >

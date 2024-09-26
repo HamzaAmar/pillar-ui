@@ -35,8 +35,8 @@ import { Eye, ArrowDown, Minimize } from '@pillar-ui/icons'
 function MyComponent() {
   return (
     <div>
-      <Eye size={24} fill="pri" />
-      <ArrowDown size={32} fill="sec" />
+      <Eye size={24} fill="p" />
+      <ArrowDown size={32} fill="se" />
       <Minimize size={48} fill="accent" />
     </div>
   )

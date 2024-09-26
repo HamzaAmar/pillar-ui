@@ -72,7 +72,7 @@ Button.displayName = 'Button'
 
 export const IconButton = forwardRef(
   (
-    { icon, title, corner, color = 'bg', size = 'md', variant = 'transparent', className, as: Tag = 'button', ...rest },
+    { icon, title, corner, color = 'b', size = 'md', variant = 'transparent', className, as: Tag = 'button', ...rest },
     forwardedRef
   ) => {
     const classnames = cx(`b-u bu-i u_${variant} C${color} u_center`, {

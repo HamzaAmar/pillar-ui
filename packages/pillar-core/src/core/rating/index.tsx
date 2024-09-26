@@ -10,7 +10,7 @@ const ICONS = {
 export const Rating = ({
   rating,
   hideTitle,
-  color = 'war',
+  color = 'w',
   title = `${rating} star${rating > 1 && 's'} out of 5`,
   size,
   icon = 'star',

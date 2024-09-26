@@ -18,7 +18,7 @@ export function ButtonFluid() {
       <Button fluid color="se">
         Hello World
       </Button>
-      <Button fluid color="bg">
+      <Button fluid color="b">
         Hello World
       </Button>
     </>

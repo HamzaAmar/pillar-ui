@@ -79,7 +79,7 @@ TabPanel.displayName = 'TabPanel'
 */
 
 export const TabPanels = forwardRef((props, ref) => {
-  const { color = 'bg-12', children, ...rest } = props
+  const { color = 'b-12', children, ...rest } = props
 
   return (
     <div ref={ref} {...rest}>

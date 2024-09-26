@@ -36,7 +36,7 @@ export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
 TableRow.displayName = 'TableRow'
 
 export const Table = ({
-  color = 'bg',
+  color = 'b',
   variant = 'default',
   showBorder,
   size = 'md',

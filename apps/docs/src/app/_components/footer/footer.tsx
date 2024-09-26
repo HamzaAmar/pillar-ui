@@ -11,7 +11,7 @@ const FooterItem = ({ href, text, external = false }: FooterItemProps) => {
     <li>
       <Text
         transform="capitalize"
-        color="bg"
+        color="b"
         low
         as={external ? 'a' : Link}
         className="footer_link"
@@ -42,7 +42,7 @@ const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }
 const footer = () => {
   return (
     <footer>
-      <Paper background="bg-3" as={Grid} p="lg" gap="sm" grid="repeat(4, minmax(1px, 1fr))" xs="1fr" lg="1fr 1fr">
+      <Paper background="b-3" as={Grid} p="lg" gap="sm" grid="repeat(4, minmax(1px, 1fr))" xs="1fr" lg="1fr 1fr">
         <div>
           <Logo width={100} />
           <Text transform="first-letter-only" color="b" low>

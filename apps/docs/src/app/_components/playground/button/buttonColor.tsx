@@ -10,7 +10,7 @@ export function ButtonColor() {
         <Button color="s">Hello World</Button>
         <Button color="p">Hello World</Button>
         <Button color="se">Hello World</Button>
-        <Button color="bg">Hello World</Button>
+        <Button color="b">Hello World</Button>
       </Flex>
 
       <Flex gap="sm" items="center" wrap>
