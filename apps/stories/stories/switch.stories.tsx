@@ -33,7 +33,7 @@ export function SwitchColors() {
     <Flex gap="4" items="center">
       <Switch label="Hello" color="d" />
       <Switch label="Hello" color="w" />
-      <Switch label="Hello" color="s" />
+      <Switch label="Hello" color="su" />
       <Switch label="Hello" color="p" />
       <Switch label="Hello" color="se" />
       <Switch label="Hello" color="b" />
@@ -46,7 +46,7 @@ export function SwitchColorsDefault() {
     <Flex gap="4" items="center">
       <Switch label="Hello" defaultPressed color="d" />
       <Switch label="Hello" defaultPressed color="w" />
-      <Switch label="Hello" defaultPressed color="s" />
+      <Switch label="Hello" defaultPressed color="su" />
       <Switch label="Hello" defaultPressed color="p" />
       <Switch label="Hello" defaultPressed color="se" />
       <Switch label="Hello" defaultPressed color="b" />

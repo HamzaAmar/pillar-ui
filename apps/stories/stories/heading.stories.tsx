@@ -216,7 +216,7 @@ export function HeadingColors() {
       <Heading color="se">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="s">
+      <Heading color="su">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
       <Heading color="w">
@@ -235,7 +235,7 @@ export function HeadingColors() {
       <Heading color="se" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
-      <Heading color="s" low>
+      <Heading color="su" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
       <Heading color="w" low>

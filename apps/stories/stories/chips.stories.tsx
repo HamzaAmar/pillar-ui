@@ -22,7 +22,7 @@ export const ChipsColor = () => (
     <Chips color="w" variant="solid">
       Hello
     </Chips>
-    <Chips color="s" variant="solid">
+    <Chips color="su" variant="solid">
       Hello
     </Chips>
 
@@ -51,7 +51,7 @@ export const ChipsVariants = () => (
         <Chips color="w" variant={variant}>
           Hello
         </Chips>
-        <Chips color="s" variant={variant}>
+        <Chips color="su" variant={variant}>
           Hello
         </Chips>
 

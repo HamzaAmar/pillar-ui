@@ -20,8 +20,8 @@ export function PaperBackground() {
       <Paper background="d">Hello</Paper>
       <Paper background="d-8">Hello</Paper>
       <Paper background="w">Hello</Paper>
-      <Paper background="s">Hello</Paper>
-      <Paper background="s">Hello</Paper>
+      <Paper background="su">Hello</Paper>
+      <Paper background="su">Hello</Paper>
       <Paper background="p">Hello</Paper>
       <Paper background="b">Hello</Paper>
       <Paper background="b">Hello</Paper>
@@ -49,13 +49,13 @@ export function PaperPadding() {
       <Paper p="3" background="w">
         Hello
       </Paper>
-      <Paper p="4" background="s">
+      <Paper p="4" background="su">
         Hello
       </Paper>
       <Paper p="5" background="b">
         Hello
       </Paper>
-      <Paper p="7" background="s">
+      <Paper p="7" background="su">
         Hello
       </Paper>
       <Paper p="8" background="p">
@@ -126,13 +126,13 @@ export function PaperColors() {
       <Paper p="4" background="b-4" color="d-11">
         Hello
       </Paper>
-      <Paper p="4" background="b-4" color="s-11">
+      <Paper p="4" background="b-4" color="su-11">
         Hello
       </Paper>
       <Paper p="4" background="b-4" color="w-11">
         Hello
       </Paper>
-      <Paper p="4" background="b-4" color="s-11">
+      <Paper p="4" background="b-4" color="su-11">
         Hello
       </Paper>
       <Paper p="4" background="b-4" color="b-11">
@@ -151,25 +151,25 @@ export function PaperWidths() {
       <Paper background="d-4" color="d">
         Hello
       </Paper>
-      <Paper width="25" background="s-4" color="s">
+      <Paper width="25" background="su-4" color="su">
         Hello
       </Paper>
       <Paper width="50" background="w-4" color="w">
         Hello
       </Paper>
-      <Paper width="75" background="s-4" color="se">
+      <Paper width="75" background="su-4" color="se">
         Hello
       </Paper>
-      <Paper width="100" background="s-4" color="se">
+      <Paper width="100" background="su-4" color="se">
         Hello
       </Paper>
-      <Paper width="30-char" background="s-4" color="s">
+      <Paper width="30-char" background="su-4" color="su">
         Hello
       </Paper>
       <Paper width="45-char" background="w-4" color="w">
         Hello
       </Paper>
-      <Paper width="60-char" background="s-4" color="se">
+      <Paper width="60-char" background="su-4" color="se">
         Hello
       </Paper>
       <Paper width="75-char" background="b-4" color="b">
@@ -228,16 +228,16 @@ export function PaperRatio() {
 export function PaperHeight() {
   return (
     <div className="Sf4">
-      <Paper height="25" background="s-4" color="s">
+      <Paper height="25" background="su-4" color="su">
         Hello
       </Paper>
       <Paper height="50" background="w-4" color="w">
         Hello
       </Paper>
-      <Paper height="75" background="s-4" color="se">
+      <Paper height="75" background="su-4" color="se">
         Hello
       </Paper>
-      <Paper height="100" background="s-4" color="se">
+      <Paper height="100" background="su-4" color="se">
         Hello
       </Paper>
       <Paper height="fit" background="p-4" color="p">

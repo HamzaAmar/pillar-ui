@@ -104,7 +104,7 @@ export const ColorInput = () => {
       <Input color="w" variant="bordered" autoFocus placeholder="Normal" />
       <Input color="se" variant="outline" autoFocus placeholder="Disabled" />
       <Input color="b" variant="filled" autoFocus placeholder="isInvalid" />
-      <Input color="s" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
+      <Input color="su" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
       <Input
         color="d"
         variant="bordered"

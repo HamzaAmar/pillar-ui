@@ -15,13 +15,13 @@ export const PaperColor = () => {
       <Paper background="b-5" p="3" color="d-10">
         Hello
       </Paper>
-      <Paper background="b-5" p="3" color="s-5">
+      <Paper background="b-5" p="3" color="su-5">
         Hello
       </Paper>
-      <Paper background="b-5" p="3" color="s-8">
+      <Paper background="b-5" p="3" color="su-8">
         Hello
       </Paper>
-      <Paper background="b-5" p="3" color="s-11">
+      <Paper background="b-5" p="3" color="su-11">
         Hello
       </Paper>
       <Paper background="b-5" p="3" color="p-12">
@@ -51,13 +51,13 @@ export const PaperColor = () => {
       <Paper background="b-5" p="3" color="w-12">
         Hello
       </Paper>
-      <Paper background="b-5" p="3" color="s-3">
+      <Paper background="b-5" p="3" color="su-3">
         Hello
       </Paper>
-      <Paper background="b-5" p="3" color="s-8">
+      <Paper background="b-5" p="3" color="su-8">
         Hello
       </Paper>
-      <Paper background="b-5" p="3" color="s-12">
+      <Paper background="b-5" p="3" color="su-12">
         Hello
       </Paper>
       <Paper background="b-5" p="3" color="o-4">

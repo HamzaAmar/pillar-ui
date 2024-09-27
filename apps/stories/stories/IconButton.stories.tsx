@@ -12,7 +12,7 @@ export default meta
 export function IconButtonsColors() {
   return (
     <Flex gap="4">
-      <IconButton title="Hello world" icon={<ThumbUp />} color="s" />
+      <IconButton title="Hello world" icon={<ThumbUp />} color="su" />
       <IconButton title="Hello world" icon={<ThumbUp />} color="w" />
       <IconButton title="Hello world" icon={<ThumbUp />} color="d" />
       <IconButton title="Hello world" icon={<ThumbUp />} color="se" />
@@ -25,7 +25,7 @@ export function IconButtonsColors() {
 export function IconButtonsSizes() {
   return (
     <Flex gap="4" items="center">
-      <IconButton title="Hello world" size="1" icon={<ThumbUp />} color="s" />
+      <IconButton title="Hello world" size="1" icon={<ThumbUp />} color="su" />
       <IconButton title="Hello world" size="2" icon={<ThumbUp />} color="w" />
       <IconButton title="Hello world" size="3" icon={<ThumbUp />} color="d" />
       <IconButton title="Hello world" size="4" icon={<ThumbUp />} color="se" />
@@ -38,7 +38,7 @@ export function IconButtonsSizes() {
 export function IconButtonsCorners() {
   return (
     <Flex gap="4" items="center">
-      <IconButton title="Hello world" corner="0" icon={<ThumbUp />} color="s" />
+      <IconButton title="Hello world" corner="0" icon={<ThumbUp />} color="su" />
       <IconButton title="Hello world" corner="3" icon={<ThumbUp />} color="d" />
       <IconButton title="Hello world" corner="2" icon={<ThumbUp />} color="se" />
       <IconButton title="Hello world" corner="3" icon={<ThumbUp />} color="b" />
@@ -53,7 +53,7 @@ export function IconButtonsVariants() {
     <div className="Sf4">
       {VARIANTS.map((variant) => (
         <Flex key={variant} gap="4">
-          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="s" />
+          <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="su" />
           <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="w" />
           <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="d" />
           <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="se" />

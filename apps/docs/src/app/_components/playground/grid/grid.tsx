@@ -24,7 +24,7 @@ export const GridPlayGround = () => {
     <Paper className="playground" border background="b-3" corner="2">
       <Avatar title="Success!" color="d" />
       <Avatar title="Success!" color="w" />
-      <Avatar title="Success!" color="s" />
+      <Avatar title="Success!" color="su" />
       <Avatar title="Success!" color="p" />
       <Avatar title="Success!" color="b" />
       <Avatar title="Success!" color="se" />

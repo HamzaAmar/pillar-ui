@@ -91,7 +91,7 @@ export const BlockquoteColor = () => {
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?
       </Blockquote>
-      <Blockquote color="s">
+      <Blockquote color="su">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?

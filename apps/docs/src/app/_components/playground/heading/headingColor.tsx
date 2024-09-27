@@ -4,7 +4,7 @@ export const HeadingColor = () => {
   return (
     <>
       <Heading color="d">Hello World</Heading>
-      <Heading color="s">Hello World</Heading>
+      <Heading color="su">Hello World</Heading>
       <Heading color="w">Hello World</Heading>
       <Heading color="p">Hello World</Heading>
       <Heading color="b">Hello World</Heading>
@@ -13,7 +13,7 @@ export const HeadingColor = () => {
       <Heading low color="d">
         Hello World
       </Heading>
-      <Heading low color="s">
+      <Heading low color="su">
         Hello World
       </Heading>
       <Heading low color="w">

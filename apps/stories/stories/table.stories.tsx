@@ -99,7 +99,7 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="3">
           Striped Table success
         </Heading>
-        <NormalTableExample color="s" variant="striped" />
+        <NormalTableExample color="su" variant="striped" />
         <Heading as="h2" size="3">
           Striped Table Secondary
         </Heading>
@@ -124,7 +124,7 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="3">
           Default Table success
         </Heading>
-        <NormalTableExample color="s" />
+        <NormalTableExample color="su" />
         <Heading as="h2" size="3">
           Default Table secondary
         </Heading>
@@ -144,7 +144,7 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="3">
           Soft Table success
         </Heading>
-        <NormalTableExample variant="soft" color="s" />
+        <NormalTableExample variant="soft" color="su" />
         <Heading as="h2" size="3">
           Soft Table secondary
         </Heading>
@@ -165,7 +165,7 @@ export const NormalTableColor = () => {
         <Heading as="h2" size="3">
           Head Color Table success
         </Heading>
-        <NormalTableExample variant="head-color" color="s" />
+        <NormalTableExample variant="head-color" color="su" />
         <Heading as="h2" size="3">
           Head Color Table secondary
         </Heading>

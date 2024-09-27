@@ -122,7 +122,7 @@ export const StepperColors = () => {
     <div className="Sf4">
       <StepperBase color="d" />
       <StepperBase color="w" />
-      <StepperBase color="s" />
+      <StepperBase color="su" />
       <StepperBase color="se" />
       <StepperBase color="b" />
       <StepperBase color="p" />

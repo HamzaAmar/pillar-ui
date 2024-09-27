@@ -126,7 +126,7 @@ export const CornerInput = () => {
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
-      <FormGroup size="4" color="s" title="Name" direction="row">
+      <FormGroup size="4" color="su" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />

@@ -37,7 +37,7 @@ export const TimelineColor = () => {
       <TimelineBase color="b" />
       <TimelineBase color="se" />
       <TimelineBase color="p" />
-      <TimelineBase color="s" />
+      <TimelineBase color="su" />
       <TimelineBase color="d" />
       <TimelineBase color="w" />
     </>

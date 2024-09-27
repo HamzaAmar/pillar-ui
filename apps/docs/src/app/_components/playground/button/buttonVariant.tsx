@@ -4,48 +4,48 @@ export function ButtonVariant() {
   return (
     <>
       <>
-        <Button color="s" variant="link">
+        <Button color="su" variant="link">
           Green
         </Button>
-        <Button color="s" variant="mixed">
+        <Button color="su" variant="mixed">
           Green
         </Button>
-        <Button color="s" variant="outline">
+        <Button color="su" variant="outline">
           Green
         </Button>
-        <Button color="s" variant="shadow">
+        <Button color="su" variant="shadow">
           Green
         </Button>
-        <Button color="s" variant="soft">
+        <Button color="su" variant="soft">
           Green
         </Button>
-        <Button color="s" variant="solid">
+        <Button color="su" variant="solid">
           Green
         </Button>
-        <Button color="s" variant="text">
+        <Button color="su" variant="text">
           Green
         </Button>
       </>
       <>
-        <Button color="s" variant="link">
+        <Button color="su" variant="link">
           Green
         </Button>
-        <Button color="s" variant="mixed">
+        <Button color="su" variant="mixed">
           Green
         </Button>
-        <Button color="s" variant="outline">
+        <Button color="su" variant="outline">
           Green
         </Button>
-        <Button color="s" variant="shadow">
+        <Button color="su" variant="shadow">
           Green
         </Button>
-        <Button color="s" variant="soft">
+        <Button color="su" variant="soft">
           Green
         </Button>
-        <Button color="s" variant="solid">
+        <Button color="su" variant="solid">
           Green
         </Button>
-        <Button color="s" variant="text">
+        <Button color="su" variant="text">
           Green
         </Button>
       </>

@@ -20,7 +20,7 @@ export const SelectColor = () => {
       <Select color="w">
         <Options />
       </Select>
-      <Select color="s">
+      <Select color="su">
         <Options />
       </Select>
       <Select color="se">

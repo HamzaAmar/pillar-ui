@@ -15,7 +15,7 @@ type Size = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
  * @property {Color} b - Background color (for backgrounds or containers)
  * @property {Color} o - Opacity color (for Transparency element)
  */
-type Color = 'i' | 'd' | 's' | 'se' | 'w' | 'p' | 'b' | 'o' | undefined
+type Color = 'i' | 'd' | 'su' | 'se' | 'w' | 'p' | 'b' | 'o' | undefined
 
 /**
  * Represents the color of a component.

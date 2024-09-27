@@ -130,7 +130,7 @@ export function AvatarsColors() {
       <Flex gap="3" items="center">
         <Avatar color="d" variant="solid" image={image} title="Hello" />
         <Avatar color="d" variant="solid" title="Hello" />
-        <Avatar color="s" variant="solid" title="Hello" />
+        <Avatar color="su" variant="solid" title="Hello" />
         <Avatar color="w" variant="solid" title="Hello" />
         <Avatar color="se" variant="solid" title="Hello" />
         <Avatar color="p" variant="solid" title="Hello" />
@@ -139,7 +139,7 @@ export function AvatarsColors() {
       <Flex gap="3" items="center">
         <Avatar color="d" variant="outline" image={image} title="Hello" />
         <Avatar color="d" variant="outline" title="Hello" />
-        <Avatar color="s" variant="outline" title="Hello" />
+        <Avatar color="su" variant="outline" title="Hello" />
         <Avatar color="w" variant="outline" title="Hello" />
         <Avatar color="se" variant="outline" title="Hello" />
         <Avatar color="p" variant="outline" title="Hello" />
@@ -148,7 +148,7 @@ export function AvatarsColors() {
       <Flex gap="3" items="center">
         <Avatar color="d" variant="dashed" image={image} title="Hello" />
         <Avatar color="d" variant="dashed" title="Hello" />
-        <Avatar color="s" variant="dashed" title="Hello" />
+        <Avatar color="su" variant="dashed" title="Hello" />
         <Avatar color="w" variant="dashed" title="Hello" />
         <Avatar color="se" variant="dashed" title="Hello" />
         <Avatar color="p" variant="dashed" title="Hello" />
@@ -157,7 +157,7 @@ export function AvatarsColors() {
       <Flex gap="3" items="center">
         <Avatar color="d" variant="soft" image={image} title="Hello" />
         <Avatar color="d" variant="soft" title="Hello" />
-        <Avatar color="s" variant="soft" title="Hello" />
+        <Avatar color="su" variant="soft" title="Hello" />
         <Avatar color="w" variant="soft" title="Hello" />
         <Avatar color="se" variant="soft" title="Hello" />
         <Avatar color="p" variant="soft" title="Hello" />

@@ -4,7 +4,7 @@ export const TextColor = () => {
   return (
     <>
       <Text color="d">Hello World</Text>
-      <Text color="s">Hello World</Text>
+      <Text color="su">Hello World</Text>
       <Text color="w">Hello World</Text>
       <Text color="p">Hello World</Text>
       <Text color="b">Hello World</Text>
@@ -13,7 +13,7 @@ export const TextColor = () => {
       <Text low color="d">
         Hello World
       </Text>
-      <Text low color="s">
+      <Text low color="su">
         Hello World
       </Text>
       <Text low color="w">

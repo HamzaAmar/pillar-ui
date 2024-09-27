@@ -4,7 +4,7 @@ export const LinkColor = () => {
   return (
     <>
       <Link color="d">Hello World</Link>
-      <Link color="s">Hello World</Link>
+      <Link color="su">Hello World</Link>
       <Link color="w">Hello World</Link>
       <Link color="p">Hello World</Link>
       <Link color="b">Hello World</Link>
@@ -13,7 +13,7 @@ export const LinkColor = () => {
       <Link low color="d">
         Hello World
       </Link>
-      <Link low color="s">
+      <Link low color="su">
         Hello World
       </Link>
       <Link low color="w">

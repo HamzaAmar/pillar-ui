@@ -5,7 +5,7 @@ export const BadgeIcon = () => {
   return (
     <>
       <Badge type="icon" icon={<Check />} color="d" />
-      <Badge type="icon" icon={<Eye />} color="s" />
+      <Badge type="icon" icon={<Eye />} color="su" />
       <Badge type="icon" icon={<User />} color="w" />
       <Badge type="icon" icon={<Plus />} color="p" />
       <Badge type="icon" icon={<Verified />} color="d" />

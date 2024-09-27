@@ -14,7 +14,7 @@ export const SeparatorColors = () => {
     <div className="Sf4">
       <Separator color="d" />
       <Separator color="w" />
-      <Separator color="s" />
+      <Separator color="su" />
       <Separator color="se" />
       <Separator color="p" />
       <Separator color="b" />

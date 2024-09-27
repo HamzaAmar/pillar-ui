@@ -34,7 +34,7 @@ export const FormGroupColors = () => {
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="User" color="s">
+      <FormGroup title="User" color="su">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />

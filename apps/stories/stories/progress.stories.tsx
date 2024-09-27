@@ -30,7 +30,7 @@ export const ProgressBarColor = () => {
   return (
     <Flex direction="column" gap="4" wrap>
       <ProgressBar color="d" value={90} label="hello" />
-      <ProgressBar color="s" value={90} label="hello" />
+      <ProgressBar color="su" value={90} label="hello" />
       <ProgressBar color="w" value={90} label="hello" />
       <ProgressBar color="se" value={90} label="hello" />
       <ProgressBar color="b" value={90} label="hello" />
@@ -87,7 +87,7 @@ export const ProgressCircleColor = () => {
   return (
     <Flex gap="4">
       <ProgressCircle color="d" value={15} label="hello" />
-      <ProgressCircle color="s" value={30} label="hello" />
+      <ProgressCircle color="su" value={30} label="hello" />
       <ProgressCircle color="w" value={60} label="hello" />
       <ProgressCircle color="p" value={45} label="hello" />
       <ProgressCircle color="se" value={90} label="hello" />
@@ -102,7 +102,7 @@ function ProgressBarStackBase(props) {
       <ProgressBarStackItem label="CSS" color="d" value={30}>
         <button>CSS 30</button>
       </ProgressBarStackItem>
-      <ProgressBarStackItem label="HTML" color="s" value={15}>
+      <ProgressBarStackItem label="HTML" color="su" value={15}>
         <button>HTML 15%</button>
       </ProgressBarStackItem>
       <ProgressBarStackItem label="React" color="se" value={25}>

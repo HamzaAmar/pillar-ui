@@ -9,7 +9,7 @@ export const BlockquoteColor = () => {
       <Blockquote color="w" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote color="s" cite="John Doe">
+      <Blockquote color="su" cite="John Doe">
         This is the quoted text.
       </Blockquote>
       <Blockquote color="p" cite="John Doe">

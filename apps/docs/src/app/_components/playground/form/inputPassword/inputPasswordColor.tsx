@@ -9,7 +9,7 @@ export const InputPasswordColor = () => {
       <InputPassword color="se" variant="outline" autoFocus placeholder="Disabled" />
       <InputPassword color="b" variant="filled" autoFocus placeholder="isInvalid" />
       <InputPassword
-        color="s"
+        color="su"
         variant="bordered"
         autoFocus
         prefixInput={<User width="16" />}

@@ -45,19 +45,19 @@
   --c12: var(--W12);
 }
 
-.Cs {
-  --c1: var(--S1);
-  --c2: var(--S2);
-  --c3: var(--S3);
-  --c4: var(--S4);
-  --c5: var(--S5);
-  --c6: var(--S6);
-  --c7: var(--S7);
-  --c8: var(--S8);
-  --c9: var(--S9);
-  --c10: var(--S10);
-  --c11: var(--S11);
-  --c12: var(--S12);
+.Csu {
+  --c1: var(--Su1);
+  --c2: var(--Su2);
+  --c3: var(--Su3);
+  --c4: var(--Su4);
+  --c5: var(--Su5);
+  --c6: var(--Su6);
+  --c7: var(--Su7);
+  --c8: var(--Su8);
+  --c9: var(--Su9);
+  --c10: var(--Su10);
+  --c11: var(--Su11);
+  --c12: var(--Su12);
 }
 
 .Cd {

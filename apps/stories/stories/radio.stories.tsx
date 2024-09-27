@@ -24,7 +24,7 @@ export function RadioColors() {
     <div>
       <Flex gap="4" items="center">
         <Radio color="d" name="red" label="Red" />
-        <Radio color="s" name="green" label="Green" />
+        <Radio color="su" name="green" label="Green" />
         <Radio color="w" name="orange" label="Orange" />
         <Radio color="p" name="primary" label="Primary" />
         <Radio color="b" name="b" label="b" />
@@ -39,7 +39,7 @@ export function RadioDefaultCheck() {
     <div className="Sf4">
       <Flex gap="4" items="center">
         <Radio defaultChecked color="d" name="solid.red" label="Red" />
-        <Radio defaultChecked color="s" name="solid.green" label="Green" />
+        <Radio defaultChecked color="su" name="solid.green" label="Green" />
         <Radio defaultChecked color="w" name="solid.orange" label="Orange" />
         <Radio defaultChecked color="p" name="solid.primary" label="Primary" />
         <Radio defaultChecked color="b" name="solid.bg" label="b" />
@@ -47,7 +47,7 @@ export function RadioDefaultCheck() {
       </Flex>
       <Flex gap="4" items="center">
         <Radio defaultChecked variant="outline" color="d" name="outline.red" label="Red" />
-        <Radio defaultChecked variant="outline" color="s" name="outline.green" label="Green" />
+        <Radio defaultChecked variant="outline" color="su" name="outline.green" label="Green" />
         <Radio defaultChecked variant="outline" color="w" name="outline.orange" label="Orange" />
         <Radio defaultChecked variant="outline" color="p" name="outline.primary" label="Primary" />
         <Radio defaultChecked variant="outline" color="b" name="outline.bg" label="b" />
@@ -55,7 +55,7 @@ export function RadioDefaultCheck() {
       </Flex>
       <Flex gap="4" items="center">
         <Radio defaultChecked variant="soft" color="d" name="soft.red" label="Red" />
-        <Radio defaultChecked variant="soft" color="s" name="soft.green" label="Green" />
+        <Radio defaultChecked variant="soft" color="su" name="soft.green" label="Green" />
         <Radio defaultChecked variant="soft" color="w" name="soft.orange" label="Orange" />
         <Radio defaultChecked variant="soft" color="p" name="soft.primary" label="Primary" />
         <Radio defaultChecked variant="soft" color="b" name="soft.bg" label="b" />
@@ -70,7 +70,7 @@ export function RadioVariants() {
     <div className="Sf4">
       <Flex gap="4" items="center">
         <Radio color="d" name="red" label="Red" />
-        <Radio color="s" name="green" label="Green" />
+        <Radio color="su" name="green" label="Green" />
         <Radio color="w" name="orange" label="Orange" />
         <Radio color="p" name="primary" label="Primary" />
         <Radio color="b" name="b" label="b" />
@@ -78,7 +78,7 @@ export function RadioVariants() {
       </Flex>
       <Flex gap="4" items="center">
         <Radio variant="outline" color="d" name="red2" label="Red" />
-        <Radio variant="outline" color="s" name="green2" label="Green" />
+        <Radio variant="outline" color="su" name="green2" label="Green" />
         <Radio variant="outline" color="w" name="orange2" label="Orange" />
         <Radio variant="outline" color="p" name="pri2" label="Primary" />
         <Radio variant="outline" color="b" name="bg2" label="b" />
@@ -86,7 +86,7 @@ export function RadioVariants() {
       </Flex>
       <Flex gap="4" items="center">
         <Radio variant="soft" color="d" name="red3" label="Red" />
-        <Radio variant="soft" color="s" name="green3" label="Green" />
+        <Radio variant="soft" color="su" name="green3" label="Green" />
         <Radio variant="soft" color="w" name="orange3" label="Orange" />
         <Radio variant="soft" color="p" name="pri3" label="Primary" />
         <Radio variant="soft" color="b" name="bg3" label="b" />

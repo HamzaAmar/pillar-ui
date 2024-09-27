@@ -5,7 +5,7 @@ export const KbdColor = () => {
     <>
       <Kbd title="Esc" />
       <Kbd title="Esc" color="d" />
-      <Kbd title="Esc" color="s" />
+      <Kbd title="Esc" color="su" />
       <Kbd title="Esc" color="w" />
       <Kbd title="Esc" color="p" />
       <Kbd title="Esc" color="b" />

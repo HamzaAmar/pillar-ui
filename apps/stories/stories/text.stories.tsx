@@ -216,7 +216,7 @@ export function TextColors() {
       <Text color="se">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="s">
+      <Text color="su">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
       <Text color="w">
@@ -236,7 +236,7 @@ export function TextColors() {
       <Text color="se" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
-      <Text color="s" low>
+      <Text color="su" low>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
       <Text color="w" low>

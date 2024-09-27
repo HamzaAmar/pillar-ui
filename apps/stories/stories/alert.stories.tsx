@@ -27,7 +27,7 @@ export const AlertColors = () => {
     <Flex gap="4" direction="column">
       <AlertBase color="d" />
       <AlertBase color="w" />
-      <AlertBase color="s" />
+      <AlertBase color="su" />
       <AlertBase color="se" />
       <AlertBase color="p" />
       <AlertBase color="b" />
@@ -123,7 +123,7 @@ export const AlertIcon = () => {
   return (
     <Flex direction="column" gap="4">
       <AlertBase icon={<CircleWarning width="20" />} color="d" />
-      <AlertBase icon={<CircleCheck width="20" />} color="s" />
+      <AlertBase icon={<CircleCheck width="20" />} color="su" />
       <AlertBase icon={<CircleWarning width="20" />} color="w" />
       <AlertBase icon={<CircleInfo width="20" />} color="i" />
     </Flex>
@@ -157,7 +157,7 @@ export const AlertTitleIcon = () => {
   return (
     <Flex direction="column" gap="4">
       <Alert color="d" title="hello" />
-      <Alert color="s" message="hello world something is wrong in the app here we go" />
+      <Alert color="su" message="hello world something is wrong in the app here we go" />
       <Alert color="w" icon={<CircleWarning width="20" />} title="hello" />
       <Alert
         color="w"

@@ -89,18 +89,18 @@
   --W11: var(--Wl-11, #cc4e00);
   --W12: var(--Wl-12, #582d1d);
 
-  --S1: var(--Sl-1, #fbfefc);
-  --S2: var(--Sl-2, #f4fbf6);
-  --S3: var(--Sl-3, #e6f6eb);
-  --S4: var(--Sl-4, #d6f1df);
-  --S5: var(--Sl-5, #c4e8d1);
-  --S6: var(--Sl-6, #adddc0);
-  --S7: var(--Sl-7, #8eceaa);
-  --S8: var(--Sl-8, #5bb98b);
-  --S9: var(--Sl-9, #30a46c);
-  --S10: var(--Sl-10, #2b9a66);
-  --S11: var(--Sl-11, #218358);
-  --S12: var(--Sl-12, #193b2d);
+  --Su1: var(--Sul-1, #fbfefc);
+  --Su2: var(--Sul-2, #f4fbf6);
+  --Su3: var(--Sul-3, #e6f6eb);
+  --Su4: var(--Sul-4, #d6f1df);
+  --Su5: var(--Sul-5, #c4e8d1);
+  --Su6: var(--Sul-6, #adddc0);
+  --Su7: var(--Sul-7, #8eceaa);
+  --Su8: var(--Sul-8, #5bb98b);
+  --Su9: var(--Sul-9, #30a46c);
+  --Su10: var(--Sul-10, #2b9a66);
+  --Su11: var(--Sul-11, #218358);
+  --Su12: var(--Sul-12, #193b2d);
 
   --I1: var(--Il-1, #fbfdff);
   --I2: var(--Il-2, #f4faff);
@@ -121,7 +121,7 @@
    ------------------------------------------------------------------------------------------------------
    */
 
-  --Snone: 0;
+  --S0: 0;
   --S1: var(--cs1, clamp(3px, 3px + 0vi, 3px));
   --S2: var(--cs2, clamp(5px, 4.6522px + 0.1087vi, 6px));
   --S3: var(--cs3, clamp(8px, 7.6522px + 0.1087vi, 9px));
@@ -235,18 +235,18 @@
   --P11: var(--Pd-11, #9eb1ff);
   --P12: var(--Pd-12, #d6e1ff);
 
-  --S1: var(--Sd-1, #0e1512);
-  --S2: var(--Sd-2, #121b17);
-  --S3: var(--Sd-3, #132d21);
-  --S4: var(--Sd-4, #113b29);
-  --S5: var(--Sd-5, #174933);
-  --S6: var(--Sd-6, #20573e);
-  --S7: var(--Sd-7, #28684a);
-  --S8: var(--Sd-8, #2f7c57);
-  --S9: var(--Sd-9, #30a46c);
-  --S10: var(--Sd-10, #33b074);
-  --S11: var(--Sd-11, #3dd68c);
-  --S12: var(--Sd-12, #b1f1cb);
+  --Su1: var(--Sud-1, #0e1512);
+  --Su2: var(--Sud-2, #121b17);
+  --Su3: var(--Sud-3, #132d21);
+  --Su4: var(--Sud-4, #113b29);
+  --Su5: var(--Sud-5, #174933);
+  --Su6: var(--Sud-6, #20573e);
+  --Su7: var(--Sud-7, #28684a);
+  --Su8: var(--Sud-8, #2f7c57);
+  --Su9: var(--Sud-9, #30a46c);
+  --Su10: var(--Sud-10, #33b074);
+  --Su11: var(--Sud-11, #3dd68c);
+  --Su12: var(--Sud-12, #b1f1cb);
 
   --W1: var(--Wd-1, #17120e);
   --W2: var(--Wd-2, #1e160f);

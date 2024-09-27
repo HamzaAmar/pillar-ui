@@ -17,7 +17,7 @@ export const KbdColors = () => {
     <Flex gap="4" items="center">
       <Kbd title="Esc" />
       <Kbd title="Esc" color="d" />
-      <Kbd title="Esc" color="s" />
+      <Kbd title="Esc" color="su" />
       <Kbd title="Esc" color="w" />
       <Kbd title="Esc" color="p" />
       <Kbd title="Esc" color="b" />
@@ -35,7 +35,7 @@ export const KbdVariants = () => {
         <Flex key={variant} gap="4">
           <Kbd title="Esc" variant={variant} />
           <Kbd title="Esc" variant={variant} color="d" />
-          <Kbd title="Esc" variant={variant} color="s" />
+          <Kbd title="Esc" variant={variant} color="su" />
           <Kbd title="Esc" variant={variant} color="w" />
           <Kbd title="Esc" variant={variant} color="p" />
           <Kbd title="Esc" variant={variant} color="b" />

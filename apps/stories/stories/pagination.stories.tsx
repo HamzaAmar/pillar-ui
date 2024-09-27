@@ -21,7 +21,7 @@ export function PaginationColor() {
       <div className="Sf4">
         <Pagination count={10} />
         <Pagination count={10} color="d" />
-        <Pagination count={10} color="s" />
+        <Pagination count={10} color="su" />
         <Pagination count={10} color="w" />
         <Pagination count={10} color="p" />
         <Pagination count={10} color="se" />
@@ -30,7 +30,7 @@ export function PaginationColor() {
       <div className="Sf4">
         <Pagination count={10} variant="soft" />
         <Pagination count={10} variant="soft" color="d" />
-        <Pagination count={10} variant="soft" color="s" />
+        <Pagination count={10} variant="soft" color="su" />
         <Pagination count={10} variant="soft" color="w" />
         <Pagination count={10} variant="soft" color="p" />
         <Pagination count={10} variant="soft" color="se" />
@@ -39,7 +39,7 @@ export function PaginationColor() {
       <div className="Sf4">
         <Pagination count={10} />
         <Pagination count={10} variant="solid" color="d" />
-        <Pagination count={10} variant="solid" color="s" />
+        <Pagination count={10} variant="solid" color="su" />
         <Pagination count={10} variant="solid" color="w" />
         <Pagination count={10} variant="solid" color="p" />
         <Pagination count={10} variant="solid" color="se" />
@@ -66,7 +66,7 @@ export function PaginationCustomStyle() {
     <div className="Sf4">
       <Pagination count={10} />
       <Pagination count={10} color="d" />
-      <Pagination count={10} color="s" />
+      <Pagination count={10} color="su" />
       <Pagination count={10} color="w" />
       <Pagination count={10} color="p" />
       <Pagination count={10} color="se" />

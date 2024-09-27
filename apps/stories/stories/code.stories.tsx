@@ -13,7 +13,7 @@ export const CodeColors = () => {
   return (
     <Flex gap="4" direction="column" justify="center">
       <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code color="s">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="su">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="w">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="p">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="b">{`console.log('Hello world Every thing is OK')`}</Code>

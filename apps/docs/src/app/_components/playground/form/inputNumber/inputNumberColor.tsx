@@ -8,7 +8,13 @@ export const InputNumberColor = () => {
       <InputNumber color="w" variant="bordered" autoFocus placeholder="Normal" />
       <InputNumber color="se" variant="outline" autoFocus placeholder="Disabled" />
       <InputNumber color="b" variant="filled" autoFocus placeholder="isInvalid" />
-      <InputNumber color="s" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
+      <InputNumber
+        color="su"
+        variant="bordered"
+        autoFocus
+        prefixInput={<User width="16" />}
+        placeholder="Placeholder"
+      />
     </>
   )
 }

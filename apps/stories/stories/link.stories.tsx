@@ -181,7 +181,7 @@ export function LinkColors() {
       <Link href="#" color="se">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="s">
+      <Link href="#" color="su">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
       <Link href="#" color="w">
@@ -200,7 +200,7 @@ export function LinkColors() {
       <Link href="#" color="se">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
-      <Link href="#" color="s">
+      <Link href="#" color="su">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Link>
       <Link href="#" color="w">

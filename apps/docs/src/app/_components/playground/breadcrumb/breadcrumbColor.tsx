@@ -26,7 +26,7 @@ export const BreadcrumbColor = () => {
         ))}
       </Breadcrumb>
 
-      <Breadcrumb color="s">
+      <Breadcrumb color="su">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}

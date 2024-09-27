@@ -4,7 +4,7 @@ export const SpinnerInvert = () => {
   return (
     <>
       <Flex gap="4" items="center">
-        <Spinner color="s" />
+        <Spinner color="su" />
         <Spinner color="d" />
         <Spinner color="w" />
         <Spinner color="p" />
@@ -12,7 +12,7 @@ export const SpinnerInvert = () => {
         <Spinner color="b" />
       </Flex>
       <Flex gap="4" items="center">
-        <Spinner invert color="s" />
+        <Spinner invert color="su" />
         <Spinner invert color="d" />
         <Spinner invert color="w" />
         <Spinner invert color="p" />

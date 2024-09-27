@@ -6,7 +6,7 @@ export const BadgeColor = () => {
     <>
       <Flex gap="4">
         <Badge type="numeric" number={15} max={15} color="d" />
-        <Badge type="numeric" number={15} max={15} color="s" />
+        <Badge type="numeric" number={15} max={15} color="su" />
         <Badge type="numeric" number={15} max={15} color="w" />
         <Badge type="numeric" number={15} max={15} color="p" />
         <Badge type="numeric" number={15} max={15} color="se" />
@@ -16,7 +16,7 @@ export const BadgeColor = () => {
       </Flex>
       <Flex gap="4">
         <Badge type="icon" color="d" icon={<Check />} />
-        <Badge type="icon" color="s" icon={<Check />} />
+        <Badge type="icon" color="su" icon={<Check />} />
         <Badge type="icon" color="w" icon={<Check />} />
         <Badge type="icon" color="b" icon={<Check />} />
         <Badge type="icon" color="i" icon={<Check />} />
@@ -26,7 +26,7 @@ export const BadgeColor = () => {
       </Flex>
       <Flex gap="4">
         <Badge type="dot" color="d" />
-        <Badge type="dot" color="s" />
+        <Badge type="dot" color="su" />
         <Badge type="dot" color="w" />
         <Badge type="dot" color="p" />
         <Badge type="dot" color="se" />

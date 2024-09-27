@@ -5,7 +5,7 @@ export const PaginationColor = () => {
     <>
       <Pagination count={10} title="Esc" />
       <Pagination count={10} title="Esc" color="d" />
-      <Pagination count={10} title="Esc" color="s" />
+      <Pagination count={10} title="Esc" color="su" />
       <Pagination count={10} title="Esc" color="w" />
       <Pagination count={10} title="Esc" color="p" />
       <Pagination count={10} title="Esc" color="b" />

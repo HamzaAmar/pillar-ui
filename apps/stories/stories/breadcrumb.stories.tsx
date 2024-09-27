@@ -69,7 +69,7 @@ export function BreadcrumbColor() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb color="s">
+      <Breadcrumb color="su">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>

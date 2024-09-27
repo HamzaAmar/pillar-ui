@@ -3,7 +3,7 @@ import { Spinner } from '@pillar-ui/core'
 export const SpinnerColor = () => {
   return (
     <>
-      <Spinner color="s" />
+      <Spinner color="su" />
       <Spinner color="d" />
       <Spinner color="w" />
       <Spinner color="p" />

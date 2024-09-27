@@ -90,7 +90,13 @@ export const ColorInput = () => {
       <InputSearch color="w" variant="bordered" autoFocus placeholder="Normal" />
       <InputSearch color="se" variant="outline" autoFocus placeholder="Disabled" />
       <InputSearch color="b" variant="filled" autoFocus placeholder="isInvalid" />
-      <InputSearch color="s" variant="bordered" autoFocus prefixInput={<User width="16" />} placeholder="Placeholder" />
+      <InputSearch
+        color="su"
+        variant="bordered"
+        autoFocus
+        prefixInput={<User width="16" />}
+        placeholder="Placeholder"
+      />
       <InputSearch color="d" variant="bordered" autoFocus prefixInput={'https://'} defaultValue="Default Value" />
     </Flex>
   )
