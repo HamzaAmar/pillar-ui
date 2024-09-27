@@ -36,7 +36,7 @@ export const TimelineSize = () => {
     <>
       <TimelineBase gap="2" />
       <TimelineBase gap="3" />
-      <TimelineBase size="sm" />
+      <TimelineBase size="4" />
       <TimelineBase gap="5" />
       <TimelineBase gap="6" />
       <TimelineBase gap="7" />

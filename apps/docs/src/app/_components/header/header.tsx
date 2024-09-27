@@ -21,7 +21,7 @@ const Header = () => {
 
       <Flex
         as={Paper}
-        p="sm"
+        size="4"
         data-show={value}
         justify="between"
         gap="4"
@@ -31,7 +31,7 @@ const Header = () => {
           <InputSearch fluid name="search" placeholder="Search" aria-label="search" />
         </div>
         <IconButton
-          size="sm"
+          size="4"
           className="only-mobile"
           corner="sm"
           onClick={setFalse}
@@ -44,7 +44,7 @@ const Header = () => {
         <SwitchMode />
         <IconButton
           variant="soft"
-          size="sm"
+          size="4"
           onClick={setTrue}
           className="only-mobile"
           icon={<ListSearch />}
@@ -52,7 +52,7 @@ const Header = () => {
         />
 
         <IconButton
-          size="sm"
+          size="4"
           variant="soft"
           onClick={toggleDrawer}
           className="only-mobile"

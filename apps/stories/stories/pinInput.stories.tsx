@@ -49,7 +49,7 @@ export const CornerPinInput = () => {
   return (
     <Flex gap="4" direction="column">
       <PinInput corner="sharp" />
-      <PinInput corner="xs" />
+      <PinInput corner="3" />
       <PinInput corner="sm" />
       <PinInput corner="md" />
       <PinInput corner="lg" />
@@ -63,7 +63,7 @@ export const SizePinInput = () => {
   return (
     <Flex gap="4" direction="column">
       <PinInput gap="3" />
-      <PinInput size="sm" />
+      <PinInput size="4" />
       <PinInput gap="5" />
       <PinInput gap="6" />
       <PinInput gap="7" />

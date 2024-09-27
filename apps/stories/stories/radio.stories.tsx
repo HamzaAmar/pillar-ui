@@ -99,10 +99,10 @@ export function RadioVariants() {
 export function RadioSizes() {
   return (
     <Flex gap="4" items="center">
-      <Radio size="3xs" name="red" label="Red" />
+      <Radio size="1" name="red" label="Red" />
       <Radio gap="2" name="green" label="Green" />
       <Radio gap="3" name="orange" label="Orange" />
-      <Radio size="sm" name="primary" label="Primary" />
+      <Radio size="4" name="primary" label="Primary" />
       <Radio gap="6" name="b" label="b" />
       <Radio gap="9" name="se" label="Secondary" />
     </Flex>

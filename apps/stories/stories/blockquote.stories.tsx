@@ -12,7 +12,7 @@ export default meta
 export const BlockquoteSize = () => {
   return (
     <div className="l_f-md">
-      <Blockquote size="3xs">
+      <Blockquote size="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
@@ -24,7 +24,7 @@ export const BlockquoteSize = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
-      <Blockquote size="sm">
+      <Blockquote size="4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
         fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
       </Blockquote>
@@ -55,7 +55,7 @@ export const BlockquoteCorner = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam alias voluptatibus pariatur nesciunt odio.
         Veniam quos iure laboriosam sed? Sit modi velit ut est sint, accusamus eveniet quibusdam! Cupiditate, corporis?
       </Blockquote>
-      <Blockquote corner="xs">
+      <Blockquote corner="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam alias voluptatibus pariatur nesciunt odio.
         Veniam quos iure laboriosam sed? Sit modi velit ut est sint, accusamus eveniet quibusdam! Cupiditate, corporis?
       </Blockquote>
@@ -171,30 +171,30 @@ export function ButtonCornerDefaults() {
     <div className="l_f-sm">
       <Flex gap="4">
         <Paper corner="sharp">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="sm">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="md">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="lg">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
-        <Blockquote size="3xs">
+        <Blockquote size="1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>
@@ -202,60 +202,60 @@ export function ButtonCornerDefaults() {
 
       <Flex gap="4" style={{ '--blockquote-rad': '0' } as CSSProperties}>
         <Paper corner="sharp">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="sm">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="md">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="lg">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
-        <Blockquote size="3xs">
+        <Blockquote size="1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>
       </Flex>
       <Flex gap="4" style={{ '--blockquote-rad': '10px' } as CSSProperties}>
         <Paper corner="sharp">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="sm">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="md">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="lg">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
-        <Blockquote size="3xs">
+        <Blockquote size="1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>
@@ -263,30 +263,30 @@ export function ButtonCornerDefaults() {
 
       <Flex gap="4" style={{ '--blockquote-rad': '20px' } as CSSProperties}>
         <Paper corner="sharp">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="sm">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="md">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
         <Paper corner="lg">
-          <Blockquote size="3xs">
+          <Blockquote size="1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
             fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
           </Blockquote>
         </Paper>
-        <Blockquote size="3xs">
+        <Blockquote size="1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>

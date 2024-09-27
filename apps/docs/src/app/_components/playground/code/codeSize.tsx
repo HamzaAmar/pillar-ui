@@ -5,7 +5,7 @@ export const CodeSize = () => {
     <>
       <Code gap="2">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code gap="3">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code size="sm">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="4">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code gap="5">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code gap="6">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code gap="7">{`console.log('Hello world Every thing is OK')`}</Code>

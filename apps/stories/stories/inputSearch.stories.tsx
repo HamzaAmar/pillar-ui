@@ -63,7 +63,7 @@ export const CornerInput = () => {
   return (
     <Flex gap="4" direction="column">
       <InputSearch corner="sharp" placeholder="sharp" />
-      <InputSearch corner="xs" placeholder="xs" />
+      <InputSearch corner="3" placeholder="3" />
       <InputSearch corner="sm" placeholder="sm" />
       <InputSearch corner="md" placeholder="md" />
       <InputSearch corner="lg" placeholder="lg" />
@@ -76,7 +76,7 @@ export const CornerInput = () => {
 export const SizeInput = () => {
   return (
     <Flex gap="4" direction="column">
-      <InputSearch size="sm" placeholder="Small(sm)" />
+      <InputSearch size="4" placeholder="Small(sm)" />
       <InputSearch placeholder="Medium (md default You don't need it)" />
       <InputSearch gap="6" placeholder="Large(lg)" />
     </Flex>

@@ -243,7 +243,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = cx(`f-i_cnt f-i_cnt-${variant} l_fl u_gap-xs C${color}`, {
+  const className = cx(`f-i_cnt f-i_cnt-${variant} l_fl Sg3 C${color}`, {
     [`u_rad-${corner}`]: corner,
     [`u_t-${transform}`]: transform,
     [`u_f-${size}`]: size,
@@ -333,7 +333,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>(
           {title}
         </Flex>
 
-        <span className="ff-t t-y l_fl  u_f-xs u_it-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
+        <span className="ff-t t-y l_fl  u_f-3 u_it-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
       </Grid>
     )
   }
@@ -367,7 +367,7 @@ export const FormController = ({
   const fieldLabel = `${label}${rest.required ? ' *' : ''}`
   return (
     <FormControllerProvider {...values}>
-      <Flex direction="column" className={cx('fc-o u_f-xs', { [className!]: className })}>
+      <Flex direction="column" className={cx('fc-o u_f-3', { [className!]: className })}>
         <label className={cx('u_f-medium u_f-sm', { u_sr: hideLabel })} htmlFor={id}>
           {fieldLabel}
         </label>

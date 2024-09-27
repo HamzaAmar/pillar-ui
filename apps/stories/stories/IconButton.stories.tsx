@@ -25,10 +25,10 @@ export function IconButtonsColors() {
 export function IconButtonsSizes() {
   return (
     <Flex gap="4" items="center">
-      <IconButton title="Hello world" size="3xs" icon={<ThumbUp />} color="s" />
+      <IconButton title="Hello world" size="1" icon={<ThumbUp />} color="s" />
       <IconButton title="Hello world" gap="2" icon={<ThumbUp />} color="w" />
       <IconButton title="Hello world" gap="3" icon={<ThumbUp />} color="d" />
-      <IconButton title="Hello world" size="sm" icon={<ThumbUp />} color="se" />
+      <IconButton title="Hello world" size="4" icon={<ThumbUp />} color="se" />
       <IconButton title="Hello world" gap="5" icon={<ThumbUp />} color="b" />
       <IconButton title="Hello world" gap="7" icon={<ThumbUp />} color="p" />
     </Flex>
@@ -39,7 +39,7 @@ export function IconButtonsCorners() {
   return (
     <Flex gap="4" items="center">
       <IconButton title="Hello world" corner="sharp" icon={<ThumbUp />} color="s" />
-      <IconButton title="Hello world" corner="xs" icon={<ThumbUp />} color="d" />
+      <IconButton title="Hello world" corner="3" icon={<ThumbUp />} color="d" />
       <IconButton title="Hello world" corner="sm" icon={<ThumbUp />} color="se" />
       <IconButton title="Hello world" corner="md" icon={<ThumbUp />} color="b" />
       <IconButton title="Hello world" corner="xl" icon={<ThumbUp />} color="p" />

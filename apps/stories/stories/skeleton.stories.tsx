@@ -45,8 +45,8 @@ export const Avatars = () => {
       <SkeletonAvatar gap="3" isLoading={loading}>
         <Avatar gap="3" variant="image" title="Hello" />
       </SkeletonAvatar>
-      <SkeletonAvatar size="sm" isLoading={loading}>
-        <Avatar size="sm" variant="image" title="Hello" />
+      <SkeletonAvatar size="4" isLoading={loading}>
+        <Avatar size="4" variant="image" title="Hello" />
       </SkeletonAvatar>
       <SkeletonAvatar gap="5" isLoading={loading}>
         <Avatar gap="5" variant="image" title="Hello" />
@@ -68,8 +68,8 @@ export const SkeletonTextLines = () => {
       <SkeletonText gap="3" isLoading={loading} lines={3}>
         <Text gap="3">hello world</Text>
       </SkeletonText>
-      <SkeletonText size="sm" isLoading={loading} lines={3.5}>
-        <Text size="sm">hello world</Text>
+      <SkeletonText size="4" isLoading={loading} lines={3.5}>
+        <Text size="4">hello world</Text>
       </SkeletonText>
       <SkeletonText gap="5" isLoading={loading} lines={2.3}>
         <Text gap="5">hello world</Text>
@@ -88,7 +88,7 @@ export const SkeletonTextSizes = () => {
   const loading = useLoading()
   return (
     <Grid grid="1fr 1fr" gap="7">
-      <SkeletonText size="3xs" isLoading={loading}>
+      <SkeletonText size="1" isLoading={loading}>
         <Text gap="3">hello world</Text>
       </SkeletonText>
       <SkeletonText gap="2" isLoading={loading}>
@@ -97,8 +97,8 @@ export const SkeletonTextSizes = () => {
       <SkeletonText gap="3" isLoading={loading}>
         <Text gap="3">hello world</Text>
       </SkeletonText>
-      <SkeletonText size="sm" isLoading={loading}>
-        <Text size="sm">hello world</Text>
+      <SkeletonText size="4" isLoading={loading}>
+        <Text size="4">hello world</Text>
       </SkeletonText>
       <SkeletonText gap="5" isLoading={loading}>
         <Text gap="5">hello world</Text>
@@ -126,8 +126,8 @@ export const Buttons = () => {
       <SkeletonButton gap="3" isLoading={loading}>
         <Button gap="3">hello world</Button>
       </SkeletonButton>
-      <SkeletonButton size="sm" isLoading={loading}>
-        <Button size="sm">hello world</Button>
+      <SkeletonButton size="4" isLoading={loading}>
+        <Button size="4">hello world</Button>
       </SkeletonButton>
       <SkeletonButton gap="5" isLoading={loading}>
         <Button gap="5">hello world</Button>

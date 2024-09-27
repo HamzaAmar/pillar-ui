@@ -8,7 +8,7 @@ export const AccordionSubtitle = () => {
         <AccordionButton>
           <div>
             <Text>Hello</Text>{' '}
-            <Text size="sm">
+            <Text size="4">
               {' '}
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet ipsum necessitatibus sunt praesentium quam
               qui laborum earum vitae, veniam tenetur mollitia fugiat numquam nesciunt? Velit quibusdam repudiandae
@@ -21,7 +21,7 @@ export const AccordionSubtitle = () => {
       <AccordionItem value={2}>
         <AccordionButton>
           <div>
-            <Text>Hello</Text> <Text size="sm"> Lorem ipsum dolor sit, amet consectetur adipisicing elit</Text>
+            <Text>Hello</Text> <Text size="4"> Lorem ipsum dolor sit, amet consectetur adipisicing elit</Text>
           </div>
         </AccordionButton>
         <AccordionPanel>
@@ -33,7 +33,7 @@ export const AccordionSubtitle = () => {
       <AccordionItem value={3}>
         <AccordionButton>
           <div>
-            <Text>Hello</Text> <Text size="sm"> Lorem ipsum dolor sit, amet consectetur adipisicing elit</Text>
+            <Text>Hello</Text> <Text size="4"> Lorem ipsum dolor sit, amet consectetur adipisicing elit</Text>
           </div>
         </AccordionButton>
         <AccordionPanel>

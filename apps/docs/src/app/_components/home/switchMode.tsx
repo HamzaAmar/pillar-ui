@@ -24,7 +24,7 @@ const SwitchMode = () => {
   return (
     <Button
       onClick={() => setTheme(nextMode)}
-      size="sm"
+      size="4"
       icon={icon}
       data-mode={resolvedTheme}
       state={mounted ? 'idle' : 'loading'}

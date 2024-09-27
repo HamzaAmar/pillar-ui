@@ -49,14 +49,14 @@
 
 /* Font size section */
 
-.u_f-3xs {
-  font-size: var(--f-3xs);
+.u_f-1 {
+  font-size: var(--f-1);
 }
-.u_f-2xs {
-  font-size: var(--f-2xs);
+.u_f-2 {
+  font-size: var(--f-2);
 }
-.u_f-xs {
-  font-size: var(--f-xs);
+.u_f-3 {
+  font-size: var(--f-3);
 }
 .u_f-sm {
   font-size: var(--f-sm);

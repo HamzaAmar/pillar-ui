@@ -13,10 +13,10 @@ const image = 'https://picsum.photos/id/128/300/300'
 export function AvatarsSizes() {
   return (
     <Flex gap="3" items="center">
-      <Avatar image={image} size="3xs" title="Hello" />
+      <Avatar image={image} size="1" title="Hello" />
       <Avatar image={image} gap="2" title="Hello" />
       <Avatar image={image} gap="3" title="Hello" />
-      <Avatar image={image} size="sm" title="Hello" />
+      <Avatar image={image} size="4" title="Hello" />
       <Avatar image={image} gap="5" title="Hello" />
       <Avatar image={image} gap="6" title="Hello" />
       <Avatar image={image} gap="7" title="Hello" />
@@ -29,10 +29,10 @@ export function AvatarsSizes() {
 export function AvatarsFallback() {
   return (
     <Flex gap="3" items="center">
-      <Avatar size="3xs" title="Hello" />
+      <Avatar size="1" title="Hello" />
       <Avatar image="hello.s" gap="2" title="Hello" />
       <Avatar image="https://pisum" gap="3" title="Hello" />
-      <Avatar size="sm" title="Hello" />
+      <Avatar size="4" title="Hello" />
       <Avatar gap="5" title="Hello" />
       <Avatar gap="6" title="Hello" />
       <Avatar gap="7" title="Hello" />
@@ -72,7 +72,7 @@ export function AvatarsCorners() {
     <div className="l_f-xl">
       <Flex gap="3" items="center">
         <Avatar corner="sharp" title="Hello" />
-        <Avatar corner="xs" title="Hello" />
+        <Avatar corner="3" title="Hello" />
         <Avatar corner="sm" title="Hello" />
         <Avatar corner="md" title="Hello" />
         <Avatar corner="lg" title="Hello" />
@@ -92,7 +92,7 @@ export function AvatarsCorners() {
       </Flex>
       <Flex gap="3" items="center">
         <Avatar corner="sharp" image={image} title="Hello" />
-        <Avatar corner="xs" image={image} title="Hello" />
+        <Avatar corner="3" image={image} title="Hello" />
         <Avatar corner="sm" image={image} title="Hello" />
         <Avatar corner="md" image={image} title="Hello" />
         <Avatar corner="lg" image={image} title="Hello" />

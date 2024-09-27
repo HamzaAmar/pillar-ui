@@ -4,7 +4,7 @@ export const InputSearchCorner = () => {
   return (
     <>
       <InputSearch corner="sharp" placeholder="sharp" />
-      <InputSearch corner="xs" placeholder="xs" />
+      <InputSearch corner="3" placeholder="3" />
       <InputSearch corner="sm" placeholder="sm" />
       <InputSearch corner="md" placeholder="md" />
       <InputSearch corner="lg" placeholder="lg" />

@@ -11,7 +11,7 @@ export function Accessible() {
       />
       <Grid gap="5" grid="1fr 1fr 1fr" lg="1fr 1fr" sm="1fr">
         {ACCESSIBILITY.map(({ id, title, description, icon }) => (
-          <Paper className="article--item" key={id} flow="2xs">
+          <Paper className="article--item" key={id} flow="2">
             <Flex gap="4" items="center">
               <div className="article--icon-container u_center">{icon}</div>
               <Heading as="h3" gap="6">

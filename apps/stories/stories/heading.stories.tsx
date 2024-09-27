@@ -15,7 +15,7 @@ export default meta
 export function HeadingSizes() {
   return (
     <div className="l_f-md">
-      <Heading size="3xs">
+      <Heading size="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
@@ -27,7 +27,7 @@ export function HeadingSizes() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading size="sm">
+      <Heading size="4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>

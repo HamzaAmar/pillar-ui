@@ -58,7 +58,7 @@ export function ButtonsAsInline() {
   )
 }
 
-const SIZES = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'] as const
+const SIZES = ['1', '2', '3', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'] as const
 
 export function ButtonsIcons() {
   return (
@@ -175,7 +175,7 @@ export function ButtonsCorners() {
         <Button corner="sharp" color="s">
           Green
         </Button>
-        <Button corner="xs" color="w">
+        <Button corner="3" color="w">
           Orange
         </Button>
         <Button corner="sm" color="d">
@@ -238,7 +238,7 @@ export function ButtonsCorners() {
 export function ButtonSizes() {
   return (
     <Flex gap="4" items="center" wrap>
-      <Button size="3xs" color="s">
+      <Button size="1" color="s">
         Green
       </Button>
       <Button gap="2" color="w">
@@ -247,7 +247,7 @@ export function ButtonSizes() {
       <Button gap="3" color="d">
         Red
       </Button>
-      <Button size="sm" color="se">
+      <Button size="4" color="se">
         Secondary
       </Button>
       <Button gap="5" color="b">
@@ -263,7 +263,7 @@ export function ButtonSizes() {
 export function ButtonsFluid() {
   return (
     <Flex gap="5" direction="column">
-      <Button fluid icon={<ThumbUp />} iconPosition="end" size="3xs" color="s">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" size="1" color="s">
         Green
       </Button>
       <Button fluid icon={<ThumbDown />} gap="2" color="w">
@@ -272,7 +272,7 @@ export function ButtonsFluid() {
       <Button fluid icon={<Plus />} iconPosition="end" gap="3" color="d">
         Red
       </Button>
-      <Button fluid icon={<Github />} size="sm" color="se">
+      <Button fluid icon={<Github />} size="4" color="se">
         Secondary
       </Button>
       <Button fluid icon={<Eye />} iconPosition="end" gap="5" color="b">
@@ -313,7 +313,7 @@ export function ButtonsState() {
 export function ButtonLoadingState() {
   return (
     <Flex gap="4" items="center" wrap>
-      <Button state="loading" size="3xs" color="s">
+      <Button state="loading" size="1" color="s">
         Green
       </Button>
       <Button state="loading" gap="2" color="w">
@@ -322,7 +322,7 @@ export function ButtonLoadingState() {
       <Button state="loading" gap="3" color="d">
         Red
       </Button>
-      <Button state="loading" size="sm" color="se">
+      <Button state="loading" size="4" color="se">
         Secondary
       </Button>
       <Button state="loading" gap="5" color="b">
@@ -470,7 +470,7 @@ export function ButtonSizeDefaults() {
         <Button gap="3" color="s">
           green
         </Button>
-        <Button size="sm" color="s">
+        <Button size="4" color="s">
           green
         </Button>
         <Button gap="5" color="s">

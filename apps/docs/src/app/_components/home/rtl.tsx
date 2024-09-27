@@ -19,18 +19,18 @@ function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
         <Button> {type === 'ar' ? 'تابع' : 'Follow'}</Button>
       </Flex>
       <div>
-        <Text className="article--description" color="b" low size="sm">
+        <Text className="article--description" color="b" low size="4">
           {description}
         </Text>
       </div>
       <Flex gap="5">
-        <Text size="sm">
+        <Text size="4">
           <Text as="span" weight="medium">
             {likes}
           </Text>{' '}
           {type === 'ar' ? 'الإعجابات' : 'Likes'}
         </Text>
-        <Text size="sm">
+        <Text size="4">
           <Text as="span" weight="medium">
             {followers}
           </Text>{' '}
@@ -46,7 +46,7 @@ export function RTLSupport() {
     <Paper as={Grid} grid="1.7fr 1fr" lg="1fr" items="center" gap="5" className="section rtl--support">
       <div className="rtl--support--content">
         <div className="l_f-lg">
-          <div className="l_f-xs">
+          <div className="l_f-3">
             <div>
               <SectionHeading
                 subheading="Build Global-Ready React UIs with Pillar UI's"

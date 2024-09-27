@@ -88,7 +88,7 @@ export const CornerSelect = () => {
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select corner="xs">
+      <Select corner="3">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
@@ -119,7 +119,7 @@ export const CornerSelect = () => {
 export const SizeSelect = () => {
   return (
     <Flex gap="4" direction="column">
-      <Select size="sm">
+      <Select size="4">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>

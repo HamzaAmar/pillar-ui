@@ -22,7 +22,7 @@ export const TooltipSize = () => {
     <Flex gap="6">
       <TooltipBase gap="2" />
       <TooltipBase gap="3" />
-      <TooltipBase size="sm" />
+      <TooltipBase size="4" />
       <TooltipBase gap="5" />
       <TooltipBase gap="6" />
       <TooltipBase gap="7" />
@@ -34,8 +34,8 @@ export const TooltipSize = () => {
 export const TooltipCorner = () => {
   return (
     <Flex gap="6">
-      <TooltipBase corner="2xs" />
-      <TooltipBase corner="xs" />
+      <TooltipBase corner="2" />
+      <TooltipBase corner="3" />
       <TooltipBase corner="sm" />
       <TooltipBase corner="md" />
       <TooltipBase corner="lg" />

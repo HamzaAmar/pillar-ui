@@ -53,7 +53,7 @@ export const CornerInputFile = () => {
   return (
     <Flex gap="4" direction="column">
       <InputFile corner="sharp" />
-      <InputFile corner="xs" />
+      <InputFile corner="3" />
       <InputFile corner="sm" />
       <InputFile corner="md" />
       <InputFile corner="lg" />
@@ -66,7 +66,7 @@ export const CornerInputFile = () => {
 export const SizeInputFile = () => {
   return (
     <Flex gap="4" direction="column">
-      <InputFile size="sm" />
+      <InputFile size="4" />
       <InputFile />
       <InputFile gap="6" />
     </Flex>

@@ -151,7 +151,7 @@ export const AlertSizes = () => {
     <div className="l_f-md">
       <AccordionBase gap="2" />
       <AccordionBase gap="3" />
-      <AccordionBase size="sm" />
+      <AccordionBase size="4" />
       <AccordionBase gap="5" />
       <AccordionBase gap="6" />
       <AccordionBase gap="7" />

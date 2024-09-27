@@ -46,7 +46,7 @@ export const StepperStep = (props: StepProps) => {
         <p id={labelledbyID} className="u_f-sm u_f-medium">
           {title}
         </p>
-        <p id={describedbyID} className="u_f-xs u_bg t-y-low">
+        <p id={describedbyID} className="u_f-3 u_bg t-y-low">
           {description}
         </p>
       </div>

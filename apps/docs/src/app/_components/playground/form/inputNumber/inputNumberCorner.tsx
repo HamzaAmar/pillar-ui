@@ -4,7 +4,7 @@ export const InputNumberCorner = () => {
   return (
     <>
       <InputNumber corner="sharp" placeholder="sharp" />
-      <InputNumber corner="xs" placeholder="xs" />
+      <InputNumber corner="3" placeholder="3" />
       <InputNumber corner="sm" placeholder="sm" />
       <InputNumber corner="md" placeholder="md" />
       <InputNumber corner="lg" placeholder="lg" />

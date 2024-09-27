@@ -3,19 +3,19 @@ import { Paper } from '@pillar-ui/core'
 export const PaperShadow = () => {
   return (
     <>
-      <Paper p="sm" background="b-5" shadow="xs">
+      <Paper size="4" background="b-5" shadow="3">
         Hello
       </Paper>
-      <Paper p="sm" background="b-5" shadow="sm">
+      <Paper size="4" background="b-5" shadow="sm">
         Hello
       </Paper>
-      <Paper p="sm" background="b-5" shadow="md">
+      <Paper size="4" background="b-5" shadow="md">
         Hello
       </Paper>
-      <Paper p="sm" background="b-5" shadow="lg">
+      <Paper size="4" background="b-5" shadow="lg">
         Hello
       </Paper>
-      <Paper p="sm" background="b-5" shadow="xl">
+      <Paper size="4" background="b-5" shadow="xl">
         Hello
       </Paper>
     </>

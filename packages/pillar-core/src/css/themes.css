@@ -121,18 +121,16 @@
    ------------------------------------------------------------------------------------------------------
    */
 
-  --s-none: 0;
-  --s-4xs: var(--cs-4xs, clamp(1px, 0.6522px + 0.1087vi, 2px));
-  --s-3xs: var(--cs-3xs, clamp(3px, 3px + 0vi, 3px));
-  --s-2xs: var(--cs-2xs, clamp(5px, 4.6522px + 0.1087vi, 6px));
-  --s-xs: var(--cs-xs, clamp(8px, 7.6522px + 0.1087vi, 9px));
-  --s-sm: var(--cs-sm, clamp(10px, 9.3043px + 0.2174vi, 12px));
-  --s-md: var(--cs-md, clamp(15px, 13.9565px + 0.3261vi, 18px));
-  --s-lg: var(--cs-lg, clamp(20px, 18.6087px + 0.4348vi, 24px));
-  --s-xl: var(--cs-xl, clamp(30px, 27.913px + 0.6522vi, 36px));
-  --s-2xl: var(--cs-2xl, clamp(40px, 37.2174px + 0.8696vi, 48px));
-  --s-3xl: var(--cs-3xl, clamp(50px, 46.5217px + 1.087vi, 60px));
-  --s-4xl: var(--cs-4xl, clamp(70px, 65.1304px + 1.5217vi, 84px));
+  --Snone: 0;
+  --S1: var(--cs1, clamp(3px, 3px + 0vi, 3px));
+  --S2: var(--cs2, clamp(5px, 4.6522px + 0.1087vi, 6px));
+  --S3: var(--cs3, clamp(8px, 7.6522px + 0.1087vi, 9px));
+  --S4: var(--cs4, clamp(10px, 9.3043px + 0.2174vi, 12px));
+  --S5: var(--cs5, clamp(15px, 13.9565px + 0.3261vi, 18px));
+  --S6: var(--cs6, clamp(20px, 18.6087px + 0.4348vi, 24px));
+  --S7: var(--cs7, clamp(30px, 27.913px + 0.6522vi, 36px));
+  --S8: var(--cs8, clamp(40px, 37.2174px + 0.8696vi, 48px));
+  --S9: var(--cs9, clamp(50px, 46.5217px + 1.087vi, 60px));
 
   /*
    ------------------------------------------------------------------------------------------------------
@@ -149,15 +147,15 @@
     Source Code Pro, monospace;
 
   /* Font Size variables */
-  --f-3xs: var(--cf-3xs, clamp(0.54rem, calc(0.83rem + -0.28vw), 0.77rem));
-  --f-2xs: var(--cf-2xs, clamp(0.65rem, calc(0.86rem + -0.21vw), 0.82rem));
-  --f-xs: var(--cf-xs, clamp(0.78rem, calc(0.9rem + -0.12vw), 0.88rem));
-  --f-sm: var(--cf-sm, clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem));
-  --f-md: var(--cf-md, clamp(1rem, calc(0.97rem + 0.15vw), 1.13rem));
-  --f-lg: var(--cf-lg, clamp(1.07rem, calc(1rem + 0.34vw), 1.35rem));
-  --f-xl: var(--cf-xl, clamp(1.14rem, calc(1.02rem + 0.58vw), 1.62rem));
-  --f-2xl: var(--cf-2xl, clamp(1.22rem, calc(1.04rem + 0.88vw), 1.94rem));
-  --f-3xl: var(--cf-3xl, clamp(1.3rem, calc(1.05rem + 1.26vw), 2.33rem));
+  --F1: var(--cf1, clamp(0.54rem, calc(0.83rem + -0.28vw), 0.77rem));
+  --F2: var(--cf2, clamp(0.65rem, calc(0.86rem + -0.21vw), 0.82rem));
+  --F3: var(--cf3, clamp(0.78rem, calc(0.9rem + -0.12vw), 0.88rem));
+  --F4: var(--cf4, clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem));
+  --F5: var(--cf5, clamp(1rem, calc(0.97rem + 0.15vw), 1.13rem));
+  --F6: var(--cf6, clamp(1.07rem, calc(1rem + 0.34vw), 1.35rem));
+  --F7: var(--cf7, clamp(1.14rem, calc(1.02rem + 0.58vw), 1.62rem));
+  --F8: var(--cf8, clamp(1.22rem, calc(1.04rem + 0.88vw), 1.94rem));
+  --F9: var(--cf9, clamp(1.3rem, calc(1.05rem + 1.26vw), 2.33rem));
   /*
    ------------------------------------------------------------------------------------------------------
     Border Theme Section

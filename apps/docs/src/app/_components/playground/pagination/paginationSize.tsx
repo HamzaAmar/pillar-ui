@@ -6,7 +6,7 @@ export const PaginationSize = () => {
       <Pagination count={10} />
       <Pagination count={10} gap="2" />
       <Pagination count={10} gap="3" />
-      <Pagination count={10} size="sm" />
+      <Pagination count={10} size="4" />
       <Pagination count={10} gap="5" />
       <Pagination count={10} gap="6" />
       <Pagination count={10} gap="7" />

@@ -17,7 +17,7 @@ export const SelectSize = () => {
       <Select gap="3">
         <Options />
       </Select>
-      <Select size="sm">
+      <Select size="4">
         <Options />
       </Select>
       <Select gap="5">

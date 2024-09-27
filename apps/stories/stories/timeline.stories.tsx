@@ -75,7 +75,7 @@ export const TimelineCorner = () => {
       <Timeline corner="sharp">
         <Items />
       </Timeline>
-      <Timeline corner="xs">
+      <Timeline corner="3">
         <Items />
       </Timeline>
       <Timeline>
@@ -106,7 +106,7 @@ export const TimelineSize = () => {
       <Timeline gap="3">
         <Items />
       </Timeline>
-      <Timeline size="sm">
+      <Timeline size="4">
         <Items />
       </Timeline>
       <Timeline gap="5">

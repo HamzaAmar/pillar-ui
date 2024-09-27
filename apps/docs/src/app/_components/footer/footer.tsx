@@ -27,10 +27,10 @@ const FooterItem = ({ href, text, external = false }: FooterItemProps) => {
 const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }) => {
   return (
     <nav className="l_f-sm">
-      <Text transform="capitalize" gap="5" weight="medium">
+      <Text transform="capitalize" size="5" weight="medium">
         {title}
       </Text>
-      <ul className="footer-list l_f-xs">
+      <ul className="footer-list l_f-3">
         {links.map(({ href, text, external }) => (
           <FooterItem key={href} href={href} text={text} external={external} />
         ))}
@@ -42,7 +42,7 @@ const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }
 const footer = () => {
   return (
     <footer>
-      <Paper background="b-3" as={Grid} p="lg" gap="4" grid="repeat(4, minmax(1px, 1fr))" xs="1fr" lg="1fr 1fr">
+      <Paper background="b-3" as={Grid} p="6" gap="4" grid="repeat(4, minmax(1px, 1fr))" xs="1fr" lg="1fr 1fr">
         <div>
           <Logo width={100} />
           <Text transform="first-letter-only" color="b" low>
@@ -54,7 +54,7 @@ const footer = () => {
           <FooterNav key={title} title={title} links={links} />
         ))}
       </Paper>
-      <Paper className="u_center" p="xs">
+      <Paper className="u_center" p="3">
         Pillar UI · Made by Hamza Miloud Amar
       </Paper>
     </footer>

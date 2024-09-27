@@ -10,7 +10,7 @@ export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: 
   const { count, setCount, increment, decrement } = useCounter(init)
 
   return (
-    <div className="f-l u_gap-sm c-b_cnt">
+    <div className="f-l Sgsm c-b_cnt">
       <button {...shared} onClick={() => decrement()} aria-label="Decrement value" disabled={count <= min}>
         <Minus width="1em" />
       </button>

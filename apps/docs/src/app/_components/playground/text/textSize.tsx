@@ -5,7 +5,7 @@ export const TextSize = () => {
     <>
       <Text gap="2">Hello World</Text>
       <Text gap="3">Hello World</Text>
-      <Text size="sm">Hello World</Text>
+      <Text size="4">Hello World</Text>
       <Text gap="5">Hello World</Text>
       <Text gap="6">Hello World</Text>
       <Text gap="7">Hello World</Text>

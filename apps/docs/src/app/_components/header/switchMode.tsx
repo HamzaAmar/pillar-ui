@@ -29,6 +29,6 @@ export const SwitchMode = () => {
     )
 
   return (
-    <IconButton variant="soft" size="sm" onClick={() => setTheme(nextMode)} icon={icon} title="Turn on light mode" />
+    <IconButton variant="soft" size="4" onClick={() => setTheme(nextMode)} icon={icon} title="Turn on light mode" />
   )
 }

@@ -3,7 +3,7 @@ import { Alert } from '@pillar-ui/core'
 export const AlertSize = () => {
   return (
     <>
-      <Alert title="Success!" size="3xs" />
+      <Alert title="Success!" size="1" />
       <Alert title="Success!" gap="2" />
       <Alert title="Success!" gap="3" />
       <Alert title="Success!" gap="5" />

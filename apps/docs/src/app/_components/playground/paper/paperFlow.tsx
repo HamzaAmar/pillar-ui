@@ -3,10 +3,10 @@ import { Paper } from '@pillar-ui/core'
 export const PaperFlow = () => {
   return (
     <>
-      <Paper background="b-5" flow="xs">
-        <div>Flow xs</div>
-        <div>Flow xs</div>
-        <div>Flow xs</div>
+      <Paper background="b-5" flow="3">
+        <div>Flow 3</div>
+        <div>Flow 3</div>
+        <div>Flow 3</div>
       </Paper>
       <Paper background="b-5" flow="sm">
         <div>Flow sm</div>

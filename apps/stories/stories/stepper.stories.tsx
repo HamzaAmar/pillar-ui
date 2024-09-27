@@ -18,7 +18,7 @@ const CompleteComponent = () => {
         <Check width={60} />
       </div>
       <Text weight="bold">Success</Text>
-      <Text style={{ width: '90ch' }} size="sm" color="b" low>
+      <Text style={{ width: '90ch' }} size="4" color="b" low>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, illum, ut eius esse voluptates voluptatibus
         perferendis laborum, quam temporibus consequuntur iure porro excepturi dolore. Enim labore id tempore iusto sed?{' '}
       </Text>
@@ -34,21 +34,21 @@ export const StepperIcon = () => {
       <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
@@ -74,19 +74,19 @@ function StepperBase(props) {
       <Stepper active={step} setActive={setStep} corner="sharp" {...props} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Hello
           </Text>
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             World
           </Text>
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Nice{' '}
           </Text>
         </StepperStep>
@@ -107,7 +107,7 @@ export const StepperCorners = () => {
   return (
     <div className="l_f-md">
       <StepperBase corner="sharp" />
-      <StepperBase corner="xs" />
+      <StepperBase corner="3" />
       <StepperBase corner="sm" />
       <StepperBase corner="md" />
       <StepperBase corner="lg" />
@@ -138,21 +138,21 @@ export const DefaultStepper = () => {
       <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading gap="3">Hello Nice</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading gap="3">Nice to Meet You</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>

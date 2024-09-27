@@ -1,14 +1,14 @@
 /* Fl */
 
-.l_f-3xs > * + * {
-  margin-top: var(--s-3xs);
+.l_f-1 > * + * {
+  margin-top: var(--s-1);
 }
-.l_f-2xs > * + * {
-  margin-top: var(--s-2xs);
+.l_f-2 > * + * {
+  margin-top: var(--s-2);
 }
 
-.l_f-xs > * + * {
-  margin-top: var(--s-xs);
+.l_f-3 > * + * {
+  margin-top: var(--s-3);
 }
 
 .l_f-sm > * + * {

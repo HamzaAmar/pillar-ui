@@ -4,7 +4,7 @@ export const PinInputCorner = () => {
   return (
     <>
       <PinInput corner="sharp" />
-      <PinInput corner="xs" />
+      <PinInput corner="3" />
       <PinInput corner="sm" />
       <PinInput corner="md" />
       <PinInput corner="lg" />

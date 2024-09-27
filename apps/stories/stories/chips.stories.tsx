@@ -80,7 +80,7 @@ export const ChipsSize = () => (
       <Chips gap="3" variant="outline">
         Hello
       </Chips>
-      <Chips size="sm" variant="outline">
+      <Chips size="4" variant="outline">
         Hello
       </Chips>
       <Chips gap="5" variant="outline">
@@ -128,7 +128,7 @@ export const ChipsCorner = () => (
       <Chips corner="sharp" variant="outline">
         Hello
       </Chips>
-      <Chips corner="xs" variant="outline">
+      <Chips corner="3" variant="outline">
         Hello
       </Chips>
       <Chips corner="sm" variant="outline">
@@ -185,7 +185,7 @@ export const ChipsIcons = () => (
       <Plus />
       Hello
     </Chips>
-    <Chips size="sm" variant="outline">
+    <Chips size="4" variant="outline">
       Hello
       <Plus />
     </Chips>

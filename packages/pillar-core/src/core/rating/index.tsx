@@ -16,7 +16,7 @@ export const Rating = ({
   icon = 'star',
   ...props
 }: RatingProps) => {
-  const classNames = cx(`r-t C${color} u_gap-xs u_center`, {
+  const classNames = cx(`r-t C${color} Sg3 u_center`, {
     [`u_f-${size}`]: size,
   })
   return (

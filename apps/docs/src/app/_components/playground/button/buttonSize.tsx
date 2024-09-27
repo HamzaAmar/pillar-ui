@@ -5,7 +5,7 @@ export function ButtonSize() {
   return (
     <>
       <Flex gap="4" items="center" wrap>
-        <Button size="3xs">Hello World</Button>
+        <Button size="1">Hello World</Button>
         <Button gap="2">Hello World</Button>
         <Button gap="3">Hello World</Button>
         <Button gap="5">Hello World</Button>

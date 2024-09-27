@@ -61,7 +61,7 @@ export const CornerTextarea = () => {
   return (
     <Flex gap="4" direction="column">
       <Textarea corner="sharp" placeholder="sharp" />
-      <Textarea corner="xs" placeholder="xs" />
+      <Textarea corner="3" placeholder="3" />
       <Textarea corner="sm" placeholder="sm" />
       <Textarea corner="md" placeholder="md" />
       <Textarea corner="lg" placeholder="lg" />
@@ -74,7 +74,7 @@ export const CornerTextarea = () => {
 export const SizeTextarea = () => {
   return (
     <Flex gap="4" direction="column">
-      <Textarea size="sm" placeholder="Small(sm)" />
+      <Textarea size="4" placeholder="Small(sm)" />
       <Textarea placeholder="Medium (md default You don't need it)" />
       <Textarea gap="6" placeholder="Large(lg)" />
       <Textarea rows={10} gap="6" placeholder="Large(lg) with 10 rows" />

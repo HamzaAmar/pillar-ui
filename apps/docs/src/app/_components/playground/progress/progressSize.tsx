@@ -6,7 +6,7 @@ export const ProgressSize = () => {
       <div className="l_f-sm">
         <ProgressBar gap="2" value={90} label="hello" />
         <ProgressBar gap="3" value={90} label="hello" />
-        <ProgressBar size="sm" value={90} label="hello" />
+        <ProgressBar size="4" value={90} label="hello" />
         <ProgressBar gap="5" value={90} label="hello" />
         <ProgressBar gap="6" value={90} label="hello" />
         <ProgressBar gap="7" value={90} label="hello" />
@@ -15,13 +15,13 @@ export const ProgressSize = () => {
       <Flex wrap gap="4">
         <ProgressCircle gap="2" value={15} label="hello" />
         <ProgressCircle gap="3" value={15} label="hello" />
-        <ProgressCircle size="sm" value={30} label="hello" />
+        <ProgressCircle size="4" value={30} label="hello" />
         <ProgressCircle gap="5" value={45} label="hello" />
         <ProgressCircle gap="6" value={60} label="hello" />
         <ProgressCircle gap="7" value={90} label="hello" />
         <ProgressCircle gap="8" value={95} label="hello" />
       </Flex>
-      <ProgressBarStack size="sm" label="Nice to meet you">
+      <ProgressBarStack size="4" label="Nice to meet you">
         <ProgressBarStackItem label="CSS" color="d" value={30}>
           <button>CSS 30</button>
         </ProgressBarStackItem>

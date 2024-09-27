@@ -65,7 +65,7 @@ export const TabSize = () => {
   return (
     <Flex direction="column" gap="4">
       <TabBase gap="2" defaultValue={1} />
-      <TabBase size="sm" defaultValue={1} />
+      <TabBase size="4" defaultValue={1} />
       <TabBase gap="5" defaultValue={1} />
       <TabBase gap="6" defaultValue={1} />
       <TabBase gap="7" defaultValue={1} />

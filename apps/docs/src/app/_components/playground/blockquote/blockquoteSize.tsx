@@ -9,7 +9,7 @@ export const BlockquoteSize = () => {
       <Blockquote gap="3" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote size="sm" cite="John Doe">
+      <Blockquote size="4" cite="John Doe">
         This is the quoted text.
       </Blockquote>
       <Blockquote gap="5" cite="John Doe">

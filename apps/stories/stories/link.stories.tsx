@@ -15,7 +15,7 @@ export default meta
 export function LinkSizes() {
   return (
     <div className="l_f-md">
-      <Link href="#" size="3xs">
+      <Link href="#" size="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
       <Link href="#" gap="2">
@@ -24,7 +24,7 @@ export function LinkSizes() {
       <Link href="#" gap="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" size="sm">
+      <Link href="#" size="4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
       <Link href="#" gap="5">

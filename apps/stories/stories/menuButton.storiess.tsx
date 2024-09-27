@@ -24,7 +24,7 @@ export const MenuButtonSize = () => {
     <Flex gap="6">
       <MenuButtonBase gap="2" />
       <MenuButtonBase gap="3" />
-      <MenuButtonBase size="sm" />
+      <MenuButtonBase size="4" />
       <MenuButtonBase gap="5" />
       <MenuButtonBase gap="6" />
       <MenuButtonBase gap="7" />
@@ -36,8 +36,8 @@ export const MenuButtonSize = () => {
 export const MenuButtonCorner = () => {
   return (
     <Flex gap="6">
-      <MenuButtonBase corner="2xs" />
-      <MenuButtonBase corner="xs" />
+      <MenuButtonBase corner="2" />
+      <MenuButtonBase corner="3" />
       <MenuButtonBase corner="sm" />
       <MenuButtonBase corner="md" />
       <MenuButtonBase corner="lg" />

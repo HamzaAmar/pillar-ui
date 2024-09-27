@@ -39,7 +39,7 @@ export const Alert = forwardRef(
 
     if (!isVisible) return
 
-    const classNames = cx(`a-l f-l u_gap-xs u_${variant} C${color}`, {
+    const classNames = cx(`a-l f-l Sg3 u_${variant} C${color}`, {
       [`u_rad-${corner}`]: !!corner,
       [`u_f-${size}`]: size,
       [className!]: className,

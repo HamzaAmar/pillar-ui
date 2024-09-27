@@ -26,19 +26,12 @@ export const PaperMargin = () => {
         sm Padding
       </Paper>
 
-      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="xs">
-        xs Padding
+      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="3">
+        3 Padding
       </Paper>
 
-      <Paper
-        style={{ display: 'flow-root' }}
-        className="u_center"
-        width="30-char"
-        ratio="16-9"
-        background="b-5"
-        m="2xs"
-      >
-        2xs Padding
+      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="2">
+        2 Padding
       </Paper>
     </>
   )

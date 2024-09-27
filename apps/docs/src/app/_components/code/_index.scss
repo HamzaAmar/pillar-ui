@@ -24,7 +24,7 @@
   }
 
   & :is(ul, ol) > * + * {
-    margin-top: var(--s-2xs);
+    margin-top: var(--s-2);
   }
 
   ul,

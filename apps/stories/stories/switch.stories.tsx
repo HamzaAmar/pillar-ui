@@ -15,10 +15,10 @@ export default meta
 export function SwitchSizes() {
   return (
     <Flex gap="4" items="center">
-      <Switch label="Hello" size="3xs" />
+      <Switch label="Hello" size="1" />
       <Switch label="Hello" gap="2" />
       <Switch label="Hello" gap="3" />
-      <Switch label="Hello" size="sm" />
+      <Switch label="Hello" size="4" />
       <Switch label="Hello" gap="5" />
       <Switch label="Hello" gap="6" />
       <Switch label="Hello" gap="7" />
@@ -60,7 +60,7 @@ export function SwitchCorners() {
       <Heading>With Props</Heading>
       <Flex gap="4" items="center">
         <Switch label="Hello" corner="sharp" />
-        <Switch label="Hello" corner="xs" />
+        <Switch label="Hello" corner="3" />
         <Switch label="Hello" corner="sm" />
         <Switch label="Hello" corner="md" />
         <Switch label="Hello" corner="lg" />

@@ -52,7 +52,7 @@ export const KbdSizes = () => {
       <Kbd title="Esc" />
       <Kbd title="Esc" gap="2" />
       <Kbd title="Esc" gap="3" />
-      <Kbd title="Esc" size="sm" />
+      <Kbd title="Esc" size="4" />
       <Kbd title="Esc" gap="5" />
       <Kbd title="Esc" gap="6" />
       <Kbd title="Esc" gap="7" />
@@ -66,7 +66,7 @@ export const KbdCorners = () => {
     <Flex gap="4" items="center">
       <Kbd title="Esc" corner="sharp" />
       <Kbd title="Esc" />
-      <Kbd title="Esc" corner="xs" />
+      <Kbd title="Esc" corner="3" />
       <Kbd title="Esc" corner="md" />
       <Kbd title="Esc" corner="xl" />
       <Kbd title="Esc" corner="full" />
@@ -80,7 +80,7 @@ export const KbdInFlex = () => {
     <Flex gap="4" items="center">
       <Kbd title="Esc" corner="sharp" />
       <Kbd title="Esc" />
-      <Kbd title="Esc" corner="xs" />
+      <Kbd title="Esc" corner="3" />
       <Kbd title="Esc" corner="md" />
       <Kbd title="Esc" corner="xl" />
       <Kbd title="Esc" corner="full" />

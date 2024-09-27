@@ -42,7 +42,7 @@ const Icons = () => {
 
   return (
     <div className="l_f-sm icons">
-      <Flex className="icons-scroll" as={Paper} p="sm" gap="4">
+      <Flex className="icons-scroll" as={Paper} size="4" gap="4">
         {CATEGORIES.map((category) => (
           <Button
             onClick={() => setCurrent(category)}

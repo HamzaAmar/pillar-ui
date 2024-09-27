@@ -191,7 +191,7 @@ export function BreadcrumbSize() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb size="sm" separator="-">
+      <Breadcrumb size="4" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>

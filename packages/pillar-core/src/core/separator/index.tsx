@@ -10,7 +10,7 @@ export const Separator = forwardRef(
       color = 'b',
       direction = 'horizontal',
       position = 'start',
-      thickness = 'xs',
+      thickness = '3',
       corner,
       as: Tag = 'div',
       className,

@@ -23,7 +23,7 @@ export const BreadcrumbSize = () => {
           </BreadcrumbItem>
         ))}
       </Breadcrumb>
-      <Breadcrumb size="sm" separator="-">
+      <Breadcrumb size="4" separator="-">
         {breadcrumbsItems.map(({ name, link, current }) => (
           <BreadcrumbItem current={current} key={name} link={link}>
             {name}

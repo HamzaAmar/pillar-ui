@@ -17,7 +17,7 @@ export const ProgressBarSize = () => {
     <Flex direction="column" gap="4" wrap>
       <ProgressBar gap="2" value={90} label="hello" />
       <ProgressBar gap="3" value={90} label="hello" />
-      <ProgressBar size="sm" value={90} label="hello" />
+      <ProgressBar size="4" value={90} label="hello" />
       <ProgressBar gap="5" value={90} label="hello" />
       <ProgressBar gap="6" value={90} label="hello" />
       <ProgressBar gap="7" value={90} label="hello" />
@@ -74,7 +74,7 @@ export const ProgressCircleSize = () => {
     <Flex gap="4">
       <ProgressCircle gap="2" value={15} label="hello" />
       <ProgressCircle gap="3" value={15} label="hello" />
-      <ProgressCircle size="sm" value={30} label="hello" />
+      <ProgressCircle size="4" value={30} label="hello" />
       <ProgressCircle gap="5" value={45} label="hello" />
       <ProgressCircle gap="6" value={60} label="hello" />
       <ProgressCircle gap="7" value={90} label="hello" />
@@ -121,10 +121,10 @@ function ProgressBarStackBase(props) {
 export const ProgressBarStackSizes = () => {
   return (
     <Flex direction="column" gap="4" wrap>
-      <ProgressBarStackBase size="3xs" />
+      <ProgressBarStackBase size="1" />
       <ProgressBarStackBase gap="2" />
       <ProgressBarStackBase gap="3" />
-      <ProgressBarStackBase size="sm" />
+      <ProgressBarStackBase size="4" />
       <ProgressBarStackBase gap="5" />
       <ProgressBarStackBase gap="7" />
       <ProgressBarStackBase gap="8" />

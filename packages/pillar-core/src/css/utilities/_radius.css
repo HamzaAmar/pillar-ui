@@ -4,8 +4,8 @@
   border-radius: 0;
 }
 
-.u_rad-xs {
-  border-radius: var(--rad-xs, 0.125em);
+.u_rad-3 {
+  border-radius: var(--rad-3, 0.125em);
 }
 
 .u_rad-sm {

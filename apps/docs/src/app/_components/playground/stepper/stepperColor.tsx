@@ -15,7 +15,7 @@ export const StepperBase = (props: Omit<StepperProps, 'children' | 'setActive'>)
       <Stepper active={step} setActive={setStep} {...props}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla
             natus at tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis
             ipsum iste!
@@ -23,7 +23,7 @@ export const StepperBase = (props: Omit<StepperProps, 'children' | 'setActive'>)
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Two Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla
             natus at tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis
             ipsum iste!
@@ -31,7 +31,7 @@ export const StepperBase = (props: Omit<StepperProps, 'children' | 'setActive'>)
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
           <Heading gap="3">Hello World</Heading>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Three Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla
             natus at tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis
             ipsum iste!

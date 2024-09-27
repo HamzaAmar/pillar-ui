@@ -18,7 +18,7 @@ export const Chips = forwardRef(
 
     return (
       <Tag ref={ref} className={_className} {...rest}>
-        <span className="c-i_cnt u_gap-3xs u_truncate u_center">{children} </span>
+        <span className="c-i_cnt Sg1 u_truncate u_center">{children} </span>
       </Tag>
     )
   }

@@ -4,7 +4,7 @@ import React from 'react'
 
 const troubleshooting = () => {
   return (
-    <Paper flow="md" p="sm">
+    <Paper flow="md" size="4">
       <Heading gap="7">Troubleshooting</Heading>
       <Text>
         Encountering challenges is a natural part of the development process, and we`&#39;`re here to help you navigate

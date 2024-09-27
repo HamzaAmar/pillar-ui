@@ -18,7 +18,7 @@ export const TabList = forwardRef(({ children, ...rest }, ref) => {
     <div
       role="tablist"
       aria-orientation={direction}
-      className={cx('t_ab_lst f-l u_gap-xs', { ['l_fl-column']: direction !== 'vertical' })}
+      className={cx('t_ab_lst f-l Sg3', { ['l_fl-column']: direction !== 'vertical' })}
       ref={ref}
       {...rest}
     >
@@ -133,7 +133,7 @@ export const Tabs = forwardRef(
       <TabsProvider {...context}>
         <div
           ref={ref}
-          className={cx(`f-l u_gap-sm C${color} u_f-${size}`, { ['l_fl-column']: direction === 'vertical' })}
+          className={cx(`f-l Sgsm C${color} u_f-${size}`, { ['l_fl-column']: direction === 'vertical' })}
           {...rest}
         >
           {children}

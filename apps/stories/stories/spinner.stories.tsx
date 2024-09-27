@@ -26,10 +26,10 @@ export function SpinnerColors() {
 export function SpinnerSizes() {
   return (
     <Flex gap="4" items="center">
-      <Spinner size="3xs" />
+      <Spinner size="1" />
       <Spinner gap="2" />
       <Spinner gap="3" />
-      <Spinner size="sm" />
+      <Spinner size="4" />
       <Spinner gap="5" />
       <Spinner gap="7" />
       <Spinner gap="8" />
@@ -41,10 +41,10 @@ export function SpinnerSizes() {
 export function SpinnerThickness() {
   return (
     <Flex gap="4" items="center">
-      <Spinner size="3xs" thickness="1px" />
+      <Spinner size="1" thickness="1px" />
       <Spinner gap="2" thickness="2px" />
       <Spinner gap="3" thickness="3px" />
-      <Spinner size="sm" thickness="4px" />
+      <Spinner size="4" thickness="4px" />
       <Spinner gap="5" thickness="5px" />
       <Spinner gap="7" thickness="2px" />
       <Spinner gap="8" thickness="2px" />

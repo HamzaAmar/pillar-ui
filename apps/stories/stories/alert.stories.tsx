@@ -62,10 +62,10 @@ export const AlertSizes = () => {
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
         gap="3"
       />
-      <AlertBase size="sm" />
+      <AlertBase size="4" />
       <AlertBase
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
-        size="sm"
+        size="4"
       />
       <AlertBase gap="5" />
       <AlertBase
@@ -95,7 +95,7 @@ export const AlertCorner = () => {
   return (
     <Flex gap="4" direction="column">
       <AlertBase corner="sharp" />
-      <AlertBase corner="xs" />
+      <AlertBase corner="3" />
       <AlertBase corner="sm" />
       <AlertBase corner="md" />
       <AlertBase corner="lg" />

@@ -314,7 +314,7 @@
 .f-c_err {
   color: var(--D11);
   width: fit-content;
-  gap: var(--s-3xs);
+  gap: var(--s-1);
 }
 
 .f-c_icn {

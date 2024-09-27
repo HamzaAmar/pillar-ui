@@ -33,7 +33,7 @@ export function PillarSupport() {
           <Text weight="medium" gap="6">
             Lets Getting Start
           </Text>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Build faster and lighter. Experience the power of our streamlined design system.
           </Text>
           <Button>Get Started</Button>
@@ -42,13 +42,13 @@ export function PillarSupport() {
           <Text weight="medium" gap="6">
             Community
           </Text>
-          <Text size="sm" color="b" low>
+          <Text size="4" color="b" low>
             Get involved in our community. Everyone is welcome!
           </Text>
           <Flex gap="4">
-            <IconButton size="sm" icon={<Twitter />} title="Connect With Twitter" />
-            <IconButton size="sm" icon={<Github />} title="Connect With Github" />
-            <IconButton size="sm" icon={<Discord />} title="Connect With Twitter" />
+            <IconButton size="4" icon={<Twitter />} title="Connect With Twitter" />
+            <IconButton size="4" icon={<Github />} title="Connect With Github" />
+            <IconButton size="4" icon={<Discord />} title="Connect With Twitter" />
           </Flex>
         </div>
       </div>

@@ -7,16 +7,16 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
   const typeName = type === 'core' ? 'Components' : type[0].toUpperCase() + type.slice(1)
 
   return (
-    <Paper className="docs--header" flow="lg" p="sm">
+    <Paper className="docs--header" flow="lg" size="4">
       <Heading gap="8">{title} </Heading>
-      <Text color="b" low size="sm" weight="medium">
+      <Text color="b" low size="4" weight="medium">
         {excerpt}
       </Text>
 
       <Grid grid="auto minmax(0, 1fr)" sm="1fr" gap="5">
         {type === 'core' && (
           <>
-            <Text weight="medium" size="sm" color="b" low>
+            <Text weight="medium" size="4" color="b" low>
               Components:
             </Text>
             <Flex gap="4" wrap>
@@ -24,14 +24,14 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
             </Flex>
           </>
         )}
-        <Text weight="medium" size="sm" color="b" low>
+        <Text weight="medium" size="4" color="b" low>
           Type
         </Text>
         <Flex gap="4">
           <Chips>{typeName}</Chips>
         </Flex>
         <>
-          <Text weight="medium" size="sm" color="b" low>
+          <Text weight="medium" size="4" color="b" low>
             import
           </Text>
           <Flex gap="4">

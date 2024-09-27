@@ -10,7 +10,7 @@ export function SimplifyDevelopment() {
 
         <Grid grid="1fr 1fr" md="1fr" gap="5">
           {SIMPLE_DEVELOPMENT.map(({ title, id, description }) => (
-            <div className="article--item l_f-2xs" key={id}>
+            <div className="article--item l_f-2" key={id}>
               <Heading as="h3">{title}</Heading>
               <Text transform="capitalize" color="b" low>
                 {description}

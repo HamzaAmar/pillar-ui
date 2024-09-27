@@ -92,10 +92,10 @@ export const CheckboxDefaultCheckedColor = () => {
 export const CheckboxSize = () => {
   return (
     <Flex gap="4" items="center">
-      <Checkbox size="3xs" name="hello" label="Hello" color="s" />
+      <Checkbox size="1" name="hello" label="Hello" color="s" />
       <Checkbox gap="2" name="hello" label="Hello" color="s" />
       <Checkbox gap="3" name="hello" label="Hello" color="s" />
-      <Checkbox size="sm" name="hello" label="Hello" color="s" />
+      <Checkbox size="4" name="hello" label="Hello" color="s" />
       <Checkbox gap="5" name="hello" label="Hello" color="w" />
       <Checkbox gap="6" name="hello" label="Hello" color="p" />
       <Checkbox gap="7" name="hello" label="Hello" color="p" />

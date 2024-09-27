@@ -45,7 +45,7 @@ export const Flex = forwardRef((props, forwardedRef) => {
     [`l_fl-${direction}`]: direction && direction !== 'row',
     'l_fl-wrap': wrap,
     'l_fl-inline': inline,
-    [`u_gap-${gap}`]: gap,
+    [`Sg${gap}`]: gap,
     [`${className}`!]: className,
   })
 

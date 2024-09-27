@@ -4,7 +4,7 @@ export const AvatarCorner = () => {
   return (
     <>
       <Avatar image="https://i.pravatar.cc/120?img=11" corner="sharp" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=12" corner="xs" title="Hello" />
+      <Avatar image="https://i.pravatar.cc/120?img=12" corner="3" title="Hello" />
       <Avatar image="https://i.pravatar.cc/120?img=18" corner="sm" title="Hello" />
       <Avatar image="https://i.pravatar.cc/120?img=19" corner="md" title="Hello" />
       <Avatar image="https://i.pravatar.cc/120?img=20" corner="lg" title="Hello" />

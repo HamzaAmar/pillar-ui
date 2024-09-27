@@ -14,7 +14,7 @@ export default meta
 export const RatingWithLabelAndSize = () => {
   return (
     <Flex direction="column" gap="5">
-      <Rating rating={3} hideTitle size="sm" />
+      <Rating rating={3} hideTitle size="4" />
       <Rating rating={3} hideTitle />
       <Rating rating={3.4} hideTitle gap="6" />
     </Flex>
@@ -36,10 +36,10 @@ export const Ratings = () => {
 export const RatingSize = () => {
   return (
     <Flex direction="column" gap="5">
-      <Rating rating={4} size="3xs" />
+      <Rating rating={4} size="1" />
       <Rating rating={4} gap="2" />
       <Rating rating={4} gap="3" />
-      <Rating rating={4} size="sm" />
+      <Rating rating={4} size="4" />
       <Rating rating={4} />
       <Rating rating={4} gap="6" />
       <Rating rating={4} gap="7" />

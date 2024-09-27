@@ -27,7 +27,7 @@ export const NormalTableExample = (props: Partial<TableProps>) => {
         <TableColumn weight="medium">15.3K</TableColumn>
         <TableColumn weight="medium">1</TableColumn>
         <TableColumn>
-          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
+          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="4" variant="text">
             Accept
           </Button>
         </TableColumn>
@@ -38,7 +38,7 @@ export const NormalTableExample = (props: Partial<TableProps>) => {
         <TableColumn weight="medium">19.3K</TableColumn>
         <TableColumn weight="medium">190.9K</TableColumn>
         <TableColumn>
-          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
+          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="4" variant="text">
             Accept
           </Button>
         </TableColumn>
@@ -49,7 +49,7 @@ export const NormalTableExample = (props: Partial<TableProps>) => {
         <TableColumn weight="medium">2.5K</TableColumn>
         <TableColumn weight="medium">20K</TableColumn>
         <TableColumn>
-          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
+          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="4" variant="text">
             Accept
           </Button>
         </TableColumn>
@@ -60,7 +60,7 @@ export const NormalTableExample = (props: Partial<TableProps>) => {
         <TableColumn weight="medium">20.5K</TableColumn>
         <TableColumn weight="medium">27.8K</TableColumn>
         <TableColumn>
-          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="sm" variant="text">
+          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="4" variant="text">
             Accept
           </Button>
         </TableColumn>
@@ -74,13 +74,13 @@ export const Playground = {}
 export const TableVariant = () => {
   return (
     <Flex direction="column" gap="4">
-      <Heading size="sm">Striped Table</Heading>
+      <Heading size="4">Striped Table</Heading>
       <NormalTableExample variant="striped" />
-      <Heading size="sm">Default Table</Heading>
+      <Heading size="4">Default Table</Heading>
       <NormalTableExample />
-      <Heading size="sm">Soft Table</Heading>
+      <Heading size="4">Soft Table</Heading>
       <NormalTableExample variant="soft" />
-      <Heading size="sm">Head Color Table</Heading>
+      <Heading size="4">Head Color Table</Heading>
       <NormalTableExample variant="head-color" />
     </Flex>
   )
@@ -89,7 +89,7 @@ export const TableVariant = () => {
 export const NormalTableColor = () => {
   return (
     <Flex direction="column" gap="4">
-      <Heading size="sm">Striped Table</Heading>
+      <Heading size="4">Striped Table</Heading>
       <Flex wrap gap="3">
         <Heading as="h2" gap="3">
           Striped Table danger
@@ -114,7 +114,7 @@ export const NormalTableColor = () => {
         <NormalTableExample color="p" variant="striped" />
       </Flex>
 
-      <Heading size="sm">Default Table</Heading>
+      <Heading size="4">Default Table</Heading>
       <Flex wrap gap="3">
         <Heading as="h2" gap="3">
           Default Table danger
@@ -134,7 +134,7 @@ export const NormalTableColor = () => {
         </Heading>
         <NormalTableExample color="se" />
       </Flex>
-      <Heading size="sm">Soft Table</Heading>
+      <Heading size="4">Soft Table</Heading>
       <Flex wrap gap="3">
         <Heading as="h2" gap="3">
           Soft Table danger
@@ -155,7 +155,7 @@ export const NormalTableColor = () => {
         <NormalTableExample variant="soft" color="p" />
       </Flex>
       <NormalTableExample variant="soft" />
-      <Heading size="sm">Head Color Table</Heading>
+      <Heading size="4">Head Color Table</Heading>
       <Flex wrap gap="3">
         <Heading as="h2" gap="3">
           Head Color Table danger
@@ -183,11 +183,11 @@ export const NormalTableColor = () => {
 export const TableSize = () => {
   return (
     <Flex direction="column" gap="4">
-      <Heading size="sm">Table Size SMALL</Heading>
-      <NormalTableExample size="sm" />
-      <Heading size="sm">Table Size Medium</Heading>
+      <Heading size="4">Table Size SMALL</Heading>
+      <NormalTableExample size="4" />
+      <Heading size="4">Table Size Medium</Heading>
       <NormalTableExample />
-      <Heading size="sm">Table Size Large</Heading>
+      <Heading size="4">Table Size Large</Heading>
       <NormalTableExample gap="6" />
     </Flex>
   )
