@@ -5,8 +5,8 @@ import { strokes } from './data'
 export function DarkMode() {
   return (
     <Paper items="center" justify="between" as={Flex} flow="6" className="section">
-      <div className="Sflg">
-        <div className="Sfmd">
+      <div className="Sf5">
+        <div className="Sf4">
           <SectionHeading subheading=" Subtle, Soothing, Smart" heading=" Night Mode: Effortless Elegance" />
           <Text className="dark--description" color="b" low size="7">
             Switch to dark mode with ease. Our useDarkMode hook ensures a smooth, flicker-free experience, compatible

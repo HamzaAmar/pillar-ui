@@ -3,7 +3,7 @@ import { Flex, ProgressBar, ProgressBarStack, ProgressBarStackItem, ProgressCirc
 export const ProgressColor = () => {
   return (
     <>
-      <div className="Sfsm">
+      <div className="Sf3">
         <ProgressBar color="d" value={90} label="hello" />
         <ProgressBar color="s" value={90} label="hello" />
         <ProgressBar color="w" value={90} label="hello" />

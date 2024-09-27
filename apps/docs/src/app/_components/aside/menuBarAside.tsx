@@ -48,7 +48,7 @@ const MenuBar = ({ data }: DocsProps) => {
               : { as: 'button', onClick: () => toggleMenuItemSelection(key) }
 
             return (
-              <li className="Sfmd" key={key}>
+              <li className="Sf4" key={key}>
                 <Item
                   {...linkOrButtonConfig}
                   level={2}

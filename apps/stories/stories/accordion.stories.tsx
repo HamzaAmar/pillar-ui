@@ -75,7 +75,7 @@ export const AlertCollapse = () => {
 
 export const AlertColors = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Grid grid="1fr 1fr 1fr" gap="6">
         <AccordionBase color="d" />
         <AccordionBase color="s" />
@@ -138,7 +138,7 @@ export const AlertColors = () => {
 
 export const AlertVariants = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <AccordionBase variant="solid" />
       <AccordionBase variant="soft" />
       <AccordionBase variant="outline" />
@@ -148,7 +148,7 @@ export const AlertVariants = () => {
 
 export const AlertSizes = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <AccordionBase size="2" />
       <AccordionBase size="3" />
       <AccordionBase size="4" />
@@ -162,7 +162,7 @@ export const AlertSizes = () => {
 
 export const AlertCorners = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <AccordionBase separate color="b" variant="solid" corner="0" />
       <AccordionBase separate color="b" variant="soft" corner="2" />
       <AccordionBase separate color="b" variant="outline" corner="3" />
@@ -217,7 +217,7 @@ export const AccordionStyle = () => {
 
 export function AlertSizeDefaults() {
   return (
-    <div className="Sfsm">
+    <div className="Sf3">
       <Flex direction="column" gap="4">
         <AccordionBase />
         <Paper style={{ '--accordion-size': '2rem' } as CSSProperties}>

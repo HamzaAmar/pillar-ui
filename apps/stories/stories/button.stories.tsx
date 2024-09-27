@@ -62,7 +62,7 @@ const SIZES = ['1', '2', '3', '4', '5', '6', '7', '8', '9'] as const
 
 export function ButtonsIcons() {
   return (
-    <div className="Sfxl">
+    <div className="Sf6">
       {SIZES.map((size) => (
         <div key={size}>
           <Text weight="bold" size="8">
@@ -140,7 +140,7 @@ export function ButtonsTransforms() {
 
 export function ButtonsVariants() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       {VARIANTS.map((variant) => (
         <Flex key={variant} gap="4">
           <Button color="s" variant={variant}>
@@ -169,7 +169,7 @@ export function ButtonsVariants() {
 
 export function ButtonsCorners() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <h1>Regular</h1>
       <Flex gap="4" wrap>
         <Button corner="0" color="s">
@@ -374,7 +374,7 @@ export function ButtonsLength() {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="Sfsm">
+    <div className="Sf3">
       <Flex gap="4">
         <Paper corner="0">
           <Button color="s">Green</Button>
@@ -443,7 +443,7 @@ export function ButtonCornerDefaults() {
 
 export function ButtonTransformDefaults() {
   return (
-    <div className="Sfsm">
+    <div className="Sf3">
       <Flex gap="4" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
         <Button transform="uppercase" color="s">
           green
@@ -462,7 +462,7 @@ export function ButtonTransformDefaults() {
 }
 export function ButtonSizeDefaults() {
   return (
-    <div className="Sfsm">
+    <div className="Sf3">
       <Flex gap="4" style={{ '--button-size': '8px' } as CSSProperties}>
         <Button size="2" color="s">
           green

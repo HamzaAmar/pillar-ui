@@ -5,7 +5,7 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 export function PillarSupport() {
   return (
     <Flex gap="7" justify="evenly" className="simplify-dev--container section">
-      <div className="Sf2xl">
+      <div className="Sf7">
         <div
           className="Sf
           md"

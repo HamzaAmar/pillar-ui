@@ -15,7 +15,7 @@ export default meta
 
 export function PaperBackground() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Paper>Hello</Paper>
       <Paper background="d">Hello</Paper>
       <Paper background="d-8">Hello</Paper>
@@ -31,7 +31,7 @@ export function PaperBackground() {
 
 export function PaperBorder() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Paper>Hello</Paper>
       <Paper border={true} p="5">
         Hello
@@ -42,7 +42,7 @@ export function PaperBorder() {
 
 export function PaperPadding() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Paper p="2" background="d">
         Hello
       </Paper>
@@ -98,7 +98,7 @@ export function PaperCorner() {
 
 export function PaperShadow() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Paper corner="4">Hello</Paper>
 
       <Paper corner="4" shadow="1">
@@ -122,7 +122,7 @@ export function PaperShadow() {
 
 export function PaperColors() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Paper p="4" background="b-4" color="d-11">
         Hello
       </Paper>
@@ -147,7 +147,7 @@ export function PaperColors() {
 
 export function PaperWidths() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Paper background="d-4" color="d">
         Hello
       </Paper>
@@ -202,7 +202,7 @@ export function PaperWidths() {
 
 export function PaperRatio() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Paper width="30-char" ratio="1" background="p-4" color="p">
         Hello
       </Paper>
@@ -227,7 +227,7 @@ export function PaperRatio() {
 
 export function PaperHeight() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Paper height="25" background="s-4" color="s">
         Hello
       </Paper>

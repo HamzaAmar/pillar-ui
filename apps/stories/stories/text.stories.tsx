@@ -311,7 +311,7 @@ export function TextRTL() {
 
 export function TextWidth() {
   return (
-    <div className="Sflg">
+    <div className="Sf5">
       <Text width="25-char">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
         cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque

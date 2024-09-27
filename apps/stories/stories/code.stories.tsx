@@ -106,7 +106,7 @@ export const CodeLong = () => {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="Sfsm">
+    <div className="Sf3">
       <Flex gap="4" direction="column">
         <Paper corner="0">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -175,7 +175,7 @@ export function ButtonCornerDefaults() {
 
 export function CodeCornerDefaults() {
   return (
-    <div className="Sfsm">
+    <div className="Sf3">
       <Code color="d">{`const animals = ['pigs', 'goats', 'sheep'];
                         const count = animals.push('cows');
                         console.log(count);

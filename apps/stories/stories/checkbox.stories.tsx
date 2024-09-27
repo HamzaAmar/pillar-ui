@@ -55,7 +55,7 @@ export const CheckboxColor = () => {
 
 export const CheckboxDisabled = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Flex gap="4" items="center">
         <Checkbox disabled name="hello" label="Hello" color="d" />
         <Checkbox disabled name="hello" label="Hello" color="s" />
@@ -125,7 +125,7 @@ export const CheckboxIsIndeterminate = () => (
 )
 
 export const CheckboxInAForm = () => (
-  <form className="Sfsm">
+  <form className="Sf3">
     <FormController label="Hello">
       <Input name="hello" />
     </FormController>

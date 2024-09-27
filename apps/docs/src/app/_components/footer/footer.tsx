@@ -26,7 +26,7 @@ const FooterItem = ({ href, text, external = false }: FooterItemProps) => {
 
 const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }) => {
   return (
-    <nav className="Sfsm">
+    <nav className="Sf3">
       <Text transform="capitalize" size="5" weight="medium">
         {title}
       </Text>

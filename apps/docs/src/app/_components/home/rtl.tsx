@@ -45,7 +45,7 @@ export function RTLSupport() {
   return (
     <Paper as={Grid} grid="1.7fr 1fr" lg="1fr" items="center" gap="5" className="section rtl--support">
       <div className="rtl--support--content">
-        <div className="Sflg">
+        <div className="Sf5">
           <div className="Sf3">
             <div>
               <SectionHeading
@@ -82,7 +82,7 @@ export function RTLSupport() {
         </svg>
       </div>
 
-      <div className="Sfsm">
+      <div className="Sf3">
         <Article type="ar" />
         <Article />
       </div>

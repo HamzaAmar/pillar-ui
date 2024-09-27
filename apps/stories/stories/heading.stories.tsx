@@ -14,7 +14,7 @@ export default meta
 
 export function HeadingSizes() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading size="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -57,7 +57,7 @@ export function HeadingSizes() {
 
 export function HeadingWeights() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading weight="thin">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -96,7 +96,7 @@ export function HeadingWeights() {
 }
 export function HeadingTrucates() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading size="9" truncate="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -147,7 +147,7 @@ export function HeadingTrucates() {
 
 export function HeadingTrasforms() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading transform="lowercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading transform="capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading transform="uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
@@ -158,7 +158,7 @@ export function HeadingTrasforms() {
 
 export function HeadingDecorations() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading decoration="through">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading decoration="under">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading decoration="over">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
@@ -168,7 +168,7 @@ export function HeadingDecorations() {
 
 export function HeadingFontStyles() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading fontStyle="italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading fontStyle="oblique">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
@@ -180,7 +180,7 @@ type Contrast = 'low' | 'high'
 
 export function HeadingAligns() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading align="start">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -208,7 +208,7 @@ export function HeadingAligns() {
 
 export function HeadingColors() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading color="d">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
@@ -253,7 +253,7 @@ export function HeadingColors() {
 
 export function HeadingLeadings() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading leading="normal">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -296,7 +296,7 @@ export function HeadingLeadings() {
 
 export function HeadingRTL() {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Heading dir="rtl">
         مُرَاكُش اموراكوش، «أرض الله») تسمى أيضًا بالمدينة الحمراء وعاصمة النخيل، هي ثالث أكبر مدينة في المملكة المغربية
         من ناحية عدد السكان. وهي عاصمة جهة مراكش آسفي. تقع مراكش على بعد 580 كم (360 ميل) جنوب شرق طنجة، 327 كم (203
@@ -311,7 +311,7 @@ export function HeadingRTL() {
 
 export function HeadingWidth() {
   return (
-    <div className="Sflg">
+    <div className="Sf5">
       <Heading width="25-char">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
         cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque

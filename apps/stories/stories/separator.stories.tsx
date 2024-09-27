@@ -11,7 +11,7 @@ export default meta
 
 export const SeparatorColors = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Separator color="d" />
       <Separator color="w" />
       <Separator color="s" />
@@ -24,7 +24,7 @@ export const SeparatorColors = () => {
 
 export const SeparatorThickness = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Separator thickness="1" />
       <Separator thickness="2" />
       <Separator thickness="3" />
@@ -40,7 +40,7 @@ export const SeparatorThickness = () => {
 
 export const SeparatorCorner = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Separator corner="full" thickness="1" />
       <Separator corner="full" thickness="2" />
       <Separator corner="full" thickness="3" />
@@ -56,7 +56,7 @@ export const SeparatorCorner = () => {
 
 export const SeparatorSeparator = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Separator title="OR" corner="5" thickness="1" />
       <Separator title="OR" corner="5" thickness="2" />
       <Separator title="OR" corner="5" thickness="3" />
@@ -72,7 +72,7 @@ export const SeparatorSeparator = () => {
 
 export const SeparatorDirection = () => {
   return (
-    <div className="Sfmd">
+    <div className="Sf4">
       <Separator title="OR" direction="horizontal" />
       <Separator title="OR" direction="horizontal" position="center" />
       <Separator title="OR" direction="horizontal" position="end" />
