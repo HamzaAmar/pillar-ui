@@ -21,7 +21,7 @@ const Header = () => {
 
       <Flex
         as={Paper}
-        size="4"
+        corner="4"
         data-show={value}
         justify="between"
         gap="4"
@@ -33,7 +33,7 @@ const Header = () => {
         <IconButton
           size="4"
           className="only-mobile"
-          corner="sm"
+          corner="4"
           onClick={setFalse}
           icon={<Close />}
           title={'Hide Search '}

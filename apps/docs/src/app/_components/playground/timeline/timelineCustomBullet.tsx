@@ -7,34 +7,34 @@ export const TimelineCustomBullet = () => {
     <>
       <Timeline>
         <TimelineItem bullet={<Cross />}>
-          <Heading gap="3">Hello</Heading>
-          <Text gap="3">
+          <Heading size="3">Hello</Heading>
+          <Text size="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
         </TimelineItem>
         <TimelineItem
-          bullet={<Avatar variant="image" gap="3" image="https://picsum.photos/id/152/40/40" title="hello" />}
+          bullet={<Avatar variant="image" size="3" image="https://picsum.photos/id/152/40/40" title="hello" />}
         >
-          <Heading gap="3">Hello</Heading>
-          <Text gap="3">
+          <Heading size="3">Hello</Heading>
+          <Text size="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
         </TimelineItem>
         <TimelineItem>
-          <Heading gap="3">Hello</Heading>
-          <Text gap="3">
+          <Heading size="3">Hello</Heading>
+          <Text size="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.
           </Text>
         </TimelineItem>
         <TimelineItem>
-          <Heading gap="3">Hello</Heading>
-          <Text gap="3">
+          <Heading size="3">Hello</Heading>
+          <Text size="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
             Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit!
             Nihil, quae.

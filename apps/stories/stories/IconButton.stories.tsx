@@ -26,11 +26,11 @@ export function IconButtonsSizes() {
   return (
     <Flex gap="4" items="center">
       <IconButton title="Hello world" size="1" icon={<ThumbUp />} color="s" />
-      <IconButton title="Hello world" gap="2" icon={<ThumbUp />} color="w" />
-      <IconButton title="Hello world" gap="3" icon={<ThumbUp />} color="d" />
+      <IconButton title="Hello world" size="2" icon={<ThumbUp />} color="w" />
+      <IconButton title="Hello world" size="3" icon={<ThumbUp />} color="d" />
       <IconButton title="Hello world" size="4" icon={<ThumbUp />} color="se" />
-      <IconButton title="Hello world" gap="5" icon={<ThumbUp />} color="b" />
-      <IconButton title="Hello world" gap="7" icon={<ThumbUp />} color="p" />
+      <IconButton title="Hello world" size="5" icon={<ThumbUp />} color="b" />
+      <IconButton title="Hello world" size="7" icon={<ThumbUp />} color="p" />
     </Flex>
   )
 }
@@ -38,11 +38,11 @@ export function IconButtonsSizes() {
 export function IconButtonsCorners() {
   return (
     <Flex gap="4" items="center">
-      <IconButton title="Hello world" corner="sharp" icon={<ThumbUp />} color="s" />
+      <IconButton title="Hello world" corner="0" icon={<ThumbUp />} color="s" />
       <IconButton title="Hello world" corner="3" icon={<ThumbUp />} color="d" />
-      <IconButton title="Hello world" corner="sm" icon={<ThumbUp />} color="se" />
-      <IconButton title="Hello world" corner="md" icon={<ThumbUp />} color="b" />
-      <IconButton title="Hello world" corner="xl" icon={<ThumbUp />} color="p" />
+      <IconButton title="Hello world" corner="2" icon={<ThumbUp />} color="se" />
+      <IconButton title="Hello world" corner="3" icon={<ThumbUp />} color="b" />
+      <IconButton title="Hello world" corner="5" icon={<ThumbUp />} color="p" />
     </Flex>
   )
 }
@@ -50,7 +50,7 @@ const VARIANTS = ['shadow', 'solid', 'mixed', 'soft', 'outline', 'link', 'text']
 
 export function IconButtonsVariants() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       {VARIANTS.map((variant) => (
         <Flex key={variant} gap="4">
           <IconButton title="Hello world" icon={<ThumbUp />} variant={variant} color="s" />
@@ -67,65 +67,65 @@ export function IconButtonsVariants() {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex gap="4">
-        <Paper corner="sharp">
+        <Paper corner="0">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
         <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
       </Flex>
 
       <Flex gap="4" style={{ '--button-rad': '5px' } as CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
         <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
       </Flex>
       <Flex gap="4" style={{ '--button-rad': '10px' } as CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
         <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
       </Flex>
 
       <Flex gap="4" style={{ '--button-rad': '20px' } as CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
         <IconButton title="Hello world" icon={<ThumbUp />} color="p" />

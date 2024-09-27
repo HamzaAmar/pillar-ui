@@ -35,7 +35,7 @@ type Gradient = Color | 'mixed1' | 'mixed2' | 'mixed3' | 'mixed4' | undefined
 type CornerHand = 'h-1' | 'h-2' | 'h-3' | 'h-4' | 'h-5' | 'h-6'
 type CornerBlob = 'b-1' | 'b-2' | 'b-3' | 'b-4' | 'b-5'
 
-type Corner = 'sharp' | CommonSize | 'circle' | 'full' | undefined
+type Corner = '0' | CommonSize | 'circle' | 'full'
 
 /**
  * Represents the color of a component.

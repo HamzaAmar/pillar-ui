@@ -39,7 +39,7 @@ function App() {
 
   return (
     <Paper className="u_center">
-      <Paper as="form" flow="sm" onSubmit={handleSubmit} width="60-char" border>
+      <Paper as="form" flow="4" onSubmit={handleSubmit} width="60-char" border>
         <FormController required label="Name" error={error.name}>
           <Input
             value={formData.name}

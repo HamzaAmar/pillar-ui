@@ -22,9 +22,9 @@ export default function Blog({ params }: SlugParamsProps) {
 
   return (
     <>
-      <div className="docs--content l_f-lg">
+      <div className="docs--content Sflg">
         <DocHeader root="pillar-utils/src" {...rest} />
-        <div className="section prose l_f-md">
+        <div className="section prose Sfmd">
           <CustomMDX source={content} />
         </div>
       </div>

@@ -3,12 +3,12 @@ import { InputNumber, Paper } from '@pillar-ui/core'
 export const InputNumberCorner = () => {
   return (
     <>
-      <InputNumber corner="sharp" placeholder="sharp" />
+      <InputNumber corner="0" placeholder="sharp" />
       <InputNumber corner="3" placeholder="3" />
-      <InputNumber corner="sm" placeholder="sm" />
-      <InputNumber corner="md" placeholder="md" />
-      <InputNumber corner="lg" placeholder="lg" />
-      <InputNumber corner="xl" placeholder="xl" />
+      <InputNumber corner="2" placeholder="sm" />
+      <InputNumber corner="3" placeholder="md" />
+      <InputNumber corner="4" placeholder="lg" />
+      <InputNumber corner="5" placeholder="xl" />
       <InputNumber corner="full" placeholder="full" />
     </>
   )

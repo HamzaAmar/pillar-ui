@@ -4,13 +4,13 @@ export const PaginationSize = () => {
   return (
     <>
       <Pagination count={10} />
-      <Pagination count={10} gap="2" />
-      <Pagination count={10} gap="3" />
+      <Pagination count={10} size="2" />
+      <Pagination count={10} size="3" />
       <Pagination count={10} size="4" />
-      <Pagination count={10} gap="5" />
-      <Pagination count={10} gap="6" />
-      <Pagination count={10} gap="7" />
-      <Pagination count={10} gap="8" />
+      <Pagination count={10} size="5" />
+      <Pagination count={10} size="6" />
+      <Pagination count={10} size="7" />
+      <Pagination count={10} size="8" />
     </>
   )
 }

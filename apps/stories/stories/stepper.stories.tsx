@@ -33,21 +33,21 @@ export const StepperIcon = () => {
     <Flex gap="6" direction="column">
       <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
-          <Heading gap="3">Hello World</Heading>
+          <Heading size="3">Hello World</Heading>
           <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
-          <Heading gap="3">Hello World</Heading>
+          <Heading size="3">Hello World</Heading>
           <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
-          <Heading gap="3">Hello World</Heading>
+          <Heading size="3">Hello World</Heading>
           <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
@@ -71,21 +71,21 @@ function StepperBase(props) {
 
   return (
     <Flex gap="6" direction="column">
-      <Stepper active={step} setActive={setStep} corner="sharp" {...props} completeComponent={<CompleteComponent />}>
+      <Stepper active={step} setActive={setStep} corner="0" {...props} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
-          <Heading gap="3">Hello World</Heading>
+          <Heading size="3">Hello World</Heading>
           <Text size="4" color="b" low>
             Hello
           </Text>
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
-          <Heading gap="3">Hello World</Heading>
+          <Heading size="3">Hello World</Heading>
           <Text size="4" color="b" low>
             World
           </Text>
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
-          <Heading gap="3">Hello World</Heading>
+          <Heading size="3">Hello World</Heading>
           <Text size="4" color="b" low>
             Nice{' '}
           </Text>
@@ -105,13 +105,13 @@ function StepperBase(props) {
 
 export const StepperCorners = () => {
   return (
-    <div className="l_f-md">
-      <StepperBase corner="sharp" />
+    <div className="Sfmd">
+      <StepperBase corner="0" />
       <StepperBase corner="3" />
-      <StepperBase corner="sm" />
-      <StepperBase corner="md" />
-      <StepperBase corner="lg" />
-      <StepperBase corner="xl" />
+      <StepperBase corner="2" />
+      <StepperBase corner="3" />
+      <StepperBase corner="4" />
+      <StepperBase corner="5" />
       <StepperBase corner="full" />
     </div>
   )
@@ -119,7 +119,7 @@ export const StepperCorners = () => {
 
 export const StepperColors = () => {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <StepperBase color="d" />
       <StepperBase color="w" />
       <StepperBase color="s" />
@@ -137,21 +137,21 @@ export const DefaultStepper = () => {
     <Flex gap="6" direction="column">
       <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
-          <Heading gap="3">Hello World</Heading>
+          <Heading size="3">Hello World</Heading>
           <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<User />} title="Profile" description="Nice Picture from here i Like it so much">
-          <Heading gap="3">Hello Nice</Heading>
+          <Heading size="3">Hello Nice</Heading>
           <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!
           </Text>
         </StepperStep>
         <StepperStep icon={<Settings />} title="Skills" description="Word is word no matter what happen">
-          <Heading gap="3">Nice to Meet You</Heading>
+          <Heading size="3">Nice to Meet You</Heading>
           <Text size="4" color="b" low>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illo autem ipsam dolorum nulla natus at
             tempora labore. Exercitationem praesentium est illo, modi quos cupiditate dignissimos reiciendis ipsum iste!

@@ -68,7 +68,7 @@ export const FormGroupDirection = () => {
 export const FormGroupCorner = () => {
   return (
     <>
-      <FormGroup title="Hello" corner="sm">
+      <FormGroup title="Hello" corner="2">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />

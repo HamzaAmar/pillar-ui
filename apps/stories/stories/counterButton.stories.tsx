@@ -9,7 +9,7 @@ const meta: Meta<typeof CounterButton> = {
 export default meta
 export function ButtonCounterColor() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <CounterButton />
       <CounterButton />
       <CounterButton />
@@ -20,7 +20,7 @@ export function ButtonCounterColor() {
 
 export function ButtonCounterMinMax() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <CounterButton max={5} />
       <CounterButton min={5} />
       <CounterButton min={5} max={20} />

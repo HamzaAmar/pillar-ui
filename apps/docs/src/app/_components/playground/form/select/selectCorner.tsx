@@ -14,22 +14,22 @@ const Options = () => {
 export const SelectCorner = () => {
   return (
     <>
-      <Select corner="sharp">
+      <Select corner="0">
         <Options />
       </Select>
       <Select corner="3">
         <Options />
       </Select>
-      <Select corner="sm">
+      <Select corner="2">
         <Options />
       </Select>
-      <Select corner="md">
+      <Select corner="3">
         <Options />
       </Select>
-      <Select corner="lg">
+      <Select corner="4">
         <Options />
       </Select>
-      <Select corner="xl">
+      <Select corner="5">
         <Options />
       </Select>
       <Select corner="full">

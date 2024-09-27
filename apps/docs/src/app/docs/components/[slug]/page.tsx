@@ -44,7 +44,7 @@ function Page({ params }: SlugParamsProps) {
       />
       <div className="docs--content">
         <DocHeader root="pillar-core/src/core" title={title} {...rest} />
-        <div className="section prose l_f-md">
+        <div className="section prose Sfmd">
           <CustomMDX source={content} />
         </div>
       </div>

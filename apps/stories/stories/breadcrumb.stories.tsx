@@ -22,7 +22,7 @@ export function BreadcrumbDefault() {
 
 export function BreadcrumbSeparator() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Breadcrumb separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
@@ -52,7 +52,7 @@ export function BreadcrumbSeparator() {
 
 export function BreadcrumbColor() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Breadcrumb color="d">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
@@ -106,7 +106,7 @@ export function BreadcrumbColor() {
 
 export function BreadcrumbIcons() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Breadcrumb>
         <BreadcrumbItem link="../../..">
           Home
@@ -175,15 +175,15 @@ export function BreadcrumbIcons() {
 
 export function BreadcrumbSize() {
   return (
-    <div className="l_f-md">
-      <Breadcrumb gap="2" separator="-">
+    <div className="Sfmd">
+      <Breadcrumb size="2" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
-      <Breadcrumb gap="3" separator="-">
+      <Breadcrumb size="3" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -206,7 +206,7 @@ export function BreadcrumbSize() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb gap="5" separator="/">
+      <Breadcrumb size="5" separator="/">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -214,21 +214,21 @@ export function BreadcrumbSize() {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Breadcrumb gap="6">
+      <Breadcrumb size="6">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
-      <Breadcrumb gap="7">
+      <Breadcrumb size="7">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
-      <Breadcrumb gap="8">
+      <Breadcrumb size="8">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>
@@ -241,7 +241,7 @@ export function BreadcrumbSize() {
 
 export function BreadcrumbCustomStyle() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Breadcrumb className="u_red" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
@@ -275,7 +275,7 @@ export function BreadcrumbCustomStyle() {
 
 export function BreadcrumbPolymorphic() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Breadcrumb as="div" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>

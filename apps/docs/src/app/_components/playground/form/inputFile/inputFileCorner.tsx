@@ -3,12 +3,12 @@ import { InputFile } from '@pillar-ui/core'
 export const InputFileCorner = () => {
   return (
     <>
-      <InputFile corner="sharp" />
+      <InputFile corner="0" />
       <InputFile corner="3" />
-      <InputFile corner="sm" />
-      <InputFile corner="md" />
-      <InputFile corner="lg" />
-      <InputFile corner="xl" />
+      <InputFile corner="2" />
+      <InputFile corner="3" />
+      <InputFile corner="4" />
+      <InputFile corner="5" />
       <InputFile corner="full" />
     </>
   )

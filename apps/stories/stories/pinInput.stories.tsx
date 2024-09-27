@@ -48,12 +48,12 @@ export const BorderedPinInput = () => {
 export const CornerPinInput = () => {
   return (
     <Flex gap="4" direction="column">
-      <PinInput corner="sharp" />
+      <PinInput corner="0" />
       <PinInput corner="3" />
-      <PinInput corner="sm" />
-      <PinInput corner="md" />
-      <PinInput corner="lg" />
-      <PinInput corner="xl" />
+      <PinInput corner="2" />
+      <PinInput corner="3" />
+      <PinInput corner="4" />
+      <PinInput corner="5" />
       <PinInput corner="full" />
     </Flex>
   )
@@ -62,11 +62,11 @@ export const CornerPinInput = () => {
 export const SizePinInput = () => {
   return (
     <Flex gap="4" direction="column">
-      <PinInput gap="3" />
+      <PinInput size="3" />
       <PinInput size="4" />
-      <PinInput gap="5" />
-      <PinInput gap="6" />
-      <PinInput gap="7" />
+      <PinInput size="5" />
+      <PinInput size="6" />
+      <PinInput size="7" />
     </Flex>
   )
 }

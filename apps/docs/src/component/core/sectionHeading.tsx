@@ -7,8 +7,8 @@ interface SectionHeadingProps {
 
 export const SectionHeading = ({ heading, subheading }: SectionHeadingProps) => {
   return (
-    <Heading as="h2" gap="9" weight="medium" transform="uppercase">
-      <Text gap="5" weight="normal" color="p" low>
+    <Heading as="h2" size="9" weight="medium" transform="uppercase">
+      <Text size="5" weight="normal" color="p" low>
         {subheading}
       </Text>
       <div>{heading}</div>

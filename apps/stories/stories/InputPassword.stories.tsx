@@ -63,12 +63,12 @@ export const BorderedInput = () => {
 export const CornerInput = () => {
   return (
     <Flex gap="4" direction="column">
-      <InputPassword corner="sharp" placeholder="sharp" />
+      <InputPassword corner="0" placeholder="sharp" />
       <InputPassword corner="3" placeholder="3" />
-      <InputPassword corner="sm" placeholder="sm" />
-      <InputPassword corner="md" placeholder="md" />
-      <InputPassword corner="lg" placeholder="lg" />
-      <InputPassword corner="xl" placeholder="xl" />
+      <InputPassword corner="2" placeholder="sm" />
+      <InputPassword corner="3" placeholder="md" />
+      <InputPassword corner="4" placeholder="lg" />
+      <InputPassword corner="5" placeholder="xl" />
       <InputPassword corner="full" placeholder="full" />
     </Flex>
   )
@@ -79,7 +79,7 @@ export const SizeInput = () => {
     <Flex gap="4" direction="column">
       <InputPassword size="4" placeholder="Small(sm)" />
       <InputPassword placeholder="Medium (md default You don't need it)" />
-      <InputPassword gap="6" placeholder="Large(lg)" />
+      <InputPassword size="6" placeholder="Large(lg)" />
     </Flex>
   )
 }

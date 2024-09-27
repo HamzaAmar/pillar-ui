@@ -66,7 +66,7 @@ export const Accordion = forwardRef(
       color = 'B',
       variant,
       size = '5',
-      corner = 'sharp',
+      corner = '0',
       separate,
       className,
       ...rest
@@ -78,7 +78,7 @@ export const Accordion = forwardRef(
     const classNames = cx(`a-c`, {
       [`C${color}`]: color,
       [`u_f-${size}`]: size,
-      'l_f-sm': separate,
+      Sfsm: separate,
       [`u_variant`]: variant,
       [className!]: className,
     })

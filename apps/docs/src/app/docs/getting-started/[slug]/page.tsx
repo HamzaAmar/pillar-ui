@@ -20,7 +20,7 @@ function GettingStarted({ params }: SlugParamsProps) {
   return (
     <>
       <div className="section docs--content prose">
-        <div className="l_f-sm">
+        <div className="Sfsm">
           <CustomMDX source={content} />
         </div>
       </div>

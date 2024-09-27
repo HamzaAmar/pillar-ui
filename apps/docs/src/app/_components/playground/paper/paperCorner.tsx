@@ -3,19 +3,19 @@ import { Paper } from '@pillar-ui/core'
 export const PaperCorner = () => {
   return (
     <>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="sharp">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="0">
         sharp
       </Paper>
       <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="3">
         3
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="md">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="3">
         md
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="lg">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="4">
         lg
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="xl">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="5">
         xl
       </Paper>
       <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="circle">

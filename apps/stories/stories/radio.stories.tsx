@@ -36,7 +36,7 @@ export function RadioColors() {
 
 export function RadioDefaultCheck() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Flex gap="4" items="center">
         <Radio defaultChecked color="d" name="solid.red" label="Red" />
         <Radio defaultChecked color="s" name="solid.green" label="Green" />
@@ -67,7 +67,7 @@ export function RadioDefaultCheck() {
 
 export function RadioVariants() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Flex gap="4" items="center">
         <Radio color="d" name="red" label="Red" />
         <Radio color="s" name="green" label="Green" />
@@ -100,18 +100,18 @@ export function RadioSizes() {
   return (
     <Flex gap="4" items="center">
       <Radio size="1" name="red" label="Red" />
-      <Radio gap="2" name="green" label="Green" />
-      <Radio gap="3" name="orange" label="Orange" />
+      <Radio size="2" name="green" label="Green" />
+      <Radio size="3" name="orange" label="Orange" />
       <Radio size="4" name="primary" label="Primary" />
-      <Radio gap="6" name="b" label="b" />
-      <Radio gap="9" name="se" label="Secondary" />
+      <Radio size="6" name="b" label="b" />
+      <Radio size="9" name="se" label="Secondary" />
     </Flex>
   )
 }
 
 export function RadioStates() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Flex gap="4" items="center">
         <Radio name="red" label="Red" />
         <Radio name="red" label="Red" defaultChecked />
@@ -158,7 +158,7 @@ export function RadioGroupVertical() {
 
 export function RadioGroupVl() {
   return (
-    <RadioGroup name="red" label="Choose you Color" showLabel gap="6" color="d">
+    <RadioGroup name="red" label="Choose you Color" showLabel size="6" color="d">
       <Radio label="Nice" />
       <Radio label="To Meet" />
       <Radio label="Here IN " />
@@ -169,7 +169,7 @@ export function RadioGroupVl() {
 
 export function RadioGroupLongText() {
   return (
-    <RadioGroup name="red" label="Choose you Color" showLabel gap="5" color="d">
+    <RadioGroup name="red" label="Choose you Color" showLabel size="5" color="d">
       <Radio
         label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora saepe laborum, iste ad eaque animi laboriosam officiis architecto at, esse magnam eos dolorem! Culpa odit temporibus ab excepturi, fugiat a?
 "

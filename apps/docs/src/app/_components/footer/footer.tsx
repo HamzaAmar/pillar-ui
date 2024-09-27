@@ -26,11 +26,11 @@ const FooterItem = ({ href, text, external = false }: FooterItemProps) => {
 
 const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }) => {
   return (
-    <nav className="l_f-sm">
+    <nav className="Sfsm">
       <Text transform="capitalize" size="5" weight="medium">
         {title}
       </Text>
-      <ul className="footer-list l_f-3">
+      <ul className="footer-list Sf3">
         {links.map(({ href, text, external }) => (
           <FooterItem key={href} href={href} text={text} external={external} />
         ))}

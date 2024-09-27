@@ -84,7 +84,7 @@ export const BorderedSelect = () => {
 export const CornerSelect = () => {
   return (
     <Flex gap="4" direction="column">
-      <Select corner="sharp">
+      <Select corner="0">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
@@ -92,19 +92,19 @@ export const CornerSelect = () => {
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select corner="sm">
+      <Select corner="2">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select corner="md">
+      <Select corner="3">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select corner="lg">
+      <Select corner="4">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select corner="xl">
+      <Select corner="5">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>

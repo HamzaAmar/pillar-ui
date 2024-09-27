@@ -33,7 +33,7 @@ export const FilledInput = () => {
       />
       <Input
         aria-label="hello"
-        suffixInput={<Button corner="sharp">Connect</Button>}
+        suffixInput={<Button corner="0">Connect</Button>}
         defaultValue="Default Value"
         variant="filled"
       />
@@ -43,7 +43,7 @@ export const FilledInput = () => {
 
 export const OutlineInput = () => {
   return (
-    <div className="l_f-lg">
+    <div className="Sflg">
       <Flex gap="4" direction="column">
         <Input autoFocus placeholder="Focus" />
         <Input placeholder="Normal" />
@@ -76,12 +76,12 @@ export const BorderedInput = () => {
 export const CornerInput = () => {
   return (
     <Flex gap="4" direction="column">
-      <Input corner="sharp" placeholder="sharp" />
+      <Input corner="0" placeholder="sharp" />
       <Input corner="3" placeholder="3" />
-      <Input corner="sm" placeholder="sm" />
-      <Input corner="md" placeholder="md" />
-      <Input corner="lg" placeholder="lg" />
-      <Input corner="xl" placeholder="xl" />
+      <Input corner="2" placeholder="sm" />
+      <Input corner="3" placeholder="md" />
+      <Input corner="4" placeholder="lg" />
+      <Input corner="5" placeholder="xl" />
       <Input corner="full" placeholder="full" />
     </Flex>
   )

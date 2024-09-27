@@ -25,13 +25,13 @@ export const CodeColors = () => {
 export const CodeSizes = () => {
   return (
     <Flex gap="4" direction="column" justify="center">
-      <Code gap="2">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code gap="3">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="2">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="3">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="4">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code gap="5">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code gap="6">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code gap="7">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code gap="8">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="5">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="6">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="7">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="8">{`console.log('Hello world Every thing is OK')`}</Code>
     </Flex>
   )
 }
@@ -39,10 +39,10 @@ export const CodeSizes = () => {
 export const CodeCorners = () => {
   return (
     <Flex gap="4" direction="column" justify="center">
-      <Code corner="sharp">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code corner="sm">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code corner="md">{`console.log('Hello world Every thing is OK')`}</Code>
-      <Code corner="xl">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code corner="0">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code corner="2">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code corner="3">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code corner="5">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code corner="full">{`console.log('Hello world Every thing is OK')`}</Code>
     </Flex>
   )
@@ -51,14 +51,14 @@ export const CodeCorners = () => {
 export const CodeLong = () => {
   return (
     <Flex gap="4" direction="column" justify="center">
-      <Code corner="sharp">
+      <Code corner="0">
         {`<div>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione praesentium minima, commodi architecto
           provident neque cumque beatae iste eaque ipsam perspiciatis et enim quaerat qui animi mollitia assumenda
           laborum reiciendis.
         </div>`}
       </Code>
-      <Code color="b" corner="sharp">
+      <Code color="b" corner="0">
         {`<!DOCTYPE html>
             <html lang="en">
             <head>
@@ -72,7 +72,7 @@ export const CodeLong = () => {
             </body>
             </html>`}
       </Code>
-      <Code color="w" corner="sharp">
+      <Code color="w" corner="0">
         {`<!DOCTYPE html>
             <html lang="en">
             <head>
@@ -86,7 +86,7 @@ export const CodeLong = () => {
             </body>
             </html>`}
       </Code>
-      <Code color="w" corner="sharp">
+      <Code color="w" corner="0">
         {`<!DOCTYPE html>
             <html lang="en">
             <head>
@@ -106,65 +106,65 @@ export const CodeLong = () => {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex gap="4" direction="column">
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
 
       <Flex gap="4" direction="column" style={{ '--code-rad': '1px' } as CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
       <Flex gap="4" direction="column" style={{ '--code-rad': '10px' } as CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
 
       <Flex gap="4" direction="column" style={{ '--code-rad': '20px' } as CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -175,7 +175,7 @@ export function ButtonCornerDefaults() {
 
 export function CodeCornerDefaults() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Code color="d">{`const animals = ['pigs', 'goats', 'sheep'];
                         const count = animals.push('cows');
                         console.log(count);

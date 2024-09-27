@@ -8,12 +8,12 @@ export function AvatarGroupContext() {
         <Avatar title="Success!" />
         <Avatar title="Success!" />
       </AvatarGroup>
-      <AvatarGroup gap="3">
+      <AvatarGroup size="3">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
       </AvatarGroup>
-      <AvatarGroup corner="sharp">
+      <AvatarGroup corner="0">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />

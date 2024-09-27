@@ -60,12 +60,12 @@ export const BorderedTextarea = () => {
 export const CornerTextarea = () => {
   return (
     <Flex gap="4" direction="column">
-      <Textarea corner="sharp" placeholder="sharp" />
+      <Textarea corner="0" placeholder="sharp" />
       <Textarea corner="3" placeholder="3" />
-      <Textarea corner="sm" placeholder="sm" />
-      <Textarea corner="md" placeholder="md" />
-      <Textarea corner="lg" placeholder="lg" />
-      <Textarea corner="xl" placeholder="xl" />
+      <Textarea corner="2" placeholder="sm" />
+      <Textarea corner="3" placeholder="md" />
+      <Textarea corner="4" placeholder="lg" />
+      <Textarea corner="5" placeholder="xl" />
       <Textarea corner="full" placeholder="full" />
     </Flex>
   )
@@ -76,9 +76,9 @@ export const SizeTextarea = () => {
     <Flex gap="4" direction="column">
       <Textarea size="4" placeholder="Small(sm)" />
       <Textarea placeholder="Medium (md default You don't need it)" />
-      <Textarea gap="6" placeholder="Large(lg)" />
-      <Textarea rows={10} gap="6" placeholder="Large(lg) with 10 rows" />
-      <Textarea rows={1} gap="6" placeholder="Large(lg) with 1 rows" />
+      <Textarea size="6" placeholder="Large(lg)" />
+      <Textarea rows={10} size="6" placeholder="Large(lg) with 10 rows" />
+      <Textarea rows={1} size="6" placeholder="Large(lg) with 1 rows" />
     </Flex>
   )
 }

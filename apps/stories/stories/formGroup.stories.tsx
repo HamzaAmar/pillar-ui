@@ -53,7 +53,7 @@ export const SizeInput = () => {
 export const ColorInput = () => {
   return (
     <div>
-      <FormGroup corner="sharp" title="Name" direction="row">
+      <FormGroup corner="0" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />
@@ -64,7 +64,7 @@ export const ColorInput = () => {
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
-      <FormGroup corner="sm" title="Name" direction="row">
+      <FormGroup corner="2" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />
@@ -75,7 +75,7 @@ export const ColorInput = () => {
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
-      <FormGroup corner="md" title="Name" direction="row">
+      <FormGroup corner="3" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />
@@ -86,7 +86,7 @@ export const ColorInput = () => {
           <option value="H">Hello</option>
         </Select>
       </FormGroup>
-      <FormGroup corner="lg" title="Name" direction="row">
+      <FormGroup corner="4" title="Name" direction="row">
         <Input name="firstname" placeholder="First Name" />
         <InputPassword name="middlename" placeholder="Middle Name" />
         <InputNumber name="lastname" placeholder="Last Name" />

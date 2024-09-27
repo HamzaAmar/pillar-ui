@@ -14,16 +14,16 @@ export default meta
 
 export function HeadingSizes() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading size="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="2">
+      <Heading size="2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="3">
+      <Heading size="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
@@ -31,23 +31,23 @@ export function HeadingSizes() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="5">
+      <Heading size="5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="6">
+      <Heading size="6">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="7">
+      <Heading size="7">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="8">
+      <Heading size="8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="9">
+      <Heading size="9">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
@@ -57,7 +57,7 @@ export function HeadingSizes() {
 
 export function HeadingWeights() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading weight="thin">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -96,37 +96,29 @@ export function HeadingWeights() {
 }
 export function HeadingTrucates() {
   return (
-    <div className="l_f-md">
-      <Heading gap="9" truncate="1">
+    <div className="Sfmd">
+      <Heading size="9" truncate="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="9" truncate="2">
+      <Heading size="9" truncate="2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="9" truncate="3">
+      <Heading size="9" truncate="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
-      <Heading gap="9" truncate="4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
-      </Heading>
-
-      <Heading gap="9" truncate="5">
+      <Heading size="9" truncate="4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -134,7 +126,15 @@ export function HeadingTrucates() {
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
       </Heading>
 
-      <Heading gap="9">
+      <Heading size="9" truncate="5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+        eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
+      </Heading>
+
+      <Heading size="9">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -147,7 +147,7 @@ export function HeadingTrucates() {
 
 export function HeadingTrasforms() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading transform="lowercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading transform="capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading transform="uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
@@ -158,7 +158,7 @@ export function HeadingTrasforms() {
 
 export function HeadingDecorations() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading decoration="through">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading decoration="under">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading decoration="over">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
@@ -168,7 +168,7 @@ export function HeadingDecorations() {
 
 export function HeadingFontStyles() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading fontStyle="italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading fontStyle="oblique">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
@@ -180,7 +180,7 @@ type Contrast = 'low' | 'high'
 
 export function HeadingAligns() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading align="start">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -208,7 +208,7 @@ export function HeadingAligns() {
 
 export function HeadingColors() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading color="d">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Heading>
@@ -253,7 +253,7 @@ export function HeadingColors() {
 
 export function HeadingLeadings() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading leading="normal">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -296,7 +296,7 @@ export function HeadingLeadings() {
 
 export function HeadingRTL() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading dir="rtl">
         مُرَاكُش اموراكوش، «أرض الله») تسمى أيضًا بالمدينة الحمراء وعاصمة النخيل، هي ثالث أكبر مدينة في المملكة المغربية
         من ناحية عدد السكان. وهي عاصمة جهة مراكش آسفي. تقع مراكش على بعد 580 كم (360 ميل) جنوب شرق طنجة، 327 كم (203
@@ -311,7 +311,7 @@ export function HeadingRTL() {
 
 export function HeadingWidth() {
   return (
-    <div className="l_f-lg">
+    <div className="Sflg">
       <Heading width="25-char">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
         cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque

@@ -14,19 +14,19 @@ const Options = () => {
 export const SelectSize = () => {
   return (
     <>
-      <Select gap="3">
+      <Select size="3">
         <Options />
       </Select>
       <Select size="4">
         <Options />
       </Select>
-      <Select gap="5">
+      <Select size="5">
         <Options />
       </Select>
-      <Select gap="6">
+      <Select size="6">
         <Options />
       </Select>
-      <Select gap="7">
+      <Select size="7">
         <Options />
       </Select>
     </>

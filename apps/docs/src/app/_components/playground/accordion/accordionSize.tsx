@@ -8,7 +8,7 @@ function AccordionBase(props: any) {
         <AccordionButton>
           <div>
             <Text weight="medium">Nice to Meet You</Text>
-            <Text gap="2">
+            <Text size="2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
               voluptatem obcaecati temporibus
             </Text>
@@ -23,7 +23,7 @@ function AccordionBase(props: any) {
         <AccordionButton>
           <div>
             <Text weight="medium">Nice to Meet You</Text>
-            <Text gap="2">
+            <Text size="2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
               voluptatem obcaecati temporibus
             </Text>
@@ -39,7 +39,7 @@ function AccordionBase(props: any) {
         <AccordionButton>
           <div>
             <Text weight="medium">Nice to Meet You</Text>
-            <Text gap="2">
+            <Text size="2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
               voluptatem obcaecati temporibus
             </Text>
@@ -57,13 +57,13 @@ function AccordionBase(props: any) {
 export const AccordionSize = () => {
   return (
     <>
-      <AccordionBase gap="2" />
-      <AccordionBase gap="3" />
+      <AccordionBase size="2" />
+      <AccordionBase size="3" />
       <AccordionBase size="4" />
-      <AccordionBase gap="5" />
-      <AccordionBase gap="6" />
-      <AccordionBase gap="7" />
-      <AccordionBase gap="8" />
+      <AccordionBase size="5" />
+      <AccordionBase size="6" />
+      <AccordionBase size="7" />
+      <AccordionBase size="8" />
     </>
   )
 }

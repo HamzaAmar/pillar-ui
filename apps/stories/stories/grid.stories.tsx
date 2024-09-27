@@ -14,7 +14,7 @@ const meta: Meta<typeof Grid> = {
 export default meta
 
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" background="b-6" corner="sm" {...props} />
+  return <Paper as={Flex} justify="center" items="center" background="b-6" corner="2" {...props} />
 }
 
 export const EqualColumns = () => {

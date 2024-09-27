@@ -2,27 +2,20 @@ import { Paper } from '@pillar-ui/core'
 export const PaperMargin = () => {
   return (
     <>
-      <Paper
-        style={{ display: 'flow-root' }}
-        className="u_center"
-        width="30-char"
-        ratio="16-9"
-        background="b-5"
-        m="2xl"
-      >
+      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="8">
         2xl Padding
       </Paper>
-      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="xl">
+      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="7">
         xl Padding
       </Paper>
-      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="lg">
+      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="6">
         lg Padding
       </Paper>
 
-      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="md">
+      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="5">
         md Padding
       </Paper>
-      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="sm">
+      <Paper style={{ display: 'flow-root' }} className="u_center" width="30-char" ratio="16-9" background="b-5" m="4">
         sm Padding
       </Paper>
 

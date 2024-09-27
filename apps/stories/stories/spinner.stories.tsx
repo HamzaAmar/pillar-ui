@@ -27,13 +27,13 @@ export function SpinnerSizes() {
   return (
     <Flex gap="4" items="center">
       <Spinner size="1" />
-      <Spinner gap="2" />
-      <Spinner gap="3" />
+      <Spinner size="2" />
+      <Spinner size="3" />
       <Spinner size="4" />
-      <Spinner gap="5" />
-      <Spinner gap="7" />
-      <Spinner gap="8" />
-      <Spinner gap="9" />
+      <Spinner size="5" />
+      <Spinner size="7" />
+      <Spinner size="8" />
+      <Spinner size="9" />
     </Flex>
   )
 }
@@ -42,20 +42,20 @@ export function SpinnerThickness() {
   return (
     <Flex gap="4" items="center">
       <Spinner size="1" thickness="1px" />
-      <Spinner gap="2" thickness="2px" />
-      <Spinner gap="3" thickness="3px" />
+      <Spinner size="2" thickness="2px" />
+      <Spinner size="3" thickness="3px" />
       <Spinner size="4" thickness="4px" />
-      <Spinner gap="5" thickness="5px" />
-      <Spinner gap="7" thickness="2px" />
-      <Spinner gap="8" thickness="2px" />
-      <Spinner gap="9" thickness="200px" />
+      <Spinner size="5" thickness="5px" />
+      <Spinner size="7" thickness="2px" />
+      <Spinner size="8" thickness="2px" />
+      <Spinner size="9" thickness="200px" />
     </Flex>
   )
 }
 
 export function SpinnerInvert() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Flex gap="4" items="center">
         <Spinner color="s" />
         <Spinner color="d" />

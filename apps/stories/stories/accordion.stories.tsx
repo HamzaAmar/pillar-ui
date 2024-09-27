@@ -14,7 +14,7 @@ export function AccordionBase(props: any) {
         <AccordionButton>
           <div>
             <Text weight="medium">Nice to Meet You</Text>
-            <Text gap="2">
+            <Text size="2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
               voluptatem obcaecati temporibus
             </Text>
@@ -26,7 +26,7 @@ export function AccordionBase(props: any) {
         <AccordionButton>
           <div>
             <Text weight="medium">Hello</Text>
-            <Text gap="3">Hello</Text>
+            <Text size="3">Hello</Text>
           </div>
         </AccordionButton>
         <AccordionPanel>Lorem ipsum dolor sit amet consectetur, adipisicing elit</AccordionPanel>
@@ -35,7 +35,7 @@ export function AccordionBase(props: any) {
         <AccordionButton>
           <div>
             <Text weight="medium">Hello</Text>
-            <Text gap="3">Hello</Text>
+            <Text size="3">Hello</Text>
           </div>
         </AccordionButton>
         <AccordionPanel>
@@ -75,7 +75,7 @@ export const AlertCollapse = () => {
 
 export const AlertColors = () => {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Grid grid="1fr 1fr 1fr" gap="6">
         <AccordionBase color="d" />
         <AccordionBase color="s" />
@@ -138,7 +138,7 @@ export const AlertColors = () => {
 
 export const AlertVariants = () => {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <AccordionBase variant="solid" />
       <AccordionBase variant="soft" />
       <AccordionBase variant="outline" />
@@ -148,26 +148,26 @@ export const AlertVariants = () => {
 
 export const AlertSizes = () => {
   return (
-    <div className="l_f-md">
-      <AccordionBase gap="2" />
-      <AccordionBase gap="3" />
+    <div className="Sfmd">
+      <AccordionBase size="2" />
+      <AccordionBase size="3" />
       <AccordionBase size="4" />
-      <AccordionBase gap="5" />
-      <AccordionBase gap="6" />
-      <AccordionBase gap="7" />
-      <AccordionBase gap="8" />
+      <AccordionBase size="5" />
+      <AccordionBase size="6" />
+      <AccordionBase size="7" />
+      <AccordionBase size="8" />
     </div>
   )
 }
 
 export const AlertCorners = () => {
   return (
-    <div className="l_f-md">
-      <AccordionBase separate color="b" variant="solid" corner="sharp" />
-      <AccordionBase separate color="b" variant="soft" corner="sm" />
-      <AccordionBase separate color="b" variant="outline" corner="md" />
-      <AccordionBase separate color="b" variant="solid" corner="lg" />
-      <AccordionBase separate color="b" variant="soft" corner="xl" />
+    <div className="Sfmd">
+      <AccordionBase separate color="b" variant="solid" corner="0" />
+      <AccordionBase separate color="b" variant="soft" corner="2" />
+      <AccordionBase separate color="b" variant="outline" corner="3" />
+      <AccordionBase separate color="b" variant="solid" corner="4" />
+      <AccordionBase separate color="b" variant="soft" corner="5" />
       <AccordionBase separate color="b" variant="outline" corner="full" />
     </div>
   )
@@ -217,7 +217,7 @@ export const AccordionStyle = () => {
 
 export function AlertSizeDefaults() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex direction="column" gap="4">
         <AccordionBase />
         <Paper style={{ '--accordion-size': '2rem' } as CSSProperties}>

@@ -16,7 +16,7 @@ export const SwitchMode = () => {
 
   // TODO: Return Skeleton to avoid  Layout Shift
   if (!mounted) {
-    return <Spinner gap="6" />
+    return <Spinner size="6" />
   }
 
   const nextMode = resolvedTheme === 'dark' ? 'light' : 'dark'

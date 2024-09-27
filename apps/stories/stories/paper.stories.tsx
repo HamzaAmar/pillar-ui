@@ -15,7 +15,7 @@ export default meta
 
 export function PaperBackground() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Paper>Hello</Paper>
       <Paper background="d">Hello</Paper>
       <Paper background="d-8">Hello</Paper>
@@ -31,9 +31,9 @@ export function PaperBackground() {
 
 export function PaperBorder() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Paper>Hello</Paper>
-      <Paper border={true} size="5">
+      <Paper border={true} p="5">
         Hello
       </Paper>
     </div>
@@ -42,23 +42,23 @@ export function PaperBorder() {
 
 export function PaperPadding() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Paper p="2" background="d">
         Hello
       </Paper>
       <Paper p="3" background="w">
         Hello
       </Paper>
-      <Paper size="4" background="s">
+      <Paper p="4" background="s">
         Hello
       </Paper>
-      <Paper size="5" background="b">
+      <Paper p="5" background="b">
         Hello
       </Paper>
-      <Paper size="7" background="s">
+      <Paper p="7" background="s">
         Hello
       </Paper>
-      <Paper size="8" background="p">
+      <Paper p="8" background="p">
         Hello
       </Paper>
     </div>
@@ -67,29 +67,29 @@ export function PaperPadding() {
 
 export function PaperCorner() {
   return (
-    <div className="l_f-md">
-      <Paper size="4" background="b-4">
+    <div className="p">
+      <Paper corner="4" background="b-4">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" corner="3">
+      <Paper p="4" background="b-4" corner="3">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" corner="sm">
+      <Paper p="4" background="b-4" corner="2">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" corner="md">
+      <Paper p="4" background="b-4" corner="3">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" corner="lg">
+      <Paper p="4" background="b-4" corner="4">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" corner="xl">
+      <Paper p="4" background="b-4" corner="5">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" corner="full">
+      <Paper p="4" background="b-4" corner="full">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" corner="circle">
+      <Paper p="4" background="b-4" corner="circle">
         Hello
       </Paper>
     </div>
@@ -98,22 +98,22 @@ export function PaperCorner() {
 
 export function PaperShadow() {
   return (
-    <div className="l_f-md">
-      <Paper size="4">Hello</Paper>
+    <div className="Sfmd">
+      <Paper corner="4">Hello</Paper>
 
-      <Paper size="4" shadow="3">
+      <Paper corner="4" shadow="1">
         Hello
       </Paper>
-      <Paper size="4" shadow="sm">
+      <Paper corner="4" shadow="2">
         Hello
       </Paper>
-      <Paper size="4" shadow="md">
+      <Paper corner="4" shadow="3">
         Hello
       </Paper>
-      <Paper size="4" shadow="lg">
+      <Paper corner="4" shadow="4">
         Hello
       </Paper>
-      <Paper size="4" shadow="xl">
+      <Paper corner="4" shadow="5">
         Hello
       </Paper>
     </div>
@@ -122,23 +122,23 @@ export function PaperShadow() {
 
 export function PaperColors() {
   return (
-    <div className="l_f-md">
-      <Paper size="4" background="b-4" color="d-11">
+    <div className="Sfmd">
+      <Paper p="4" background="b-4" color="d-11">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" color="s-11">
+      <Paper p="4" background="b-4" color="s-11">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" color="w-11">
+      <Paper p="4" background="b-4" color="w-11">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" color="s-11">
+      <Paper p="4" background="b-4" color="s-11">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" color="b-11">
+      <Paper p="4" background="b-4" color="b-11">
         Hello
       </Paper>
-      <Paper size="4" background="b-4" color="p-11">
+      <Paper p="4" background="b-4" color="p-11">
         Hello
       </Paper>
     </div>
@@ -147,7 +147,7 @@ export function PaperColors() {
 
 export function PaperWidths() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Paper background="d-4" color="d">
         Hello
       </Paper>
@@ -202,7 +202,7 @@ export function PaperWidths() {
 
 export function PaperRatio() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Paper width="30-char" ratio="1" background="p-4" color="p">
         Hello
       </Paper>
@@ -227,7 +227,7 @@ export function PaperRatio() {
 
 export function PaperHeight() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Paper height="25" background="s-4" color="s">
         Hello
       </Paper>

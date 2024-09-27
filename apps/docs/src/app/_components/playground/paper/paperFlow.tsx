@@ -8,22 +8,22 @@ export const PaperFlow = () => {
         <div>Flow 3</div>
         <div>Flow 3</div>
       </Paper>
-      <Paper background="b-5" flow="sm">
+      <Paper background="b-5" flow="4">
         <div>Flow sm</div>
         <div>Flow sm</div>
         <div>Flow sm</div>
       </Paper>
-      <Paper background="b-5" flow="md">
+      <Paper background="b-5" flow="5">
         <div>Flow md</div>
         <div>Flow md</div>
         <div>Flow md</div>
       </Paper>
-      <Paper background="b-5" flow="lg">
+      <Paper background="b-5" flow="6">
         <div>Flow lg</div>
         <div>Flow lg</div>
         <div>Flow lg</div>
       </Paper>
-      <Paper background="b-5" flow="xl">
+      <Paper background="b-5" flow="7">
         <div>Flow xl</div>
         <div>Flow xl</div>
         <div>Flow xl</div>

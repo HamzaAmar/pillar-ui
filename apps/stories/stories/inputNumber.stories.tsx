@@ -18,7 +18,7 @@ export const SizeInput = () => {
     <Flex gap="4" direction="column">
       <InputNumber size="4" placeholder="Small(sm)" />
       <InputNumber placeholder="Medium (md default You don't need it)" />
-      <InputNumber gap="6" placeholder="Large(lg)" />
+      <InputNumber size="6" placeholder="Large(lg)" />
     </Flex>
   )
 }
@@ -28,7 +28,7 @@ export const StepInput = () => {
     <Flex gap="4" direction="column">
       <InputNumber step="1" size="4" placeholder="Step 1" />
       <InputNumber step="10" placeholder="Step 10" />
-      <InputNumber step=".1" gap="6" placeholder="Step 0.1" />
+      <InputNumber step=".1" size="6" placeholder="Step 0.1" />
     </Flex>
   )
 }
@@ -38,7 +38,7 @@ export const StepAndMaxInput = () => {
     <Flex gap="4" direction="column">
       <InputNumber step="1" max="10" size="4" placeholder="Step 1 max 10" />
       <InputNumber step="10" max="100" placeholder="Step 10 max 100" />
-      <InputNumber step=".1" max=".5" gap="6" placeholder="Step 0.1 max 0.5" />
+      <InputNumber step=".1" max=".5" size="6" placeholder="Step 0.1 max 0.5" />
     </Flex>
   )
 }
@@ -54,7 +54,7 @@ export const InputValueUpdateCheck = () => {
       <h1>value:{value}</h1>
       <InputNumber value={value} onChange={handleChange} step="1" max="10" size="4" placeholder="Step 1 max 10" />
       <InputNumber value={value} onChange={handleChange} step="10" max="100" placeholder="Step 10 max 100" />
-      <InputNumber value={value} onChange={handleChange} step=".1" max=".5" gap="6" placeholder="Step 0.1 max 0.5" />
+      <InputNumber value={value} onChange={handleChange} step=".1" max=".5" size="6" placeholder="Step 0.1 max 0.5" />
     </Flex>
   )
 }

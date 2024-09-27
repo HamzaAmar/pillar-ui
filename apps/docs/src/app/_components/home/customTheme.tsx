@@ -4,16 +4,16 @@ import { filles, strokes } from './data'
 
 export function CustomTheme() {
   return (
-    <Paper as={Flex} items="center" justify="center" flow="xl" className="section hello-world">
-      <div className="l_f-md">
+    <Paper as={Flex} items="center" justify="center" flow="7" className="section hello-world">
+      <div className="Sfmd">
         <SectionHeading subheading="Change Theme" heading=" Custom your perfect look in seconds!" />
 
-        <div className="l_f-lg">
-          <Text className="dark--description" color="b" low gap="7">
+        <div className="Sflg">
+          <Text className="dark--description" color="b" low size="7">
             Customize your interface to showcase your personal flair. Adjust CSS variables for colors, fonts, and
             layouts to craft a design that’s unmistakably your own.
           </Text>
-          <Text className="dark--description" color="b" low gap="7">
+          <Text className="dark--description" color="b" low size="7">
             In the theme settings, you can enhance your user experience by customizing various elements. This includes
             adjusting the size, corner details, and text transformations. You can select specific areas within the
             entire tree structure to apply these style changes, ensuring a consistent and personalized look.

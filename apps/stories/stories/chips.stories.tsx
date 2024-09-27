@@ -42,7 +42,7 @@ export const ChipsColor = () => (
 const VARIANTS = ['solid', 'mixed', 'soft', 'outline'] as const
 
 export const ChipsVariants = () => (
-  <div className="l_f-md">
+  <div className="Sfmd">
     {VARIANTS.map((variant) => (
       <Flex key={variant} gap="3">
         <Chips color="d" variant={variant}>
@@ -74,25 +74,25 @@ export const ChipsSize = () => (
     <h1>With Props</h1>
 
     <Flex gap="3" items="center">
-      <Chips gap="2" variant="outline">
+      <Chips size="2" variant="outline">
         Hello
       </Chips>
-      <Chips gap="3" variant="outline">
+      <Chips size="3" variant="outline">
         Hello
       </Chips>
       <Chips size="4" variant="outline">
         Hello
       </Chips>
-      <Chips gap="5" variant="outline">
+      <Chips size="5" variant="outline">
         Hello
       </Chips>
-      <Chips gap="6" variant="outline">
+      <Chips size="6" variant="outline">
         Hello
       </Chips>
-      <Chips gap="7" variant="outline">
+      <Chips size="7" variant="outline">
         Hello
       </Chips>
-      <Chips gap="8" variant="outline">
+      <Chips size="8" variant="outline">
         Hello
       </Chips>
     </Flex>
@@ -125,22 +125,22 @@ export const ChipsCorner = () => (
   <div className="l_fow__sm">
     <h1>With Props</h1>
     <Flex gap="3">
-      <Chips corner="sharp" variant="outline">
+      <Chips corner="0" variant="outline">
         Hello
       </Chips>
       <Chips corner="3" variant="outline">
         Hello
       </Chips>
-      <Chips corner="sm" variant="outline">
+      <Chips corner="2" variant="outline">
         Hello
       </Chips>
-      <Chips corner="md" variant="outline">
+      <Chips corner="3" variant="outline">
         Hello
       </Chips>
-      <Chips corner="lg" variant="outline">
+      <Chips corner="4" variant="outline">
         Hello
       </Chips>
-      <Chips corner="xl" variant="outline">
+      <Chips corner="5" variant="outline">
         Hello
       </Chips>
       <Chips corner="full" variant="outline">
@@ -177,11 +177,11 @@ export const ChipsCorner = () => (
 
 export const ChipsIcons = () => (
   <Flex gap="3" items="center">
-    <Chips gap="2" variant="outline">
+    <Chips size="2" variant="outline">
       Hello
       <Plus />
     </Chips>
-    <Chips gap="3" variant="outline">
+    <Chips size="3" variant="outline">
       <Plus />
       Hello
     </Chips>
@@ -189,19 +189,19 @@ export const ChipsIcons = () => (
       Hello
       <Plus />
     </Chips>
-    <Chips gap="5" variant="outline">
+    <Chips size="5" variant="outline">
       <Plus />
       Hello
     </Chips>
-    <Chips gap="6" variant="outline">
+    <Chips size="6" variant="outline">
       Hello
       <Plus />
     </Chips>
-    <Chips gap="7" variant="outline">
+    <Chips size="7" variant="outline">
       <Plus />
       Hello
     </Chips>
-    <Chips gap="8" variant="outline">
+    <Chips size="8" variant="outline">
       Hello
       <DotsHorizontal />
     </Chips>
@@ -252,65 +252,65 @@ export const ChipsRefForwarded = () => {
 
 export function ChipsCornerDefaults() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex gap="4">
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Chips>Hello</Chips>
         </Paper>
         <Chips>Hello</Chips>
       </Flex>
 
       <Flex gap="4" style={{ '--chip-rad': '1px' } as React.CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Chips>Hello</Chips>
         </Paper>
         <Chips>Hello</Chips>
       </Flex>
       <Flex gap="4" style={{ '--chip-rad': '8px' } as React.CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Chips>Hello</Chips>
         </Paper>
         <Chips>Hello</Chips>
       </Flex>
 
       <Flex gap="4" style={{ '--chip-rad': '20px' } as React.CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Chips>Hello</Chips>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Chips>Hello</Chips>
         </Paper>
         <Chips>Hello</Chips>

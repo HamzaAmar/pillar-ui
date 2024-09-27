@@ -22,7 +22,7 @@ export function Hero() {
         </Text>
         : Is a Lightweight, Accessible React UI Library
       </h1>
-      <div className="l_f-md">
+      <div className="Sfmd">
         <p className="hero-txt">
           A React UI library offering reusable ui components, React hooks, icons and utilities for building React
           applications quickly and easily.

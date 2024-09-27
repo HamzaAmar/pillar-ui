@@ -5,24 +5,24 @@ const TimelineBase = (props: Omit<TimelineProps, 'children'>) => {
   return (
     <Timeline {...props}>
       <TimelineItem>
-        <Heading gap="3">Hello</Heading>
-        <Text gap="3">
+        <Heading size="3">Hello</Heading>
+        <Text size="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
       </TimelineItem>
       <TimelineItem>
-        <Heading gap="3">Hello</Heading>
-        <Text gap="3">
+        <Heading size="3">Hello</Heading>
+        <Text size="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
         </Text>
       </TimelineItem>
       <TimelineItem>
-        <Heading gap="3">Hello</Heading>
-        <Text gap="3">
+        <Heading size="3">Hello</Heading>
+        <Text size="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
           Aspernatur explicabo a, est similique sed debitis eveniet alias repellendus doloremque nobis nisi odit! Nihil,
           quae.
@@ -35,11 +35,13 @@ const TimelineBase = (props: Omit<TimelineProps, 'children'>) => {
 export const TimelineCorner = () => {
   return (
     <>
-      <TimelineBase corner="sharp" />
-      <TimelineBase corner="sm" />
-      <TimelineBase corner="md" />
-      <TimelineBase corner="lg" />
-      <TimelineBase corner="xl" />
+      <TimelineBase corner="0" />
+      <TimelineBase corner="1" />
+      <TimelineBase corner="2" />
+      <TimelineBase corner="3" />
+      <TimelineBase corner="4" />
+      <TimelineBase corner="5" />
+      <TimelineBase corner="6" />
       <TimelineBase corner="full" />
     </>
   )

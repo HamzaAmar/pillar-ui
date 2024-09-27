@@ -2,7 +2,7 @@ import { Blockquote, Text } from '@pillar-ui/core'
 
 export const BlockquoteCite = () => {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Blockquote color="d">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?

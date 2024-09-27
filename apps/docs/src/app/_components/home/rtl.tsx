@@ -5,13 +5,13 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
   const { jobTitle, description, followers, fullName, likes } = USER_DATA[type].user
   return (
-    <article dir={type === 'ar' ? 'rtl' : 'ltr'} className="user--article l_f-sm">
+    <article dir={type === 'ar' ? 'rtl' : 'ltr'} className="user--article Sfsm">
       <Flex items="center" justify="between" gap="3">
         <Flex gap="4">
           <Avatar variant="dashed" />
           <div>
             <Text>{fullName}</Text>
-            <Text color="b" low gap="3">
+            <Text color="b" low size="3">
               {jobTitle}
             </Text>
           </div>
@@ -45,8 +45,8 @@ export function RTLSupport() {
   return (
     <Paper as={Grid} grid="1.7fr 1fr" lg="1fr" items="center" gap="5" className="section rtl--support">
       <div className="rtl--support--content">
-        <div className="l_f-lg">
-          <div className="l_f-3">
+        <div className="Sflg">
+          <div className="Sf3">
             <div>
               <SectionHeading
                 subheading="Build Global-Ready React UIs with Pillar UI's"
@@ -54,7 +54,7 @@ export function RTLSupport() {
               />
             </div>
 
-            <Text gap="7" color="b" low>
+            <Text size="7" color="b" low>
               Our UI library ensures a welcoming experience for users worldwide.
             </Text>
           </div>
@@ -64,7 +64,7 @@ export function RTLSupport() {
               <Flex key={id} as="article" gap="4" className="feature--item">
                 <span className="feature-icon">{icon}</span>
                 <div>
-                  <Text weight="medium" gap="5">
+                  <Text weight="medium" size="5">
                     {title}
                   </Text>
                   <Text low color="b">
@@ -82,7 +82,7 @@ export function RTLSupport() {
         </svg>
       </div>
 
-      <div className="l_f-sm">
+      <div className="Sfsm">
         <Article type="ar" />
         <Article />
       </div>

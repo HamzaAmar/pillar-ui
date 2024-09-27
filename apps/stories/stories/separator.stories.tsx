@@ -11,7 +11,7 @@ export default meta
 
 export const SeparatorColors = () => {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Separator color="d" />
       <Separator color="w" />
       <Separator color="s" />
@@ -24,55 +24,55 @@ export const SeparatorColors = () => {
 
 export const SeparatorThickness = () => {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Separator thickness="1" />
       <Separator thickness="2" />
       <Separator thickness="3" />
-      <Separator thickness="sm" />
-      <Separator thickness="md" />
-      <Separator thickness="lg" />
-      <Separator thickness="xl" />
-      <Separator thickness="2xl" />
-      <Separator thickness="3xl" />
+      <Separator thickness="4" />
+      <Separator thickness="5" />
+      <Separator thickness="6" />
+      <Separator thickness="7" />
+      <Separator thickness="8" />
+      <Separator thickness="9" />
     </div>
   )
 }
 
 export const SeparatorCorner = () => {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Separator corner="full" thickness="1" />
       <Separator corner="full" thickness="2" />
       <Separator corner="full" thickness="3" />
-      <Separator corner="full" thickness="sm" />
-      <Separator corner="full" thickness="md" />
-      <Separator corner="full" thickness="lg" />
-      <Separator corner="full" thickness="xl" />
-      <Separator corner="full" thickness="2xl" />
-      <Separator corner="full" thickness="3xl" />
+      <Separator corner="full" thickness="4" />
+      <Separator corner="full" thickness="5" />
+      <Separator corner="full" thickness="6" />
+      <Separator corner="full" thickness="7" />
+      <Separator corner="full" thickness="8" />
+      <Separator corner="full" thickness="9" />
     </div>
   )
 }
 
 export const SeparatorSeparator = () => {
   return (
-    <div className="l_f-md">
-      <Separator title="OR" corner="xl" thickness="1" />
-      <Separator title="OR" corner="xl" thickness="2" />
-      <Separator title="OR" corner="xl" thickness="3" />
-      <Separator title="OR" corner="xl" thickness="sm" />
-      <Separator title="OR" corner="xl" thickness="md" />
-      <Separator title="OR" corner="xl" thickness="lg" />
-      <Separator title="OR" corner="xl" thickness="xl" />
-      <Separator title="OR" corner="xl" thickness="2xl" />
-      <Separator title="OR" corner="xl" thickness="3xl" />
+    <div className="Sfmd">
+      <Separator title="OR" corner="5" thickness="1" />
+      <Separator title="OR" corner="5" thickness="2" />
+      <Separator title="OR" corner="5" thickness="3" />
+      <Separator title="OR" corner="5" thickness="4" />
+      <Separator title="OR" corner="5" thickness="5" />
+      <Separator title="OR" corner="5" thickness="6" />
+      <Separator title="OR" corner="5" thickness="7" />
+      <Separator title="OR" corner="5" thickness="8" />
+      <Separator title="OR" corner="5" thickness="9" />
     </div>
   )
 }
 
 export const SeparatorDirection = () => {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Separator title="OR" direction="horizontal" />
       <Separator title="OR" direction="horizontal" position="center" />
       <Separator title="OR" direction="horizontal" position="end" />

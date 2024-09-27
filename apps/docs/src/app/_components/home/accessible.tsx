@@ -14,7 +14,7 @@ export function Accessible() {
           <Paper className="article--item" key={id} flow="2">
             <Flex gap="4" items="center">
               <div className="article--icon-container u_center">{icon}</div>
-              <Heading as="h3" gap="6">
+              <Heading as="h3" size="6">
                 {title}
               </Heading>
             </Flex>

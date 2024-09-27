@@ -58,14 +58,14 @@ export function ButtonsAsInline() {
   )
 }
 
-const SIZES = ['1', '2', '3', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'] as const
+const SIZES = ['1', '2', '3', '4', '5', '6', '7', '8', '9'] as const
 
 export function ButtonsIcons() {
   return (
-    <div className="l_f-xl">
+    <div className="Sfxl">
       {SIZES.map((size) => (
         <div key={size}>
-          <Text weight="bold" gap="8">
+          <Text weight="bold" size="8">
             {size} Button
           </Text>
           <Flex gap="4" wrap>
@@ -140,7 +140,7 @@ export function ButtonsTransforms() {
 
 export function ButtonsVariants() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       {VARIANTS.map((variant) => (
         <Flex key={variant} gap="4">
           <Button color="s" variant={variant}>
@@ -169,25 +169,25 @@ export function ButtonsVariants() {
 
 export function ButtonsCorners() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <h1>Regular</h1>
       <Flex gap="4" wrap>
-        <Button corner="sharp" color="s">
+        <Button corner="0" color="s">
           Green
         </Button>
         <Button corner="3" color="w">
           Orange
         </Button>
-        <Button corner="sm" color="d">
+        <Button corner="2" color="d">
           Red
         </Button>
-        <Button corner="md" color="se">
+        <Button corner="3" color="se">
           Secondary
         </Button>
-        <Button corner="lg" color="b">
+        <Button corner="4" color="b">
           bg
         </Button>
-        <Button corner="xl" color="p">
+        <Button corner="5" color="p">
           Primary
         </Button>
         <Button corner="h-1" color="p">
@@ -241,19 +241,19 @@ export function ButtonSizes() {
       <Button size="1" color="s">
         Green
       </Button>
-      <Button gap="2" color="w">
+      <Button size="2" color="w">
         Orange
       </Button>
-      <Button gap="3" color="d">
+      <Button size="3" color="d">
         Red
       </Button>
       <Button size="4" color="se">
         Secondary
       </Button>
-      <Button gap="5" color="b">
+      <Button size="5" color="b">
         bg
       </Button>
-      <Button gap="6" color="p">
+      <Button size="6" color="p">
         Primary
       </Button>
     </Flex>
@@ -266,28 +266,28 @@ export function ButtonsFluid() {
       <Button fluid icon={<ThumbUp />} iconPosition="end" size="1" color="s">
         Green
       </Button>
-      <Button fluid icon={<ThumbDown />} gap="2" color="w">
+      <Button fluid icon={<ThumbDown />} size="2" color="w">
         Orange
       </Button>
-      <Button fluid icon={<Plus />} iconPosition="end" gap="3" color="d">
+      <Button fluid icon={<Plus />} iconPosition="end" size="3" color="d">
         Red
       </Button>
       <Button fluid icon={<Github />} size="4" color="se">
         Secondary
       </Button>
-      <Button fluid icon={<Eye />} iconPosition="end" gap="5" color="b">
+      <Button fluid icon={<Eye />} iconPosition="end" size="5" color="b">
         bg
       </Button>
-      <Button fluid icon={<ThumbUp />} gap="6" color="p">
+      <Button fluid icon={<ThumbUp />} size="6" color="p">
         Primary
       </Button>
-      <Button fluid icon={<ThumbUp />} iconPosition="end" gap="7" color="s">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" size="7" color="s">
         Purple
       </Button>
-      <Button fluid icon={<ThumbUp />} gap="8" color="se">
+      <Button fluid icon={<ThumbUp />} size="8" color="se">
         Brown
       </Button>
-      <Button fluid icon={<ThumbUp />} iconPosition="end" gap="9" color="se">
+      <Button fluid icon={<ThumbUp />} iconPosition="end" size="9" color="se">
         Brown
       </Button>
     </Flex>
@@ -316,28 +316,28 @@ export function ButtonLoadingState() {
       <Button state="loading" size="1" color="s">
         Green
       </Button>
-      <Button state="loading" gap="2" color="w">
+      <Button state="loading" size="2" color="w">
         Orange
       </Button>
-      <Button state="loading" gap="3" color="d">
+      <Button state="loading" size="3" color="d">
         Red
       </Button>
       <Button state="loading" size="4" color="se">
         Secondary
       </Button>
-      <Button state="loading" gap="5" color="b">
+      <Button state="loading" size="5" color="b">
         bg
       </Button>
-      <Button state="loading" gap="6" color="p">
+      <Button state="loading" size="6" color="p">
         Primary
       </Button>
-      <Button state="loading" gap="7" color="s">
+      <Button state="loading" size="7" color="s">
         Purple
       </Button>
-      <Button state="loading" gap="8" color="se">
+      <Button state="loading" size="8" color="se">
         Brown
       </Button>
-      <Button state="loading" gap="9" color="se">
+      <Button state="loading" size="9" color="se">
         Brown
       </Button>
     </Flex>
@@ -374,65 +374,65 @@ export function ButtonsLength() {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex gap="4">
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Button color="s">Green</Button>
         </Paper>
         <Button color="s">Green</Button>
       </Flex>
 
       <Flex gap="4" style={{ '--button-rad': '5px' } as CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Button color="s">Green</Button>
         </Paper>
         <Button color="s">Green</Button>
       </Flex>
       <Flex gap="4" style={{ '--button-rad': '10px' } as CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Button color="s">Green</Button>
         </Paper>
         <Button color="s">Green</Button>
       </Flex>
 
       <Flex gap="4" style={{ '--button-rad': '20px' } as CSSProperties}>
-        <Paper corner="sharp">
+        <Paper corner="0">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="sm">
+        <Paper corner="2">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="md">
+        <Paper corner="3">
           <Button color="s">Green</Button>
         </Paper>
-        <Paper corner="lg">
+        <Paper corner="4">
           <Button color="s">Green</Button>
         </Paper>
         <Button color="s">Green</Button>
@@ -443,7 +443,7 @@ export function ButtonCornerDefaults() {
 
 export function ButtonTransformDefaults() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex gap="4" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
         <Button transform="uppercase" color="s">
           green
@@ -462,27 +462,27 @@ export function ButtonTransformDefaults() {
 }
 export function ButtonSizeDefaults() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex gap="4" style={{ '--button-size': '8px' } as CSSProperties}>
-        <Button gap="2" color="s">
+        <Button size="2" color="s">
           green
         </Button>
-        <Button gap="3" color="s">
+        <Button size="3" color="s">
           green
         </Button>
         <Button size="4" color="s">
           green
         </Button>
-        <Button gap="5" color="s">
+        <Button size="5" color="s">
           green
         </Button>
-        <Button gap="6" color="s">
+        <Button size="6" color="s">
           green
         </Button>
-        <Button gap="7" color="s">
+        <Button size="7" color="s">
           green
         </Button>
-        <Button gap="8" color="s">
+        <Button size="8" color="s">
           green
         </Button>
         <Button color="s">Green</Button>

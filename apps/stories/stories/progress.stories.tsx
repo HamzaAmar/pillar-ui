@@ -15,13 +15,13 @@ export default meta
 export const ProgressBarSize = () => {
   return (
     <Flex direction="column" gap="4" wrap>
-      <ProgressBar gap="2" value={90} label="hello" />
-      <ProgressBar gap="3" value={90} label="hello" />
+      <ProgressBar size="2" value={90} label="hello" />
+      <ProgressBar size="3" value={90} label="hello" />
       <ProgressBar size="4" value={90} label="hello" />
-      <ProgressBar gap="5" value={90} label="hello" />
-      <ProgressBar gap="6" value={90} label="hello" />
-      <ProgressBar gap="7" value={90} label="hello" />
-      <ProgressBar gap="8" value={90} label="hello" />
+      <ProgressBar size="5" value={90} label="hello" />
+      <ProgressBar size="6" value={90} label="hello" />
+      <ProgressBar size="7" value={90} label="hello" />
+      <ProgressBar size="8" value={90} label="hello" />
     </Flex>
   )
 }
@@ -72,13 +72,13 @@ export const ProgressCircleRange = () => {
 export const ProgressCircleSize = () => {
   return (
     <Flex gap="4">
-      <ProgressCircle gap="2" value={15} label="hello" />
-      <ProgressCircle gap="3" value={15} label="hello" />
+      <ProgressCircle size="2" value={15} label="hello" />
+      <ProgressCircle size="3" value={15} label="hello" />
       <ProgressCircle size="4" value={30} label="hello" />
-      <ProgressCircle gap="5" value={45} label="hello" />
-      <ProgressCircle gap="6" value={60} label="hello" />
-      <ProgressCircle gap="7" value={90} label="hello" />
-      <ProgressCircle gap="8" value={95} label="hello" />
+      <ProgressCircle size="5" value={45} label="hello" />
+      <ProgressCircle size="6" value={60} label="hello" />
+      <ProgressCircle size="7" value={90} label="hello" />
+      <ProgressCircle size="8" value={95} label="hello" />
     </Flex>
   )
 }
@@ -122,13 +122,13 @@ export const ProgressBarStackSizes = () => {
   return (
     <Flex direction="column" gap="4" wrap>
       <ProgressBarStackBase size="1" />
-      <ProgressBarStackBase gap="2" />
-      <ProgressBarStackBase gap="3" />
+      <ProgressBarStackBase size="2" />
+      <ProgressBarStackBase size="3" />
       <ProgressBarStackBase size="4" />
-      <ProgressBarStackBase gap="5" />
-      <ProgressBarStackBase gap="7" />
-      <ProgressBarStackBase gap="8" />
-      <ProgressBarStackBase gap="9" />
+      <ProgressBarStackBase size="5" />
+      <ProgressBarStackBase size="7" />
+      <ProgressBarStackBase size="8" />
+      <ProgressBarStackBase size="9" />
     </Flex>
   )
 }

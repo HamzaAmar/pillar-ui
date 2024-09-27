@@ -16,14 +16,14 @@ export function SwitchSizes() {
   return (
     <Flex gap="4" items="center">
       <Switch label="Hello" size="1" />
-      <Switch label="Hello" gap="2" />
-      <Switch label="Hello" gap="3" />
+      <Switch label="Hello" size="2" />
+      <Switch label="Hello" size="3" />
       <Switch label="Hello" size="4" />
-      <Switch label="Hello" gap="5" />
-      <Switch label="Hello" gap="6" />
-      <Switch label="Hello" gap="7" />
-      <Switch label="Hello" gap="8" />
-      <Switch label="Hello" gap="9" />
+      <Switch label="Hello" size="5" />
+      <Switch label="Hello" size="6" />
+      <Switch label="Hello" size="7" />
+      <Switch label="Hello" size="8" />
+      <Switch label="Hello" size="9" />
     </Flex>
   )
 }
@@ -56,15 +56,15 @@ export function SwitchColorsDefault() {
 
 export function SwitchCorners() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Heading>With Props</Heading>
       <Flex gap="4" items="center">
-        <Switch label="Hello" corner="sharp" />
+        <Switch label="Hello" corner="0" />
         <Switch label="Hello" corner="3" />
-        <Switch label="Hello" corner="sm" />
-        <Switch label="Hello" corner="md" />
-        <Switch label="Hello" corner="lg" />
-        <Switch label="Hello" corner="xl" />
+        <Switch label="Hello" corner="2" />
+        <Switch label="Hello" corner="3" />
+        <Switch label="Hello" corner="4" />
+        <Switch label="Hello" corner="5" />
         <Switch label="Hello" corner="full" />
       </Flex>
       <Heading>With Border Radius .5rem</Heading>

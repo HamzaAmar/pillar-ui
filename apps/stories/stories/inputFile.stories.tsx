@@ -52,12 +52,12 @@ export const BorderedInputFile = () => {
 export const CornerInputFile = () => {
   return (
     <Flex gap="4" direction="column">
-      <InputFile corner="sharp" />
+      <InputFile corner="0" />
       <InputFile corner="3" />
-      <InputFile corner="sm" />
-      <InputFile corner="md" />
-      <InputFile corner="lg" />
-      <InputFile corner="xl" />
+      <InputFile corner="2" />
+      <InputFile corner="3" />
+      <InputFile corner="4" />
+      <InputFile corner="5" />
       <InputFile corner="full" />
     </Flex>
   )
@@ -68,7 +68,7 @@ export const SizeInputFile = () => {
     <Flex gap="4" direction="column">
       <InputFile size="4" />
       <InputFile />
-      <InputFile gap="6" />
+      <InputFile size="6" />
     </Flex>
   )
 }

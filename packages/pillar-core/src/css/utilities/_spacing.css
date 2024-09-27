@@ -86,36 +86,36 @@
   margin-top: auto;
 }
 
-.l_f-1 > * + * {
+.Sf1 > * + * {
   margin-top: var(--S1);
 }
-.l_f-2 > * + * {
+.Sf2 > * + * {
   margin-top: var(--S2);
 }
 
-.l_f-3 > * + * {
+.Sf3 > * + * {
   margin-top: var(--S3);
 }
 
-.l_f-4 > * + * {
+.Sf4 > * + * {
   margin-top: var(--S4);
 }
 
-.l_f-5 > * + * {
+.Sf5 > * + * {
   margin-top: var(--S5);
 }
 
-.l_f-6 > * + * {
+.Sf6 > * + * {
   margin-top: var(--S6);
 }
-.l_f-7 > * + * {
+.Sf7 > * + * {
   margin-top: var(--S7);
 }
 
-.l_f-8 > * + * {
+.Sf8 > * + * {
   margin-top: var(--S8);
 }
 
-.l_f-9 > * + * {
+.Sf9 > * + * {
   margin-top: var(--S9);
 }

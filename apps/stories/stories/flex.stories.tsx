@@ -19,7 +19,7 @@ const Box = (props: any) => {
       items="center"
       style={{ height: '100px' }}
       background="b-6"
-      corner="sm"
+      corner="2"
       {...props}
     />
   )
@@ -29,7 +29,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => <Box style={{ width: '100p
 
 export const FlexGap = () => {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex gap="2">{boxes}</Flex>
       <Flex gap="3">{boxes}</Flex>
       <Flex gap="4">{boxes}</Flex>
@@ -43,7 +43,7 @@ export const FlexGap = () => {
 
 export const FlexWrap = () => {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex gap="2" wrap>
         {boxes}
         {boxes}
@@ -78,7 +78,7 @@ export const FlexWrap = () => {
 
 export const FlexDirection = () => {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex gap="4">{boxes}</Flex>
       <Flex gap="4" direction="column">
         {boxes}
@@ -89,7 +89,7 @@ export const FlexDirection = () => {
 
 export const FlexJustify = () => {
   return (
-    <div className="l_f-lg">
+    <div className="Sflg">
       <Flex gap="4">{boxes}</Flex>
       <Flex gap="4" justify="center">
         {boxes}
@@ -112,7 +112,7 @@ export const FlexJustify = () => {
 
 export const FlexItems = () => {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Flex as={Paper} height="96px" background="b-5" gap="4" items="center">
         Hello
       </Flex>

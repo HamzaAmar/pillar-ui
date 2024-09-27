@@ -18,7 +18,7 @@ export default meta
 export function PaginationColor() {
   return (
     <div>
-      <div className="l_f-md">
+      <div className="Sfmd">
         <Pagination count={10} />
         <Pagination count={10} color="d" />
         <Pagination count={10} color="s" />
@@ -27,7 +27,7 @@ export function PaginationColor() {
         <Pagination count={10} color="se" />
         <Pagination count={10} color="b" />
       </div>
-      <div className="l_f-md">
+      <div className="Sfmd">
         <Pagination count={10} variant="soft" />
         <Pagination count={10} variant="soft" color="d" />
         <Pagination count={10} variant="soft" color="s" />
@@ -36,7 +36,7 @@ export function PaginationColor() {
         <Pagination count={10} variant="soft" color="se" />
         <Pagination count={10} variant="soft" color="b" />
       </div>
-      <div className="l_f-md">
+      <div className="Sfmd">
         <Pagination count={10} />
         <Pagination count={10} variant="solid" color="d" />
         <Pagination count={10} variant="solid" color="s" />
@@ -51,7 +51,7 @@ export function PaginationColor() {
 
 export function PaginationVariant() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Pagination count={10} color="p" />
       <Pagination count={10} color="p" variant="mixed" />
       <Pagination count={10} color="p" variant="soft" />
@@ -63,7 +63,7 @@ export function PaginationVariant() {
 
 export function PaginationCustomStyle() {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       <Pagination count={10} />
       <Pagination count={10} color="d" />
       <Pagination count={10} color="s" />
@@ -80,7 +80,7 @@ export const Playground = {}
 export function Nice() {
   const [open, setOpen] = React.useState(false)
   return (
-    <button onClick={() => setOpen(true)} className="l_f-md">
+    <button onClick={() => setOpen(true)} className="Sfmd">
       {open ? 'Open' : 'CLose'}
     </button>
   )

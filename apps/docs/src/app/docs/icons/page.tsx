@@ -13,10 +13,10 @@ const IconsItem = ({ item }: { item: ItemProps }) => {
   const [name, Icon] = item
 
   return (
-    <Flex as={Paper} background="b-5" className="u_rad-md l_f-sm u_pa-sm" direction="column" items="center" key={name!}>
+    <Flex as={Paper} background="b-5" className="u_rad-md Sfsm u_pa-sm" direction="column" items="center" key={name!}>
       <div className="icon--info l_fl-column u_center">
         <Icon width="30" />
-        <Text weight="medium" gap="3">
+        <Text weight="medium" size="3">
           {name}
         </Text>
       </div>
@@ -41,8 +41,8 @@ const Icons = () => {
   }
 
   return (
-    <div className="l_f-sm icons">
-      <Flex className="icons-scroll" as={Paper} size="4" gap="4">
+    <div className="Sfsm icons">
+      <Flex className="icons-scroll" as={Paper} corner="4" gap="4">
         {CATEGORIES.map((category) => (
           <Button
             onClick={() => setCurrent(category)}
@@ -53,7 +53,7 @@ const Icons = () => {
           </Button>
         ))}
       </Flex>
-      <div className="u_pa-lg l_f-lg">
+      <div className="u_pa-lg Sflg">
         <Heading as="h2">
           Number of Icons In {current}: {lists.length}
         </Heading>

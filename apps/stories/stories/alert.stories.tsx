@@ -52,40 +52,40 @@ export const AlertControlled = () => {
 export const AlertSizes = () => {
   return (
     <Flex gap="4" direction="column">
-      <AlertBase gap="2" />
+      <AlertBase size="2" />
       <AlertBase
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
-        gap="2"
+        size="2"
       />
-      <AlertBase gap="3" />
+      <AlertBase size="3" />
       <AlertBase
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
-        gap="3"
+        size="3"
       />
       <AlertBase size="4" />
       <AlertBase
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
         size="4"
       />
-      <AlertBase gap="5" />
+      <AlertBase size="5" />
       <AlertBase
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
-        gap="5"
+        size="5"
       />
-      <AlertBase gap="6" />
+      <AlertBase size="6" />
       <AlertBase
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
-        gap="6"
+        size="6"
       />
-      <AlertBase gap="7" />
+      <AlertBase size="7" />
       <AlertBase
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
-        gap="7"
+        size="7"
       />
-      <AlertBase gap="8" />
+      <AlertBase size="8" />
       <AlertBase
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
-        gap="8"
+        size="8"
       />
     </Flex>
   )
@@ -94,12 +94,12 @@ export const AlertSizes = () => {
 export const AlertCorner = () => {
   return (
     <Flex gap="4" direction="column">
-      <AlertBase corner="sharp" />
+      <AlertBase corner="0" />
       <AlertBase corner="3" />
-      <AlertBase corner="sm" />
-      <AlertBase corner="md" />
-      <AlertBase corner="lg" />
-      <AlertBase corner="xl" />
+      <AlertBase corner="2" />
+      <AlertBase corner="3" />
+      <AlertBase corner="4" />
+      <AlertBase corner="5" />
       <AlertBase corner="full" />
     </Flex>
   )
@@ -109,7 +109,7 @@ const Variants = ['shadow', 'solid', 'outline', 'soft', 'mixed']
 
 export const AlertVariant = () => {
   return (
-    <div className="l_f-md">
+    <div className="Sfmd">
       {Variants.map((variant) => (
         <Flex key={variant} direction="column" gap="4">
           <AlertBase variant={variant} color="w" />
@@ -200,7 +200,7 @@ export const AlertIsomerphic = () => {
 
 export function AlertCornerDefaults() {
   return (
-    <div className="l_f-sm">
+    <div className="Sfsm">
       <Heading>Alert Corner 20px corner</Heading>
       <Flex direction="column" gap="4" style={{ '--alert-rad': '20px' } as CSSProperties}>
         <AlertBase variant="solid" />
