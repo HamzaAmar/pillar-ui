@@ -30,7 +30,7 @@ export const StepperStep = (props: StepProps) => {
       <button
         type="button"
         onClick={() => setActive?.(step!)}
-        className={`s-t_btn u_rad-${corner} u_center u_f-medium`}
+        className={`s-t_btn R${corner} u_center u_f-medium`}
         aria-labelledby={labelledbyID}
         aria-describedby={describedbyID}
       >

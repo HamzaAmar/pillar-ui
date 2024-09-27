@@ -9,7 +9,7 @@ export const Code = forwardRef(
     const classNames = cx(`c-o u_soft C${color}`, {
       [`u_f-${size}`]: size,
       [`u_t-${transform}`]: transform,
-      [`u_rad-${corner}`]: corner,
+      [`R${corner}`]: corner,
       [className!]: className,
     })
 

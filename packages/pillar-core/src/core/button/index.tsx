@@ -35,7 +35,7 @@ export const Button = forwardRef(
       'b-u-fluid': fluid,
       [`u_t-${transform}`]: transform,
       [`u_f-${size}`]: size,
-      [`u_rad-${corner}`]: corner,
+      [`R${corner}`]: corner,
       [className!]: className,
     })
 
@@ -77,7 +77,7 @@ export const IconButton = forwardRef(
   ) => {
     const classnames = cx(`b-u bu-i u_${variant} C${color} u_center`, {
       [`u_f-${size}`]: size,
-      [`u_rad-${corner}`]: corner,
+      [`R${corner}`]: corner,
       [className!]: className,
     })
 
@@ -115,7 +115,7 @@ export const ButtonGroup = forwardRef(
     const classNames = cx(`bu-g b-u C${color} u_center`, {
       [className!]: className,
       [`u_f-${size}`]: size,
-      [`u_rad-${corner}`]: corner,
+      [`R${corner}`]: corner,
     })
 
     return (

@@ -12,7 +12,7 @@ export const Chips = forwardRef(
     const _className = cx(`c-i shd u_${variant} C${color}`, {
       [`u_f-${size}`]: size,
       [`u_t-${transform}`]: transform,
-      [`u_rad-${corner}`]: corner,
+      [`R${corner}`]: corner,
       [className!]: className,
     })
 

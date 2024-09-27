@@ -22,7 +22,7 @@
   font-size: 0.925em;
   flex-direction: var(--a-d);
   flex: 1;
-  gap: var(--s-2);
+  gap: var(--S2);
 }
 
 .al_in {

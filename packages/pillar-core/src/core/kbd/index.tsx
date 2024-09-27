@@ -9,7 +9,7 @@ export const Kbd = forwardRef(
     const classNames = cx(`k-d shd u_${variant} C${color}`, {
       [`u_t-${transform}`]: transform,
       [`u_f-${size}`]: size,
-      [`u_rad-${corner}`]: corner,
+      [`R${corner}`]: corner,
       [className!]: className,
     })
     return (

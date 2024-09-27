@@ -49,7 +49,7 @@ function useField(props: any) {
     [`u_t-${transform}`]: transform,
     'f-i_cnt-fluid': fluid,
     [`u_f-${size}`]: corner,
-    [`u_rad-${corner}`]: corner,
+    [`R${corner}`]: corner,
   })
 
   const field = { ...ctx, ...restProps, 'aria-invalid': hasError || isInvalid, 'aria-describedby': describedby }
@@ -244,7 +244,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     ...rest
   } = props
   const className = cx(`f-i_cnt f-i_cnt-${variant} l_fl Sg3 C${color}`, {
-    [`u_rad-${corner}`]: corner,
+    [`R${corner}`]: corner,
     [`u_t-${transform}`]: transform,
     [`u_f-${size}`]: size,
   })

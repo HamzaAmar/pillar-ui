@@ -25,38 +25,38 @@ export const PaperCorner = () => {
         full
       </Paper>
 
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b-1">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b1">
         B b 1
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b-2">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b2">
         b 2
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b-3">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b3">
         b 3
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b-4">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b4">
         b 4
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b-5">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="b5">
         b 5
       </Paper>
 
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h-1">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h1">
         Hand 1
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h-2">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h2">
         Hand 2
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h-3">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h3">
         Hand 3
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h-4">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h4">
         Hand 4
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h-5">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h5">
         Hand 5
       </Paper>
-      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h-6">
+      <Paper className="u_center" p="3" background="b-5" width="25-char" ratio="1" corner="h6">
         Hand 6
       </Paper>
     </>

@@ -190,23 +190,23 @@ export function ButtonsCorners() {
         <Button corner="5" color="p">
           Primary
         </Button>
-        <Button corner="h-1" color="p">
+        <Button corner="h1" color="p">
           Primary
         </Button>
-        <Button corner="h-2" color="p">
+        <Button corner="h2" color="p">
           Primary
         </Button>
-        <Button corner="h-3" color="p">
+        <Button corner="h3" color="p">
           Primary
         </Button>
 
-        <Button corner="h-4" color="p">
+        <Button corner="h4" color="p">
           Primary
         </Button>
-        <Button corner="h-5" color="p">
+        <Button corner="h5" color="p">
           Primary
         </Button>
-        <Button corner="h-6" color="p">
+        <Button corner="h6" color="p">
           Primary
         </Button>
       </Flex>

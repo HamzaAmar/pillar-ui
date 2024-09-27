@@ -82,7 +82,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
   const classNames = cx(`a-v a-v-${variant} C${color} u_s-equal u_center`, {
     [`u_${animate}`]: animate,
     [`u_f-${size}`]: size,
-    [`u_rad-${corner}`]: corner,
+    [`R${corner}`]: corner,
     [className!]: className,
   })
 

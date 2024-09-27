@@ -108,7 +108,7 @@ export const AccordionItem = forwardRef(({ children, value, className, ...rest }
   const ctx = { id, value }
   const { corner, variant } = useAccordionContext() ?? {}
   const classNames = cx(`a-c_itm`, {
-    [`u_rad-${corner}`]: corner,
+    [`R${corner}`]: corner,
     [`u_${variant}`]: variant,
     [className!]: className,
   })

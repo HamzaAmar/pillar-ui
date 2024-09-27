@@ -78,17 +78,17 @@ export function AvatarsCorners() {
         <Avatar corner="3" title="Hello" />
         <Avatar corner="4" title="Hello" />
         <Avatar corner="full" title="Hello" />
-        <Avatar corner="b-1" title="Hello" />
-        <Avatar corner="b-2" title="Hello" />
-        <Avatar corner="b-3" title="Hello" />
-        <Avatar corner="b-4" title="Hello" />
-        <Avatar corner="b-5" title="Hello" />
-        <Avatar corner="h-1" title="Hello" />
-        <Avatar corner="h-2" title="Hello" />
-        <Avatar corner="h-3" title="Hello" />
-        <Avatar corner="h-4" title="Hello" />
-        <Avatar corner="h-5" title="Hello" />
-        <Avatar corner="h-6" title="Hello" />
+        <Avatar corner="b1" title="Hello" />
+        <Avatar corner="b2" title="Hello" />
+        <Avatar corner="b3" title="Hello" />
+        <Avatar corner="b4" title="Hello" />
+        <Avatar corner="b5" title="Hello" />
+        <Avatar corner="h1" title="Hello" />
+        <Avatar corner="h2" title="Hello" />
+        <Avatar corner="h3" title="Hello" />
+        <Avatar corner="h4" title="Hello" />
+        <Avatar corner="h5" title="Hello" />
+        <Avatar corner="h6" title="Hello" />
       </Flex>
       <Flex gap="3" items="center">
         <Avatar corner="0" image={image} title="Hello" />
@@ -98,17 +98,17 @@ export function AvatarsCorners() {
         <Avatar corner="3" image={image} title="Hello" />
         <Avatar corner="4" image={image} title="Hello" />
         <Avatar corner="full" image={image} title="Hello" />
-        <Avatar corner="b-1" image={image} title="Hello" />
-        <Avatar corner="b-2" image={image} title="Hello" />
-        <Avatar corner="b-3" image={image} title="Hello" />
-        <Avatar corner="b-4" image={image} title="Hello" />
-        <Avatar corner="b-5" image={image} title="Hello" />
-        <Avatar corner="h-1" image={image} title="Hello" />
-        <Avatar corner="h-2" image={image} title="Hello" />
-        <Avatar corner="h-3" image={image} title="Hello" />
-        <Avatar corner="h-4" image={image} title="Hello" />
-        <Avatar corner="h-5" image={image} title="Hello" />
-        <Avatar corner="h-6" image={image} title="Hello" />
+        <Avatar corner="b1" image={image} title="Hello" />
+        <Avatar corner="b2" image={image} title="Hello" />
+        <Avatar corner="b3" image={image} title="Hello" />
+        <Avatar corner="b4" image={image} title="Hello" />
+        <Avatar corner="b5" image={image} title="Hello" />
+        <Avatar corner="h1" image={image} title="Hello" />
+        <Avatar corner="h2" image={image} title="Hello" />
+        <Avatar corner="h3" image={image} title="Hello" />
+        <Avatar corner="h4" image={image} title="Hello" />
+        <Avatar corner="h5" image={image} title="Hello" />
+        <Avatar corner="h6" image={image} title="Hello" />
       </Flex>
     </div>
   )

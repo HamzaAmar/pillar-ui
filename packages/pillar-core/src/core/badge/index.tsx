@@ -10,7 +10,7 @@ export const Badge = forwardRef((props, ref) => {
   const classNames = cx(`b-a shd u_${variant} u_center C${color}`, {
     'b-a_dot': type === 'dot',
     [`u_f-${size}`]: size,
-    [`u_rad-${corner}`]: corner,
+    [`R${corner}`]: corner,
     [className!]: className,
   })
 

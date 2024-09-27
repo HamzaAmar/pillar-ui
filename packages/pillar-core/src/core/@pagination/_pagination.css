@@ -28,6 +28,6 @@
 .p-a_lst {
   display: flex;
   align-items: center;
-  gap: var(--s-sm);
+  gap: var(--Ssm);
   list-style: none;
 }

@@ -7,7 +7,7 @@
   width: fit-content;
   color: var(--text-8);
   display: flex;
-  gap: var(--s-3);
+  gap: var(--S3);
   align-items: center;
 
   /*

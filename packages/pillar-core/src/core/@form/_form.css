@@ -261,7 +261,7 @@
 }
 
 .fi-s:hover {
-  stroke: var(--shared-color-8, var(--P10));
+  stroke: var(--c-8, var(--P10));
 }
 
 .fi-s {
@@ -314,7 +314,7 @@
 .f-c_err {
   color: var(--D11);
   width: fit-content;
-  gap: var(--s-1);
+  gap: var(--S1);
 }
 
 .f-c_icn {

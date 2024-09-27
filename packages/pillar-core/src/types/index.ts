@@ -1,6 +1,6 @@
-type CommonSize = '1' | '2' | '3' | '4' | '5' | '6' | undefined
+type SharedSize = '1' | '2' | '3' | '4' | '5' | undefined
 
-type Size = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+type Size = SharedSize | '6' | '7' | '8' | '9'
 
 /**
  * Represents the color of a component.
@@ -32,10 +32,10 @@ type Gradient = Color | 'mixed1' | 'mixed2' | 'mixed3' | 'mixed4' | undefined
 /* The Difference Between circle and full circle use 50% and the other use 1000px */
 
 // TODO: Add jsdoc to this types
-type CornerHand = 'h-1' | 'h-2' | 'h-3' | 'h-4' | 'h-5' | 'h-6'
-type CornerBlob = 'b-1' | 'b-2' | 'b-3' | 'b-4' | 'b-5'
+type CornerHand = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+type CornerBlob = 'b1' | 'b2' | 'b3' | 'b4' | 'b5'
 
-type Corner = '0' | CommonSize | 'circle' | 'full'
+type Corner = '0' | SharedSize | 'circle' | 'full'
 
 /**
  * Represents the color of a component.
@@ -75,7 +75,7 @@ export type {
   Direction,
   Gradient,
   Transform,
-  CommonSize,
+  SharedSize,
   CornerHand,
   CornerBlob,
 }

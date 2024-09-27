@@ -13,7 +13,7 @@ import type { CSSProperties } from 'react'
 
 export const SkeletonAvatar = forwardRef(
   ({ size = '6', corner = 'full', children, isLoading = true, className, ...rest }, ref) => {
-    const classNames = cx(`s-k s-k_avt u_f-${size} u_rad-${corner}`, {
+    const classNames = cx(`s-k s-k_avt u_f-${size} R${corner}`, {
       [className!]: className,
     })
     return isLoading ? <div className={classNames} ref={ref} {...rest} /> : <div>{children}</div>

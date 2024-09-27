@@ -41,7 +41,7 @@ export const Tab = forwardRef(({ title, value, ...rest }, ref) => {
     <button
       onClick={() => handleSelect?.(value)}
       type="button"
-      className={`t_ab t_ab-${variant} u_rad-${corner}`}
+      className={`t_ab t_ab-${variant} R${corner}`}
       role="tab"
       aria-selected={selected === value}
       aria-controls={`${id}-panel`}
