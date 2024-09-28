@@ -18,7 +18,7 @@ function ColorItem({ item, value }: ColorItem) {
       <div className="Sf3">
         <Grid justify="center" grid="repeat(12, 1fr) x auto 30px 30px" gap="3">
           {Array.from({ length: 12 }, (_, index) => (
-            <Text align="center" size="4" key={`${item}-${index + 1}`} weight="medium" color="b" low>
+            <Text align="center" size="4" key={`${item}-${index + 1}`} weight="5" color="b" low>
               {index + 1}
             </Text>
           ))}

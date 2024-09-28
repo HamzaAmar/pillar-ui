@@ -1,78 +1,74 @@
 /*Font: Fs, Fw, --fw, --fs */
-.u_f-thin {
+.Fw1 {
   font-weight: 100;
 }
 
-.u_f-small {
-  font-weight: var(--f-sm);
-}
-
-.u_f-extra-light {
+.Fw2 {
   font-weight: 200;
 }
 
-.u_f-light {
+.Fw3 {
   font-weight: 300;
 }
 
-.u_f-normal {
+.Fw4 {
   font-weight: 400;
 }
 
-.u_f-medium {
+.Fw5 {
   font-weight: 500;
 }
 
-.u_f-semi-bold {
+.Fw6 {
   font-weight: 600;
 }
 
-.u_f-bold {
+.Fw7 {
   font-weight: 700;
 }
 
-.u_f-extra-bold {
+.Fw8 {
   font-weight: 800;
 }
 
-.u_f-black {
+.Fw9 {
   font-weight: 900;
 }
 
-.u_f-italic {
+.Fstitalic {
   font-style: italic;
 }
 
-.u_f-oblique {
+.Fstoblique {
   font-style: oblique;
 }
 
 /* Font size section */
 
-.u_f-1 {
-  font-size: var(--f-1);
+.Fs1 {
+  font-size: var(--F1);
 }
-.u_f-2 {
-  font-size: var(--f-2);
+.Fs2 {
+  font-size: var(--F2);
 }
-.u_f-3 {
-  font-size: var(--f-3);
+.Fs3 {
+  font-size: var(--F3);
 }
-.u_f-sm {
-  font-size: var(--f-sm);
+.Fs4 {
+  font-size: var(--F4);
 }
-.u_f-md {
-  font-size: var(--f-md);
+.Fs5 {
+  font-size: var(--F5);
 }
-.u_f-lg {
-  font-size: var(--f-lg);
+.Fs6 {
+  font-size: var(--F6);
 }
-.u_f-xl {
-  font-size: var(--f-xl);
+.Fs7 {
+  font-size: var(--F7);
 }
-.u_f-2xl {
-  font-size: var(--f-2xl);
+.Fs8 {
+  font-size: var(--F8);
 }
-.u_f-3xl {
-  font-size: var(--f-3xl);
+.Fs9 {
+  font-size: var(--F9);
 }

@@ -65,7 +65,7 @@ export function ButtonsIcons() {
     <div className="Sf6">
       {SIZES.map((size) => (
         <div key={size}>
-          <Text weight="bold" size="8">
+          <Text weight="7" size="8">
             {size} Button
           </Text>
           <Flex gap="4" wrap>

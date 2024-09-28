@@ -9,8 +9,8 @@ export const Chips = forwardRef(
     { size, color = 'p', as: Tag = 'span', variant = 'solid', transform, corner, className, children, ...rest },
     ref
   ) => {
-    const _className = cx(`c-i shd u_${variant} C${color}`, {
-      [`u_f-${size}`]: size,
+    const _className = cx(`c-i shd V${variant} C${color}`, {
+      [`Fs${size}`]: size,
       [`u_t-${transform}`]: transform,
       [`R${corner}`]: corner,
       [className!]: className,
@@ -18,7 +18,7 @@ export const Chips = forwardRef(
 
     return (
       <Tag ref={ref} className={_className} {...rest}>
-        <span className="c-i_cnt Sg1 u_truncate u_center">{children} </span>
+        <span className="c-i_cnt Sg1 u_truncate Fc">{children} </span>
       </Tag>
     )
   }

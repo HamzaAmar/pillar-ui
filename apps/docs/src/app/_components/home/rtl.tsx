@@ -25,13 +25,13 @@ function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
       </div>
       <Flex gap="5">
         <Text size="4">
-          <Text as="span" weight="medium">
+          <Text as="span" weight="5">
             {likes}
           </Text>{' '}
           {type === 'ar' ? 'الإعجابات' : 'Likes'}
         </Text>
         <Text size="4">
-          <Text as="span" weight="medium">
+          <Text as="span" weight="5">
             {followers}
           </Text>{' '}
           {type === 'ar' ? 'المتابعون' : 'Followers'}
@@ -64,7 +64,7 @@ export function RTLSupport() {
               <Flex key={id} as="article" gap="4" className="feature--item">
                 <span className="feature-icon">{icon}</span>
                 <div>
-                  <Text weight="medium" size="5">
+                  <Text weight="5" size="5">
                     {title}
                   </Text>
                   <Text low color="b">

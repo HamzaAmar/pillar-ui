@@ -17,7 +17,7 @@ const CompleteComponent = () => {
       <div style={{ color: 'white', background: 'var(--green-9)', padding: '.5rem', borderRadius: '1rem' }}>
         <Check width={60} />
       </div>
-      <Text weight="bold">Success</Text>
+      <Text weight="7">Success</Text>
       <Text style={{ width: '90ch' }} size="4" color="b" low>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, illum, ut eius esse voluptates voluptatibus
         perferendis laborum, quam temporibus consequuntur iure porro excepturi dolore. Enim labore id tempore iusto sed?{' '}

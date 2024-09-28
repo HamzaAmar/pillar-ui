@@ -103,7 +103,7 @@ Pillar components adhere to a unique class naming convention designed for both c
 | `_ele`        | Reserved for "element"    | `.b-u_el`  |
 | `_flb`        | Reserved for "fallback"   | `.b-u_flb` |
 | `_hor`        | Reserved for "horizontal" | `.b-u_hor` |
-| `_itm`        | Reserved for "item"       | `.b-u_itm` |
+| `_itm`        | Reserved for "item"       | `.b-Aaim`  |
 | `_img`        | Reserved for "image"      | `.b-u_img` |
 | `_icn`        | Reserved for "icon"       | `.b-u_icn` |
 | `_lnk`        | Reserved for "link"       | `.b-u_lnk` |

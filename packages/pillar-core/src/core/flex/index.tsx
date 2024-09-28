@@ -39,8 +39,8 @@ export const Flex = forwardRef((props, forwardedRef) => {
   const { children, justify, items, flex, direction, wrap, inline, as: Tag = 'div', gap, className, ...rest } = props
 
   const classNames = cx('f-l', {
-    [`u_jus-${justify}`]: justify && justify !== 'start',
-    [`u_it-${items}`]: items,
+    [`Ajc-${justify}`]: justify && justify !== 'start',
+    [`Aai-${items}`]: items,
     // [`l_fl-${flex}`]: items,
     [`l_fl-${direction}`]: direction && direction !== 'row',
     'l_fl-wrap': wrap,

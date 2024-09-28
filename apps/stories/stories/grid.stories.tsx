@@ -42,7 +42,7 @@ export const ResponsiveColumns = () => {
 export const ResponsiveColumn = () => {
   return (
     <Grid gap="3" grid="repeat(4, 1fr) x repeat(6, 1fr)" sm="1fr x repeat(4, 1fr)">
-      <GridItem as={Box} placement="1/5" sm="1/2" height="48px">
+      <GridItem as={Box} placement="1/5" sm="1/2" height="48p">
         Hello
       </GridItem>
       <GridItem as={Box} placement="span 2 x span 4" sm="1/2 x 2/3">
@@ -51,7 +51,7 @@ export const ResponsiveColumn = () => {
       <GridItem as={Box} placement="span 2 x span 4" sm="1/2 x 3/4">
         Hello
       </GridItem>
-      <GridItem as={Box} placement="span 4" sm="1/2" height="48px">
+      <GridItem as={Box} placement="span 4" sm="1/2" height="48p">
         Hello
       </GridItem>
     </Grid>
@@ -101,18 +101,18 @@ export const ComplexGridTwo = () => (
 export const GridColumns = () => {
   return (
     <Grid grid=".5fr 2fr auto 100px" gap="4">
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
-      <Box height="96px" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
+      <Box height="96p" />
     </Grid>
   )
 }

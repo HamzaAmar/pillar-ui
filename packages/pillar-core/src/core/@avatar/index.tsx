@@ -44,9 +44,7 @@ export const AvatarGroup = forwardRef(
           {Array.from({ length }, (_, index) => Children.toArray(children)[index])}
         </AvatarProvider>
 
-        {restCount ? (
-          <Avatar {...contextProps} fallback={<div className="u_f-sm u_f-medium">{restCount}+</div>} />
-        ) : null}
+        {restCount ? <Avatar {...contextProps} fallback={<div className="Fs4  Fw5">{restCount}+</div>} /> : null}
       </Tag>
     )
   }
@@ -79,15 +77,15 @@ export const Avatar = forwardRef((props, forwardRef) => {
 
   const [isError, setIsError] = useState(!image)
 
-  const classNames = cx(`a-v a-v-${variant} C${color} u_s-equal u_center`, {
+  const classNames = cx(`a-v a-v-${variant} C${color} u_s-equal Fc`, {
     [`u_${animate}`]: animate,
-    [`u_f-${size}`]: size,
+    [`Fs${size}`]: size,
     [`R${corner}`]: corner,
     [className!]: className,
   })
 
   const content = isError ? (
-    <span className="u_center">{fallback}</span>
+    <span className="Fc">{fallback}</span>
   ) : (
     // eslint-disable-next-line @next/next/no-img-element
     <img

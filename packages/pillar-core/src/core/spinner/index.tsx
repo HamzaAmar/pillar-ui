@@ -7,7 +7,7 @@ export const Spinner = ({ color = 'p', size, thickness = '2px', invert = false, 
   const classnames = cx(`s-p C${color}`, {
     [`C${color}`]: color,
     ['s-p-invert']: invert,
-    [`u_f-${size}`]: size,
+    [`Fs${size}`]: size,
     [className!]: className,
   })
   return <div style={{ '--border': thickness } as CSSProperties} className={classnames} {...rest} />

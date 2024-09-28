@@ -113,13 +113,13 @@ export const FlexJustify = () => {
 export const FlexItems = () => {
   return (
     <div className="Sf3">
-      <Flex as={Paper} height="96px" background="b-5" gap="4" items="center">
+      <Flex as={Paper} height="96p" background="b-5" gap="4" items="center">
         Hello
       </Flex>
-      <Flex as={Paper} height="96px" background="b-5" gap="4" items="end">
+      <Flex as={Paper} height="96p" background="b-5" gap="4" items="end">
         Hello
       </Flex>
-      <Flex as={Paper} height="96px" background="b-5" gap="4">
+      <Flex as={Paper} height="96p" background="b-5" gap="4">
         Hello
       </Flex>
     </div>

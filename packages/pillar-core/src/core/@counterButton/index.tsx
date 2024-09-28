@@ -3,7 +3,7 @@ import { Minus, Plus } from '../icons'
 
 import type { CounterButtonProps } from './counterButton.type'
 
-const shared = { type: 'button', className: 'c-b u_center' } as const
+const shared = { type: 'button', className: 'c-b Fc' } as const
 
 export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: CounterButtonProps) => {
   const init = { value, min, max, step }

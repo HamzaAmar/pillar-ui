@@ -6,84 +6,84 @@
 
 /* Justify Content Section Style Start */
 
-.u_jus-end {
+.Ajc-end {
   justify-content: end;
 }
 
-.u_jus-between {
+.Ajc-between {
   justify-content: space-between;
 }
 
-.u_jus-around {
+.Ajc-around {
   justify-content: space-around;
 }
 
-.u_jus-evenly {
+.Ajc-evenly {
   justify-content: space-evenly;
 }
 
-.u_jus-center {
+.Ajc-center {
   justify-content: center;
 }
 
 /* Align Item Section Style Start */
 
-.u_jus-items-center {
+.Aji-center {
   justify-items: center;
 }
 
-.u_jus-items-end {
+.Aji-end {
   justify-items: end;
 }
 
-.u_jus-items-baseline {
+.Aji-baseline {
   justify-items: baseline;
 }
 
-.u_jus-items-stretch {
+.Aji-stretch {
   justify-items: stretch;
 }
 
 /* // Align Item Section Style Start */
 
-.u_it-center {
+.Aai-center {
   align-items: center;
 }
 
-.u_it-end {
+.Aai-end {
   align-items: end;
 }
 
-.u_it-baseline {
+.Aai-baseline {
   align-items: baseline;
 }
 
-.u_it-start {
+.Aai-start {
   align-items: start;
 }
 
 /* // Align Content Section Style Start */
 
-.u_con-end {
+.Aac-end {
   align-content: end;
 }
 
-.u_con-between {
+.Aac-between {
   align-content: space-between;
 }
 
-.u_con-around {
+.Aac-around {
   align-content: space-around;
 }
 
-.u_con-evenly {
+.Aac-evenly {
   align-content: space-evenly;
 }
 
-.u_jus-self-end {
+.Ajc-self-end {
   justify-self: end;
 }
 
-.u_jus-self-center {
+.Ajc-self-center {
   justify-self: center;
 }

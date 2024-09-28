@@ -31,10 +31,10 @@ export const Button = forwardRef(
     },
     forwardedRef
   ) => {
-    const classNames = cx(`b-u shd u_${variant} C${color} u_center`, {
+    const classNames = cx(`b-u shd V${variant} C${color} Fc`, {
       'b-u-fluid': fluid,
       [`u_t-${transform}`]: transform,
-      [`u_f-${size}`]: size,
+      [`Fs${size}`]: size,
       [`R${corner}`]: corner,
       [className!]: className,
     })
@@ -75,8 +75,8 @@ export const IconButton = forwardRef(
     { icon, title, corner, color = 'b', size = '5', variant = 'transparent', className, as: Tag = 'button', ...rest },
     forwardedRef
   ) => {
-    const classnames = cx(`b-u bu-i u_${variant} C${color} u_center`, {
-      [`u_f-${size}`]: size,
+    const classnames = cx(`b-u bu-i V${variant} C${color} Fc`, {
+      [`Fs${size}`]: size,
       [`R${corner}`]: corner,
       [className!]: className,
     })
@@ -112,9 +112,9 @@ export const ButtonGroup = forwardRef(
     },
     forwardedRef
   ) => {
-    const classNames = cx(`bu-g b-u C${color} u_center`, {
+    const classNames = cx(`bu-g b-u C${color} Fc`, {
       [className!]: className,
-      [`u_f-${size}`]: size,
+      [`Fs${size}`]: size,
       [`R${corner}`]: corner,
     })
 

@@ -77,7 +77,7 @@ export const Accordion = forwardRef(
 
     const classNames = cx(`a-c`, {
       [`C${color}`]: color,
-      [`u_f-${size}`]: size,
+      [`Fs${size}`]: size,
       Sfsm: separate,
       [`u_variant`]: variant,
       [className!]: className,
@@ -109,7 +109,7 @@ export const AccordionItem = forwardRef(({ children, value, className, ...rest }
   const { corner, variant } = useAccordionContext() ?? {}
   const classNames = cx(`a-c_itm`, {
     [`R${corner}`]: corner,
-    [`u_${variant}`]: variant,
+    [`V${variant}`]: variant,
     [className!]: className,
   })
 
@@ -132,7 +132,7 @@ export const AccordionButton = forwardRef((props, ref) => {
   const { value, id: idContext } = useAccordionItemContext() ?? {}
   const { toggleAccordion, isOpen } = useAccordionContext() ?? {}
   const { children, id = idContext, icon = <ChevronDown width="1em" />, className, ...rest } = props
-  const classNames = cx('a-c_btn u_between', { [className!]: !!className })
+  const classNames = cx('a-c_btn Fb', { [className!]: !!className })
   return (
     <button
       type="button"
@@ -144,7 +144,7 @@ export const AccordionButton = forwardRef((props, ref) => {
       {...rest}
     >
       {children}
-      {<span className="u_w-fit">{icon}</span>}
+      {<span className="Swfit">{icon}</span>}
     </button>
   )
 }) as ForwardRefComponent<'button', AccordionButtonProps>

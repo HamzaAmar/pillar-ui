@@ -1,9 +1,6 @@
 import { ReactNode } from 'react'
-import { Size } from '../../types'
+import { Items, Justify, Size } from '../../types'
 // import { Size } from '../../types'
-
-type Items = 'center' | 'end' | 'start'
-type Justify = 'start' | 'around' | 'between' | 'evenly' | 'end' | 'center'
 
 export interface GridBaseProps {
   xs?: string

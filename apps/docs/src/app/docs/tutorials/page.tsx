@@ -10,8 +10,8 @@ function Tutorials() {
     <Paper as={Grid} m="4" grid="repeat(4, 1fr)" gap="4">
       {tutorials.map((tutorial) => (
         <Link href={`utils/${tutorial.slug}`} key={tutorial.slug}>
-          <Paper height="96px" corner="2" background="b-3" className="u_center">
-            <Text size="6" weight="medium" color="b">
+          <Paper height="96p" corner="2" background="b-3" className="Fc">
+            <Text size="6" weight="5" color="b">
               {tutorial.title}
             </Text>
           </Paper>

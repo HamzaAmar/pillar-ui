@@ -31,7 +31,7 @@ const Item = forwardRef((props, forwardedRef) => {
     <li>
       <Button
         variant={variant}
-        className={cx('p-a_btn u_center', { className: className })}
+        className={cx('p-a_btn Fc', { className: className })}
         size={size}
         color={color}
         corner={corner}
@@ -62,7 +62,7 @@ export const Pagination = ({ count = 10, ...rest }: PaginationProps) => {
           </Item>
           {range.map((item, index) =>
             item === '.' ? (
-              <li key={index} className="p-a_itm u_center">
+              <li key={index} className="p-a_itm Fc">
                 <DotsHorizontal width={16} />
               </li>
             ) : (

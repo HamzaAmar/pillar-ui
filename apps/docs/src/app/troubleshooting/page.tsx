@@ -17,13 +17,13 @@ const troubleshooting = () => {
         </Heading>
 
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Problem:
           </Text>
           Node.js or npm/yarn not installed
         </Text>
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Solution:
           </Text>
           Ensure you have Node.js and npm/yarn installed. You can download them from the
@@ -31,13 +31,13 @@ const troubleshooting = () => {
         </Text>
 
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Problem:
           </Text>
           Installation fails due to permission errors
         </Text>
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Solution:
           </Text>
           Try running the installation commands with administrative privileges using sudo (for macOS/Linux) or run your
@@ -45,13 +45,13 @@ const troubleshooting = () => {
         </Text>
 
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Problem:
           </Text>
           Installation hangs or takes too long
         </Text>
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Solution:
           </Text>
           This might be due to network issues or server problems. Try running the installation commands again after a
@@ -67,13 +67,13 @@ const troubleshooting = () => {
         </Heading>
 
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Problem:
           </Text>
           Imported styles not applied to components
         </Text>
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Solution:
           </Text>
           Ensure that you`&apos;`ve imported the Pillar CSS file (<code>@pillar-ui/core/main.css</code>) in the correct
@@ -82,13 +82,13 @@ const troubleshooting = () => {
         </Text>
 
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Problem:
           </Text>
           Components look different than expected
         </Text>
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Solution:
           </Text>
           Verify your custom theme settings and CSS modifications. Ensure you`&apos;`ve followed the customization steps
@@ -102,13 +102,13 @@ const troubleshooting = () => {
         </Heading>
 
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Problem:
           </Text>
           Components not rendering as expected
         </Text>
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Solution:
           </Text>
           Check your component integration code for errors or missing props. Ensure that you`&apos;`re using the correct
@@ -116,13 +116,13 @@ const troubleshooting = () => {
         </Text>
 
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Problem:
           </Text>
           Component not responsive or misaligned
         </Text>
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Solution:
           </Text>
           Double-check your usage of responsive variables and layout props. Make sure you`&apos;`re using them
@@ -136,13 +136,13 @@ const troubleshooting = () => {
         </Heading>
 
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Problem:
           </Text>
           Unexpected errors or crashes
         </Text>
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Solution:
           </Text>
           If you encounter unhandled errors or crashes, check your browser`&apos;`s developer console for error
@@ -150,13 +150,13 @@ const troubleshooting = () => {
         </Text>
 
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Problem:
           </Text>
           Performance issues
         </Text>
         <Text>
-          <Text weight="medium" as="span">
+          <Text weight="5" as="span">
             Solution:
           </Text>
           If you`&apos;`re experiencing performance problems, review your component usage patterns. Use tools like

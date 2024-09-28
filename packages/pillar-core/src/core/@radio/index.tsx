@@ -26,7 +26,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
     ...rest
   } = props
 
-  const classnames = cx(`f-l Sg3 u_it-center r-a_c C${color}`, { [`l_fl-${direction}`]: direction })
+  const classnames = cx(`f-l Sg3 Aai-center r-a_c C${color}`, { [`l_fl-${direction}`]: direction })
   return (
     <label className={classnames} htmlFor={id}>
       <input type="radio" name={name} className="r-a" id={id} {...rest} />
@@ -34,7 +34,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
         {children}
         {/* <CircleCheck className="rc_i" width={20} /> */}
       </span>
-      <span className={cx(`r-a_la`, { u_sr: !showLabel })}>{label}</span>
+      <span className={cx(`r-a_la`, { Hsr: !showLabel })}>{label}</span>
     </label>
   )
 }
@@ -48,11 +48,11 @@ export const CustomRadio = (props: CustomRadioProps) => {
 export const RadioGroup = ({ direction = 'column', children, label, showLabel, id, ...rest }: RadioGroupProps) => {
   /*TODO: ADD ERROR ACCESSIBILITY  */
 
-  const classnames = cx(`f-g f-l l_fl-wrap Sgsm u_it-start`, { [`l_fl-${direction}`]: !!direction })
+  const classnames = cx(`f-g f-l l_fl-wrap Sgsm Aai-start`, { [`l_fl-${direction}`]: !!direction })
 
   return (
     <fieldset role="radiogroup" className="ra-g">
-      <legend className={cx('f-g_legend', { u_sr: !showLabel })}>{label}</legend>
+      <legend className={cx('f-g_legend', { Hsr: !showLabel })}>{label}</legend>
 
       {/* TODO: ADD DEFAULT  TO RADIO GROUP  */}
 
@@ -84,8 +84,8 @@ export const Radio = (props: RadioProps) => {
   } = props
 
   return (
-    <label className={`l_fl-inline Sg3 r-a_cnt u_f-${size} C${color}`} htmlFor={id}>
-      <input type="radio" name={name} className="r-a u_sr" id={id} {...rest} />
+    <label className={`l_fl-inline Sg3 r-a_cnt Fs${size} C${color}`} htmlFor={id}>
+      <input type="radio" name={name} className="r-a Hsr" id={id} {...rest} />
       <span className={`rc rc-${variant} u_s-equal`} />
       <span className="r-a_lbl">{label}</span>
     </label>

@@ -1,12 +1,12 @@
 /* Flex: C, B */
 
-.u_center,
-.u_between {
+.Fc,
+.Fb {
   display: var(--fx, flex);
   justify-content: center;
   align-items: var(--itm, center);
 }
 
-.u_between {
+.Fb {
   justify-content: space-between;
 }

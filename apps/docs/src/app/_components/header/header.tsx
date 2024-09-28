@@ -25,7 +25,7 @@ const Header = () => {
         data-show={value}
         justify="between"
         gap="4"
-        className="header--input-search u_center l_fl-2"
+        className="header--input-search Fc l_fl-2"
       >
         <div className="l_fl-1">
           <InputSearch fluid name="search" placeholder="Search" aria-label="search" />

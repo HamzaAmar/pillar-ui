@@ -42,13 +42,13 @@ function useField(props: any) {
     ...restProps
   } = props
 
-  const prefix = prefixInput && <span className="fi-p_cnt f-i-pre u_center">{prefixInput}</span>
-  const suffix = suffixInput && <span className="fi-s_cnt f-i-suf u_center">{suffixInput}</span>
+  const prefix = prefixInput && <span className="fi-p_cnt f-i-pre Fc">{prefixInput}</span>
+  const suffix = suffixInput && <span className="fi-s_cnt f-i-suf Fc">{suffixInput}</span>
 
   const cls = cx(`f-i_cnt f-l f-i_cnt-${variant} C${color}`, {
     [`u_t-${transform}`]: transform,
     'f-i_cnt-fluid': fluid,
-    [`u_f-${size}`]: corner,
+    [`Fs${size}`]: size,
     [`R${corner}`]: corner,
   })
 
@@ -158,7 +158,7 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
         aria-label={`${value ? 'Hide' : 'Show '} Password`}
         type="button"
         onClick={toggle}
-        className="input--suf-content fi-p-btn u_center"
+        className="input--suf-content fi-p-btn Fc"
       >
         {value ? hiddenIcon : visibleIcon}
       </button>
@@ -246,7 +246,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
   const className = cx(`f-i_cnt f-i_cnt-${variant} l_fl Sg3 C${color}`, {
     [`R${corner}`]: corner,
     [`u_t-${transform}`]: transform,
-    [`u_f-${size}`]: size,
+    [`Fs${size}`]: size,
   })
 
   console.log(forwardedRef)
@@ -328,12 +328,12 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>(
     }
     return (
       <Grid grid="auto 1fr" className={cls} onClick={() => inputRef.current?.click()}>
-        <input type="file" ref={composedRef} {...field} className="u_sr" onChange={handleChange} />
+        <input type="file" ref={composedRef} {...field} className="Hsr" onChange={handleChange} />
         <Flex as="span" items="center" className="fi-f">
           {title}
         </Flex>
 
-        <span className="ff-t t-y l_fl  u_f-3 u_it-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
+        <span className="ff-t t-y l_fl  Fs3 Aai-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
       </Grid>
     )
   }
@@ -367,15 +367,15 @@ export const FormController = ({
   const fieldLabel = `${label}${rest.required ? ' *' : ''}`
   return (
     <FormControllerProvider {...values}>
-      <Flex direction="column" className={cx('fc-o u_f-3', { [className!]: className })}>
-        <label className={cx('u_f-medium u_f-sm', { u_sr: hideLabel })} htmlFor={id}>
+      <Flex direction="column" className={cx('fc-o Fs3', { [className!]: className })}>
+        <label className={cx('Fw5 Fs4', { Hsr: hideLabel })} htmlFor={id}>
           {fieldLabel}
         </label>
         {hint && <span id={hintID}>{hint}</span>}
         {children}
         {error && (
-          <div className="f-c_err u_center" id={messageID} role="alert">
-            <span className="f-c_icn u_w-fit">{<Close type="circle" width="16" />}</span>
+          <div className="f-c_err Fc" id={messageID} role="alert">
+            <span className="f-c_icn Swfit">{<Close type="circle" width="16" />}</span>
             <span> {error}</span>
           </div>
         )}
@@ -393,7 +393,7 @@ export const FormGroup = ({
   ...rest
 }: FormGroupProps) => (
   <fieldset className={cx('f-g_cnt', { 'f-g-hide-border': hideBorder })}>
-    <legend className={cx('f-g_legend', { u_sr: hideTitle })}>{title}</legend>
+    <legend className={cx('f-g_legend', { Hsr: hideTitle })}>{title}</legend>
     <Flex gap="4" className={cx('f-g', { 'f-g-fluid': rest.fluid })} items="start" direction={direction}>
       <FormGroupProvider {...rest}>{children}</FormGroupProvider>
     </Flex>

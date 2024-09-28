@@ -27,20 +27,20 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       }
     })
 
-    const classNamesRoot = cx('c-h_cnt', { [`u_f-${size}`]: !!size, [`C${color}`]: !!color })
+    const classNamesRoot = cx('c-h_cnt', { [`Fs${size}`]: !!size, [`C${color}`]: !!color })
 
     return (
       <label className={classNamesRoot}>
         <input
           type="checkbox"
           ref={ref}
-          className="u_sr c-h_el"
+          className="Hsr c-h_el"
           name={name}
           aria-checked={isIndeterminate ? 'mixed' : rest.checked}
           {...rest}
         />
-        <span className="c-h u_s-equal u_center">{icon}</span>
-        <div className={cx('c-h_lbl', { u_sr: showLabel })}>{label}</div>
+        <span className="c-h u_s-equal Fc">{icon}</span>
+        <div className={cx('c-h_lbl', { Hsr: showLabel })}>{label}</div>
       </label>
     )
   }

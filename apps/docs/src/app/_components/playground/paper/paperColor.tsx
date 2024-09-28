@@ -66,7 +66,7 @@ export const PaperColor = () => {
       <Paper background="b-5" p="3" color="o-7">
         Hello
       </Paper>
-      <Paper background="b-5" p="3" height="48px" color="o-11">
+      <Paper background="b-5" p="3" height="48p" color="o-11">
         Hello
       </Paper>
     </>

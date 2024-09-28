@@ -27,7 +27,7 @@ const FooterItem = ({ href, text, external = false }: FooterItemProps) => {
 const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }) => {
   return (
     <nav className="Sf3">
-      <Text transform="capitalize" size="5" weight="medium">
+      <Text transform="capitalize" size="5" weight="5">
         {title}
       </Text>
       <ul className="footer-list Sf3">
@@ -54,7 +54,7 @@ const footer = () => {
           <FooterNav key={title} title={title} links={links} />
         ))}
       </Paper>
-      <Paper className="u_center" p="3">
+      <Paper className="Fc" p="3">
         Pillar UI · Made by Hamza Miloud Amar
       </Paper>
     </footer>

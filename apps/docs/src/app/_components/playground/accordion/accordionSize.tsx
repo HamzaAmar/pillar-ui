@@ -7,7 +7,7 @@ function AccordionBase(props: any) {
       <AccordionItem value={1}>
         <AccordionButton>
           <div>
-            <Text weight="medium">Nice to Meet You</Text>
+            <Text weight="5">Nice to Meet You</Text>
             <Text size="2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
               voluptatem obcaecati temporibus
@@ -22,7 +22,7 @@ function AccordionBase(props: any) {
       <AccordionItem value={2}>
         <AccordionButton>
           <div>
-            <Text weight="medium">Nice to Meet You</Text>
+            <Text weight="5">Nice to Meet You</Text>
             <Text size="2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
               voluptatem obcaecati temporibus
@@ -38,7 +38,7 @@ function AccordionBase(props: any) {
       <AccordionItem value={3}>
         <AccordionButton>
           <div>
-            <Text weight="medium">Nice to Meet You</Text>
+            <Text weight="5">Nice to Meet You</Text>
             <Text size="2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
               voluptatem obcaecati temporibus

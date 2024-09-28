@@ -1,35 +1,35 @@
-.u_solid,
-.u_shadow {
+.Vsolid,
+.Vshadow {
   background: var(--c9);
   color: white;
 }
 
-.u_shadow {
+.Vshadow {
   box-shadow: 0px 4px 12px -4px var(--c8);
 }
 
-:is(.u_outline, .u_soft, .u_mixed, .u_text, .u_link) {
+:is(.Voutline, .Vsoft, .Vmixed, .Vtext, .Vlink) {
   color: var(--c11);
 }
 
-.u_outline {
+.Voutline {
   border-color: var(--c11);
 }
 
-.u_soft {
+.Vsoft {
   background: var(--c3);
 }
 
-.u_mixed {
+.Vmixed {
   border-color: var(--c8);
   background: var(--c3);
 }
 
-.u_text {
+.Vtext {
   border-color: transparent;
 }
 
-.u_link {
+.Vlink {
   text-decoration: underline 1.25px;
   text-underline-offset: 1.5px;
 }

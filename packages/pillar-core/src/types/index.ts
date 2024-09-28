@@ -58,11 +58,14 @@ type Direction = 'horizontal' | 'vertical' | undefined
 
 type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'first-letter-only'
 
-type CharWidth = '25-char' | '30-char' | '45-char' | '60-char' | '75-char' | '90-char'
+type Height = '25' | '50' | '75' | '100' | 'fit' | '24p' | '48p' | '96p' | '192p' | '384p' | 'screen'
 
-type Width = CharWidth | '25' | '50' | '75' | '100' | 'fit' | '24px' | '48px' | '96px' | '192px' | '384px' | 'screen'
+type CharWidth = '25c' | '30c' | '45c' | '60c' | '75c' | '90c'
 
-type Height = '25' | '50' | '75' | '100' | 'fit' | '24px' | '48px' | '96px' | '192px' | '384px' | 'h-screen'
+type Width = CharWidth | Height
+
+type Items = 'center' | 'end' | 'start'
+type Justify = 'start' | 'around' | 'between' | 'evenly' | 'end' | 'center'
 
 export type {
   CharWidth,
@@ -78,4 +81,6 @@ export type {
   SharedSize,
   CornerHand,
   CornerBlob,
+  Items,
+  Justify,
 }

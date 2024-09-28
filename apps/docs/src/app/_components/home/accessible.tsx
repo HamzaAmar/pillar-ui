@@ -13,7 +13,7 @@ export function Accessible() {
         {ACCESSIBILITY.map(({ id, title, description, icon }) => (
           <Paper className="article--item" key={id} flow="2">
             <Flex gap="4" items="center">
-              <div className="article--icon-container u_center">{icon}</div>
+              <div className="article--icon-container Fc">{icon}</div>
               <Heading as="h3" size="6">
                 {title}
               </Heading>

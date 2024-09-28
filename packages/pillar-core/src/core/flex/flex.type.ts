@@ -1,9 +1,7 @@
 /* eslint-disable no-unused-vars */
 import type { ReactNode } from 'react'
-import { Color, Size } from '../../types'
+import { Color, Items, Justify, Size } from '../../types'
 
-type Items = 'center' | 'end' | 'start'
-type Justify = 'start' | 'around' | 'between' | 'evenly' | 'end' | 'center'
 type Direction = 'column' | 'row'
 type Flex = '1' | 'none' | 'auto'
 

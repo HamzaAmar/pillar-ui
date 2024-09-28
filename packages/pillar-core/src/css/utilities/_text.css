@@ -1,18 +1,18 @@
 /*text:  Tt, Ta, Td, Lh */
 
-.u_t-uppercase {
+.TtU {
   text-transform: uppercase;
 }
 
-.u_t-lowercase {
+.TtL {
   text-transform: lowercase;
 }
 
-.u_t-capitalize {
+.TtC {
   text-transform: capitalize;
 }
 
-.u_t-first-letter-only::first-letter {
+.TtCf {
   text-transform: uppercase;
 }
 

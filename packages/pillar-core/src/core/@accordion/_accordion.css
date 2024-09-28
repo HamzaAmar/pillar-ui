@@ -31,10 +31,10 @@
   */
   border-radius: var(--acn-rad, 0);
   font-size: var(--acn-size, 1em);
-  &.u_outline {
+  &.Voutline {
     background: var(--c3);
   }
-  &.u_solid {
+  &.Vsolid {
     border-color: var(--c9);
     background: var(--c9);
   }

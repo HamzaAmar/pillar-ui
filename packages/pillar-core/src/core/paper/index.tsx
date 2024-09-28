@@ -43,7 +43,7 @@ export const Paper = forwardRef(
     ref
   ) => {
     const classNames = cx(`p-p`, {
-      [`u_sh-${shadow}`]: shadow,
+      [`S${shadow}`]: shadow,
       [`Sf${flow}`]: flow,
       [`R${corner}`]: corner,
       [`Sp${p}`]: p,
@@ -56,10 +56,10 @@ export const Paper = forwardRef(
       [`Sm${mr}`]: mr,
       [`Sm${mb}`]: mb,
       [`Sm${ml}`]: ml,
-      [`u_w-${width}`]: width,
-      [`u_h-${height}`]: height,
-      [`u_ratio-${ratio}`]: ratio,
-      [`u_border`]: border,
+      [`Sw${width}`]: width,
+      [`Sh${height}`]: height,
+      [`Sr${ratio}`]: ratio,
+      [`B`]: border,
       [className!]: className,
     })
 

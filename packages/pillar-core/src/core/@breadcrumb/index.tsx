@@ -18,7 +18,7 @@ const [BreadcrumbProvider, useBreadcrumbContext] = context<BreadcrumbContextProp
 export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   const ctx = useBreadcrumbContext() ?? {}
   const { as: Tag = 'a', children, current, separator = ctx.separator ?? '/', className, ...rest } = props
-  const classNames = cx(`b-r_lnk Sg2 u_center`, { [className!]: className })
+  const classNames = cx(`b-r_lnk Sg2 Fc`, { [className!]: className })
 
   return (
     <li className={`f-l Sgsm b-r_itm`}>
@@ -26,7 +26,7 @@ export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
         {children}
       </Tag>
       {!current && (
-        <span className="u_f-medium" role="presentation">
+        <span className="Fw5" role="presentation">
           {separator}
         </span>
       )}
@@ -46,7 +46,7 @@ export const Breadcrumb = forwardRef(
   ({ children, separator, size, color = 'b', className, as: Tag = 'nav', ...rest }, ref) => {
     const breadcrumbContext = { separator }
     const classNames = cx(`f-l l_fl-wrap Sgsm C${color}`, {
-      [`u_f-${size}`]: size,
+      [`Fs${size}`]: size,
       [className!]: className,
     })
 

@@ -93,8 +93,8 @@ export const Grid = forwardRef((props, forwardedRef) => {
   let [xlColumns, xlRows] = xl?.split(' x ') ?? []
 
   const classNames = cx('g-r', {
-    [`u_jus-${justify}`]: justify,
-    [`u_it-${items}`]: items,
+    [`Ajc-${justify}`]: justify,
+    [`Aai-${items}`]: items,
     [`Sg${gap}`]: gap,
     [className!]: className,
     [`xs_grid-columns`]: xsColumns,

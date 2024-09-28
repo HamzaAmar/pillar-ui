@@ -49,29 +49,29 @@ export function LinkSizes() {
 export function LinkWeights() {
   return (
     <div className="Sf4">
-      <Link href="#" weight="thin">
+      <Link href="#" weight="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" weight="extra-light">
+      <Link href="#" weight="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" weight="light">
+      <Link href="#" weight="2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
 
-      <Link href="#" weight="normal">
+      <Link href="#" weight="4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" weight="medium">
+      <Link href="#" weight="5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" weight="bold">
+      <Link href="#" weight="7">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" weight="extra-bold">
+      <Link href="#" weight="8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" weight="black">
+      <Link href="#" weight="9">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
     </div>
@@ -262,7 +262,7 @@ export function LinkInsideParagraph() {
         rerum, ullam nulla repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt facilis
         asperiores a dolores. Suscipit nemo repellendus quisquam id, ipsam eveniet accusantium? Ea iusto sequi
         voluptates quas esse animi{' '}
-        <Link href="#" weight="medium">
+        <Link href="#" weight="5">
           quasi magnam! Ut ipsam,
         </Link>{' '}
         in eveniet, voluptatem, sunt aperiam nulla soluta cumque accusantium accusamus optio sit consectetur culpa amet

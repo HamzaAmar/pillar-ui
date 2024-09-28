@@ -27,7 +27,7 @@ export const ProgressCircle = ({
   const dashOffset = circumference - (progress / 100) * circumference
 
   return (
-    <div className={`pr-c u_center u_f-${size} C${color}`} {...rest}>
+    <div className={`pr-c Fc Fs${size} C${color}`} {...rest}>
       <svg className="pr-c_svg" viewBox="0 0 100 100">
         <circle className="pr-c_background" {...circle} />
         <circle className={`pr-c_bar`} {...circle} strokeDasharray={circumference} strokeDashoffset={dashOffset} />
@@ -53,8 +53,8 @@ export const ProgressBar = ({
 
   return (
     <div className={`C${color}`}>
-      <div className="f-l u_jus-end">
-        <div className={cx(`u_f-${size}`, { ' u_sr': !showValue })}>{MaxValue}%</div>
+      <div className="f-l Ajc-end">
+        <div className={cx(`Fs${size}`, { Hsr: !showValue })}>{MaxValue}%</div>
       </div>
       <div
         role="progressbar"
@@ -63,7 +63,7 @@ export const ProgressBar = ({
         aria-valuenow={progress}
         aria-valuetext={`${progress}%`}
         aria-label={label}
-        className={`pr-b u_f-${size}`}
+        className={`pr-b Fs${size}`}
       >
         <div className="pr-b_inner" style={{ width: `${progress}%` }} />
       </div>
@@ -84,11 +84,11 @@ export const ProgressBarStack = ({ size = '4', children }: ProgressBarStackProps
   })
   return (
     <div>
-      <div className={`f-l Sg2 pr-b pr-s u_f-${size}`}>{children}</div>
+      <div className={`f-l Sg2 pr-b pr-s Fs${size}`}>{children}</div>
       <ul className="f-l Sgmd l_fl-wrap">
         {_children?.map(({ children, color }, index) => (
-          <li className={`pr-s_cnt f-l u_it-center Sg2 C${color}`} key={index}>
-            <span className="u_bg t-y-low u_f-sm">{children}</span>
+          <li className={`pr-s_cnt f-l Aai-center Sg2 C${color}`} key={index}>
+            <span className="u_bg t-y-low Fs4">{children}</span>
           </li>
         ))}
       </ul>

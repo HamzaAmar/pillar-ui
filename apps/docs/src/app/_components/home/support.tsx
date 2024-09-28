@@ -30,7 +30,7 @@ export function PillarSupport() {
       </div>
       <div className="support--second Sfsm">
         <div className="get-started Sfsm">
-          <Text weight="medium" size="6">
+          <Text weight="5" size="6">
             Lets Getting Start
           </Text>
           <Text size="4" color="b" low>
@@ -39,7 +39,7 @@ export function PillarSupport() {
           <Button>Get Started</Button>
         </div>
         <div className="get-started Sfsm">
-          <Text weight="medium" size="6">
+          <Text weight="5" size="6">
             Community
           </Text>
           <Text size="4" color="b" low>
