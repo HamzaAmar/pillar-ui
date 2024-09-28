@@ -39,7 +39,6 @@ export const TooltipCorner = () => {
       <TooltipBase corner="3" />
       <TooltipBase corner="4" />
       <TooltipBase corner="5" />
-      <TooltipBase corner="6" />
     </Flex>
   )
 }

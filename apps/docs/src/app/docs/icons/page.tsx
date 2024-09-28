@@ -13,7 +13,7 @@ const IconsItem = ({ item }: { item: ItemProps }) => {
   const [name, Icon] = item
 
   return (
-    <Flex as={Paper} background="b-5" className="R3 Sfsm u_pa-sm" direction="column" items="center" key={name!}>
+    <Flex as={Paper} background="b-5" className="R3 Sfsm Sp4" direction="column" items="center" key={name!}>
       <div className="icon--info l_fl-column u_center">
         <Icon width="30" />
         <Text weight="medium" size="3">
@@ -53,7 +53,7 @@ const Icons = () => {
           </Button>
         ))}
       </Flex>
-      <div className="u_pa-lg Sflg">
+      <div className="Sp6 Sflg">
         <Heading as="h2">
           Number of Icons In {current}: {lists.length}
         </Heading>

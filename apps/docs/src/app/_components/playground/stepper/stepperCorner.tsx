@@ -59,9 +59,7 @@ export const StepperCorner = () => {
       <StepperBase corner="3" completeComponent={<CompleteComponent />} />
       <StepperBase corner="4" completeComponent={<CompleteComponent />} />
       <StepperBase corner="5" completeComponent={<CompleteComponent />} />
-      <StepperBase corner="6" completeComponent={<CompleteComponent />} />
       <StepperBase corner="full" completeComponent={<CompleteComponent />} />
-      <StepperBase corner="6" completeComponent={<CompleteComponent />} />
     </>
   )
 }

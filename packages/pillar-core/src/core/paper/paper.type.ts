@@ -11,7 +11,15 @@ export interface PaperProps {
   color?: ColorShade
   corner?: Corner | CornerBlob | CornerHand
   p?: Size
+  pt?: Size
+  pr?: Size
+  pb?: Size
+  pl?: Size
   m?: Size
+  mt?: Size
+  mr?: Size
+  mb?: Size
+  ml?: Size
   flow?: Size
   shadow?: Shadow
   width?: Width

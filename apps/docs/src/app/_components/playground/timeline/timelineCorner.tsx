@@ -41,7 +41,6 @@ export const TimelineCorner = () => {
       <TimelineBase corner="3" />
       <TimelineBase corner="4" />
       <TimelineBase corner="5" />
-      <TimelineBase corner="6" />
       <TimelineBase corner="full" />
     </>
   )
