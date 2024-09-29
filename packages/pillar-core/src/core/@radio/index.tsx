@@ -48,7 +48,7 @@ export const CustomRadio = (props: CustomRadioProps) => {
 export const RadioGroup = ({ direction = 'col', children, label, showLabel, id, ...rest }: RadioGroupProps) => {
   /*TODO: ADD ERROR ACCESSIBILITY  */
 
-  const classnames = cx(`f-g f-l fl-wrap Sgsm Aai-start`, { [`fl-${direction}`]: !!direction })
+  const classnames = cx(`f-g f-l fl-wrap Sg4 Aai-start`, { [`fl-${direction}`]: !!direction })
 
   return (
     <fieldset role="radiogroup" className="ra-g">

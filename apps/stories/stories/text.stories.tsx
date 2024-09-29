@@ -151,7 +151,7 @@ export function TextTrasforms() {
       <Text transform="lowercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
       <Text transform="capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
       <Text transform="uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
-      <Text transform="first-letter-only">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
+      <Text transform="capitalize-once">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
     </div>
   )
 }

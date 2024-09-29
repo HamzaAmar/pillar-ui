@@ -22,6 +22,7 @@ export const KbdColors = () => {
       <Kbd title="Esc" color="p" />
       <Kbd title="Esc" color="b" />
       <Kbd title="Esc" color="se" />
+      <Kbd title="Esc" color="i" />
     </Flex>
   )
 }
@@ -40,6 +41,7 @@ export const KbdVariants = () => {
           <Kbd title="Esc" variant={variant} color="p" />
           <Kbd title="Esc" variant={variant} color="b" />
           <Kbd title="Esc" variant={variant} color="se" />
+          <Kbd title="Esc" variant={variant} color="i" />
         </Flex>
       ))}
     </div>
@@ -57,6 +59,7 @@ export const KbdSizes = () => {
       <Kbd title="Esc" size="6" />
       <Kbd title="Esc" size="7" />
       <Kbd title="Esc" size="8" />
+      <Kbd title="Esc" size="9" />
     </Flex>
   )
 }

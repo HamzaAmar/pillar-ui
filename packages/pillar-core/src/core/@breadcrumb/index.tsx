@@ -21,7 +21,7 @@ export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   const classNames = cx(`b-r_lnk Sg2 Fc`, { [className!]: className })
 
   return (
-    <li className={`f-l Sgsm b-r_itm`}>
+    <li className={`f-l Sg4 b-r_itm`}>
       <Tag ref={forwardedRef} {...(current && { 'aria-current': 'page' })} className={classNames} {...rest}>
         {children}
       </Tag>
@@ -45,7 +45,7 @@ BreadcrumbItem.displayName = 'BreadcrumbItem'
 export const Breadcrumb = forwardRef(
   ({ children, separator, size, color = 'b', className, as: Tag = 'nav', ...rest }, ref) => {
     const breadcrumbContext = { separator }
-    const classNames = cx(`f-l fl-wrap Sgsm C${color}`, {
+    const classNames = cx(`f-l fl-wrap Sg4 C${color}`, {
       [`Fs${size}`]: size,
       [className!]: className,
     })

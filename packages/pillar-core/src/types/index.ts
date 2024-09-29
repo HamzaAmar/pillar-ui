@@ -56,7 +56,7 @@ type Orientation = 'horizontal' | 'vertical' | undefined
  * @typedef {Direction} Direction
  */
 
-type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'first-letter-only'
+type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'capitalize-once'
 
 type Height = '25' | '50' | '75' | '100' | 'fit' | '24p' | '48p' | '96p' | '192p' | '384p' | 'screen'
 

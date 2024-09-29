@@ -118,30 +118,8 @@ export const BadgeNumericColor = () => {
       <Badge type="numeric" number={15} max={15} color="p" />
       <Badge type="numeric" number={15} max={15} color="se" />
       <Badge type="numeric" number={15} max={15} color="b" />
+      <Badge type="numeric" number={15} max={15} color="i" />
     </Flex>
-  )
-}
-
-export const BadgeHighContrastColor = () => {
-  return (
-    <div className="Sf3">
-      <Flex gap="4">
-        <Badge type="numeric" number={15} max={15} color="d" />
-        <Badge type="numeric" number={15} max={15} color="su" />
-        <Badge type="numeric" number={15} max={15} color="w" />
-        <Badge type="numeric" number={15} max={15} color="p" />
-        <Badge type="numeric" number={15} max={15} color="se" />
-        <Badge type="numeric" number={15} max={15} color="b" />
-      </Flex>
-      <Flex gap="4">
-        <Badge type="numeric" highContrast number={15} max={15} color="d" />
-        <Badge type="numeric" highContrast number={15} max={15} color="su" />
-        <Badge type="numeric" highContrast number={15} max={15} color="w" />
-        <Badge type="numeric" highContrast number={15} max={15} color="p" />
-        <Badge type="numeric" highContrast number={15} max={15} color="se" />
-        <Badge type="numeric" highContrast number={15} max={15} color="b" />
-      </Flex>
-    </div>
   )
 }
 

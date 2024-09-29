@@ -169,128 +169,30 @@ export const BlockquoteCustomStyle = () => {
 export function ButtonCornerDefaults() {
   return (
     <div className="Sf3">
-      <Flex gap="4">
-        <Paper corner="0">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="2">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="3">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="4">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Blockquote size="1">
+      <Paper corner="0">
+        <Blockquote>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>
-      </Flex>
-
-      <Flex gap="4" style={{ '--blockquote-rad': '0' } as CSSProperties}>
-        <Paper corner="0">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="2">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="3">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="4">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Blockquote size="1">
+      </Paper>
+      <Paper style={{ '--blockquote-rad': '0' } as CSSProperties}>
+        <Blockquote>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>
-      </Flex>
-      <Flex gap="4" style={{ '--blockquote-rad': '10px' } as CSSProperties}>
-        <Paper corner="0">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="2">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="3">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="4">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Blockquote size="1">
+      </Paper>
+      <Paper style={{ '--blockquote-rad': '10px' } as CSSProperties}>
+        <Blockquote>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>
-      </Flex>
-
-      <Flex gap="4" style={{ '--blockquote-rad': '20px' } as CSSProperties}>
-        <Paper corner="0">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="2">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="3">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Paper corner="4">
-          <Blockquote size="1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
-            fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
-          </Blockquote>
-        </Paper>
-        <Blockquote size="1">
+      </Paper>
+      <Paper style={{ '--blockquote-rad': '20px' } as CSSProperties}>
+        <Blockquote>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, iure, eligendi, quisquam unde tempore
           fugit numquam aut accusamus cupiditate sit iste facere excepturi consectetur debitis vel iusto eos quae!
         </Blockquote>
-      </Flex>
+      </Paper>
     </div>
   )
 }

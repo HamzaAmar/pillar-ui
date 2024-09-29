@@ -133,7 +133,7 @@ export const Tabs = forwardRef(
       <TabsProvider {...context}>
         <div
           ref={ref}
-          className={cx(`f-l Sgsm C${color} Fs${size}`, { ['fl-col']: orientation === 'vertical' })}
+          className={cx(`f-l Sg4 C${color} Fs${size}`, { ['fl-col']: orientation === 'vertical' })}
           {...rest}
         >
           {children}

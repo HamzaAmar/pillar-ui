@@ -6,11 +6,11 @@ import type { CounterButtonProps } from './counterButton.type'
 const shared = { type: 'button', className: 'c-b Fc' } as const
 
 export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: CounterButtonProps) => {
-  const init = { value, min, max, step }
-  const { count, setCount, increment, decrement } = useCounter(init)
+  const init = { min, max, step }
+  const { count, setCount, increment, decrement } = useCounter({ value, ...init })
 
   return (
-    <div className="f-l Sgsm c-b_cnt">
+    <div className="f-l Sg4 c-b_cnt">
       <button {...shared} onClick={() => decrement()} aria-label="Decrement value" disabled={count <= min}>
         <Minus width="1em" />
       </button>
@@ -18,6 +18,7 @@ export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: 
       <input
         className="cb-f"
         type="number"
+        value={count}
         {...init}
         onChange={(e) => setCount(+e.target.value)}
         aria-label="Counter value"

@@ -116,7 +116,7 @@ export function LinkTrasforms() {
       <Link href="#" transform="uppercase">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" transform="first-letter-only">
+      <Link href="#" transform="capitalize-once">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
     </div>

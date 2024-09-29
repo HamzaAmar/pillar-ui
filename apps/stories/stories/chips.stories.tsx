@@ -12,7 +12,9 @@ const meta: Meta<typeof Chips> = {
 }
 
 export default meta
-export const Playground = {}
+export const Playground = {
+  children: 'Hello world',
+}
 
 export const ChipsColor = () => (
   <Flex gap="3">
@@ -34,6 +36,9 @@ export const ChipsColor = () => (
     </Chips>
 
     <Chips color="b" variant="solid">
+      Hello
+    </Chips>
+    <Chips color="i" variant="solid">
       Hello
     </Chips>
   </Flex>
@@ -62,6 +67,9 @@ export const ChipsVariants = () => (
           Hello
         </Chips>
         <Chips color="b" variant={variant}>
+          Hello
+        </Chips>
+        <Chips color="i" variant={variant}>
           Hello
         </Chips>
       </Flex>
@@ -301,18 +309,10 @@ export function ChipsCornerDefaults() {
       </Flex>
 
       <Flex gap="4" style={{ '--chip-rad': '20px' } as React.CSSProperties}>
-        <Paper corner="0">
-          <Chips>Hello</Chips>
-        </Paper>
-        <Paper corner="2">
-          <Chips>Hello</Chips>
-        </Paper>
-        <Paper corner="3">
-          <Chips>Hello</Chips>
-        </Paper>
-        <Paper corner="4">
-          <Chips>Hello</Chips>
-        </Paper>
+        <Chips>Hello</Chips>
+        <Chips>Hello</Chips>
+        <Chips>Hello</Chips>
+        <Chips>Hello</Chips>
         <Chips>Hello</Chips>
       </Flex>
     </div>

@@ -18,6 +18,7 @@ export const CodeColors = () => {
       <Code color="p">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="b">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="se">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="i">{`console.log('Hello world Every thing is OK')`}</Code>
     </Flex>
   )
 }
@@ -25,6 +26,7 @@ export const CodeColors = () => {
 export const CodeSizes = () => {
   return (
     <Flex gap="4" direction="col" justify="center">
+      <Code size="1">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="2">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="3">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="4">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -32,6 +34,7 @@ export const CodeSizes = () => {
       <Code size="6">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="7">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="8">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code size="9">{`console.log('Hello world Every thing is OK')`}</Code>
     </Flex>
   )
 }

@@ -151,7 +151,7 @@ export function HeadingTrasforms() {
       <Heading transform="lowercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading transform="capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
       <Heading transform="uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
-      <Heading transform="first-letter-only">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
+      <Heading transform="capitalize-once">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
     </div>
   )
 }

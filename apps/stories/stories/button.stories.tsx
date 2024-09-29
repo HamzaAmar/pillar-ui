@@ -39,6 +39,7 @@ export function ButtonsColors() {
       <Button color="se">Secondary</Button>
       <Button color="b">bg</Button>
       <Button color="p">Primary</Button>
+      <Button color="i">Info</Button>
     </Flex>
   )
 }
@@ -111,19 +112,19 @@ export function ButtonsTransforms() {
         </Button>
       </Flex>
       <h1>with Global Capitalize</h1>
-      <Flex gap="4" style={{ '--button-transform': 'capitalize' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-transform': 'capitalize' } as CSSProperties}>
         <Button color="su">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
       </Flex>
       <h1>with Global lowercase</h1>
-      <Flex gap="4" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-transform': 'lowercase' } as CSSProperties}>
         <Button color="su">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
       </Flex>
       <h1>with Global uppercase</h1>
-      <Flex gap="4" style={{ '--button-transform': 'uppercase' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-transform': 'uppercase' } as CSSProperties}>
         <Button color="su">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
@@ -212,7 +213,7 @@ export function ButtonsCorners() {
       </Flex>
       <h1>Specify the button Corner circle</h1>
 
-      <Flex gap="4" style={{ '--button-rad': '1000px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-rad': '1000px' } as CSSProperties}>
         <Button color="su">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
@@ -223,7 +224,7 @@ export function ButtonsCorners() {
 
       <h1>Specify the button Corner Medium</h1>
 
-      <Flex gap="4" style={{ '--button-rad': 'var(--rad-md)' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-rad': 'var(--rad-md)' } as CSSProperties}>
         <Button color="su">Green</Button>
         <Button color="w">Orange</Button>
         <Button color="d">Red</Button>
@@ -391,7 +392,7 @@ export function ButtonCornerDefaults() {
         <Button color="su">Green</Button>
       </Flex>
 
-      <Flex gap="4" style={{ '--button-rad': '5px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-rad': '5px' } as CSSProperties}>
         <Paper corner="0">
           <Button color="su">Green</Button>
         </Paper>
@@ -406,23 +407,15 @@ export function ButtonCornerDefaults() {
         </Paper>
         <Button color="su">Green</Button>
       </Flex>
-      <Flex gap="4" style={{ '--button-rad': '10px' } as CSSProperties}>
-        <Paper corner="0">
-          <Button color="su">Green</Button>
-        </Paper>
-        <Paper corner="2">
-          <Button color="su">Green</Button>
-        </Paper>
-        <Paper corner="3">
-          <Button color="su">Green</Button>
-        </Paper>
-        <Paper corner="4">
-          <Button color="su">Green</Button>
-        </Paper>
+      <Flex gap="4" style={{ '--bu-rad': '10px' } as CSSProperties}>
+        <Button color="su">Green</Button>
+        <Button color="su">Green</Button>
+        <Button color="su">Green</Button>
+        <Button color="su">Green</Button>
         <Button color="su">Green</Button>
       </Flex>
 
-      <Flex gap="4" style={{ '--button-rad': '20px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-rad': '50px' } as CSSProperties}>
         <Paper corner="0">
           <Button color="su">Green</Button>
         </Paper>
@@ -444,11 +437,11 @@ export function ButtonCornerDefaults() {
 export function ButtonTransformDefaults() {
   return (
     <div className="Sf3">
-      <Flex gap="4" style={{ '--button-transform': 'lowercase' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-transform': 'lowercase' } as CSSProperties}>
         <Button transform="uppercase" color="su">
           green
         </Button>
-        <Button transform="first-letter-only" color="su">
+        <Button transform="capitalize-once" color="su">
           green
         </Button>
         <Button transform="lowercase" color="su">
@@ -463,7 +456,7 @@ export function ButtonTransformDefaults() {
 export function ButtonSizeDefaults() {
   return (
     <div className="Sf3">
-      <Flex gap="4" style={{ '--button-size': '8px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-size': '8px' } as CSSProperties}>
         <Button size="2" color="su">
           green
         </Button>

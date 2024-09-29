@@ -202,7 +202,7 @@ export function AlertCornerDefaults() {
   return (
     <div className="Sf3">
       <Heading>Alert Corner 20px corner</Heading>
-      <Flex direction="col" gap="4" style={{ '--alert-rad': '20px' } as CSSProperties}>
+      <Flex direction="col" gap="4" style={{ '--al-rad': '20px' } as CSSProperties}>
         <AlertBase variant="solid" />
         <AlertBase variant="soft" />
         <AlertBase variant="outline" />

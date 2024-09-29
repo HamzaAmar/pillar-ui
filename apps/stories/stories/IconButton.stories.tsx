@@ -84,7 +84,7 @@ export function ButtonCornerDefaults() {
         <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
       </Flex>
 
-      <Flex gap="4" style={{ '--button-rad': '5px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-rad': '5px' } as CSSProperties}>
         <Paper corner="0">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
@@ -99,7 +99,7 @@ export function ButtonCornerDefaults() {
         </Paper>
         <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
       </Flex>
-      <Flex gap="4" style={{ '--button-rad': '10px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-rad': '10px' } as CSSProperties}>
         <Paper corner="0">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>
@@ -115,7 +115,7 @@ export function ButtonCornerDefaults() {
         <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
       </Flex>
 
-      <Flex gap="4" style={{ '--button-rad': '20px' } as CSSProperties}>
+      <Flex gap="4" style={{ '--bu-rad': '20px' } as CSSProperties}>
         <Paper corner="0">
           <IconButton title="Hello world" icon={<ThumbUp />} color="p" />
         </Paper>

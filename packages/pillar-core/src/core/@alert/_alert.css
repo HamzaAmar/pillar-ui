@@ -7,8 +7,8 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--alert-rad, 0);
-  font-size: var(--alert-size, 1rem);
+  border-radius: var(--al-rad, 0);
+  font-size: var(--al-size, 1rem);
 }
 
 /*
