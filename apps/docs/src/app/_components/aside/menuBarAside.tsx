@@ -38,7 +38,7 @@ const MenuBar = ({ data }: DocsProps) => {
 
   const KEYS = Object.keys(data) as MenuItemData[]
   return (
-    <Flex as="aside" data-mobile-open={open} direction="col" className="as menu-bar Sf-5 custom-scroll">
+    <Flex as="aside" data-mobile-open={open} direction="col" className="as menu-bar Sf5 custom-scroll">
       <nav>
         <ul>
           {KEYS.map((key) => {

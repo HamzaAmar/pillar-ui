@@ -130,7 +130,7 @@ export const ChipsSize = () => (
 )
 
 export const ChipsCorner = () => (
-  <div className="Sf-4">
+  <div className="Sf4">
     <h1>With Props</h1>
     <Flex gap="3">
       <Chips corner="0" variant="outline">

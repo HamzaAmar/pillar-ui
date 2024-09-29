@@ -13,7 +13,7 @@ export default meta
 
 export const FormControllerError = () => {
   return (
-    <div className="Sf-5">
+    <div className="Sf5">
       <FormController label="Hello">
         <Input fluid name="name" required />
       </FormController>
@@ -43,7 +43,7 @@ export const FormControllerError = () => {
 
 export const FormControllerHint = () => {
   return (
-    <div className="Sf-5">
+    <div className="Sf5">
       <FormController label="Hello">
         <Input fluid name="name" required />
       </FormController>
@@ -73,7 +73,7 @@ export const FormControllerHint = () => {
 
 export const FormControllerErrorAndHint = () => {
   return (
-    <div className="Sf-5">
+    <div className="Sf5">
       <FormController label="Hello">
         <Input fluid name="name" required />
       </FormController>

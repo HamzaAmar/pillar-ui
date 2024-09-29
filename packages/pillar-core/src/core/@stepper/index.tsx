@@ -83,7 +83,7 @@ export const Stepper = ({ children, color = 'b', active = 0, completeComponent, 
   const currentContent = _content[active] ?? completeComponent
 
   return (
-    <div className="s-t_cnt Sf-5">
+    <div className="s-t_cnt Sf5">
       <div className={`f-l s-t C${color} Fb`}>
         <StepperProvider {...rest}> {steps}</StepperProvider>
       </div>

@@ -175,7 +175,7 @@ export const AlertCorners = () => {
 
 export const AccordionStyle = () => {
   return (
-    <div className="Sf-5">
+    <div className="Sf5">
       <Accordion>
         <AccordionItem value={1}>
           <AccordionButton className="Cd" title="Hello World" />
