@@ -46,7 +46,7 @@ export const StepperStep = (props: StepProps) => {
         <p id={labelledbyID} className="Fs4 Fw5">
           {title}
         </p>
-        <p id={describedbyID} className="Fs3 u_bg t-y-low">
+        <p id={describedbyID} className="Fs3 Cb t-y-low">
           {description}
         </p>
       </div>
@@ -83,7 +83,7 @@ export const Stepper = ({ children, color = 'b', active = 0, completeComponent, 
   const currentContent = _content[active] ?? completeComponent
 
   return (
-    <div className="s-t_cnt l_flow">
+    <div className="s-t_cnt Sf-5">
       <div className={`f-l s-t C${color} Fb`}>
         <StepperProvider {...rest}> {steps}</StepperProvider>
       </div>

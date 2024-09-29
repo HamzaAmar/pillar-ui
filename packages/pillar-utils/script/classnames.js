@@ -1,19 +1,36 @@
 const Benchmark = require('benchmark')
 
 // Define the functions
-function classnames1(input) {
-  return (
-    input
-      .split(' ')
-      .filter((word) => word.length < 9 || !word.includes('undefined'))
-      // .filter((word) => {
-      //   if (word.length < 9) return true
-      //   return !word.includes('undefined') || !word.includes('null')
-      // })
-      // .filter((word) => !word.includes('undefined'))
-      .join(' ')
-      .trim()
-  )
+// function classnames1(input) {
+//   return input
+//     .split(' ')
+//     .filter((word) => word.length < 9 && (!word.includes('undefined') || !word.includes('null')))
+//     .join(' ')
+//     .trim()
+// }
+
+/**
+ * Combines a base class string with conditional classes, filtering out unwanted terms.
+ *
+ * @param {string} baseClasses - The base class string that will always be included.
+ * @param {string} conditional - Space-separated string of conditional classes to be filtered.
+ * @returns {string} A combined string of base classes and filtered conditional classes.
+ *
+ * @example
+ * // Returns "btn btn-primary large"
+ * combineClassNames("btn btn-primary", "large undefined-class null-class");
+ *
+ * @example
+ * // Returns "card active"
+ * combineClassNames("card", "active hidden null undefined");
+ */
+export function classnames1(cls, conditional) {
+  const str = conditional
+    .split(' ')
+    .filter((t) => t.length < 4 || (!t.includes('undefined') && !t.includes('null')))
+    .join(' ')
+
+  return `${cls} ${str}`.trim()
 }
 
 function classnames2(...args) {
@@ -48,7 +65,7 @@ function generateRandomString() {
 // Generate 1000 class names
 const classNamesArray = Array.from({ length: 1000 }, (_, i) => `${generateRandomString()}${i}`)
 
-const classnames1Input = classNamesArray.map((className, i) => (i % 2 === 0 ? className : 'undefined')).join(' ')
+const classnames1Input = classNamesArray.map((className, i) => (i % 2 === 0 ? className : 'u_undefined')).join(' ')
 
 const classnames2Input = classNamesArray.reduce((acc, className, i) => {
   acc[className] = i % 2 === 0

@@ -13,7 +13,7 @@ export default meta
 
 const CompleteComponent = () => {
   return (
-    <Flex items="center" justify="center" gap="3" direction="column">
+    <Flex items="center" justify="center" gap="3" direction="col">
       <div style={{ color: 'white', background: 'var(--green-9)', padding: '.5rem', borderRadius: '1rem' }}>
         <Check width={60} />
       </div>
@@ -30,7 +30,7 @@ export const StepperIcon = () => {
   const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
-    <Flex gap="6" direction="column">
+    <Flex gap="6" direction="col">
       <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="3">Hello World</Heading>
@@ -70,7 +70,7 @@ function StepperBase(props) {
   const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
-    <Flex gap="6" direction="column">
+    <Flex gap="6" direction="col">
       <Stepper active={step} setActive={setStep} corner="0" {...props} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="3">Hello World</Heading>
@@ -134,7 +134,7 @@ export const DefaultStepper = () => {
   const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
-    <Flex gap="6" direction="column">
+    <Flex gap="6" direction="col">
       <Stepper active={step} setActive={setStep} completeComponent={<CompleteComponent />}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="3">Hello World</Heading>

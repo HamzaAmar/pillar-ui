@@ -7,14 +7,14 @@ const Box = (props: any) => {
 export const FlexNested = () => {
   return (
     <>
-      <Flex gap="4" direction="column">
-        <Box className="l_fl-1">header</Box>
+      <Flex gap="4" direction="col">
+        <Box className="fl-1">header</Box>
         <Flex gap="4">
-          <Box className="l_fl-1">sidebar</Box>
-          <Box className="l_fl-2">main</Box>
-          <Box className="l_fl-1">sidebar</Box>
+          <Box className="fl-1">sidebar</Box>
+          <Box className="fl-2">main</Box>
+          <Box className="fl-1">sidebar</Box>
         </Flex>
-        <Box className="l_fl-1">footer</Box>
+        <Box className="fl-1">footer</Box>
       </Flex>
     </>
   )

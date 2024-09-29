@@ -46,7 +46,7 @@ function useField(props: any) {
   const suffix = suffixInput && <span className="fi-s_cnt f-i-suf Fc">{suffixInput}</span>
 
   const cls = cx(`f-i_cnt f-l f-i_cnt-${variant} C${color}`, {
-    [`u_t-${transform}`]: transform,
+    [`Tt${transform}`]: transform,
     'f-i_cnt-fluid': fluid,
     [`Fs${size}`]: size,
     [`R${corner}`]: corner,
@@ -243,9 +243,9 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = cx(`f-i_cnt f-i_cnt-${variant} l_fl Sg3 C${color}`, {
+  const className = cx(`f-i_cnt f-i_cnt-${variant} f-l Sg3 C${color}`, {
     [`R${corner}`]: corner,
-    [`u_t-${transform}`]: transform,
+    [`Tt${transform}`]: transform,
     [`Fs${size}`]: size,
   })
 
@@ -333,7 +333,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>(
           {title}
         </Flex>
 
-        <span className="ff-t t-y l_fl  Fs3 Aai-center u_bg t-y-low">{hasValue ? _value : 'No file Choose'}</span>
+        <span className="ff-t t-y f-l Fs3 Aai-center Cb t-y-low">{hasValue ? _value : 'No file Choose'}</span>
       </Grid>
     )
   }
@@ -367,7 +367,7 @@ export const FormController = ({
   const fieldLabel = `${label}${rest.required ? ' *' : ''}`
   return (
     <FormControllerProvider {...values}>
-      <Flex direction="column" className={cx('fc-o Fs3', { [className!]: className })}>
+      <Flex direction="col" className={cx('fc-o Fs3', { [className!]: className })}>
         <label className={cx('Fw5 Fs4', { Hsr: hideLabel })} htmlFor={id}>
           {fieldLabel}
         </label>
@@ -384,14 +384,7 @@ export const FormController = ({
   )
 }
 
-export const FormGroup = ({
-  title,
-  hideTitle,
-  direction = 'column',
-  children,
-  hideBorder,
-  ...rest
-}: FormGroupProps) => (
+export const FormGroup = ({ title, hideTitle, direction = 'col', children, hideBorder, ...rest }: FormGroupProps) => (
   <fieldset className={cx('f-g_cnt', { 'f-g-hide-border': hideBorder })}>
     <legend className={cx('f-g_legend', { Hsr: hideTitle })}>{title}</legend>
     <Flex gap="4" className={cx('f-g', { 'f-g-fluid': rest.fluid })} items="start" direction={direction}>

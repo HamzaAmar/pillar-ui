@@ -51,10 +51,10 @@ export const AvatarRefForwarded = () => {
     if (avatarRef.current?.style) {
       const { style } = avatarRef.current
       if (count % 2 === 0) {
-        avatarRef.current.style.setProperty('--img-size', '2.5rem')
+        style.setProperty('--eq-s', '2.5rem')
         return
       }
-      avatarRef.current.style.setProperty('--img-size', '3rem')
+      style.setProperty('--eq-s', '3rem')
       return
     }
   }
@@ -273,7 +273,7 @@ export function AvatarPolymorphic() {
 export function AvatarCustomStyle() {
   return (
     <div className="Sf4">
-      <Avatar title="Hello" className="u_brown" />
+      <Avatar title="Hello" className="Ci" />
       <Avatar title="Hello" style={{ background: 'red', color: 'white' }} />
     </div>
   )

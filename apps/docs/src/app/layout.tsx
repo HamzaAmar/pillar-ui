@@ -16,7 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
         <DrawerProvider>
           <NextThemeProvider>
             <Header />
-            <main className="l_fl-1">{children}</main>
+            <main className="fl-1">{children}</main>
             <Footer />
           </NextThemeProvider>
         </DrawerProvider>

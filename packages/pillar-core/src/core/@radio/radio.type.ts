@@ -1,7 +1,5 @@
-import type { Color, Size, Variant } from '../../types'
+import type { Color, Direction, Size, Variant } from '../../types'
 import type { ComponentPropsWithoutRef, ReactNode } from 'react'
-
-type Direction = 'row' | 'column'
 
 interface SharedProps {
   color?: Color

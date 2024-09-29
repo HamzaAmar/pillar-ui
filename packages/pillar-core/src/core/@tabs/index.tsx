@@ -13,12 +13,12 @@ import type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProp
 const [TabsProvider, useTabsContext] = context<TabsProviderProps>({ name: 'Tabs' })
 
 export const TabList = forwardRef(({ children, ...rest }, ref) => {
-  const { direction } = useTabsContext() ?? {}
+  const { orientation } = useTabsContext() ?? {}
   return (
     <div
       role="tablist"
-      aria-orientation={direction}
-      className={cx('t_ab_lst f-l Sg3', { ['l_fl-column']: direction !== 'vertical' })}
+      aria-orientation={orientation}
+      className={cx('t_ab_lst f-l Sg3', { ['fl-col']: orientation !== 'vertical' })}
       ref={ref}
       {...rest}
     >
@@ -99,7 +99,7 @@ export const Tabs = forwardRef(
   (
     {
       children,
-      direction = 'vertical',
+      orientation = 'vertical',
       defaultValue = 0,
       size,
       variant = 'bordered',
@@ -113,14 +113,14 @@ export const Tabs = forwardRef(
     // const { focusedIndex, handleIndexChange, handleKeyEvent } = useRovingIndex(Children.count(children), {
     //   loop: true,
     //   defaultIndex: defaultValue,
-    //   direction: direction,
+    //   orientation: orientation,
     // })
     const [selected, setSelected] = useState<number>(defaultValue)
     function handleSelect(value: number) {
       setSelected(value)
     }
     const context = {
-      direction,
+      orientation,
       selected,
       handleSelect,
       // handleKeySelect: handleKeyEvent,
@@ -133,7 +133,7 @@ export const Tabs = forwardRef(
       <TabsProvider {...context}>
         <div
           ref={ref}
-          className={cx(`f-l Sgsm C${color} Fs${size}`, { ['l_fl-column']: direction === 'vertical' })}
+          className={cx(`f-l Sgsm C${color} Fs${size}`, { ['fl-col']: orientation === 'vertical' })}
           {...rest}
         >
           {children}

@@ -20,19 +20,19 @@
       Align Text Style Section
   */
 
-.u_t-center {
+.Tacenter {
   text-align: center;
 }
 
-.u_t-end {
+.Taend {
   text-align: end;
 }
 
-.u_t-start {
+.Tastart {
   text-align: start;
 }
 
-.u_t-justify {
+.Tajustify {
   text-align: justify;
 }
 
@@ -40,15 +40,15 @@
       Align Text Decoration Section
   */
 
-.u_t-over {
+.Tdover {
   text-decoration: overline;
 }
 
-.u_t-under {
+.Tdunder {
   text-decoration: underline;
 }
 
-.u_t-through {
+.Tdthrough {
   text-decoration: line-through;
 }
 
@@ -56,18 +56,22 @@
       line-height Section
   */
 
-.u_t-normal {
+.Tl1 {
   line-height: 1;
 }
 
-.u_t-sm {
+.Tl2 {
   line-height: 1.25;
 }
 
-.u_t-md {
+.Tl3 {
   line-height: 1.5;
 }
 
-.u_t-lg {
+.Tl4 {
   line-height: 1.75;
+}
+
+.Tl5 {
+  line-height: 2;
 }

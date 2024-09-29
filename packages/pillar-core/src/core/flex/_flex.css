@@ -1,3 +1,31 @@
 .f-l {
   display: flex;
 }
+
+.fl-col {
+  flex-direction: column;
+}
+
+.fl-wrap {
+  flex-wrap: wrap;
+}
+
+.fl-none {
+  flex: none;
+}
+
+.fl-1 {
+  flex: 1;
+}
+
+.fl-2 {
+  flex: 2;
+}
+
+.fl-auto {
+  flex: auto;
+}
+
+.fl-inline {
+  display: inline-flex;
+}

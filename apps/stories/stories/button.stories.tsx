@@ -262,7 +262,7 @@ export function ButtonSizes() {
 
 export function ButtonsFluid() {
   return (
-    <Flex gap="5" direction="column">
+    <Flex gap="5" direction="col">
       <Button fluid icon={<ThumbUp />} iconPosition="end" size="1" color="su">
         Green
       </Button>
@@ -350,7 +350,7 @@ export function ButtonsCustomStyle() {
       <Button style={{ background: 'orange' }} state="idle" color="su">
         Hello world
       </Button>
-      <Button className="u_secondary" color="su">
+      <Button className="Cse" color="su">
         Hello world
       </Button>
     </Flex>

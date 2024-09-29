@@ -11,14 +11,14 @@ export const Chips = forwardRef(
   ) => {
     const _className = cx(`c-i shd V${variant} C${color}`, {
       [`Fs${size}`]: size,
-      [`u_t-${transform}`]: transform,
+      [`Tt${transform}`]: transform,
       [`R${corner}`]: corner,
       [className!]: className,
     })
 
     return (
       <Tag ref={ref} className={_className} {...rest}>
-        <span className="c-i_cnt Sg1 u_truncate Fc">{children} </span>
+        <span className="c-i_cnt Sg1 T1 Fc">{children} </span>
       </Tag>
     )
   }

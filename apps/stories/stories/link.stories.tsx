@@ -219,16 +219,16 @@ export function LinkColors() {
 export function LinkLeadings() {
   return (
     <div className="Sf4">
-      <Link href="#" leading="normal">
+      <Link href="#" leading="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" leading="sm">
+      <Link href="#" leading="2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" leading="md">
+      <Link href="#" leading="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
-      <Link href="#" leading="lg">
+      <Link href="#" leading="4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Link>
 

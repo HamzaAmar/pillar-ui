@@ -33,7 +33,7 @@ export const Button = forwardRef(
   ) => {
     const classNames = cx(`b-u shd V${variant} C${color} Fc`, {
       'b-u-fluid': fluid,
-      [`u_t-${transform}`]: transform,
+      [`Tt${transform}`]: transform,
       [`Fs${size}`]: size,
       [`R${corner}`]: corner,
       [className!]: className,
@@ -49,7 +49,7 @@ export const Button = forwardRef(
     ) : (
       <>
         {iconPosition === 'start' && icon}
-        <span className="b-u_txt u_truncate">{children}</span>
+        <span className="b-u_txt T1">{children}</span>
         {iconPosition === 'end' && icon}
       </>
     )

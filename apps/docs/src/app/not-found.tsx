@@ -4,7 +4,7 @@ import { Button, Flex, Heading, Text } from '@pillar-ui/core'
 
 export default function Custom404() {
   return (
-    <Flex style={{ maxWidth: '680px' }} justify="center" direction="column" items="center" gap="5" className="hero">
+    <Flex style={{ maxWidth: '680px' }} justify="center" direction="col" items="center" gap="5" className="hero">
       <Heading size="9" weight="7">
         404 - Page Not Found
       </Heading>

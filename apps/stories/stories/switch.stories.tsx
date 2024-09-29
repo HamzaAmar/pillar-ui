@@ -120,7 +120,7 @@ export const SwitchControlled = () => {
     setPressed((pressed) => !pressed)
   }
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Button onClick={onPressedChange}>{pressed ? 'Pressed' : 'Unpressed'} The Switch</Button>
       <Switch color="d" label="hello" pressed={pressed} onPressedChange={onPressedChange} />
     </Flex>

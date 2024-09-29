@@ -16,7 +16,7 @@ export default meta
 
 export const FilledTextarea = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Textarea autoFocus placeholder="Focus" variant="filled" />
       <Textarea placeholder="Normal" variant="filled" />
       <Textarea disabled placeholder="Disabled" variant="filled" />
@@ -30,7 +30,7 @@ export const FilledTextarea = () => {
 
 export const OutlineTextarea = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Textarea autoFocus placeholder="Focus" />
       <Textarea placeholder="Normal" />
       <Textarea disabled placeholder="Disabled" />
@@ -45,7 +45,7 @@ export const OutlineTextarea = () => {
 
 export const BorderedTextarea = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Textarea variant="bordered" autoFocus placeholder="Focus" />
       <Textarea variant="bordered" placeholder="Normal" />
       <Textarea variant="bordered" disabled placeholder="Disabled" />
@@ -59,7 +59,7 @@ export const BorderedTextarea = () => {
 
 export const CornerTextarea = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Textarea corner="0" placeholder="sharp" />
       <Textarea corner="3" placeholder="3" />
       <Textarea corner="2" placeholder="sm" />
@@ -73,7 +73,7 @@ export const CornerTextarea = () => {
 
 export const SizeTextarea = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Textarea size="4" placeholder="Small(sm)" />
       <Textarea placeholder="Medium (md default You don't need it)" />
       <Textarea size="6" placeholder="Large(lg)" />

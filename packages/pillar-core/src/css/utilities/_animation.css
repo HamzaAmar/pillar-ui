@@ -1,15 +1,15 @@
-.u_zoom,
-.u_jump-x,
-.u_jump-y {
+.Azoom,
+.Ajump-x,
+.Ajump-y {
   transition: transform 0.3s;
 }
 
-.u_zoom:hover {
+.Azoom:hover {
   transform: scale(1.1);
 }
-.u_jump-y:hover {
+.Ajump-y:hover {
   transform: translateY(2px);
 }
-.u_jump-x:hover {
+.Ajump-x:hover {
   transform: translateX(2px);
 }

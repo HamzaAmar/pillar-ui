@@ -4,7 +4,7 @@ import type { CharWidth, Color, SharedSize, Size } from '../../types'
 type FontStyle = 'italic' | 'oblique'
 type Align = 'start' | 'center' | 'end'
 type Decoration = 'through' | 'under' | 'over'
-type Leading = 'normal' | 'sm' | 'md' | 'lg'
+type Leading = SharedSize
 type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'first-letter-only'
 type Weight = Size
 

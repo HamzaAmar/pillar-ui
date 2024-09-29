@@ -165,7 +165,7 @@ export const CornerInput = () => {
 
 export const StepInput = () => {
   return (
-    <FormGroup title="number" direction="column">
+    <FormGroup title="number" direction="col">
       <InputNumber step="1" size="4" placeholder="Step 1" />
       <InputNumber step="10" placeholder="Step 10" />
       <InputNumber step=".1" gap="6" placeholder="Step 0.1" />
@@ -175,7 +175,7 @@ export const StepInput = () => {
 
 export const StepAndMaxInput = () => {
   return (
-    <FormGroup title="number" direction="column">
+    <FormGroup title="number" direction="col">
       <InputNumber step="1" max="10" size="4" placeholder="Step 1 max 10" />
       <InputNumber step="10" max="100" placeholder="Step 10 max 100" />
       <InputNumber step=".1" max=".5" gap="6" placeholder="Step 0.1 max 0.5" />
@@ -185,7 +185,7 @@ export const StepAndMaxInput = () => {
 
 export const HideLabelFormGroup = () => {
   return (
-    <FormGroup title="number" direction="column">
+    <FormGroup title="number" direction="col">
       <InputNumber step="1" max="10" size="4" placeholder="Step 1 max 10" />
       <InputNumber step="10" max="100" placeholder="Step 10 max 100" />
       <InputNumber step=".1" max=".5" gap="6" placeholder="Step 0.1 max 0.5" />

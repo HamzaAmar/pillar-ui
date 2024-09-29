@@ -73,7 +73,7 @@ export const Playground = {}
 
 export const TableVariant = () => {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="col" gap="4">
       <Heading size="4">Striped Table</Heading>
       <NormalTableExample variant="striped" />
       <Heading size="4">Default Table</Heading>
@@ -88,7 +88,7 @@ export const TableVariant = () => {
 
 export const NormalTableColor = () => {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="col" gap="4">
       <Heading size="4">Striped Table</Heading>
       <Flex wrap gap="3">
         <Heading as="h2" size="3">
@@ -182,7 +182,7 @@ export const NormalTableColor = () => {
 
 export const TableSize = () => {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="col" gap="4">
       <Heading size="4">Table Size SMALL</Heading>
       <NormalTableExample size="4" />
       <Heading size="4">Table Size Medium</Heading>

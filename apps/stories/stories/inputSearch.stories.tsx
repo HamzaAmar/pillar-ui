@@ -16,7 +16,7 @@ export default meta
 
 export const FilledInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputSearch
         aria-label="hello"
         autoFocus
@@ -35,7 +35,7 @@ export const FilledInput = () => {
 
 export const OutlineInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputSearch autoFocus placeholder="Focus" />
       <InputSearch placeholder="Normal" />
       <InputSearch disabled placeholder="Disabled" />
@@ -48,7 +48,7 @@ export const OutlineInput = () => {
 
 export const BorderedInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputSearch variant="bordered" autoFocus placeholder="Focus" />
       <InputSearch variant="bordered" placeholder="Normal" />
       <InputSearch variant="bordered" disabled placeholder="Disabled" />
@@ -61,7 +61,7 @@ export const BorderedInput = () => {
 
 export const CornerInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputSearch corner="0" placeholder="sharp" />
       <InputSearch corner="3" placeholder="3" />
       <InputSearch corner="2" placeholder="sm" />
@@ -75,7 +75,7 @@ export const CornerInput = () => {
 
 export const SizeInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputSearch size="4" placeholder="Small(sm)" />
       <InputSearch placeholder="Medium (md default You don't need it)" />
       <InputSearch size="6" placeholder="Large(lg)" />
@@ -85,7 +85,7 @@ export const SizeInput = () => {
 
 export const ColorInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputSearch color="p" variant="bordered" autoFocus placeholder="Focus" />
       <InputSearch color="w" variant="bordered" autoFocus placeholder="Normal" />
       <InputSearch color="se" variant="outline" autoFocus placeholder="Disabled" />

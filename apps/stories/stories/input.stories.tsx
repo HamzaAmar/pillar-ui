@@ -16,7 +16,7 @@ export default meta
 
 export const FilledInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Input aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <Input aria-label="hello" placeholder="Normal" variant="filled" />
       <Input aria-label="hello" disabled placeholder="Disabled" variant="filled" />
@@ -44,7 +44,7 @@ export const FilledInput = () => {
 export const OutlineInput = () => {
   return (
     <div className="Sf5">
-      <Flex gap="4" direction="column">
+      <Flex gap="4" direction="col">
         <Input autoFocus placeholder="Focus" />
         <Input placeholder="Normal" />
         <Input disabled placeholder="Disabled" />
@@ -60,7 +60,7 @@ export const OutlineInput = () => {
 
 export const BorderedInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Input variant="bordered" autoFocus placeholder="Focus" />
       <Input variant="bordered" placeholder="Normal" />
       <Input variant="bordered" disabled placeholder="Disabled" />
@@ -75,7 +75,7 @@ export const BorderedInput = () => {
 
 export const CornerInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Input corner="0" placeholder="sharp" />
       <Input corner="3" placeholder="3" />
       <Input corner="2" placeholder="sm" />
@@ -89,7 +89,7 @@ export const CornerInput = () => {
 
 export const SizeInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Input size="4" placeholder="Small(sm)" />
       <Input placeholder="Medium (md default You don't need it)" />
       <Input gap="6" placeholder="Large(lg)" />
@@ -99,7 +99,7 @@ export const SizeInput = () => {
 
 export const ColorInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Input color="p" variant="bordered" autoFocus placeholder="Focus" />
       <Input color="w" variant="bordered" autoFocus placeholder="Normal" />
       <Input color="se" variant="outline" autoFocus placeholder="Disabled" />

@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import type { ReactNode } from 'react'
-import { Color, Items, Justify, Size } from '../../types'
+import { Color, Direction, Items, Justify, Size } from '../../types'
 
-type Direction = 'column' | 'row'
 type Flex = '1' | 'none' | 'auto'
 
 export interface FlexProps {

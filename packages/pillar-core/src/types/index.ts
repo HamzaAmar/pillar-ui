@@ -49,7 +49,7 @@ type Variant = 'solid' | 'outline' | 'soft' | 'text' | 'mixed' | undefined
  * @typedef {Variant} Variant
  */
 
-type Direction = 'horizontal' | 'vertical' | undefined
+type Orientation = 'horizontal' | 'vertical' | undefined
 
 /**
  * Represents the color of a component.
@@ -66,6 +66,7 @@ type Width = CharWidth | Height
 
 type Items = 'center' | 'end' | 'start'
 type Justify = 'start' | 'around' | 'between' | 'evenly' | 'end' | 'center'
+type Direction = 'col' | 'row'
 
 export type {
   CharWidth,
@@ -75,7 +76,7 @@ export type {
   Size,
   Corner,
   Variant,
-  Direction,
+  Orientation,
   Gradient,
   Transform,
   SharedSize,
@@ -83,4 +84,5 @@ export type {
   CornerBlob,
   Items,
   Justify,
+  Direction,
 }

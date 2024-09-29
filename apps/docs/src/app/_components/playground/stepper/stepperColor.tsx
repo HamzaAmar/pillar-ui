@@ -11,7 +11,7 @@ export const StepperBase = (props: Omit<StepperProps, 'children' | 'setActive'>)
   const { step, setStep, isFirst, isLast, goToNext, goToPrevious } = useStepper(3)
 
   return (
-    <Flex gap="6" direction="column">
+    <Flex gap="6" direction="col">
       <Stepper active={step} setActive={setStep} {...props}>
         <StepperStep title="About" icon={<Home />} description="Hello world my name is hamza miloud amar">
           <Heading size="3">Hello World</Heading>

@@ -150,7 +150,7 @@ export const BlockquoteWithCite = () => {
 export const BlockquoteCustomStyle = () => {
   return (
     <Flex gap="4">
-      <Blockquote color="d" className="u_warning">
+      <Blockquote color="d" className="Cw">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro corporis autem minima animi, sequi
         exercitationem fugit mollitia ducimus consequatur praesentium, inventore laudantium ullam aliquam saepe?
         Repellat libero quibusdam repellendus quisquam?

@@ -24,7 +24,7 @@ function AlertBase({
 
 export const AlertColors = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <AlertBase color="d" />
       <AlertBase color="w" />
       <AlertBase color="su" />
@@ -42,7 +42,7 @@ export const AlertControlled = () => {
     setOpen((isOpen) => (isOpen ? false : true))
   }
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Button onClick={onClose}>{open ? 'Hide' : 'Open'} The Alert</Button>
       <AlertBase color="d" visible={open} onClose={onClose} closable />
     </Flex>
@@ -51,7 +51,7 @@ export const AlertControlled = () => {
 
 export const AlertSizes = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <AlertBase size="2" />
       <AlertBase
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
@@ -93,7 +93,7 @@ export const AlertSizes = () => {
 
 export const AlertCorner = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <AlertBase corner="0" />
       <AlertBase corner="3" />
       <AlertBase corner="2" />
@@ -111,7 +111,7 @@ export const AlertVariant = () => {
   return (
     <div className="Sf4">
       {Variants.map((variant) => (
-        <Flex key={variant} direction="column" gap="4">
+        <Flex key={variant} direction="col" gap="4">
           <AlertBase variant={variant} color="w" />
         </Flex>
       ))}
@@ -121,7 +121,7 @@ export const AlertVariant = () => {
 
 export const AlertIcon = () => {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="col" gap="4">
       <AlertBase icon={<CircleWarning width="20" />} color="d" />
       <AlertBase icon={<CircleCheck width="20" />} color="su" />
       <AlertBase icon={<CircleWarning width="20" />} color="w" />
@@ -132,7 +132,7 @@ export const AlertIcon = () => {
 
 export const AlertAction = () => {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="col" gap="4">
       <AlertBase closable />
       <AlertBase />
     </Flex>
@@ -141,7 +141,7 @@ export const AlertAction = () => {
 
 export const AlertInline = () => {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="col" gap="4">
       <AlertBase inline />
       <AlertBase inline />
       <AlertBase inline />
@@ -155,7 +155,7 @@ export const AlertInline = () => {
 
 export const AlertTitleIcon = () => {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="col" gap="4">
       <Alert color="d" title="hello" />
       <Alert color="su" message="hello world something is wrong in the app here we go" />
       <Alert color="w" icon={<CircleWarning width="20" />} title="hello" />
@@ -176,22 +176,22 @@ export const AlertTitleIcon = () => {
 
 export const AlertCustomStyle = () => {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="col" gap="4">
       <Alert color="d" title="hello" style={{ backgroundColor: 'red' }} />
       <Alert color="d" title="hello" style={{ backgroundColor: 'green' }} closable />
       <Alert color="d" title="hello" style={{ backgroundColor: 'orange' }} variant="outline" />
       <Alert color="d" title="hello" style={{ backgroundColor: 'purple' }} variant="soft" />
-      <Alert color="d" title="hello" className="u_secondary" />
-      <Alert color="d" title="hello" className="u_secondary" closable />
-      <Alert color="d" title="hello" className="u_secondary" variant="outline" />
-      <Alert color="d" title="hello" className="u_secondary" variant="soft" />
+      <Alert color="d" title="hello" className="Cse" />
+      <Alert color="d" title="hello" className="Cse" closable />
+      <Alert color="d" title="hello" className="Cse" variant="outline" />
+      <Alert color="d" title="hello" className="Cse" variant="soft" />
     </Flex>
   )
 }
 
 export const AlertIsomerphic = () => {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="col" gap="4">
       <AlertBase as="span" />
       <AlertBase as="article" />
     </Flex>
@@ -202,7 +202,7 @@ export function AlertCornerDefaults() {
   return (
     <div className="Sf3">
       <Heading>Alert Corner 20px corner</Heading>
-      <Flex direction="column" gap="4" style={{ '--alert-rad': '20px' } as CSSProperties}>
+      <Flex direction="col" gap="4" style={{ '--alert-rad': '20px' } as CSSProperties}>
         <AlertBase variant="solid" />
         <AlertBase variant="soft" />
         <AlertBase variant="outline" />

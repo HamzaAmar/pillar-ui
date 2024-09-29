@@ -15,7 +15,7 @@ export default meta
 
 export const FilledInputFile = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputFile aria-label="hello" autoFocus variant="filled" />
       <InputFile aria-label="hello" variant="filled" />
       <InputFile aria-label="hello" disabled variant="filled" />
@@ -27,7 +27,7 @@ export const FilledInputFile = () => {
 
 export const OutlineInputFile = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputFile autoFocus />
       <InputFile />
       <InputFile disabled />
@@ -39,7 +39,7 @@ export const OutlineInputFile = () => {
 
 export const BorderedInputFile = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputFile variant="bordered" autoFocus />
       <InputFile variant="bordered" />
       <InputFile variant="bordered" disabled />
@@ -51,7 +51,7 @@ export const BorderedInputFile = () => {
 
 export const CornerInputFile = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputFile corner="0" />
       <InputFile corner="3" />
       <InputFile corner="2" />
@@ -65,7 +65,7 @@ export const CornerInputFile = () => {
 
 export const SizeInputFile = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputFile size="4" />
       <InputFile />
       <InputFile size="6" />
@@ -75,7 +75,7 @@ export const SizeInputFile = () => {
 
 export const ColorInputFile = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputFile color="p" variant="bordered" />
       <InputFile color="w" variant="bordered" />
       <InputFile color="se" variant="outline" />
@@ -86,7 +86,7 @@ export const ColorInputFile = () => {
 
 export const MultipleFilesInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputFile multiple />
     </Flex>
   )

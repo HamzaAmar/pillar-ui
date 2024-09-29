@@ -14,7 +14,7 @@ export default meta
 
 export const ProgressBarSize = () => {
   return (
-    <Flex direction="column" gap="4" wrap>
+    <Flex direction="col" gap="4" wrap>
       <ProgressBar size="2" value={90} label="hello" />
       <ProgressBar size="3" value={90} label="hello" />
       <ProgressBar size="4" value={90} label="hello" />
@@ -28,7 +28,7 @@ export const ProgressBarSize = () => {
 
 export const ProgressBarColor = () => {
   return (
-    <Flex direction="column" gap="4" wrap>
+    <Flex direction="col" gap="4" wrap>
       <ProgressBar color="d" value={90} label="hello" />
       <ProgressBar color="su" value={90} label="hello" />
       <ProgressBar color="w" value={90} label="hello" />
@@ -41,7 +41,7 @@ export const ProgressBarColor = () => {
 
 export const ProgressBarRange = () => {
   return (
-    <Flex direction="column" gap="4" wrap>
+    <Flex direction="col" gap="4" wrap>
       <ProgressBar value={90} label="hello" />
       <ProgressBar min={50} max={100} value={70} label="hello" />
       <ProgressBar min={-100} max={100} value={80} label="hello" />
@@ -56,7 +56,7 @@ export const ProgressBarRange = () => {
 
 export const ProgressCircleRange = () => {
   return (
-    <Flex direction="column" gap="4" wrap>
+    <Flex direction="col" gap="4" wrap>
       <ProgressCircle value={90} label="hello" />
       <ProgressCircle min={50} max={100} value={70} label="hello" />
       <ProgressCircle min={-100} max={100} value={80} label="hello" />
@@ -120,7 +120,7 @@ function ProgressBarStackBase(props) {
 
 export const ProgressBarStackSizes = () => {
   return (
-    <Flex direction="column" gap="4" wrap>
+    <Flex direction="col" gap="4" wrap>
       <ProgressBarStackBase size="1" />
       <ProgressBarStackBase size="2" />
       <ProgressBarStackBase size="3" />

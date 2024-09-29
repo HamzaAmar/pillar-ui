@@ -13,7 +13,7 @@ const meta: Meta<typeof Rating> = {
 export default meta
 export const RatingWithLabelAndSize = () => {
   return (
-    <Flex direction="column" gap="5">
+    <Flex direction="col" gap="5">
       <Rating rating={3} hideTitle size="4" />
       <Rating rating={3} hideTitle />
       <Rating rating={3.4} hideTitle size="6" />
@@ -23,7 +23,7 @@ export const RatingWithLabelAndSize = () => {
 
 export const Ratings = () => {
   return (
-    <Flex direction="column" gap="5">
+    <Flex direction="col" gap="5">
       <Rating rating={1} />
       <Rating rating={2} />
       <Rating rating={3} />
@@ -35,7 +35,7 @@ export const Ratings = () => {
 
 export const RatingSize = () => {
   return (
-    <Flex direction="column" size="5">
+    <Flex direction="col" size="5">
       <Rating rating={4} size="1" />
       <Rating rating={4} size="2" />
       <Rating rating={4} size="3" />
@@ -51,7 +51,7 @@ export const RatingSize = () => {
 
 export const RatingColor = () => {
   return (
-    <Flex direction="column" gap="5">
+    <Flex direction="col" gap="5">
       <Rating color="d" rating={4} />
       <Rating color="p" rating={4} />
       <Rating color="se" rating={4} />
@@ -64,7 +64,7 @@ export const RatingColor = () => {
 
 export const RatingType = () => {
   return (
-    <Flex direction="column" gap="5">
+    <Flex direction="col" gap="5">
       <Rating icon="heart" rating={4} color="d" />
       <Rating rating={4} />
     </Flex>
@@ -73,7 +73,7 @@ export const RatingType = () => {
 
 export const RatingLabels = () => {
   return (
-    <Flex direction="column" gap="5">
+    <Flex direction="col" gap="5">
       <Rating rating={4} hideTitle />
       <Rating rating={4} title="fake label" />
       <Rating rating={4} />

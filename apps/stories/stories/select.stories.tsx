@@ -14,7 +14,7 @@ export default meta
 
 export const FilledSelect = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Select aria-label="hello" autoFocus variant="filled">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -37,7 +37,7 @@ export const FilledSelect = () => {
 
 export const OutlineSelect = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Select autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -60,7 +60,7 @@ export const OutlineSelect = () => {
 
 export const BorderedSelect = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Select variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -83,7 +83,7 @@ export const BorderedSelect = () => {
 
 export const CornerSelect = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Select corner="0">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -118,7 +118,11 @@ export const CornerSelect = () => {
 
 export const SizeSelect = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
+      <Select size="3">
+        <option value="helo">hello</option>
+        <option value="nice">Nice</option>
+      </Select>
       <Select size="4">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
@@ -127,7 +131,7 @@ export const SizeSelect = () => {
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
-      <Select gap="6">
+      <Select size="6">
         <option value="helo">hello</option>
         <option value="nice">Nice</option>
       </Select>
@@ -137,7 +141,7 @@ export const SizeSelect = () => {
 
 export const ColorSelect = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <Select color="p" variant="bordered" autoFocus>
         <option value="helo">hello</option>
         <option value="nice">Nice</option>

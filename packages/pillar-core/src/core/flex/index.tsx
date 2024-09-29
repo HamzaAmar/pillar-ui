@@ -41,10 +41,10 @@ export const Flex = forwardRef((props, forwardedRef) => {
   const classNames = cx('f-l', {
     [`Ajc-${justify}`]: justify && justify !== 'start',
     [`Aai-${items}`]: items,
-    // [`l_fl-${flex}`]: items,
-    [`l_fl-${direction}`]: direction && direction !== 'row',
-    'l_fl-wrap': wrap,
-    'l_fl-inline': inline,
+    // [`fl-${flex}`]: items,
+    [`fl-${direction}`]: direction && direction !== 'row',
+    'fl-wrap': wrap,
+    'fl-inline': inline,
     [`Sg${gap}`]: gap,
     [`${className}`!]: className,
   })

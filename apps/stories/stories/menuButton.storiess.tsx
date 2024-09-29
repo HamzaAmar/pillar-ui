@@ -50,7 +50,7 @@ export const MenuButtonCorner = () => {
 export const MenuButtonItemCount = () => {
   const itemCounts = [1, 3, 5, 7]
   return (
-    <Flex gap="6" direction="column" items="start">
+    <Flex gap="6" direction="col" items="start">
       {itemCounts.map((count) => (
         <MenuButtonBase
           key={count}

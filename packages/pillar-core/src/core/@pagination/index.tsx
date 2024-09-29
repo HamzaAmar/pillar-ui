@@ -54,7 +54,7 @@ export const Pagination = ({ count = 10, ...rest }: PaginationProps) => {
   })
 
   return (
-    <nav className={`p-a u_${rest.color}`} aria-label="Pagination">
+    <nav className={`p-a C${rest.color}`} aria-label="Pagination">
       <PaginationProvider {...rest}>
         <ul className="p-a_lst">
           <Item disabled={isFirst} onClick={goToPrevious} active={step} number={step - 1}>

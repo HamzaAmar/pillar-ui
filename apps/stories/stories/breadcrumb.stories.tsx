@@ -151,7 +151,7 @@ export function BreadcrumbIcons() {
 
       <Breadcrumb>
         <BreadcrumbItem link="../../..">
-          <span className="u_visually-hidden">Home</span>
+          <span className="Hsr">Home</span>
           <Home width={16} />
         </BreadcrumbItem>
 
@@ -242,7 +242,7 @@ export function BreadcrumbSize() {
 export function BreadcrumbCustomStyle() {
   return (
     <div className="Sf4">
-      <Breadcrumb className="u_red" separator="-">
+      <Breadcrumb className="Cd" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
         <BreadcrumbItem link="./" current>

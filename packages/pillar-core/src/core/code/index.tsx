@@ -8,7 +8,7 @@ export const Code = forwardRef(
   ({ as: Tag = 'code', color = 'b', size, corner, children, transform, className, ...rest }, ref) => {
     const classNames = cx(`c-o Vsoft C${color}`, {
       [`Fs${size}`]: size,
-      [`u_t-${transform}`]: transform,
+      [`Tt${transform}`]: transform,
       [`R${corner}`]: corner,
       [className!]: className,
     })

@@ -93,11 +93,11 @@ export const GridPlacement = () => {
           header
         </GridItem>
         <GridItem placement="1 / 2 x 2 / 4" as={Grid} grid="4rem 1fr 4rem" gap="4">
-          <Box className="l_fl-1">sidebar</Box>
-          <Box className="l_fl-2">main</Box>
-          <Box className="l_fl-1">sidebar</Box>
+          <Box className="fl-1">sidebar</Box>
+          <Box className="fl-2">main</Box>
+          <Box className="fl-1">sidebar</Box>
         </GridItem>
-        <GridItem placement="2 / 3" as={Box} className="l_fl-1">
+        <GridItem placement="2 / 3" as={Box} className="fl-1">
           footer
         </GridItem>
       </Grid>

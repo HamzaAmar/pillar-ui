@@ -1,10 +1,9 @@
-import type { Color, Corner, Size, Transform } from '../../types'
+import type { Color, Corner, Direction, Size, Transform } from '../../types'
 import type { ComponentPropsWithRef, ReactNode, ReactElement, AriaAttributes } from 'react'
 import type { TypographyProps } from '../typography'
 
 type Variant = 'filled' | 'outline' | 'bordered'
 type Status = 'd' | 's' | 'w' | 'p' | 'text'
-type Direction = 'row' | 'column'
 
 interface FormFieldSharedProps {
   corner?: Corner

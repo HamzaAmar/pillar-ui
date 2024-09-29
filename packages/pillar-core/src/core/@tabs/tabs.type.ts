@@ -1,9 +1,9 @@
 // import type { CSSProperties } from 'react'
 import { ReactElement } from 'react'
-import type { Color, Corner, Direction, Size, Variant } from '../../types'
+import type { Color, Corner, Orientation, Size, Variant } from '../../types'
 
 interface TabsBase {
-  direction?: Direction
+  orientation?: Orientation
   color?: Color
   defaultValue?: number
   size?: Size

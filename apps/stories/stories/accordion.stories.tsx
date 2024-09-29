@@ -66,7 +66,7 @@ export const AlertMultiple = () => {
 
 export const AlertCollapse = () => {
   return (
-    <Flex direction="column" gap="8">
+    <Flex direction="col" gap="8">
       <AccordionBase collapsible />
       <AccordionBase type="multiple" collapsible />
     </Flex>
@@ -175,11 +175,11 @@ export const AlertCorners = () => {
 
 export const AccordionStyle = () => {
   return (
-    <div className="l_flow-md">
+    <div className="Sf-5">
       <Accordion>
         <AccordionItem value={1}>
-          <AccordionButton className="u_red" title="Hello World" />
-          <AccordionPanel className="u_brown">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</AccordionPanel>
+          <AccordionButton className="Cd" title="Hello World" />
+          <AccordionPanel className="Ci">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</AccordionPanel>
         </AccordionItem>
         <AccordionItem value={1}>
           <AccordionButton title="Hello" />
@@ -218,7 +218,7 @@ export const AccordionStyle = () => {
 export function AlertSizeDefaults() {
   return (
     <div className="Sf3">
-      <Flex direction="column" gap="4">
+      <Flex direction="col" gap="4">
         <AccordionBase />
         <Paper style={{ '--accordion-size': '2rem' } as CSSProperties}>
           <AccordionBase />

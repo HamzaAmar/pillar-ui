@@ -15,7 +15,7 @@ const meta: Meta<typeof InputPassword> = {
 export default meta
 export const FilledInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputPassword aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <InputPassword aria-label="hello" placeholder="Normal" variant="filled" />
       <InputPassword aria-label="hello" disabled placeholder="Disabled" variant="filled" />
@@ -31,7 +31,7 @@ export const FilledInput = () => {
 
 export const OutlineInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputPassword autoFocus placeholder="Focus" />
       <InputPassword placeholder="Normal" />
       <InputPassword disabled placeholder="Disabled" />
@@ -47,7 +47,7 @@ export const OutlineInput = () => {
 
 export const BorderedInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputPassword variant="bordered" autoFocus placeholder="Focus" />
       <InputPassword variant="bordered" placeholder="Normal" />
       <InputPassword variant="bordered" disabled placeholder="Disabled" />
@@ -62,7 +62,7 @@ export const BorderedInput = () => {
 
 export const CornerInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputPassword corner="0" placeholder="sharp" />
       <InputPassword corner="3" placeholder="3" />
       <InputPassword corner="2" placeholder="sm" />
@@ -76,7 +76,7 @@ export const CornerInput = () => {
 
 export const SizeInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputPassword size="4" placeholder="Small(sm)" />
       <InputPassword placeholder="Medium (md default You don't need it)" />
       <InputPassword size="6" placeholder="Large(lg)" />
@@ -86,7 +86,7 @@ export const SizeInput = () => {
 
 export const ColorInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputPassword color="p" variant="bordered" autoFocus placeholder="Focus" />
       <InputPassword color="w" variant="bordered" autoFocus placeholder="Normal" />
       <InputPassword color="se" variant="outline" autoFocus placeholder="Disabled" />
@@ -99,7 +99,7 @@ export const ColorInput = () => {
 
 export const InputPasswordCustomIcon = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <InputPassword placeholder="enter your password" color="p" visibleIcon={<Lock />} hiddenIcon={<LockOff />} />
       <InputPassword placeholder="enter your password" color="w" visibleIcon={<OpenSource />} hiddenIcon={<Close />} />
 

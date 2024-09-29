@@ -10,7 +10,7 @@ export const FlexDirection = () => {
   return (
     <>
       <Flex gap="4">{boxes}</Flex>
-      <Flex gap="4" direction="column">
+      <Flex gap="4" direction="col">
         {boxes}
       </Flex>
     </>

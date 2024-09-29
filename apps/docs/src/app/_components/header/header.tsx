@@ -15,19 +15,12 @@ const Header = () => {
 
   return (
     <Flex className="header" as="header" justify="between" items="center" gap="4">
-      <Link className="l_fl-1" href="/" aria-label="Go To Home Page">
+      <Link className="fl-1" href="/" aria-label="Go To Home Page">
         <Logo width="80px" className="header--logo" />
       </Link>
 
-      <Flex
-        as={Paper}
-        corner="4"
-        data-show={value}
-        justify="between"
-        gap="4"
-        className="header--input-search Fc l_fl-2"
-      >
-        <div className="l_fl-1">
+      <Flex as={Paper} corner="4" data-show={value} justify="between" gap="4" className="header--input-search Fc fl-2">
+        <div className="fl-1">
           <InputSearch fluid name="search" placeholder="Search" aria-label="search" />
         </div>
         <IconButton
@@ -40,7 +33,7 @@ const Header = () => {
         />
       </Flex>
 
-      <Flex className="l_fl-1" items="center" justify="end" gap="3">
+      <Flex className="fl-1" items="center" justify="end" gap="3">
         <SwitchMode />
         <IconButton
           variant="soft"

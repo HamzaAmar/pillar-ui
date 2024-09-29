@@ -2,7 +2,7 @@
   --fx: inline-flex;
   --sh-s: 1.75em;
   padding: 0.125em;
-  min-width: var(--sh-s);
+  min-width: fit-content;
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are

@@ -7,7 +7,7 @@ import type { ForwardRefComponent } from '../../types/polymorphic.type'
 export const Kbd = forwardRef(
   ({ title, variant = 'soft', color = 'b', size, corner, className, transform, ...rest }, ref) => {
     const classNames = cx(`k-d shd V${variant} C${color}`, {
-      [`u_t-${transform}`]: transform,
+      [`Tt${transform}`]: transform,
       [`Fs${size}`]: size,
       [`R${corner}`]: corner,
       [className!]: className,

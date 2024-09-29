@@ -249,8 +249,8 @@ export const BadgeRefForwarded = () => {
 export const BadgeCustomStyle = () => {
   return (
     <Flex gap="4">
-      <Badge type="numeric" number={15} max={10} className="u_danger" />
-      <Badge type="numeric" number={15} max={10} className="u_brown" />
+      <Badge type="numeric" number={15} max={10} className="Cd" />
+      <Badge type="numeric" number={15} max={10} className="Ci" />
       <Badge type="numeric" number={15} max={10} style={{ background: 'red' }} />
       <Badge
         type="numeric"
@@ -265,8 +265,8 @@ export const BadgeCustomStyle = () => {
 export const BadgePolymorphic = () => {
   return (
     <Flex gap="4">
-      <Badge as="button" onClick={() => alert('Hello')} type="numeric" number={15} max={10} className="u_danger" />
-      <Badge as="a" href="#Hello" type="numeric" number={15} max={10} className="u_brown" />
+      <Badge as="button" onClick={() => alert('Hello')} type="numeric" number={15} max={10} className="Cd" />
+      <Badge as="a" href="#Hello" type="numeric" number={15} max={10} className="Ci" />
       <Badge as="span" type="numeric" number={15} max={10} style={{ background: 'red' }} />
       <Badge
         as="kbd"

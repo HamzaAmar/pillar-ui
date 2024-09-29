@@ -4,7 +4,7 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 
 export function Accessible() {
   return (
-    <Flex direction="column" justify="center" className="section" gap="8">
+    <Flex direction="col" justify="center" className="section" gap="8">
       <SectionHeading
         subheading="Pillar UI The Intuitive React UI Library"
         heading="For Building Accessible Applications Effortlessly"

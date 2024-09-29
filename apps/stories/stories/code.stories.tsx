@@ -11,7 +11,7 @@ export default meta
 
 export const CodeColors = () => {
   return (
-    <Flex gap="4" direction="column" justify="center">
+    <Flex gap="4" direction="col" justify="center">
       <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="su">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="w">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -24,7 +24,7 @@ export const CodeColors = () => {
 
 export const CodeSizes = () => {
   return (
-    <Flex gap="4" direction="column" justify="center">
+    <Flex gap="4" direction="col" justify="center">
       <Code size="2">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="3">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code size="4">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -38,7 +38,7 @@ export const CodeSizes = () => {
 
 export const CodeCorners = () => {
   return (
-    <Flex gap="4" direction="column" justify="center">
+    <Flex gap="4" direction="col" justify="center">
       <Code corner="0">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code corner="2">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code corner="3">{`console.log('Hello world Every thing is OK')`}</Code>
@@ -50,7 +50,7 @@ export const CodeCorners = () => {
 
 export const CodeLong = () => {
   return (
-    <Flex gap="4" direction="column" justify="center">
+    <Flex gap="4" direction="col" justify="center">
       <Code corner="0">
         {`<div>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione praesentium minima, commodi architecto
@@ -107,7 +107,7 @@ export const CodeLong = () => {
 export function ButtonCornerDefaults() {
   return (
     <div className="Sf3">
-      <Flex gap="4" direction="column">
+      <Flex gap="4" direction="col">
         <Paper corner="0">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
@@ -123,7 +123,7 @@ export function ButtonCornerDefaults() {
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
 
-      <Flex gap="4" direction="column" style={{ '--code-rad': '1px' } as CSSProperties}>
+      <Flex gap="4" direction="col" style={{ '--code-rad': '1px' } as CSSProperties}>
         <Paper corner="0">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
@@ -138,7 +138,7 @@ export function ButtonCornerDefaults() {
         </Paper>
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
-      <Flex gap="4" direction="column" style={{ '--code-rad': '10px' } as CSSProperties}>
+      <Flex gap="4" direction="col" style={{ '--code-rad': '10px' } as CSSProperties}>
         <Paper corner="0">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>
@@ -154,7 +154,7 @@ export function ButtonCornerDefaults() {
         <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
       </Flex>
 
-      <Flex gap="4" direction="column" style={{ '--code-rad': '20px' } as CSSProperties}>
+      <Flex gap="4" direction="col" style={{ '--code-rad': '20px' } as CSSProperties}>
         <Paper corner="0">
           <Code color="d">{`console.log('Hello world Every thing is OK')`}</Code>
         </Paper>

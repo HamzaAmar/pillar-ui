@@ -14,7 +14,7 @@ export default meta
 
 export const FilledPinInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <PinInput aria-label="hello" variant="filled" />
       <PinInput aria-label="hello" variant="filled" />
       <PinInput aria-label="hello" disabled variant="filled" />
@@ -25,7 +25,7 @@ export const FilledPinInput = () => {
 
 export const OutlinePinInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <PinInput />
       <PinInput />
       <PinInput disabled />
@@ -36,7 +36,7 @@ export const OutlinePinInput = () => {
 
 export const BorderedPinInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <PinInput variant="bordered" />
       <PinInput variant="bordered" />
       <PinInput variant="bordered" disabled />
@@ -47,7 +47,7 @@ export const BorderedPinInput = () => {
 
 export const CornerPinInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <PinInput corner="0" />
       <PinInput corner="3" />
       <PinInput corner="2" />
@@ -61,7 +61,7 @@ export const CornerPinInput = () => {
 
 export const SizePinInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <PinInput size="3" />
       <PinInput size="4" />
       <PinInput size="5" />
@@ -73,7 +73,7 @@ export const SizePinInput = () => {
 
 export const ColorPinInput = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <PinInput color="p" variant="bordered" />
       <PinInput color="w" variant="bordered" />
       <PinInput color="se" variant="outline" />
@@ -84,7 +84,7 @@ export const ColorPinInput = () => {
 
 export const ColorPinLength = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <PinInput length={10} color="p" variant="bordered" />
       <PinInput color="b" variant="filled" />
       <PinInput length={5} color="p" variant="bordered" />
@@ -97,7 +97,7 @@ export const ColorPinLength = () => {
 
 export const ColorPinPlaceholder = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <PinInput length={10} color="p" variant="bordered" />
       <PinInput placeholder="◊" length={10} color="p" variant="bordered" />
       <PinInput placeholder="◉" color="b" variant="filled" />
@@ -111,7 +111,7 @@ export const ColorPinPlaceholder = () => {
 
 export const ColorPinType = () => {
   return (
-    <Flex gap="4" direction="column">
+    <Flex gap="4" direction="col">
       <PinInput type="number" />
       <PinInput type="text" />
       <PinInput type="password" />
