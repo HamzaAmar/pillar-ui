@@ -15,7 +15,7 @@ export const TimelineItem = (props: TimelineItemProps) => {
   return (
     <Grid grid="1.25em 1fr" gap="4" className={`t-i_itm  t-i_itm-${variant}`}>
       <div className="t-i_line">
-        <div className={`t-i_bullet R${corner} Fc`}>{bullet}</div>
+        <div className={`t-i_bullet R-${corner} F-c`}>{bullet}</div>
       </div>
       <div>{children}</div>
     </Grid>
@@ -24,7 +24,7 @@ export const TimelineItem = (props: TimelineItemProps) => {
 
 export const Timeline = ({ color = 'b', size = '4', children, ...rest }: TimelineProps) => {
   return (
-    <div className={`t-i Fs${size} C${color}`}>
+    <div className={`t-i Fs-${size} C-${color}`}>
       <TimelineProvider {...rest}>{children}</TimelineProvider>
     </div>
   )

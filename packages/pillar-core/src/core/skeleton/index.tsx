@@ -13,7 +13,7 @@ import type { CSSProperties } from 'react'
 
 export const SkeletonAvatar = forwardRef(
   ({ size = '6', corner = 'full', children, isLoading = true, className, ...rest }, ref) => {
-    const classNames = cx(`s-k s-k_avt Fs${size} R${corner}`, {
+    const classNames = cx(`s-k s-k_avt Fs-${size} R-${corner}`, {
       [className!]: className,
     })
     return isLoading ? <div className={classNames} ref={ref} {...rest} /> : <div>{children}</div>
@@ -31,7 +31,7 @@ SkeletonAvatar.displayName = 'SkeletonAvatar'
 export const SkeletonText = forwardRef(
   ({ size = '5', lines = 2.5, className, children, isLoading = true, as: Tag = 'div', ...rest }, ref) => {
     const ceilNumber = Math.ceil(lines)
-    const classNames = cx(`s-k s-k_txt Fs${size}`, { [className!]: !!className })
+    const classNames = cx(`s-k s-k_txt Fs-${size}`, { [className!]: !!className })
     const linesComp = Array.from({ length: ceilNumber }, (_, index) => {
       const decimalPercentage = (lines - Math.floor(lines)) * 100
       const isLast = ceilNumber === index + 1
@@ -48,7 +48,7 @@ export const SkeletonText = forwardRef(
       )
     })
     return (
-      <div className="Sf3" style={{ width: '100%' }}>
+      <div className="Sf-3" style={{ width: '100%' }}>
         {isLoading ? linesComp : children}
       </div>
     )
@@ -65,7 +65,7 @@ SkeletonText.displayName = 'SkeletonAvatar'
 
 export const SkeletonButton = forwardRef(
   ({ size = '5', as: Tag = 'div', className, isLoading, children, ...rest }, ref) => {
-    const classNames = cx(`s-k s-k_btn Fs${size}`, { [className!]: !!className })
+    const classNames = cx(`s-k s-k_btn Fs-${size}`, { [className!]: !!className })
 
     return isLoading ? <Tag ref={ref} className={classNames} {...rest} /> : children
   }

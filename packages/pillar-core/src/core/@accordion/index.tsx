@@ -76,8 +76,8 @@ export const Accordion = forwardRef(
     const state = useAccordion({ type, collapsible })
 
     const classNames = cx(`a-c`, {
-      [`C${color}`]: color,
-      [`Fs${size}`]: size,
+      [`C-${color}`]: color,
+      [`Fs-${size}`]: size,
       Sfsm: separate,
       [`u_variant`]: variant,
       [className!]: className,
@@ -108,8 +108,8 @@ export const AccordionItem = forwardRef(({ children, value, className, ...rest }
   const ctx = { id, value }
   const { corner, variant } = useAccordionContext() ?? {}
   const classNames = cx(`a-c_itm`, {
-    [`R${corner}`]: corner,
-    [`V${variant}`]: variant,
+    [`R-${corner}`]: corner,
+    [`V-${variant}`]: variant,
     [className!]: className,
   })
 
@@ -144,7 +144,7 @@ export const AccordionButton = forwardRef((props, ref) => {
       {...rest}
     >
       {children}
-      {<span className="Swfit">{icon}</span>}
+      {<span className="Sw-fit">{icon}</span>}
     </button>
   )
 }) as ForwardRefComponent<'button', AccordionButtonProps>

@@ -7,10 +7,10 @@ import type { BadgeProps } from './badge.type'
 
 export const Badge = forwardRef((props, ref) => {
   let { variant = 'solid', color = 'p', as: Tag = 'div', type = 'numeric', size, corner, className, ...rest } = props
-  const classNames = cx(`b-a shd V${variant} Fc C${color}`, {
+  const classNames = cx(`b-a shd V-${variant} F-c C-${color}`, {
     'b-a_dot': type === 'dot',
-    [`Fs${size}`]: size,
-    [`R${corner}`]: corner,
+    [`Fs-${size}`]: size,
+    [`R-${corner}`]: corner,
     [className!]: className,
   })
 
@@ -33,7 +33,7 @@ export const Badge = forwardRef((props, ref) => {
 
   return (
     <Tag ref={ref} className={classNames} {...rest}>
-      <span className="b-a_cnt Fc">{displayValue}</span>
+      <span className="b-a_cnt F-c">{displayValue}</span>
     </Tag>
   )
 }) as ForwardRefComponent<'div', BadgeProps>

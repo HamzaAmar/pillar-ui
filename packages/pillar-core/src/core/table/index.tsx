@@ -10,7 +10,7 @@ export const TableColumn = forwardRef(
       <Comp
         ref={forwardedRef}
         className={cx('col', {
-          [`Fw${weight}`]: weight !== 'normal',
+          [`Fw-${weight}`]: weight !== 'normal',
           [className!]: className,
         })}
         {...rest}
@@ -47,7 +47,7 @@ export const Table = ({
   return (
     <div className="t-a_cnt">
       <table
-        className={cx(`t-a Fs${size} t-a-${variant}  C${color}`, {
+        className={cx(`t-a Fs-${size} t-a-${variant}  C-${color}`, {
           table__border: showBorder,
         })}
         {...rest}

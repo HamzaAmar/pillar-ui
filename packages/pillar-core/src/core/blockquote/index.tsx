@@ -5,9 +5,9 @@ import type { BlockquoteProps } from './blockquote.type'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 
 export const Blockquote = forwardRef(({ children, icon, size, color = 'p', corner, className, cite, ...rest }, ref) => {
-  const classNames = cx(`b-l C${color} Sf3 S2`, {
-    [`Fs${size}`]: size,
-    [`R${corner}`]: corner,
+  const classNames = cx(`b-l C-${color} Sf-3 S-2`, {
+    [`Fs-${size}`]: size,
+    [`R-${corner}`]: corner,
     [className!]: className,
   })
 

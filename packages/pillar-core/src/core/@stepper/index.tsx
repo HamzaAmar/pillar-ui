@@ -30,12 +30,12 @@ export const StepperStep = (props: StepProps) => {
       <button
         type="button"
         onClick={() => setActive?.(step!)}
-        className={`s-t_btn R${corner} Fc  weight="5"`}
+        className={`s-t_btn R-${corner} F-c  weight="5"`}
         aria-labelledby={labelledbyID}
         aria-describedby={describedbyID}
       >
         {state === 'complete' ? (
-          <div className="s-t_icn Fc">
+          <div className="s-t_icn F-c">
             <Check />
           </div>
         ) : (
@@ -43,10 +43,10 @@ export const StepperStep = (props: StepProps) => {
         )}
       </button>
       <div className="s-t_cnt">
-        <p id={labelledbyID} className="Fs4 Fw5">
+        <p id={labelledbyID} className="Fs-4 Fw-5">
           {title}
         </p>
-        <p id={describedbyID} className="Fs3 Cb t-y-low">
+        <p id={describedbyID} className="Fs-3 Cb t-y-low">
           {description}
         </p>
       </div>
@@ -83,8 +83,8 @@ export const Stepper = ({ children, color = 'b', active = 0, completeComponent, 
   const currentContent = _content[active] ?? completeComponent
 
   return (
-    <div className="s-t_cnt Sf5">
-      <div className={`f-l s-t C${color} Fb`}>
+    <div className="s-t_cnt Sf-5">
+      <div className={`f-l s-t C-${color} Fb`}>
         <StepperProvider {...rest}> {steps}</StepperProvider>
       </div>
       <div>{currentContent}</div>

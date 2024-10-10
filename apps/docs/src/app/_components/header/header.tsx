@@ -19,7 +19,7 @@ const Header = () => {
         <Logo width="80px" className="header--logo" />
       </Link>
 
-      <Flex as={Paper} corner="4" data-show={value} justify="between" gap="4" className="header--input-search Fc fl-2">
+      <Flex as={Paper} corner="4" data-show={value} justify="between" gap="4" className="header--input-search F-c fl-2">
         <div className="fl-1">
           <InputSearch fluid name="search" placeholder="Search" aria-label="search" />
         </div>

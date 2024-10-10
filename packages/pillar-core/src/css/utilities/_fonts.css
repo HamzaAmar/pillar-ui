@@ -1,74 +1,74 @@
 /*Font: Fs, Fw, --fw, --fs */
-.Fw1 {
+.Fw-1 {
   font-weight: 100;
 }
 
-.Fw2 {
+.Fw-2 {
   font-weight: 200;
 }
 
-.Fw3 {
+.Fw-3 {
   font-weight: 300;
 }
 
-.Fw4 {
+.Fw-4 {
   font-weight: 400;
 }
 
-.Fw5 {
+.Fw-5 {
   font-weight: 500;
 }
 
-.Fw6 {
+.Fw-6 {
   font-weight: 600;
 }
 
-.Fw7 {
+.Fw-7 {
   font-weight: 700;
 }
 
-.Fw8 {
+.Fw-8 {
   font-weight: 800;
 }
 
-.Fw9 {
+.Fw-9 {
   font-weight: 900;
 }
 
-.Fstitalic {
+.Fst-italic {
   font-style: italic;
 }
 
-.Fstoblique {
+.Fst-oblique {
   font-style: oblique;
 }
 
 /* Font size section */
 
-.Fs1 {
+.Fs-1 {
   font-size: var(--F1);
 }
-.Fs2 {
+.Fs-2 {
   font-size: var(--F2);
 }
-.Fs3 {
+.Fs-3 {
   font-size: var(--F3);
 }
-.Fs4 {
+.Fs-4 {
   font-size: var(--F4);
 }
-.Fs5 {
+.Fs-5 {
   font-size: var(--F5);
 }
-.Fs6 {
+.Fs-6 {
   font-size: var(--F6);
 }
-.Fs7 {
+.Fs-7 {
   font-size: var(--F7);
 }
-.Fs8 {
+.Fs-8 {
   font-size: var(--F8);
 }
-.Fs9 {
+.Fs-9 {
   font-size: var(--F9);
 }

@@ -105,7 +105,7 @@ function StepperBase(props) {
 
 export const StepperCorners = () => {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <StepperBase corner="0" />
       <StepperBase corner="3" />
       <StepperBase corner="2" />
@@ -119,7 +119,7 @@ export const StepperCorners = () => {
 
 export const StepperColors = () => {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <StepperBase color="d" />
       <StepperBase color="w" />
       <StepperBase color="su" />

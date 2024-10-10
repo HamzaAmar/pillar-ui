@@ -19,8 +19,8 @@ export const Separator = forwardRef(
     },
     ref
   ) => {
-    const classNames = cx(`s-e s-e-${direction} Fs${thickness} f-l Ajc-${position} Aai-center C${color}`, {
-      [`R${corner}`]: corner,
+    const classNames = cx(`s-e s-e-${direction} Fs-${thickness} f-l Ajc-${position} Aai-center C-${color}`, {
+      [`R-${corner}`]: corner,
       'fl-col': direction === 'vertical',
       [className!]: className,
     })

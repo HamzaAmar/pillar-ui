@@ -95,7 +95,7 @@ export const Grid = forwardRef((props, forwardedRef) => {
   const classNames = cx('g-r', {
     [`Ajc-${justify}`]: justify,
     [`Aai-${items}`]: items,
-    [`Sg${gap}`]: gap,
+    [`Sg-${gap}`]: gap,
     [className!]: className,
     [`xs_grid-columns`]: xsColumns,
     [`sm_grid-columns`]: smColumns,

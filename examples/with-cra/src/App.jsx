@@ -38,7 +38,7 @@ function App() {
   }
 
   return (
-    <Paper className="Fc">
+    <Paper className="F-c">
       <Paper as="form" flow="4" onSubmit={handleSubmit} width="60c" border>
         <FormController required label="Name" error={error.name}>
           <Input

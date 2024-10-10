@@ -25,10 +25,10 @@
     width: 1.1em;
     stroke-width: 1.5px;
   }
-  &:is(.Vsolid, .Vshadow):hover {
+  &:is(.V-solid, .V-shadow):hover {
     background: var(--c11);
   }
-  &.Voutline:hover {
+  &.V-outline:hover {
     background: var(--c5);
   }
 

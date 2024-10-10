@@ -3,7 +3,7 @@ import { Flex, ProgressBar, ProgressBarStack, ProgressBarStackItem, ProgressCirc
 export const ProgressSize = () => {
   return (
     <>
-      <div className="Sf3">
+      <div className="Sf-3">
         <ProgressBar size="2" value={90} label="hello" />
         <ProgressBar size="3" value={90} label="hello" />
         <ProgressBar size="4" value={90} label="hello" />

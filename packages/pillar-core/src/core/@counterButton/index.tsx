@@ -3,14 +3,14 @@ import { Minus, Plus } from '../icons'
 
 import type { CounterButtonProps } from './counterButton.type'
 
-const shared = { type: 'button', className: 'c-b Fc' } as const
+const shared = { type: 'button', className: 'c-b F-c' } as const
 
 export const CounterButton = ({ value = 1, min = 1, max = Infinity, step = 1 }: CounterButtonProps) => {
   const init = { min, max, step }
   const { count, setCount, increment, decrement } = useCounter({ value, ...init })
 
   return (
-    <div className="f-l Sg4 c-b_cnt">
+    <div className="f-l Sg-4 c-b_cnt">
       <button {...shared} onClick={() => decrement()} aria-label="Decrement value" disabled={count <= min}>
         <Minus width="1em" />
       </button>

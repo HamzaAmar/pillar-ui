@@ -22,7 +22,7 @@ export function BreadcrumbDefault() {
 
 export function BreadcrumbSeparator() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Breadcrumb separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
@@ -52,7 +52,7 @@ export function BreadcrumbSeparator() {
 
 export function BreadcrumbColor() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Breadcrumb color="d">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
@@ -106,7 +106,7 @@ export function BreadcrumbColor() {
 
 export function BreadcrumbIcons() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Breadcrumb>
         <BreadcrumbItem link="../../..">
           Home
@@ -175,7 +175,7 @@ export function BreadcrumbIcons() {
 
 export function BreadcrumbSize() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Breadcrumb size="2" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
@@ -241,7 +241,7 @@ export function BreadcrumbSize() {
 
 export function BreadcrumbCustomStyle() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Breadcrumb className="Cd" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
@@ -275,7 +275,7 @@ export function BreadcrumbCustomStyle() {
 
 export function BreadcrumbPolymorphic() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Breadcrumb as="div" separator="-">
         <BreadcrumbItem link="../..">components</BreadcrumbItem>
         <BreadcrumbItem link="../">base-ui</BreadcrumbItem>

@@ -42,14 +42,14 @@ function useField(props: any) {
     ...restProps
   } = props
 
-  const prefix = prefixInput && <span className="fi-p_cnt f-i-pre Fc">{prefixInput}</span>
-  const suffix = suffixInput && <span className="fi-s_cnt f-i-suf Fc">{suffixInput}</span>
+  const prefix = prefixInput && <span className="fi-p_cnt f-i-pre F-c">{prefixInput}</span>
+  const suffix = suffixInput && <span className="fi-s_cnt f-i-suf F-c">{suffixInput}</span>
 
-  const cls = cx(`f-i_cnt f-l f-i_cnt-${variant} C${color}`, {
-    [`Tt${transform}`]: transform,
+  const cls = cx(`f-i_cnt f-l f-i_cnt-${variant} C-${color}`, {
+    [`Tt-${transform}`]: transform,
     'f-i_cnt-fluid': fluid,
-    [`Fs${size}`]: size,
-    [`R${corner}`]: corner,
+    [`Fs-${size}`]: size,
+    [`R-${corner}`]: corner,
   })
 
   const field = { ...ctx, ...restProps, 'aria-invalid': hasError || isInvalid, 'aria-describedby': describedby }
@@ -158,7 +158,7 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
         aria-label={`${value ? 'Hide' : 'Show '} Password`}
         type="button"
         onClick={toggle}
-        className="input--suf-content fi-p-btn Fc"
+        className="input--suf-content fi-p-btn F-c"
       >
         {value ? hiddenIcon : visibleIcon}
       </button>
@@ -243,10 +243,10 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = cx(`f-i_cnt f-i_cnt-${variant} f-l Sg3 C${color}`, {
-    [`R${corner}`]: corner,
-    [`Tt${transform}`]: transform,
-    [`Fs${size}`]: size,
+  const className = cx(`f-i_cnt f-i_cnt-${variant} f-l Sg-3 C-${color}`, {
+    [`R-${corner}`]: corner,
+    [`Tt-${transform}`]: transform,
+    [`Fs-${size}`]: size,
   })
 
   console.log(forwardedRef)
@@ -333,7 +333,7 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>(
           {title}
         </Flex>
 
-        <span className="ff-t t-y f-l Fs3 Aai-center Cb t-y-low">{hasValue ? _value : 'No file Choose'}</span>
+        <span className="ff-t t-y f-l Fs-3 Aai-center Cb t-y-low">{hasValue ? _value : 'No file Choose'}</span>
       </Grid>
     )
   }
@@ -367,15 +367,15 @@ export const FormController = ({
   const fieldLabel = `${label}${rest.required ? ' *' : ''}`
   return (
     <FormControllerProvider {...values}>
-      <Flex direction="col" className={cx('fc-o Fs3', { [className!]: className })}>
-        <label className={cx('Fw5 Fs4', { Hsr: hideLabel })} htmlFor={id}>
+      <Flex direction="col" className={cx('fc-o Fs-3', { [className!]: className })}>
+        <label className={cx('Fw-5 Fs-4', { Hsr: hideLabel })} htmlFor={id}>
           {fieldLabel}
         </label>
         {hint && <span id={hintID}>{hint}</span>}
         {children}
         {error && (
-          <div className="f-c_err Fc" id={messageID} role="alert">
-            <span className="f-c_icn Swfit">{<Close type="circle" width="16" />}</span>
+          <div className="f-c_err F-c" id={messageID} role="alert">
+            <span className="f-c_icn Sw-fit">{<Close type="circle" width="16" />}</span>
             <span> {error}</span>
           </div>
         )}

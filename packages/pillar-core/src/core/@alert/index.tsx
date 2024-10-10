@@ -38,17 +38,17 @@ export const Alert = forwardRef(
 
     if (!isVisible) return
 
-    const classNames = cx(`a-l f-l Sg3 V${variant} C${color}`, {
-      [`R${corner}`]: !!corner,
-      [`Fs${size}`]: size,
+    const classNames = cx(`a-l f-l Sg-3 V-${variant} C-${color}`, {
+      [`R-${corner}`]: !!corner,
+      [`Fs-${size}`]: size,
       [className!]: className,
     })
 
     return (
       <div ref={forwardedRef} className={classNames} role="alert" {...rest}>
-        {icon && <span className="Swfit">{icon}</span>}
+        {icon && <span className="Sw-fit">{icon}</span>}
         <div className={cx(`a-l_cnt f-l`, { al_in: inline })}>
-          {title && <div className="Ttcapitalize Fw5">{title}</div>}
+          {title && <div className="Tt-capitalize Fw-5">{title}</div>}
           {message && <span>{message}</span>}
         </div>
         {closable && <IconButton size="2" onClick={handleToggle} icon={<Close />} title="close alert" color={color} />}

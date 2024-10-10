@@ -69,7 +69,7 @@ export const AvatarRefForwarded = () => {
 
 export function AvatarsCorners() {
   return (
-    <div className="Sf6">
+    <div className="Sf-6">
       <Flex gap="3" items="center">
         <Avatar corner="0" title="Hello" />
         <Avatar corner="3" title="Hello" />
@@ -126,7 +126,7 @@ export function AvatarsAnimations() {
 
 export function AvatarsColors() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Flex gap="3" items="center">
         <Avatar color="d" variant="solid" image={image} title="Hello" />
         <Avatar color="d" variant="solid" title="Hello" />
@@ -169,7 +169,7 @@ export function AvatarsColors() {
 
 export function AvatarsVariants() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Flex gap="3" items="center">
         <Avatar variant="solid" title="Hello" />
         <Avatar variant="soft" title="Hello" />
@@ -188,7 +188,7 @@ export function AvatarsVariants() {
 
 export function AvatarGroupVariants() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <AvatarGroup variant="solid" layout="stack">
         <Avatar title="Hello" />
         <Avatar title="Hello" />
@@ -210,7 +210,7 @@ export function AvatarGroupVariants() {
 
 export function AvatarGroupLimit() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <AvatarGroup limit={4} variant="solid" layout="stack">
         <Avatar title="Hello" />
         <Avatar title="Hello" />
@@ -245,7 +245,7 @@ export function AvatarGroupLimit() {
 
 export function AvatarGroupCustom() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <AvatarGroup limit={6} layout="stack" color="d" variant="outline" fallback={<DotsHorizontal width="20" />}>
         <Avatar title="Hello" />
         <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
@@ -262,7 +262,7 @@ export function AvatarGroupCustom() {
 
 export function AvatarPolymorphic() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Avatar title="Hello" as="button" onClick={() => alert('Hello world my name is hazma')} />
       <Avatar as="a" href="#" image="https://picsum.photos/id/128/100/100" title="Hello" />
       <Avatar fallback={<DotsHorizontal width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
@@ -272,7 +272,7 @@ export function AvatarPolymorphic() {
 
 export function AvatarCustomStyle() {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Avatar title="Hello" className="Ci" />
       <Avatar title="Hello" style={{ background: 'red', color: 'white' }} />
     </div>
@@ -281,7 +281,7 @@ export function AvatarCustomStyle() {
 
 export function AvatarCornerDefaults() {
   return (
-    <div className="Sf3">
+    <div className="Sf-3">
       <Flex gap="4">
         <Paper corner="0">
           <Avatar title="Hello" />

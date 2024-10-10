@@ -1,7 +1,7 @@
 import { Flex, Paper } from '@pillar-ui/core'
 
 const Box = (props: any) => {
-  return <Paper width="48p" ratio="1" background="b-6" corner="2" className="Fc" {...props} />
+  return <Paper width="48p" ratio="1" background="b-6" corner="2" className="F-c" {...props} />
 }
 
 export const FlexNested = () => {

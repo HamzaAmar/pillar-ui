@@ -25,16 +25,16 @@ export const Text = forwardRef(
     forwardedRef
   ) => {
     const classNames = cx(`t-y`, {
-      [`Fs${size}`]: size,
-      [`T${truncate}`]: truncate,
-      [`Tt${transform}`]: transform,
-      [`Ta${align}`]: align,
-      [`Fw${weight}`]: weight,
-      [`Td${decoration}`]: decoration,
-      [`Tl${leading}`]: leading,
-      [`Fst${fontStyle}`]: fontStyle,
-      [`C${color}`]: color,
-      [`Sw${width}`]: width,
+      [`Fs-${size}`]: size,
+      [`T-${truncate}`]: truncate,
+      [`Tt-${transform}`]: transform,
+      [`Ta-${align}`]: align,
+      [`Fw-${weight}`]: weight,
+      [`Td-${decoration}`]: decoration,
+      [`Tl-${leading}`]: leading,
+      [`Fst-${fontStyle}`]: fontStyle,
+      [`C-${color}`]: color,
+      [`Sw-${width}`]: width,
       [`t-y-low`]: low,
       [`${className}`]: className,
     })

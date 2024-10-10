@@ -15,7 +15,7 @@ export default meta
 
 export const BadgeSize = () => {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Flex items="center" gap="4">
         <Badge size="1" type="numeric" number={15} max={15} />
         <Badge size="2" type="numeric" number={15} max={15} />
@@ -54,7 +54,7 @@ const VARIANTS = ['solid', 'mixed'] as const
 
 export const BadgeVariantNumeric = () => {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       {VARIANTS.map((variant) => (
         <Flex items="center" gap="4">
           <Badge size="1" type="numeric" variant={variant} number={15} max={15} />
@@ -73,7 +73,7 @@ export const BadgeVariantNumeric = () => {
 
 export const BadgeVariantDot = () => {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       {VARIANTS.map((variant) => (
         <Flex items="center" gap="4">
           <Badge size="1" type="dot" variant={variant} />
@@ -92,7 +92,7 @@ export const BadgeVariantDot = () => {
 
 export const BadgeVariantIcon = () => {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       {VARIANTS.map((variant) => (
         <Flex items="center" gap="4">
           <Badge size="1" type="icon" variant={variant} icon={<Apple />} />
@@ -125,7 +125,7 @@ export const BadgeNumericColor = () => {
 
 export const BadgeCorner = () => {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       <Flex gap="4">
         <Badge type="numeric" corner="0" number={15} max={15} color="d" />
         <Badge type="numeric" corner="1" number={15} max={15} color="su" />
@@ -259,7 +259,7 @@ export const BadgePolymorphic = () => {
 
 export function ButtonCornerDefaults() {
   return (
-    <div className="Sf3">
+    <div className="Sf-3">
       <Flex gap="4" style={{ '--badge-rad': '0' } as CSSProperties}>
         <Paper corner="0">
           <Badge type="numeric" number={15} max={15} />

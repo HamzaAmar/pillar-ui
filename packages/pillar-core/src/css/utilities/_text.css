@@ -1,18 +1,18 @@
 /*text:  Tt, Ta, Td, Lh */
 
-.Ttuppercase {
+.Tt-uppercase {
   text-transform: uppercase;
 }
 
-.Ttlowercase {
+.Tt-lowercase {
   text-transform: lowercase;
 }
 
-.Ttcapitalize {
+.Tt-capitalize {
   text-transform: capitalize;
 }
 
-.Ttcapitalize-once::first-letter {
+.Tt-capitalize-once::first-letter {
   text-transform: uppercase;
 }
 
@@ -20,19 +20,19 @@
       Align Text Style Section
   */
 
-.Tacenter {
+.Ta-center {
   text-align: center;
 }
 
-.Taend {
+.Ta-end {
   text-align: end;
 }
 
-.Tastart {
+.Ta-start {
   text-align: start;
 }
 
-.Tajustify {
+.Ta-justify {
   text-align: justify;
 }
 
@@ -40,15 +40,15 @@
       Align Text Decoration Section
   */
 
-.Tdover {
+.Td-over {
   text-decoration: overline;
 }
 
-.Tdunder {
+.Td-under {
   text-decoration: underline;
 }
 
-.Tdthrough {
+.Td-through {
   text-decoration: line-through;
 }
 
@@ -56,22 +56,22 @@
       line-height Section
   */
 
-.Tl1 {
+.Tl-1 {
   line-height: 1;
 }
 
-.Tl2 {
+.Tl-2 {
   line-height: 1.25;
 }
 
-.Tl3 {
+.Tl-3 {
   line-height: 1.5;
 }
 
-.Tl4 {
+.Tl-4 {
   line-height: 1.75;
 }
 
-.Tl5 {
+.Tl-5 {
   line-height: 2;
 }

@@ -1,6 +1,6 @@
 /* Color: Cp, Cse, Cw, Cs, Cd, Ci, Cb */
 
-.Cp {
+.C-p {
   --c1: var(--P1);
   --c2: var(--P2);
   --c3: var(--P3);
@@ -15,7 +15,7 @@
   --c12: var(--P12);
 }
 
-.Cse {
+.C-se {
   --c1: var(--Se1);
   --c2: var(--Se2);
   --c3: var(--Se3);
@@ -30,7 +30,7 @@
   --c12: var(--Se12);
 }
 
-.Cw {
+.C-w {
   --c1: var(--W1);
   --c2: var(--W2);
   --c3: var(--W3);
@@ -45,7 +45,7 @@
   --c12: var(--W12);
 }
 
-.Csu {
+.C-su {
   --c1: var(--Su1);
   --c2: var(--Su2);
   --c3: var(--Su3);
@@ -60,7 +60,7 @@
   --c12: var(--Su12);
 }
 
-.Cd {
+.C-d {
   --c1: var(--D1);
   --c2: var(--D2);
   --c3: var(--D3);
@@ -75,7 +75,7 @@
   --c12: var(--D12);
 }
 
-.Ci {
+.C-i {
   --c1: var(--I1);
   --c2: var(--I2);
   --c3: var(--I3);
@@ -90,7 +90,7 @@
   --c12: var(--I12);
 }
 
-.Cb {
+.C-b {
   --c1: var(--B1);
   --c2: var(--B2);
   --c3: var(--B3);

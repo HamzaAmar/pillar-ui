@@ -14,7 +14,7 @@ const IconsItem = ({ item }: { item: ItemProps }) => {
 
   return (
     <Flex as={Paper} background="b-5" className="R3 Sfsm Sp4" direction="col" items="center" key={name!}>
-      <div className="icon--info fl-col Fc">
+      <div className="icon--info fl-col F-c">
         <Icon width="30" />
         <Text weight="5" size="3">
           {name}

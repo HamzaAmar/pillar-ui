@@ -45,8 +45,8 @@ export function RTLSupport() {
   return (
     <Paper as={Grid} grid="1.7fr 1fr" lg="1fr" items="center" gap="5" className="section rtl--support">
       <div className="rtl--support--content">
-        <div className="Sf5">
-          <div className="Sf3">
+        <div className="Sf-5">
+          <div className="Sf-3">
             <div>
               <SectionHeading
                 subheading="Build Global-Ready React UIs with Pillar UI's"
@@ -82,7 +82,7 @@ export function RTLSupport() {
         </svg>
       </div>
 
-      <div className="Sf3">
+      <div className="Sf-3">
         <Article type="ar" />
         <Article />
       </div>

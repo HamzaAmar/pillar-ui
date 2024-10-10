@@ -109,7 +109,7 @@ const Variants = ['shadow', 'solid', 'outline', 'soft', 'mixed']
 
 export const AlertVariant = () => {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       {Variants.map((variant) => (
         <Flex key={variant} direction="col" gap="4">
           <AlertBase variant={variant} color="w" />
@@ -200,7 +200,7 @@ export const AlertIsomerphic = () => {
 
 export function AlertCornerDefaults() {
   return (
-    <div className="Sf3">
+    <div className="Sf-3">
       <Heading>Alert Corner 20px corner</Heading>
       <Flex direction="col" gap="4" style={{ '--al-rad': '20px' } as CSSProperties}>
         <AlertBase variant="solid" />

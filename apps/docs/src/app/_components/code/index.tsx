@@ -30,7 +30,7 @@ export const Playground = async ({ name, root, direction = 'row' }: PreviewProps
   )
 
   return (
-    <section className="Sf3">
+    <section className="Sf-3">
       <div className={`playground playground-${direction}`}>
         <Component />
       </div>

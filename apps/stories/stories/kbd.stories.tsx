@@ -31,7 +31,7 @@ const Variants = ['solid', 'mixed', 'soft', 'outline'] as const
 
 export const KbdVariants = () => {
   return (
-    <div className="Sf4">
+    <div className="Sf-4">
       {Variants.map((variant) => (
         <Flex key={variant} gap="4">
           <Kbd title="Esc" variant={variant} />

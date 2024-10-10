@@ -1,77 +1,77 @@
 /*Corner: R, Rh, RB, --R */
 
-.R0 {
+.R-0 {
   border-radius: 0;
 }
 
-.R1 {
+.R-1 {
   border-radius: var(--R1, 0.125em);
 }
 
-.R2 {
+.R-2 {
   border-radius: var(--R2, 0.25em);
 }
 
-.R3 {
+.R-3 {
   border-radius: var(--R3, 0.5em);
 }
 
-.R4 {
+.R-4 {
   border-radius: var(--R4, 0.75em);
 }
 
-.R5 {
+.R-5 {
   border-radius: var(--R5, 1em);
 }
 
-.Rcircle {
+.R-circle {
   border-radius: var(--Rround, 50%);
 }
 
-.Rfull {
+.R-full {
   border-radius: var(--Rfull, 1e5px);
 }
 
-.Rh1 {
+.R-h1 {
   border-radius: var(--RH1, 255px 15px 225px 15px / 15px 225px 15px 255px);
 }
 
-.Rh2 {
+.R-h2 {
   border-radius: var(--RH2, 125px 10px 20px 185px / 25px 205px 205px 25px);
 }
 
-.Rh3 {
+.R-h3 {
   border-radius: var(--RH3, 15px 255px 15px 225px / 225px 15px 255px 15px);
 }
 
-.Rh4 {
+.R-h4 {
   border-radius: var(--RH4, 15px 25px 155px 25px / 225px 150px 25px 115px);
 }
 
-.Rh5 {
+.R-h5 {
   border-radius: var(--RH5, 250px 25px 15px 20px / 15px 80px 105px 115px);
 }
 
-.Rh6 {
+.R-h6 {
   border-radius: var(--RH6, 28px 100px 20px 15px / 150px 30px 205px 225px);
 }
 
-.Rb1 {
+.R-b1 {
   border-radius: var(--RB1, 30% 70% 70% 30% / 53% 30% 70% 47%);
 }
 
-.Rb2 {
+.R-b2 {
   border-radius: var(--RB2, 53% 47% 34% 66% / 63% 46% 54% 37%);
 }
 
-.Rb3 {
+.R-b3 {
   border-radius: var(--RB3, 37% 63% 56% 44% / 49% 56% 44% 51%);
 }
 
-.Rb4 {
+.R-b4 {
   border-radius: var(--RB4, 63% 37% 37% 63% / 43% 37% 63% 57%);
 }
 
-.Rb5 {
+.R-b5 {
   border-radius: var(--RB5, 49% 51% 48% 52% / 57% 44% 56% 43%);
 }

@@ -14,7 +14,7 @@ export default meta
 
 export function TextSizes() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text size="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -57,7 +57,7 @@ export function TextSizes() {
 
 export function TextWeights() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text weight="3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -96,7 +96,7 @@ export function TextWeights() {
 }
 export function TextTrucates() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text size="9" truncate="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -147,7 +147,7 @@ export function TextTrucates() {
 
 export function TextTrasforms() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text transform="lowercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
       <Text transform="capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
       <Text transform="uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
@@ -158,7 +158,7 @@ export function TextTrasforms() {
 
 export function TextDecorations() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text decoration="through">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
       <Text decoration="under">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
       <Text decoration="over">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
@@ -168,7 +168,7 @@ export function TextDecorations() {
 
 export function TextFontStyles() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text fontStyle="italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
       <Text fontStyle="oblique">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
       <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
@@ -180,7 +180,7 @@ type Contrast = 'low' | 'high'
 
 export function TextAligns() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text align="start">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -208,7 +208,7 @@ export function TextAligns() {
 
 export function TextColors() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text color="d">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
       </Text>
@@ -254,7 +254,7 @@ export function TextColors() {
 
 export function TextLeadings() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text leading="1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe, enim impedit totam minus corrupti sequi
         eveniet sunt animi laborum optio dolores dolorum! Libero iste tempora, facilis dolore molestiae temporibus!
@@ -297,7 +297,7 @@ export function TextLeadings() {
 
 export function TextRTL() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text dir="rtl">
         مُرَاكُش اموراكوش، «أرض الله») تسمى أيضًا بالمدينة الحمراء وعاصمة النخيل، هي ثالث أكبر مدينة في المملكة المغربية
         من ناحية عدد السكان. وهي عاصمة جهة مراكش آسفي. تقع مراكش على بعد 580 كم (360 ميل) جنوب شرق طنجة، 327 كم (203
@@ -311,7 +311,7 @@ export function TextRTL() {
 
 export function TextWidth() {
   return (
-    <div className="Sf5">
+    <div className="Sf-5">
       <Text width="25c">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur placeat blanditiis minima fugiat
         cupiditate, error aperiam sed nesciunt similique perspiciatis quia doloremque ipsum reiciendis adipisci. Neque

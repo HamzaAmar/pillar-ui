@@ -27,7 +27,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       }
     })
 
-    const classNamesRoot = cx('c-h_cnt', { [`Fs${size}`]: !!size, [`C${color}`]: !!color })
+    const classNamesRoot = cx('c-h_cnt', { [`Fs-${size}`]: !!size, [`C-${color}`]: !!color })
 
     return (
       <label className={classNamesRoot}>
@@ -39,7 +39,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           aria-checked={isIndeterminate ? 'mixed' : rest.checked}
           {...rest}
         />
-        <span className="c-h u_s-equal Fc">{icon}</span>
+        <span className="c-h S-e F-c">{icon}</span>
         <div className={cx('c-h_lbl', { Hsr: showLabel })}>{label}</div>
       </label>
     )

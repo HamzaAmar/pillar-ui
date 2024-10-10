@@ -18,15 +18,15 @@ const [BreadcrumbProvider, useBreadcrumbContext] = context<BreadcrumbContextProp
 export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   const ctx = useBreadcrumbContext() ?? {}
   const { as: Tag = 'a', children, current, separator = ctx.separator ?? '/', className, ...rest } = props
-  const classNames = cx(`b-r_lnk Sg2 Fc`, { [className!]: className })
+  const classNames = cx(`b-r_lnk Sg-2 F-c`, { [className!]: className })
 
   return (
-    <li className={`f-l Sg4 b-r_itm`}>
+    <li className={`f-l Sg-4 b-r_itm`}>
       <Tag ref={forwardedRef} {...(current && { 'aria-current': 'page' })} className={classNames} {...rest}>
         {children}
       </Tag>
       {!current && (
-        <span className="Fw5" role="presentation">
+        <span className="Fw-5" role="presentation">
           {separator}
         </span>
       )}
@@ -45,8 +45,8 @@ BreadcrumbItem.displayName = 'BreadcrumbItem'
 export const Breadcrumb = forwardRef(
   ({ children, separator, size, color = 'b', className, as: Tag = 'nav', ...rest }, ref) => {
     const breadcrumbContext = { separator }
-    const classNames = cx(`f-l fl-wrap Sg4 C${color}`, {
-      [`Fs${size}`]: size,
+    const classNames = cx(`f-l fl-wrap Sg-4 C-${color}`, {
+      [`Fs-${size}`]: size,
       [className!]: className,
     })
 

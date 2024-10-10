@@ -5,10 +5,10 @@ import { filles, strokes } from './data'
 export function CustomTheme() {
   return (
     <Paper as={Flex} items="center" justify="center" flow="7" className="section hello-world">
-      <div className="Sf4">
+      <div className="Sf-4">
         <SectionHeading subheading="Change Theme" heading=" Custom your perfect look in seconds!" />
 
-        <div className="Sf5">
+        <div className="Sf-5">
           <Text className="dark--description" color="b" low size="7">
             Customize your interface to showcase your personal flair. Adjust CSS variables for colors, fonts, and
             layouts to craft a design that’s unmistakably your own.

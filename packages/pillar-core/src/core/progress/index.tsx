@@ -27,7 +27,7 @@ export const ProgressCircle = ({
   const dashOffset = circumference - (progress / 100) * circumference
 
   return (
-    <div className={`pr-c Fc Fs${size} C${color}`} {...rest}>
+    <div className={`pr-c F-c Fs-${size} C-${color}`} {...rest}>
       <svg className="pr-c_svg" viewBox="0 0 100 100">
         <circle className="pr-c_background" {...circle} />
         <circle className={`pr-c_bar`} {...circle} strokeDasharray={circumference} strokeDashoffset={dashOffset} />
@@ -52,9 +52,9 @@ export const ProgressBar = ({
   const progress = ((MaxValue - min) / (max - min)) * 100
 
   return (
-    <div className={`C${color}`}>
+    <div className={`C-${color}`}>
       <div className="f-l Ajc-end">
-        <div className={cx(`Fs${size}`, { Hsr: !showValue })}>{MaxValue}%</div>
+        <div className={cx(`Fs-${size}`, { Hsr: !showValue })}>{MaxValue}%</div>
       </div>
       <div
         role="progressbar"
@@ -63,7 +63,7 @@ export const ProgressBar = ({
         aria-valuenow={progress}
         aria-valuetext={`${progress}%`}
         aria-label={label}
-        className={`pr-b Fs${size}`}
+        className={`pr-b Fs-${size}`}
       >
         <div className="pr-b_inner" style={{ width: `${progress}%` }} />
       </div>
@@ -72,7 +72,7 @@ export const ProgressBar = ({
 }
 
 export const ProgressBarStackItem = ({ color = 'p', value }: ProgressBarStackItemProps) => {
-  return <div className={`pr-s_itm C${color}`} style={{ width: `${value}%` }} />
+  return <div className={`pr-s_itm C-${color}`} style={{ width: `${value}%` }} />
 }
 
 export const ProgressBarStack = ({ size = '4', children }: ProgressBarStackProps) => {
@@ -84,11 +84,11 @@ export const ProgressBarStack = ({ size = '4', children }: ProgressBarStackProps
   })
   return (
     <div>
-      <div className={`f-l Sg2 pr-b pr-s Fs${size}`}>{children}</div>
+      <div className={`f-l Sg-2 pr-b pr-s Fs-${size}`}>{children}</div>
       <ul className="f-l Sgmd fl-wrap">
         {_children?.map(({ children, color }, index) => (
-          <li className={`pr-s_cnt f-l Aai-center Sg2 C${color}`} key={index}>
-            <span className="Cb t-y-low Fs4">{children}</span>
+          <li className={`pr-s_cnt f-l Aai-center Sg-2 C-${color}`} key={index}>
+            <span className="Cb t-y-low Fs-4">{children}</span>
           </li>
         ))}
       </ul>
