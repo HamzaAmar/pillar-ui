@@ -9,27 +9,45 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  font-size: var(--spinner-size, 0.875rem);
+  font-size: var(--spinner-size, 1em);
 
   /* &:is(::before, ::after) { */
   &::before,
   &::after {
-    --border-color: currentcolor;
+    --Sbc: var(--c10);
     content: '';
     position: absolute;
     inset: 0;
-    color: var(--c10);
-    border: min(var(--border), 0.5em) solid transparent;
-    border-top-color: var(--border-color);
-    border-left-color: var(--border-color);
+    border: var(--Sb) solid var(--B4);
+    border-top-color: var(--Sbc);
+    border-left-color: var(--Sbc);
     border-radius: 50%;
     transform: rotate(-45deg);
-    animation: spinner-move 0.85s infinite linear;
+    animation: spinner-move 1s infinite linear;
   }
 
   &::after {
     animation-timing-function: linear;
   }
+}
+
+.sp-1 {
+  --Sb: 0.1em;
+}
+.sp-2 {
+  --Sb: 0.15em;
+}
+.sp-3 {
+  --Sb: 0.2em;
+}
+.sp-4 {
+  --Sb: 0.3em;
+}
+.sp-5 {
+  --Sb: 0.4em;
+}
+.sp-5 {
+  --Sb: 0.5em;
 }
 
 .sp-invert {
@@ -45,6 +63,6 @@
 @media (forced-colors: active) {
   .sp-::before,
   .sp-::after {
-    --border-color: GrayText;
+    --Sbc: GrayText;
   }
 }

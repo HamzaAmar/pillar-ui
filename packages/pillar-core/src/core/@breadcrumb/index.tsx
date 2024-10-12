@@ -17,12 +17,16 @@ const [BreadcrumbProvider, useBreadcrumbContext] = context<BreadcrumbContextProp
 
 export const BreadcrumbItem = forwardRef((props, forwardedRef) => {
   const ctx = useBreadcrumbContext() ?? {}
-  const { as: Tag = 'a', children, current, separator = ctx.separator ?? '/', className, ...rest } = props
-  const classNames = cx(`br-L Sg-2 F-c`, { [className!]: className })
+  const { as: Tag = 'a', children, current, separator = ctx.separator ?? '/', className = '', ...rest } = props
 
   return (
-    <li className={`fl- Sg-4 br-I`}>
-      <Tag ref={forwardedRef} {...(current && { 'aria-current': 'page' })} className={classNames} {...rest}>
+    <li className="fl- Sg-4 br-I">
+      <Tag
+        ref={forwardedRef}
+        {...(current && { 'aria-current': 'page' })}
+        className={`br-L Sg-2 F-c ${className}`}
+        {...rest}
+      >
         {children}
       </Tag>
       {!current && (

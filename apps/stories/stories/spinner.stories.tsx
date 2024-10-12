@@ -41,14 +41,12 @@ export function SpinnerSizes() {
 export function SpinnerThickness() {
   return (
     <Flex gap="4" items="center">
-      <Spinner size="1" thickness="1px" />
-      <Spinner size="2" thickness="2px" />
-      <Spinner size="3" thickness="3px" />
-      <Spinner size="4" thickness="4px" />
-      <Spinner size="5" thickness="5px" />
-      <Spinner size="7" thickness="2px" />
-      <Spinner size="8" thickness="2px" />
-      <Spinner size="9" thickness="200px" />
+      <Spinner size="1" thickness="1" />
+      <Spinner size="2" thickness="2" />
+      <Spinner size="3" thickness="3" />
+      <Spinner size="4" thickness="4" />
+      <Spinner size="5" thickness="5" />
+      <Spinner size="7" thickness="6" />
     </Flex>
   )
 }

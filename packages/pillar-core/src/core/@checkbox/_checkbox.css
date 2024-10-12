@@ -10,11 +10,7 @@
   gap: var(--S3);
   align-items: center;
 
-  /*
-    These properties serve as fallbacks. If the corresponding utility functions are
-    unavailable, these properties take priority. However, if specific props related to
-    avatars are provided, they will override these properties.
-  */
+  /* Default Value by The Client */
   font-size: var(--checkbox-size, 1rem);
 
   &:has(:disabled) {

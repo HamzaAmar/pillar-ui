@@ -1,21 +1,10 @@
 .al- {
   padding: 0.5em 1em;
   border: 1px solid transparent;
-
-  /*
-    These properties serve as fallbacks. If the corresponding utility functions are
-    unavailable, these properties take priority. However, if specific props related to
-    avatars are provided, they will override these properties.
-  */
+  /* Default Value set by the Client */
   border-radius: var(--al-rad, 0);
   font-size: var(--al-size, 1rem);
 }
-
-/*
-//////////////////////////////////////////////////////////////////////////////////////////////////
-  Alert Variants Section
-//////////////////////////////////////////////////////////////////////////////////////////////////
-*/
 
 .al-C {
   --ad: column;

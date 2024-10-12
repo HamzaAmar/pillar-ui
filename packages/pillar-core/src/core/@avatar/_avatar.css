@@ -2,8 +2,6 @@
   /* TODO: CHECK IF IT INLINE FLEX OR The Cache  */
   --fx: inline-flex;
   --eq-s: 2.75em;
-
-  /* overflow: hidden; */
   padding: 0;
   /* border: 3px solid var(--B1); */
   background:
@@ -11,11 +9,7 @@
     linear-gradient(var(--B1), var(--B1)) padding-box;
   min-width: var(--eq-s);
 
-  /*
-    These properties serve as fallbacks. If the corresponding utility functions are
-    unavailable, these properties take priority. However, if specific props related to
-    avatars are provided, they will override these properties.
-  */
+  /* Default Value set by the Client */
   border-radius: var(--avatar-rad, 10em);
   font-size: var(--avatar-size, 1rem);
 

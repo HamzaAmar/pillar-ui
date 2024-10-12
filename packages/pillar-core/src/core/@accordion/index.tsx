@@ -131,14 +131,13 @@ AccordionItem.displayName = 'AccordionItem'
 export const AccordionButton = forwardRef((props, ref) => {
   const { value, id: idContext } = useAccordionItemContext() ?? {}
   const { toggleAccordion, isOpen } = useAccordionContext() ?? {}
-  const { children, id = idContext, icon = <ChevronDown width="1em" />, className, ...rest } = props
-  const classNames = cx('ac-B F-b', { [className!]: !!className })
+  const { children, id = idContext, icon = <ChevronDown width="1em" />, className = '', ...rest } = props
   return (
     <button
       type="button"
       aria-expanded={isOpen?.(value!)}
       aria-controls={id}
-      className={classNames}
+      className={`ac-B F-b ${className}`}
       onClick={() => toggleAccordion?.(value!)}
       ref={ref}
       {...rest}
@@ -157,12 +156,12 @@ AccordionButton.displayName = 'AccordionButton'
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const AccordionPanel = forwardRef(({ children, className, ...rest }, ref) => {
+export const AccordionPanel = forwardRef(({ children, className = '', ...rest }, ref) => {
   const { value } = useAccordionItemContext() ?? {}
   const { isOpen, id } = useAccordionContext() ?? {}
 
   return (
-    <div id={id} data-open={isOpen?.(value!)} className={cx('ac-P', { [className!]: className })} ref={ref} {...rest}>
+    <div id={id} data-open={isOpen?.(value!)} className={`ac-P ${className}`} ref={ref} {...rest}>
       {children}
     </div>
   )

@@ -30,7 +30,7 @@ export const ProgressCircle = ({
     <div className={`pc- F-c Fs-${size} C-${color}`} {...rest}>
       <svg className="pc-S" viewBox="0 0 100 100">
         <circle className="pc-C" {...circle} />
-        <circle className={`pc-B`} {...circle} strokeDasharray={circumference} strokeDashoffset={dashOffset} />
+        <circle className="pc-B" {...circle} strokeDasharray={circumference} strokeDashoffset={dashOffset} />
         <text fill="black" className="pc-T" x="50" y="50">
           {_value}%
         </text>

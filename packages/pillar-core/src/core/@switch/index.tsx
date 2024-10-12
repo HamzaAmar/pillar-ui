@@ -13,7 +13,6 @@ export const Switch = forwardRef(
       size,
       corner,
       label,
-      name,
       pressed: pressedProp,
       defaultPressed = false,
       onPressedChange,
@@ -44,7 +43,7 @@ export const Switch = forwardRef(
         type="button"
         aria-pressed={pressed}
         className={classNames}
-        name={name}
+        // name={name}
         onClick={switchPress}
         {...rest}
       />

@@ -74,13 +74,15 @@ export const TooltipTrigger = forwardRef(({ children, as: Tag = 'button', ...res
       handleClose?.()
     }
   }
+  const CLOSE_TOOLTIP = handleTooltip('close')
+  const OPEN_TOOLTIP = handleTooltip('open')
 
   return (
     <Tag
-      onFocus={handleTooltip('open')}
-      onBlur={handleTooltip('close')}
-      onMouseEnter={handleTooltip('open')}
-      onMouseLeave={handleTooltip('close')}
+      onFocus={OPEN_TOOLTIP}
+      onBlur={CLOSE_TOOLTIP}
+      onMouseEnter={OPEN_TOOLTIP}
+      onMouseLeave={CLOSE_TOOLTIP}
       aria-describedby={id}
       type="button"
       ref={ref}

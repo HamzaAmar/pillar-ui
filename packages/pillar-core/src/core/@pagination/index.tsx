@@ -1,5 +1,4 @@
 import { forwardRef } from 'react'
-import { cx } from '../cx'
 import { context } from '../@provider'
 import { Button } from '../button'
 import { usePagination } from '@pillar-ui/hooks'
@@ -23,7 +22,7 @@ const Item = forwardRef((props, forwardedRef) => {
     size = context?.size ?? '4',
     corner = context?.corner ?? '2',
     number,
-    className,
+    className = '',
     ...rest
   } = props
 
@@ -31,7 +30,7 @@ const Item = forwardRef((props, forwardedRef) => {
     <li>
       <Button
         variant={variant}
-        className={cx('pa-B F-c', { className: className })}
+        className={`pa-B F-c ${className}`}
         size={size}
         color={color}
         corner={corner}
