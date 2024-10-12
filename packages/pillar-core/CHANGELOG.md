@@ -1,5 +1,11 @@
 # @pillar/core
 
+## 0.10.8
+
+### Patch Changes
+
+- # Reduce the Size Of the Core Library
+
 ## 0.10.7
 
 ### Patch Changes
