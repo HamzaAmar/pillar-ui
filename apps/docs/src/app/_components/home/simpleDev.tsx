@@ -5,7 +5,7 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 export function SimplifyDevelopment() {
   return (
     <Paper as={Flex} items="center" gap="6" className="section">
-      <div className="simplify-dev--container Sfxl">
+      <div className="simplify-dev--container Sf-7">
         <SectionHeading subheading="Deliver Projects Faster" heading="Effortless UI with Pillar UI" />
 
         <Grid grid="1fr 1fr" md="1fr" gap="5">

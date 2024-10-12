@@ -1,16 +1,16 @@
-.s-e {
+.se- {
   background: var(--c8);
 }
-.s-e-horizontal {
+.se-horizontal {
   width: 100%;
   height: 0.1em;
 }
-.s-e-vertical {
+.se-vertical {
   width: 0.1em;
   height: 100%;
 }
 
-.s-e_txt {
+.se-T {
   background: var(--B1);
   font-size: max(0.75em, 0.75rem);
   line-height: 1.1;

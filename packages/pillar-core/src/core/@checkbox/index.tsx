@@ -5,7 +5,7 @@ import { forwardRef } from 'react'
 import type { CheckboxProps } from './checkbox.type'
 import { Check, Minus } from '../icons'
 
-const ICON_PROPS = { strokeWidth: 2, 'aria-hidden': true, focusable: false, className: 'c-h_icn' }
+const ICON_PROPS = { strokeWidth: 2, 'aria-hidden': true, focusable: false, className: 'ch-_icn' }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   (
@@ -27,20 +27,20 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       }
     })
 
-    const classNamesRoot = cx('c-h_cnt', { [`Fs-${size}`]: !!size, [`C-${color}`]: !!color })
+    const classNamesRoot = cx('ch-C', { [`Fs-${size}`]: !!size, [`C-${color}`]: !!color })
 
     return (
       <label className={classNamesRoot}>
         <input
           type="checkbox"
           ref={ref}
-          className="Hsr c-h_el"
+          className="H-sr ch-E"
           name={name}
           aria-checked={isIndeterminate ? 'mixed' : rest.checked}
           {...rest}
         />
-        <span className="c-h S-e F-c">{icon}</span>
-        <div className={cx('c-h_lbl', { Hsr: showLabel })}>{label}</div>
+        <span className="ch- S-e F-c">{icon}</span>
+        <div className={cx('ch-L', { 'H-sr': showLabel })}>{label}</div>
       </label>
     )
   }

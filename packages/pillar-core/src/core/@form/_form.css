@@ -4,11 +4,12 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.f-i_cnt {
+.fi-C {
   border: 1px solid transparent;
   position: relative;
   overflow: hidden;
   height: fit-content;
+  background: var(--B3);
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -19,7 +20,7 @@
   border-radius: var(--field-rad, 0.25rem);
   text-transform: var(--field-transform);
 
-  &:has(.f-i:focus):not(.f-i_cnt-bordered) {
+  &:has(.fi-:focus):not(.fi-C-bordered) {
     outline: 2px solid var(--c9);
     outline-offset: -1px;
   }
@@ -41,36 +42,35 @@
     border-color: var(--O1);
   }
 
-  &:not(:has(.fi-p_cnt)) .f-i:not(.pin-input) {
+  &:not(:has(.fi-Pr)) .fi-:not(.pin-input) {
     padding-inline-start: 1rem;
   }
 
-  &:has(.fi-n_cnt) .f-i {
+  &:has(.fin-C) .fi- {
     padding-inline-end: 2.85rem !important;
   }
 
-  &:not(:has(.fi-s_cnt)) .f-i:not(.pin-input) {
+  &:not(:has(.fi-Su)) .fi-:not(.pin-input) {
     padding-inline-end: 1rem;
   }
 }
 
-/* .f-i_cnt .f-i_cnt__fluid { */
-.f-i_cnt-fluid {
+/* .fi-C .fi-C__fluid { */
+.fi-C-fluid {
   width: 100%;
 }
 
-.f-i_cnt-outline {
+.fi-C-outline {
   border-color: var(--B7);
-}
-.f-i_cnt-filled {
-  border-color: var(--O11);
   background: var(--B1);
 }
+.fi-C-filled {
+  border-color: var(--B7);
+}
 
-.f-i_cnt-bordered {
-  border: none;
+.fi-C-bordered {
+  /* border: none; */
   outline: 2px solid transparent;
-  background: var(--O2);
 
   &::before,
   &::after {
@@ -110,7 +110,7 @@
 .fc-o {
   width: 100%;
 
-  &:has(:read-only) .f-i_cnt {
+  &:has(:read-only) .fi-C {
     background: var(--B5);
   }
 }
@@ -120,7 +120,7 @@
  Form Field Style Section 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
-.f-i {
+.fi- {
   flex: 1;
   min-width: 0;
   cursor: inherit;
@@ -144,8 +144,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.f-i-pre,
-.f-i-suf {
+.fi-Pr,
+.fi-Su {
   font-size: 0.75rem;
   min-width: 2rem;
   padding: 0.25em 0.5em;
@@ -157,7 +157,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.fi-n_cnt {
+.fin-C {
   position: absolute;
   inset-inline-end: 0;
   top: 0;
@@ -169,7 +169,7 @@
     border-top: 1px solid var(--O6);
   }
 }
-.fi-n-btn {
+.fn-B {
   line-height: 0;
   background: var(--B7);
   height: 50%;
@@ -187,7 +187,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.fi-p-btn {
+.fp-B {
   line-height: 0;
   min-height: 100%;
   padding: 0 0.5em;
@@ -207,24 +207,24 @@
   Form Group Style Section 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
-.f-g_cnt {
+.fg-C {
   color: var(--B11);
   border: 1px solid var(--O6);
 }
 
-.f-g-hide-border {
+.fg-hide-border {
   border: none;
 }
 
-.f-g_legend {
+.fg-L {
   padding: 0.5rem;
   font-size: 0.85rem;
   margin-inline-start: 0.5rem;
 }
-.f-g {
+.fg- {
   padding: 0.5rem;
 }
-.f-g-fluid > * {
+.fg-fluid > * {
   flex-grow: 1;
 }
 
@@ -242,29 +242,29 @@
   vertical-align: center;
 } */
 
-.fi-s:placeholder-shown + .fi-s_suf {
-  & .fi-s_icn {
+.fis-:placeholder-shown + .fis-Su {
+  & .fs-I {
     display: none;
   }
-  & .f-i-suf {
+  & .fi-Su {
     display: flex;
   }
 }
 
-.fi-s:not(:placeholder-shown) + .fi-s_suf {
-  & .fi-s_icn {
+.fis-:not(:placeholder-shown) + .fis-Su {
+  & .fs-I {
     display: flex;
   }
-  & .f-i-suf {
+  & .fi-Su {
     display: none;
   }
 }
 
-.fi-s:hover {
+.fis-:hover {
   stroke: var(--c-8, var(--P10));
 }
 
-.fi-s {
+.fis- {
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
   &::-webkit-search-results-button,
@@ -273,12 +273,12 @@
   }
 }
 
-.fi-se {
+.fs- {
   background: var(--B1);
   width: 100%;
   padding-inline: 0.75rem;
 }
-.fi-s_icn {
+.fs-I {
   position: absolute;
   inset-inline-end: 0.5rem;
   top: 50%;
@@ -287,13 +287,13 @@
   width: 1em;
 }
 
-.fi-f {
+.fif- {
   background: var(--c7, var(--B7));
   font-size: 0.9em;
   padding: 0.25rem 1rem;
   cursor: pointer;
 
-  .f-i_cnt:not([data-disabled]) &:hover {
+  .fi-C:not([data-disabled]) &:hover {
     background: var(--c8, var(--B8));
   }
 }
@@ -302,7 +302,7 @@
   padding: 0 1em;
 }
 
-.fi-p {
+.fp- {
   font-size: var(--font-size, var(--input-size, 1rem));
   width: 2.25em;
   height: 2.25em;
@@ -311,12 +311,12 @@
   padding: 0 !important;
 }
 
-.f-c_err {
+.fc-E {
   color: var(--D11);
   width: fit-content;
   gap: var(--S1);
 }
 
-.f-c_icn {
+.fc-I {
   font-size: 0;
 }

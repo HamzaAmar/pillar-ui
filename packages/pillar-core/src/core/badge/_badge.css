@@ -1,4 +1,4 @@
-.b-a {
+.ba- {
   --fx: inline-flex;
   --sh-s: 1.75em;
   padding: 0.125em;
@@ -17,10 +17,10 @@
   }
 }
 
-.b-a_dot {
+.ba-D {
   --sh-s: 0.5em;
 }
 
-.b-a_cnt {
+.ba-C {
   font-size: clamp(0.5rem, 0.825em, 1.25rem);
 }

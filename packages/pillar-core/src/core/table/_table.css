@@ -1,31 +1,31 @@
-.t-a_cnt {
+.ta-C {
   overflow-x: auto;
   width: 100%;
 }
 
-.t-a {
+.ta- {
   width: 100%;
   max-width: 100%;
   border-collapse: collapse;
   table-layout: auto;
 }
 
-.t-a-c,
-.t-a-c .column {
+.ta-Co,
+.ta-Co .column {
   border: var(--c5) 1px solid;
 }
 
-.t-a-striped {
-  & .row__body:nth-child(odd) {
+.ta-striped {
+  & .row__body:nthchild(odd) {
     background: var(--c4);
   }
 }
-.t-a-soft {
+.ta-soft {
   & .row {
     background: var(--c5);
   }
 }
-.t-a-head-color {
+.ta-head-color {
   & .row__head {
     background: var(--c8);
     color: var(--c12);

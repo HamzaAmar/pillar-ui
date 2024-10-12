@@ -1,4 +1,4 @@
-.a-l {
+.al- {
   padding: 0.5em 1em;
   border: 1px solid transparent;
 
@@ -17,14 +17,14 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.a-l_cnt {
-  --a-d: column;
+.al-C {
+  --ad: column;
   font-size: 0.925em;
-  flex-direction: var(--a-d);
+  flex-direction: var(--ad);
   flex: 1;
   gap: var(--S2);
 }
 
-.al_in {
-  --a-d: row;
+.al-I {
+  --ad: row;
 }

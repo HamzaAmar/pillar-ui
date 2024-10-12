@@ -39,7 +39,7 @@ export const AvatarGroup = forwardRef(
     const contextProps = { color, corner, size, animate, variant, fallback }
 
     return (
-      <Tag ref={forwardRef} className={`av-g av-g av-g-${layout}`} {...rest}>
+      <Tag ref={forwardRef} className={`av-G av-G-${layout}`} {...rest}>
         <AvatarProvider {...contextProps}>
           {Array.from({ length }, (_, index) => Children.toArray(children)[index])}
         </AvatarProvider>
@@ -77,8 +77,8 @@ export const Avatar = forwardRef((props, forwardRef) => {
 
   const [isError, setIsError] = useState(!image)
 
-  const classNames = cx(`a-v a-v-${variant} C-${color} S-e F-c`, {
-    [`A${animate}`]: animate,
+  const classNames = cx(`av- av-${variant} C-${color} S-e F-c`, {
+    [`A-${animate}`]: animate,
     [`Fs-${size}`]: size,
     [`R-${corner}`]: corner,
     [className!]: className,
@@ -89,7 +89,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
   ) : (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      className="a-v_img"
+      className="av-I"
       ref={(node) => {
         if (node) {
           node.src = image

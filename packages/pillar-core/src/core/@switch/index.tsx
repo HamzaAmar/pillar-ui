@@ -32,7 +32,7 @@ export const Switch = forwardRef(
       else setPressed((current) => !current)
     }
 
-    const classNames = cx(`s-w C-${color}`, {
+    const classNames = cx(`sw- C-${color}`, {
       [`R-${corner}`]: corner,
       [`Fs-${size}`]: size,
       [className!]: className,

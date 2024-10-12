@@ -75,10 +75,10 @@ export const Accordion = forwardRef(
   ) => {
     const state = useAccordion({ type, collapsible })
 
-    const classNames = cx(`a-c`, {
+    const classNames = cx(`ac-`, {
       [`C-${color}`]: color,
       [`Fs-${size}`]: size,
-      Sfsm: separate,
+      'Sf-4': separate,
       [`u_variant`]: variant,
       [className!]: className,
     })
@@ -107,7 +107,7 @@ export const AccordionItem = forwardRef(({ children, value, className, ...rest }
   const id = useId()
   const ctx = { id, value }
   const { corner, variant } = useAccordionContext() ?? {}
-  const classNames = cx(`a-c_itm`, {
+  const classNames = cx(`ac-I`, {
     [`R-${corner}`]: corner,
     [`V-${variant}`]: variant,
     [className!]: className,
@@ -132,7 +132,7 @@ export const AccordionButton = forwardRef((props, ref) => {
   const { value, id: idContext } = useAccordionItemContext() ?? {}
   const { toggleAccordion, isOpen } = useAccordionContext() ?? {}
   const { children, id = idContext, icon = <ChevronDown width="1em" />, className, ...rest } = props
-  const classNames = cx('a-c_btn Fb', { [className!]: !!className })
+  const classNames = cx('ac-B F-b', { [className!]: !!className })
   return (
     <button
       type="button"
@@ -162,13 +162,7 @@ export const AccordionPanel = forwardRef(({ children, className, ...rest }, ref)
   const { isOpen, id } = useAccordionContext() ?? {}
 
   return (
-    <div
-      id={id}
-      data-open={isOpen?.(value!)}
-      className={cx('a-c_pnl', { [className!]: className })}
-      ref={ref}
-      {...rest}
-    >
+    <div id={id} data-open={isOpen?.(value!)} className={cx('ac-P', { [className!]: className })} ref={ref} {...rest}>
       {children}
     </div>
   )

@@ -1,4 +1,4 @@
-.p-a_btn {
+.pa-B {
   padding: 0.25rem;
   aspect-ratio: 1;
   min-width: 2em;
@@ -15,7 +15,7 @@
   }
 }
 
-.p-a_itm {
+.pa-I {
   line-height: 0;
   width: 30px;
   height: 30px;
@@ -25,7 +25,7 @@
   }
 }
 
-.p-a_lst {
+.pa-L {
   display: flex;
   align-items: center;
   /* list-style: none;

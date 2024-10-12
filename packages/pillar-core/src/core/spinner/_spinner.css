@@ -1,4 +1,4 @@
-.s-p {
+.sp- {
   position: relative;
   flex: none;
   width: 1.25em;
@@ -10,28 +10,29 @@
     avatars are provided, they will override these properties.
   */
   font-size: var(--spinner-size, 0.875rem);
+
+  /* &:is(::before, ::after) { */
+  &::before,
+  &::after {
+    --border-color: currentcolor;
+    content: '';
+    position: absolute;
+    inset: 0;
+    color: var(--c10);
+    border: min(var(--border), 0.5em) solid transparent;
+    border-top-color: var(--border-color);
+    border-left-color: var(--border-color);
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    animation: spinner-move 0.85s infinite linear;
+  }
+
+  &::after {
+    animation-timing-function: linear;
+  }
 }
 
-.s-p::before,
-.s-p::after {
-  --border-color: currentcolor;
-  content: '';
-  position: absolute;
-  inset: 0;
-  color: var(--c10);
-  border: min(var(--border), 0.5em) solid transparent;
-  border-top-color: var(--border-color);
-  border-left-color: var(--border-color);
-  border-radius: 50%;
-  transform: rotate(-45deg);
-  animation: spinner-move 0.85s infinite linear;
-}
-
-.s-p::after {
-  animation-timing-function: linear;
-}
-
-.s-p-invert {
+.sp-invert {
   filter: invert(70%);
 }
 
@@ -42,8 +43,8 @@
 }
 
 @media (forced-colors: active) {
-  .s-p::before,
-  .s-p::after {
+  .sp-::before,
+  .sp-::after {
     --border-color: GrayText;
   }
 }

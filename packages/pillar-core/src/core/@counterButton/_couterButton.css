@@ -1,18 +1,18 @@
-.c-b_cnt {
+.cb-C {
   width: fit-content;
 }
 
-.cb-f,
-.c-b {
+.cb-F,
+.cb- {
   border: 1px solid var(--O6);
   border-radius: inherit;
 }
 
-.cb-f {
+.cb-F {
   padding: 0.25rem 1rem;
 }
 
-.c-b {
+.cb- {
   background: var(--B1);
 
   &:hover {

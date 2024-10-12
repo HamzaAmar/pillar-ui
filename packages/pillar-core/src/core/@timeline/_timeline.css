@@ -1,18 +1,18 @@
-.t-i {
+.ti- {
   position: relative;
   font-size: var(--timeline-size, 1rem);
 }
 
-.t-i_line {
+.ti-L {
   border-inline-start: var(--c9) 0.15em var(--ti-v);
   width: 0.15em;
 }
 
-.t-i_itm {
+.ti-I {
   position: relative;
 }
 
-.t-i_bullet {
+.ti-B {
   width: 1em;
   height: 1em;
   background: var(--B1);
@@ -29,12 +29,12 @@ Variant Section Style Start
 ====================================================================================================
 */
 
-.t-i_itm-solid {
+.ti-I-solid {
   --ti-v: solid;
 }
-.t-i_itm-dotted {
+.ti-I-dotted {
   --ti-v: dotted;
 }
-.t-i_itm-dashed {
+.ti-I-dashed {
   --ti-v: dashed;
 }

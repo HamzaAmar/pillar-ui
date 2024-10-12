@@ -31,7 +31,7 @@ const Item = forwardRef((props, forwardedRef) => {
     <li>
       <Button
         variant={variant}
-        className={cx('p-a_btn F-c', { className: className })}
+        className={cx('pa-B F-c', { className: className })}
         size={size}
         color={color}
         corner={corner}
@@ -56,13 +56,13 @@ export const Pagination = ({ count = 10, ...rest }: PaginationProps) => {
   return (
     <nav className={`p-a C-${rest.color}`} aria-label="Pagination">
       <PaginationProvider {...rest}>
-        <ul className="p-a_lst Sg-3">
+        <ul className="pa-L Sg-3">
           <Item disabled={isFirst} onClick={goToPrevious} active={step} number={step - 1}>
             <ChevronDown width="20" direction="left" />
           </Item>
           {range.map((item, index) =>
             item === '.' ? (
-              <li key={index} className="p-a_itm F-c">
+              <li key={index} className="pa-I F-c">
                 <DotsHorizontal width={16} />
               </li>
             ) : (

@@ -138,4 +138,14 @@ export const CheckboxInAForm = () => (
   </form>
 )
 
+export const CheckboxLongText = () => (
+  <form className="Sf-3">
+    <Checkbox
+      label="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla perspiciatis, dolor placeat architecto asperiores qui temporibus fugiat rerum alias repudiandae culpa libero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla perspiciatis, dolor placeat architecto asperiores qui temporibus fugiat rerum alias repudiandae culpa libero nobis minus incidunt laudantium porro voluptate doloribus accusamus."
+      name="child2"
+    />
+    <Checkbox label="Child Checkbox 3" name="child3" />
+  </form>
+)
+
 export const Playground = {}

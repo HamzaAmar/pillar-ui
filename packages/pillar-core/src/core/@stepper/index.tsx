@@ -26,23 +26,23 @@ export const StepperStep = (props: StepProps) => {
   const [labelledbyID, describedbyID] = [`lbl-${id}`, `des-${id}`]
 
   return (
-    <Flex data-state={state} items="center" className={`s-t_step step__${size}`}>
+    <Flex data-state={state} items="center" className={`st-S step__${size}`}>
       <button
         type="button"
         onClick={() => setActive?.(step!)}
-        className={`s-t_btn R-${corner} F-c  weight="5"`}
+        className={`st-B R-${corner} F-c  weight="5"`}
         aria-labelledby={labelledbyID}
         aria-describedby={describedbyID}
       >
         {state === 'complete' ? (
-          <div className="s-t_icn F-c">
+          <div className="st-I F-c">
             <Check />
           </div>
         ) : (
           (icon ?? step)
         )}
       </button>
-      <div className="s-t_cnt">
+      <div className="st-C">
         <p id={labelledbyID} className="Fs-4 Fw-5">
           {title}
         </p>
@@ -83,8 +83,8 @@ export const Stepper = ({ children, color = 'b', active = 0, completeComponent, 
   const currentContent = _content[active] ?? completeComponent
 
   return (
-    <div className="s-t_cnt Sf-5">
-      <div className={`f-l s-t C-${color} Fb`}>
+    <div className="st-_cnt Sf-5">
+      <div className={`fl- st- C-${color} F-b`}>
         <StepperProvider {...rest}> {steps}</StepperProvider>
       </div>
       <div>{currentContent}</div>

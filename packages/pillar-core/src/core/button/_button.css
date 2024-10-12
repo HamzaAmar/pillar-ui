@@ -1,4 +1,4 @@
-.b-u {
+.bu- {
   --fx: inline-flex;
 
   padding: 0.5em 1.25em;
@@ -42,11 +42,11 @@
   text-transform: var(--bu-transform, capitalize);
 }
 
-.b-u_txt {
+.bu-T {
   font-size: 0.9em;
 }
 
-.b-u-fluid {
+.bu-fluid {
   --fx: flex;
   min-width: 100%;
 }
@@ -57,7 +57,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.bu-i {
+.bu-I {
   padding: 0.375em;
   line-height: 0;
   width: fit-content;
@@ -70,7 +70,7 @@
   }
 }
 
-.b-u-transparent {
+.bu-transparent {
   border: 1px solid var(--O6);
   &:hover {
     background: var(--O6);

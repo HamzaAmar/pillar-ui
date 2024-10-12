@@ -16,7 +16,7 @@ const ParentCheckbox = ({ children }: any) => {
         isIndeterminate={isIndeterminate}
         onChange={handleToggleAll}
       />
-      <ul style={{ listStyle: 'none' }} className="Sf1">
+      <ul style={{ listStyle: 'none' }} className="Sf-1">
         {Children.map(children, (child, index) => (
           <li>
             {cloneElement(child, {

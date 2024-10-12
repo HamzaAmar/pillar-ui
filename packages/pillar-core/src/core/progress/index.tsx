@@ -27,11 +27,11 @@ export const ProgressCircle = ({
   const dashOffset = circumference - (progress / 100) * circumference
 
   return (
-    <div className={`pr-c F-c Fs-${size} C-${color}`} {...rest}>
-      <svg className="pr-c_svg" viewBox="0 0 100 100">
-        <circle className="pr-c_background" {...circle} />
-        <circle className={`pr-c_bar`} {...circle} strokeDasharray={circumference} strokeDashoffset={dashOffset} />
-        <text fill="black" className="pr-c_txt" x="50" y="50">
+    <div className={`pc- F-c Fs-${size} C-${color}`} {...rest}>
+      <svg className="pc-S" viewBox="0 0 100 100">
+        <circle className="pc-C" {...circle} />
+        <circle className={`pc-B`} {...circle} strokeDasharray={circumference} strokeDashoffset={dashOffset} />
+        <text fill="black" className="pc-T" x="50" y="50">
           {_value}%
         </text>
       </svg>
@@ -53,8 +53,8 @@ export const ProgressBar = ({
 
   return (
     <div className={`C-${color}`}>
-      <div className="f-l Ajc-end">
-        <div className={cx(`Fs-${size}`, { Hsr: !showValue })}>{MaxValue}%</div>
+      <div className="fl- Ajc-end">
+        <div className={cx(`Fs-${size}`, { 'H-sr': !showValue })}>{MaxValue}%</div>
       </div>
       <div
         role="progressbar"
@@ -63,9 +63,9 @@ export const ProgressBar = ({
         aria-valuenow={progress}
         aria-valuetext={`${progress}%`}
         aria-label={label}
-        className={`pr-b Fs-${size}`}
+        className={`pb- Fs-${size}`}
       >
-        <div className="pr-b_inner" style={{ width: `${progress}%` }} />
+        <div className="pb-T" style={{ width: `${progress}%` }} />
       </div>
     </div>
   )
@@ -84,10 +84,10 @@ export const ProgressBarStack = ({ size = '4', children }: ProgressBarStackProps
   })
   return (
     <div>
-      <div className={`f-l Sg-2 pr-b pr-s Fs-${size}`}>{children}</div>
-      <ul className="f-l Sgmd fl-wrap">
+      <div className={`fl- Sg-2 pr-b pr-s Fs-${size}`}>{children}</div>
+      <ul className="fl- Sg-5 fl-wrap">
         {_children?.map(({ children, color }, index) => (
-          <li className={`pr-s_cnt f-l Aai-center Sg-2 C-${color}`} key={index}>
+          <li className={`pr-s_cnt fl- Aai-center Sg-2 C-${color}`} key={index}>
             <span className="Cb t-y-low Fs-4">{children}</span>
           </li>
         ))}

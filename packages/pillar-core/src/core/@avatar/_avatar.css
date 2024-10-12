@@ -1,4 +1,4 @@
-.a-v {
+.av- {
   /* TODO: CHECK IF IT INLINE FLEX OR The Cache  */
   --fx: inline-flex;
   --eq-s: 2.75em;
@@ -24,30 +24,30 @@
   }
 }
 
-.a-v_img {
+.av-I {
   /* width: 100%; */
   object-fit: cover;
 }
 
 /* Avatar Variants */
 
-.a-v-soft {
+.av-soft {
   --av-b: var(--c3);
   color: var(--c11);
 }
 
-.a-v-solid {
+.av-solid {
   --av-b: var(--c8);
   color: var(--c12);
 }
-.a-v-outline,
-.a-v-dashed {
+.av-outline,
+.av-dashed {
   --av-b: var(--c3);
   padding: 2px;
   border: 2px solid var(--c9);
 }
 
-.a-v-dashed {
+.av-dashed {
   border-style: dashed;
 }
 
@@ -57,7 +57,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.av-g {
+.av-G {
   display: flex;
   flex-wrap: wrap;
 
@@ -71,10 +71,10 @@
   }
 }
 
-.av-g-stack > * + * {
+.av-G-stack > * + * {
   margin-inline-start: -0.5em;
 }
 
-.av-g-grid {
+.av-G-grid {
   gap: 0.375em;
 }

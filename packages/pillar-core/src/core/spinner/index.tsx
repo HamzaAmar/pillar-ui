@@ -4,9 +4,9 @@ import type { CSSProperties } from 'react'
 import type { SpinnerProps } from './spinner.type'
 
 export const Spinner = ({ color = 'p', size, thickness = '2px', invert = false, className, ...rest }: SpinnerProps) => {
-  const classnames = cx(`s-p C-${color}`, {
+  const classnames = cx(`sp- C-${color}`, {
     [`C-${color}`]: color,
-    ['s-p-invert']: invert,
+    ['sp-invert']: invert,
     [`Fs-${size}`]: size,
     [className!]: className,
   })

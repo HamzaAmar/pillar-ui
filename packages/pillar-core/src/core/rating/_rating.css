@@ -1,4 +1,4 @@
-.r-t {
+.rt- {
   width: fit-content;
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -6,8 +6,8 @@
     avatars are provided, they will override these properties.
   */
   font-size: var(--rating-size, 0.875rem);
-}
 
-.r-t svg {
-  width: 7.5em;
+  & svg {
+    width: 7.5em;
+  }
 }

@@ -42,12 +42,12 @@ function useField(props: any) {
     ...restProps
   } = props
 
-  const prefix = prefixInput && <span className="fi-p_cnt f-i-pre F-c">{prefixInput}</span>
-  const suffix = suffixInput && <span className="fi-s_cnt f-i-suf F-c">{suffixInput}</span>
+  const prefix = prefixInput && <span className="fi-Pr F-c">{prefixInput}</span>
+  const suffix = suffixInput && <span className="fi-Su F-c">{suffixInput}</span>
 
-  const cls = cx(`f-i_cnt f-l f-i_cnt-${variant} C-${color}`, {
+  const cls = cx(`fi-C fl- fi-C-${variant} C-${color}`, {
     [`Tt-${transform}`]: transform,
-    'f-i_cnt-fluid': fluid,
+    'fi-C-fluid': fluid,
     [`Fs-${size}`]: size,
     [`R-${corner}`]: corner,
   })
@@ -68,7 +68,7 @@ const handleStep =
 function InputNumberButton({ onClick, title, direction = 'top' }: InputNumberButtonProps) {
   const dir = direction ? ({ direction } as const) : {}
   return (
-    <button type="button" onClick={onClick} aria-label={title} tabIndex={-1} className="fi-n-btn">
+    <button type="button" onClick={onClick} aria-label={title} tabIndex={-1} className="fn-B">
       <ChevronDown width=".85em" {...dir} />
     </button>
   )
@@ -86,7 +86,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
   return (
     <div className={cls}>
       {prefix}
-      <textarea ref={forwardedRef} {...field} className="f-i"></textarea>
+      <textarea ref={forwardedRef} {...field} className="fi-"></textarea>
       {suffix}
     </div>
   )
@@ -106,7 +106,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
   return (
     <div className={cls}>
       {prefix}
-      <input ref={forwardedRef} type="text" {...field} className="f-i" />
+      <input ref={forwardedRef} type="text" {...field} className="fi-" />
       {suffix}
     </div>
   )
@@ -128,8 +128,8 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
   return (
     <div className={cls}>
       {prefix}
-      <input type="number" ref={composedRef} {...field} className="f-i" />
-      <div className="fi-n_cnt">
+      <input type="number" ref={composedRef} {...field} className="fi-" />
+      <div className="fin-C">
         <InputNumberButton onClick={handleStep(inputRef, 'stepUp')} title="Increase Value" />
         <InputNumberButton onClick={handleStep(inputRef, 'stepDown')} direction="bottom" title="Decrease Value" />
       </div>
@@ -152,14 +152,9 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
   return (
     <div className={cls}>
       {prefix}
-      <input type={value ? 'text' : 'password'} ref={forwardedRef} {...field} className="f-i" />
+      <input type={value ? 'text' : 'password'} ref={forwardedRef} {...field} className="fi-" />
 
-      <button
-        aria-label={`${value ? 'Hide' : 'Show '} Password`}
-        type="button"
-        onClick={toggle}
-        className="input--suf-content fi-p-btn F-c"
-      >
+      <button aria-label={`${value ? 'Hide' : 'Show '} Password`} type="button" onClick={toggle} className="fip-B F-c">
         {value ? hiddenIcon : visibleIcon}
       </button>
     </div>
@@ -188,10 +183,10 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
   return (
     <div className={cls}>
       {prefix}
-      <input type="search" ref={mergedRef} {...field} className="f-i fi-s" />
-      <Flex as="span" items="center" className="fi-s_suf">
+      <input type="search" ref={mergedRef} {...field} className="fi- fis-" />
+      <Flex as="span" items="center" className="fis-Su">
         {suffix}
-        <Close onClick={handleInputClick} className="fi-s_icn" transform="translate(-8,0)" />
+        <Close onClick={handleInputClick} className="fs-I" transform="translate(-8,0)" />
       </Flex>
     </div>
   )
@@ -210,10 +205,10 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(({ children, ..
 
   return (
     <div className={cls}>
-      <select ref={forwardedRef} {...field} className="f-i fi-se">
+      <select ref={forwardedRef} {...field} className="fi- fs-">
         {children}
       </select>
-      <span className="fi-s_icn">
+      <span className="fs-I">
         <ChevronDown width={16} />
       </span>
     </div>
@@ -243,7 +238,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = cx(`f-i_cnt f-i_cnt-${variant} f-l Sg-3 C-${color}`, {
+  const className = cx(`fi-C fi-C-${variant} fl- Sg-3 C-${color}`, {
     [`R-${corner}`]: corner,
     [`Tt-${transform}`]: transform,
     [`Fs-${size}`]: size,
@@ -281,7 +276,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
         <div className={className} key={index}>
           <input
             placeholder={placeholder}
-            className="f-i fi-p"
+            className="fi- fp-"
             value={pin[index]}
             onChange={(e) => handleInputChange(e.target.value, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
@@ -328,12 +323,12 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>(
     }
     return (
       <Grid grid="auto 1fr" className={cls} onClick={() => inputRef.current?.click()}>
-        <input type="file" ref={composedRef} {...field} className="Hsr" onChange={handleChange} />
-        <Flex as="span" items="center" className="fi-f">
+        <input type="file" ref={composedRef} {...field} className="H-sr" onChange={handleChange} />
+        <Flex as="span" items="center" className="fif-">
           {title}
         </Flex>
 
-        <span className="ff-t t-y f-l Fs-3 Aai-center Cb t-y-low">{hasValue ? _value : 'No file Choose'}</span>
+        <span className="ff-t t-y fl- Fs-3 Aai-center Cb t-y-low">{hasValue ? _value : 'No file Choose'}</span>
       </Grid>
     )
   }
@@ -368,14 +363,14 @@ export const FormController = ({
   return (
     <FormControllerProvider {...values}>
       <Flex direction="col" className={cx('fc-o Fs-3', { [className!]: className })}>
-        <label className={cx('Fw-5 Fs-4', { Hsr: hideLabel })} htmlFor={id}>
+        <label className={cx('Fw-5 Fs-4', { 'H-sr': hideLabel })} htmlFor={id}>
           {fieldLabel}
         </label>
         {hint && <span id={hintID}>{hint}</span>}
         {children}
         {error && (
-          <div className="f-c_err F-c" id={messageID} role="alert">
-            <span className="f-c_icn Sw-fit">{<Close type="circle" width="16" />}</span>
+          <div className="fc-E F-c" id={messageID} role="alert">
+            <span className="fc-I Sw-fit">{<Close type="circle" width="16" />}</span>
             <span> {error}</span>
           </div>
         )}
@@ -385,9 +380,9 @@ export const FormController = ({
 }
 
 export const FormGroup = ({ title, hideTitle, direction = 'col', children, hideBorder, ...rest }: FormGroupProps) => (
-  <fieldset className={cx('f-g_cnt', { 'f-g-hide-border': hideBorder })}>
-    <legend className={cx('f-g_legend', { Hsr: hideTitle })}>{title}</legend>
-    <Flex gap="4" className={cx('f-g', { 'f-g-fluid': rest.fluid })} items="start" direction={direction}>
+  <fieldset className={cx('fg-C', { 'f-g-hide-border': hideBorder })}>
+    <legend className={cx('fg-L', { 'H-sr': hideTitle })}>{title}</legend>
+    <Flex gap="4" className={cx('f-g', { 'fg-fluid': rest.fluid })} items="start" direction={direction}>
       <FormGroupProvider {...rest}>{children}</FormGroupProvider>
     </Flex>
   </fieldset>

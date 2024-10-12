@@ -5,7 +5,7 @@ import { SectionHeading } from '~/component/core/sectionHeading'
 function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
   const { jobTitle, description, followers, fullName, likes } = USER_DATA[type].user
   return (
-    <article dir={type === 'ar' ? 'rtl' : 'ltr'} className="user--article Sfsm">
+    <article dir={type === 'ar' ? 'rtl' : 'ltr'} className="user--article Sf-4">
       <Flex items="center" justify="between" gap="3">
         <Flex gap="4">
           <Avatar variant="dashed" />

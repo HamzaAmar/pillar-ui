@@ -42,7 +42,7 @@ export const Paper = forwardRef(
     },
     ref
   ) => {
-    const classNames = cx(`p-p`, {
+    const classNames = cx(`pp-`, {
       [`S-${shadow}`]: shadow,
       [`Sf-${flow}`]: flow,
       [`R-${corner}`]: corner,

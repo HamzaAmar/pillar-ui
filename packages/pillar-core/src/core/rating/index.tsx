@@ -16,7 +16,7 @@ export const Rating = ({
   icon = 'star',
   ...props
 }: RatingProps) => {
-  const classNames = cx(`r-t C-${color} Sg-3 F-c`, {
+  const classNames = cx(`rt- C-${color} Sg-3 F-c`, {
     [`Fs-${size}`]: size,
   })
   return (
@@ -37,7 +37,7 @@ export const Rating = ({
           })}
       </svg>
 
-      <figcaption className={cx('Fw-5', { Hsr: hideTitle })}>{title}</figcaption>
+      <figcaption className={cx('Fw-5', { 'H-sr': hideTitle })}>{title}</figcaption>
     </figure>
   )
 }

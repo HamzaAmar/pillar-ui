@@ -19,14 +19,14 @@ export const Separator = forwardRef(
     },
     ref
   ) => {
-    const classNames = cx(`s-e s-e-${direction} Fs-${thickness} f-l Ajc-${position} Aai-center C-${color}`, {
+    const classNames = cx(`se- se-${direction} Fs-${thickness} fl- Ajc-${position} Aai-center C-${color}`, {
       [`R-${corner}`]: corner,
       'fl-col': direction === 'vertical',
       [className!]: className,
     })
     return (
       <Tag className={classNames} ref={ref} {...rest}>
-        {title && <span className="s-e_txt">{title}</span>}
+        {title && <span className="se-T">{title}</span>}
       </Tag>
     )
   }

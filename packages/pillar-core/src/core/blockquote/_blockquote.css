@@ -1,4 +1,4 @@
-.b-l {
+.bl- {
   border-inline-start: 4px solid var(--c9);
   /* background-clip: ;
   background-color: ; */
@@ -19,7 +19,7 @@
   }
 }
 
-.b-l_quote {
+.bl-Q {
   position: absolute;
   inset-inline-start: 0.25em;
   top: 0.25em;

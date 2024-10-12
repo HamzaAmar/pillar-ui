@@ -38,7 +38,7 @@ FlexItem.displayName = 'FlexItem'
 export const Flex = forwardRef((props, forwardedRef) => {
   const { children, justify, items, flex, direction, wrap, inline, as: Tag = 'div', gap, className, ...rest } = props
 
-  const classNames = cx('f-l', {
+  const classNames = cx('fl-', {
     [`Ajc-${justify}`]: justify && justify !== 'start',
     [`Aai-${items}`]: items,
     // [`fl-${flex}`]: items,

@@ -24,7 +24,7 @@ export const Text = forwardRef(
     },
     forwardedRef
   ) => {
-    const classNames = cx(`t-y`, {
+    const classNames = cx(`ty-`, {
       [`Fs-${size}`]: size,
       [`T-${truncate}`]: truncate,
       [`Tt-${transform}`]: transform,
@@ -35,7 +35,7 @@ export const Text = forwardRef(
       [`Fst-${fontStyle}`]: fontStyle,
       [`C-${color}`]: color,
       [`Sw-${width}`]: width,
-      [`t-y-low`]: low,
+      [`ty-low`]: low,
       [`${className}`]: className,
     })
 
@@ -50,7 +50,7 @@ Text.displayName = 'Text'
 
 export const Heading = forwardRef(({ as: Tag = 'h1', children, ...rest }, forwardedRef) => {
   return (
-    <Text as={Tag} className="t-y_heading" ref={forwardedRef} {...rest}>
+    <Text as={Tag} className="ty-H" ref={forwardedRef} {...rest}>
       {children}
     </Text>
   )
@@ -60,7 +60,7 @@ Heading.displayName = 'Heading'
 
 export const Link = forwardRef(({ children, ...rest }, forwardedRef) => {
   return (
-    <Text ref={forwardedRef} color="p" low className="t-y_link" as="a" {...rest}>
+    <Text ref={forwardedRef} color="p" low className="ty-L" as="a" {...rest}>
       {children}
     </Text>
   )

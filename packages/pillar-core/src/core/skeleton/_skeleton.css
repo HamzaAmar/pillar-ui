@@ -1,4 +1,4 @@
-.s-k {
+.sk- {
   background: var(--B7);
   position: relative;
   overflow: hidden;
@@ -15,23 +15,23 @@
   }
 }
 
-.s-k_box {
+.sk-B {
   width: 100%;
   height: var(--height, 10rem);
 }
 
-.s-k_avt,
-.s-k_btn {
+.sk-A,
+.sk-B {
   width: 2.5em;
   height: 2.5em;
 }
-.s-k_txt {
+.sk-T {
   --flow-gap: 0.5em;
   height: 1em;
   border-radius: 0.15em;
   width: var(--text-width);
 }
-.s-k_btn {
+.sk-B {
   padding: 0.25em 0.75em;
   min-width: 8em;
   border-radius: 0.15rem;

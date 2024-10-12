@@ -38,7 +38,7 @@ export const Alert = forwardRef(
 
     if (!isVisible) return
 
-    const classNames = cx(`a-l f-l Sg-3 V-${variant} C-${color}`, {
+    const classNames = cx(`al- fl- Sg-3 V-${variant} C-${color}`, {
       [`R-${corner}`]: !!corner,
       [`Fs-${size}`]: size,
       [className!]: className,
@@ -47,7 +47,7 @@ export const Alert = forwardRef(
     return (
       <div ref={forwardedRef} className={classNames} role="alert" {...rest}>
         {icon && <span className="Sw-fit">{icon}</span>}
-        <div className={cx(`a-l_cnt f-l`, { al_in: inline })}>
+        <div className={cx(`al-C fl-`, { 'al-I': inline })}>
           {title && <div className="Tt-capitalize Fw-5">{title}</div>}
           {message && <span>{message}</span>}
         </div>

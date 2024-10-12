@@ -151,7 +151,7 @@ export function BreadcrumbIcons() {
 
       <Breadcrumb>
         <BreadcrumbItem link="../../..">
-          <span className="Hsr">Home</span>
+          <span className="H-sr">Home</span>
           <Home width={16} />
         </BreadcrumbItem>
 

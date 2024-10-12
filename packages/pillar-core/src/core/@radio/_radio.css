@@ -1,5 +1,5 @@
 /* // TODO: LOOKING FOR A WAY TO MAKE FOCUS HAPPEN ONLY FOR KEYBOARD USER FOCUS-VISIBLE WITH FOCUS-WITHIN */
-.r-a_cnt {
+.ra-C {
   border-radius: 0.5em;
 
   /*
@@ -16,7 +16,7 @@
   }
 }
 
-.rc {
+.rc- {
   --eq-s: 1.25em;
   border-radius: 50%;
   position: relative;
@@ -27,7 +27,7 @@
   }
 }
 
-.r-a {
+.ra- {
   &:checked {
     & + .rc {
       outline-offset: -0.75em;
@@ -48,35 +48,35 @@
     }
   }
 
-  &:disabled + .rc {
+  &:disabled + .rc- {
     filter: grayscale(1);
     background: var(--B8);
   }
 }
 
-.r-a_lbl {
+.ra-L {
   max-width: 55ch;
   color: var(--text-8);
   font-size: 0.875em;
 }
 
 /* Radio Group Section Style Start */
-.ra-g {
+.ra-G {
   border-radius: 0.5rem;
   font-size: 0.85rem;
 }
 
-.ra-g--legend {
+.ra-GL {
   padding: 0.5rem;
   font-size: 0.85rem;
   margin-inline-start: 0.5rem;
 }
 
-.ra-g--ho {
+.ra-G-h {
   flex-direction: vertical;
 }
 
-.ra-g--ve {
+.ra-G-ve {
   flex-direction: column;
 }
 
@@ -93,12 +93,12 @@
   transform: translate(-50%, -50%);
   visibility: hidden;
 }
-.r-a:checked + .rc_c .rc_i {
+.ra-:checked + .rc_c .rc_i {
   visibility: visible;
 }
 
 @media (forced-colors: active) {
-  .r-a:disabled {
+  .ra-:disabled {
     & + .rc {
       background-color: GrayText;
       border-color: GrayText;

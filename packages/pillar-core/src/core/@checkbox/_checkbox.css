@@ -1,9 +1,9 @@
-.c-h_lbl {
+.ch-L {
   font-size: 0.875em;
   /* color: inherit; */
 }
 
-.c-h_cnt {
+.ch-C {
   width: fit-content;
   color: var(--text-8);
   display: flex;
@@ -21,25 +21,25 @@
     cursor: not-allowed;
   }
 
-  &:hover > .c-h {
+  &:hover > .ch- {
     box-shadow: 0 0 0 0.125em var(--c7, var(--P7));
   }
 }
 
-.c-h_el {
-  &:checked:disabled + .c-h {
+.ch-E {
+  &:checked:disabled + .ch- {
     color: var(--B5);
   }
-  &[aria-checked='false'] + .c-h svg {
+  &[aria-checked='false'] + .ch- svg {
     display: none;
   }
-  &:checked + .c-h,
-  &:indeterminate + .c-h {
+  &:checked + .ch-,
+  &:indeterminate + .ch- {
     background: var(--c9, none);
     color: var(--c1); /* Responsible For The Color Of The Check Icon stroke  white in checked state */
   }
 
-  &:disabled + .c-h {
+  &:disabled + .ch- {
     box-shadow: none;
     border-color: var(--B10);
     background: var(--B10);
@@ -50,7 +50,7 @@
   }
 }
 
-.c-h {
+.ch- {
   --eq-s: 1.25em;
   --fx: inline-flex;
 
@@ -59,15 +59,15 @@
   color: transparent; /* Responsible For The Color Of The Check Icon stroke Default to transparent */
 }
 
-.c-h_icn {
+.ch-I {
   stroke: currentColor;
 }
 
 @media (forced-colors: active) {
-  .c-h:has(:disabled) {
+  .ch-:has(:disabled) {
     color: GrayText;
 
-    & .c-h {
+    & .ch- {
       background: GrayText;
       border-color: GrayText;
     }

@@ -1,18 +1,18 @@
-.t-y {
+.ty- {
   color: var(--c12);
   font-size: var(--typography-size, inherit);
   text-transform: var(--typography-transform, inherit);
 }
 
-.t-y-low {
+.ty-low {
   color: var(--c11);
 }
 
-.t-y_heading {
+.ty-H {
   font-size: calc(var(--typography-size, 1rem) * 1.25);
 }
 
-.t-y_link {
+.ty-L {
   padding: 2px;
   color: var(--P11);
   &:hover {

@@ -66,7 +66,7 @@ Absolutely! Let's refine your component class naming convention description.
 
 Pillar components adhere to a unique class naming convention designed for both clarity and efficiency:
 
-1. **Base Abbreviation:** The first two letters of the component folder name are used as the base abbreviation. (e.g., "Button" becomes "b-u")
+1. **Base Abbreviation:** The first two letters of the component folder name are used as the base abbreviation. (e.g., "Button" becomes "bu-")
 
 2. **Disambiguation:**
    - If two or more components share the same base abbreviation, the third letter is included for distinction.
@@ -76,9 +76,9 @@ Pillar components adhere to a unique class naming convention designed for both c
 **Example:**
 
 ```html
-<div class="b-u"></div>
-<div class="b-u-primary"></div>
-<div class="b-u-large"></div>
+<div class="bu-"></div>
+<div class="bu--primary"></div>
+<div class="bu--large"></div>
 ```
 
 **Benefits:**
@@ -97,25 +97,25 @@ Pillar components adhere to a unique class naming convention designed for both c
 
 | Reserved Word | Description               | Example    |
 | ------------- | ------------------------- | ---------- |
-| `_btn`        | Reserved for "button"     | `.b-u_btn` |
-| `_cnt`        | Reserved for "content"    | `.b-u_cnt` |
-| `_err`        | Reserved for "error"      | `.b-u_err` |
-| `_ele`        | Reserved for "element"    | `.b-u_el`  |
-| `_flb`        | Reserved for "fallback"   | `.b-u_flb` |
-| `_hor`        | Reserved for "horizontal" | `.b-u_hor` |
+| `_btn`        | Reserved for "button"     | `.bu-_btn` |
+| `_cnt`        | Reserved for "content"    | `.bu-_cnt` |
+| `_err`        | Reserved for "error"      | `.bu-_err` |
+| `_ele`        | Reserved for "element"    | `.bu-_el`  |
+| `_flb`        | Reserved for "fallback"   | `.bu-_flb` |
+| `_hor`        | Reserved for "horizontal" | `.bu-_hor` |
 | `_itm`        | Reserved for "item"       | `.b-Aaim`  |
-| `_img`        | Reserved for "image"      | `.b-u_img` |
-| `_icn`        | Reserved for "icon"       | `.b-u_icn` |
-| `_lnk`        | Reserved for "link"       | `.b-u_lnk` |
-| `_lbl`        | Reserved for "label"      | `.b-u_lbl` |
-| `_lst`        | Reserved for "list"       | `.b-u_lst` |
-| `_pnl`        | Reserved for "panel"      | `.b-u_pnl` |
-| `_pfx`        | Reserved for "prefix"     | `.b-u_pfx` |
-| `_sh`         | Reserved for "show"       | `.b-u_shw` |
-| `_sfx`        | Reserved for "suffix"     | `.b-u_sfx` |
-| `_txt`        | Reserved for "text"       | `.b-u_txt` |
-| `_ver`        | Reserved for "vertical"   | `.b-u_ver` |
-| `_wrp`        | Reserved for "wrapper"    | `.b-u_wrp` |
+| `_img`        | Reserved for "image"      | `.bu-_img` |
+| `_icn`        | Reserved for "icon"       | `.bu-_icn` |
+| `_lnk`        | Reserved for "link"       | `.bu-_lnk` |
+| `_lbl`        | Reserved for "label"      | `.bu-_lbl` |
+| `_lst`        | Reserved for "list"       | `.bu-_lst` |
+| `_pnl`        | Reserved for "panel"      | `.bu-_pnl` |
+| `_pfx`        | Reserved for "prefix"     | `.bu-_pfx` |
+| `_sh`         | Reserved for "show"       | `.bu-_shw` |
+| `_sfx`        | Reserved for "suffix"     | `.bu-_sfx` |
+| `_txt`        | Reserved for "text"       | `.bu-_txt` |
+| `_ver`        | Reserved for "vertical"   | `.bu-_ver` |
+| `_wrp`        | Reserved for "wrapper"    | `.bu-_wrp` |
 
 Please adhere to this convention when creating or modifying Pillar components.
 
