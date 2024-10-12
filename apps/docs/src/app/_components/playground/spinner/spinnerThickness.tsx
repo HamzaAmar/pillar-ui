@@ -3,13 +3,12 @@ import { Spinner } from '@pillar-ui/core'
 export const SpinnerThickness = () => {
   return (
     <>
-      <Spinner thickness="1px" />
-      <Spinner thickness="2px" />
-      <Spinner thickness="3px" />
-      <Spinner thickness="4px" />
-      <Spinner thickness="5px" />
-      <Spinner thickness="6px" />
-      <Spinner thickness="200px" />
+      <Spinner thickness="1" />
+      <Spinner thickness="2" />
+      <Spinner thickness="3" />
+      <Spinner thickness="4" />
+      <Spinner thickness="5" />
+      <Spinner thickness="6" />
     </>
   )
 }
