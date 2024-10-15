@@ -3,7 +3,6 @@ import type { Color, Size } from '../../types'
 
 type Variant = 'default' | 'striped' | 'soft' | 'head-color'
 type Type = 'head' | 'body'
-type Weight = 'thin' | 'extra-light' | 'light' | 'normal' | 'medium' | 'semi-bold' | 'bold' | 'extra-bold' | 'black'
 
 // type Border = "none" | 'soft';
 
@@ -16,7 +15,7 @@ export interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
 }
 
 export interface TableColumnProps {
-  weight?: Weight
+  weight?: Size
 }
 export interface TableRowProps {
   children: ReactNode

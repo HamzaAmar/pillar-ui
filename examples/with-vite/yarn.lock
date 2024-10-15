@@ -574,6 +574,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pillar-ui/core@npm:^0.10.8":
+  version: 0.10.8
+  resolution: "@pillar-ui/core@npm:0.10.8"
+  peerDependencies:
+    "@pillar-ui/hooks": 0.7.4
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 10c0/fc7a8d507da2905021238b0daad8c9fe10d0cc7040466ca986e9e77856a71a6dc90dfc02abfbba411134e4ffb5117e18816a7533b56ef20dd2bc6215bbd2aa0c
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -2891,6 +2902,7 @@ __metadata:
   resolution: "with-vite@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.8.0"
+    "@pillar-ui/core": "npm:^0.10.8"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     "@vitejs/plugin-react": "npm:^4.3.1"

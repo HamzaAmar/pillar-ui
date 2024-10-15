@@ -2318,30 +2318,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pillar-ui/core@npm:^0.8.5":
+"@pillar-ui/core@npm:^0.10.8":
+  version: 0.10.8
+  resolution: "@pillar-ui/core@npm:0.10.8"
+  peerDependencies:
+    "@pillar-ui/hooks": 0.7.4
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 10c0/fc7a8d507da2905021238b0daad8c9fe10d0cc7040466ca986e9e77856a71a6dc90dfc02abfbba411134e4ffb5117e18816a7533b56ef20dd2bc6215bbd2aa0c
+  languageName: node
+  linkType: hard
+
+"@pillar-ui/icons@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "@pillar-ui/icons@npm:0.8.2"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 10c0/ce8b377fc98049dc004c13b2d081fd8636e94cbe9917261961bc7b3737dafc83cc9ff6923262d15ceb4e43e7bf52fa2dcae9323ca1d96870b6920fcac81aa9ca
+  languageName: node
+  linkType: hard
+
+"@pillar-ui/utils@npm:^0.8.5":
   version: 0.8.5
-  resolution: "@pillar-ui/core@npm:0.8.5"
+  resolution: "@pillar-ui/utils@npm:0.8.5"
   peerDependencies:
-    react: ^18.0.0
-    react-dom: ^18.0.0
-  checksum: 10c0/ab3e9acb46ea59981474b9d5fdc67a83f7e8c55743fa0ff4cd4adce3bd5bb51bbb37935d220e322e1dccc1a4d4987187716ee324898de3c56cfb302d40fa8102
-  languageName: node
-  linkType: hard
-
-"@pillar-ui/icons@npm:^0.7.3":
-  version: 0.7.3
-  resolution: "@pillar-ui/icons@npm:0.7.3"
-  peerDependencies:
-    react: ^18.0.0
-    react-dom: ^18.0.0
-  checksum: 10c0/ff61fd53fb1ed93a4acf13a7d0003ace0735968a8a851b123a815667e05560610f304c5d20ea75e3063a32f421c4b6c19ff98ba36b891f835b020924dc7500c6
-  languageName: node
-  linkType: hard
-
-"@pillar-ui/utils@npm:^0.7.3":
-  version: 0.7.3
-  resolution: "@pillar-ui/utils@npm:0.7.3"
-  checksum: 10c0/46758bd9172996bd0e1308155ecdd80ffa18f93eabe1cf6b549fbefb248c27a101be857611cfad842afb7e8be2c9c0c5cf4ccc34458bbef321163474e748bf45
+    react: ^18.3.1
+  checksum: 10c0/a446a5ec0c09274bd267b869e9e65253e85b286d734c9dd4a03f3d6cc72ba26d7f5a5aa1a154ce85c29b7498c3df0928a26b587760222e050aa26a3c2a8f2a5c
   languageName: node
   linkType: hard
 
@@ -13444,9 +13447,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "with-cra@workspace:."
   dependencies:
-    "@pillar-ui/core": "npm:^0.8.5"
-    "@pillar-ui/icons": "npm:^0.7.3"
-    "@pillar-ui/utils": "npm:^0.7.3"
+    "@pillar-ui/core": "npm:^0.10.8"
+    "@pillar-ui/icons": "npm:^0.8.2"
+    "@pillar-ui/utils": "npm:^0.8.5"
     "@testing-library/jest-dom": "npm:^5.17.0"
     "@testing-library/react": "npm:^13.4.0"
     "@testing-library/user-event": "npm:^13.5.0"

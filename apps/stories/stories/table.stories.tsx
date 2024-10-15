@@ -183,12 +183,16 @@ export const NormalTableColor = () => {
 export const TableSize = () => {
   return (
     <Flex direction="col" gap="4">
-      <Heading size="4">Table Size SMALL</Heading>
+      <Heading size="1">Table Size Extra SMALL</Heading>
+      <NormalTableExample size="2" />
+      <Heading size="1">Table Size Medium</Heading>
       <NormalTableExample size="4" />
-      <Heading size="4">Table Size Medium</Heading>
-      <NormalTableExample />
-      <Heading size="4">Table Size Large</Heading>
-      <NormalTableExample gap="6" />
+      <Heading size="1">Table Size Large</Heading>
+      <NormalTableExample size="6" />
+      <Heading size="1">Table Size Large</Heading>
+      <NormalTableExample size="7" />
+      <Heading size="1">Table Size Large</Heading>
+      <NormalTableExample size="9" />
     </Flex>
   )
 }

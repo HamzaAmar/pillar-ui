@@ -33,7 +33,6 @@ export default defineConfig([
     format: ['cjs', 'esm'],
     splitting: false,
     outDir: 'dist/',
-    // dts: true,
     minify: true,
     minifyWhitespace: true,
     treeshake: true,
