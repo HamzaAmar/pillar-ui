@@ -1,5 +1,11 @@
 # @pillar/core
 
+## 0.10.9
+
+### Patch Changes
+
+- # Fix the issue related to table weight
+
 ## 0.10.8
 
 ### Patch Changes
