@@ -1,5 +1,12 @@
 # @pillar/core
 
+## 0.10.10
+
+### Patch Changes
+
+- Updated dependencies
+  - @pillar-ui/hooks@0.7.5
+
 ## 0.10.9
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @pillar/hooks
 
+## 0.7.5
+
+### Patch Changes
+
+- # add .js to hooks package
+
 ## 0.7.4
 
 ### Patch Changes
