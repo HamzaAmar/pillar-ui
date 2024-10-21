@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@pillar-ui/core": "^0.10.8",
+    "@pillar-ui/core": "^0.10.9",
     "@pillar-ui/icons": "^0.8.2",
     "@pillar-ui/utils": "^0.8.5",
     "@testing-library/jest-dom": "^5.17.0",

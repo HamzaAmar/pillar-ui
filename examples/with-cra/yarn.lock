@@ -2318,14 +2318,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pillar-ui/core@npm:^0.10.8":
-  version: 0.10.8
-  resolution: "@pillar-ui/core@npm:0.10.8"
+"@pillar-ui/core@npm:^0.10.9":
+  version: 0.10.9
+  resolution: "@pillar-ui/core@npm:0.10.9"
   peerDependencies:
     "@pillar-ui/hooks": 0.7.4
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 10c0/fc7a8d507da2905021238b0daad8c9fe10d0cc7040466ca986e9e77856a71a6dc90dfc02abfbba411134e4ffb5117e18816a7533b56ef20dd2bc6215bbd2aa0c
+  checksum: 10c0/2cf4555de5d7045acbd050ef1c618c90254bb543643c9a444540db4a1cea532402af161631eff0861830781910f88b89957faaeb5c6f50c7e101469e228cdb7c
   languageName: node
   linkType: hard
 
@@ -13447,7 +13447,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "with-cra@workspace:."
   dependencies:
-    "@pillar-ui/core": "npm:^0.10.8"
+    "@pillar-ui/core": "npm:^0.10.9"
     "@pillar-ui/icons": "npm:^0.8.2"
     "@pillar-ui/utils": "npm:^0.8.5"
     "@testing-library/jest-dom": "npm:^5.17.0"

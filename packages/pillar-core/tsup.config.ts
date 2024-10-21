@@ -12,7 +12,7 @@ export default defineConfig([
   },
   /*
   This One responsible for generating the core files for the components
-  the problem if I try to add dts in here is that it will not work I gave me this error 
+  the problem if I try to add dts in here it will not work and gave me this error 
   node:events:489
       throw er; // Unhandled 'error' event
       ^
