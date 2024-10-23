@@ -8,64 +8,45 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Props
-
-The Alert component accepts the following props:
-
 ### Color
 
-The color prop determines the background color of the Alert. It accepts any of the Color types defined in our library see options above. If not provided, it defaults to the primary color.
-
-<Playground direction="column" name="alertClosable" root="alert" />
+<Playground direction="column" name="alertColor" root="alert" />
 
 ### Size
-
-The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
 
 <Playground direction="column" name="alertSize" root="alert" />
 
 ### Variant
 
-The variant prop determines the visual style of the alert. The following are the descriptions of the different variants:
-
 <Playground direction="column" name="alertVariant" root="alert" />
 
 ### Corner
-
-The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
-
-The corner prop determines the border radius of the Alert. It accepts any of the Corner types defined in your library, including (square, 3, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
 
 <Playground direction="column" name="alertCorner" root="alert" />
 
 ### Content
 
-The content of the Alert the text displayed as the Alert's title. If not provided, the title section of the Alert will not be displayed.
+The Content is not a props but we use it here to describe all the props related to the content of the alert.
+
+- **title**: The title of the alert.
+- **description**: The description of the alert.
+- **icon**: The icon of the alert.
 
 <Playground direction="column" name="alertContent" root="alert" />
 
 ### Icon
 
-The icon prop allows you to display an icon alongside the Alert. It accepts any ReactNode, such as an icon from the @pillar-ui/icons package. If no icon is provided, no icon will be displayed.
-
 <Playground direction="column" name="alertIcon" root="alert" />
 
 ### Closable
 
-The closable prop determines whether the Alert should be closable by the user. If set to true, a close button will be displayed on the Alert. If not provided, it defaults to false.
+The `closable` prop controls whether the alert can be closed by the user. When set to `true`, a close button appears on the alert, allowing users to dismiss it. If not specified, it defaults to `false`.
+
+<Playground direction="column" name="alertClosable" root="alert" />
 
 ### Inline
 
-The inline prop determines how the alert is displayed. If set to true, the alert will be displayed horizontally, which is useful for short alerts that do not take up a lot of space, such as notifications or messages. If not set or set to false, the alert will be displayed as a vertically.
-
-## Accessibility
-
-Accessibility is a core feature of Pillar UI, extending to components like the Alert. Here's a guide on ensuring accessibility when employing the Alert component:
-
-- **Clarity in Language:** Opt for straightforward wording in the Alert's title and message, sidestepping jargon or multi-meaning terms that could confuse users.
-- **Contrast Considerations:** Guarantee that the Alert's color sharply contrasts the background, ensuring readability for those with color vision impairments or limited sight.
-- **ARIA Roles and Attributes:** Leverage ARIA roles and attributes for accurate interpretation by assistive tech. For example, role="alert" signifies crucial user information.
-- **Support for Reduced Motion and Forced Colors:** Our components also accommodate users with "Reduced Motion" preferences, ensuring a comfortable experience. Additionally, we ensure that our components remain readable and usable for users relying on the "Forced Colors" feature.
+<Playground direction="column" name="alertInline" root="alert" />
 
 ## Best Practice
 
@@ -74,25 +55,6 @@ Accessibility is a core feature of Pillar UI, extending to components like the A
 - Use Alerts to communicate errors and warnings to the user, such as invalid input or unsuccessful form submissions.
 - Use Alerts sparingly and avoid overusing them, as they can be distracting and overwhelm the user.
 - Avoid using technical jargon or ambiguous language
-
-## Use case:
-
-The Alert component can be used in a variety of situations, such as:
-
-- Displaying error messages or warnings
-- Providing feedback to the user after completing an action
-- Notifying the user of important information or updates
-- Asking for confirmation before performing a critical action
-
-## Troubleshooting:
-
-If the Alert component is not behaving as expected, it may be due to an incorrect usage of the component or the props passed to it. Some common issues to check for include:
-
-- Incorrectly passing props to the Alert component
-- Using an invalid value for a prop, such as an invalid alert type
-- Improperly handling the onClose function or passing in an incorrect function
-- Missing required props for the Alert component
-- If you are still having issues, try checking the documentation or seeking help from the community or the @pillar-ui/core library maintainers.
 
 ## Conclusion:
 

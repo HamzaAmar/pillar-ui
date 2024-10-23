@@ -31,6 +31,7 @@ export const AlertColors = () => {
       <AlertBase color="se" />
       <AlertBase color="p" />
       <AlertBase color="b" />
+      <AlertBase color="i" />
     </Flex>
   )
 }
@@ -105,16 +106,16 @@ export const AlertCorner = () => {
   )
 }
 
-const Variants = ['shadow', 'solid', 'outline', 'soft', 'mixed']
-
 export const AlertVariant = () => {
   return (
     <div className="Sf-4">
-      {Variants.map((variant) => (
-        <Flex key={variant} direction="col" gap="4">
-          <AlertBase variant={variant} color="w" />
-        </Flex>
-      ))}
+      <Flex direction="col" gap="4">
+        <AlertBase variant="shadow" color="w" />
+        <AlertBase variant="solid" color="w" />
+        <AlertBase variant="outline" color="w" />
+        <AlertBase variant="soft" color="w" />
+        <AlertBase variant="mixed" color="w" />
+      </Flex>
     </div>
   )
 }
@@ -122,10 +123,9 @@ export const AlertVariant = () => {
 export const AlertIcon = () => {
   return (
     <Flex direction="col" gap="4">
-      <AlertBase icon={<CircleWarning width="20" />} color="d" />
-      <AlertBase icon={<CircleCheck width="20" />} color="su" />
-      <AlertBase icon={<CircleWarning width="20" />} color="w" />
-      <AlertBase icon={<CircleInfo width="20" />} color="i" />
+      <AlertBase icon={<CircleWarning width="16" />} />
+      <AlertBase icon={<CircleWarning width="20" />} />
+      <AlertBase icon={<CircleInfo width="36" />} />
     </Flex>
   )
 }
