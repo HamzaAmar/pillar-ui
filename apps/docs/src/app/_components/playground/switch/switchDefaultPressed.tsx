@@ -9,6 +9,7 @@ export const SwitchDefaultPressed = () => {
       <Switch label="Hello" defaultPressed color="p" />
       <Switch label="Hello" defaultPressed color="se" />
       <Switch label="Hello" defaultPressed color="b" />
+      <Switch label="Hello" defaultPressed color="i" />
     </>
   )
 }

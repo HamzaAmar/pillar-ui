@@ -40,6 +40,7 @@ export const TimelineColor = () => {
       <TimelineBase color="su" />
       <TimelineBase color="d" />
       <TimelineBase color="w" />
+      <TimelineBase color="i" />
     </>
   )
 }

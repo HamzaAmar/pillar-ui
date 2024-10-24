@@ -9,6 +9,7 @@ export const RatingColor = () => {
       <Rating color="su" rating={4} />
       <Rating color="w" rating={4} />
       <Rating color="b" rating={4} />
+      <Rating color="i" rating={4} />
     </>
   )
 }

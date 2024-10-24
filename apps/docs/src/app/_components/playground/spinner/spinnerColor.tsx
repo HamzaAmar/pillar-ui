@@ -9,6 +9,7 @@ export const SpinnerColor = () => {
       <Spinner color="p" />
       <Spinner color="se" />
       <Spinner color="b" />
+      <Spinner color="i" />
     </>
   )
 }

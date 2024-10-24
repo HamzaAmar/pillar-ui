@@ -9,6 +9,7 @@ export const SwitchColor = () => {
       <Switch label="Hello" color="p" />
       <Switch label="Hello" color="se" />
       <Switch label="Hello" color="b" />
+      <Switch label="Hello" color="i" />
     </>
   )
 }

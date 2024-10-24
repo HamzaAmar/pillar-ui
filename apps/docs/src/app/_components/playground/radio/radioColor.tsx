@@ -3,12 +3,13 @@ import { Radio } from '@pillar-ui/core'
 export const RadioColor = () => {
   return (
     <>
-      <Radio color="d" name="red" label="Red" />
-      <Radio color="su" name="green" label="Green" />
-      <Radio color="w" name="orange" label="Orange" />
+      <Radio color="d" name="danger" label="Danger" />
+      <Radio color="su" name="success" label="Success" />
+      <Radio color="w" name="warning" label="Warning" />
       <Radio color="p" name="primary" label="Primary" />
-      <Radio color="b" name="background" label="background" />
+      <Radio color="i" name="info" label="Info" />
       <Radio color="se" name="secondary" label="Secondary" />
+      <Radio color="b" name="background" label="background" />
     </>
   )
 }

@@ -15,41 +15,19 @@ mponent used to display quoted text with an optional citation. It allows you to 
 
 ### Corner
 
-Type: string
-Default: `md`
-Options: `sharp` `3` `sm` `md` `lg` `circle` `full`
-The size prop determines the corners of the Blockquote. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
-
-The corner prop determines the border radius of the Blockquote. It accepts any of the Corner types defined in your library, including (sharp, 3, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
-
 <Playground direction="column" name="blockquoteCorner" root="blockquote" />
 
 ### Color
-
-You can customize the color of the blockquote by passing a color prop to the Blockquote component.
 
 <Playground direction="column" name="blockquoteColor" root="blockquote" />
 
 ### Size
 
-You can customize the size of the blockquote by passing a size prop to the Blockquote component.
-
 <Playground direction="column" name="blockquoteSize" root="blockquote" />
 
 ### Cite
 
-The `Blockquote.Cite` subcomponent is a specialized element for attributing the quoted content to its source.
-
-- `title` (string): The text of the citation (e.g., author name, source title).
-- `align` (`start``center``end`) default `start`: Controls the horizontal alignment of the citation (`start`, `center`, or `end`; default is `start`).
-
-** Example Usage **
-
 <Playground direction="column" name="blockquoteCite" root="blockquote" />
-
-## Use Case
-
-The `blockquote` component is designed to create stylish and customizable blockquote elements in your web applications. It's useful for emphasizing quoted content in an elegant manner.
 
 ## Troubleshooting
 

@@ -11,6 +11,7 @@ export const AvatarColor = () => {
       <Avatar color="p" title="John Doe" />
       <Avatar color="b" title="John Doe" />
       <Avatar color="o" title="John Doe" />
+      <Avatar color="i" title="John Doe" />
     </>
   )
 }

@@ -9,6 +9,7 @@ export const ChipsColor = () => {
       <Chips color="p">Hello</Chips>
       <Chips color="se">Hello</Chips>
       <Chips color="b">Hello</Chips>
+      <Chips color="i">Hello</Chips>
     </>
   )
 }

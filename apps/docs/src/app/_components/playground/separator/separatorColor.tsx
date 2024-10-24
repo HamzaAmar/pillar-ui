@@ -9,6 +9,7 @@ export const SeparatorColor = () => {
       <Separator color="p" />
       <Separator color="se" />
       <Separator color="b" />
+      <Separator color="i" />
     </>
   )
 }

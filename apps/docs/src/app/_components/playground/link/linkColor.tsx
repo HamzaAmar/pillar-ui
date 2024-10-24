@@ -9,9 +9,10 @@ export const LinkColor = () => {
       <Link color="p">Hello World</Link>
       <Link color="b">Hello World</Link>
       <Link color="se">Hello World</Link>
+      <Link color="i">Hello World</Link>
 
       <Link low color="d">
-        Hello World
+        Hello World world
       </Link>
       <Link low color="su">
         Hello World
@@ -26,6 +27,9 @@ export const LinkColor = () => {
         Hello World
       </Link>
       <Link low color="se">
+        Hello World
+      </Link>
+      <Link low color="i">
         Hello World
       </Link>
     </>

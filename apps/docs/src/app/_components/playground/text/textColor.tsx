@@ -9,6 +9,7 @@ export const TextColor = () => {
       <Text color="p">Hello World</Text>
       <Text color="b">Hello World</Text>
       <Text color="se">Hello World</Text>
+      <Text color="i">Hello World</Text>
 
       <Text low color="d">
         Hello World
@@ -26,6 +27,9 @@ export const TextColor = () => {
         Hello World
       </Text>
       <Text low color="se">
+        Hello World
+      </Text>
+      <Text low color="i">
         Hello World
       </Text>
     </>

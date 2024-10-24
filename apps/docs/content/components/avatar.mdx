@@ -20,49 +20,31 @@ An optional title to display as an alt to make the avatar accessible.
 
 ### Image
 
-The image source to display in the avatar.
-
 <Playground name="avatarImage" root="avatar" />
 
-### Icon
+### Color
 
-The icon prop allows you to display an icon alongside the Avatar. It accepts any ReactNode. If not provided, no icon will be displayed.
-
-<Playground name="avatarIcon" root="avatar" />
+<Playground name="avatarColor" root="avatar" />
 
 ### Size
-
-The size prop determines the size of the Avatar. It accepts any of the Size types defined in your library, including (1, 2,3, sm, md, and lg, xl, 2xl, 3xl). If not provided, it defaults to the md size.
 
 <Playground name="avatarSize" root="avatar" />
 
 ### Corner
 
-The size prop determines the size of the Alert. It accepts any of the Size types defined in our library see options above. If not provided, it defaults to the md size.
-
-The corner prop determines the border radius of the Avatar. It accepts any of the Corner types defined in your library, including (square, 3, sm, md, xl, full, circle), and pill. If not provided, it defaults to the square corner.
-
 <Playground name="avatarCorner" root="avatar" />
 
 ### Variant
-
-The variant prop specifies the visual style of the Avatar component. It can be set to one of the four values: `solid`,`outline` ,`soft`
 
 <Playground name="avatarVariant" root="avatar" />
 
 ### Animate
 
-The animate prop allows you to apply a predefined animation to the Avatar component, such as `zoom` or `jump`.
-
 <Playground name="avatarAnimate" root="avatar" />
 
-## Avatars Fallback
+### Fallback
 
-The Avatar component is used to display a fallback image if the main image is not found. The fallback image can be a text string or an image file.
-
-<Playground name="avatarFallback" root="avatar" />
-
-There are a few reasons why an img tag might not render an image. Here are some of the most common reasons:
+The `fallback` prop is used to display a fallback if the main image cannot be loaded or encountered an error.
 
 - The image file is not found. Make sure the image file is in the same directory as the HTML file, or that you have provided the correct path to the image file.
 - The image file is corrupt. Try downloading the image file again.
@@ -70,15 +52,13 @@ There are a few reasons why an img tag might not render an image. Here are some 
 - The image file is not a supported format. Some web servers only support certain image file formats, such as JPEG, PNG, and GIF. If your image file is not in one of these formats, try converting it to a supported format.
 - The image file is blocked by the browser's security settings. Some browsers block images from certain websites. If you are seeing a message that says "Image is blocked," try clearing your browser's cache and cookies.
 
+<Playground name="avatarFallback" root="avatar" />
+
 ## Avatar Group
 
 AvatarGroup is a component that groups multiple Avatar components with an optional limit and layout, and also accepts the same props as Avatar.
 
-## Props
-
 ### limit
-
-The maximum number of avatars to display.
 
 <Playground direction="column" name="avatarGroupLimit" root="avatar" />
 
@@ -93,32 +73,3 @@ The layout of the avatars. Can be one of stack or grid.
 The Avatar.Group component can be used to group multiple Avatar components together, and set common props such as color, corner, size, and variant for all the avatars in the group, instead of repeating them for each individual Avatar. This can help reduce repetition in your code and make it more efficient.
 
 <Playground direction="column" name="avatarGroupContext" root="avatar" />
-
-## Troubleshooting:
-
-- If the Avatar component is not displaying properly, there may be an issue with the image source or size. Make sure that the image source is valid and accessible, and that the dimensions of the image are appropriate for the Avatar component.
-- If the Avatar Group component is not displaying properly, there may be an issue with the number of avatars being displayed. Make sure that the Avatar Group component is configured to display the correct number of avatars, and that the spacing between the avatars is appropriate.
-- If you're encountering any other issues with the Avatar or Avatar Group components, it's recommended to consult the documentation or community forums for the specific library or framework that you're using, as there may be specific troubleshooting steps or solutions available.
-
-## Best Practice
-
-- Use avatars in a consistent way. Once you decide to use avatars on your website, it's important to use them in a consistent way. This means using the same size, shape, and style for all of your avatars. It also means using them in the same places on your website. This will help to create a more visually appealing and user-friendly experience.
-- Use avatars to represent different types of users. Avatars can be used to represent different types of users on your website. For example, you could use different avatars for registered users, guest users, and administrators. This can help to make it clear to users what their role is on your website.
-- Use avatars to add personality to your website. Avatars can be used to add personality to your website. This is especially important if your website is aimed at a younger audience. By using fun and creative avatars, you can help to make your website more engaging and appealing to users.
-- Use avatars to promote social interaction. Avatars can be used to promote social interaction on your website. For example, you could use avatars in your comment section or forum. This can help to make your website more interactive and engaging for users.
-
-## Use Case
-
-The Avatar component can be used in a variety of applications where users need to be represented by an image or initials, such as social media, messaging apps, and user profile pages. By providing various customization options, the Avatar component can be adapted to match the look and feel of any application.
-
-- User profiles: Avatar components are commonly used on user profiles to represent the user's image or identity. This can include photos of the user or custom-designed avatars that the user selects or creates.
-
-- User accounts: Avatar components can also be used on user accounts to identify and personalize the user's experience. This can help users feel more connected to the website or application and make it easier to navigate.
-
-- Social features: Avatar components are often used in social features such as chat or messaging systems, where users can see each other's avatars to identify who they are communicating with. This can make social interactions more engaging and memorable.
-
-- Comment sections: Avatar components can also be used in comment sections or discussion forums to represent the user who is leaving the comment. This can help to create a sense of community and make it easier to follow conversations.
-
-## Conclusion
-
-The Avatar component is a versatile UI element that provides a simple and intuitive way to represent users with a profile picture or initials. With its many customization options, it can be easily adapted to match the look and feel of any application. Additionally, its TypeScript support makes it easy to use and integrate into TypeScript-based projects.

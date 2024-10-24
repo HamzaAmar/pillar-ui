@@ -9,6 +9,7 @@ export const HeadingColor = () => {
       <Heading color="p">Hello World</Heading>
       <Heading color="b">Hello World</Heading>
       <Heading color="se">Hello World</Heading>
+      <Heading color="i">Hello World</Heading>
 
       <Heading low color="d">
         Hello World
@@ -26,6 +27,9 @@ export const HeadingColor = () => {
         Hello World
       </Heading>
       <Heading low color="se">
+        Hello World
+      </Heading>
+      <Heading low color="i">
         Hello World
       </Heading>
     </>

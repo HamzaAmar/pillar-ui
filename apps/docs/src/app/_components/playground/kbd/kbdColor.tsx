@@ -10,6 +10,7 @@ export const KbdColor = () => {
       <Kbd title="Esc" color="p" />
       <Kbd title="Esc" color="b" />
       <Kbd title="Esc" color="se" />
+      <Kbd title="Esc" color="i" />
     </>
   )
 }

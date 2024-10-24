@@ -32,7 +32,7 @@ export const SelectColor = () => {
       <Select color="b">
         <Options />
       </Select>
-      <Select>
+      <Select color="i">
         <Options />
       </Select>
     </>

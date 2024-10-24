@@ -8,55 +8,20 @@ const breadcrumbsItems = [
 ]
 
 export const BreadcrumbColor = () => {
+  const items = breadcrumbsItems.map(({ name, link, current }) => (
+    <BreadcrumbItem current={current} key={name} link={link}>
+      {name}
+    </BreadcrumbItem>
+  ))
   return (
     <>
-      <Breadcrumb color="d">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-
-      <Breadcrumb color="w">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-
-      <Breadcrumb color="su">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-
-      <Breadcrumb color="se">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-
-      <Breadcrumb color="p">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-
-      <Breadcrumb color="b">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
+      <Breadcrumb color="d">{items}</Breadcrumb>
+      <Breadcrumb color="w">{items}</Breadcrumb>
+      <Breadcrumb color="su">{items}</Breadcrumb>
+      <Breadcrumb color="se">{items}</Breadcrumb>
+      <Breadcrumb color="p">{items}</Breadcrumb>
+      <Breadcrumb color="b">{items}</Breadcrumb>
+      <Breadcrumb color="i">{items}</Breadcrumb>
     </>
   )
 }

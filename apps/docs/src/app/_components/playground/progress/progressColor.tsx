@@ -10,6 +10,7 @@ export const ProgressColor = () => {
         <ProgressBar color="se" value={90} label="hello" />
         <ProgressBar color="b" value={90} label="hello" />
         <ProgressBar color="p" value={90} label="hello" />
+        <ProgressBar color="i" value={90} label="hello" />
       </div>
 
       <Flex gap="4" wrap>
@@ -19,6 +20,7 @@ export const ProgressColor = () => {
         <ProgressCircle color="se" value={90} label="hello" />
         <ProgressCircle color="b" value={90} label="hello" />
         <ProgressCircle color="p" value={90} label="hello" />
+        <ProgressCircle color="i" value={90} label="hello" />
       </Flex>
 
       <ProgressBarStack label="Nice to meet you">

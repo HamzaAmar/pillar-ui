@@ -56,6 +56,8 @@ export const StepperColor = () => {
       <StepperBase color="p" completeComponent={<CompleteComponent />} />
       <StepperBase color="se" completeComponent={<CompleteComponent />} />
       <StepperBase color="d" completeComponent={<CompleteComponent />} />
+      <StepperBase color="i" completeComponent={<CompleteComponent />} />
+      <StepperBase color="su" completeComponent={<CompleteComponent />} />
     </>
   )
 }

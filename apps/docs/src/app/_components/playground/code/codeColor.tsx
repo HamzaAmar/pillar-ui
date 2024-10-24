@@ -9,6 +9,7 @@ export const CodeColor = () => {
       <Code color="p">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="b">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="se">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code color="i">{`console.log('Hello world Every thing is OK')`}</Code>
     </>
   )
 }

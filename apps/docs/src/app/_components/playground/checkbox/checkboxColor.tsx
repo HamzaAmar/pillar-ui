@@ -10,6 +10,7 @@ export const CheckboxColor = () => {
       <Checkbox name="hello" label="Options 5" color="p" />
       <Checkbox name="hello" label="Options 6" color="se" />
       <Checkbox name="hello" label="Options 7" color="b" />
+      <Checkbox name="hello" label="Options 7" color="i" />
     </>
   )
 }

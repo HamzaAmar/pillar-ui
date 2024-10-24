@@ -21,6 +21,9 @@ export const BlockquoteColor = () => {
       <Blockquote color="b" cite="John Doe">
         This is the quoted text.
       </Blockquote>
+      <Blockquote color="i" cite="John Doe">
+        This is the quoted text.
+      </Blockquote>
     </>
   )
 }
