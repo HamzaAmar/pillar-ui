@@ -8,9 +8,7 @@ export const TextTruncate = () => {
       <Text truncate="2">{TEXT}</Text>
       <Text truncate="3">{TEXT}</Text>
       <Text truncate="4">{TEXT}</Text>
-
       <Text truncate="5">{TEXT}</Text>
-
       <Text>{TEXT}</Text>
     </>
   )

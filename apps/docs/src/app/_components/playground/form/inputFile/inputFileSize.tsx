@@ -1,6 +1,6 @@
 import { InputFile } from '@pillar-ui/core'
 
-export const InputFileFileSize = () => {
+export const InputFileSize = () => {
   return (
     <>
       <InputFile size="1" />

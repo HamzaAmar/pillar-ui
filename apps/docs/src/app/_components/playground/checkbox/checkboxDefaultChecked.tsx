@@ -9,6 +9,7 @@ export const CheckboxDefaultChecked = () => {
       <Checkbox defaultChecked name="hello" label="Hello" color="p" />
       <Checkbox defaultChecked name="hello" label="Hello" color="se" />
       <Checkbox defaultChecked name="hello" label="Hello" color="b" />
+      <Checkbox defaultChecked name="hello" label="Hello" color="i" />
     </>
   )
 }

@@ -1,25 +1,19 @@
 import { Avatar, AvatarGroup } from '@pillar-ui/core'
 
+const Avatars = ({ start = 1, count = 8 }: { start?: number; count?: number }) => {
+  return Array.from({ length: count }, (_, i) => (
+    <Avatar image={`https://i.pravatar.cc/120?img=${i + start}`} title="Hello" />
+  ))
+}
+
 export const AvatarGroupStack = () => {
   return (
     <>
       <AvatarGroup layout="stack">
-        <Avatar image="https://i.pravatar.cc/120?img=11" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=12" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=18" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=19" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=20" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=21" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=22" title="Hello" />
+        <Avatars />
       </AvatarGroup>
       <AvatarGroup layout="grid">
-        <Avatar image="https://i.pravatar.cc/120?img=31" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=32" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=38" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=39" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=40" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=41" title="Hello" />
-        <Avatar image="https://i.pravatar.cc/120?img=42" title="Hello" />
+        <Avatars start={20} />
       </AvatarGroup>
     </>
   )
