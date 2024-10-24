@@ -4,7 +4,7 @@ export const InputFileCorner = () => {
   return (
     <>
       <InputFile corner="0" />
-      <InputFile corner="3" />
+      <InputFile corner="1" />
       <InputFile corner="2" />
       <InputFile corner="3" />
       <InputFile corner="4" />

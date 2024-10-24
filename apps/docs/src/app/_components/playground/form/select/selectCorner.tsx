@@ -17,7 +17,7 @@ export const SelectCorner = () => {
       <Select corner="0">
         <Options />
       </Select>
-      <Select corner="3">
+      <Select corner="1">
         <Options />
       </Select>
       <Select corner="2">

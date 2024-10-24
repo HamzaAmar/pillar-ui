@@ -4,7 +4,7 @@ export const TextareaCorner = () => {
   return (
     <>
       <Textarea corner="0" placeholder="sharp" />
-      <Textarea corner="3" placeholder="3" />
+      <Textarea corner="1" placeholder="3" />
       <Textarea corner="2" placeholder="sm" />
       <Textarea corner="3" placeholder="md" />
       <Textarea corner="4" placeholder="lg" />

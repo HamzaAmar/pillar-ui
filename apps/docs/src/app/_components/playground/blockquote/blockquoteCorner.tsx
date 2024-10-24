@@ -6,7 +6,7 @@ export const BlockquoteCorner = () => {
       <Blockquote corner="0" cite="John Doe">
         This is the quoted text.
       </Blockquote>
-      <Blockquote corner="3" cite="John Doe">
+      <Blockquote corner="1" cite="John Doe">
         This is the quoted text.
       </Blockquote>
       <Blockquote corner="2" cite="John Doe">

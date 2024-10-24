@@ -6,7 +6,10 @@ export const PaperCorner = () => {
       <Paper className="F-c" p="3" background="b-5" width="25c" ratio="1" corner="0">
         sharp
       </Paper>
-      <Paper className="F-c" p="3" background="b-5" width="25c" ratio="1" corner="3">
+      <Paper className="F-c" p="3" background="b-5" width="25c" ratio="1" corner="2">
+        3
+      </Paper>
+      <Paper className="F-c" p="3" background="b-5" width="25c" ratio="1" corner="1">
         3
       </Paper>
       <Paper className="F-c" p="3" background="b-5" width="25c" ratio="1" corner="3">

@@ -58,6 +58,7 @@ export const AccordionCorner = () => {
   return (
     <>
       <AccordionBase separate variant="soft" corner="0" />
+      <AccordionBase separate variant="soft" corner="1" />
       <AccordionBase separate variant="soft" corner="2" />
       <AccordionBase separate variant="soft" corner="3" />
       <AccordionBase separate variant="soft" corner="4" />
