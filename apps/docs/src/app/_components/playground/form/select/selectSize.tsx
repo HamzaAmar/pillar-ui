@@ -14,6 +14,12 @@ const Options = () => {
 export const SelectSize = () => {
   return (
     <>
+      <Select size="1">
+        <Options />
+      </Select>
+      <Select size="2">
+        <Options />
+      </Select>
       <Select size="3">
         <Options />
       </Select>
