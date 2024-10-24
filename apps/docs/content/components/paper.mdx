@@ -8,62 +8,35 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Usage
-
-## Props
-
-The Paper component accepts the following props:
-
-### Background
-
-The background prop determines the background color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it defaults to the white color.
+## Background
 
 <Playground name="accordionCollapsible" root="accordion" />
 
-### Color
-
-The color prop determines the text color of the Paper component. It accepts any of the Color types defined in our library or (Color-Step) (for 12 different levels of the color). If not provided, it `inherit` the of its parent.
-
-We recommend using the color from step 11 or 12 because it provides high contrast against the background. It's important to always check color contrast when changing the background or paper color.
+## Color
 
 <Playground name="accordionCollapsible" root="accordion" />
 
-### Corner
-
-**corner**
-Type: string
-Default: md
-Options: sharp 3 sm md lg xl circle full
-
-The corner prop determines the border radius of the Paper component. It accepts any of the Corner types defined in our library, including (sharp, 3, sm, md, lg, xl, circle, full). If not provided, it defaults to the md corner.
+## Corner
 
 <Playground name="accordionCollapsible" root="accordion" />
 
-### Padding
-
-The padding prop determines the padding size of the Paper component. It accepts any of the Size types defined in our library. If not provided, it defaults to the md padding.
+## Padding
 
 <Playground name="accordionCollapsible" root="accordion" />
 
-### Margin
-
-The margin prop determines the margin size of the Paper component. It accepts any of the Size types defined in our library. If not provided, it defaults to the md padding.
+## Margin
 
 <Playground name="accordionCollapsible" root="accordion" />
 
-### Flow
-
-The flow prop determines the space between the Paper and its surrounding elements. It accepts any of the Size types defined in our library, excluding (2xl, 2). If not provided, it defaults to the md spacing.
+## Flow
 
 <Playground name="accordionCollapsible" root="accordion" />
 
-### Shadow
-
-The shadow prop determines the shadow of the Paper. It accepts any of the Shadow types defined in our library, including (none, 3, sm, md, lg, xl). If not provided, it defaults to the none shadow.
+## Shadow
 
 <Playground name="accordionCollapsible" root="accordion" />
 
-### Width
+## Width
 
 The Paper component provides a convenient width prop for controlling its horizontal dimensions. This prop accepts specific string values that correspond to predefined width classes.
 **Available Width Classes:**
@@ -82,26 +55,4 @@ The Paper component provides a convenient width prop for controlling its horizon
 
 <Playground name="accordionCollapsible" root="accordion" />
 
-**How it Works:**
-
-The prop leverage the CSS `min()` function to ensure the `Paper` component never exceeds the available space within its parent container. This makes the component responsive across different screen sizes and viewport widths.
-
-**Choosing the Right Class:**
-
-- **Characters (`ch`):** Ideal for controlling line length and readability of text content.
-- **(half, one-threadId,full):** Useful for proportional layouts where the `Paper` component should occupy a relative portion of its parent.
-- **`fit-content`:** Lets the content itself determine the width, which is handy for elements with varying content sizes.
-
 <Playground name="accordionCollapsible" root="accordion" />
-
-## Use Case
-
-In this section, you will provide an overview of the use case that this document is addressing. You will describe the problem that the code/library solves, and provide a high-level overview of how it works.
-
-## Troubleshooting
-
-In this section, you will provide guidance on troubleshooting common issues that may arise when using the code/library. You will provide solutions to common problems and explain how to debug issues.
-
-## Conclusion
-
-In this section, you will summarize the main points covered in the document. You will reiterate the use case for the code/library, highlight the key features, and provide a call to action for users to get started.

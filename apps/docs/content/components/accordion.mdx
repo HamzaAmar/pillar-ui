@@ -8,61 +8,26 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Props
-
-The Accordion component is a reusable component that allows you to create a collapsible accordion interface.
-
-### Type
-
-type: Specifies the type of accordion. It can be either `single` or `multiple`. If `single`, only one item can be open at a time. If `multiple`, multiple items can be open at the same time. By default, the type is `single`.
+## Type
 
 <Playground name="accordionType" root="accordion" />
 
-Certainly! Here's the updated separation of the props into different sections and the removal of the `separate` prop
-from the `corner` section:
-
-### Corner Props
-
-The size prop determines the corners of the Accordion. It accepts any of the Size types defined in your library. If not provided, it defaults to the `md` size.
+## Corner Props
 
 <Playground name="accordionCorner" root="accordion" />
 
-### Separate Props
-
-The separate prop determines whether to separate the accordion items or not. If set to `true`, it separates the accordion items with a border. If not provided, it defaults to `false`.
+## Separate Props
 
 <Playground name="accordionSeparate" root="accordion" />
 
-I've added a new section for the `Separate` props and an example usage for it. The `separate` prop has been removed from the `corner` section and is now included in the `Separate` section.
-
-### Collapsible
-
-The "collapsible" prop specifies whether or not all accordion items can be closed. If "collapsible" is set to "true", then all accordion items can be closed even if there is no item still open. If "collapsible" is set to "false", then at least one accordion item must be open at all times.
-
-Here's an example of how to use the "collapsible" prop:
+## Collapsible
 
 <Playground name="accordionCollapsible" root="accordion" />
 
-### Variants
-
-The Accordion component has four variants available: solid, soft, outline, and the default variant. You can specify the variant using the variant prop.
+## Variants
 
 <Playground name="accordionVariant" root="accordion" />
 
-### Sizes
-
-The Accordion component supports seven different sizes, ranging from 2 to 2xl. You can specify the size using the size prop.
+## Sizes
 
 <Playground name="accordionSize" root="accordion" />
-
-## Use Case
-
-The AccordionBase component is useful when you need to display a list of items with associated content that can be collapsed and expanded. This can be useful in a variety of contexts such as:
-
-- FAQ pages
-- Product pages with detailed descriptions
-- Tutorials with multiple steps
-
-## Troubleshooting
-
-If you encounter issues with the accordion not functioning as expected, make sure that the HTML structure and CSS classes are correct, and that the JavaScript

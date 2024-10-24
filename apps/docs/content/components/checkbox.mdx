@@ -10,13 +10,9 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 ## Label
 
-The label prop is used to specify the text that appears next to the checkbox.
-
 <Playground name="checkboxLabel" root="checkbox" />
 
 ## Size
-
-The size prop determines the size of the Badge. It accepts the following values:
 
 <Playground name="checkboxSize" root="checkbox" />
 
@@ -26,44 +22,14 @@ The size prop determines the size of the Badge. It accepts the following values:
 
 ## Disabled
 
-The disabled state of the Checkbox component is used to indicate that the checkbox cannot be interacted with. It is often used when the user is not allowed to select an option or when the option is not applicable in the current context. In this state, the checkbox appears grayed out and its label may also be grayed out to indicate that it is disabled.
-
 <Playground name="checkboxDisabled" root="checkbox" />
 
 ## DefaultChecked
 
-The defaultChecked prop in the Checkbox component is used to set the initial checked state of the checkbox when it is first rendered. This prop can be used when you want the checkbox to be checked by default when the user first loads the page.
-
-### Usage
-
-<Playground name="checkboxDefaultChecked" root="checkbox" />
-
-Here's an example of using the defaultChecked prop with different colors in the Checkbox component:
-
 ## checkbox status
-
-Checkbox component can have different status based on its checked and isIndeterminate props:
-
-checked: When the checked prop is set to true, it means the checkbox is selected or checked. In the CheckboxStatus example, the second checkbox has the checked prop set to true.
-isIndeterminate: When the isIndeterminate prop is set to true, it means the checkbox is in an indeterminate or mixed state. This is commonly used when a group of checkboxes has a parent checkbox to select/deselect all its child checkboxes. In the CheckboxStatus example, the third and fourth checkboxes have the isIndeterminate prop set to true.
-By default, when neither checked nor isIndeterminate props are set, the checkbox is not selected and has no indeterminate state.
-
-Examples
 
 <Playground name="checkboxStatus" root="checkbox" />
 
 ## isIndeterminate
 
 <Playground direction="column" name="checkboxIsIndeterminate" root="checkbox" />
-
-## Use Case
-
-The Checkbox component is commonly used in forms to allow users to select or deselect options. It can be used to represent binary options, such as yes/no or agree/disagree.
-
-## Troubleshooting
-
-If you encounter any issues with the Checkbox component, make sure that you have correctly passed the props and values. If you are still having issues, check the console for any error messages.
-
-## Conclusion
-
-The Checkbox component is a simple yet important UI component that allows users to select or deselect options. It is flexible, customizable, and accessible, making it a great addition to any UI design.

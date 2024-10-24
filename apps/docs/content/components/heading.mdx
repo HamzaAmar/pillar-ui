@@ -8,62 +8,30 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Props
-
-### Size
-
-The size prop controls the size of the heading. The following values are valid:
+## Size
 
 <Playground direction="column" name="headingSize" root="heading" />
 
-### Weight
-
-The weight prop controls the weight (boldness) of the heading. The following values are valid:
+## Weight
 
 <Playground direction="column" name="headingWeight" root="heading" />
 
-### Truncate
-
-The truncate prop with the value of "multiline" will truncate the heading if it exceeds the specified numberLine prop value and will display an ellipsis at the end of the last visible line. On the other hand, if the truncate prop value is "singleline", it will truncate the heading to fit within a single line and display an ellipsis at the end of the truncated heading.
-
-truncate (optional): Determines whether the heading should be truncated and how it should be truncated. If the value is "singleline", the heading will be truncated to fit within a single line and display an ellipsis at the end of the truncated heading. If the value is "multiline", the heading will be truncated if it exceeds the specified numberLine prop value and display an ellipsis at the end of the last visible line.
+## Truncate
 
 <Playground name="headingTruncate" root="heading" />
 
-### Align
-
-This property specifies the horizontal alignment of the heading within the parent element. It can take one of the following values:
+## Align
 
 <Playground direction="column" name="headingAlign" root="heading" />
 
-### Color
+## Color
 
 <Playground direction="column" name="headingColor" root="heading" />
 
-### Leading
-
-you can customize the leading (line height) of your heading by using the leading prop. This prop accepts four different values: "normal", "sm", "md", and "lg"
-
-Example
+## Leading
 
 <Playground direction="column" name="headingLeading" root="heading" />
 
-By using the leading prop, you can easily adjust the line height of your heading to create a more visually appealing design.
-
-### dir RTL language
-
-This prop sets the direction of the heading within the component. It accepts the values "rtl" for right-to-left direction or "ltr" for left-to-right direction. This prop is useful when displaying heading in languages that are read from right to left, such as Arabic or Hebrew.
+## dir RTL language
 
 <Playground direction="column" name="headingRTL" root="heading" />
-
-## Use Case
-
-The Heading component can be used to display heading in various sizes and weights.
-
-## Troubleshooting
-
-If the heading is not displaying as expected, make sure that the correct props are being used and that any necessary styles are applied.
-
-## Conclusion
-
-The Heading component is a versatile component that can be used to display heading in various sizes and weights with full accessibility and TypeScript support.

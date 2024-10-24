@@ -8,59 +8,16 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-The Stepper component allows you to create a step-by-step process or progress indicator in your application. It helps users navigate through a series of sequential steps or stages, providing clear visual feedback on their progress. The Stepper component consists of two main parts: the main Stepper component and the Stepper.Step component.
-
-## Stepper
-
-The Stepper component is the main container that holds all the individual steps and manages the state of the active step. It provides various props to customize its appearance and behavior.
-
 ### Color
 
 <Playground name="stepperColor" root="stepper" />
 
 ### Corner
 
-Type: string
-Default: `md`
-Options: `sharp` `3` `sm` `md` `lg` `xl` `full`
-
-The corner prop determines the corner style of the Stepper component. It accepts a string value representing the corner style. The available options are:
-Example usage:
-
 <Playground name="stepperCorner" root="stepper" />
 
 ### Size
 
-Type: string
-Default: `md`
-Options: `2` `3` `sm` `md` `lg` `xl` `2xl`
-The size prop determines the size of the Stepper component. It accepts a string value representing the size. The available options are:
-Example usage:
-
 <Playground name="stepperSize" root="stepper" />
 
 ## Stepper.Step
-
-The Stepper.Step component represents an individual step within the Stepper component. It displays the step's title, icon, and description. You can include any custom content within each step to provide relevant information or actions for that step.
-
-## Use Case
-
-The Stepper component is suitable for the following use cases:
-
-- Multi-step forms: Guide users through a form with multiple sections or steps, ensuring they complete each step before moving to the next.
-- Onboarding flows: Provide a guided experience for new users, helping them complete onboarding tasks in a structured manner.
-- Progress tracking: Show the progress of a long process or workflow, such as a multi-step checkout or a task completion tracker.
-
-## Troubleshooting
-
-If you encounter any issues while using the Stepper component, consider the following troubleshooting steps:
-
-- Double-check that you have correctly passed the active and setActive props to the Stepper component.
-- Ensure that the active prop corresponds to a valid index of the steps array.
-- Verify that you have provided the required props (title, icon, etc.) for each Stepper.Step component.
-
-If the issue persists, consult the documentation or seek help from the development community for further assistance.
-
-## Conclusion
-
-The Stepper component provides an intuitive and visually appealing way to guide users through multi-step processes or track progress. By using the Stepper component in your application, you can enhance the user experience and make complex workflows more manageable. Experiment with the various customization options and adapt the Stepper component to your specific use cases.

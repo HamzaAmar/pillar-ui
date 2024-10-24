@@ -8,50 +8,22 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Props
-
-### Label
-
-The label prop is used to specify the text that appears next to the radio.
-
-Example:
+## Label
 
 <Playground name="radioLabel" root="radio" />
 
-### Color
+## Color
 
 <Playground name="radioColor" root="radio" />
 
-### Variant
-
-The variant prop controls the visual appearance of the radio button by changing the way it is displayed when selected. It determines whether the radio button has a solid ring, an outline, or a soft background color when it is checked. This allows you to customize the look and feel of the radio button to better match the design of your application.
+## Variant
 
 <Playground name="radioVariant" root="radio" />
 
-### Size
-
-The size of the radio button. Possible values are "2", "3","sm", "md", "lg", "xl", '2xl'. Defaults to "md".
+## Size
 
 <Playground name="radioSize" root="radio" />
 
-### State
-
-The Radio component can be in several different states depending on its props:
+## State
 
 <Playground name="radioState" root="radio" />
-
-## use case
-
-- When a user has not yet completed a form, but some options are not applicable or not yet available. By disabling certain radio buttons, you can indicate to the user that these options are not currently selectable, while still providing a visual representation of all the available choices.
-
-- When presenting information that is read-only or cannot be changed by the user. In this case, the radio buttons can be disabled to indicate that they are not interactive, and are only there for informational purposes.
-
-- When presenting a set of options that are only available to certain users or under certain conditions. By disabling some radio buttons, you can clearly show which options are available and which are not.
-
-- When dealing with multi-step processes, you may want to disable certain options until the user has completed a previous step. This can help prevent errors and ensure that the user follows the correct sequence of steps.
-
-- When presenting options that require additional permissions or authorization. By disabling certain radio buttons, you can indicate to the user that these options are only available to certain users or under certain conditions.
-
-## Customization
-
-The Radio component can be customized by passing a custom `className` or `style` prop. Additionally, you can create a custom Radio component by extending the base component and adding your own custom styles and functionality.
