@@ -8,29 +8,17 @@ const breadcrumbsItems = [
 ]
 
 export const BreadcrumbSeparator = () => {
+  const items = breadcrumbsItems.map(({ name, link, current }) => (
+    <BreadcrumbItem current={current} key={name} link={link}>
+      {name}
+    </BreadcrumbItem>
+  ))
+
   return (
     <>
-      <Breadcrumb>
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-      <Breadcrumb separator="*">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-      <Breadcrumb separator={<Minus width={10} />}>
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
+      <Breadcrumb>{items}</Breadcrumb>
+      <Breadcrumb separator="*">{items}</Breadcrumb>
+      <Breadcrumb separator={<Minus width={10} />}>{items}</Breadcrumb>
     </>
   )
 }

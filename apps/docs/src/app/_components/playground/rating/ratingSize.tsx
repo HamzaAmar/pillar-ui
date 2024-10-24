@@ -7,7 +7,7 @@ export const RatingSize = () => {
       <Rating rating={4} size="2" />
       <Rating rating={4} size="3" />
       <Rating rating={4} size="4" />
-      <Rating rating={4} />
+      <Rating rating={4} size="5" />
       <Rating rating={4} size="6" />
       <Rating rating={4} size="7" />
       <Rating rating={4} size="8" />

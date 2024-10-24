@@ -7,57 +7,22 @@ const breadcrumbsItems = [
 ]
 
 export const BreadcrumbSize = () => {
+  const items = breadcrumbsItems.map(({ name, link, current }) => (
+    <BreadcrumbItem current={current} key={name} link={link}>
+      {name}
+    </BreadcrumbItem>
+  ))
   return (
     <>
-      <Breadcrumb size="2" separator="-">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-      <Breadcrumb size="3" separator="-">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-      <Breadcrumb size="4" separator="-">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-      <Breadcrumb size="5" separator="-">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-      <Breadcrumb size="6" separator="-">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-      <Breadcrumb size="7" separator="-">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
-      <Breadcrumb size="8" separator="-">
-        {breadcrumbsItems.map(({ name, link, current }) => (
-          <BreadcrumbItem current={current} key={name} link={link}>
-            {name}
-          </BreadcrumbItem>
-        ))}
-      </Breadcrumb>
+      <Breadcrumb size="1">{items}</Breadcrumb>
+      <Breadcrumb size="2">{items}</Breadcrumb>
+      <Breadcrumb size="3">{items}</Breadcrumb>
+      <Breadcrumb size="4">{items}</Breadcrumb>
+      <Breadcrumb size="5">{items}</Breadcrumb>
+      <Breadcrumb size="6">{items}</Breadcrumb>
+      <Breadcrumb size="7">{items}</Breadcrumb>
+      <Breadcrumb size="8">{items}</Breadcrumb>
+      <Breadcrumb size="9">{items}</Breadcrumb>
     </>
   )
 }

@@ -7,7 +7,7 @@ export const SpinnerSize = () => {
       <Spinner size="2" />
       <Spinner size="3" />
       <Spinner size="4" />
-      <Spinner />
+      <Spinner size="5" />
       <Spinner size="6" />
       <Spinner size="7" />
       <Spinner size="8" />

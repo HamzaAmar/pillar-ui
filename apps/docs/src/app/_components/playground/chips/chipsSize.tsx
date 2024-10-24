@@ -3,6 +3,7 @@ import { Chips } from '@pillar-ui/core'
 export const ChipsSize = () => {
   return (
     <>
+      <Chips size="1">Hello</Chips>
       <Chips size="2">Hello</Chips>
       <Chips size="3">Hello</Chips>
       <Chips size="4">Hello</Chips>
@@ -10,6 +11,7 @@ export const ChipsSize = () => {
       <Chips size="6">Hello</Chips>
       <Chips size="7">Hello</Chips>
       <Chips size="8">Hello</Chips>
+      <Chips size="9">Hello</Chips>
     </>
   )
 }

@@ -9,8 +9,9 @@ export const CheckboxSize = () => {
       <Checkbox size="4" label="Option 4" />
       <Checkbox size="5" label="Option 5" />
       <Checkbox size="6" label="Option 6" />
-      <Checkbox size="8" label="Option 7" />
-      <Checkbox size="9" label="Option 8" />
+      <Checkbox size="7" label="Option 7" />
+      <Checkbox size="8" label="Option 8" />
+      <Checkbox size="9" label="Option 9" />
     </>
   )
 }

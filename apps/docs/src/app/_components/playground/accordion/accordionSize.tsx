@@ -6,13 +6,7 @@ function AccordionBase(props: any) {
     <Accordion {...props}>
       <AccordionItem value={1}>
         <AccordionButton>
-          <div>
-            <Text weight="5">Nice to Meet You</Text>
-            <Text size="2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
-              voluptatem obcaecati temporibus
-            </Text>
-          </div>
+          <Text weight="5">Nice to Meet You</Text>
         </AccordionButton>
         <AccordionPanel>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt hic debitis, neque accusamus atque
@@ -21,33 +15,12 @@ function AccordionBase(props: any) {
       </AccordionItem>
       <AccordionItem value={2}>
         <AccordionButton>
-          <div>
-            <Text weight="5">Nice to Meet You</Text>
-            <Text size="2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
-              voluptatem obcaecati temporibus
-            </Text>
-          </div>
+          <Text weight="5">Nice to Meet You</Text>
         </AccordionButton>
         <AccordionPanel>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos laborum distinctio officiis a eaque
           perspiciatis itaque, fugiat quaerat! Natus beatae eius ullam sed repellendus aliquam provident quod fugiat
           veniam recusandae.
-        </AccordionPanel>
-      </AccordionItem>
-      <AccordionItem value={3}>
-        <AccordionButton>
-          <div>
-            <Text weight="5">Nice to Meet You</Text>
-            <Text size="2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, consequatur nemo sapiente libero
-              voluptatem obcaecati temporibus
-            </Text>
-          </div>
-        </AccordionButton>
-        <AccordionPanel>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, voluptates ratione doloremque quasi error odio
-          animi mollitia? Blanditiis
         </AccordionPanel>
       </AccordionItem>
     </Accordion>
@@ -57,6 +30,7 @@ function AccordionBase(props: any) {
 export const AccordionSize = () => {
   return (
     <>
+      <AccordionBase size="1" />
       <AccordionBase size="2" />
       <AccordionBase size="3" />
       <AccordionBase size="4" />

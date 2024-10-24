@@ -4,6 +4,7 @@ export const ProgressSize = () => {
   return (
     <>
       <div className="Sf-3">
+        <ProgressBar size="1" value={90} label="hello" />
         <ProgressBar size="2" value={90} label="hello" />
         <ProgressBar size="3" value={90} label="hello" />
         <ProgressBar size="4" value={90} label="hello" />
@@ -11,8 +12,10 @@ export const ProgressSize = () => {
         <ProgressBar size="6" value={90} label="hello" />
         <ProgressBar size="7" value={90} label="hello" />
         <ProgressBar size="8" value={90} label="hello" />
+        <ProgressBar size="9" value={90} label="hello" />
       </div>
       <Flex wrap gap="4">
+        <ProgressCircle size="1" value={15} label="hello" />
         <ProgressCircle size="2" value={15} label="hello" />
         <ProgressCircle size="3" value={15} label="hello" />
         <ProgressCircle size="4" value={30} label="hello" />
@@ -20,6 +23,7 @@ export const ProgressSize = () => {
         <ProgressCircle size="6" value={60} label="hello" />
         <ProgressCircle size="7" value={90} label="hello" />
         <ProgressCircle size="8" value={95} label="hello" />
+        <ProgressCircle size="9" value={95} label="hello" />
       </Flex>
       <ProgressBarStack size="4" label="Nice to meet you">
         <ProgressBarStackItem label="CSS" color="d" value={30}>

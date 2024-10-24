@@ -53,6 +53,7 @@ export const StepperBase = (props: Omit<StepperProps, 'children' | 'setActive'>)
 export const StepperSize = () => {
   return (
     <>
+      <StepperBase size="1" completeComponent={<CompleteComponent />} />
       <StepperBase size="2" completeComponent={<CompleteComponent />} />
       <StepperBase size="3" completeComponent={<CompleteComponent />} />
       <StepperBase size="4" completeComponent={<CompleteComponent />} />
@@ -60,6 +61,7 @@ export const StepperSize = () => {
       <StepperBase size="6" completeComponent={<CompleteComponent />} />
       <StepperBase size="7" completeComponent={<CompleteComponent />} />
       <StepperBase size="8" completeComponent={<CompleteComponent />} />
+      <StepperBase size="9" completeComponent={<CompleteComponent />} />
     </>
   )
 }

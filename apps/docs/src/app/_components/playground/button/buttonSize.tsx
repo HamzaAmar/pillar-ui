@@ -7,6 +7,7 @@ export function ButtonSize() {
       <Button size="1">Hello World</Button>
       <Button size="2">Hello World</Button>
       <Button size="3">Hello World</Button>
+      <Button size="4">Hello World</Button>
       <Button size="5">Hello World</Button>
       <Button size="6">Hello World</Button>
       <Button size="7">Hello World</Button>

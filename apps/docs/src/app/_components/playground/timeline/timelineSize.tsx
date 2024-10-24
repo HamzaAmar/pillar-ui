@@ -34,6 +34,7 @@ const TimelineBase = (props: Omit<TimelineProps, 'children'>) => {
 export const TimelineSize = () => {
   return (
     <>
+      <TimelineBase size="1" />
       <TimelineBase size="2" />
       <TimelineBase size="3" />
       <TimelineBase size="4" />
@@ -41,6 +42,7 @@ export const TimelineSize = () => {
       <TimelineBase size="6" />
       <TimelineBase size="7" />
       <TimelineBase size="8" />
+      <TimelineBase size="9" />
     </>
   )
 }
