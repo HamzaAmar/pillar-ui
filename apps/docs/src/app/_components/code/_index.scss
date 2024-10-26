@@ -44,6 +44,8 @@
 }
 
 .doc-pre {
+  scrollbar-color: var(--O8) transparent;
+  scrollbar-width: thin;
   overflow: auto;
   height: 100%;
   max-height: 80vh;
