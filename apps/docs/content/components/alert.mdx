@@ -8,23 +8,19 @@ lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
-## Color
+## Usage
 
-<Playground direction="column" name="alertColor" root="alert" />
+```tsx
+import { Alert } from '@pillar-ui/core'
+```
 
-## Size
+```tsx
+<Alert title="Title" description="Description" icon={<AlertCircle />} />
+```
 
-<Playground direction="column" name="alertSize" root="alert" />
+## Examples
 
-## Variant
-
-<Playground direction="column" name="alertVariant" root="alert" />
-
-## Corner
-
-<Playground direction="column" name="alertCorner" root="alert" />
-
-## Content
+### Content
 
 The Content is not a props but we use it here to describe all the props related to the content of the alert.
 
@@ -34,16 +30,36 @@ The Content is not a props but we use it here to describe all the props related 
 
 <Playground direction="column" name="alertContent" root="alert" />
 
-## Icon
+### Color
+
+<Playground direction="column" name="alertColor" root="alert" />
+
+### Size
+
+<Playground direction="column" name="alertSize" root="alert" />
+
+### Variant
+
+<Playground direction="column" name="alertVariant" root="alert" />
+
+### Corner
+
+<Playground direction="column" name="alertCorner" root="alert" />
+
+### Icon
 
 <Playground direction="column" name="alertIcon" root="alert" />
 
-## Closable
+### Closable
 
 The `closable` prop controls whether the alert can be closed by the user. When set to `true`, a close button appears on the alert, allowing users to dismiss it. If not specified, it defaults to `false`.
 
 <Playground direction="column" name="alertClosable" root="alert" />
 
-## Inline
+### Inline
 
 <Playground direction="column" name="alertInline" root="alert" />
+
+### Controlled
+
+<Playground direction="column" name="alertControlled" root="alert" />
