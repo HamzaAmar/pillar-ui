@@ -15,6 +15,11 @@ export const BadgeVariant = () => {
         <Badge type="numeric" variant="mixed" number={15} max={15} color="d" />
         <Badge type="icon" variant="mixed" icon={<Check />} color="d" />
       </Flex>
+      <Flex gap="3" items="center">
+        <Badge type="dot" color="d" />
+        <Badge type="numeric" number={15} max={15} color="d" />
+        <Badge type="icon" icon={<Check />} color="d" />
+      </Flex>
     </>
   )
 }
