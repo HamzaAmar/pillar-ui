@@ -11,7 +11,9 @@ export const Item = forwardRef(({ title, level = 1, isActive, children, as: Tag 
       <Flex as={Tag} ref={ref} className="as-link" {...rest}>
         <div className="as-icon">
           {icon}
-          <Text transform="capitalize">{title}</Text>
+          <Text size="3" transform="capitalize">
+            {title}
+          </Text>
         </div>
         <span>{children}</span>
       </Flex>

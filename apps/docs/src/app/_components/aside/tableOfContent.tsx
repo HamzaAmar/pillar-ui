@@ -1,7 +1,7 @@
 'use client'
 
-import { Heading, Flex, Paper, Text } from '@pillar-ui/core'
-import { ListNumber } from '@pillar-ui/icons'
+import { Flex, Paper, Text } from '@pillar-ui/core'
+import { ListNumber, ArrowCircleTop } from '@pillar-ui/icons'
 import React, { useState, useRef, useEffect } from 'react'
 import { Item } from './listItem'
 import Link from 'next/link'
@@ -9,34 +9,6 @@ import Link from 'next/link'
 import type { HeadingProps } from './aside.type'
 import { usePathname } from 'next/navigation'
 
-// export function useScrollSpy(selectors: string) {
-//   const pathname = usePathname()
-//   const [activeId, setActiveId] = useState<string>()
-//   const observer = useRef<IntersectionObserver | null>(null)
-
-//   useEffect(() => {
-//     const elements = Array.from(document.querySelectorAll(selectors))
-//     observer.current?.disconnect()
-//     observer.current = new IntersectionObserver((entries) => {
-//       entries.forEach((entry) => {
-//         if (entry?.isIntersecting) {
-//           setActiveId(entry.target.getAttribute('id')!)
-//         }
-//       })
-//     }, options)
-
-//     elements.forEach((el) => {
-//       if (el) {
-//         observer.current?.observe(el)
-//       }
-//     })
-//     return () => {
-//       return observer.current?.disconnect()
-//     }
-//   }, [selectors, pathname])
-
-//   return activeId
-// }
 const useScrollSpy = (selectors: string) => {
   const [activeId, setActiveId] = useState<string>()
   const observer = useRef<IntersectionObserver | null>(null)
@@ -80,6 +52,13 @@ const TableOfContent = ({ contents }: { contents: HeadingProps[] | null }) => {
           return <Item as={Link} href={`#${slug}`} key={slug} isActive={isActive} {...rest} />
         })}
       </ul>
+
+      <Paper p="4" flow="4" className="toc-footer">
+        <Text as={Link} href="#doc-content" className="F-c toc-f-item" size="3" color="b" low>
+          Scroll To Top
+          <ArrowCircleTop width={16} />
+        </Text>
+      </Paper>
     </nav>
   )
 }

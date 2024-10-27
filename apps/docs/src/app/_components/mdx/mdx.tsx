@@ -9,6 +9,7 @@ import { highlight } from 'sugar-high'
 import { toSlug } from '~/utils/slug'
 import { Colors } from '../colors'
 import { DocsCode, Playground } from '../code'
+import { Prop } from '../prop'
 
 type CustomLinkProps = {} & Omit<LinkProps, 'href'> & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
@@ -89,6 +90,7 @@ let components = {
   Playground,
   Colors,
   Alert,
+  Prop,
 }
 
 export function CustomMDX(props: any) {

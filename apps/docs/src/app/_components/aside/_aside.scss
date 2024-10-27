@@ -72,3 +72,12 @@
 .menu-nest:is([data-active='true'], :focus-within) {
   height: auto;
 }
+
+.toc-footer {
+  border-top: 1px solid var(--B4);
+}
+
+.toc-f-item {
+  text-decoration: none;
+  gap: var(--S2);
+}
