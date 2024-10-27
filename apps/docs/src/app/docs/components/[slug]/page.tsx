@@ -5,6 +5,9 @@ import { DOMAIN } from '~/constant/domain'
 import { notFound } from 'next/navigation'
 import { SlugParamsProps } from '~/types/params'
 import { DocHeader, TableOfContent } from '~/app/_components'
+import { Flex, Paper, Text } from '@pillar-ui/core'
+import { ChevronLeft, ChevronRight } from '@pillar-ui/icons'
+import DocNavigate from '~/app/_components/docNavigate'
 
 export async function generateStaticParams() {
   return getComponents().map(({ slug }) => ({
@@ -13,11 +16,32 @@ export async function generateStaticParams() {
 }
 
 function Page({ params }: SlugParamsProps) {
-  const component = getComponentBySlug(params.slug)
-  if (!component) notFound()
-  const { content, headings, lastModified, publishedAt, title, ...rest } = component
+  const components = getComponents()
+  // const component = getComponents().find(({ slug }) => slug === params.slug)
+  const index = components.findIndex(({ slug }) => slug === params.slug)
+  const [prev, cur, next] =
+    index >= 0
+      ? [
+          components[index - 1] || null, // prev
+          components[index], // current
+          components[index + 1] || null, // next
+        ]
+      : [null, null, null]
+
+  console.log(
+    '----------------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n',
+    'Previous',
+    prev?.title,
+    'Current',
+    cur?.title,
+    'Next',
+    next?.title,
+    '----------------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n--------------------------\n'
+  )
+  if (!cur) notFound()
+  const { content, headings, lastModified, publishedAt, title, ...rest } = cur
   const img = `${DOMAIN}/pillar.png`
-  const directory = component.type === 'core' ? 'components' : component.type
+  const directory = cur.type === 'core' ? 'components' : cur.type
   return (
     <>
       <script
@@ -27,13 +51,13 @@ function Page({ params }: SlugParamsProps) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            headline: component.title,
+            headline: cur.title,
             datePublished: publishedAt,
             dateModified: lastModified,
-            description: component.excerpt,
+            description: cur.excerpt,
             image: img,
             codeRepository: '',
-            url: `${DOMAIN}/docs/${directory}/${component.slug}`,
+            url: `${DOMAIN}/docs/${directory}/${cur.slug}`,
             author: {
               '@type': 'Organization',
               name: 'Pillar UI',
@@ -42,10 +66,14 @@ function Page({ params }: SlugParamsProps) {
           }),
         }}
       />
-      <div className="docs--content">
+      <div id="doc-content" className="docs--content">
         <DocHeader root="pillar-core/src/core" title={title} {...rest} />
-        <div className="section prose Sf-5">
+        <div className="section prose Sf-6">
           <CustomMDX source={content} />
+          <Flex as={Paper} mt="9" gap="4" justify="between" items="center" wrap>
+            {prev && <DocNavigate title={prev.title} slug={prev.slug} to="previous" />}
+            {next && <DocNavigate title={next.title} slug={next.slug} to="next" />}
+          </Flex>
         </div>
       </div>
       {<TableOfContent contents={headings} />}

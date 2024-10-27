@@ -1,0 +1,28 @@
+.navigate-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--B12);
+  max-width: 480px;
+
+  &:hover {
+    background: var(--O2);
+  }
+
+  & svg {
+    transform: rotate(90deg);
+  }
+
+  &[data-to='next'] {
+    justify-content: end;
+
+    & svg {
+      transform: rotate(-90deg);
+      order: 2;
+    }
+  }
+}
