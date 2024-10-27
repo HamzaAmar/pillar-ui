@@ -22,6 +22,8 @@ import { Text } from '@pillar-ui/core'
 
 ### Size
 
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
+
 <Playground name="textSize" root="text" />
 
 ### Weight
@@ -38,11 +40,27 @@ import { Text } from '@pillar-ui/core'
 
 ### Color
 
+<Prop defaultValue="p" type="'i' | 'd' | 'su' | 'se' | 'w' | 'p' | 'b' | 'o'" />
+
 <Playground name="textColor" root="text" />
+
+### Style
+
+<Prop type="'italic' | 'oblique'" />
+
+<Playground direction="column" name="textStyle" root="text" />
+
+### Decoration
+
+<Prop type="'through' | 'under' |'over'" />
+
+<Playground direction="column" name="textDecoration" root="text" />
 
 ### Leading
 
-<Playground name="textLeading" root="text" />
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' " />
+
+<Playground direction="column" name="textLeading" root="text" />
 
 ### dir For RTL language Support
 

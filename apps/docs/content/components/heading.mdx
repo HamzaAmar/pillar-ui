@@ -22,6 +22,8 @@ import { Heading } from '@pillar-ui/core'
 
 ### Size
 
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
+
 <Playground direction="column" name="headingSize" root="heading" />
 
 ### Weight
@@ -30,17 +32,37 @@ import { Heading } from '@pillar-ui/core'
 
 ### Truncate
 
+<Prop type="'1' | '2' | '3' | '4' | '5' | '6'" />
+
 <Playground name="headingTruncate" root="heading" />
 
 ### Align
+
+<Prop type="''start' | 'center' | 'end'" />
 
 <Playground direction="column" name="headingAlign" root="heading" />
 
 ### Color
 
+<Prop defaultValue="p" type="'i' | 'd' | 'su' | 'se' | 'w' | 'p' | 'b' | 'o'" />
+
 <Playground direction="column" name="headingColor" root="heading" />
 
+### Style
+
+<Prop type="'italic' | 'oblique'" />
+
+<Playground direction="column" name="headingStyle" root="heading" />
+
+### Decoration
+
+<Prop type="'through' | 'under' |'over'" />
+
+<Playground direction="column" name="headingDecoration" root="heading" />
+
 ### Leading
+
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' " />
 
 <Playground direction="column" name="headingLeading" root="heading" />
 
