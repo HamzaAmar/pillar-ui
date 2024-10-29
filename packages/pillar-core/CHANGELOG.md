@@ -1,5 +1,11 @@
 # @pillar/core
 
+## 0.10.11
+
+### Patch Changes
+
+- Add new Patch Release to fix the issue with peerDep and changeset that cause a build issue
+
 ## 0.10.10
 
 ### Patch Changes
