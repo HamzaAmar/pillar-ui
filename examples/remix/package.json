@@ -11,7 +11,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@pillar-ui/core": "^0.10.8",
+    "@pillar-ui/core": "^0.10.11",
     "@remix-run/node": "^2.13.1",
     "@remix-run/react": "^2.13.1",
     "@remix-run/serve": "^2.13.1",

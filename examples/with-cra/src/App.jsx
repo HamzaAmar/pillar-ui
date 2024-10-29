@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button, Paper } from '@pillar-ui/core'
 import '@pillar-ui/core/main.css'
+// import { Provider } from '@/components/ui/provider'
 
 function App() {
   const [count, setCount] = useState(0)

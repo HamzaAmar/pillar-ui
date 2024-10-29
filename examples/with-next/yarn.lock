@@ -72,72 +72,72 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/env@npm:14.2.8"
-  checksum: 10c0/8fd09c932ff472c9fd6c58c532f85972b7b0c72ef40bd937034ae34f3ff2692d6c829ef31b30eda761d467b1cd2c7ab7ad31aed829547546483e8beaf6d753f9
+"@next/env@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/env@npm:14.2.16"
+  checksum: 10c0/e9d795727bc43f171557a7a91111c9b71833840061275b5d4adf96f416febf4f02afb9dac1f4275f4a3e96a0a0db22b58fe934483e2823e76a5d3c60a563394b
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/swc-darwin-arm64@npm:14.2.8"
+"@next/swc-darwin-arm64@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-darwin-arm64@npm:14.2.16"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/swc-darwin-x64@npm:14.2.8"
+"@next/swc-darwin-x64@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-darwin-x64@npm:14.2.16"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/swc-linux-arm64-gnu@npm:14.2.8"
+"@next/swc-linux-arm64-gnu@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-linux-arm64-gnu@npm:14.2.16"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/swc-linux-arm64-musl@npm:14.2.8"
+"@next/swc-linux-arm64-musl@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-linux-arm64-musl@npm:14.2.16"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/swc-linux-x64-gnu@npm:14.2.8"
+"@next/swc-linux-x64-gnu@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-linux-x64-gnu@npm:14.2.16"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/swc-linux-x64-musl@npm:14.2.8"
+"@next/swc-linux-x64-musl@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-linux-x64-musl@npm:14.2.16"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/swc-win32-arm64-msvc@npm:14.2.8"
+"@next/swc-win32-arm64-msvc@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-win32-arm64-msvc@npm:14.2.16"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/swc-win32-ia32-msvc@npm:14.2.8"
+"@next/swc-win32-ia32-msvc@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-win32-ia32-msvc@npm:14.2.16"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:14.2.8":
-  version: 14.2.8
-  resolution: "@next/swc-win32-x64-msvc@npm:14.2.8"
+"@next/swc-win32-x64-msvc@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-win32-x64-msvc@npm:14.2.16"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -169,23 +169,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pillar-ui/core@npm:^0.9.1":
-  version: 0.9.1
-  resolution: "@pillar-ui/core@npm:0.9.1"
+"@pillar-ui/core@npm:^0.10.11":
+  version: 0.10.11
+  resolution: "@pillar-ui/core@npm:0.10.11"
   peerDependencies:
+    "@pillar-ui/hooks": ">=0.7 <1"
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 10c0/c55dee6a683fbc55501185f5085aa4c2a4d4480f36694a072ed8567e86a3069abd31e106e505081fe1e17002a17e2285e67ddb83cf36d224f112ec1fdf7201d5
+  checksum: 10c0/263825d8a5d830bfb4fc81f139e54569b0437ad73cf28568b7ae99a68264553a96abfb86aac2c0d23938966d2c94f57ef0311d5ca947b2d2c259f3ba3e112b63
   languageName: node
   linkType: hard
 
-"@pillar-ui/icons@npm:^0.7.4":
-  version: 0.7.4
-  resolution: "@pillar-ui/icons@npm:0.7.4"
+"@pillar-ui/icons@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "@pillar-ui/icons@npm:0.8.2"
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 10c0/ec308e48d76a3ec53c2d082f42d624fe8aa1a71336942f0879ab4e3cef1b37d08c9abad8c765b51b2986a9ba4f1386fe456d074c4f950087040f78a3cf19581a
+  checksum: 10c0/ce8b377fc98049dc004c13b2d081fd8636e94cbe9917261961bc7b3737dafc83cc9ff6923262d15ceb4e43e7bf52fa2dcae9323ca1d96870b6920fcac81aa9ca
   languageName: node
   linkType: hard
 
@@ -867,20 +868,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:14.2.8":
-  version: 14.2.8
-  resolution: "next@npm:14.2.8"
+"next@npm:14.2.16":
+  version: 14.2.16
+  resolution: "next@npm:14.2.16"
   dependencies:
-    "@next/env": "npm:14.2.8"
-    "@next/swc-darwin-arm64": "npm:14.2.8"
-    "@next/swc-darwin-x64": "npm:14.2.8"
-    "@next/swc-linux-arm64-gnu": "npm:14.2.8"
-    "@next/swc-linux-arm64-musl": "npm:14.2.8"
-    "@next/swc-linux-x64-gnu": "npm:14.2.8"
-    "@next/swc-linux-x64-musl": "npm:14.2.8"
-    "@next/swc-win32-arm64-msvc": "npm:14.2.8"
-    "@next/swc-win32-ia32-msvc": "npm:14.2.8"
-    "@next/swc-win32-x64-msvc": "npm:14.2.8"
+    "@next/env": "npm:14.2.16"
+    "@next/swc-darwin-arm64": "npm:14.2.16"
+    "@next/swc-darwin-x64": "npm:14.2.16"
+    "@next/swc-linux-arm64-gnu": "npm:14.2.16"
+    "@next/swc-linux-arm64-musl": "npm:14.2.16"
+    "@next/swc-linux-x64-gnu": "npm:14.2.16"
+    "@next/swc-linux-x64-musl": "npm:14.2.16"
+    "@next/swc-win32-arm64-msvc": "npm:14.2.16"
+    "@next/swc-win32-ia32-msvc": "npm:14.2.16"
+    "@next/swc-win32-x64-msvc": "npm:14.2.16"
     "@swc/helpers": "npm:0.5.5"
     busboy: "npm:1.6.0"
     caniuse-lite: "npm:^1.0.30001579"
@@ -921,7 +922,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/ceead5258f80dc2a4e911cb3e8c224ce5487c726587a79ea0a510192305f2e66a17a002841c3c0b195fd568c9a35160f563042417d3807eb5f6538c7630615de
+  checksum: 10c0/8cd036a6f30d4cc8ab8480c19339ee6134ffd5b18338ff5a07de397ed4e29fad54de5219f70aafabf1fe9c48a7d54b7df58ba1f29cfa5d3351ff7763e8d4844e
   languageName: node
   linkType: hard
 
@@ -1200,23 +1201,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.5.4":
-  version: 5.5.4
-  resolution: "typescript@npm:5.5.4"
+"typescript@npm:^5.6.3":
+  version: 5.6.3
+  resolution: "typescript@npm:5.6.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/422be60f89e661eab29ac488c974b6cc0a660fb2228003b297c3d10c32c90f3bcffc1009b43876a082515a3c376b1eefcce823d6e78982e6878408b9a923199c
+  checksum: 10c0/44f61d3fb15c35359bc60399cb8127c30bae554cd555b8e2b46d68fa79d680354b83320ad419ff1b81a0bdf324197b29affe6cc28988cd6a74d4ac60c94f9799
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.5.4#optional!builtin<compat/typescript>":
-  version: 5.5.4
-  resolution: "typescript@patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"
+"typescript@patch:typescript@npm%3A^5.6.3#optional!builtin<compat/typescript>":
+  version: 5.6.3
+  resolution: "typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=379a07"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/73409d7b9196a5a1217b3aaad929bf76294d3ce7d6e9766dd880ece296ee91cf7d7db6b16c6c6c630ee5096eccde726c0ef17c7dfa52b01a243e57ae1f09ef07
+  checksum: 10c0/ac8307bb06bbfd08ae7137da740769b7d8c3ee5943188743bb622c621f8ad61d244767480f90fbd840277fbf152d8932aa20c33f867dea1bb5e79b187ca1a92f
   languageName: node
   linkType: hard
 
@@ -1251,16 +1252,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "with-next@workspace:."
   dependencies:
-    "@pillar-ui/core": "npm:^0.9.1"
-    "@pillar-ui/icons": "npm:^0.7.4"
+    "@pillar-ui/core": "npm:^0.10.11"
+    "@pillar-ui/icons": "npm:^0.8.2"
     "@types/node": "npm:^20.16.5"
     "@types/react": "npm:^18.3.5"
     "@types/react-dom": "npm:^18.3.0"
     eslint: "npm:^8.57.0"
-    next: "npm:14.2.8"
+    next: "npm:14.2.16"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
-    typescript: "npm:^5.5.4"
+    typescript: "npm:^5.6.3"
   languageName: unknown
   linkType: soft
 

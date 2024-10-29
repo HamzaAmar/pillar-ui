@@ -1327,14 +1327,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pillar-ui/core@npm:^0.10.8":
-  version: 0.10.8
-  resolution: "@pillar-ui/core@npm:0.10.8"
+"@pillar-ui/core@npm:^0.10.11":
+  version: 0.10.11
+  resolution: "@pillar-ui/core@npm:0.10.11"
   peerDependencies:
-    "@pillar-ui/hooks": 0.7.4
+    "@pillar-ui/hooks": ">=0.7 <1"
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 10c0/fc7a8d507da2905021238b0daad8c9fe10d0cc7040466ca986e9e77856a71a6dc90dfc02abfbba411134e4ffb5117e18816a7533b56ef20dd2bc6215bbd2aa0c
+  checksum: 10c0/263825d8a5d830bfb4fc81f139e54569b0437ad73cf28568b7ae99a68264553a96abfb86aac2c0d23938966d2c94f57ef0311d5ca947b2d2c259f3ba3e112b63
   languageName: node
   linkType: hard
 
@@ -7576,7 +7576,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "remix@workspace:."
   dependencies:
-    "@pillar-ui/core": "npm:^0.10.8"
+    "@pillar-ui/core": "npm:^0.10.11"
     "@remix-run/dev": "npm:^2.13.1"
     "@remix-run/node": "npm:^2.13.1"
     "@remix-run/react": "npm:^2.13.1"
