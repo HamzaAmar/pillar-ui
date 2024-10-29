@@ -104,7 +104,7 @@ export function LinkTruncates() {
   )
 }
 
-export function LinkTrasforms() {
+export function LinkTransforms() {
   return (
     <div className="Sf-4">
       <Link href="#" transform="lowercase">
