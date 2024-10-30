@@ -9,20 +9,33 @@ const breadcrumbsItems = [
 ]
 
 export const BreadcrumbAs = () => {
-  const items = breadcrumbsItems.map(({ name, link, current }) => (
-    <BreadcrumbItem current={current} key={name} link={link}>
+  const aItems = breadcrumbsItems.map(({ name, link, current }) => (
+    <BreadcrumbItem current={current} key={name} href={link}>
+      {name}
+    </BreadcrumbItem>
+  ))
+  const linkItems = breadcrumbsItems.map(({ name, link, current }) => (
+    <BreadcrumbItem as={Link} current={current} key={name} href={link}>
+      {name}
+    </BreadcrumbItem>
+  ))
+  const buttonItems = breadcrumbsItems.map(({ name, link, current }) => (
+    <BreadcrumbItem
+      as="button"
+      current={current}
+      key={name}
+      onClick={() => {
+        alert('Hello')
+      }}
+    >
       {name}
     </BreadcrumbItem>
   ))
   return (
     <>
-      <Breadcrumb color="d">{items}</Breadcrumb>
-      <Breadcrumb color="w">{items}</Breadcrumb>
-      <Breadcrumb color="su">{items}</Breadcrumb>
-      <Breadcrumb color="se">{items}</Breadcrumb>
-      <Breadcrumb color="p">{items}</Breadcrumb>
-      <Breadcrumb color="b">{items}</Breadcrumb>
-      <Breadcrumb color="i">{items}</Breadcrumb>
+      <Breadcrumb>{aItems}</Breadcrumb>
+      <Breadcrumb>{linkItems}</Breadcrumb>
+      <Breadcrumb>{buttonItems}</Breadcrumb>
     </>
   )
 }

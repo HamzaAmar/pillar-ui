@@ -12,7 +12,6 @@ export interface BreadcrumbProps extends BreadCrumbBase {
 }
 
 export interface BreadcrumbItemProps extends BreadcrumbProps {
-  link: string
   current?: boolean
   icon?: ReactNode
 }

@@ -13,7 +13,7 @@ export const BreadcrumbIcon = () => {
     <>
       <Breadcrumb>
         {breadcrumbsItems.map(({ name, link, icon, current }) => (
-          <BreadcrumbItem key={name} link={link} current={current}>
+          <BreadcrumbItem key={name} href={link} current={current}>
             {name}
             {icon}
           </BreadcrumbItem>
@@ -22,7 +22,7 @@ export const BreadcrumbIcon = () => {
 
       <Breadcrumb>
         {breadcrumbsItems.map(({ name, link, icon, current }) => (
-          <BreadcrumbItem key={name} link={link} current={current}>
+          <BreadcrumbItem key={name} href={link} current={current}>
             {icon}
             {name}
           </BreadcrumbItem>

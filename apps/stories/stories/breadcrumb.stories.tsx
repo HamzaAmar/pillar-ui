@@ -11,9 +11,9 @@ export default meta
 export function BreadcrumbDefault() {
   return (
     <Breadcrumb>
-      <BreadcrumbItem link="../..">components</BreadcrumbItem>
-      <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-      <BreadcrumbItem link="./" current>
+      <BreadcrumbItem href="../..">components</BreadcrumbItem>
+      <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+      <BreadcrumbItem href="./" current>
         breadcrumb
       </BreadcrumbItem>
     </Breadcrumb>
@@ -24,25 +24,25 @@ export function BreadcrumbSeparator() {
   return (
     <div className="Sf-4">
       <Breadcrumb separator="-">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb separator="*">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb separator={<Minus width={10} />}>
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
@@ -54,49 +54,49 @@ export function BreadcrumbColor() {
   return (
     <div className="Sf-4">
       <Breadcrumb color="d">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="w">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="su">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="se">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="p">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb color="b">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
@@ -108,63 +108,63 @@ export function BreadcrumbIcons() {
   return (
     <div className="Sf-4">
       <Breadcrumb>
-        <BreadcrumbItem link="../../..">
+        <BreadcrumbItem href="../../..">
           Home
           <Home width={16} />
         </BreadcrumbItem>
 
-        <BreadcrumbItem link="../..">
+        <BreadcrumbItem href="../..">
           components
           <Anchor width={16} />
         </BreadcrumbItem>
 
-        <BreadcrumbItem link="../">
+        <BreadcrumbItem href="../">
           base-ui
           <Home width={16} />
         </BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="./" current>
           breadcrumb
           <Link width={16} />
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb>
-        <BreadcrumbItem link="../../..">
+        <BreadcrumbItem href="../../..">
           <Home width={16} />
           Home
         </BreadcrumbItem>
 
-        <BreadcrumbItem link="../..">
+        <BreadcrumbItem href="../..">
           <Anchor width={16} />
           components
         </BreadcrumbItem>
 
-        <BreadcrumbItem link="../">
+        <BreadcrumbItem href="../">
           <Home width={16} />
           base-ui
         </BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="./" current>
           <Link width={16} />
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb>
-        <BreadcrumbItem link="../../..">
+        <BreadcrumbItem href="../../..">
           <span className="H-sr">Home</span>
           <Home width={16} />
         </BreadcrumbItem>
 
-        <BreadcrumbItem link="../..">
+        <BreadcrumbItem href="../..">
           components
           <Anchor width={16} />
         </BreadcrumbItem>
 
-        <BreadcrumbItem link="../">
+        <BreadcrumbItem href="../">
           base-ui
           <Home width={16} />
         </BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="./" current>
           breadcrumb
           <Link width={16} />
         </BreadcrumbItem>
@@ -177,61 +177,61 @@ export function BreadcrumbSize() {
   return (
     <div className="Sf-4">
       <Breadcrumb size="2" separator="-">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
       <Breadcrumb size="3" separator="-">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb size="4" separator="-">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
       <Breadcrumb separator="-">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb size="5" separator="/">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb size="6">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
       <Breadcrumb size="7">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
       <Breadcrumb size="8">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
@@ -243,29 +243,29 @@ export function BreadcrumbCustomStyle() {
   return (
     <div className="Sf-4">
       <Breadcrumb className="Cd" separator="-">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb style={{ color: 'brown', background: 'var(--B5)' }} separator="*">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb separator={<Minus width={10} />}>
-        <BreadcrumbItem style={{ color: 'red', background: 'white' }} link="../..">
+        <BreadcrumbItem style={{ color: 'red', background: 'white' }} href="../..">
           components
         </BreadcrumbItem>
-        <BreadcrumbItem style={{ color: 'red', background: 'white' }} link="../">
+        <BreadcrumbItem style={{ color: 'red', background: 'white' }} href="../">
           base-ui
         </BreadcrumbItem>
-        <BreadcrumbItem style={{ color: 'red', background: 'white' }} link="./" current>
+        <BreadcrumbItem style={{ color: 'red', background: 'white' }} href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
@@ -277,29 +277,29 @@ export function BreadcrumbPolymorphic() {
   return (
     <div className="Sf-4">
       <Breadcrumb as="div" separator="-">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb as="span" separator="*">
-        <BreadcrumbItem link="../..">components</BreadcrumbItem>
-        <BreadcrumbItem link="../">base-ui</BreadcrumbItem>
-        <BreadcrumbItem link="./" current>
+        <BreadcrumbItem href="../..">components</BreadcrumbItem>
+        <BreadcrumbItem href="../">base-ui</BreadcrumbItem>
+        <BreadcrumbItem href="./" current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
 
       <Breadcrumb as="article" separator={<Minus width={10} />}>
-        <BreadcrumbItem as="button" link="../..">
+        <BreadcrumbItem as="button" onClick={() => alert('hello')}>
           components
         </BreadcrumbItem>
-        <BreadcrumbItem as="div" link="../">
+        <BreadcrumbItem as="button" onClick={() => alert('hello')}>
           base-ui
         </BreadcrumbItem>
-        <BreadcrumbItem as="kbd" link="./" current>
+        <BreadcrumbItem as="button" onClick={() => alert('hello')} current>
           breadcrumb
         </BreadcrumbItem>
       </Breadcrumb>
