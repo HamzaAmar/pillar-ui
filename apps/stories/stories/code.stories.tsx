@@ -9,6 +9,17 @@ const meta: Meta<typeof Code> = {
 
 export default meta
 
+export const CodeVariants = () => {
+  return (
+    <Flex gap="4" direction="col" justify="center">
+      <Code variant="mixed">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code variant="outline">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code variant="soft">{`console.log('Hello world Every thing is OK')`}</Code>
+      <Code variant="solid">{`console.log('Hello world Every thing is OK')`}</Code>
+    </Flex>
+  )
+}
+
 export const CodeColors = () => {
   return (
     <Flex gap="4" direction="col" justify="center">
@@ -19,6 +30,18 @@ export const CodeColors = () => {
       <Code color="b">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="se">{`console.log('Hello world Every thing is OK')`}</Code>
       <Code color="i">{`console.log('Hello world Every thing is OK')`}</Code>
+    </Flex>
+  )
+}
+
+export const CodeTransform = () => {
+  return (
+    <Flex gap="4" direction="col" justify="center">
+      <Code>CSS Cascade</Code>
+      <Code transform="capitalize">CSS Cascade</Code>
+      <Code transform="capitalize-once">CSS Cascade</Code>
+      <Code transform="lowercase">CSS Cascade</Code>
+      <Code transform="uppercase">CSS Cascade</Code>
     </Flex>
   )
 }

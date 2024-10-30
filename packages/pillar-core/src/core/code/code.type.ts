@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import type { Color, Size, Corner, Transform } from '../../types'
+import type { Color, Size, Corner, Transform, Variant } from '../../types'
 
 export interface CodeProps {
   children: ReactNode
@@ -7,4 +7,5 @@ export interface CodeProps {
   size?: Size
   corner?: Omit<Corner, 'circle'>
   transform?: Transform
+  variant?: Variant
 }
