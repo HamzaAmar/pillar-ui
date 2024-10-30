@@ -16,9 +16,13 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  font-size: max(16px, var(--field-size, 1rem));
+  font-size: max(14px, var(--field-size, 1rem));
   border-radius: var(--field-rad, 0.25rem);
   text-transform: var(--field-transform);
+
+  &:has(.fi-:read-only) {
+    background: var(--B7);
+  }
 
   &:has(.fi-:focus):not(.fi-C-bordered) {
     outline: 2px solid var(--c9);
@@ -70,12 +74,12 @@
 
 .fi-C-bordered {
   /* border: none; */
-  outline: 2px solid transparent;
+  /* outline: 2px solid red; */
 
   &::before,
   &::after {
     content: '';
-    height: 2px;
+    height: 1.5px;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -111,7 +115,7 @@
   width: 100%;
 
   &:has(:read-only) .fi-C {
-    background: var(--B5);
+    background: var(--B4);
   }
 }
 
@@ -133,7 +137,8 @@
     padding: 0;
     height: 2rem;
   }
-  &:disabled {
+  &:disabled,
+  &[readonly] {
     pointer-events: none;
   }
 }
@@ -233,6 +238,7 @@
   Form Controller Style Section 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
+
 /* .form-controller--required {
   color: var(--D11);
   margin-inline-start: 0.25em;
@@ -278,7 +284,7 @@
   width: 100%;
   padding-inline: 0.75rem;
 }
-.fs-I {
+.fse-I {
   position: absolute;
   inset-inline-end: 0.5rem;
   top: 50%;
@@ -288,13 +294,13 @@
 }
 
 .fif- {
-  background: var(--c7, var(--B7));
+  background: var(--c9, var(--B8));
   font-size: 0.9em;
   padding: 0.25rem 1rem;
   cursor: pointer;
 
   .fi-C:not([data-disabled]) &:hover {
-    background: var(--c8, var(--B8));
+    background: var(--c10, var(--B9));
   }
 }
 

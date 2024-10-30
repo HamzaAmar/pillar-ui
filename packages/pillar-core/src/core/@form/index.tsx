@@ -18,7 +18,7 @@ import { cx } from '../cx'
 import { Flex } from '../flex'
 import { Grid } from '../grid'
 import { context } from '../@provider'
-import { ChevronDown, Close, Eye, EyeOff } from '../icons'
+import { ChevronDown, Close, Eye, EyeOff, Search } from '../icons'
 
 const [FormControllerProvider, useFormController] = context<FormControllerContextProps>({
   name: 'FormController',
@@ -52,7 +52,12 @@ function useField(props: any) {
     [`R-${corner}`]: corner,
   })
 
-  const field = { ...ctx, ...restProps, 'aria-invalid': hasError || isInvalid, 'aria-describedby': describedby }
+  const field = {
+    ...ctx,
+    ...restProps,
+    'aria-invalid': hasError || isInvalid,
+    'aria-describedby': describedby,
+  }
 
   return { cls, field, prefix, suffix }
 }
@@ -170,7 +175,12 @@ InputPassword.displayName = 'InputPassword'
 */
 
 export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props, forwardedRef) => {
-  const { cls, prefix, suffix, field } = useField(props)
+  const {
+    cls,
+    prefix,
+    suffix,
+    field: { placeholder = ' ', ...rest },
+  } = useField({ ...props, prefixInput: props.prefixInput ?? <Search width="16" /> })
 
   const inputRef = useRef<HTMLInputElement>(null)
   const mergedRef = useComposedRefs(inputRef, forwardedRef)
@@ -183,10 +193,10 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
   return (
     <div className={cls}>
       {prefix}
-      <input type="search" ref={mergedRef} {...field} className="fi- fis-" />
+      <input type="search" ref={mergedRef} placeholder={placeholder} {...rest} className="fi- fis-" />
       <Flex as="span" items="center" className="fis-Su">
         {suffix}
-        <Close onClick={handleInputClick} className="fs-I" transform="translate(-8,0)" />
+        <Close width={16} onClick={handleInputClick} className="fs-I" transform="translate(-8,0)" />
       </Flex>
     </div>
   )
@@ -208,7 +218,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(({ children, ..
       <select ref={forwardedRef} {...field} className="fi- fs-">
         {children}
       </select>
-      <span className="fs-I">
+      <span className="fse-I">
         <ChevronDown width={16} />
       </span>
     </div>

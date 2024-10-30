@@ -90,9 +90,11 @@ export const CornerInput = () => {
 export const SizeInput = () => {
   return (
     <Flex gap="4" direction="col">
+      <Input size="3" placeholder="Extra Small(XS)" />
       <Input size="4" placeholder="Small(sm)" />
-      <Input placeholder="Medium (md default You don't need it)" />
-      <Input gap="6" placeholder="Large(lg)" />
+      <Input size="5" placeholder="Medium (md default You don't need it)" />
+      <Input size="6" placeholder="Large(lg)" />
+      <Input size="7" placeholder="Large(lg)" />
     </Flex>
   )
 }

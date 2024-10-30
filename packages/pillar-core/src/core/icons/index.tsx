@@ -25,6 +25,11 @@ const Check = (props: SvgType) => {
   )
 }
 
+const Search = (props: SvgType) => (
+  <svg {...svgProps} {...props}>
+    <path d="m21 21-6-6M3 10a7 7 0 1 0 14 0 7 7 0 0 0-14 0Z" />
+  </svg>
+)
 const Close = (props: SvgType) => {
   return (
     <svg {...svgProps} {...props}>
@@ -76,4 +81,4 @@ const User = (props: SvgType) => (
   </svg>
 )
 
-export { Check, Close, Eye, EyeOff, Minus, Plus, ChevronDown, DotsHorizontal, User }
+export { Search, Check, Close, Eye, EyeOff, Minus, Plus, ChevronDown, DotsHorizontal, User }
