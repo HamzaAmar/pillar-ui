@@ -6,7 +6,7 @@ interface BadgeBaseProps {
   color?: Color
   corner?: Corner
   highContrast?: boolean
-  variant?: 'solid' | 'mixed'
+  variant?: 'solid' | 'mixed' | 'soft' | 'outline' | 'shadow'
 }
 
 interface BadgeNumericProps extends BadgeBaseProps {

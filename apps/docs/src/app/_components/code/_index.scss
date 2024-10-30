@@ -51,6 +51,7 @@
   max-height: 80vh;
   max-width: 100%;
   margin: 0;
+  padding: 1rem 0;
 }
 
 .doc-code {
@@ -68,6 +69,10 @@
   color: hsl(0deg 0% 64%);
   font-size: 0.85rem;
   vertical-align: middle;
+  min-width: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sh__line {
