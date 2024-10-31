@@ -134,6 +134,14 @@ export const AlertAction = () => {
   return (
     <Flex direction="col" gap="4">
       <AlertBase closable />
+      <AlertBase
+        closable
+        action={
+          <Button variant="mixed" color="d" size="3">
+            Close
+          </Button>
+        }
+      />
       <AlertBase />
     </Flex>
   )

@@ -22,7 +22,7 @@ import { Alert } from '@pillar-ui/core'
 
 ### Content
 
-The Content is not a props but we use it here to describe all the props related to the content of the alert.
+The Content is not a prop but we use it here to describe all the props related to the content of the alert.
 
 - **title**: The title of the alert.
 - **description**: The description of the alert.
@@ -60,9 +60,13 @@ The Content is not a props but we use it here to describe all the props related 
 
 ### Closable
 
-The `closable` prop controls whether the alert can be closed by the user. When set to `true`, a close button appears on the alert, allowing users to dismiss it. If not specified, it defaults to `false`.
+<Prop defaultValue="false" type="boolean'" />
 
 <Playground direction="column" name="alertClosable" root="alert" />
+
+### Action
+
+<Playground direction="column" name="alertAction" root="alert" />
 
 ### Inline
 

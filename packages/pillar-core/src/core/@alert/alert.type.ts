@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 import type { Color, Corner, Variant, Size } from '../../types'
 
 export interface AlertProps {
@@ -14,4 +14,5 @@ export interface AlertProps {
   visible?: boolean
   defaultVisible?: boolean
   onClose?: () => void
+  action?: ReactElement
 }

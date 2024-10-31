@@ -1,7 +1,7 @@
 import { useControllableState } from '@pillar-ui/hooks'
 import { cx } from '../cx'
 import { IconButton } from '../button'
-import { forwardRef } from 'react'
+import { cloneElement, forwardRef } from 'react'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { AlertProps } from './alert.type'
@@ -23,6 +23,7 @@ export const Alert = forwardRef(
       defaultVisible = true,
       onClose,
       icon,
+      action = <IconButton size="2" icon={<Close />} title="close alert" color={color} />,
       ...rest
     },
     forwardedRef
@@ -36,9 +37,18 @@ export const Alert = forwardRef(
       closable && onClose ? onClose() : setVisible(!isVisible)
     }
 
+    const actionWithToggle = action
+      ? cloneElement(action, {
+          onClick: (e: any) => {
+            action.props?.onClick?.(e)
+            handleToggle()
+          },
+        })
+      : null
+
     if (!isVisible) return
 
-    const classNames = cx(`al- fl- Sg-3 V-${variant} C-${color}`, {
+    const classNames = cx(`al- fl- Aai-start Sg-3 V-${variant} C-${color}`, {
       [`R-${corner}`]: !!corner,
       [`Fs-${size}`]: size,
       [className!]: className,
@@ -51,7 +61,7 @@ export const Alert = forwardRef(
           {title && <div className="Tt-capitalize Fw-5">{title}</div>}
           {message && <span>{message}</span>}
         </div>
-        {closable && <IconButton size="2" onClick={handleToggle} icon={<Close />} title="close alert" color={color} />}
+        {closable && actionWithToggle}
       </div>
     )
   }
