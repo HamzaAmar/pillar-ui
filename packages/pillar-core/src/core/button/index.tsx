@@ -72,7 +72,18 @@ Button.displayName = 'Button'
 
 export const IconButton = forwardRef(
   (
-    { icon, title, corner, color = 'b', size = '5', variant = 'transparent', className, as: Tag = 'button', ...rest },
+    {
+      icon,
+      title,
+      state = 'idle',
+      corner,
+      color = 'b',
+      size = '5',
+      variant = 'soft',
+      className,
+      as: Tag = 'button',
+      ...rest
+    },
     forwardedRef
   ) => {
     const classnames = cx(`bu- bu-I V-${variant} C-${color} F-c`, {
@@ -83,7 +94,7 @@ export const IconButton = forwardRef(
 
     return (
       <Tag aria-label={title} className={classnames} ref={forwardedRef} {...rest}>
-        {icon}
+        {state === 'loading' ? <Spinner color={color} size={size} /> : icon}
       </Tag>
     )
   }

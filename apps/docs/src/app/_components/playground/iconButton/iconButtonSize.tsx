@@ -1,7 +1,7 @@
 import { IconButton } from '@pillar-ui/core'
 import { ZoomPlus } from '@pillar-ui/icons'
 
-export function ButtonSize() {
+export function IconButtonSize() {
   return (
     <>
       <IconButton title="Heelo" icon={<ZoomPlus />} size="1" />
