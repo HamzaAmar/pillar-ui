@@ -5,18 +5,18 @@ import { forwardRef } from 'react'
 import type { CheckboxProps } from './checkbox.type'
 import { Check, Minus } from '../icons'
 
-const ICON_PROPS = { strokeWidth: 2, 'aria-hidden': true, focusable: false, className: 'ch-_icn' }
+const ICON_PROPS = { strokeWidth: 2, 'aria-hidden': true, focusable: false, className: 'ch-I' }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   (
     {
       name,
-      label,
       size,
-      color,
-      showLabel,
+      color = 'p',
       isIndeterminate = false,
       icon = isIndeterminate ? <Minus {...ICON_PROPS} /> : <Check {...ICON_PROPS} />,
+      variant = 'solid',
+      children,
       ...rest
     },
     forwardedRef
@@ -27,20 +27,20 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       }
     })
 
-    const classNamesRoot = cx('ch-C', { [`Fs-${size}`]: !!size, [`C-${color}`]: !!color })
+    const classNamesRoot = cx(`ch-C C-${color}`, { [`Fs-${size}`]: !!size })
 
     return (
       <label className={classNamesRoot}>
         <input
           type="checkbox"
           ref={ref}
-          className="H-sr ch-E"
+          className="H-sr ch-E "
           name={name}
           aria-checked={isIndeterminate ? 'mixed' : rest.checked}
           {...rest}
         />
-        <span className="ch- S-e F-c">{icon}</span>
-        <div className={cx('ch-L', { 'H-sr': showLabel })}>{label}</div>
+        <span className={`ch- S-e F-c ch-${variant}`}>{icon}</span>
+        <div className={cx('ch-L')}>{children}</div>
       </label>
     )
   }

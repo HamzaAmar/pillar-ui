@@ -10,12 +10,9 @@ const ParentCheckbox = ({ children }: any) => {
 
   return (
     <>
-      <Checkbox
-        label="Parent Checkbox"
-        checked={isAllChecked}
-        isIndeterminate={isIndeterminate}
-        onChange={handleToggleAll}
-      />
+      <Checkbox checked={isAllChecked} isIndeterminate={isIndeterminate} onChange={handleToggleAll}>
+        Hello world
+      </Checkbox>
       <ul style={{ listStyle: 'none' }} className="Sf-1">
         {Children.map(children, (child, index) => (
           <li>
@@ -32,8 +29,8 @@ const ParentCheckbox = ({ children }: any) => {
 
 export const CheckboxIsIndeterminate = () => (
   <ParentCheckbox>
-    <Checkbox label="Child Checkbox 1" name="child1" />
-    <Checkbox label="Child Checkbox 2" name="child2" />
-    <Checkbox label="Child Checkbox 3" name="child3" />
+    <Checkbox name="child1">Hello world</Checkbox>
+    <Checkbox name="child2">Hello world</Checkbox>
+    <Checkbox name="child3">Hello world</Checkbox>
   </ParentCheckbox>
 )

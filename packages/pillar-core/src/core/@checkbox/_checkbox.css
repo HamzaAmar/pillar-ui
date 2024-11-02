@@ -23,16 +23,34 @@
 }
 
 .ch-E {
-  &:checked:disabled + .ch- {
-    color: var(--B5);
-  }
   &[aria-checked='false'] + .ch- svg {
     display: none;
   }
-  &:checked + .ch-,
-  &:indeterminate + .ch- {
-    background: var(--c9, none);
-    color: var(--c1); /* Responsible For The Color Of The Check Icon stroke  white in checked state */
+  &:where(:checked, :indeterminate) + .ch- {
+    &.ch-solid {
+      background: var(--c9, none);
+      color: var(--c1);
+    }
+    &.ch-outline {
+      background: transparent;
+      border-color: var(--c9);
+      color: var(--c9);
+    }
+    &.ch-soft,
+    &.ch-mixed {
+      /* outline: 0.35em var(--c11) solid; */
+      border-color: var(--c5);
+      color: var(--c10);
+      background: var(--c5);
+    }
+    &.ch-mixed {
+      border-color: var(--c9);
+    }
+  }
+
+  &:checked:disabled + .ch- {
+    color: var(--B5);
+    background-color: var(--B10);
   }
 
   &:disabled + .ch- {
