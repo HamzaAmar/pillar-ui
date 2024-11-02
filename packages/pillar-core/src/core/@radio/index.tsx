@@ -11,34 +11,6 @@ import { context } from '../@provider'
 
 const [RadioProvider, useRadioContext] = context<RadioContextProps>({ name: 'Radio' })
 
-export const CustomRadio = (props: CustomRadioProps) => {
-  const provider = useRadioContext() ?? {}
-  const {
-    label,
-    id = label,
-    color = provider?.color ?? 'p',
-    size = provider?.size ?? 'md',
-    name = provider?.name,
-    showLabel = false,
-    direction = 'col',
-    className,
-    children,
-    ...rest
-  } = props
-
-  const classnames = cx(`fl- Sg-3 Aai-center ra-_c C-${color}`, { [`fl-${direction}`]: direction })
-  return (
-    <label className={classnames} htmlFor={id}>
-      <input type="radio" name={name} className="ra-" id={id} {...rest} />
-      <span className={`rc_c ${className}`}>
-        {children}
-        {/* <CircleCheck className="rc_i" width={20} /> */}
-      </span>
-      <span className={cx(`ra-_la`, { 'H-sr': !showLabel })}>{label}</span>
-    </label>
-  )
-}
-
 /*
 ===================================================================================================
   Radio Group Section
@@ -74,7 +46,7 @@ export const Radio = (props: RadioProps) => {
   const fallbackId = useId()
 
   const {
-    label,
+    children,
     id = fallbackId,
     color = ctx?.color ?? 'p',
     size = ctx?.size ?? 'md',
@@ -87,7 +59,36 @@ export const Radio = (props: RadioProps) => {
     <label className={`fl-inline Sg-3 ra-C Fs-${size} C-${color}`} htmlFor={id}>
       <input type="radio" name={name} className="ra- H-sr" id={id} {...rest} />
       <span className={`rc- rc-${variant} S-e`} />
-      <span className="ra-L">{label}</span>
+      <span className="ra-L">{children}</span>
+    </label>
+  )
+}
+
+export const CustomRadio = (props: CustomRadioProps) => {
+  const provider = useRadioContext() ?? {}
+  const fallbackId = useId()
+  const {
+    label,
+    description,
+    id = fallbackId,
+    color = provider?.color ?? 'p',
+    size = provider?.size ?? 'md',
+    name = provider?.name,
+    direction = 'col',
+    className,
+    children,
+    ...rest
+  } = props
+
+  return (
+    <label className={`fl-inline Sg-3 cr-C Fs-${size} C-${color}`} htmlFor={id}>
+      <div>
+        <div className="cr-L">{label}</div>
+        <div className="cr-L">{description}</div>
+        <div className="ra-L">{children}</div>
+      </div>
+      <input type="radio" name={name} className="ra- H-sr" id={id} {...rest} />
+      <span className="rc- S-e" />
     </label>
   )
 }

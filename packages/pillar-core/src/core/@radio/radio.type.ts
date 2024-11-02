@@ -18,7 +18,6 @@ interface RadioGroup {
 }
 
 export interface RadioProps extends Omit<ComponentPropsWithoutRef<'input'>, 'size'> {
-  label: string
   color?: Color
   size?: Size
   variant?: Omit<Variant, 'text'>
@@ -28,7 +27,8 @@ export interface RadioGroupProps extends RadioGroup, SharedProps, RadioGroupBase
 
 export interface RadioContextProps extends Omit<RadioGroup, 'id' | 'children'>, SharedProps {}
 export interface CustomRadioProps extends RadioProps {
-  children: ReactNode
+  children?: ReactNode
   direction?: 'column' | 'row'
-  showLabel?: boolean
+  label: string
+  description: string
 }

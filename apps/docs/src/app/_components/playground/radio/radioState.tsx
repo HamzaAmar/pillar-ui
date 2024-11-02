@@ -4,22 +4,44 @@ export const RadioState = () => {
   return (
     <>
       <Flex gap="4" items="center">
-        <Radio name="solid.default" label="Red" />
-        <Radio name="solid.defaultChecked" label="Red" defaultChecked />
-        <Radio name="solid.disabled" label="Red" disabled />
-        <Radio name="solid.disabled-default" label="Red" disabled defaultChecked />
+        <Radio name="solid.default">Hello World</Radio>
+        <Radio name="solid.defaultChecked" defaultChecked>
+          Hello World
+        </Radio>
+        <Radio name="solid.disabled" disabled>
+          Hello World
+        </Radio>
+        <Radio name="solid.disabled-default" disabled defaultChecked>
+          Hello World
+        </Radio>
       </Flex>
       <Flex gap="4" items="center">
-        <Radio variant="soft" name="soft.default" label="Red" />
-        <Radio variant="soft" name="soft.defaultChecked" label="Red" defaultChecked />
-        <Radio variant="soft" name="soft.disabled" label="Red" disabled />
-        <Radio variant="soft" name="soft.disabled-default" label="Red" disabled defaultChecked />
+        <Radio variant="soft" name="soft.default">
+          Hello World
+        </Radio>
+        <Radio variant="soft" name="soft.defaultChecked" defaultChecked>
+          Hello World
+        </Radio>
+        <Radio variant="soft" name="soft.disabled" disabled>
+          Hello World
+        </Radio>
+        <Radio variant="soft" name="soft.disabled-default" disabled defaultChecked>
+          Hello World
+        </Radio>
       </Flex>
       <Flex gap="4" items="center">
-        <Radio variant="outline" name="outline.default" label="Red" />
-        <Radio variant="outline" name="outline.defaultChecked" label="Red" defaultChecked />
-        <Radio variant="outline" name="outline.disabled" label="Red" disabled />
-        <Radio variant="outline" name="outline.disabled-default" label="Red" disabled defaultChecked />
+        <Radio variant="outline" name="outline.default">
+          Hello World
+        </Radio>
+        <Radio variant="outline" name="outline.defaultChecked" defaultChecked>
+          Hello World
+        </Radio>
+        <Radio variant="outline" name="outline.disabled" disabled>
+          Hello World
+        </Radio>
+        <Radio variant="outline" name="outline.disabled-default" disabled defaultChecked>
+          Hello World
+        </Radio>
       </Flex>
     </>
   )

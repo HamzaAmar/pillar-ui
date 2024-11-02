@@ -29,7 +29,7 @@
 
 .ra- {
   &:checked {
-    & + .rc {
+    & + .rc- {
       outline-offset: -0.75em;
     }
 
@@ -41,10 +41,14 @@
       outline: 0.35em var(--c9) solid;
       border-color: var(--c9);
     }
-    & + .rc-soft {
+    & + .rc-soft,
+    & + .rc-mixed {
       outline: 0.35em var(--c11) solid;
       border-color: var(--c5);
       background: var(--c5);
+    }
+    & + .rc-mixed {
+      border-color: var(--c9);
     }
   }
 
@@ -108,4 +112,10 @@
       color: GrayText;
     }
   }
+}
+
+.cr-C {
+  padding: 1rem;
+  border: 1px solid var(--B6);
+  border-radius: 0.5rem;
 }
