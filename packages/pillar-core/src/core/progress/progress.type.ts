@@ -1,4 +1,4 @@
-import type { Color, Size } from '../../types'
+import type { Color, Corner, Size } from '../../types'
 import { ReactNode } from 'react'
 
 interface ProgressCoreProps {
@@ -20,5 +20,8 @@ export interface ProgressBarStackProps {
   label: string
 }
 
-export interface ProgressBarProps extends ProgressCoreProps {}
+export interface ProgressBarProps extends ProgressCoreProps {
+  children?: ReactNode
+  corner?: Corner
+}
 export interface ProgressCircleProps extends ProgressCoreProps {}

@@ -47,14 +47,17 @@ export const ProgressBar = ({
   label,
   min = 0,
   max = 100,
+  corner = '1',
+  children,
 }: ProgressBarProps) => {
   const MaxValue = Math.min(value, max)
   const progress = ((MaxValue - min) / (max - min)) * 100
 
   return (
     <div className={`C-${color}`}>
-      <div className="fl- Ajc-end">
-        <div className={cx(`Fs-${size}`, { 'H-sr': !showValue })}>{MaxValue}%</div>
+      <div className="fl- Fs-3">
+        {children && <div>{children}</div>}
+        <div className={cx(`pr-L`, { 'H-sr': !showValue })}>{MaxValue}%</div>
       </div>
       <div
         role="progressbar"
@@ -63,7 +66,7 @@ export const ProgressBar = ({
         aria-valuenow={progress}
         aria-valuetext={`${progress}%`}
         aria-label={label}
-        className={`pb- Fs-${size}`}
+        className={`pb- Fs-${size} R-${corner}`}
       >
         <div className="pb-T" style={{ width: `${progress}%` }} />
       </div>
@@ -72,7 +75,7 @@ export const ProgressBar = ({
 }
 
 export const ProgressBarStackItem = ({ color = 'p', value }: ProgressBarStackItemProps) => {
-  return <div className={`pr-s_itm C-${color}`} style={{ width: `${value}%` }} />
+  return <div className={`prs-I C-${color}`} style={{ width: `${value}%` }} />
 }
 
 export const ProgressBarStack = ({ size = '4', children }: ProgressBarStackProps) => {
@@ -83,12 +86,12 @@ export const ProgressBarStack = ({ size = '4', children }: ProgressBarStackProps
     return { children, color }
   })
   return (
-    <div>
-      <div className={`fl- Sg-2 pr-b pr-s Fs-${size}`}>{children}</div>
+    <div className={`Fs-${size}`}>
+      <div className="fl- Sg-2 pr-b prs-">{children}</div>
       <ul className="fl- Sg-5 fl-wrap">
         {_children?.map(({ children, color }, index) => (
-          <li className={`pr-s_cnt fl- Aai-center Sg-2 C-${color}`} key={index}>
-            <span className="Cb t-y-low Fs-4">{children}</span>
+          <li className={`prs-C fl- Aai-center Sg-2 C-${color}`} key={index}>
+            <span className="Cb t-y-low">{children}</span>
           </li>
         ))}
       </ul>

@@ -6,8 +6,9 @@
 
 .pb- {
   width: 100%;
-  height: 0.25em;
-  border-radius: 100rem;
+  min-width: 12em;
+  height: 0.5em;
+  /* border-radius: 100rem; */
   background: var(--O6);
   position: relative;
 }
@@ -17,8 +18,11 @@
   position: absolute;
   inset-inline-start: 0;
   top: 0;
-  background: linear-gradient(to right, var(--c10), var(--c9));
+  background: linear-gradient(to right, var(--c9), var(--c10));
   border-radius: inherit;
+}
+.pr-L {
+  margin-inline-start: end;
 }
 
 /*
@@ -27,8 +31,8 @@
 ====================================================================================================
 */
 
-.pc {
-  width: 8em;
+.pc- {
+  width: 4em;
   flex: none;
 }
 .pc-S {
@@ -38,8 +42,8 @@
 .pc-C {
   font-size: 1em;
   fill: none;
-  stroke: var(--O6);
-  stroke-width: clamp(2px, 0.375em, 10px);
+  stroke: var(--B5);
+  stroke-width: clamp(5px, 0.375em, 10px);
 }
 
 .pc-B {
@@ -50,7 +54,7 @@
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   transition: stroke-dasharray 0.8s ease-in-out;
-  stroke-width: clamp(2px, 0.275em, 8px);
+  stroke-width: clamp(4px, 0.285em, 8px);
 }
 
 .pc-T {
@@ -67,22 +71,25 @@
 ====================================================================================================
 */
 
-.pr-s {
+.prs- {
   overflow: hidden;
-  min-height: 0.5em;
+  height: 0.5em;
+  min-width: 12em;
+  width: 100%;
 }
 
-.pr-s_itm {
+.prs-I {
   height: 100%;
   background: var(--c10);
 }
-.pr-s_cnt {
+.prs-C {
   position: relative;
+  font-size: clamp(0.5rem, 0.85em, 1rem);
 
   &::before {
     content: '';
-    width: 0.625rem;
-    height: 0.625rem;
+    width: 0.75em;
+    height: 0.75em;
     background: var(--c10);
     border-radius: 50%;
   }
