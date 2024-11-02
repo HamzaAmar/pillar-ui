@@ -4,14 +4,17 @@ const Box = (props: any) => {
   return <Paper width="48p" ratio="1" style={{ background: 'var(--B6)' }} corner="2" className="F-c" {...props} />
 }
 
-const boxes = Array.from({ length: 25 }, (_, index) => <Box key={index} />)
-
-export const FlexWrap = () => {
+export const FlexInline = () => {
   return (
-    <>
-      <Flex wrap gap="4">
-        {boxes}
+    <Paper width="100" flow="8">
+      <Flex inline gap="3">
+        <Box />
+        <Box />
       </Flex>
-    </>
+      <Flex inline gap="3">
+        <Box />
+        <Box />
+      </Flex>
+    </Paper>
   )
 }

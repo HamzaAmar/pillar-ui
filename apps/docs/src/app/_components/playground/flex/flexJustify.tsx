@@ -1,29 +1,37 @@
-import { Flex, Paper } from '@pillar-ui/core'
+import { Flex, Paper, Text } from '@pillar-ui/core'
 
-const Box = (props: any) => {
-  return <Paper width="48p" ratio="1" background="b-6" corner="2" className="F-c" {...props} />
+const Box = ({ children, ...rest }: any) => {
+  return (
+    <Paper border p="4" style={{ background: 'var(--B5)' }} corner="2" className="F-c" {...rest}>
+      <Text weight="6">{children}</Text>
+    </Paper>
+  )
 }
 
-const boxes = Array.from({ length: 5 }, (_, index) => <Box key={index} />)
 export const FlexJustify = () => {
   return (
-    <>
-      <Flex gap="4">{boxes}</Flex>
+    <Paper width="100" flow="8">
+      <Flex gap="4">
+        <Box>Start</Box>
+      </Flex>
       <Flex gap="4" justify="center">
-        {boxes}
+        <Box>Center</Box>
       </Flex>
       <Flex gap="4" justify="end">
-        {boxes}
+        <Box>End</Box>
       </Flex>
       <Flex gap="4" justify="between">
-        {boxes}
+        <Box>Between</Box>
+        <Box>Between</Box>
       </Flex>
       <Flex gap="4" justify="around">
-        {boxes}
+        <Box>Around</Box>
+        <Box>Around</Box>
       </Flex>
       <Flex gap="4" justify="evenly">
-        {boxes}
+        <Box>Evenly</Box>
+        <Box>Evenly</Box>
       </Flex>
-    </>
+    </Paper>
   )
 }
