@@ -58,11 +58,12 @@ type Orientation = 'horizontal' | 'vertical' | undefined
 
 type Transform = 'uppercase' | 'lowercase' | 'capitalize' | 'capitalize-once'
 
-type Height = '25' | '50' | '75' | '100' | 'fit' | '24p' | '48p' | '96p' | '192p' | '384p' | 'screen'
+type Other = '25' | '50' | '75' | '100' | 'fit' | '24p' | '48p' | '96p' | '192p' | '384p' | 'screen'
 
 type CharWidth = '25c' | '30c' | '45c' | '60c' | '75c' | '90c'
 
-type Width = CharWidth | Height
+type Width = CharWidth | Other
+type Height = Width
 
 type Items = 'center' | 'end' | 'start'
 type Justify = 'start' | 'around' | 'between' | 'evenly' | 'end' | 'center'

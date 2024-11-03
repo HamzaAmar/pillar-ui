@@ -11,6 +11,8 @@
   */
 
   /* removed color from the old colors list: 1-2-4 and reordering them again  */
+  color-scheme: light;
+
   --P1: var(--Pl-1, #fdfdfe);
   --P2: var(--Pl-2, #f7f9ff);
   --P3: var(--Pl-3, #edf2fe);
