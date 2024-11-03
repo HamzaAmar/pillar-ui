@@ -2,23 +2,15 @@ import { Paper } from '@pillar-ui/core'
 
 export const PaperHeight = () => {
   return (
-    <>
-      <Paper background="b-5" width="30c">
-        This Paper component will be 30 characters wide This Paper component will be 30 characters wide This Paper
-        component will be 30 characters wide.
-      </Paper>
-      <Paper background="b-5" width="60c">
-        This Paper component will be 60 characters wide This Paper component will be 60 characters wide This Paper
-        component will be 60 characters wide.
-      </Paper>
-      <Paper background="b-5" width="90c">
-        This Paper component will be 90 characters wide This Paper component will be 90 characters wide This Paper
-        component will be 90 characters wide.
-      </Paper>
-      <Paper background="b-5" width="50">
-        This Paper component will take up half of its parent container This Paper component will take up half of its
-        parent container This Paper component will take up half of its parent container.
-      </Paper>
-    </>
+    <div>
+      <Paper border height="25c" ratio="1" />
+      <Paper border height="30c" ratio="1" />
+      <Paper border height="60c" ratio="1" />
+      <Paper border height="75c" ratio="1" />
+      <Paper border height="90c" ratio="1" />
+      <Paper border height="100" ratio="1" />
+      <Paper border height="25" ratio="1" />
+      <Paper border height="50" ratio="1" />
+    </div>
   )
 }

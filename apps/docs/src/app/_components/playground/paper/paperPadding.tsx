@@ -3,29 +3,33 @@ import { Paper } from '@pillar-ui/core'
 export const PaperPadding = () => {
   return (
     <>
-      <Paper width="fit" background="b-5" p="8">
-        2xl Padding
+      <Paper width="fit" style={{ background: 'red' }} p="9">
+        9
       </Paper>
-      <Paper width="fit" background="b-5" p="7">
-        xl Padding
+      <Paper width="fit" style={{ background: 'red' }} p="8">
+        8
       </Paper>
-      <Paper width="fit" background="b-5" p="6">
-        lg Padding
+      <Paper width="fit" style={{ background: 'red' }} p="7">
+        7
       </Paper>
-
-      <Paper width="fit" background="b-5" p="5">
-        md Padding
+      <Paper width="fit" style={{ background: 'red' }} p="6">
+        6
       </Paper>
-      <Paper width="fit" background="b-5" p="4">
-        sm Padding
-      </Paper>
-
-      <Paper width="fit" background="b-5" p="3">
-        3 Padding
+      <Paper width="fit" style={{ background: 'red' }} p="5">
+        5
       </Paper>
 
-      <Paper width="fit" background="b-5" p="2">
-        2 Padding
+      <Paper width="fit" style={{ background: 'red' }} p="4">
+        4
+      </Paper>
+      <Paper width="fit" style={{ background: 'red' }} p="3">
+        3
+      </Paper>
+      <Paper width="fit" style={{ background: 'red' }} p="2">
+        2
+      </Paper>
+      <Paper width="fit" style={{ background: 'red' }} p="1">
+        1
       </Paper>
     </>
   )

@@ -2,32 +2,44 @@ import { Paper } from '@pillar-ui/core'
 
 export const PaperFlow = () => {
   return (
-    <>
-      <Paper background="b-5" flow="3">
-        <div>Flow 3</div>
-        <div>Flow 3</div>
-        <div>Flow 3</div>
+    <Paper flow="6">
+      <Paper p="4" flow="1" style={{ background: 'var(--B6)' }}>
+        <div>Hello world</div>
+        <div>Hello world</div>
       </Paper>
-      <Paper background="b-5" flow="4">
-        <div>Flow sm</div>
-        <div>Flow sm</div>
-        <div>Flow sm</div>
+      <Paper p="4" flow="2" style={{ background: 'var(--B6)' }}>
+        <div>Hello world</div>
+        <div>Hello world</div>
       </Paper>
-      <Paper background="b-5" flow="5">
-        <div>Flow md</div>
-        <div>Flow md</div>
-        <div>Flow md</div>
+      <Paper p="4" flow="3" style={{ background: 'var(--B6)' }}>
+        <div>Hello world</div>
+        <div>Hello world</div>
       </Paper>
-      <Paper background="b-5" flow="6">
-        <div>Flow lg</div>
-        <div>Flow lg</div>
-        <div>Flow lg</div>
+      <Paper p="4" flow="4" style={{ background: 'var(--B6)' }}>
+        <div>Hello world</div>
+        <div>Hello world</div>
+        <div>Hello world</div>
       </Paper>
-      <Paper background="b-5" flow="7">
-        <div>Flow xl</div>
-        <div>Flow xl</div>
-        <div>Flow xl</div>
+      <Paper p="4" flow="5" style={{ background: 'var(--B6)' }}>
+        <div>Hello world</div>
+        <div>Hello world</div>
       </Paper>
-    </>
+      <Paper p="4" flow="6" style={{ background: 'var(--B6)' }}>
+        <div>Hello world</div>
+        <div>Hello world</div>
+      </Paper>
+      <Paper p="4" flow="7" style={{ background: 'var(--B6)' }}>
+        <div>Hello world</div>
+        <div>Hello world</div>
+      </Paper>
+      <Paper p="4" flow="8" style={{ background: 'var(--B6)' }}>
+        <div>Hello world</div>
+        <div>Hello world</div>
+      </Paper>
+      <Paper p="4" flow="9" style={{ background: 'var(--B6)' }}>
+        <div>Hello world</div>
+        <div>Hello world</div>
+      </Paper>
+    </Paper>
   )
 }

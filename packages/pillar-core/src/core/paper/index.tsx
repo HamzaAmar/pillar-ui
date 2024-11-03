@@ -3,20 +3,11 @@ import { cx } from '../cx'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { PaperProps } from './paper.type'
-import type { CSSProperties } from 'react'
-
-// Helper function to generate CSS variable
-function getCSSVariable(value: string | undefined, initial: number = 9) {
-  if (!value) return
-  const [color, degree = initial] = value.split('-')
-  return `var(--${color}-${degree}, none)`
-}
 
 export const Paper = forwardRef(
   (
     {
       as: Tag = 'div',
-      background,
       color,
       p,
       pt,
@@ -35,7 +26,6 @@ export const Paper = forwardRef(
       flow,
       ratio,
       children,
-      style = {},
       className,
       border,
       ...rest
@@ -63,14 +53,8 @@ export const Paper = forwardRef(
       [className!]: className,
     })
 
-    const _style: CSSProperties = {
-      background: getCSSVariable(background),
-      color: getCSSVariable(color, 12),
-      ...style,
-    }
-
     return (
-      <Tag style={_style} className={classNames} ref={ref} {...rest}>
+      <Tag className={classNames} ref={ref} {...rest}>
         {children}
       </Tag>
     )

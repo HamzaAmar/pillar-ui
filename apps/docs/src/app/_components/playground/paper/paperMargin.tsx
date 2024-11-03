@@ -1,31 +1,37 @@
-import { Paper } from '@pillar-ui/core'
+import { Flex, Paper } from '@pillar-ui/core'
 export const PaperMargin = () => {
   return (
-    <>
-      <Paper style={{ display: 'flow-root' }} className="F-c" width="30c" ratio="16-9" background="b-5" m="8">
-        2xl Padding
+    <Flex direction="col" gap="4">
+      <Paper border width="96p" ratio="1" m="9">
+        9
       </Paper>
-      <Paper style={{ display: 'flow-root' }} className="F-c" width="30c" ratio="16-9" background="b-5" m="7">
-        xl Padding
+      <Paper border width="96p" ratio="1" m="8">
+        8
       </Paper>
-      <Paper style={{ display: 'flow-root' }} className="F-c" width="30c" ratio="16-9" background="b-5" m="6">
-        lg Padding
+      <Paper border width="96p" ratio="1" m="7">
+        7
       </Paper>
-
-      <Paper style={{ display: 'flow-root' }} className="F-c" width="30c" ratio="16-9" background="b-5" m="5">
-        md Padding
-      </Paper>
-      <Paper style={{ display: 'flow-root' }} className="F-c" width="30c" ratio="16-9" background="b-5" m="4">
-        sm Padding
+      <Paper border width="96p" ratio="1" m="6">
+        6
       </Paper>
 
-      <Paper style={{ display: 'flow-root' }} className="F-c" width="30c" ratio="16-9" background="b-5" m="3">
-        3 Padding
+      <Paper border width="96p" ratio="1" m="5">
+        5
+      </Paper>
+      <Paper border width="96p" ratio="1" m="4">
+        4
       </Paper>
 
-      <Paper style={{ display: 'flow-root' }} className="F-c" width="30c" ratio="16-9" background="b-5" m="2">
-        2 Padding
+      <Paper border width="96p" ratio="1" m="3">
+        3
       </Paper>
-    </>
+
+      <Paper border width="96p" ratio="1" m="2">
+        2
+      </Paper>
+      <Paper border width="96p" ratio="1" m="1">
+        1
+      </Paper>
+    </Flex>
   )
 }

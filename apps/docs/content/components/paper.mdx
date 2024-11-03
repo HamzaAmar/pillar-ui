@@ -20,53 +20,47 @@ import { Paper } from '@pillar-ui/core'
 
 ## Examples
 
-### Background
-
-<Playground name="accordionCollapsible" root="accordion" />
-
-### Color
-
-<Playground name="accordionCollapsible" root="accordion" />
-
 ### Corner
 
-<Prop defaultValue="0" type="'0' | '1' | '2' | '3' | '4' | '5' | 'full'" />
+<Prop type="'0' | '1' | '2' | '3' | '4' | '5' | 'full'| 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'b1' | 'b2' | 'b3' | 'b4' | 'b5'" />
 
-<Playground name="accordionCollapsible" root="accordion" />
+<Playground name="paperCorner" root="paper" />
 
 ### Padding
 
-<Playground name="accordionCollapsible" root="accordion" />
+<Alert
+  title="Padding Other Props"
+  message='The padding props is responsible for adding padding in all directions. You can use the "pt", "pr", "pb", "pl" props to add padding in the top, right, bottom, left directions respectively.'
+  color="i"
+/>
+<Prop type="'0' | '1' | '2' | '3' | '4' | '5' | '6'| '7' | '8' | '9'" />
+
+<Playground name="paperPadding" root="paper" />
 
 ### Margin
 
-<Playground name="accordionCollapsible" root="accordion" />
+<Alert
+  title="Margin Other Props"
+  message='The margin props is responsible for adding margin in all directions. You can use the "mt", "mr", "mb", "ml" props to add padding in the top, right, bottom, left directions respectively.'
+  color="i"
+/>
+
+<Prop type="'0' | '1' | '2' | '3' | '4' | '5' | '6'| '7' | '8' | '9'" />
+
+<Playground name="paperMargin" root="paper" />
 
 ### Flow
 
-<Playground name="accordionCollapsible" root="accordion" />
+<Playground name="paperFlow" root="paper" />
 
 ### Shadow
 
-<Playground name="accordionCollapsible" root="accordion" />
+<Playground name="paperShadow" root="paper" />
 
 ### Width
 
-The Paper component provides a convenient width prop for controlling its horizontal dimensions. This prop accepts specific string values that correspond to predefined width classes.
-**Available Width Classes:**
+<Playground name="paperWidth" root="paper" />
 
-| Class Name Description                                                                |
-| ------------------------------------------------------------------------------------- |
-| `30-char` Sets the width to a minimum of 30 characters or 100%, whichever is smaller. |
-| `25c` Sets the width to a minimum of 45 characters or 100%, whichever is smaller.     |
-| `60c` Sets the width to a minimum of 60 characters or 100%, whichever is smaller.     |
-| `75c` Sets the width to a minimum of 75 characters or 100%, whichever is smaller.     |
-| `90-char` Sets the width to a minimum of 90 characters or 100%, whichever is smaller. |
-| `half` Sets the width to 50%.                                                         |
-| `one-third` Sets the width to 33.3%.                                                  |
-| `full` Sets the width to 100%.                                                        |
-| `fit-content` Sets the width to the content's intrinsic width.                        |
+### Height
 
-<Playground name="accordionCollapsible" root="accordion" />
-
-<Playground name="accordionCollapsible" root="accordion" />
+<Playground name="paperHeight" root="paper" />
