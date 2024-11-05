@@ -14,11 +14,6 @@ export const SwitchMode = () => {
     setTrue()
   }, [setTrue])
 
-  // TODO: Return Skeleton to avoid  Layout Shift
-  if (!mounted) {
-    return <Spinner size="6" />
-  }
-
   const nextMode = resolvedTheme === 'dark' ? 'light' : 'dark'
 
   const icon =
@@ -29,6 +24,13 @@ export const SwitchMode = () => {
     )
 
   return (
-    <IconButton variant="soft" size="4" onClick={() => setTheme(nextMode)} icon={icon} title="Turn on light mode" />
+    <IconButton
+      variant="soft"
+      size="4"
+      state={mounted ? 'idle' : 'loading'}
+      onClick={() => setTheme(nextMode)}
+      icon={icon}
+      title="Turn on light mode"
+    />
   )
 }

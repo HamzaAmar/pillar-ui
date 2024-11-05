@@ -29,7 +29,7 @@ const Header = () => {
           corner="4"
           onClick={setFalse}
           icon={<Close />}
-          title={'Hide Search '}
+          title="Hide Search "
         />
       </Flex>
 
@@ -41,7 +41,7 @@ const Header = () => {
           onClick={setTrue}
           className="only-mobile"
           icon={<ListSearch />}
-          title={'Show Search'}
+          title="Show Search"
         />
 
         <IconButton
