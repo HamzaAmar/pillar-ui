@@ -3,6 +3,12 @@ import type { Corner, CornerBlob, CornerHand, Size, Width, Height } from '../../
 
 type Shadow = Corner
 
+type Color = 'B' | 'I' | 'P' | 'D' | 'Su' | 'Se' | 'W' | 'O'
+type NoNullableSize = NonNullable<Size>
+
+type Step = NoNullableSize | '10' | '11' | '12'
+type ColorShade = `${Color}${Step}`
+
 type Ratio = '1' | '4-3' | '3-4' | '16-9' | '18-5' | 'golden'
 export interface PaperProps {
   p?: Size
@@ -22,4 +28,5 @@ export interface PaperProps {
   border?: boolean
   ratio?: Ratio
   corner?: Corner | CornerBlob | CornerHand
+  background?: ColorShade
 }

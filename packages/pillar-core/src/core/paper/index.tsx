@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import { CSSProperties, forwardRef } from 'react'
 import { cx } from '../cx'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
@@ -28,6 +28,8 @@ export const Paper = forwardRef(
       children,
       className,
       border,
+      style,
+      background,
       ...rest
     },
     ref
@@ -36,6 +38,10 @@ export const Paper = forwardRef(
       [`S-${shadow}`]: shadow,
       [`Sf-${flow}`]: flow,
       [`R-${corner}`]: corner,
+      [`Sw-${width}`]: width,
+      [`Sh-${height}`]: height,
+      [`Sr-${ratio}`]: ratio,
+      [`B`]: border,
       [`Sp-${p}`]: p,
       [`Sp-${pt}`]: pt,
       [`Sp-r${pr}`]: pr,
@@ -46,15 +52,13 @@ export const Paper = forwardRef(
       [`Sm-r${mr}`]: mr,
       [`Sm-b${mb}`]: mb,
       [`Sm-l${ml}`]: ml,
-      [`Sw-${width}`]: width,
-      [`Sh-${height}`]: height,
-      [`Sr-${ratio}`]: ratio,
-      [`B`]: border,
       [className!]: className,
     })
 
+    const bg = background ? { '--pbg': `var(--${background}` } : {}
+
     return (
-      <Tag className={classNames} ref={ref} {...rest}>
+      <Tag style={{ ...bg, ...style } as CSSProperties} className={classNames} ref={ref} {...rest}>
         {children}
       </Tag>
     )
