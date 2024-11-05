@@ -59,8 +59,40 @@ import { Paper } from '@pillar-ui/core'
 
 ### Width
 
+| Width  | Description                       |
+| ------ | --------------------------------- |
+| 25     | 25% of it parent size             |
+| 50     | 50% of it parent size characters  |
+| 75     | 75% of it parent size characters  |
+| 100    | 100% of it parent size characters |
+| fit    | Fit to content width              |
+| 24p    | 24 pixels wide                    |
+| 48p    | 48 pixels wide                    |
+| 96p    | 96 pixels wide                    |
+| 192p   | 192 pixels wide                   |
+| 384p   | 384 pixels wide                   |
+| screen | Full screen width                 |
+| 25c    | 25 characters wide                |
+| 30c    | 30 characters wide                |
+| 45c    | 45 characters wide                |
+| 60c    | 60 characters wide                |
+| 75c    | 75 characters wide                |
+| 90c    | 90 characters wide                |
+
+| Tables   | Are           | Cool  |
+| -------- | ------------- | ----- |
+| col 1 is | left-aligned  | $1600 |
+| col 2 is | centered      | $12   |
+| col 3 is | right-aligned | $1    |
+
 <Playground name="paperWidth" root="paper" />
 
 ### Height
 
 <Playground name="paperHeight" root="paper" />
+
+### Ratio
+
+<Prop type="'1' | '4-3' | '3-4' | '16-9' | '18-5' | 'golden'" />
+
+<Playground name="paperRatio" root="paper" />
