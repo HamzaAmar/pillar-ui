@@ -11,7 +11,7 @@
     position: absolute;
     inset-inline-start: 0;
     top: 0;
-    animation: move 1s infinite;
+    animation: sk-move 1s infinite;
   }
 }
 
@@ -37,11 +37,11 @@
   border-radius: 0.15rem;
 }
 
-@keyframes move {
+@keyframes sk-move {
   0% {
-    transform: translateX(-100%);
+    transform: translate(-100%);
   }
   100% {
-    transform: translateX(240%);
+    transform: translate(270%);
   }
 }

@@ -20,43 +20,40 @@ import { Skeleton } from '@pillar-ui/core'
 
 ## Examples
 
-### IsLoading
+### Avatar
 
-- Type: `boolean`
-- Default: `true`
-- options: true, false
+#### Avatar Size
 
-Determines whether the skeleton component should be shown as loading or not
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
 
-Example:
+<Playground name="skeletonAvatarSize" root="skeleton" />
+#### Avatar Corner
 
-### Size
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
+<Playground name="skeletonAvatarCorner" root="skeleton" />
 
-- Type: `string`
-- default: `md`
-- Options: `2` `3` `sm` `md` `lg` `xl` `2xl`
+### Text
 
-Specifies the size of the skeleton component. Supported sizes are:`3`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`, `6xl`.
+#### TextSize
 
-Example:
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
+<Playground name="skeletonTextSize" root="skeleton" />
 
-### Lines
+#### Lines
 
-Type: number
-Default: 2.5
-Options: Any Number
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
+<Playground name="skeletonTextLines" root="skeleton" />
 
-Specifies the number of lines to display for the skeleton text Only Exist for Skeleton.Text.
+### Button
 
-## Use Case
+#### Size
 
-The Skeleton component is typically used in scenarios where content is being fetched asynchronously and there is a delay in loading the actual data. It provides a visual cue to the user that content is being loaded.
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
 
-## Troubleshooting
+<Playground name="skeletonButtonSize" root="skeleton" />
 
-- **Skeleton component is not displaying properly**: Make sure that the isLoading prop is set to true to enable the loading state.
-- **Skeleton component does not match the design**: You can customize the appearance of the Skeleton component by modifying the CSS eiter by adding a ClassName or add Style property
+### Box
 
-## Conclusion
+#### Height
 
-The Skeleton component is a useful tool for enhancing the perceived performance and user experience of your application. By providing temporary placeholders during loading, you can improve the visual feedback for users and make your application feel more responsive.
+<Playground name="skeletonBoxHeight" root="skeleton" />
