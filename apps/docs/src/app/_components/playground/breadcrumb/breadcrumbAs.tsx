@@ -20,14 +20,7 @@ export const BreadcrumbAs = () => {
     </BreadcrumbItem>
   ))
   const buttonItems = breadcrumbsItems.map(({ name, link, current }) => (
-    <BreadcrumbItem
-      as="button"
-      current={current}
-      key={name}
-      onClick={() => {
-        alert('Hello')
-      }}
-    >
+    <BreadcrumbItem as="button" current={current} key={name}>
       {name}
     </BreadcrumbItem>
   ))

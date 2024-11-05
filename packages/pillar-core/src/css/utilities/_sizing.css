@@ -19,25 +19,25 @@
   aspect-ratio: 1.618/1;
 }
 .Sw-25c {
-  width: min(25ch, 100%);
+  width: 25ch;
 }
 .Sw-30c {
-  width: min(30ch, 100%);
+  width: 30ch;
 }
 .Sw-45c {
-  width: min(45ch, 100%);
+  width: 45ch;
 }
 
 .Sw-60c {
-  width: min(60ch, 100%);
+  width: 60ch;
 }
 
 .Sw-75c {
-  width: min(75ch, 100%);
+  width: 75ch;
 }
 
 .Sw-90c {
-  width: min(90ch, 100%);
+  width: 90ch;
 }
 
 .Sw-25 {
