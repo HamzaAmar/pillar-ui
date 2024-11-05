@@ -16,7 +16,7 @@ const [TooltipProvider, useTooltipContext] = context<TooltipContext>({
   required: true,
 })
 
-export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, size = '4', ...rest }, forwardedRef) => {
+export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, ...rest }, forwardedRef) => {
   const { value, setFalse, setTrue, toggle, setValue } = useBooleanState()
   const triggerRef = useRef<HTMLButtonElement>(null)
   const id = useId()
@@ -30,7 +30,6 @@ export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, siz
     triggerRef,
     id,
     delay,
-    size,
   }
   return (
     <TooltipProvider {...context}>
@@ -101,8 +100,8 @@ TooltipTrigger.displayName = 'TooltipTrigger'
 //////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-export const TooltipContent = forwardRef(({ children, as: Tag = 'div', ...rest }) => {
-  const { open, handleClose, id, triggerRef, size } = useTooltipContext() ?? {}
+export const TooltipContent = forwardRef(({ children, as: Tag = 'div', corner, ...rest }) => {
+  const { open, handleClose, id, triggerRef } = useTooltipContext() ?? {}
 
   return (
     <Popover
@@ -114,9 +113,6 @@ export const TooltipContent = forwardRef(({ children, as: Tag = 'div', ...rest }
       width="auto"
       role="tooltip"
       {...rest}
-      position="top"
-      align="start"
-      size={size}
     >
       {children}
     </Popover>

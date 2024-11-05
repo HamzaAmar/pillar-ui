@@ -20,85 +20,36 @@ import { Tooltip } from '@pillar-ui/core'
 
 ## Examples
 
-## Tooltip Components
-
-The Tooltip component consists of two main parts: the Trigger and the Content.
-
-### Tooltip.Trigger
-
-The `Tooltip.Trigger` component represents the element that triggers the tooltip to be displayed. It can be any HTML element, such as a button or a link.
-
-#### Example Usage
-
-### Tooltip.Content
-
-The `Tooltip.Content` component contains the content that will be displayed inside the tooltip when the trigger element is interacted with.
-
-#### Example Usage
-
-## Props
-
 ### Tooltip
 
-The `Tooltip` component accepts the following props:
+#### Delay
 
-### position
+<Prop defaultValue="200(ms)" type="number" />
+<Playground direction="column" name="tooltipDelay" root="tooltip" />
 
-The position where the tooltip will appear in relation to the trigger element.
+### TooltipTrigger
 
-- Type: string
-- Default: `top`
-- Options: `top` `bottom` `left` `right`
+#### As
 
-**Example Usage:**
+<Playground direction="column" name="tooltipTriggerAs" root="tooltip" />
+### TooltipContent
 
-### align
+#### Corner
 
-The alignment of the tooltip within its position.
+<Prop defaultValue="4" type="'0' | '1' | '2' | '3' | '4' | '5' | 'full'" />
+<Playground direction="column" name="tooltipCorner" root="tooltip" />
 
-- Type: string
-- Default: `center`
-- Options: `start` `end` `center`
+#### Size
 
-**Example Usage:**
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
+<Playground direction="column" name="tooltipSize" root="tooltip" />
 
-### delay
+#### position
 
-The delay in milliseconds before the tooltip appears after interacting with the trigger element.
+<Prop defaultValue="top" type="'top' | 'bottom' | 'left' | 'right'" />
+<Playground direction="column" name="tooltipPosition" root="tooltip" />
 
-- Type: number
-- Default: `200`
+#### align
 
-**Example Usage:**
-
-**Example Usage:**
-
-### Tooltip.Content
-
-The `Tooltip.Content` component accepts the following prop:
-
-- `duration` (number, default: 200): The duration in milliseconds for the tooltip to remain visible after the trigger element is no longer interacted with.
-
-  **Example Usage:**
-
-## Accessibility
-
-To ensure accessibility, make sure to provide meaningful content and appropriate ARIA attributes for screen readers.
-
-## Use Cases
-
-Tooltip components are commonly used in user interfaces to provide context or additional information when users interact with specific elements. Some common use cases include:
-
-- Providing hints and explanations for form fields.
-- Displaying additional information about icons or buttons.
-- Guiding users through complex UI elements.
-
-## Troubleshooting
-
-If you encounter any issues with the Tooltip component not functioning as expected, consider the following troubleshooting steps:
-
-1. Check that you have included the Tooltip component and its trigger and content elements in your application correctly.
-2. Ensure that you have provided suitable content for the tooltip.
-3. Verify that any custom styling or CSS does not interfere with the tooltip's visibility or positioning.
-
-For further assistance, refer to the documentation or seek help from the library's community.
+<Prop defaultValue="center" type="'start' | 'end' | 'center'" />
+<Playground direction="column" name="tooltipAlign" root="tooltip" />
