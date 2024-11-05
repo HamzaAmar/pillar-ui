@@ -1,9 +1,8 @@
 import { Table, Alert, TableColumn, TableRow } from '@pillar-ui/core'
 import React from 'react'
-
 import Image, { ImageProps } from 'next/image'
 import Link, { LinkProps } from 'next/link'
-
+import remarkGfm from 'remark-gfm'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import { toSlug } from '~/utils/slug'
@@ -94,5 +93,11 @@ let components = {
 }
 
 export function CustomMDX(props: any) {
-  return <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />
+  return (
+    <MDXRemote
+      {...props}
+      options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+      components={{ ...components, ...(props.components || {}) }}
+    />
+  )
 }

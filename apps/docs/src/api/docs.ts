@@ -7,12 +7,12 @@ import { toSlug } from '~/utils/slug'
 
 function extractTOCFromMDX(content: string): Headings {
   const toc: Headings = []
-  const headingRegex = /^#{2,3}\s+(.*)$/gm
+  const headingRegex = /^#{2,4}\s+(.*)$/gm
   let match
   while ((match = headingRegex.exec(content)) !== null) {
     const [heading, value] = match
     const title = value.trim()
-    const level = heading.startsWith('###') ? 3 : 2
+    const level = heading.startsWith('####') ? 4 : heading.startsWith('###') ? 3 : 2
     const slug = toSlug(title)
     toc.push({ level, title, slug })
   }

@@ -1,1 +1,0 @@
-export { CustomMDX } from './mdx'

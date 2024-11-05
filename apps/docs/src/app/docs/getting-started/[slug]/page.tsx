@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import React from 'react'
 import { getGetStarted, getGetStartedBySlug } from '~/api/docs'
 import { TableOfContent } from '~/app/_components'
-import { CustomMDX } from '~/app/_components/mdx/mdx'
+import { CustomMDX } from '~/app/_components/mdx'
 import { DOMAIN } from '~/constant/domain'
 import { SlugParamsProps } from '~/types/params'
 

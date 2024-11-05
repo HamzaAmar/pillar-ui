@@ -1,4 +1,4 @@
-import { CustomMDX } from '~/app/_components/mdx/mdx'
+import { CustomMDX } from '~/app/_components/mdx'
 import { getThemeBySlug, getThemes, getTutorialBySlug, getTutorials } from '~/api/docs'
 import { SlugParamsProps } from '~/types/params'
 import { Metadata } from 'next'

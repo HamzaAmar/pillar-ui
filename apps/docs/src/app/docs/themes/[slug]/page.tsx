@@ -1,4 +1,4 @@
-import { CustomMDX } from '~/app/_components/mdx/mdx'
+import { CustomMDX } from '~/app/_components/mdx'
 import { getThemeBySlug, getThemes } from '~/api/docs'
 import { notFound } from 'next/navigation'
 import { SlugParamsProps } from '~/types/params'

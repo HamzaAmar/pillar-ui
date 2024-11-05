@@ -1,12 +1,11 @@
-import { CustomMDX } from '~/app/_components/mdx/mdx'
+import { CustomMDX } from '~/app/_components/mdx'
 import { getComponentBySlug, getComponents } from '~/api/docs'
 import { Metadata } from 'next'
 import { DOMAIN } from '~/constant/domain'
 import { notFound } from 'next/navigation'
 import { SlugParamsProps } from '~/types/params'
 import { DocHeader, TableOfContent } from '~/app/_components'
-import { Flex, Paper, Text } from '@pillar-ui/core'
-import { ChevronLeft, ChevronRight } from '@pillar-ui/icons'
+import { Flex, Paper } from '@pillar-ui/core'
 import DocNavigate from '~/app/_components/docNavigate'
 
 export async function generateStaticParams() {
