@@ -3,15 +3,7 @@ import React from 'react'
 
 const Box = (props: any) => {
   return (
-    <Paper
-      as={Grid}
-      justify="center"
-      items="center"
-      style={{ height: '30px' }}
-      background="b-6"
-      corner="2"
-      {...props}
-    />
+    <Paper as={Grid} justify="center" items="center" style={{ height: '30px' }} background="B6" corner="2" {...props} />
   )
 }
 
@@ -21,7 +13,7 @@ const boxes = Array.from({ length: 5 }, (_, index) => (
 
 export const GridPlayGround = () => {
   return (
-    <Paper className="playground" border background="b-3" corner="2">
+    <Paper className="playground" border background="B3" corner="2">
       <Avatar title="Success!" color="d" />
       <Avatar title="Success!" color="w" />
       <Avatar title="Success!" color="su" />
@@ -34,7 +26,7 @@ export const GridPlayGround = () => {
 
 export const GridGap = () => {
   return (
-    <Paper className="playground" border flow="5" background="b-3" corner="2">
+    <Paper className="playground" border flow="5" background="B3" corner="2">
       <Grid grid="repeat(4,30px)" gap="2">
         {boxes}
       </Grid>
@@ -62,7 +54,7 @@ export const GridGap = () => {
 
 export const GridJustify = () => {
   return (
-    <Paper className="playground" border background="b-3" corner="2">
+    <Paper className="playground" border background="B3" corner="2">
       <Grid grid="repeat(5,1fr)" gap="4">
         {boxes}
       </Grid>
@@ -87,7 +79,7 @@ export const GridJustify = () => {
 
 export const GridPlacement = () => {
   return (
-    <Paper className="playground" border background="b-3" corner="2">
+    <Paper className="playground" border background="B3" corner="2">
       <Grid grid="5rem 1fr x 100px 400px 100px" gap="4">
         <GridItem placement="1 / 3" as={Box}>
           header
@@ -107,7 +99,7 @@ export const GridPlacement = () => {
 
 export const Item = () => {
   return (
-    <Paper className="playground" border background="b-3" corner="2">
+    <Paper className="playground" border background="B3" corner="2">
       <Grid grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="4">
         <GridItem placement="2/4" style={{ background: 'var(--B8)' }}>
           Header
@@ -131,7 +123,7 @@ export const Item = () => {
 
 export const GridGrid = () => {
   return (
-    <Paper className="playground" border background="b-3" corner="2">
+    <Paper className="playground" border background="B3" corner="2">
       <Grid grid="repeat(5, 1fr)" gap="4">
         <div style={{ height: '40px', background: 'var(--B6)' }} />
         <div style={{ height: '40px', background: 'var(--B6)' }} />

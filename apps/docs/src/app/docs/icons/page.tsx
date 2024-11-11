@@ -13,7 +13,7 @@ const IconsItem = ({ item }: { item: ItemProps }) => {
   const [name, Icon] = item
 
   return (
-    <Flex as={Paper} background="b-5" className="R-3 Sf-4 Sp-4" direction="col" items="center" key={name!}>
+    <Flex as={Paper} background="B5" className="R-3 Sf-4 Sp-4" direction="col" items="center" key={name!}>
       <div className="icon--info fl-col F-c">
         <Icon width="30" />
         <Text weight="5" size="3">
