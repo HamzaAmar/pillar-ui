@@ -1,4 +1,3 @@
-import alias from '@rollup/plugin-alias'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
 import esbuild from 'rollup-plugin-esbuild'
@@ -24,7 +23,7 @@ const removeEmptyChunks = {
 
 /** @type {*} */
 const plugins = [
-  nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'] }),
+  nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
   esbuild({
     sourceMap: true,
     tsconfig: 'tsconfig.json',
@@ -35,7 +34,6 @@ const plugins = [
   preserveDirectives(),
   replace({ preventAssignment: true }),
   removeEmptyChunks,
-
   // // :TODO Try to add this plugin but it is not working :TODO
 ]
 
@@ -72,7 +70,6 @@ const config = [
     onwarn(warning, warn) {
       if (warning.code === 'SOURCEMAP_ERROR') return
       if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return
-
       warn(warning)
     },
     output,
