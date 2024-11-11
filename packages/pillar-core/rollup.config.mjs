@@ -47,6 +47,7 @@ const output = [
     entryFileNames: '[name].js',
     dir: `${DIR}/esm`,
     preserveModules: true,
+    sourcemap: true,
   },
   {
     format: 'cjs',
@@ -54,6 +55,7 @@ const output = [
     entryFileNames: '[name].cjs',
     dir: `${DIR}/cjs`,
     preserveModules: true,
+    sourcemap: true,
   },
 ]
 
@@ -76,7 +78,7 @@ const config = [
   },
   {
     input: './src/index.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'es' }],
+    output: [{ file: 'dist/index.d.ts', format: 'es', sourcemap: true }],
     plugins: [dts()],
   },
 ]
