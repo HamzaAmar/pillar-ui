@@ -49,10 +49,10 @@
     "storybook"
   ],
   "scripts": {
-    "js-build": "tsup",
+    "js-build": "rollup -c",
     "css-build": "postcss --config postcss.config.js src/css/main.css --output ./dist/css/main.css",
     "build": "npm-run-all -p css-build js-build",
-    "js-build:watch": "tsup --watch",
+    "js-build:watch": "rollup -c -w",
     "css-build:watch": "yarn css-build --watch --verbose",
     "dev": "npm-run-all -p -r js-build:watch css-build:watch",
     "lint": "eslint \"src/**/*.ts*\"",
@@ -60,10 +60,7 @@
     "clean:modules": "rimraf node_modules",
     "clean:dist": "rimraf dist",
     "clean": "npm-run-all clean:turbo clean:modules clean:dist",
-    "type:check": "tsc --noEmit",
-    "br": "rollup -c",
-    "rb": "npm-run-all clean:dist br",
-    "vb": "vite build"
+    "type:check": "tsc --noEmit"
   },
   "peerDependencies": {
     "@pillar-ui/hooks": ">=0.7 <1",
