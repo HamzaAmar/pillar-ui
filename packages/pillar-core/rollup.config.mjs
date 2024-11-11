@@ -2,7 +2,7 @@ import alias from '@rollup/plugin-alias'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
 import esbuild from 'rollup-plugin-esbuild'
-import { preserveDirectives } from 'rollup-plugin-preserve-directives'
+import preserveDirectives from 'rollup-preserve-directives'
 import { dts } from 'rollup-plugin-dts'
 import pkg from './package.json' assert { type: 'json' }
 
@@ -22,19 +22,21 @@ const removeEmptyChunks = {
   },
 }
 
-// Common plugin configuration
+/** @type {*} */
 const plugins = [
-  nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
-  alias({ entries: [] }),
+  nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'] }),
   esbuild({
     sourceMap: true,
     tsconfig: 'tsconfig.json',
     minify: true,
     platform: 'browser',
+    sourcesContent: true,
   }),
-  replace({ preventAssignment: true }),
   preserveDirectives(),
+  replace({ preventAssignment: true }),
   removeEmptyChunks,
+
+  // // :TODO Try to add this plugin but it is not working :TODO
 ]
 
 // External dependencies
@@ -58,7 +60,7 @@ const output = [
     sourcemap: true,
   },
 ]
-
+// const entries = await glob('src/core/**/index.tsx')
 // Configuration for both ESM and CJS builds
 const config = [
   {
@@ -70,6 +72,7 @@ const config = [
     onwarn(warning, warn) {
       if (warning.code === 'SOURCEMAP_ERROR') return
       if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return
+
       warn(warning)
     },
     output,

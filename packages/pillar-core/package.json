@@ -50,7 +50,7 @@
   ],
   "scripts": {
     "js-build": "tsup",
-    "css-build": "postcss --config postcss.config.js src/css/main.css --output ./css/main.css",
+    "css-build": "postcss --config postcss.config.js src/css/main.css --output ./dist/css/main.css",
     "build": "npm-run-all -p css-build js-build",
     "js-build:watch": "tsup --watch",
     "css-build:watch": "yarn css-build --watch --verbose",
@@ -61,7 +61,8 @@
     "clean:dist": "rimraf dist",
     "clean": "npm-run-all clean:turbo clean:modules clean:dist",
     "type:check": "tsc --noEmit",
-    "rb": "rollup -c",
+    "br": "rollup -c",
+    "rb": "npm-run-all clean:dist br",
     "vb": "vite build"
   },
   "peerDependencies": {
@@ -96,6 +97,7 @@
     "rollup-plugin-esbuild": "^6.1.1",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-preserve-directives": "^0.4.0",
+    "rollup-preserve-directives": "^1.1.2",
     "sass": "^1.77.8",
     "terser": "^5.31.6",
     "tsup": "^8.2.4",

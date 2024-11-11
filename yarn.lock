@@ -3199,6 +3199,7 @@ __metadata:
     rollup-plugin-esbuild: "npm:^6.1.1"
     rollup-plugin-postcss: "npm:^4.0.2"
     rollup-plugin-preserve-directives: "npm:^0.4.0"
+    rollup-preserve-directives: "npm:^1.1.2"
     sass: "npm:^1.77.8"
     terser: "npm:^5.31.6"
     tsup: "npm:^8.2.4"
@@ -20153,6 +20154,17 @@ __metadata:
   dependencies:
     estree-walker: "npm:^0.6.1"
   checksum: 10c0/20947bec5a5dd68b5c5c8423911e6e7c0ad834c451f1a929b1f4e2bc08836ad3f1a722ef2bfcbeca921870a0a283f13f064a317dc7a6768496e98c9a641ba290
+  languageName: node
+  linkType: hard
+
+"rollup-preserve-directives@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "rollup-preserve-directives@npm:1.1.2"
+  dependencies:
+    magic-string: "npm:^0.30.5"
+  peerDependencies:
+    rollup: ^2.0.0 || ^3.0.0 || ^4.0.0
+  checksum: 10c0/42005dfb2667295a260ee13709e600aa96c819b67347eccfe4b9a1b2cbd2a966409f59e9a4ecd05c6ba1cfd8ba63a108edc61af0fe31da9e5a4dc3fd93c2b594
   languageName: node
   linkType: hard
 
