@@ -57,7 +57,7 @@ export const Radio = (props: RadioProps) => {
   } = props
 
   return (
-    <label className={`fl-inline Sg-3 ra-C Fs-${size} C-${color}`} htmlFor={id}>
+    <label className={`fl-inline Aai-start Sg-3 ra-C Fs-${size} C-${color}`} htmlFor={id}>
       <input type="radio" name={name} className="ra- H-sr" id={id} {...rest} />
       <span className={`rc- rc-${variant} S-e`} />
       <span className="ra-L">{children}</span>

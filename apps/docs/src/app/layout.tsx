@@ -52,10 +52,6 @@ export const metadata: Metadata = {
     'react design system',
     'Server Components',
   ],
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#fcfcfd' },
-    { media: '(prefers-color-scheme: dark)', color: '#1c2024' },
-  ],
 
   icons: {
     icon: '/favicon.ico',
