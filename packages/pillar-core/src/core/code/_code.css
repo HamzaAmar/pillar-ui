@@ -9,6 +9,6 @@
     Code are provided, they will override these properties.
   */
   border-radius: var(--code-rad, 0.125em);
-  font-size: var(--code-size, 0.85rem);
+  font-size: var(--code-size, var(--F4));
   text-transform: var(--code-transform, capitalize);
 }

@@ -26,8 +26,8 @@ import type {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-function useAccordion({ type, collapsible }: AccordionProps) {
-  const [active, setActive] = useState<Value | Value[]>(type === 'multiple' ? [] : -1)
+function useAccordion({ multiple, collapsible }: AccordionProps) {
+  const [active, setActive] = useState<Value | Value[]>(multiple ? [] : -1)
   const isOpen = (value: Value) => (Array.isArray(active) ? active.includes(value) : active === value)
 
   function toggleAccordion(currentIndex: Value) {
@@ -61,21 +61,10 @@ const [AccordionProvider, useAccordionContext] = context<AccordionContextProps>(
 
 export const Accordion = forwardRef(
   (
-    {
-      children,
-      type = 'single',
-      collapsible,
-      color = 'B',
-      variant,
-      size = '5',
-      corner = '0',
-      separate,
-      className,
-      ...rest
-    },
+    { children, multiple, collapsible, color = 'B', variant, size = '5', corner = '0', separate, className, ...rest },
     forwardedRef
   ) => {
-    const state = useAccordion({ type, collapsible })
+    const state = useAccordion({ multiple, collapsible })
 
     const classNames = cx(`ac-`, {
       [`C-${color}`]: color,

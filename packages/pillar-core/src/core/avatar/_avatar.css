@@ -8,10 +8,12 @@
     linear-gradient(var(--av-b), var(--av-b)) content-box,
     linear-gradient(var(--B1), var(--B1)) padding-box;
   min-width: var(--eq-s);
+  /* aspect-ratio: 1; */
+  max-height: var(--eq-s);
 
   /* Default Value set by the Client */
   border-radius: var(--avatar-rad, 10em);
-  font-size: var(--avatar-size, 1rem);
+  font-size: var(--avatar-size, var(--F5));
 
   & > * {
     border-radius: inherit;

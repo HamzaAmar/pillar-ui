@@ -2,7 +2,7 @@ import type { ReactElement, Dispatch, SetStateAction } from 'react'
 import { Color, Corner, Size, Variant } from '../../types'
 
 export interface AccordionProps {
-  type?: 'single' | 'multiple'
+  multiple?: boolean
   collapsible?: boolean
   color?: Color
   variant?: Variant

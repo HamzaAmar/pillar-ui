@@ -12,7 +12,7 @@
     avatars are provided, they will override these properties.
   */
   border-radius: var(--blockquote-rad, 0.25em);
-  font-size: var(--blockquote-size, 1rem);
+  font-size: var(--blockquote-size, var(--F5));
 
   & cite {
     display: block;

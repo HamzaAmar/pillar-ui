@@ -40,7 +40,7 @@
     avatars are provided, they will override these properties.
   */
   border-radius: var(--bu-rad, 0.25em);
-  font-size: var(--bu-size, 0.875rem);
+  font-size: var(--bu-size, var(--F4));
   text-transform: var(--bu-transform, capitalize);
 }
 

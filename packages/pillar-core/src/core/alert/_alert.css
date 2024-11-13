@@ -3,7 +3,7 @@
   border: 1px solid transparent;
   /* Default Value set by the Client */
   border-radius: var(--al-rad, 0);
-  font-size: var(--al-size, 1rem);
+  font-size: var(--al-size, var(--F5));
 }
 
 .al-C {

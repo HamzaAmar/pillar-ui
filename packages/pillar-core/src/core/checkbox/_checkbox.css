@@ -8,7 +8,7 @@
   color: var(--text-8);
   display: flex;
   gap: var(--S3);
-  align-items: center;
+  align-items: start;
 
   /* Default Value by The Client */
   font-size: var(--checkbox-size, 1rem);

@@ -1,6 +1,6 @@
 .ci- {
   max-width: 35ch;
-  padding: 0.125em 0.25em;
+  padding: 0.125em;
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
@@ -8,7 +8,7 @@
     avatars are provided, they will override these properties.
   */
   border-radius: var(--chip-rad, 0.25em);
-  font-size: var(--chip-size, 0.875rem);
+  font-size: var(--chip-size, var(--F3));
   text-transform: var(--chip-transform, capitalize);
 }
 

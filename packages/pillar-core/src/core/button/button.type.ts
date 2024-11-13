@@ -5,7 +5,7 @@ import type { Color, Size, Corner, Variant, Direction, Transform, CornerHand } f
 type Position = 'start' | 'end'
 type State = 'idle' | 'loading'
 
-type ButtonVariant = Variant | 'link' | 'shadow'
+type ButtonVariant = Variant | 'link'
 
 interface BaseButton {
   color?: Color
