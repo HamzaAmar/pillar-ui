@@ -35,7 +35,8 @@
         "default": "./dist/cjs/index.cjs"
       }
     },
-    "./main.css": "./dist/css/main.css"
+    "./main.css": "./dist/css/main.css",
+    "./package.json": "./package.json"
   },
   "keywords": [
     "accessibility",
