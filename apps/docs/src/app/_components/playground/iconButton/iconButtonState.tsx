@@ -6,7 +6,6 @@ export function IconButtonState() {
     <>
       <IconButton title="Hello" icon={<Netflex />} state="idle" />
       <IconButton title="Hello" icon={<Netflex />} state="loading" />
-      <IconButton title="Hello" icon={<Netflex />} disabled />
     </>
   )
 }

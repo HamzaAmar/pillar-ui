@@ -1,29 +1,19 @@
 import { Avatar, AvatarGroup } from '@pillar-ui/core'
 
-export function AvatarGroupContext() {
+export function AvatarGroupAnimation() {
   return (
     <>
-      <AvatarGroup variant="outline">
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-      </AvatarGroup>
-      <AvatarGroup size="3">
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-      </AvatarGroup>
-      <AvatarGroup corner="0">
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-        <Avatar title="Success!" />
-      </AvatarGroup>
-      <AvatarGroup color="d">
+      <AvatarGroup animate="jump-y">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
       </AvatarGroup>
       <AvatarGroup animate="jump-x">
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+      </AvatarGroup>
+      <AvatarGroup animate="zoom">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />

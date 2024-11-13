@@ -37,13 +37,6 @@ const useScrollSpy = (selectors: string) => {
 
 const TableOfContent = ({ contents }: { contents: HeadingProps[] | null }) => {
   const activeId = useScrollSpy('h2,h3,h4,h5,h6')
-  console.log(
-    '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n',
-    'this is the value of activeID',
-    activeId,
-    contents,
-    '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'
-  )
   return (
     <nav className="toc-wrapper as Sf-5 lg-hide">
       <Paper p="3" as={Flex} gap="4" items="center">

@@ -58,8 +58,7 @@ export const AlertBasic = () => {
 export const AlertMultiple = () => {
   return (
     <div>
-      <AccordionBase type="multiple" />
-      <AccordionBase type="single" />
+      <AccordionBase multiple />
     </div>
   )
 }

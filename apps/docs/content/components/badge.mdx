@@ -34,7 +34,7 @@ import { Badge } from '@pillar-ui/core'
 
 ### Corner
 
-<Prop defaultValue="0" type="'0' | '1' | '2' | '3' | '4' | '5' | 'full'" />
+<Prop defaultValue="full" type="'0' | '1' | '2' | '3' | '4' | '5' | 'full'" />
 
 <Playground direction="column" name="badgeCorner" root="badge" />
 
@@ -55,6 +55,8 @@ import { Badge } from '@pillar-ui/core'
 <Playground name="badgeNumeric" root="badge" />
 
 ### ShowZero
+
+By default, badges with a value of zero are hidden. Set the `showZero` prop to `true` to display them.
 
 <Prop defaultValue="false" type="boolean" />
 

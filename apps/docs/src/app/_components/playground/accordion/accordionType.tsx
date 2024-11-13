@@ -26,11 +26,8 @@ function AccordionBase(props: any) {
 export const AccordionType = () => {
   return (
     <>
-      <Heading size="6">Single</Heading>
-      <AccordionBase type="single" />
-
       <Heading size="6">Multiple</Heading>
-      <AccordionBase type="multiple" />
+      <AccordionBase multiple />
     </>
   )
 }

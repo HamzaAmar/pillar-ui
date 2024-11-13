@@ -9,9 +9,6 @@ export function ButtonState() {
       <Button state="loading" color="su">
         Loading
       </Button>
-      <Button disabled color="su">
-        Disabled
-      </Button>
     </>
   )
 }

@@ -38,7 +38,7 @@ The Content is not a prop but we use it here to describe all the props related t
 
 ### Size
 
-<Prop type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
+<Prop defaultValue="5" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
 
 <Playground direction="column" name="alertSize" root="alert" />
 
@@ -60,15 +60,21 @@ The Content is not a prop but we use it here to describe all the props related t
 
 ### Closable
 
+A boolean prop that determines whether the alert shows a close button. If set to true, the close button will be displayed.
+
 <Prop defaultValue="false" type="boolean'" />
 
 <Playground direction="column" name="alertClosable" root="alert" />
 
 ### Action
 
+Replace the default close button with a custom one.
+
 <Playground direction="column" name="alertAction" root="alert" />
 
 ### Inline
+
+<Prop defaultValue="false" type="boolean'" />
 
 <Playground direction="column" name="alertInline" root="alert" />
 

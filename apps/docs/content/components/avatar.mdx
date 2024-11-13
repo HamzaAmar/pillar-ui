@@ -24,7 +24,7 @@ import { Avatar } from '@pillar-ui/core'
 
 A required title for the alt to make the avatar accessible.
 
-{/* <Playground name="avatarCorner" root="avatar" /> */}
+<Playground name="avatarTitle" root="avatar" />
 
 ### Image
 
@@ -38,14 +38,14 @@ A required title for the alt to make the avatar accessible.
 
 ### Size
 
-<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
+<Prop defaultValue="5" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
 
 <Playground name="avatarSize" root="avatar" />
 
 ### Corner
 
 <Prop
-  defaultValue="0"
+  defaultValue="full"
   type="'0' | '1' | '2' | '3' | '4' | '5' | 'full' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'b1' | 'b2' | 'b3' | 'b4' | 'b5'"
 />
 
@@ -87,8 +87,14 @@ The `fallback` prop is used to display a fallback if the main image cannot be lo
 
 <Playground direction="column" name="avatarGroupStack" root="avatar" />
 
+### Group Animate
+
+<Prop defaultValue="zoom" type="'zoom' | 'jump-y' | 'jump-x'" />
+
+<Playground name="avatarGroupAnimation" root="avatar" />
+
 ### Context Props
 
-The Avatar.Group component can be used to group multiple Avatar components together, and set common props such as color, corner, size, and variant for all the avatars in the group, instead of repeating them for each individual Avatar. This can help reduce repetition in your code and make it more efficient.
+The AvatarGroup component can be used to group multiple Avatar components together, and set common props such as color, corner, size, and variant for all the avatars in the group, instead of repeating them for each individual Avatar. This can help reduce repetition in your code and make it more efficient.
 
 <Playground direction="column" name="avatarGroupContext" root="avatar" />

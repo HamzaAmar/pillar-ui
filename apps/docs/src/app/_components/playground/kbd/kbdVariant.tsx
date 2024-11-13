@@ -4,6 +4,7 @@ export const KbdVariant = () => {
   return (
     <>
       <>
+        <Kbd title="Esc" variant="shadow" />
         <Kbd title="Esc" variant="solid" />
         <Kbd title="Esc" variant="mixed" />
         <Kbd title="Esc" variant="soft" />

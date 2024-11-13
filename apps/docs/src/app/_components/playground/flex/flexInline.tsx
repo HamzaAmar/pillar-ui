@@ -1,7 +1,7 @@
 import { Flex, Paper } from '@pillar-ui/core'
 
 const Box = (props: any) => {
-  return <Paper width="48p" ratio="1" style={{ background: 'var(--B6)' }} corner="2" className="F-c" {...props} />
+  return <Paper width="48p" ratio="1" background="B6" corner="2" className="F-c" {...props} />
 }
 
 export const FlexInline = () => {
@@ -12,8 +12,8 @@ export const FlexInline = () => {
         <Box />
       </Flex>
       <Flex inline gap="3">
-        <Box />
-        <Box />
+        <Box background="B9" />
+        <Box background="B9" />
       </Flex>
     </Paper>
   )

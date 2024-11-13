@@ -2,7 +2,7 @@ import { Flex, Paper, Text } from '@pillar-ui/core'
 
 const Box = ({ children, ...rest }: any) => {
   return (
-    <Paper border p="4" style={{ background: 'var(--B5)' }} corner="2" className="F-c" {...rest}>
+    <Paper border p="4" background="B6" corner="2" className="F-c" {...rest}>
       <Text weight="6">{children}</Text>
     </Paper>
   )
