@@ -17,12 +17,12 @@
 }
 
 .V-soft {
-  background: var(--c3);
+  background: var(--c4);
 }
 
 .V-mixed {
-  border-color: var(--c8);
-  background: var(--c3);
+  border-color: var(--c9);
+  background: var(--c4);
 }
 
 .V-text {

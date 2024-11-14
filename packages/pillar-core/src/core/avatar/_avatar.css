@@ -10,6 +10,7 @@
   min-width: var(--eq-s);
   /* aspect-ratio: 1; */
   max-height: var(--eq-s);
+  overflow: hidden;
 
   /* Default Value set by the Client */
   border-radius: var(--avatar-rad, 10em);

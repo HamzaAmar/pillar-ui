@@ -3,6 +3,7 @@ import { forwardRef } from 'react'
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type * as ST from './skeleton.type'
 import type { CSSProperties } from 'react'
+import { cx } from '../cx'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,10 +78,11 @@ SkeletonButton.displayName = 'SkeletonButton'
 */
 
 export const Skeleton = forwardRef((props, ref) => {
-  const { height = '10rem', as: Tag = 'div', className, isLoading, children, ...rest } = props
-  const _style = { '--height': height } as CSSProperties
+  const { height, as: Tag = 'div', className, isLoading, children, ...rest } = props
 
-  return isLoading ? <Tag ref={ref} style={_style} className={`sk- sk-B ${className}`} {...rest} /> : children
+  const classNames = cx(`sk- sk-B ${className}`, { [`Sh-${height}`]: height })
+
+  return isLoading ? <Tag ref={ref} className={classNames} {...rest} /> : children
 }) as ForwardRefComponent<'div', ST.SkeletonProps>
 
 Skeleton.displayName = 'Skeleton'

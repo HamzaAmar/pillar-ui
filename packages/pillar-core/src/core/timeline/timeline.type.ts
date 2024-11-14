@@ -1,22 +1,23 @@
-import type { Color, Corner, Size } from '../../types'
-import type { ReactElement, ReactNode } from 'react'
+import type { Color, Corner, Size, Variant } from '../../types'
+import type { ReactNode } from 'react'
 
-type Variant = 'solid' | 'dotted' | 'dashed'
+type Line = 'solid' | 'dotted' | 'dashed'
 
 export interface TimelineBase {
   corner?: Corner
   size?: Size
+  line?: Line
   variant?: Variant
+  content?: ReactNode
+  color?: Color
 }
 
 export interface TimelineProps extends TimelineBase {
-  color?: Color
   children: ReactNode
 }
 
 export interface TimelineItemProps extends TimelineBase {
   children: ReactNode
-  bullet?: ReactElement
 }
 
 export interface TimelineContextProps extends TimelineBase {}

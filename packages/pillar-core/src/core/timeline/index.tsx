@@ -11,21 +11,28 @@ const [TimelineProvider, useTimeline] = context<TimelineContextProps>({
 
 export const TimelineItem = (props: TimelineItemProps) => {
   const context = useTimeline()
-  const { children, corner = context?.corner ?? 'circle', variant = context?.variant ?? 'solid', bullet } = props
+  const {
+    children,
+    corner = context?.corner ?? '2',
+    variant = 'mixed',
+    line = context?.line ?? 'solid',
+    color = context?.color ?? 'b',
+    content,
+  } = props
 
   return (
-    <Grid grid="1.25em 1fr" gap="4" className={`ti-I  ti-I-${variant}`}>
-      <div className="ti-L">
-        <div className={`ti-B R-${corner} F-c`}>{bullet}</div>
+    <Grid grid=".85em 1fr" gap="4" className={`ti-I ti-I-${line}`}>
+      <div className={`ti-L C-${color}`}>
+        <div className={`ti-B R-${corner} V-${variant} F-c`}>{content}</div>
       </div>
-      <div>{children}</div>
+      <div className="ti-C">{children}</div>
     </Grid>
   )
 }
 
-export const Timeline = ({ color = 'b', size = '4', children, ...rest }: TimelineProps) => {
+export const Timeline = ({ size = '4', children, ...rest }: TimelineProps) => {
   return (
-    <div className={`ti- Fs-${size} C-${color}`}>
+    <div className={`ti- Fs-${size}`}>
       <TimelineProvider {...rest}>{children}</TimelineProvider>
     </div>
   )

@@ -1,6 +1,7 @@
 .ci- {
   max-width: 35ch;
-  padding: 0.125em;
+  padding: 0.175em 0.2em;
+  line-height: 1.2;
 
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
