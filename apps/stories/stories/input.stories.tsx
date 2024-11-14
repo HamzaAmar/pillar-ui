@@ -1,7 +1,17 @@
 import React from 'react'
 import type { Meta } from '@storybook/react'
 import { User } from '@pillar-ui/icons'
-import { Flex, Input, Button } from '@pillar-ui/core'
+import {
+  Flex,
+  Input,
+  Button,
+  InputFile,
+  InputNumber,
+  InputSearch,
+  InputPassword,
+  Textarea,
+  PinInput,
+} from '@pillar-ui/core'
 
 const meta: Meta<typeof Input> = {
   title: 'Components/Form/Input',
@@ -14,14 +24,26 @@ const meta: Meta<typeof Input> = {
 
 export default meta
 
-export const FilledInput = () => {
+export const InputTypes = () => {
+  return (
+    <Flex gap="4" direction="col">
+      <Input placeholder="Input" aria-label="hello" />
+      <InputFile placeholder="Input File" aria-label="hello" />
+      <InputNumber placeholder="Input Number" aria-label="hello" />
+      <InputSearch placeholder="Input Search" aria-label="hello" />
+      <InputPassword placeholder="Input Password" aria-label="hello" />
+      <Textarea placeholder="Textarea" aria-label="hello" />
+      <PinInput aria-label="hello" />
+    </Flex>
+  )
+}
+
+export const InputContent = () => {
   return (
     <Flex gap="4" direction="col">
       <Input aria-label="hello" autoFocus placeholder="Focus" variant="filled" />
       <Input aria-label="hello" placeholder="Normal" variant="filled" />
-      <Input aria-label="hello" disabled placeholder="Disabled" variant="filled" />
-      <Input aria-label="hello" readOnly placeholder="readOnly" variant="filled" />
-      <Input aria-label="hello" isInvalid placeholder="Error" variant="filled" />
+
       <Input aria-label="hello" suffixInput={<User width="16" />} placeholder="Error" variant="filled" />
       <Input aria-label="hello" prefixInput={<User width="16" />} placeholder="Placeholder" variant="filled" />
       <Input
@@ -41,35 +63,25 @@ export const FilledInput = () => {
   )
 }
 
-export const OutlineInput = () => {
+export const InputStates = () => {
   return (
-    <div className="Sf-5">
-      <Flex gap="4" direction="col">
-        <Input autoFocus placeholder="Focus" />
-        <Input placeholder="Normal" />
-        <Input disabled placeholder="Disabled" />
-        <Input readOnly placeholder="readOnly" />
-        <Input isInvalid placeholder="isInvalid" />
-        <Input suffixInput={<User width="16" />} placeholder="Error" />
-        <Input prefixInput={<User width="16" />} placeholder="Placeholder" />
-        <Input prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
-      </Flex>
-    </div>
+    <Flex gap="4" direction="col">
+      <Input disabled placeholder="Disabled" />
+      <Input readOnly placeholder="readOnly" />
+      <Input isInvalid placeholder="isInvalid" />
+    </Flex>
   )
 }
 
-export const BorderedInput = () => {
+export const InputVariants = () => {
   return (
-    <Flex gap="4" direction="col">
-      <Input variant="bordered" autoFocus placeholder="Focus" />
-      <Input variant="bordered" placeholder="Normal" />
-      <Input variant="bordered" disabled placeholder="Disabled" />
-      <Input variant="bordered" readOnly placeholder="readOnly" />
-      <Input variant="bordered" isInvalid placeholder="isInvalid" />
-      <Input variant="bordered" suffixInput={<User width="16" />} placeholder="Error" />
-      <Input variant="bordered" prefixInput={<User width="16" />} placeholder="Placeholder" />
-      <Input variant="bordered" prefixInput={'https://'} suffixInput=".com" defaultValue="Default Value" />
-    </Flex>
+    <div className="Sf-5">
+      <Flex gap="4" direction="col">
+        <Input variant="filled" />
+        <Input variant="outline" />
+        <Input variant="bordered" />
+      </Flex>
+    </div>
   )
 }
 

@@ -1,7 +1,7 @@
 import React, { CSSProperties, useState } from 'react'
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import { Alert, Button, Flex, Heading } from '@pillar-ui/core'
-import { Check, CircleCheck, CircleInfo, CircleWarning } from '@pillar-ui/icons'
+import { CircleInfo, CircleWarning } from '@pillar-ui/icons'
 
 const meta: Meta<typeof Alert> = {
   title: 'Components/Alert',
@@ -10,6 +10,9 @@ const meta: Meta<typeof Alert> = {
     title: 'hello',
     message:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum quidem facilis harum velit veritatis! Voluptatum, quos ipsa! Magnam exercitationem repellat, aspernatur porro optio tempore vero dolorem suscipit vitae delectus.',
+  },
+  argTypes: {
+    color: ['red', 'blue'],
   },
 }
 export default meta
@@ -25,7 +28,7 @@ function AlertBase({
 export const AlertColors = () => {
   return (
     <Flex gap="4" direction="col">
-      <AlertBase color="d" />
+      <AlertBase color="d" as="span" />
       <AlertBase color="w" />
       <AlertBase color="su" />
       <AlertBase color="se" />
@@ -88,6 +91,10 @@ export const AlertSizes = () => {
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur voluptatem suscipit deleniti similique, corrupti harum hic eaque quis, cumque, tenetur sunt rerum odit! Neque aspernatur voluptate consectetur assumenda commodi."
         size="8"
       />
+
+      <Flex direction="col" gap="4" style={{ '--al-size': '20px' } as CSSProperties}>
+        <AlertBase title="Defautl Size 20px" />
+      </Flex>
     </Flex>
   )
 }
@@ -102,6 +109,10 @@ export const AlertCorner = () => {
       <AlertBase corner="4" />
       <AlertBase corner="5" />
       <AlertBase corner="full" />
+
+      <Flex direction="col" gap="4" style={{ '--al-rad': '20px' } as CSSProperties}>
+        <AlertBase title="Defautl Size 20px" />
+      </Flex>
     </Flex>
   )
 }
@@ -181,43 +192,3 @@ export const AlertTitleIcon = () => {
     </Flex>
   )
 }
-
-export const AlertCustomStyle = () => {
-  return (
-    <Flex direction="col" gap="4">
-      <Alert color="d" title="hello" style={{ backgroundColor: 'red' }} />
-      <Alert color="d" title="hello" style={{ backgroundColor: 'green' }} closable />
-      <Alert color="d" title="hello" style={{ backgroundColor: 'orange' }} variant="outline" />
-      <Alert color="d" title="hello" style={{ backgroundColor: 'purple' }} variant="soft" />
-      <Alert color="d" title="hello" className="Cse" />
-      <Alert color="d" title="hello" className="Cse" closable />
-      <Alert color="d" title="hello" className="Cse" variant="outline" />
-      <Alert color="d" title="hello" className="Cse" variant="soft" />
-    </Flex>
-  )
-}
-
-export const AlertIsomerphic = () => {
-  return (
-    <Flex direction="col" gap="4">
-      <AlertBase as="span" />
-      <AlertBase as="article" />
-    </Flex>
-  )
-}
-
-export function AlertCornerDefaults() {
-  return (
-    <div className="Sf-3">
-      <Heading>Alert Corner 20px corner</Heading>
-      <Flex direction="col" gap="4" style={{ '--al-rad': '20px' } as CSSProperties}>
-        <AlertBase variant="solid" />
-        <AlertBase variant="soft" />
-        <AlertBase variant="outline" />
-        <AlertBase variant="text" />
-      </Flex>
-    </div>
-  )
-}
-
-export const Playground: StoryObj<typeof Alert> = {}

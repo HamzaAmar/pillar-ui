@@ -1,7 +1,7 @@
 import React, { CSSProperties, useRef, useState } from 'react'
 import { Avatar, Flex, Paper, Button, AvatarGroup } from '@pillar-ui/core'
 import { Meta, StoryFn } from '@storybook/react'
-import { DotsHorizontal } from '@pillar-ui/icons'
+import { DotsHorizontal, Exclamation, Users } from '@pillar-ui/icons'
 
 const meta: Meta<typeof Avatar> = {
   title: 'Components/Avatar',
@@ -71,32 +71,12 @@ export function AvatarsCorners() {
   return (
     <div className="Sf-6">
       <Flex gap="3" items="center">
-        <Avatar corner="0" title="Hello" />
-        <Avatar corner="3" title="Hello" />
-        <Avatar corner="1" title="Hello" />
-        <Avatar corner="2" title="Hello" />
-        <Avatar corner="3" title="Hello" />
-        <Avatar corner="4" title="Hello" />
-        <Avatar corner="full" title="Hello" />
-        <Avatar corner="b1" title="Hello" />
-        <Avatar corner="b2" title="Hello" />
-        <Avatar corner="b3" title="Hello" />
-        <Avatar corner="b4" title="Hello" />
-        <Avatar corner="b5" title="Hello" />
-        <Avatar corner="h1" title="Hello" />
-        <Avatar corner="h2" title="Hello" />
-        <Avatar corner="h3" title="Hello" />
-        <Avatar corner="h4" title="Hello" />
-        <Avatar corner="h5" title="Hello" />
-        <Avatar corner="h6" title="Hello" />
-      </Flex>
-      <Flex gap="3" items="center">
         <Avatar corner="0" image={image} title="Hello" />
-        <Avatar corner="3" image={image} title="Hello" />
         <Avatar corner="1" image={image} title="Hello" />
         <Avatar corner="2" image={image} title="Hello" />
         <Avatar corner="3" image={image} title="Hello" />
         <Avatar corner="4" image={image} title="Hello" />
+        <Avatar corner="5" image={image} title="Hello" />
         <Avatar corner="full" image={image} title="Hello" />
         <Avatar corner="b1" image={image} title="Hello" />
         <Avatar corner="b2" image={image} title="Hello" />
@@ -110,6 +90,14 @@ export function AvatarsCorners() {
         <Avatar corner="h5" image={image} title="Hello" />
         <Avatar corner="h6" image={image} title="Hello" />
       </Flex>
+
+      <Paper corner="0" style={{ '--avatar-rad': '8px' } as CSSProperties}>
+        <h2>WIth CSS Variables</h2>
+        <Flex gap="4">
+          <Avatar title="Hello" />
+          <Avatar style={{ '--avatar-rad': 0 } as CSSProperties} title="Hello" />
+        </Flex>
+      </Paper>
     </div>
   )
 }
@@ -186,32 +174,10 @@ export function AvatarsVariants() {
   )
 }
 
-export function AvatarGroupVariants() {
+export function AvatarGroupSettings() {
   return (
     <div className="Sf-4">
-      <AvatarGroup variant="solid" layout="stack">
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-      </AvatarGroup>
-      <AvatarGroup layout="grid">
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-      </AvatarGroup>
-    </div>
-  )
-}
-
-export function AvatarGroupLimit() {
-  return (
-    <div className="Sf-4">
-      <AvatarGroup limit={4} variant="solid" layout="stack">
+      <AvatarGroup limit={4} animate="jump-x" variant="solid" layout="stack">
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
@@ -223,35 +189,7 @@ export function AvatarGroupLimit() {
         <Avatar title="Hello" />
         <Avatar title="Hello" />
       </AvatarGroup>
-      <AvatarGroup limit={4} layout="grid">
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-      </AvatarGroup>
-      <AvatarGroup limit={100} layout="grid">
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-      </AvatarGroup>
-      <AvatarGroup limit={4} layout="grid">
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
-      </AvatarGroup>
-    </div>
-  )
-}
-
-export function AvatarGroupCustom() {
-  return (
-    <div className="Sf-4">
-      <AvatarGroup limit={6} layout="stack" color="d" variant="outline" fallback={<DotsHorizontal width="20" />}>
-        <Avatar title="Hello" />
-        <Avatar image="https://picsum.photos/id/128/100/100" title="Hello" />
-        <Avatar fallback={<DotsHorizontal width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
-        <Avatar title="Hello" />
-        <Avatar title="Hello" />
+      <AvatarGroup limit={4} fallback={<Users width="20" />} color="d" variant="dashed" layout="grid">
         <Avatar title="Hello" />
         <Avatar title="Hello" />
         <Avatar title="Hello" />
@@ -266,84 +204,6 @@ export function AvatarPolymorphic() {
       <Avatar title="Hello" as="button" onClick={() => alert('Hello world my name is hazma')} />
       <Avatar as="a" href="#" image="https://picsum.photos/id/128/100/100" title="Hello" />
       <Avatar fallback={<DotsHorizontal width="20" />} image="https://picsum.photos/id/123/100/100" title="Hello" />
-    </div>
-  )
-}
-
-export function AvatarCustomStyle() {
-  return (
-    <div className="Sf-4">
-      <Avatar title="Hello" className="Ci" />
-      <Avatar title="Hello" style={{ background: 'red', color: 'white' }} />
-    </div>
-  )
-}
-
-export function AvatarCornerDefaults() {
-  return (
-    <div className="Sf-3">
-      <Flex gap="4">
-        <Paper corner="0">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="1">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="2">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="3">
-          <Avatar title="Hello" />
-        </Paper>
-        <Avatar title="Hello" />
-      </Flex>
-
-      <Flex gap="4" style={{ '--avatar-rad': '5px' } as CSSProperties}>
-        <Paper corner="0">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="1">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="2">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="3">
-          <Avatar title="Hello" />
-        </Paper>
-        <Avatar title="Hello" />
-      </Flex>
-      <Flex gap="4" style={{ '--avatar-rad': '10px' } as CSSProperties}>
-        <Paper corner="0">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="1">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="2">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="3">
-          <Avatar title="Hello" />
-        </Paper>
-        <Avatar title="Hello" />
-      </Flex>
-
-      <Flex gap="4" style={{ '--avatar-rad': '20px' } as CSSProperties}>
-        <Paper corner="0">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="1">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="2">
-          <Avatar title="Hello" />
-        </Paper>
-        <Paper corner="3">
-          <Avatar title="Hello" />
-        </Paper>
-        <Avatar title="Hello" />
-      </Flex>
     </div>
   )
 }

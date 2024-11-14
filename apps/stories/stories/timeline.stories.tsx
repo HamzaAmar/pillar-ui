@@ -128,17 +128,17 @@ export const TimelineSize = () => {
 export const TimelineVariant = () => {
   return (
     <Flex gap="4">
-      <Timeline variant="solid">
+      <Timeline line="solid">
         <Items />
       </Timeline>
-      <Timeline variant="dotted">
+      <Timeline line="dotted">
         <Items />
       </Timeline>
-      <Timeline variant="dashed">
+      <Timeline line="dashed">
         <Items />
       </Timeline>
-      <Timeline variant="dashed">
-        <TimelineItem variant="solid">
+      <Timeline line="dashed">
+        <TimelineItem line="solid">
           <Heading size="3">Hello</Heading>
           <Text size="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
@@ -146,7 +146,7 @@ export const TimelineVariant = () => {
             Nihil, quae.
           </Text>
         </TimelineItem>
-        <TimelineItem variant="dotted">
+        <TimelineItem line="dotted">
           <Heading size="3">Hello</Heading>
           <Text size="3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
@@ -178,7 +178,7 @@ export const TimelineVariant = () => {
 export const TimelineCustomBullet = () => {
   return (
     <Timeline>
-      <TimelineItem bullet={<Cross />}>
+      <TimelineItem content={<Cross />}>
         <Heading size="3">Hello</Heading>
         <Text size="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.
@@ -186,9 +186,7 @@ export const TimelineCustomBullet = () => {
           quae.
         </Text>
       </TimelineItem>
-      <TimelineItem
-        bullet={<Avatar variant="image" size="3" image="https://picsum.photos/id/152/40/40" title="hello" />}
-      >
+      <TimelineItem content={<Avatar size="3" image="https://picsum.photos/id/152/40/40" title="hello" />}>
         <Heading size="3">Hello</Heading>
         <Text size="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.

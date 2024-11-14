@@ -12,71 +12,41 @@ const meta: Meta<typeof Select> = {
 
 export default meta
 
-export const FilledSelect = () => {
+const VARIANTS = ['filled', 'bordered', 'outline'] as const
+
+export const SelectTypes = () => {
   return (
     <Flex gap="4" direction="col">
-      <Select aria-label="hello" autoFocus variant="filled">
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select aria-label="hello" variant="filled">
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select aria-label="hello" disabled variant="filled">
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select aria-label="hello" isInvalid variant="filled">
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
+      <div className="Sf-4">
+        {VARIANTS.map((variant) => (
+          <Select key={variant} aria-label="hello" variant={variant}>
+            <option value="helo">hello</option>
+            <option value="nice">Nice</option>
+          </Select>
+        ))}
+      </div>
     </Flex>
   )
 }
 
-export const OutlineSelect = () => {
+export const OutlineStates = () => {
   return (
     <Flex gap="4" direction="col">
-      <Select autoFocus>
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select>
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select disabled>
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select isInvalid>
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-    </Flex>
-  )
-}
-
-export const BorderedSelect = () => {
-  return (
-    <Flex gap="4" direction="col">
-      <Select variant="bordered" autoFocus>
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select variant="bordered">
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select variant="bordered" disabled>
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
-      <Select variant="bordered" isInvalid>
-        <option value="helo">hello</option>
-        <option value="nice">Nice</option>
-      </Select>
+      <div className="Sf-4">
+        {VARIANTS.map((variant) => (
+          <div className="Sf-4" key={variant}>
+            <h2>{variant}</h2>
+            <Select aria-label="hello" disabled variant={variant}>
+              <option value="helo">hello</option>
+              <option value="nice">Nice</option>
+            </Select>
+            <Select aria-label="hello" isInvalid variant={variant}>
+              <option value="helo">hello</option>
+              <option value="nice">Nice</option>
+            </Select>
+          </div>
+        ))}
+      </div>
     </Flex>
   )
 }
