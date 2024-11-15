@@ -14,15 +14,15 @@ const meta: Meta<typeof Grid> = {
 export default meta
 
 const Box = (props: any) => {
-  return <Paper as={Flex} justify="center" items="center" background="b-6" corner="2" {...props} />
+  return <Paper as={Flex} justify="center" items="center" background="B6" corner="2" {...props} />
 }
 
 export const EqualColumns = () => {
   return (
-    <Grid gap="3" grid="repeat(20, 1fr)">
+    <Grid gap="3" grid="repeat(15, 1fr)">
       {Array.from({ length: 288 }, (_, index) => (
         <Box style={{ height: '30px' }} key={index}>
-          {index}
+          {index + 1}
         </Box>
       ))}
     </Grid>
