@@ -9,7 +9,7 @@ export const TableColumn = forwardRef(
     return (
       <Comp
         ref={forwardedRef}
-        className={cx('col', {
+        className={cx('tc-', {
           [`Fw-${weight}`]: weight !== 'normal',
           [className!]: className,
         })}
@@ -26,7 +26,7 @@ TableColumn.displayName = 'TableColumn'
 export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
   ({ children, type = 'body', ...rest }, forwardedRef) => {
     return (
-      <tr ref={forwardedRef} className={`row row__${type}`} {...rest}>
+      <tr ref={forwardedRef} className={`tr- tr-${type}`} {...rest}>
         {children}
       </tr>
     )
@@ -45,10 +45,10 @@ export const Table = ({
   ...rest
 }: TableProps) => {
   return (
-    <div className="t-a_cnt">
+    <div className="ta-C">
       <table
-        className={cx(`t-a Fs-${size} t-a-${variant}  C-${color}`, {
-          table__border: showBorder,
+        className={cx(`ta- Fs-${size} ta-${variant}  C-${color}`, {
+          'ta-B': showBorder,
         })}
         {...rest}
       >

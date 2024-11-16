@@ -10,40 +10,40 @@
   table-layout: auto;
 }
 
-.ta-Co,
-.ta-Co .column {
+.tc-,
+.ta-B .column {
   border: var(--c5) 1px solid;
 }
 
 .ta-striped {
-  & .row__body:nthchild(odd) {
+  & .tr-body:nth-child(odd) {
     background: var(--c4);
   }
 }
 .ta-soft {
-  & .row {
+  & .tr- {
     background: var(--c5);
   }
 }
 .ta-head-color {
-  & .row__head {
+  & .tr-head {
     background: var(--c8);
     color: var(--c12);
   }
 }
 
-.row {
+.tr- {
   border-block-end: var(--c5) 1px solid;
   background: var(--c1);
   width: 100%;
 }
 
-.col {
+.tc- {
   text-align: start;
   font-size: 0.85em;
   padding: 0.5em 0.25em;
 }
 
-.col__head {
+.tc-head {
   font-weight: 500;
 }

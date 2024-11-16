@@ -39,9 +39,9 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
-  border-radius: var(--bu-rad, 0.25em);
-  font-size: var(--bu-size, var(--F4));
-  text-transform: var(--bu-transform, capitalize);
+  border-radius: var(--button-rad, 0.25em);
+  font-size: var(--button-size, var(--F4));
+  text-transform: var(--button-transform, capitalize);
 }
 
 .bu-T {

@@ -149,15 +149,15 @@
     Source Code Pro, monospace;
 
   /* Font Size variables */
-  --F1: var(--cf1, clamp(0.54rem, calc(0.83rem + -0.28vw), 0.77rem));
-  --F2: var(--cf2, clamp(0.65rem, calc(0.86rem + -0.21vw), 0.82rem));
-  --F3: var(--cf3, clamp(0.78rem, calc(0.9rem + -0.12vw), 0.88rem));
-  --F4: var(--cf4, clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem));
-  --F5: var(--cf5, clamp(1rem, calc(0.97rem + 0.15vw), 1.13rem));
-  --F6: var(--cf6, clamp(1.07rem, calc(1rem + 0.34vw), 1.35rem));
-  --F7: var(--cf7, clamp(1.14rem, calc(1.02rem + 0.58vw), 1.62rem));
-  --F8: var(--cf8, clamp(1.22rem, calc(1.04rem + 0.88vw), 1.94rem));
-  --F9: var(--cf9, clamp(1.3rem, calc(1.05rem + 1.26vw), 2.33rem));
+  --F1: var(--CF1, clamp(0.54rem, calc(0.83rem + -0.28vw), 0.77rem));
+  --F2: var(--CF2, clamp(0.65rem, calc(0.86rem + -0.21vw), 0.82rem));
+  --F3: var(--CF3, clamp(0.78rem, calc(0.9rem + -0.12vw), 0.88rem));
+  --F4: var(--CF4, clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem));
+  --F5: var(--CF5, clamp(1rem, calc(0.97rem + 0.15vw), 1.13rem));
+  --F6: var(--CF6, clamp(1.07rem, calc(1rem + 0.34vw), 1.35rem));
+  --F7: var(--CF7, clamp(1.14rem, calc(1.02rem + 0.58vw), 1.62rem));
+  --F8: var(--CF8, clamp(1.22rem, calc(1.04rem + 0.88vw), 1.94rem));
+  --F9: var(--CF9, clamp(1.3rem, calc(1.05rem + 1.26vw), 2.33rem));
   /*
    ------------------------------------------------------------------------------------------------------
     Border Theme Section
