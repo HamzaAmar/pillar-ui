@@ -8,11 +8,6 @@ export const TooltipTriggerAs = () => {
   return (
     <Flex gap="6">
       <Tooltip>
-        <TooltipTrigger as="button">hello</TooltipTrigger>
-        <TooltipContent>Hello world</TooltipContent>
-      </Tooltip>
-
-      <Tooltip>
         <TooltipTrigger as={Button} color="d">
           hello
         </TooltipTrigger>

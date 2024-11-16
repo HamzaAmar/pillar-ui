@@ -17,8 +17,13 @@
     transform: rotate(90deg);
   }
 
+  &[data-exist='false'] {
+    visibility: hidden;
+  }
+
   &[data-to='next'] {
     justify-content: end;
+    text-align: end;
 
     & svg {
       transform: rotate(-90deg);

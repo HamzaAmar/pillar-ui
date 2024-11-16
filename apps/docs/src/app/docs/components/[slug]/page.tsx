@@ -28,6 +28,7 @@ function Page({ params }: SlugParamsProps) {
       : [null, null, null]
 
   if (!cur) notFound()
+
   const { content, headings, lastModified, publishedAt, title, ...rest } = cur
   const img = `${DOMAIN}/pillar.png`
   const directory = cur.type === 'core' ? 'components' : cur.type
@@ -60,8 +61,8 @@ function Page({ params }: SlugParamsProps) {
         <div className="section prose Sf-6">
           <CustomMDX source={content} />
           <Flex as={Paper} mt="9" gap="4" justify="between" items="center" wrap>
-            {prev && <DocNavigate title={prev.title} slug={prev.slug} to="previous" />}
-            {next && <DocNavigate title={next.title} slug={next.slug} to="next" />}
+            <DocNavigate title={prev?.title} slug={prev?.slug} to="previous" />
+            <DocNavigate title={next?.title} slug={next?.slug} to="next" />
           </Flex>
         </div>
       </div>

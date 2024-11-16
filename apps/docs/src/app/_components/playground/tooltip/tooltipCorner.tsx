@@ -1,9 +1,11 @@
-import { Corner, Tooltip, TooltipContent, TooltipTrigger, type TooltipProps } from '@pillar-ui/core'
+'use client'
+
+import { Button, Corner, Tooltip, TooltipContent, TooltipTrigger, type TooltipProps } from '@pillar-ui/core'
 
 export function TooltipBase({ corner }: { corner: Corner }) {
   return (
     <Tooltip>
-      <TooltipTrigger as="button">hello</TooltipTrigger>
+      <TooltipTrigger as={Button}>hello</TooltipTrigger>
       <TooltipContent corner={corner}>Hello world</TooltipContent>
     </Tooltip>
   )

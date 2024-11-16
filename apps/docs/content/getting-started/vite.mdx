@@ -12,134 +12,138 @@ Welcome to Pillar UI! This powerful library offers a wide range of reusable UI c
 
 ## Quick Start Guide
 
-### 1. Installation
+<Timeline>
+  <TimelineItem content="1">
+    <div className="Sf-4">
+### Installation
 
-Install Pillar UI in your project:
+    Install Pillar UI in your project:
 
-```bash
-npm install @pillar-ui/core
-```
+    ```bash
+    npm install @pillar-ui/core
+    ```
 
-For additional features, install these packages:
+    For additional features, install these packages:
 
-```bash
-npm install @pillar-ui/hooks @pillar-ui/utils @pillar-ui/icons
-```
+    ```bash
+    npm install @pillar-ui/hooks @pillar-ui/utils @pillar-ui/icons
+    ```
+        </div>
 
-### 2. Adding Styles
+  </TimelineItem>
+   <TimelineItem content='2'>
+    <div className="Sf-4">
+### Adding Styles
 
-Import the Pillar UI CSS file in your main app file:
+    Import the Pillar UI CSS file in your main app file:
 
-```tsx
-import '@pillar-ui/core/main.css'
-```
+    ```tsx
+    import '@pillar-ui/core/main.css'
+    ```
+        </div>
 
-### 3. Customizing Your Theme
+  </TimelineItem>
+     <TimelineItem content='3'>
+    <div className="Sf-4">
+### Customizing Your Theme
 
-In Pillar, we offer a comprehensive color palette consisting of 7 default colors, each with 12 variants and support for light and dark modes:
+    In Pillar, we offer a comprehensive color palette consisting of 7 default colors, each with 12 variants and support for light and dark modes: `p`(Primary), `se`(Secondary), `su`(Success), `d`(Danger), `w`(Warning), `i`(Info), Background (`b`).
 
-- Primary (`pri`)
-- Secondary (`sec`)
-- Danger (`dan`)
-- Warning (`war`)
-- Info (`inf`)
-- Background (`bg`)
+     This robust system allows for extensive customization via a `theme.css` file, where you can not only modify these colors but also adjust other design elements such as spacing, shadows,font-size, radius.
 
-This robust system allows for extensive customization via a `theme.css` file, where you can not only modify these colors but also adjust other design elements such as spacing, shadows,font-size, radius.
+    we strongly advise prioritizing color adjustments for the primary and secondary colors. The remaining colors are often intrinsically linked to specific states or meanings within the system, and altering them could inadvertently impact user comprehension and overall experience.
 
-we strongly advise prioritizing color adjustments for the primary and secondary colors. The remaining colors are often intrinsically linked to specific states or meanings within the system, and altering them could inadvertently impact user comprehension and overall experience.
+    By adhering to this guideline, you can ensure a cohesive and intuitive user interface while still enjoying the flexibility to express your brand identity through thoughtful color choices.
 
-By adhering to this guideline, you can ensure a cohesive and intuitive user interface while still enjoying the flexibility to express your brand identity through thoughtful color choices.
+    ```css
+    :root {
+      --Pl-1: hsl(225deg 60% 99.4%);
+      --Pl-2: hsl(223deg 100% 98.6%);
+      /* ... */
+      --Pl-11: hsl(226deg 55% 45%);
+      --Pl-12: hsl(226dg 62% 17%);
 
-```css
-:root {
-  --Pl-1: hsl(225deg 60% 99.4%);
-  --Pl-2: hsl(223deg 100% 98.6%);
-  /* ... */
-  --Pl-11: hsl(226deg 55% 45%);
-  --Pl-12: hsl(226dg 62% 17%);
+      /* dark colors */
+      --Pd-1: hsl(229deg 24% 10%);
+      --Pd-2: hsl(230deg 36.4% 12.9%);
+      /* ... */
+      --Pd-11: hsl(228deg 100% 75.9%);
+      --Pd-12: hsl(226deg 8% 96.3%);
+    } /* Add dark mode custom properties here */
+    ```
 
-  /* dark colors */
-  --Pd-1: hsl(229deg 24% 10%);
-  --Pd-2: hsl(230deg 36.4% 12.9%);
-  /* ... */
-  --Pd-11: hsl(228deg 100% 75.9%);
-  --Pd-12: hsl(226deg 8% 96.3%);
-} /* Add dark mode custom properties here */
-```
+    Import your theme file after the main Pillar UI CSS:
 
-Import your theme file after the main Pillar UI CSS:
+    ```tsx
+    import '@pillar-ui/core/main.css'
+    import './theme.css'
+    ```
+        </div>
 
-```tsx
-import '@pillar-ui/core/main.css'
-import './theme.css'
-```
+  </TimelineItem>
 
-### 4. Using Pillar UI Components
+    <TimelineItem content="4">
+    <div className="Sf-4">
 
-Now you're ready to use Pillar UI in your project:
+### Using Pillar UI Components
 
-```tsx
-import { Button, Paper, Input } from '@pillar-ui/core'
-import { Envelope } from '@pillar-ui/icons'
+    Now you're ready to use Pillar UI in your project:
 
-function App() {
-  return (
-    <Paper>
-      <Input placeholder="Enter email" suffix={<Envelope />} />
-      <Button>Submit</Button>
-    </Paper>
-  )
-}
-```
+    ```tsx
+    import { Button, Paper, Input } from '@pillar-ui/core'
+    import { Envelope } from '@pillar-ui/icons'
 
-## Developer experience
+    function App() {
+      return (
+        <Paper>
+          <Input placeholder="Enter email" suffix={<Envelope />} />
+          <Button>Submit</Button>
+        </Paper>
+      )
+    }
+    ```
 
-Pillar UI enhances your development experience (DX) with simple workflows for component implementation and customization. It eliminates repetitive styling code and offers customization options to fit your project requirements.
+        </div>
 
-- Responsive Variables: Control component appearance easily with responsive variables.
-- Preventing Repetition: Avoid repetitive styling by using predefined styles and variables.
-- Customization and Extensibility: Customize Pillar UI to match your project's design language and branding.
+  </TimelineItem>
+      <TimelineItem content="5">
+    <div className="Sf-4">
+### Developer experience
 
-```css
-/*
-//////////////////////////////////////////////////////////////////////////////////////////////////
-  Theme Section
-//////////////////////////////////////////////////////////////////////////////////////////////////
-*/
+      Pillar UI enhances your development experience (DX) with simple workflows for component implementation and customization. It eliminates repetitive styling code and offers customization options to fit your project requirements.
 
-/*  Define custom theme styles here  */
+      - Responsive Variables: Control component appearance easily with responsive variables.
+      - Preventing Repetition: Avoid repetitive styling by using predefined styles and variables.
+      - Customization and Extensibility: Customize Pillar UI to match your project's design language and branding.
 
-/*
-//////////////////////////////////////////////////////////////////////////////////////////////////
-  Default Properties Section
-//////////////////////////////////////////////////////////////////////////////////////////////////
-*/
+      ```css
+      /*
+      //////////////////////////////////////////////////////////////////////////////////////////////////
+        Theme Section
+      //////////////////////////////////////////////////////////////////////////////////////////////////
+      */
 
-:root {
-  --button-corner: 0;
-  --avatar-corner: 0;
-  --badge-corner: 0;
-}
-```
+      /*  Define custom theme styles here  */
 
-Set `--button-corner`, `--avatar-corner`, and `--badge-corner` to 0 for sharp corners on buttons, avatars, and badges.
+      /*
+      //////////////////////////////////////////////////////////////////////////////////////////////////
+        Default Properties Section
+      //////////////////////////////////////////////////////////////////////////////////////////////////
+      */
 
-## Key Features
+      :root {
+        --button-rad: 0;
+        --avatar-rad: 0;
+        --badge-rad: 0;
+      }
+      ```
 
-- **Responsive Design**: Easily create adaptive layouts with Pillar UI's responsive components.
-- **Customizable Themes**: Tailor the look and feel of your app with simple CSS variables.
-- **Accessibility**: Built-in accessibility features ensure your app is usable by everyone.
-- **Developer-Friendly**: Intuitive APIs and comprehensive documentation speed up development.
+      Set `--button-rad`, `--avatar-rad`, and `--badge-rad` to 0 for sharp corners on buttons, avatars, and badges.
 
-## Explore More
+    </div>
 
-- [Component Documentation](/docs/components)
-- [Utility Functions](/docs/utils)
-- [React Hooks](/docs/hooks)
-- [Icon Library](/docs/icons)
-- [Features Documentation](/docs/features)
-- [Themes Documentation](/docs/themes)
+  </TimelineItem>
+</Timeline>
 
 ## Community and Support
 

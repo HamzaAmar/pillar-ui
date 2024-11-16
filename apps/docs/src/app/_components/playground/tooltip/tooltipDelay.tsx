@@ -1,9 +1,11 @@
-import { Corner, Tooltip, TooltipContent, TooltipTrigger, type TooltipProps } from '@pillar-ui/core'
+'use client'
+
+import { Button, Tooltip, TooltipContent, TooltipTrigger, type TooltipProps } from '@pillar-ui/core'
 
 export function TooltipBase({ delay }: { delay: number }) {
   return (
     <Tooltip delay={delay}>
-      <TooltipTrigger as="button">hello</TooltipTrigger>
+      <TooltipTrigger as={Button}>hello</TooltipTrigger>
       <TooltipContent>Hello world</TooltipContent>
     </Tooltip>
   )

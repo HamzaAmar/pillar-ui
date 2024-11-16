@@ -1,4 +1,4 @@
-import { Table, Alert, TableColumn, TableRow } from '@pillar-ui/core'
+import { Table, Alert, TableColumn, TableRow, Timeline, TimelineItem } from '@pillar-ui/core'
 import React from 'react'
 import Image, { ImageProps } from 'next/image'
 import Link, { LinkProps } from 'next/link'
@@ -90,6 +90,8 @@ let components = {
   Colors,
   Alert,
   Prop,
+  Timeline,
+  TimelineItem,
 }
 
 export function CustomMDX(props: any) {

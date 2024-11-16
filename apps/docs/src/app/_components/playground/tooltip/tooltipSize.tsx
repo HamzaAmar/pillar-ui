@@ -1,10 +1,12 @@
+'use client'
+
 import React from 'react'
-import { Tooltip, Flex, TooltipTrigger, TooltipContent, TooltipProps, Size } from '@pillar-ui/core'
+import { Tooltip, Flex, TooltipTrigger, TooltipContent, TooltipProps, Size, Button } from '@pillar-ui/core'
 
 export function TooltipBase({ size }: { size: Size }) {
   return (
     <Tooltip>
-      <TooltipTrigger as="button">hello</TooltipTrigger>
+      <TooltipTrigger as={Button}>hello</TooltipTrigger>
       <TooltipContent size={size}>Hello world</TooltipContent>
     </Tooltip>
   )

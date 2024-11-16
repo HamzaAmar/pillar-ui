@@ -1,10 +1,12 @@
-import { Tooltip, TooltipContent, TooltipTrigger } from '@pillar-ui/core'
+'use client'
+
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@pillar-ui/core'
 import React from 'react'
 
 export function TooltipBase({ position }: { position: 'top' | 'bottom' | 'left' | 'right' }) {
   return (
     <Tooltip>
-      <TooltipTrigger as="button">hello</TooltipTrigger>
+      <TooltipTrigger as={Button}>hello</TooltipTrigger>
       <TooltipContent position={position}>Hello world</TooltipContent>
     </Tooltip>
   )

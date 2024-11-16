@@ -18,14 +18,15 @@ const DocNavigate = ({ title, slug, to }: DocNavigateProps) => {
       corner="3"
       border
       p="4"
+      data-exist={!!title}
       className="fl-1 navigate-btn"
     >
       <ChevronDown width="20" />
-      <div>
+      <div className="Sf-2">
         <Text color="b" low size="3" transform="uppercase">
           {to}
         </Text>
-        <Text>{title}</Text>
+        <Text weight="6">{title}</Text>
       </div>
     </Paper>
   )
