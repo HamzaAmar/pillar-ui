@@ -9,7 +9,7 @@ export function Accessible() {
         subheading="Pillar UI The Intuitive React UI Library"
         heading="For Building Accessible Applications Effortlessly"
       />
-      <Grid gap="5" grid="1fr 1fr 1fr" lg="1fr 1fr" sm="1fr">
+      <Grid gap="5" cols={{ default: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr' }}>
         {ACCESSIBILITY.map(({ id, title, description, icon }) => (
           <Paper className="article--item" key={id} flow="2">
             <Flex gap="4" items="center">

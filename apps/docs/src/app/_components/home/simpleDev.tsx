@@ -8,7 +8,7 @@ export function SimplifyDevelopment() {
       <div className="simplify-dev--container Sf-7">
         <SectionHeading subheading="Deliver Projects Faster" heading="Effortless UI with Pillar UI" />
 
-        <Grid grid="1fr 1fr" md="1fr" gap="5">
+        <Grid cols={{ default: '1fr', md: '1fr 1fr' }} gap="5">
           {SIMPLE_DEVELOPMENT.map(({ title, id, description }) => (
             <div className="article--item Sf-2" key={id}>
               <Heading as="h3">{title}</Heading>

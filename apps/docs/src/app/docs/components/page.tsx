@@ -7,7 +7,7 @@ async function Page() {
   const components = getComponents()
 
   return (
-    <Paper as={Grid} m="5" grid="repeat(4, 1fr)" gap="4">
+    <Paper as={Grid} m="5" cols={{ default: 'repeat(4, 1fr)' }} gap="4">
       {components.map((component) => (
         <Link href={`components/${component.slug}`} key={component.slug}>
           <Paper height="96p" corner="2" className="F-c">

@@ -13,6 +13,8 @@
 }
 .ti-I {
   position: relative;
+  display: grid;
+  grid-template-columns: 1em 1fr;
 }
 
 .ti-B {

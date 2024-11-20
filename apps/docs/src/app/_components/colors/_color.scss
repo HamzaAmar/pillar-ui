@@ -1,0 +1,10 @@
+.colors-section {
+  display: grid;
+  grid-template-columns: 4rem 1fr auto;
+}
+
+.color-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 30px 30px;
+}

@@ -15,6 +15,15 @@ export const AlertAction = () => {
         closable
         message="you have an error in the start of the program!"
       />
+      <Alert
+        action={
+          <Button onClick={() => alert('clicked')} color="d" size="3">
+            Close
+          </Button>
+        }
+        closable
+        message="you have an error in the start of the program!"
+      />
     </>
   )
 }

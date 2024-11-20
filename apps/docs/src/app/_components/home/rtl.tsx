@@ -43,7 +43,7 @@ function Article({ type = 'en' }: { type?: 'ar' | 'en' }) {
 
 export function RTLSupport() {
   return (
-    <Paper as={Grid} grid="1.7fr 1fr" lg="1fr" items="center" gap="5" className="section rtl--support">
+    <Paper as={Grid} cols={{ default: '1fr', lg: '2fr 1fr' }} items="center" gap="5" className="section rtl--support">
       <div className="rtl--support--content">
         <div className="Sf-5">
           <div className="Sf-3">
@@ -59,7 +59,7 @@ export function RTLSupport() {
             </Text>
           </div>
 
-          <Grid grid="1fr 1fr" md="1fr" gap="4" className="feature-list">
+          <Grid cols={{ default: '1fr', md: '1fr 1fr' }} gap="4" className="feature-list">
             {FEATURES.map(({ id, title, description, icon }) => (
               <Flex key={id} as="article" gap="4" className="feature--item">
                 <span className="feature-icon">{icon}</span>

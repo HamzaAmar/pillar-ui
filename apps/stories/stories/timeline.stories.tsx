@@ -71,7 +71,7 @@ export const TimelineColor = () => {
 
 export const TimelineCorner = () => {
   return (
-    <Grid grid="1fr 1fr 1fr" className="md_grid-two sm_grid-one" gap="6">
+    <Grid cols={{ default: '1fr 1fr 1fr' }} className="md_grid-two sm_grid-one" gap="6">
       <Timeline corner="0">
         <Items />
       </Timeline>

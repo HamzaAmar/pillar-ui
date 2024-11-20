@@ -1,97 +1,22 @@
 /* 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-  xxl: 1440px
+  3: 480px
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
-
-@media (max-width: 1440px) {
-  .xxl_grid-columns {
-    grid-template-columns: var(--xxl-grid-columns);
+@media (min-width: 480px) {
+  .gcs-xs {
+    grid-template-columns: var(--gcs-xs);
   }
-  .xxl_grid-rows {
-    grid-template-rows: var(--xxl-grid-rows);
+  .grs-xs {
+    grid-template-rows: var(--grs-xs);
   }
-  .xxl_grid-column {
-    grid-column: var(--xxl-grid-column);
+  .gc-xs {
+    grid-column: var(--gc-xs);
   }
-  .xxl_grid-row {
-    grid-row: var(--xxl-grid-row);
+  .gr-xs {
+    grid-row: var(--gr-xs);
   }
-  .xxl-hide {
-    display: none;
-  }
-}
-
-/* 
-//////////////////////////////////////////////////////////////////////////////////////////////////
-  xl: 1360px
-/////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-
-@media (max-width: 1360px) {
-  .xl_grid-columns {
-    grid-template-columns: var(--xl-grid-columns);
-  }
-  .xl_grid-rows {
-    grid-template-rows: var(--xl-grid-rows);
-  }
-  .xl_grid-column {
-    grid-column: var(--xl-grid-column);
-  }
-  .xl_grid-row {
-    grid-row: var(--xl-grid-row);
-  }
-
-  .xl-hide {
-    display: none;
-  }
-}
-
-/* 
-//////////////////////////////////////////////////////////////////////////////////////////////////
-  lg: 1024px
-/////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-
-@media (max-width: 1024px) {
-  .lg_grid-columns {
-    grid-template-columns: var(--lg-grid-columns);
-  }
-  .lg_grid-rows {
-    grid-template-rows: var(--lg-grid-rows);
-  }
-  .lg_grid-column {
-    grid-column: var(--lg-grid-column);
-  }
-  .lg_grid-row {
-    grid-row: var(--lg-grid-row);
-  }
-  .lg-hide {
-    display: none;
-  }
-}
-
-/* 
-//////////////////////////////////////////////////////////////////////////////////////////////////
-  md: 768px
-/////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-
-@media (max-width: 768px) {
-  .md_grid-columns {
-    grid-template-columns: var(--md-grid-columns);
-  }
-  .md_grid-rows {
-    grid-template-rows: var(--md-grid-rows);
-  }
-  .md_grid-column {
-    grid-column: var(--md-grid-column);
-  }
-  .md_grid-row {
-    grid-row: var(--md-grid-row);
-  }
-
-  .md-hide {
+  .xs-hide {
     display: none;
   }
 }
@@ -102,18 +27,18 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-@media (max-width: 568px) {
-  .sm_grid-columns {
-    grid-template-columns: var(--sm-grid-columns);
+@media (min-width: 568px) {
+  .gcs-sm {
+    grid-template-columns: var(--gcs-sm);
   }
-  .sm_grid-rows {
-    grid-template-rows: var(--sm-grid-rows);
+  .grs-sm {
+    grid-template-rows: var(--grs-sm);
   }
-  .sm_grid-column {
-    grid-column: var(--sm-grid-column);
+  .gc-sm {
+    grid-column: var(--gc-sm);
   }
-  .sm_grid-row {
-    grid-row: var(--sm-grid-row);
+  .gr-sm {
+    grid-row: var(--gr-sm);
   }
   .sm-hide {
     display: none;
@@ -122,23 +47,98 @@
 
 /* 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-  3: 480px
+  md: 768px
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
-@media (max-width: 480px) {
-  .xs_grid-columns {
-    grid-template-columns: var(--xs-grid-columns);
+
+@media (min-width: 768px) {
+  .gcs-md {
+    grid-template-columns: var(--gcs-md);
   }
-  .xs_grid-rows {
-    grid-template-rows: var(--xs-grid-rows);
+  .grs-md {
+    grid-template-rows: var(--grs-md);
   }
-  .xs_grid-column {
-    grid-column: var(--xs-grid-column);
+  .gc-md {
+    grid-column: var(--gc-md);
   }
-  .xs_grid-row {
-    grid-row: var(--xs-grid-row);
+  .gr-md {
+    grid-row: var(--gr-md);
   }
-  .xs-hide {
+
+  .md-hide {
+    display: none;
+  }
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  lg: 1024px
+/////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media (min-width: 1024px) {
+  .gcs-lg {
+    grid-template-columns: var(--gcs-lg);
+  }
+  .grs-lg {
+    grid-template-rows: var(--grs-lg);
+  }
+  .gc-lg {
+    grid-column: var(--gc-lg);
+  }
+  .gr-lg {
+    grid-row: var(--gr-lg);
+  }
+  .lg-hide {
+    display: none;
+  }
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  xl: 1360px
+/////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media (min-width: 1360px) {
+  .gcs-xl {
+    grid-template-columns: var(--gcs-xl);
+  }
+  .grs-xl {
+    grid-template-rows: var(--grs-xl);
+  }
+  .gc-xl {
+    grid-column: var(--gc-xl);
+  }
+  .gr-xl {
+    grid-row: var(--gc-xl);
+  }
+
+  .xl-hide {
+    display: none;
+  }
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+  xxl: 1440px
+/////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media (min-width: 1440px) {
+  .grs-xl {
+    grid-template-columns: var(--gcs-xxl);
+  }
+  .grs-xl {
+    grid-template-rows: var(--grs-xxl);
+  }
+  .gc-xl {
+    grid-column: var(--gc-xxl);
+  }
+  .gr-xl {
+    grid-row: var(--gr-xxl);
+  }
+  .xxl-hide {
     display: none;
   }
 }

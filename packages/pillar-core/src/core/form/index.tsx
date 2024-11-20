@@ -17,7 +17,6 @@ import type {
 } from './form.type'
 import { cx } from '../cx'
 import { Flex } from '../flex'
-import { Grid } from '../grid'
 import { context } from '../provider'
 import { ChevronDown, Close, Eye, EyeOff, Search } from '../icons'
 
@@ -333,14 +332,14 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>(
       }
     }
     return (
-      <Grid grid="auto 1fr" className={cls} onClick={() => inputRef.current?.click()}>
+      <div className={cls} onClick={() => inputRef.current?.click()}>
         <input type="file" ref={composedRef} {...field} className="H-sr" onChange={handleChange} />
         <Flex as="span" items="center" className="fif-">
           {title}
         </Flex>
 
         <span className="ff-t t-y fl- Fs-3 Aai-center Cb t-y-low">{hasValue ? _value : 'No file Choose'}</span>
-      </Grid>
+      </div>
     )
   }
 )

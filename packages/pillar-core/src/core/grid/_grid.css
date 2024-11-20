@@ -1,15 +1,22 @@
-.g-r {
-  --columns: var(--regular-columns);
-  --rows: var(--regular-rows);
-  --areas: var(--regular-areas);
-
+.gr- {
   display: grid;
-  grid-template-columns: var(--columns);
-  grid-template-rows: var(--rows);
-  grid-template-areas: var(--areas);
 }
 
-.g-r_i {
-  grid-column: var(--column);
-  grid-row: var(--row);
+.gcs-def {
+  grid-template-columns: var(--gcs-def);
+}
+.grs-def {
+  grid-template-rows: var(--grs-def);
+}
+
+.grs-def {
+  grid-row: var(--gr-def);
+}
+
+.gc-def {
+  grid-column: var(--gc-def);
+}
+
+.gr-def {
+  grid-row: var(--gr-def);
 }

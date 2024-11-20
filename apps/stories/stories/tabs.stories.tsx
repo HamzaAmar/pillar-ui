@@ -98,7 +98,7 @@ export const TabDirection = () => {
 
 export const TabVariants = () => {
   return (
-    <Grid grid="1fr 1fr" gap="4">
+    <Grid cols={{ default: '1fr 1fr' }} gap="4">
       <Flex direction="col" gap="4">
         <TabBase variant="solid" color="d" defaultValue={1} />
         <TabBase variant="solid" color="w" defaultValue={1} />

@@ -19,8 +19,8 @@ const Box = (props: any) => {
 
 export const EqualColumns = () => {
   return (
-    <Grid gap="3" grid="repeat(15, 1fr)">
-      {Array.from({ length: 288 }, (_, index) => (
+    <Grid gap="3" cols={{ default: 'repeat(20, 1fr)' }}>
+      {Array.from({ length: 300 }, (_, index) => (
         <Box style={{ height: '30px' }} key={index}>
           {index + 1}
         </Box>
@@ -31,9 +31,20 @@ export const EqualColumns = () => {
 
 export const ResponsiveColumns = () => {
   return (
-    <Grid gap="3" grid="repeat(12, 1fr)" lg="repeat(6, 1fr)" md="repeat(4, 1fr)" sm="1fr 1fr" xs="1fr">
-      {Array.from({ length: 64 }, () => (
-        <Box height="60px" />
+    <Grid
+      gap="3"
+      cols={{
+        default: '1fr',
+        sm: '1fr 1fr',
+        md: 'repeat(4, 1fr)',
+        lg: 'repeat(6, 1fr)',
+        xl: 'repeat(12, 1fr)',
+      }}
+    >
+      {Array.from({ length: 64 }, (_, index) => (
+        <Box style={{ height: '30px' }} key={index}>
+          {index}
+        </Box>
       ))}
     </Grid>
   )
@@ -41,17 +52,21 @@ export const ResponsiveColumns = () => {
 
 export const ResponsiveColumn = () => {
   return (
-    <Grid gap="3" grid="repeat(4, 1fr) x repeat(6, 1fr)" sm="1fr x repeat(4, 1fr)">
-      <GridItem as={Box} placement="1/5" sm="1/2" height="48p">
+    <Grid
+      gap="3"
+      cols={{ default: '1fr', md: 'repeat(4, 1fr)' }}
+      rows={{ default: 'repeat(4, 1fr)', md: 'repeat(6,1fr)' }}
+    >
+      <GridItem as={Box} col={{ default: '1/2', md: '1/5' }} height="48p">
         Hello
       </GridItem>
-      <GridItem as={Box} placement="span 2 x span 4" sm="1/2 x 2/3">
+      <GridItem as={Box} col={{ default: '1/2', md: 'span 2' }} row={{ default: '2/3', md: 'span 4' }}>
         Hello
       </GridItem>
-      <GridItem as={Box} placement="span 2 x span 4" sm="1/2 x 3/4">
+      <GridItem as={Box} col={{ default: '1/2', md: 'span 2' }} row={{ default: '3/4', md: 'span 4' }}>
         Hello
       </GridItem>
-      <GridItem as={Box} placement="span 4" sm="1/2" height="48p">
+      <GridItem as={Box} col={{ default: '1/2', md: 'span 4' }} height="48p">
         Hello
       </GridItem>
     </Grid>
@@ -59,40 +74,50 @@ export const ResponsiveColumn = () => {
 }
 
 export const ComplexGridOne = () => (
-  <Grid style={{ height: '95vh' }} grid="150px 1fr 150px x 2rem minmax(6rem, 1fr) 2rem" gap="4">
-    <GridItem as={Box} placement="1 / -1">
+  <Grid
+    style={{ height: '95vh' }}
+    cols={{ default: 'auto 1fr auto' }}
+    rows={{ default: '4rem minmax(6rem, 1fr) 4rem' }}
+    gap="4"
+  >
+    <GridItem as={Box} col={{ default: '1 / -1' }}>
       Header
     </GridItem>
-    <GridItem as={Box} placement="span 1">
+    <GridItem p="5" as={Box} col={{ default: 'span 1' }}>
       sidebar
     </GridItem>
-    <GridItem as={Box} placement="span 1">
+    <GridItem as={Box} col={{ default: 'span 1' }}>
       main
     </GridItem>
-    <GridItem lg="lg_hide" as={Box} placement="span 1">
+    <GridItem p="5" lg="lg_hide" as={Box} col={{ default: 'span 1' }}>
       sidebar
     </GridItem>
-    <GridItem as={Box} placement="1 / -1">
+    <GridItem as={Box} col={{ default: '1 / -1' }}>
       Footer
     </GridItem>
   </Grid>
 )
 
 export const ComplexGridTwo = () => (
-  <Grid style={{ height: '95vh' }} grid="100px 1fr 100px x 2rem minmax(6rem, 1fr) 2rem" gap="4">
-    <GridItem as={Box} placement="2/4">
+  <Grid
+    style={{ height: '95vh' }}
+    cols={{ default: '100px 1fr 100px' }}
+    rows={{ default: '2rem minmax(6rem, 1fr) 2rem' }}
+    gap="4"
+  >
+    <GridItem as={Box} col={{ default: '2/4' }}>
       Header
     </GridItem>
-    <GridItem as={Box} placement="span 1 x 1 / span 3">
+    <GridItem as={Box} col={{ default: 'span 1' }} row={{ default: '1 / span 3' }}>
       sidebar
     </GridItem>
-    <GridItem as={Box} placement="2 / 3">
+    <GridItem as={Box} col={{ default: '2 / 3' }}>
       main
     </GridItem>
-    <GridItem as={Box} placement="3 / 4">
+    <GridItem as={Box} col={{ default: '3 / 4' }}>
       sidebar
     </GridItem>
-    <GridItem as={Box} placement="2 / span 2">
+    <GridItem as={Box} col={{ default: '2 / span 2' }}>
       Footer
     </GridItem>
   </Grid>
@@ -100,7 +125,7 @@ export const ComplexGridTwo = () => (
 
 export const GridColumns = () => {
   return (
-    <Grid grid=".5fr 2fr auto 100px" gap="4">
+    <Grid cols={{ default: '.5fr 2fr 3rem 100px' }} gap="4">
       <Box height="96p" />
       <Box height="96p" />
       <Box height="96p" />
@@ -119,7 +144,7 @@ export const GridColumns = () => {
 
 export const GridRows = () => {
   return (
-    <Grid style={{ height: '700px' }} grid="repeat(3, 1fr) x .5fr 2fr 100px" gap="4">
+    <Grid style={{ height: '700px' }} cols={{ default: 'repeat(3, 1fr)' }} rows={{ default: '.5fr 2fr 100px' }} gap="4">
       <Box />
       <Box />
       <Box />

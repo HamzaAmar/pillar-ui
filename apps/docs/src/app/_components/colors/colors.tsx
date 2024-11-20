@@ -1,6 +1,6 @@
 import React from 'react'
 import { COLORS } from '../../../constant/colors'
-import { Text, Paper, Grid } from '@pillar-ui/core'
+import { Text, Paper } from '@pillar-ui/core'
 import type { Colors as ColorsType } from '~/constant/colors/colors.type'
 import { default as CopyButton } from './copyButton'
 
@@ -13,10 +13,10 @@ function ColorItem({ item, value }: ColorItem) {
   const { light, dark } = value
 
   return (
-    <Grid as={Paper} border items="center" grid="4rem 1fr auto" gap="4">
+    <Paper border className="Aai-center colors-section Sg-4">
       <Text size="4">{item} </Text>
       <div className="Sf-3">
-        <Grid justify="center" grid="repeat(12, 1fr) x auto 30px 30px" gap="3">
+        <div className="Ajc-center Sg-3 color-container">
           {Array.from({ length: 12 }, (_, index) => (
             <Text align="center" size="4" key={`${item}-${index + 1}`} weight="5" color="b" low>
               {index + 1}
@@ -28,10 +28,10 @@ function ColorItem({ item, value }: ColorItem) {
           {dark.map((color) => (
             <Paper corner="3" style={{ height: '30px', background: `hsl(${color})` }} key={`${color}-dark`} />
           ))}
-        </Grid>
+        </div>
       </div>
       <CopyButton value={value} item={item} />
-    </Grid>
+    </Paper>
   )
 }
 

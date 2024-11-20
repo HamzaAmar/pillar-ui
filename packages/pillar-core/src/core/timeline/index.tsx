@@ -1,5 +1,4 @@
 'use client'
-import { Grid } from '../grid'
 import { context } from '../provider'
 
 import type { TimelineContextProps, TimelineItemProps, TimelineProps } from './timeline.type'
@@ -21,12 +20,12 @@ export const TimelineItem = (props: TimelineItemProps) => {
   } = props
 
   return (
-    <Grid grid=".85em 1fr" gap="4" className={`ti-I ti-I-${line}`}>
+    <div className={`ti-I Sg-4 ti-I-${line}`}>
       <div className={`ti-L C-${color}`}>
         <div className={`ti-B R-${corner} V-${variant} F-c`}>{content}</div>
       </div>
       <div className="ti-C">{children}</div>
-    </Grid>
+    </div>
   )
 }
 

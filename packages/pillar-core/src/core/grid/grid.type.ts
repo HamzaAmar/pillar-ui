@@ -3,6 +3,7 @@ import { Items, Justify, Size } from '../../types'
 // import { Size } from '../../types'
 
 export interface GridBaseProps {
+  default?: string
   xs?: string
   sm?: string
   md?: string
@@ -10,15 +11,17 @@ export interface GridBaseProps {
   xl?: string
 }
 
-export interface GridProps extends GridBaseProps {
+export interface GridProps {
   children: ReactNode
   items?: Items
   justify?: Justify
-  grid: string
   gap?: Size
+  cols?: GridBaseProps
+  rows?: GridBaseProps
 }
 
-export interface GridItemProps extends GridBaseProps {
+export interface GridItemProps {
   children: ReactNode
-  placement: string
+  col?: GridBaseProps
+  row?: GridBaseProps
 }

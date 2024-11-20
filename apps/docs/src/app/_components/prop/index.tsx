@@ -8,7 +8,7 @@ interface Prop {
 
 export const Prop = ({ type, defaultValue = '-' }: Prop) => {
   return (
-    <Flex gap="8" justify="between" as={Paper} border p="4">
+    <Flex gap="8" justify="between" corner="3" as={Paper} border p="4">
       <div className="Sf-4">
         <Text color="b" size="3" low>
           Default

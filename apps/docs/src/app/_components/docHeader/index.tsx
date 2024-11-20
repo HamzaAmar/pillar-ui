@@ -1,4 +1,4 @@
-import { Flex, Grid, Heading, Paper, Text, Button, Chips } from '@pillar-ui/core'
+import { Flex, Heading, Paper, Text, Button, Chips, Grid } from '@pillar-ui/core'
 import { Github } from '@pillar-ui/icons'
 import React from 'react'
 import { DocHeaderProps } from './docHeader.type'
@@ -13,7 +13,7 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
         {excerpt}
       </Text>
 
-      <Grid grid="auto minmax(0, 1fr)" sm="1fr" gap="5">
+      <Grid cols={{ default: '1fr', md: 'auto minmax(0, 1fr)' }} gap="5">
         {type === 'core' && (
           <>
             <Text weight="5" size="4" color="b" low>

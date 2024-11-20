@@ -7,7 +7,7 @@ import { getHooks } from '~/api/docs'
 export default function Hooks() {
   const hooks = getHooks()
   return (
-    <Paper as={Grid} m="5" grid="repeat(4, 1fr)" gap="4">
+    <Paper as={Grid} m="5" cols={{ default: 'repeat(4, 1fr)' }} gap="4">
       {hooks.map((hook) => (
         <Link href={`utils/${hook.slug}`} key={hook.slug}>
           <Paper height="96p" corner="2" background="B3" className="F-c">

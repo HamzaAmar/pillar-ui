@@ -40,6 +40,12 @@
   }
 }
 
+@media screen and (max-width: 1068px) {
+  .toc-wrapper {
+    display: none;
+  }
+}
+
 .as-item {
   position: relative;
   width: 100%;

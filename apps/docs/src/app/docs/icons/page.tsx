@@ -57,7 +57,7 @@ const Icons = () => {
         <Heading as="h2">
           Number of Icons In {current}: {lists.length}
         </Heading>
-        <Grid gap="4" grid="repeat(auto-fit, minmax(140px, 1fr)">
+        <Grid gap="4" cols={{ default: 'repeat(auto-fit, minmax(140px, 1fr)' }}>
           {lists.map((item) => (
             <IconsItem item={item} />
           ))}

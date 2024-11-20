@@ -21,7 +21,7 @@ export function PillarSupport() {
           style={{ position: 'sticky', top: '8rem' }}
           items="center"
           gap="7"
-          grid="repeat(auto-fit, minmax(180px, 1fr))"
+          cols={{ default: 'repeat(auto-fit, minmax(180px, 1fr))' }}
         >
           {SUPPORTED.map(({ slug, icon }) => (
             <div key={slug}>{icon}</div>
