@@ -1,16 +1,12 @@
-import { Grid, Paper } from '@pillar-ui/core'
+import { Grid, Paper, type PaperProps } from '@pillar-ui/core'
 
-const Box = (props: any) => {
-  return <Paper p="5" background="B6" corner="2" {...props} />
+const Box = (props: PaperProps) => {
+  return <Paper p="5" background="W11" corner="2" {...props} />
 }
 
-const items = Array.from({ length: 10 }, (_, index) => (
-  <Box width="" key={index}>
-    {index + 1}
-  </Box>
-))
+const items = Array.from({ length: 10 }, (_, index) => <Box key={index} />)
 
-export const GridCols = () => {
+export const GridRows = () => {
   return (
     <Paper flow="9">
       <Grid gap="3" rows={{ default: 'repeat(5, 1fr)' }}>

@@ -1,42 +1,47 @@
 import { Grid, Paper } from '@pillar-ui/core'
 
-const Box = (props: any) => {
-  return <Paper width="48p" ratio="1" background="B6" corner="2" className="F-c" {...props} />
-}
+const boxes = Array.from({ length: 10 }, (_, index) => (
+  <Paper p="4" height="48p" background="W8" corner="2" className="F-c">
+    {index + 1}
+  </Paper>
+))
 
-const boxes = Array.from({ length: 10 }, (_, index) => <Box key={index} />)
+const shared = {
+  className: 'ex-striped',
+  cols: { default: 'repeat(10, 1fr)' },
+} as const
 
-export const FlexGap = () => {
+export const GridGap = () => {
   return (
-    <Paper flow="6">
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }}>{boxes}</Grid>
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }} gap="1">
+    <>
+      <Grid {...shared}>{boxes}</Grid>
+      <Grid {...shared} gap="1">
         {boxes}
       </Grid>
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }} gap="2">
+      <Grid {...shared} gap="2">
         {boxes}
       </Grid>
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }} gap="3">
+      <Grid {...shared} gap="3">
         {boxes}
       </Grid>
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }} gap="4">
+      <Grid {...shared} gap="4">
         {boxes}
       </Grid>
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }} gap="5">
+      <Grid {...shared} gap="5">
         {boxes}
       </Grid>
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }} gap="6">
+      <Grid {...shared} gap="6">
         {boxes}
       </Grid>
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }} gap="7">
+      <Grid {...shared} gap="7">
         {boxes}
       </Grid>
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }} gap="8">
+      <Grid {...shared} gap="8">
         {boxes}
       </Grid>
-      <Grid cols={{ default: 'repeat(auto-fit,auto)' }} gap="9">
+      <Grid {...shared} gap="9">
         {boxes}
       </Grid>
-    </Paper>
+    </>
   )
 }

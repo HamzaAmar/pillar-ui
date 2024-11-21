@@ -1,4 +1,4 @@
-import { Table, Alert, TableColumn, TableRow, Timeline, TimelineItem } from '@pillar-ui/core'
+import { Alert, Timeline, TimelineItem } from '@pillar-ui/core'
 import React from 'react'
 import Image, { ImageProps } from 'next/image'
 import Link, { LinkProps } from 'next/link'
@@ -51,6 +51,13 @@ async function Code({ children, ...props }: { children: string; className: strin
 
   return <DocsCode code={code} html={codeHTML} />
 }
+async function Table({ children, ...props }: { children: string; className: string }) {
+  return (
+    <div className="doc-table">
+      <table>{children}</table>
+    </div>
+  )
+}
 
 function createHeading(level: number) {
   const Heading = ({ children }: { children: string }) => {
@@ -83,9 +90,7 @@ let components = {
   h6: createHeading(6),
   a: CustomLink,
   pre: Code,
-  Table,
-  TableColumn,
-  TableRow,
+  table: Table,
   Playground,
   Colors,
   Alert,

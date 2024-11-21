@@ -10,45 +10,21 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 Responsive breakpoints are screen width ranges where your website adjusts its layout to look great on various devices. They’re essential for creating user-friendly designs that work well on phones, tablets, laptops, and desktops.
 
-## Common Breakpoints
+### Mobile-First Design System
 
-Here’s a quick guide to common breakpoints and how to use them:
+Our design system follows a **mobile-first approach**, meaning that styles are optimized for smaller screens by default. As the screen size increases, additional styles are applied to enhance the design for larger devices. This is achieved using **media queries with `min-width`**, ensuring that styles apply **from the specified width and up**.
 
-<Table>
-  <TableColumn>Breakpoint</TableColumn>
-  <TableColumn>`@media` Query</TableColumn>
-  <TableColumn>Description</TableColumn>
-  <TableRow>
-    <TableColumn>480px</TableColumn>
-    <TableColumn>`@media (max-width: 480px)`</TableColumn>
-    <TableColumn>📱 Small mobile devices (phones)</TableColumn>
-  </TableRow>
-  <TableRow>
-    <TableColumn>568px</TableColumn>
-    <TableColumn>`@media (max-width: 568px)`</TableColumn>
-    <TableColumn>📱 Mobile devices (phones and small tablets)</TableColumn>
-  </TableRow>
-  <TableRow>
-    <TableColumn>768px</TableColumn>
-    <TableColumn>`@media (max-width: 768px)`</TableColumn>
-    <TableColumn>📱📓 Tablets and smaller screens (large tablets and small laptops)</TableColumn>
-  </TableRow>
-  <TableRow>
-    <TableColumn>1024px</TableColumn>
-    <TableColumn>`@media (max-width: 1024px)`</TableColumn>
-    <TableColumn>📱📓 Tablets and larger screens (large tablets, laptops, and small desktops)</TableColumn>
-  </TableRow>
-  <TableRow>
-    <TableColumn>1360px</TableColumn>
-    <TableColumn>`@media (max-width: 1360px)`</TableColumn>
-    <TableColumn>🖥️ Desktop screens (desktop computers and laptops)</TableColumn>
-  </TableRow>
-  <TableRow>
-    <TableColumn>1440px</TableColumn>
-    <TableColumn>`@media (max-width: 1440px)`</TableColumn>
-    <TableColumn>🖥️📺 Large desktop screens (large desktop monitors and TVs)</TableColumn>
-  </TableRow>
-</Table>
+Here’s a table to explain the breakpoints used in our system:
+
+| **Breakpoint Name** | **`min-width` Value** | **Description**                               |
+| ------------------- | --------------------- | --------------------------------------------- |
+| **default**         | `0px`                 | Applies to all devices, starting from `0px`.  |
+| **xs**              | `480px`               | Styles apply to screens **480px and wider**.  |
+| **sm**              | `568px`               | Styles apply to screens **568px and wider**.  |
+| **md**              | `768px`               | Styles apply to screens **768px and wider**.  |
+| **lg**              | `1024px`              | Styles apply to screens **1024px and wider**. |
+| **xl**              | `1360px`              | Styles apply to screens **1360px and wider**. |
+| **xxl**             | `1440px`              | Styles apply to screens **1440px and wider**. |
 
 ## How Pillar UI Makes Breakpoints Effortless
 

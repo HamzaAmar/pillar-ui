@@ -18,16 +18,68 @@ import { Grid } from '@pillar-ui/core'
 <Grid />
 ```
 
+## Responsive
+
+Our design system follows a **mobile-first approach**, meaning that styles are optimized for smaller screens by default. As the screen size increases, additional styles are applied to enhance the design for larger devices. This is achieved using **media queries with `min-width`**, ensuring that styles apply **from the specified width and up**.
+
+| **Breakpoint Name** | **`min-width` Value** | **Description**                               |
+| ------------------- | --------------------- | --------------------------------------------- |
+| **default**         | `0px`                 | Applies to all devices, starting from `0px`.  |
+| **xs**              | `480px`               | Styles apply to screens **480px and wider**.  |
+| **sm**              | `568px`               | Styles apply to screens **568px and wider**.  |
+| **md**              | `768px`               | Styles apply to screens **768px and wider**.  |
+| **lg**              | `1024px`              | Styles apply to screens **1024px and wider**. |
+| **xl**              | `1360px`              | Styles apply to screens **1360px and wider**. |
+| **xxl**             | `1440px`              | Styles apply to screens **1440px and wider**. |
+
 ## Examples
-
-### Grid Breakpoints
-
-<Playground name="accordionCollapsible" root="accordion" />
 
 ### Grid
 
-<Playground name="accordionCollapsible" root="accordion" />
+#### Grid Cols
+
+<Playground direction="column" gap="9" name="gridCols" root="grid" />
+
+#### Grid Rows
+
+<Playground direction="column" name="gridRows" root="grid" />
+
+#### Grid Gap
+
+<Playground direction="column" name="gridGap" root="grid" />
+
+#### Grid Justify Content
+
+<Playground direction="column" name="gridJustifyContent" root="grid" />
+
+#### Grid Justify Items
+
+<Playground direction="column" name="gridJustifyItems" root="grid" />
+
+#### Grid Align Items
+
+<Playground direction="column" name="gridAlignItems" root="grid" />
+
+#### Grid Align Content
+
+<Playground direction="column" name="gridAlignContent" root="grid" />
 
 ### GridItem
 
-<Playground name="accordionCollapsible" root="accordion" />
+#### GridItem Col
+
+<Playground direction="column" gap="9" name="gridCol" root="grid" />
+
+#### GridItem Row
+
+<Playground direction="column" name="gridRow" root="grid" />
+
+### Complex Examples
+
+#### Responsive Example 1
+
+<Playground direction="column" name="gridResponsiveTwo" root="grid" />
+
+#### Responsive Example 2
+
+<Playground direction="column" name="gridResponsive" root="grid" />

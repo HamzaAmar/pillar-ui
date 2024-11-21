@@ -1,24 +1,25 @@
 import { Grid, Paper } from '@pillar-ui/core'
 
-const Box = (props: any) => {
-  return <Paper p="5" background="B6" corner="2" {...props} />
-}
-
 const items = Array.from({ length: 10 }, (_, index) => (
-  <Box style={{ height: '30px' }} key={index}>
+  <Paper p="5" background="W6" corner="2">
     {index + 1}
-  </Box>
+  </Paper>
 ))
+
+const shared = {
+  className: 'ex-striped',
+  gap: '4',
+} as const
 
 export const GridCols = () => {
   return (
-    <Paper flow="9">
-      <Grid gap="3" cols={{ default: 'repeat(5, 1fr)' }}>
+    <>
+      <Grid cols={{ default: 'repeat(5, 1fr)' }} {...shared}>
         {items}
       </Grid>
-      <Grid gap="3" cols={{ default: '1fr 1fr', md: 'repeat(5, 1fr)', lg: 'repeat(10, 1fr)' }}>
+      <Grid cols={{ default: '1fr', md: 'repeat(3, 1fr)', lg: 'repeat(5, 1fr)', xl: 'repeat(8, 1fr)' }} {...shared}>
         {items}
       </Grid>
-    </Paper>
+    </>
   )
 }
