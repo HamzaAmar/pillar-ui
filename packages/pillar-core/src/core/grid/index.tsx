@@ -32,7 +32,7 @@ export const GridItem = forwardRef(
     ])
 
     const classNames = cx(`${cls}`, {
-      className: className,
+      [className!]: className,
     })
 
     return (
@@ -61,7 +61,20 @@ GridItem.displayName = 'GridItem'
 
 export const Grid = forwardRef(
   (
-    { gap, cols = {}, rows = {}, items, justify, children, style, as: Tag = 'div', className, ...rest },
+    {
+      gap,
+      cols = {},
+      rows = {},
+      items,
+      justify,
+      justifyItem,
+      alignContent,
+      children,
+      style,
+      as: Tag = 'div',
+      className,
+      ...rest
+    },
     forwardedRef
   ) => {
     const [styles, cls] = getCSS([
@@ -81,10 +94,11 @@ export const Grid = forwardRef(
 
     const classNames = cx(`gr- ${cls}`, {
       [`Ajc-${justify}`]: justify,
+      [`Aji-${justifyItem}`]: justifyItem,
       [`Aai-${items}`]: items,
+      [`Aac-${alignContent}`]: alignContent,
       [`Sg-${gap}`]: gap,
       [className!]: className,
-      className: className,
     })
 
     return (

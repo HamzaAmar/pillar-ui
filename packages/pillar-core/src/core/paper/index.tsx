@@ -55,7 +55,7 @@ export const Paper = forwardRef(
       [className!]: className,
     })
 
-    const bg = background ? { '--pbg': `var(--${background}` } : {}
+    const bg = background ? { '--pbg': `var(--${background})` } : {}
 
     return (
       <Tag style={{ ...bg, ...style } as CSSProperties} className={classNames} ref={ref} {...rest}>

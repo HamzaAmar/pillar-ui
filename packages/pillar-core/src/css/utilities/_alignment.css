@@ -28,6 +28,9 @@
 
 /* Align Item Section Style Start */
 
+.Aji-start {
+  justify-items: start;
+}
 .Aji-center {
   justify-items: center;
 }
@@ -62,12 +65,23 @@
   align-items: start;
 }
 
-/* // Align Content Section Style Start */
+/*  Align Content Section Style Start */
 
+.Aac-start {
+  align-content: start;
+}
+.Aac-center {
+  align-content: center;
+}
 .Aac-end {
   align-content: end;
 }
-
+.Aac-baseline {
+  align-content: baseline;
+}
+.Aac-stretch {
+  align-content: stretch;
+}
 .Aac-between {
   align-content: space-between;
 }

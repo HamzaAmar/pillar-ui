@@ -15,6 +15,8 @@ export interface GridProps {
   children: ReactNode
   items?: Items
   justify?: Justify
+  justifyItem?: Items
+  alignContent?: Justify | 'baseline'
   gap?: Size
   cols?: GridBaseProps
   rows?: GridBaseProps
