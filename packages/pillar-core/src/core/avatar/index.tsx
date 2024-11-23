@@ -69,14 +69,14 @@ export const Avatar = forwardRef((props, forwardRef) => {
     corner = ctx?.corner,
     color = ctx?.color ?? 'p',
     fallback = ctx?.fallback ?? <User strokeWidth="1.5" width="max(1.5em, 10px)" />,
-    image = '',
+    src = '',
     className,
     title,
     onError,
     ...rest
   } = props
 
-  const [isError, setIsError] = useState(!image)
+  const [isError, setIsError] = useState(!src)
 
   const classNames = cx(`av- av-${variant} C-${color} S-e F-c`, {
     [`A-${animate}`]: animate,
@@ -93,7 +93,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
       className="av-I"
       ref={(node) => {
         if (node) {
-          node.src = image
+          node.src = src
           node.onerror = () => {
             setIsError(true)
           }

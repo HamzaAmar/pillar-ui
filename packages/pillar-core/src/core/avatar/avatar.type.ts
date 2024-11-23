@@ -1,7 +1,7 @@
 import { ReactElement, ReactNode } from 'react'
 import type { Color, Corner, CornerBlob, CornerHand, Size, Variant } from '../../types'
 
-type Animate = 'zoom' | 'jump-y' | 'jump-x'
+type Animate = 'zoom' | 'jump-y' | 'jump-x' | 'jump--y' | 'jump--x' | 'zoom-in'
 
 interface AvatarBase {
   size?: Size
@@ -14,7 +14,7 @@ interface AvatarBase {
 
 export interface AvatarProps extends AvatarBase {
   title?: string
-  image?: string
+  src?: string
 }
 
 export interface AvatarGroupProps extends AvatarBase {

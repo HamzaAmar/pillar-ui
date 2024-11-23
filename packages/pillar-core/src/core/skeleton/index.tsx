@@ -78,7 +78,7 @@ SkeletonButton.displayName = 'SkeletonButton'
 */
 
 export const Skeleton = forwardRef((props, ref) => {
-  const { height, as: Tag = 'div', className, isLoading, children, ...rest } = props
+  const { height, as: Tag = 'div', className = '', isLoading, children, ...rest } = props
 
   const classNames = cx(`sk- sk-B ${className}`, { [`Sh-${height}`]: height })
 
