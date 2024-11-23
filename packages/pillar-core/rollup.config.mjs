@@ -44,7 +44,7 @@ const output = [
   {
     format: 'es',
     exports: 'named',
-    entryFileNames: '[name].js',
+    entryFileNames: '[name].mjs',
     dir: `${DIR}/esm`,
     preserveModules: true,
     sourcemap: true,
