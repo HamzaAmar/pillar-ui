@@ -3,9 +3,9 @@ import { Avatar } from '@pillar-ui/core'
 export const AvatarFallback = () => {
   return (
     <>
-      <Avatar image="https://picsum.photos/id/120/100/100" />
-      <Avatar image="/image/user.png" />
-      <Avatar image="/image/user.svg" />
+      <Avatar src="https://picsum.photos/id/120/100/100" />
+      <Avatar src="/image/user.png" />
+      <Avatar src="/image/user.svg" />
       <Avatar />
     </>
   )

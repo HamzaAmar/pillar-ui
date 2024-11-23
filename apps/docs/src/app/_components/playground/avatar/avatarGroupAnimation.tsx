@@ -8,12 +8,27 @@ export function AvatarGroupAnimation() {
         <Avatar title="Success!" />
         <Avatar title="Success!" />
       </AvatarGroup>
+      <AvatarGroup animate="jump--y">
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+      </AvatarGroup>
       <AvatarGroup animate="jump-x">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />
       </AvatarGroup>
+      <AvatarGroup animate="jump--x">
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+      </AvatarGroup>
       <AvatarGroup animate="zoom">
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+        <Avatar title="Success!" />
+      </AvatarGroup>
+      <AvatarGroup animate="zoom-in">
         <Avatar title="Success!" />
         <Avatar title="Success!" />
         <Avatar title="Success!" />

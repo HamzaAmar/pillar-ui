@@ -9,7 +9,7 @@ export const AlertAction = () => {
       <Alert
         action={
           <Button variant="mixed" color="d" size="3">
-            Close
+            Collapse
           </Button>
         }
         closable

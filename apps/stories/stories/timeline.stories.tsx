@@ -186,7 +186,7 @@ export const TimelineCustomBullet = () => {
           quae.
         </Text>
       </TimelineItem>
-      <TimelineItem content={<Avatar size="3" image="https://picsum.photos/id/152/40/40" title="hello" />}>
+      <TimelineItem content={<Avatar size="3" src="https://picsum.photos/id/152/40/40" title="hello" />}>
         <Heading size="3">Hello</Heading>
         <Text size="3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam cumque voluptatem magnam ad.

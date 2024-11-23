@@ -1,26 +1,30 @@
 import { Avatar } from '@pillar-ui/core'
 
+const shared = {
+  src: 'https://i.pravatar.cc/120?img=11',
+  title: 'Hello',
+}
 export const AvatarCorner = () => {
   return (
     <>
-      <Avatar image="https://i.pravatar.cc/120?img=11" corner="0" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=12" corner="1" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=18" corner="2" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=19" corner="3" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=20" corner="4" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=21" corner="5" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=22" corner="full" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=23" corner="b1" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=24" corner="b2" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=25" corner="b3" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=26" corner="b4" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=27" corner="b5" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=28" corner="h1" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=29" corner="h2" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=30" corner="h3" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=31" corner="h4" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=32" corner="h5" title="Hello" />
-      <Avatar image="https://i.pravatar.cc/120?img=33" corner="h6" title="Hello" />
+      <Avatar corner="0" {...shared} />
+      <Avatar corner="1" {...shared} />
+      <Avatar corner="2" {...shared} />
+      <Avatar corner="3" {...shared} />
+      <Avatar corner="4" {...shared} />
+      <Avatar corner="5" {...shared} />
+      <Avatar corner="full" {...shared} />
+      <Avatar corner="b1" {...shared} />
+      <Avatar corner="b2" {...shared} />
+      <Avatar corner="b3" {...shared} />
+      <Avatar corner="b4" {...shared} />
+      <Avatar corner="b5" {...shared} />
+      <Avatar corner="h1" {...shared} />
+      <Avatar corner="h2" {...shared} />
+      <Avatar corner="h3" {...shared} />
+      <Avatar corner="h4" {...shared} />
+      <Avatar corner="h5" {...shared} />
+      <Avatar corner="h6" {...shared} />
     </>
   )
 }

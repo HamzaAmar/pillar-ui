@@ -68,7 +68,7 @@ A boolean prop that determines whether the alert shows a close button. If set to
 
 ### Action
 
-Replace the default close button with a custom one.
+The action prop replace the standard close button on our alert with a custom one. This custom button allow us to add extra functionality. For example, we can add an onClick event which will trigger a specific action when clicked. This action can be combined with the default closing behavior of the alert, creating a more versatile and interactive experience
 
 <Playground direction="column" name="alertAction" root="alert" />
 
@@ -79,6 +79,11 @@ Replace the default close button with a custom one.
 <Playground direction="column" name="alertInline" root="alert" />
 
 ### Controlled
+
+A "controlled" alert means that you manage its visibility programmatically using React state. This approach gives you full control over when the alert should appear or disappear, making it ideal for scenarios like:
+
+- **Hiding the alert after a specific duration** (e.g., after 5 seconds).
+- **Closing the alert in response to user interactions** (e.g., after clicking a button or completing an action).
 
 <Playground direction="column" name="alertControlled" root="alert" />
 
