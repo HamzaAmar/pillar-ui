@@ -12,7 +12,7 @@
     "name": "Hamza Miloud Amar",
     "email": "hamzamiloudamar@gmail.com"
   },
-  "version": "0.7.5",
+  "version": "0.8.0",
   "sideEffects": false,
   "license": "MIT",
   "types": "./dist/index.d.ts",

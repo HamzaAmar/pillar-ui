@@ -1,5 +1,30 @@
 # @pillar/hooks
 
+## 0.8.0
+
+### Minor Changes
+
+- # New Release to the Pillar packages
+
+  **Features**:
+
+  - Added `action` prop to `Alert` component (#99).
+  - Improved `Timeline`, `Accordion`, `Tooltip`, and `Skeleton` components (#97).
+  - New `Grid` docs with `grid-col` support.
+  - Enhanced `Paper` component with a `background` prop.
+  - Added source maps and rollup config for better debugging.
+
+  **Fixes**:
+
+  - Resolved Rollup config issues affecting Remix (`.mjs` changes).
+  - Fixed `TOC Heading` and `Breadcrumb` style issues.
+  - Addressed table style issues in docs.
+
+  **Refactors**:
+
+  - Improved CSS variables for clarity.
+  - Updated core components (`Avatar`, `Flex`, `Grid`) for better consistency.
+
 ## 0.7.5
 
 ### Patch Changes
