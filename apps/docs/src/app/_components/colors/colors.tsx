@@ -12,6 +12,8 @@ interface ColorItem {
 function ColorItem({ item, value }: ColorItem) {
   const { light, dark } = value
 
+  console.log(item, value)
+
   return (
     <Paper border className="Aai-center colors-section Sg-4">
       <Text size="4">{item} </Text>

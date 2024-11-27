@@ -15,13 +15,13 @@ const CopyButton = ({ item, value }: CopyButtonProps) => {
 
   function handleClick() {
     const { light, dark } = value
-    let colors = ''
+    let colors = `// ${item} Light Color Section \n`
     light.forEach((color, index) => {
-      colors += `// ${item} Light Color Section \n --${item}-light-${index + 1}:hsl(${color});\n`
+      colors += `--Pl-${index + 1}:hsl(${color});\n`
     })
-
+    colors += `// ${item} Dark Color Section \n`
     dark.forEach((color, index) => {
-      colors += `// ${item} Dark Color Section \n --${item}-dark-${index + 1}:hsl(${color});\n`
+      colors += `--Pd-${index + 1}:hsl(${color});\n`
     })
     copy(colors)
   }
