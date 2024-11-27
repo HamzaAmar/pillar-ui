@@ -15,7 +15,7 @@ function ColorItem({ item, value }: ColorItem) {
   console.log(item, value)
 
   return (
-    <Paper border className="Aai-center colors-section Sg-4">
+    <Paper border p="4" className="Aai-center colors-section Sg-4">
       <Text size="4">{item} </Text>
       <div className="Sf-3">
         <div className="Ajc-center Sg-3 color-container">
