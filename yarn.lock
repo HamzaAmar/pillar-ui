@@ -3242,7 +3242,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     rimraf: "npm:^6.0.1"
     serve: "npm:^13.0.4"
-    storybook: "npm:8.4.5"
+    storybook: "npm:^8.4.5"
     storybook-addon-pseudo-states: "npm:^4.0.2"
     typescript: "npm:^5.5.4"
     webpack: "npm:^5.93.0"
@@ -19159,7 +19159,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:8.4.5":
+"storybook@npm:^8.4.5":
   version: 8.4.5
   resolution: "storybook@npm:8.4.5"
   dependencies:
