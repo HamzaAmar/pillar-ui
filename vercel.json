@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "YARN_ENABLE_IMMUTABLE_INSTALLS": "false"
+    },
+    "installCommand": "yarn install --check-files"
+  }
+}
