@@ -1,12 +1,12 @@
 import { Avatar } from '@pillar-ui/core'
+import { Users } from '@pillar-ui/icons'
 
 export const AvatarFallback = () => {
   return (
     <>
-      <Avatar src="https://picsum.photos/id/120/100/100" />
-      <Avatar src="/image/user.png" />
-      <Avatar src="/image/user.svg" />
-      <Avatar />
+      <Avatar fallback="HL" />
+      <Avatar fallback={<Users />} />
+      <Avatar fallback="4K" />
     </>
   )
 }

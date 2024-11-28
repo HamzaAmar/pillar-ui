@@ -23,7 +23,7 @@
     font-weight: 500;
   }
 
-  & :is(ul, ol) > * + * {
+  & > :is(ul, ol) > * + * {
     margin-top: var(--S2);
   }
 
