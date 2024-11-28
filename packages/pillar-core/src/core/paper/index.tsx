@@ -43,7 +43,7 @@ export const Paper = forwardRef(
       [`Sr-${ratio}`]: ratio,
       [`B`]: border,
       [`Sp-${p}`]: p,
-      [`Sp-${pt}`]: pt,
+      [`Sp-t${pt}`]: pt,
       [`Sp-r${pr}`]: pr,
       [`Sp-b${pb}`]: pb,
       [`Sp-l${pl}`]: pl,
