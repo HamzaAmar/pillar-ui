@@ -1,4 +1,5 @@
 .pp- {
+  --pbg: none;
   border-radius: var(--border-radius, var(--paper-rad), 0);
   /* background-color: var(--pbg, transparent); */
   background-color: var(--pbg);

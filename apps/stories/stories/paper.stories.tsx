@@ -24,7 +24,19 @@ export function PaperBackground() {
       <Paper background="Su9">Hello</Paper>
       <Paper background="P9">Hello</Paper>
       <Paper background="B9">Hello</Paper>
-      <Paper background="B9">Hello</Paper>
+      <Paper background="B9" p="5">
+        <Paper border background="W9" p="5">
+          <Paper border background="Se9" p="5">
+            <Paper border background="Su9" p="5">
+              <Paper border background="P9" p="5">
+                <Paper border p="5">
+                  Hello world
+                </Paper>
+              </Paper>
+            </Paper>
+          </Paper>
+        </Paper>
+      </Paper>
     </div>
   )
 }
