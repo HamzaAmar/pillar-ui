@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import type { Color, Corner, CornerBlob, CornerHand, Size, Variant } from '../../types'
 
 type Animate = 'zoom' | 'jump-y' | 'jump-x' | 'jump--y' | 'jump--x' | 'zoom-in'
@@ -9,7 +9,7 @@ interface AvatarBase {
   color?: Color
   variant?: Omit<Variant, 'text'> | 'dashed'
   animate?: Animate
-  fallback?: ReactElement
+  fallback?: ReactNode
 }
 
 export interface AvatarProps extends AvatarBase {

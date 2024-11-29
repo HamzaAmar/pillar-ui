@@ -7,6 +7,10 @@
   flex: none;
   height: 1.25em;
 
+  & svg {
+    width: 1em;
+  }
+
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to
