@@ -1,5 +1,27 @@
 # @pillar/hooks
 
+## 0.7.6
+
+### Patch Changes
+
+- # Fix Issues in Core and Hooks
+
+  ## Core Package
+
+  - Fix issues with Padding in Paper component
+  - Fix typescript issue in avatar component
+  - fix issue in css variables background in Paper component
+
+  ## Hooks Package
+
+  - fix issues in vitest and vite that cause build issue
+
+  ## Docs improvements
+
+  - fix issue that prevent vercel from building project
+  - improve color docs
+  - improve site seo
+
 ## 0.7.5
 
 ### Patch Changes
