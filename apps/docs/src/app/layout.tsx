@@ -26,12 +26,11 @@ const Layout = ({ children }: LayoutProps) => {
 }
 
 export default Layout
-
 export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN),
   title: {
     default: 'Pillar UI library',
-    template: '%s | Pillar UI library',
+    template: '%s | Pillar UI - Lightweight React UI Library',
   },
   description:
     'Pillar UI: Lightweight and Accessible React UI Library for Building Beautiful, Customizable Web Applications',
