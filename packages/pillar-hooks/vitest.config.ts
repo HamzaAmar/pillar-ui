@@ -1,11 +1,12 @@
 /// <reference types="vitest" />
 /// <reference types="vite/client" />
 
-import { defineConfig } from 'vitest/config'
+import { defineConfig, UserConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
+import {} from 'vitest'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react()] as UserConfig['plugins'],
   test: {
     globals: true,
     environment: 'jsdom',

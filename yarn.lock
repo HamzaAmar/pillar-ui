@@ -3124,7 +3124,7 @@ __metadata:
     rollup-preserve-directives: "npm:^1.1.2"
     sass: "npm:^1.77.8"
     typescript: "npm:^5.5.4"
-    vite: "npm:^5.4.10"
+    vite: "npm:^5.4.11"
   peerDependencies:
     "@pillar-ui/hooks": ">=0.7 <1"
     react: ^18.0.0
@@ -3181,7 +3181,7 @@ __metadata:
     "@testing-library/react": "npm:^16.0.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
-    "@vitejs/plugin-react": "npm:^4.3.1"
+    "@vitejs/plugin-react": "npm:^4.3.4"
     eslint: "npm:^8.57.0"
     jsdom: "npm:^22.1.0"
     npm-run-all: "npm:^4.1.5"
@@ -3189,8 +3189,8 @@ __metadata:
     rimraf: "npm:^6.0.1"
     tsup: "npm:^8.2.4"
     typescript: "npm:^5.5.4"
-    vite: "npm:^5.4.2"
-    vitest: "npm:^2.0.5"
+    vite: "npm:^5.4.11"
+    vitest: "npm:^2.1.6"
   peerDependencies:
     react: ^18.0.0
   languageName: unknown
@@ -3235,7 +3235,7 @@ __metadata:
     "@storybook/react": "npm:^8.4.5"
     "@storybook/test": "npm:8.4.5"
     "@storybook/test-runner": "npm:^0.19.1"
-    "@vitejs/plugin-react": "npm:^4.3.1"
+    "@vitejs/plugin-react": "npm:^4.3.4"
     eslint-config-custom: "npm:*"
     npm-run-all: "npm:^4.1.5"
     react: "npm:^18.3.1"
@@ -3271,7 +3271,7 @@ __metadata:
     rimraf: "npm:^6.0.1"
     tsup: "npm:^8.2.4"
     typescript: "npm:^5.5.4"
-    vitest: "npm:^2.0.5"
+    vitest: "npm:^2.1.6"
   peerDependencies:
     react: ^18.3.1
   languageName: unknown
@@ -5004,7 +5004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-react@npm:^4.3.1":
+"@vitejs/plugin-react@npm:^4.3.4":
   version: 4.3.4
   resolution: "@vitejs/plugin-react@npm:4.3.4"
   dependencies:
@@ -21112,7 +21112,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.4.10, vite@npm:^5.4.2":
+"vite@npm:^5.4.11":
   version: 5.4.11
   resolution: "vite@npm:5.4.11"
   dependencies:
@@ -21155,7 +21155,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:^2.0.5":
+"vitest@npm:^2.1.6":
   version: 2.1.6
   resolution: "vitest@npm:2.1.6"
   dependencies:
