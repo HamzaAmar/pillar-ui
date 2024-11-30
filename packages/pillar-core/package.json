@@ -64,8 +64,8 @@
   },
   "peerDependencies": {
     "@pillar-ui/hooks": ">=0.7 <1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "devDependencies": {
     "@pillar-ui/eslint": "*",
