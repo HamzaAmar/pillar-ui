@@ -47,7 +47,7 @@
   }
 
   &:not(:has(.fi-Pr)) .fi-:not(.pin-input) {
-    padding-inline-start: 1rem;
+    padding-inline-start: 0.625em;
   }
 
   &:has(.fin-C) .fi- {
@@ -55,7 +55,7 @@
   }
 
   &:not(:has(.fi-Su)) .fi-:not(.pin-input) {
-    padding-inline-end: 1rem;
+    padding-inline-end: 0.625em;
   }
 }
 

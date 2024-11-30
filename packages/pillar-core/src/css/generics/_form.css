@@ -22,6 +22,7 @@ input[type='number'] {
 button,
 a {
   cursor: pointer;
+  color: var(--B12);
 
   &:focus-visible {
     outline: 2px dashed var(--P9);
