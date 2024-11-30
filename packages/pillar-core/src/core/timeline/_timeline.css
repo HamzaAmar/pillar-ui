@@ -14,7 +14,7 @@
 .ti-I {
   position: relative;
   display: grid;
-  grid-template-columns: 1em 1fr;
+  grid-template-columns: 1em minmax(1px, 1fr);
 }
 
 .ti-B {

@@ -1,10 +1,16 @@
-.st-C {
+.st-W {
   position: relative;
   z-index: 1;
 }
 
+.st-C {
+  padding: 0.5em 1.5em;
+  background: var(--B1);
+}
+
 .st-S {
   position: relative;
+  container-type: inline-size;
   flex: 1;
 
   &:last-child {
@@ -44,11 +50,6 @@
   }
 }
 
-.st-C {
-  padding: 0.5rem 1.5rem;
-  background: var(--B1);
-}
-
 .st-B {
   width: 2.75rem;
   height: 2.75rem;
@@ -64,4 +65,7 @@
 .st-I {
   transform: translateY(-200%);
   transition: transform 0.3s;
+}
+.st-T {
+  font-size: var(--S4);
 }

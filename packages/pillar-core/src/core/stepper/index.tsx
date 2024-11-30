@@ -27,11 +27,11 @@ export const StepperStep = (props: StepProps) => {
   const [labelledbyID, describedbyID] = [`lbl-${id}`, `des-${id}`]
 
   return (
-    <Flex data-state={state} items="center" className={`st-S step__${size}`}>
+    <Flex data-state={state} items="center" className="st-S Sg-2">
       <button
         type="button"
         onClick={() => setActive?.(step!)}
-        className={`st-B R-${corner} F-c  weight="5"`}
+        className={`st-B R-${corner} F-c weight="5"`}
         aria-labelledby={labelledbyID}
         aria-describedby={describedbyID}
       >
@@ -44,10 +44,10 @@ export const StepperStep = (props: StepProps) => {
         )}
       </button>
       <div className="st-C">
-        <p id={labelledbyID} className="Fs-4 Fw-5">
+        <p id={labelledbyID} className="st-T Fw-5">
           {title}
         </p>
-        <p id={describedbyID} className="Fs-3 Cb t-y-low">
+        <p id={describedbyID} className="Fs-3 st-D Cb t-y-low">
           {description}
         </p>
       </div>
@@ -55,7 +55,7 @@ export const StepperStep = (props: StepProps) => {
   )
 }
 
-export const Stepper = ({ children, color = 'b', active = 0, completeComponent, ...rest }: StepperProps) => {
+export const Stepper = ({ children, color = 'b', active = 0, completeComponent, size, ...rest }: StepperProps) => {
   // let _content: ReactNode[] = []
   // // Rename Index to step to reduce code at createElement
   // const _children = Children.map(children, (child, step) => {
@@ -84,8 +84,8 @@ export const Stepper = ({ children, color = 'b', active = 0, completeComponent, 
   const currentContent = _content[active] ?? completeComponent
 
   return (
-    <div className="st-_cnt Sf-5">
-      <div className={`fl- st- C-${color} F-b`}>
+    <div className="st-W Sf-5">
+      <div className={`fl- st- C-${color} Fs-${size} F-b`}>
         <StepperProvider {...rest}> {steps}</StepperProvider>
       </div>
       <div>{currentContent}</div>
