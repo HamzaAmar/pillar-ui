@@ -26,7 +26,6 @@ const Layout = ({ children }: LayoutProps) => {
 }
 
 export default Layout
-
 export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN),
   title: {
