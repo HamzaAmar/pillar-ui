@@ -19,7 +19,7 @@ export const StepperStep = (props: StepProps) => {
     step,
     icon,
     corner = context?.corner ?? 'full',
-    size = context?.size ?? 'md',
+    // size = context?.size ?? 'md',
     setActive = context?.setActive,
   } = props
 
