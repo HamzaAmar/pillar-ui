@@ -9,6 +9,8 @@ import { useBooleanState } from '~/hooks/pillar'
 import { SwitchMode } from './switchMode'
 import { useDrawer } from '../drawerProvider'
 import { usePathname } from 'next/navigation'
+import { DocSearch } from '@docsearch/react'
+import { SEARCH_API_KEY, SEARCH_APP_ID } from '~/constant/algolia'
 
 const Header = () => {
   const { value, setTrue, setFalse } = useBooleanState(false)
@@ -32,9 +34,10 @@ const Header = () => {
         gap="4"
         className="header--input-search F-c fl-2"
       >
-        <div className="fl-1">
+        {/* <div className="fl-1">
           <InputSearch fluid name="search" placeholder="Search" aria-label="search" />
-        </div>
+        </div> */}
+        {/* <DocSearch apiKey={SEARCH_API_KEY} indexName={'docs'} appId={SEARCH_APP_ID} /> */}
         <IconButton
           size="4"
           className="only-mobile"

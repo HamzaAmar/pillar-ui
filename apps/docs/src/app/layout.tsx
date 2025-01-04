@@ -3,7 +3,10 @@ import { DOMAIN } from '~/constant/domain'
 import { Footer, Header, NextThemeProvider } from './_components'
 import type { ReactNode } from 'react'
 import '../scss/main.scss'
+// import '@docsearch/css'
 import { DrawerProvider } from './_components/drawerProvider'
+// import Head from 'next/head'
+// import { SEARCH_APP_ID } from '~/constant/algolia'
 
 interface LayoutProps {
   children: ReactNode
@@ -12,6 +15,9 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
+      {/* <Head>
+        <link rel="preconnect" href={`https://${SEARCH_APP_ID}-dsn.algolia.net`} crossOrigin="anonymous" />
+      </Head> */}
       <body>
         <DrawerProvider>
           <NextThemeProvider>
