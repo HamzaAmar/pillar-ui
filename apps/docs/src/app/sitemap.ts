@@ -1,17 +1,7 @@
 import type { MetadataRoute } from 'next'
-import {
-  getAll,
-  getComponents,
-  getFeatures,
-  getGetStarted,
-  getHooks,
-  getThemes,
-  getTutorials,
-  getUtils,
-} from '~/api/docs'
+import { getComponents, getFeatures, getGetStarted, getHooks, getThemes, getTutorials, getUtils } from '~/api/docs'
 import { DOMAIN } from '~/constant/domain'
 
-const PAGES = ['/blogs', '/contact', '/resume']
 const NOW = new Date().toISOString().split('T')[0]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -22,13 +12,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changefreq: 'daily',
   }))
   let features = getFeatures().map(({ slug, lastModified }) => ({
-    url: `${DOMAIN}/docs/hooks/${slug}`,
+    url: `${DOMAIN}/docs/features/${slug}`,
     lastModified: lastModified,
     priority: 0.9,
     changefreq: 'daily',
   }))
   let themes = getThemes().map(({ slug, lastModified }) => ({
-    url: `${DOMAIN}/docs/hooks/${slug}`,
+    url: `${DOMAIN}/docs/themes/${slug}`,
     lastModified: lastModified,
     priority: 0.9,
     changefreq: 'daily',
@@ -42,14 +32,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   let utils = getUtils().map(({ slug, lastModified }) => ({
-    url: `${DOMAIN}/docs/hooks/${slug}`,
+    url: `${DOMAIN}/docs/utils/${slug}`,
     lastModified: lastModified,
     priority: 0.9,
     changefreq: 'daily',
   }))
 
   let tutorials = getTutorials().map(({ slug, lastModified }) => ({
-    url: `${DOMAIN}/docs/hooks/${slug}`,
+    url: `${DOMAIN}/docs/tutorials/${slug}`,
     lastModified: lastModified,
     priority: 0.9,
     changefreq: 'daily',
@@ -61,12 +51,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changefreq: 'daily',
   }))
 
-  let routes = PAGES.map((page) => ({
-    url: `${DOMAIN}${page}`,
-    lastModified: NOW,
-    priority: 0.8,
-    changefreq: 'monthly',
-  }))
+  // let routes = PAGES.map((page) => ({
+  //   url: `${DOMAIN}${page}`,
+  //   lastModified: NOW,
+  //   priority: 0.8,
+  //   changefreq: 'monthly',
+  // }))
 
   const home = {
     url: `${DOMAIN}`,
@@ -75,7 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changefreq: 'monthly',
   }
 
-  const alls = [...components, ...features, ...themes, ...utils, ...hooks, ...started, ...tutorials, ...routes]
+  const alls = [...components, ...features, ...themes, ...utils, ...hooks, ...started, ...tutorials]
 
   return [home, ...(alls || [])]
 }
