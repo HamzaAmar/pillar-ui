@@ -23,3 +23,30 @@ The spacing variables, defined within the `:root` CSS selector, ensure consisten
 | `--S7`   | Very large size, used for large sections       | clamp(30px, 27.913px + 0.6522vi, 36px)  |
 | `--S8`   | Extra very large size, used for major sections | clamp(40px, 37.2174px + 0.8696vi, 48px) |
 | `--S9`   | Largest size, used for hero sections           | clamp(50px, 46.5217px + 1.087vi, 60px)  |
+
+### Customizing Spacing Sizes
+
+You can override these variables to match your design. For example:
+
+<Alert
+  color="w"
+  title="Caution"
+  variant="soft"
+  message="Customizing spacing using the `--CS*` variables may impact the responsive layout. Default values utilize the `clamp` function to adapt spacing based on viewport size, maintaining proportions and alignment. Modifying these values might result in spacing inconsistencies."
+/>
+
+```css
+:root {
+  --CS1: 2px;
+  --CS2: 4px;
+  --CS3: 8px;
+  --CS4: 12px;
+  --CS5: 16px;
+  --CS6: 24px;
+  --CS7: 32px;
+  --CS8: 48px;
+  --CS9: 72px;
+}
+```
+
+These customizations adjust the font sizes in your **Text**, **Heading**, and **Link** components.

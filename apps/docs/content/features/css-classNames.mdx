@@ -1,0 +1,171 @@
+---
+title: Shared CSS Classes
+type: features
+excerpt: 'Learn about the shared CSS classes for margin, padding, width, height, and position in the Pillar project. These classes can be used across multiple areas to streamline your development process.'
+lastModified: '2024-07-31T05:35:07.322Z'
+publishedAt: '2024-05-03T05:35:07.322Z'
+---
+
+# Shared CSS Classes in Pillar
+
+## Introduction
+
+At Pillar, performance is our top priority. To achieve this, we've designed our library with a focus on minimizing bundle size while maintaining readability and ease of use for both maintainers and users. One of the key strategies we've employed is the use tiny classNames. This approach not only keeps our bundle size small but also reduces style conflicts with users own classNames.
+
+## Class Names and Shared Styles
+
+The Pillar project offers a variety of CSS classes that can be used across different parts of your application.While we encourage the use of components for complex styling and functionality for better user experience, sometimes it is not practical to use a component for a simple use case. In such scenarios, adding CSS class names is a good practice and prevents you from adding multiple components or using heavy styles.
+
+## Naming Convention
+
+We simplify our utility classNames into three clear categories:
+
+1. **File**: The file where the class is defined, such as `_spacing.css`, `_alignment.css`, or `_font.css`.
+2. **Property**: The CSS property the class represents, like `margin`, `padding-top`, or `justify-content`.
+3. **Modifier**: A value or variation applied to the property, such as `1`, `2`, `end`, `center`, or `uppercase`.
+
+### Example
+
+To understand how this works, let’s dissect `Smt-9`:
+
+- **File**: This belongs to `_spacing.css`, as it’s related to spacing utilities.
+- **Property**: The `Smt` prefix stands for "Spacing Margin Top," representing the `margin-top` property.
+- **Modifier**: The `9` at the end specifies a predefined value for the `margin-top`.
+
+## Classes By File
+
+### Alignment
+
+Alignment utilities used to work both in flex and grid layouts, ensuring compatibility across all browsers, including Safari.
+
+#### Justify Content
+
+- `.Ajc-end`: Align items to the end.
+- `.Ajc-between`: Distribute items with space between.
+- `.Ajc-around`: Distribute items with space around.
+- `.Ajc-evenly`: Distribute items with equal space.
+- `.Ajc-center`: Center items.
+
+#### Align Items
+
+- `.Aji-start`: Align items to the start.
+- `.Aji-center`: Center items.
+- `.Aji-end`: Align items to the end.
+- `.Aji-baseline`: Align items to the baseline.
+- `.Aji-stretch`: Stretch items to fill.
+
+#### Align Content
+
+- `.Aac-start`: Align content to the start.
+- `.Aac-center`: Center content.
+- `.Aac-end`: Align content to the end.
+- `.Aac-baseline`: Align content to the baseline.
+- `.Aac-stretch`: Stretch content.
+- `.Aac-between`: Space content evenly with gaps.
+- `.Aac-around`: Space content with gaps around.
+- `.Aac-evenly`: Distribute content with equal spacing.
+
+#### Align Self
+
+- `.Ajc-self-end`: Align self to the end.
+- `.Ajc-self-center`: Align self to the center.
+
+## Spacing
+
+#### Margin
+
+- `.Sm-{number}` from 1 to 9: Apply margin in all directions.
+- `.Smt-1` to `.Smt-9`: Apply margin to the top.
+- `.Smr-1` to `.Smr-9`: Apply margin to the right.
+- `.Smb-1` to `.Smb-9`: Apply margin to the bottom.
+- `.Sml-1` to `.Sml-9`: Apply margin to the left.
+
+#### Padding
+
+- `.Sp-1` to `.Sp-9`: Apply padding in all directions.
+- `.Spt-1` to `.Spt-9`: Apply padding to the top.
+- `.Spr-1` to `.Spr-9`: Apply padding to the right.
+- `.Spb-1` to `.Spb-9`: Apply padding to the bottom.
+- `.Spl-1` to `.Spl-9`: Apply padding to the left.
+
+#### Flow
+
+We Use A prefix to avoid conflicts with other classes. For padding it is in the Spacing section we try to use the First Letter of Spacing capitalize with the first char with Margin
+
+- `.Sf-1` to `.Sf-9`: Apply padding in all directions.
+
+### Sizing
+
+#### Width
+
+Use the following classes to set width:
+
+- `.Sw-25` to `.Sw-100`: Set width as a percentage.
+- `.Sw-24p` to `.Sw-384p`: Set width in pixels.
+- `.Sw-fit`: Set width to fit content.
+- `.Sw-screen`: Set width to 100% of the viewport width.
+
+#### Height
+
+Use the following classes to set height:
+
+- `.Sh-25` to `.Sh-100`: Set height as a percentage.
+- `.Sh-24p` to `.Sh-384p`: Set height in pixels.
+- `.Sh-fit`: Set height to fit content.
+- `.Sh-screen`: Set height to 100% of the viewport height.
+
+#### Ratio
+
+Use the following classes to set aspect ratio:
+
+- `.Sr-1` , `.Sr-4-3`:
+- `.Sr-4-3` , `.Sr-16-9`
+- `.Sr-3-4` , `.Sr-16-9`
+- `.Sr-18-5` , `.Sr-golden`
+
+### Position
+
+#### Position
+
+Use the following classes to set position:
+
+- `.P-relative`: Set position to relative.
+- `.P-absolute`: Set position to absolute.
+- `.P-fixed`: Set position to fixed.
+- `.P-sticky`: Set position to sticky.
+
+#### Inset
+
+Use the following classes to set inset:
+
+- `.P-start-start`: Set top and left to 0.
+- `.P-start-center`: Set top to 0 and left to 50%, with horizontal centering.
+- `.P-start-end`: Set top to 0 and right to 0.
+- `.P-center-start`: Set top to 50% and left to 0, with vertical centering.
+- `.P-center-center`: Set top to 50% and left to 50%, with both horizontal and vertical centering.
+- `.P-center-end`: Set top to 50% and right to 0, with vertical centering.
+- `.P-end-start`: Set bottom and left to 0.
+- `.P-end-center`: Set bottom to 0 and left to 50%, with horizontal centering.
+- `.P-end-end`: Set bottom and right to 0.
+
+### Radius
+
+- `.R-{0-5}`: Apply radius values from `--R1` to `--R5`.
+- `.R-circle`: Set border radius to a circle.
+- `.R-full`: Set border radius to fully rounded.
+- `.R-h1` to `.R-h6`: Apply predefined custom shapes.
+- `.R-b1` to `.R-b5`: Apply blob-like border radii.
+
+### Font
+
+#### Weight
+
+- `.Fw-{1-9}`: Set font weight (100 to 900).
+- `.Fst-italic`: Apply italic font style.
+- `.Fst-oblique`: Apply oblique font style.
+
+#### Size
+
+- `.Fs-{1-9}`: Apply font size based on defined variables (e.g., `--F1`, `--F2`).
+
+These classes are defined in the [packages/pillar-core/src/css/utilities](packages/pillar-core/src/css/utilities) directory. By using these shared classes, you can ensure consistency and reduce redundancy in your stylesheets.

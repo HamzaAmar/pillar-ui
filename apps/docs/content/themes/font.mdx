@@ -15,13 +15,6 @@ Font size variables in CSS, defined in the `:root` selector, let you create resp
 
 Here’s a quick overview of the default font size variables:
 
-<Alert
-  color="w"
-  title="Caution"
-  variant="soft"
-  message="Customizing spacing using the `--S*` variables may impact the responsive layout. Default values utilize the `clamp` function to adapt spacing based on viewport size, maintaining proportions and alignment. Modifying these values might result in spacing inconsistencies."
-/>
-
 | Variable | Description                               | Default Value Range |
 | -------- | ----------------------------------------- | ------------------- |
 | `--F1`   | Font size variable for 3 extra small text | 0.55rem - 0.66rem   |
@@ -37,6 +30,13 @@ Here’s a quick overview of the default font size variables:
 ### Customizing Font Sizes
 
 You can override these variables to match your design. For example:
+
+<Alert
+  color="w"
+  title="Caution"
+  variant="soft"
+  message="Customizing font using the `--CF*` variables may impact the responsive layout. Default values utilize the `clamp` function to adapt spacing based on viewport size, maintaining proportions and alignment. Modifying these values might result in spacing inconsistencies."
+/>
 
 ```css
 :root {
