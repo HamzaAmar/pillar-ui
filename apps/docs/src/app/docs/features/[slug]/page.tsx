@@ -18,7 +18,7 @@ function Features({ params }: SlugParamsProps) {
   return (
     <>
       <div className="section docs--content prose">
-        <div className="Sf-4">
+        <div className="Sf-6">
           <CustomMDX source={content} />
         </div>
       </div>
