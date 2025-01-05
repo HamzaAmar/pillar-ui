@@ -60,7 +60,8 @@
   },
   "packageManager": "yarn@4.5.3",
   "dependencies": {
-    "@changesets/cli": "^2.27.7"
+    "@changesets/cli": "^2.27.7",
+    "algoliasearch": "^5.18.0"
   },
   "version": "0.0.0"
 }
