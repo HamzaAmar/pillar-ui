@@ -48,16 +48,31 @@ const Item = forwardRef((props, forwardedRef) => {
 
 Item.displayName = 'PaginationItem'
 
-export const Pagination = ({ count = 10, ...rest }: PaginationProps) => {
+export const Pagination = ({ count = 10, onPageChange, ...rest }: PaginationProps) => {
   const { step, range, goToNext, goToPrevious, jumpTo, isFirst, isLast } = usePagination({
     max: count,
   })
+
+  const goToNextPage = () => {
+    onPageChange?.(step + 1)
+    goToNext()
+  }
+
+  const goToPreviousPage = () => {
+    onPageChange?.(step - 1)
+    goToPrevious()
+  }
+
+  const goToPage = (page: number) => {
+    onPageChange?.(page)
+    jumpTo(page)
+  }
 
   return (
     <nav className={`p-a C-${rest.color}`} aria-label="Pagination">
       <PaginationProvider {...rest}>
         <ul className="pa-L Sg-3">
-          <Item disabled={isFirst} onClick={goToPrevious} active={step} number={step - 1}>
+          <Item disabled={isFirst} onClick={goToPreviousPage} active={step} number={step - 1}>
             <ChevronDown width="20" direction="left" />
           </Item>
           {range.map((item, index) =>
@@ -66,13 +81,13 @@ export const Pagination = ({ count = 10, ...rest }: PaginationProps) => {
                 <DotsHorizontal width={16} />
               </li>
             ) : (
-              <Item key={index} active={step} onClick={() => jumpTo(item)} number={item}>
+              <Item key={index} active={step} onClick={() => goToPage(item)} number={item}>
                 {item}
               </Item>
             )
           )}
 
-          <Item disabled={isLast} onClick={goToNext} active={step} number={step + 1}>
+          <Item disabled={isLast} onClick={goToNextPage} active={step} number={step + 1}>
             <ChevronDown width="20" direction="right" />
           </Item>
         </ul>

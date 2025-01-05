@@ -1,4 +1,3 @@
-import React from 'react'
 import { Pagination } from '@pillar-ui/core'
 
 import type { Meta } from '@storybook/react'
@@ -75,13 +74,13 @@ export function PaginationCustomStyle() {
   )
 }
 
-export const Playground = {}
-
-export function Nice() {
-  const [open, setOpen] = React.useState(false)
+export function PaginationWithPageChangeAction() {
+  function onPageChange(page: number) {
+    console.log('onPageChange', page)
+  }
   return (
-    <button onClick={() => setOpen(true)} className="Sf-4">
-      {open ? 'Open' : 'CLose'}
-    </button>
+    <div className="Sf-4">
+      <Pagination onPageChange={onPageChange} count={10} />
+    </div>
   )
 }

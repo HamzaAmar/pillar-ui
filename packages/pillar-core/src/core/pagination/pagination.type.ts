@@ -12,6 +12,7 @@ export interface PaginationProps extends PaginationBase {
   current?: number
   count: number
   title?: string
+  onPageChange?: (page: number) => void
 }
 
 export interface PaginationItem extends PaginationBase {
