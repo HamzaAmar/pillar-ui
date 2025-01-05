@@ -8,6 +8,7 @@
 
 .Ajc-end {
   justify-content: end;
+  justify-content: flex-end;
 }
 
 .Ajc-between {
@@ -37,6 +38,7 @@
 
 .Aji-end {
   justify-items: end;
+  justify-content: flex-end;
 }
 
 .Aji-baseline {

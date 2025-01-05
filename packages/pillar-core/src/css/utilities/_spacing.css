@@ -61,120 +61,120 @@
 }
 
 /* Padding Top Utilities */
-.Sp-t1 {
+.Spt-1 {
   padding-top: var(--S1);
 }
-.Sp-t2 {
+.Spt-2 {
   padding-top: var(--S2);
 }
-.Sp-t3 {
+.Spt-3 {
   padding-top: var(--S3);
 }
-.Sp-t4 {
+.Spt-4 {
   padding-top: var(--S4);
 }
-.Sp-t5 {
+.Spt-5 {
   padding-top: var(--S5);
 }
-.Sp-t6 {
+.Spt-6 {
   padding-top: var(--S6);
 }
-.Sp-t7 {
+.Spt-7 {
   padding-top: var(--S7);
 }
-.Sp-t8 {
+.Spt-8 {
   padding-top: var(--S8);
 }
 
-.Sp-t9 {
+.Spt-9 {
   padding-top: var(--S9);
 }
 
 /* Padding Top Utilities */
-.Sp-l1 {
+.Spl-1 {
   padding-inline-start: var(--S1);
 }
-.Sp-l2 {
+.Spl-2 {
   padding-inline-start: var(--S2);
 }
-.Sp-l3 {
+.Spl-3 {
   padding-inline-start: var(--S3);
 }
-.Sp-l4 {
+.Spl-4 {
   padding-inline-start: var(--S4);
 }
-.Sp-l5 {
+.Spl-5 {
   padding-inline-start: var(--S5);
 }
-.Sp-l6 {
+.Spl-6 {
   padding-inline-start: var(--S6);
 }
-.Sp-l7 {
+.Spl-7 {
   padding-inline-start: var(--S7);
 }
-.Sp-l8 {
+.Spl-8 {
   padding-inline-start: var(--S8);
 }
-.Sp-l9 {
+.Spl-9 {
   padding-inline-start: var(--S9);
 }
 
 /* Padding Right Utilities */
-.Sp-r1 {
+.Spr-1 {
   padding-inline-end: var(--S1);
 }
-.Sp-r2 {
+.Spr-2 {
   padding-inline-end: var(--S2);
 }
-.Sp-r3 {
+.Spr-3 {
   padding-inline-end: var(--S3);
 }
-.Sp-r4 {
+.Spr-4 {
   padding-inline-end: var(--S4);
 }
-.Sp-r5 {
+.Spr-5 {
   padding-inline-end: var(--S5);
 }
-.Sp-r6 {
+.Spr-6 {
   padding-inline-end: var(--S6);
 }
-.Sp-r7 {
+.Spr-7 {
   padding-inline-end: var(--S7);
 }
-.Sp-r8 {
+.Spr-8 {
   padding-inline-end: var(--S8);
 }
 
-.Sp-r9 {
+.Spr-9 {
   padding-inline-end: var(--S9);
 }
 
 /* Padding Bottom Utilities */
-.Sp-b1 {
+.Spb-1 {
   padding-bottom: var(--S1);
 }
-.Sp-b2 {
+.Spb-2 {
   padding-bottom: var(--S2);
 }
-.Sp-b3 {
+.Spb-3 {
   padding-bottom: var(--S3);
 }
-.Sp-b4 {
+.Spb-4 {
   padding-bottom: var(--S4);
 }
-.Sp-b5 {
+.Spb-5 {
   padding-bottom: var(--S5);
 }
-.Sp-b6 {
+.Spb-6 {
   padding-bottom: var(--S6);
 }
-.Sp-b7 {
+.Spb-7 {
   padding-bottom: var(--S7);
 }
-.Sp-b8 {
+.Spb-8 {
   padding-bottom: var(--S8);
 }
-.Sp-b9 {
+.Spb-9 {
   padding-bottom: var(--S9);
 }
 
@@ -209,121 +209,121 @@
 }
 
 /* Margin Top Utilities */
-.Sm-t1 {
+.Smt-1 {
   margin-top: var(--S1);
 }
-.Sm-t2 {
+.Smt-2 {
   margin-top: var(--S2);
 }
-.Sm-t3 {
+.Smt-3 {
   margin-top: var(--S3);
 }
-.Sm-t4 {
+.Smt-4 {
   margin-top: var(--S4);
 }
-.Sm-t5 {
+.Smt-5 {
   margin-top: var(--S5);
 }
-.Sm-t6 {
+.Smt-6 {
   margin-top: var(--S6);
 }
-.Sm-t7 {
+.Smt-7 {
   margin-top: var(--S7);
 }
-.Sm-t8 {
+.Smt-8 {
   margin-top: var(--S8);
 }
 
-.Sm-t9 {
+.Smt-9 {
   margin-top: var(--S9);
 }
 
 /* Margin Top Utilities */
-.Sm-l1 {
+.Sml-1 {
   margin-inline-start: var(--S1);
 }
-.Sm-l2 {
+.Sml-2 {
   margin-inline-start: var(--S2);
 }
-.Sm-l3 {
+.Sml-3 {
   margin-inline-start: var(--S3);
 }
-.Sm-l4 {
+.Sml-4 {
   margin-inline-start: var(--S4);
 }
-.Sm-l5 {
+.Sml-5 {
   margin-inline-start: var(--S5);
 }
-.Sm-l6 {
+.Sml-6 {
   margin-inline-start: var(--S6);
 }
-.Sm-l7 {
+.Sml-7 {
   margin-inline-start: var(--S7);
 }
-.Sm-l8 {
+.Sml-8 {
   margin-inline-start: var(--S8);
 }
 
-.Sm-l9 {
+.Sml-9 {
   margin-inline-start: var(--S9);
 }
 
 /* Margin Right Utilities */
-.Sm-r1 {
+.Smr-1 {
   margin-inline-end: var(--S1);
 }
-.Sm-r2 {
+.Smr-2 {
   margin-inline-end: var(--S2);
 }
-.Sm-r3 {
+.Smr-3 {
   margin-inline-end: var(--S3);
 }
-.Sm-r4 {
+.Smr-4 {
   margin-inline-end: var(--S4);
 }
-.Sm-r5 {
+.Smr-5 {
   margin-inline-end: var(--S5);
 }
-.Sm-r6 {
+.Smr-6 {
   margin-inline-end: var(--S6);
 }
-.Sm-r7 {
+.Smr-7 {
   margin-inline-end: var(--S7);
 }
-.Sm-r8 {
+.Smr-8 {
   margin-inline-end: var(--S8);
 }
 
-.Sm-r9 {
+.Smr-9 {
   margin-inline-end: var(--S9);
 }
 
 /* Padding Bottom Utilities */
-.Sm-b1 {
+.Smb-1 {
   margin-bottom: var(--S1);
 }
-.Sm-b2 {
+.Smb-2 {
   margin-bottom: var(--S2);
 }
-.Sm-b3 {
+.Smb-3 {
   margin-bottom: var(--S3);
 }
-.Sm-b4 {
+.Smb-4 {
   margin-bottom: var(--S4);
 }
-.Sm-b5 {
+.Smb-5 {
   margin-bottom: var(--S5);
 }
-.Sm-b6 {
+.Smb-6 {
   margin-bottom: var(--S6);
 }
-.Sm-b7 {
+.Smb-7 {
   margin-bottom: var(--S7);
 }
-.Sm-b8 {
+.Smb-8 {
   margin-bottom: var(--S8);
 }
-.Sm-b9 {
+.Smb-9 {
   margin-bottom: var(--S9);
 }
 

@@ -1,0 +1,66 @@
+/* Position Classes */
+.P-relative {
+  position: relative;
+}
+
+.P-absolute {
+  position: absolute;
+}
+
+.P-fixed {
+  position: fixed;
+}
+
+.P-sticky {
+  position: sticky;
+}
+
+.P-start-start {
+  top: 0;
+  left: 0;
+}
+
+.P-start-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.P-start-end {
+  top: 0;
+  right: 0;
+}
+
+.P-center-start {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.P-center-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.P-center-end {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.P-end-start {
+  bottom: 0;
+  left: 0;
+}
+
+.P-end-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.P-end-end {
+  bottom: 0;
+  right: 0;
+}

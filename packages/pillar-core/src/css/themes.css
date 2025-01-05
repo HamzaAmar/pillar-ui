@@ -124,15 +124,15 @@
    */
 
   --S0: 0;
-  --S1: var(--cs1, clamp(3px, 3px + 0vi, 3px));
-  --S2: var(--cs2, clamp(5px, 4.6522px + 0.1087vi, 6px));
-  --S3: var(--cs3, clamp(8px, 7.6522px + 0.1087vi, 9px));
-  --S4: var(--cs4, clamp(10px, 9.3043px + 0.2174vi, 12px));
-  --S5: var(--cs5, clamp(15px, 13.9565px + 0.3261vi, 18px));
-  --S6: var(--cs6, clamp(20px, 18.6087px + 0.4348vi, 24px));
-  --S7: var(--cs7, clamp(30px, 27.913px + 0.6522vi, 36px));
-  --S8: var(--cs8, clamp(40px, 37.2174px + 0.8696vi, 48px));
-  --S9: var(--cs9, clamp(50px, 46.5217px + 1.087vi, 60px));
+  --S1: var(--CS1, clamp(3px, 3px + 0vi, 3px));
+  --S2: var(--CS2, clamp(5px, 4.6522px + 0.1087vi, 6px));
+  --S3: var(--CS3, clamp(8px, 7.6522px + 0.1087vi, 9px));
+  --S4: var(--CS4, clamp(10px, 9.3043px + 0.2174vi, 12px));
+  --S5: var(--CS5, clamp(15px, 13.9565px + 0.3261vi, 18px));
+  --S6: var(--CS6, clamp(20px, 18.6087px + 0.4348vi, 24px));
+  --S7: var(--CS7, clamp(30px, 27.913px + 0.6522vi, 36px));
+  --S8: var(--CS8, clamp(40px, 37.2174px + 0.8696vi, 48px));
+  --S9: var(--CS9, clamp(50px, 46.5217px + 1.087vi, 60px));
 
   /*
    ------------------------------------------------------------------------------------------------------
