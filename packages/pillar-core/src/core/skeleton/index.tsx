@@ -4,6 +4,7 @@ import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type * as ST from './skeleton.type'
 import type { CSSProperties } from 'react'
 import { cx } from '../cx'
+import { st } from '../st'
 
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -41,7 +42,7 @@ export const SkeletonText = forwardRef(
         <Tag
           ref={ref}
           key={index}
-          style={{ '--text-width': textWidth } as CSSProperties}
+          style={{ '--txt-w': textWidth } as CSSProperties}
           className={`sk- sk-T Fs-${size} ${className}`}
           {...rest}
         />
@@ -78,11 +79,13 @@ SkeletonButton.displayName = 'SkeletonButton'
 */
 
 export const Skeleton = forwardRef((props, ref) => {
-  const { height, as: Tag = 'div', className = '', isLoading, children, ...rest } = props
+  const { height, width, as: Tag = 'div', className = '', isLoading, children, style, ...rest } = props
 
-  const classNames = cx(`sk- sk-B ${className}`, { [`Sh-${height}`]: height })
+  const classNames = cx(`sk- sk-P ${className}`)
 
-  return isLoading ? <Tag ref={ref} className={classNames} {...rest} /> : children
+  const styles = st({ PW: width, PH: height })
+
+  return isLoading ? <Tag ref={ref} style={{ ...styles, ...style }} className={classNames} {...rest} /> : children
 }) as ForwardRefComponent<'div', ST.SkeletonProps>
 
 Skeleton.displayName = 'Skeleton'

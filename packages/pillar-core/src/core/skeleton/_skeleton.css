@@ -15,9 +15,11 @@
   }
 }
 
-.sk-B {
-  width: 100%;
-  height: var(--height, 10rem);
+.sk-P {
+  --PW: 100%;
+  --PH: none;
+  width: var(--PW);
+  height: var(--PH);
 }
 
 .sk-A,

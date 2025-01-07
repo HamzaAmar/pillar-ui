@@ -9,6 +9,7 @@ import {
   SkeletonText,
   SkeletonButton,
   SkeletonAvatar,
+  Paper,
 } from '@pillar-ui/core'
 import { useBooleanState } from '@pillar-ui/hooks'
 import { Meta } from '@storybook/react'
@@ -43,19 +44,19 @@ export const Avatars = () => {
   return (
     <Flex items="center" gap="5">
       <SkeletonAvatar size="3" isLoading={loading}>
-        <Avatar size="3" variant="image" title="Hello" />
+        <Avatar color="p" size="3" variant="dashed" title="Hello" />
       </SkeletonAvatar>
       <SkeletonAvatar size="4" isLoading={loading}>
-        <Avatar size="4" variant="image" title="Hello" />
+        <Avatar color="p" size="4" variant="dashed" title="Hello" />
       </SkeletonAvatar>
       <SkeletonAvatar size="5" isLoading={loading}>
-        <Avatar size="5" variant="image" title="Hello" />
+        <Avatar color="p" size="5" variant="dashed" title="Hello" />
       </SkeletonAvatar>
       <SkeletonAvatar size="7" isLoading={loading}>
-        <Avatar size="7" variant="image" title="Hello" />
+        <Avatar color="p" size="7" variant="dashed" title="Hello" />
       </SkeletonAvatar>
       <SkeletonAvatar size="8" isLoading={loading}>
-        <Avatar size="8" variant="image" title="Hello" />
+        <Avatar color="p" size="8" variant="dashed" title="Hello" />
       </SkeletonAvatar>
     </Flex>
   )
@@ -143,18 +144,44 @@ export const SkeletonBox = () => {
   const loading = useLoading()
   return (
     <Flex items="center" gap="5">
-      <Skeleton height="300px" isLoading={loading}>
+      <Skeleton height="300px" width="300px" isLoading={loading}>
         <img src="https://picsum.photos/id/300/300/300" alt="" />
       </Skeleton>
-      <Skeleton height="200px" isLoading={loading}>
+      <Skeleton height="200px" width="300px" isLoading={loading}>
         <img src="https://picsum.photos/id/300/300/200" alt="" />
       </Skeleton>
-      <Skeleton height="150px" isLoading={loading}>
+      <Skeleton height="150px" width="300px" isLoading={loading}>
         <img src="https://picsum.photos/id/300/300/150" alt="" />
       </Skeleton>
-      <Skeleton height="450px" isLoading={loading}>
+      <Skeleton height="450px" width="300px" isLoading={loading}>
         <img src="https://picsum.photos/id/300/300/450" alt="" />
       </Skeleton>
     </Flex>
+  )
+}
+
+export const SkeletonExample = () => {
+  const loading = useLoading()
+  return (
+    <Paper flow="5" width="350px">
+      <Skeleton height="100%" width="300px" isLoading={loading}>
+        <img style={{ width: '100%', height: '300px' }} src="https://picsum.photos/id/300/300/300" alt="" />
+      </Skeleton>
+      <SkeletonText size="5" lines={1} isLoading={loading}>
+        <Text size="5" weight="6" truncate="1">
+          Hello world my name is hamza mIloud amra
+        </Text>
+      </SkeletonText>
+      <SkeletonText size="3" lines={3} isLoading={loading}>
+        <Text size="3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi atque magni unde facilis dignissimos saepe
+          ullam a molestias consequuntur. Aliquam, cupiditate totam. Magnam provident eaque nam optio, unde recusandae
+          error.
+        </Text>
+      </SkeletonText>
+      <SkeletonButton size="7" isLoading={loading}>
+        <Button size="7">See More</Button>
+      </SkeletonButton>
+    </Paper>
   )
 }

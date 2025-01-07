@@ -18,4 +18,5 @@ export interface SkeletonButtonProps extends SkeletonBase {
 }
 export interface SkeletonProps extends SkeletonBase {
   height: string
+  width?: string
 }
