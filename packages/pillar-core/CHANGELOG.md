@@ -1,5 +1,42 @@
 # @pillar/core
 
+## 0.11.2
+
+### Patch Changes
+
+- This release focuses on core improvements, bug fixes, and documentation enhancements. Key changes include:
+
+  **Features:**
+
+  - Added a new style utility for improved styling consistency. (3870275)
+  - Improved documentation with enhanced explanations and examples, including documentation for CSS class names and improvements to the "Get Started" guide. (4e0907d, dab2810)
+
+  **Refactoring:**
+
+  - Removed stepper components. (f4124cc)
+  - Refactored the paper component to use CSS variables instead of classes for height and width. (32bcbb7)
+  - Refactored core CSS styles for better consistency across the project. (448dbbe)
+  - Improved feature design by adding more spacing between sections. (0115fec)
+
+  **Bug Fixes:**
+
+  - Fixed a readonly issue with input components. (#117) (f4124cc)
+  - Addressed height issues in the skeleton component. (5f18d48)
+  - Added `onPageChange` functionality to the pagination component. (#116) (7b4ed0d)
+  - Fixed various sitemap issues, including incorrect URLs. (d5d8b24)
+  - Temporarily removed the search input until Algolia indexing is complete. (d8e5c4e)
+  - Resolved issues in form comments. (b73e27c)
+  - Removed the menu from pages outside of the documentation sections. (84ae89e)
+  - Fixed various issues within core packages. (2b5ae10)
+  - Corrected button color issues on iOS and improved input spacing. (b9dabcf)
+  - Updated `react` and `react-dom` peer dependencies to `>=18` instead of `=18` in the core package. (#111) (6ba52bd)
+
+  **Chores:**
+
+  - Added a script for Algolia indexing and sitemap URL checking. (dd7cfa2)
+
+  This release represents a significant step forward with improvements to stability, styling, and developer experience. We recommend updating to this version.
+
 ## 0.10.12
 
 ### Patch Changes
