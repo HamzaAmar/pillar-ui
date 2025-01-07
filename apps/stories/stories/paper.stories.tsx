@@ -160,52 +160,37 @@ export function PaperColors() {
 export function PaperWidths() {
   return (
     <div className="Sf-4">
-      <Paper background="D4" color="d">
+      <Paper background="D4" width="50%" color="d">
         Hello
       </Paper>
-      <Paper width="25" background="Su4" color="su">
+      <Paper width="20px" background="Su4" color="su">
         Hello
       </Paper>
-      <Paper width="50" background="W4" color="w">
+      <Paper width="50px" background="W4" color="w">
         Hello
       </Paper>
-      <Paper width="75" background="Su4" color="se">
+      <Paper width="100px" background="Su4" color="se">
         Hello
       </Paper>
-      <Paper width="100" background="Su4" color="se">
+      <Paper width="fit-content" background="Su4" color="se">
         Hello
       </Paper>
-      <Paper width="30c" background="Su4" color="su">
+      <Paper width="25%" background="Su4" color="su">
         Hello
       </Paper>
-      <Paper width="25c" background="W4" color="w">
+      <Paper width="50%" background="W4" color="w">
         Hello
       </Paper>
-      <Paper width="60c" background="Su4" color="se">
+      <Paper width="100%" background="Su4" color="se">
         Hello
       </Paper>
-      <Paper width="75c" background="B4" color="b">
+      <Paper width="50ch" background="B4" color="b">
         Hello
       </Paper>
-      <Paper width="90c" background="P4" color="p">
+      <Paper width="25ch" background="P4" color="p">
         Hello
       </Paper>
-      <Paper width="fit" background="P4" color="p">
-        Hello
-      </Paper>
-      <Paper width="24p" background="P4" color="p">
-        Hello
-      </Paper>
-      <Paper width="48p" background="P4" color="p">
-        Hello
-      </Paper>
-      <Paper width="192p" background="P4" color="p">
-        Hello
-      </Paper>
-      <Paper width="384p" background="P4" color="p">
-        Hello
-      </Paper>
-      <Paper width="screen" background="P4" color="p">
+      <Paper width="4rem" background="P4" color="p">
         Hello
       </Paper>
     </div>
@@ -215,22 +200,22 @@ export function PaperWidths() {
 export function PaperRatio() {
   return (
     <div className="Sf-4">
-      <Paper width="30c" ratio="1" background="P4" color="p">
+      <Paper width="100px" ratio="1" background="P4" color="p">
         Hello
       </Paper>
-      <Paper width="30c" ratio="16-9" background="P4" color="p">
+      <Paper width="100px" ratio="16-9" background="P4" color="p">
         Hello
       </Paper>
-      <Paper width="30c" ratio="18-5" background="P4" color="p">
+      <Paper width="100px" ratio="18-5" background="P4" color="p">
         Hello
       </Paper>
-      <Paper width="30c" ratio="3-4" background="P4" color="p">
+      <Paper width="100px" ratio="3-4" background="P4" color="p">
         Hello
       </Paper>
-      <Paper width="30c" ratio="4-3" background="P4" color="p">
+      <Paper width="100px" ratio="4-3" background="P4" color="p">
         Hello
-      </Paper>{' '}
-      <Paper width="30c" ratio="golden" background="P4" color="p">
+      </Paper>
+      <Paper width="100px" ratio="golden" background="P4" color="p">
         Hello
       </Paper>
     </div>
@@ -240,34 +225,34 @@ export function PaperRatio() {
 export function PaperHeight() {
   return (
     <div className="Sf-4">
-      <Paper height="25" background="Su4" color="su">
+      <Paper height="25px" background="Su4" color="su">
         Hello
       </Paper>
-      <Paper height="50" background="W4" color="w">
+      <Paper height="50px" background="W4" color="w">
         Hello
       </Paper>
-      <Paper height="75" background="Su4" color="se">
+      <Paper height="75px" background="Su4" color="se">
         Hello
       </Paper>
-      <Paper height="100" background="Su4" color="se">
+      <Paper height="100px" background="Su4" color="se">
         Hello
       </Paper>
-      <Paper height="fit" background="P4" color="p">
+      <Paper height="fit-content" background="P4" color="p">
         Hello
       </Paper>
-      <Paper height="24p" background="P4" color="p">
+      <Paper height="2rem" background="P4" color="p">
         Hello
       </Paper>
-      <Paper height="48p" background="P4" color="p">
+      <Paper height="4rem" background="P4" color="p">
         Hello
       </Paper>
-      <Paper height="192p" background="P4" color="p">
+      <Paper height="16rem" background="P4" color="p">
         Hello
       </Paper>
-      <Paper height="384p" background="P4" color="p">
+      <Paper height="32rem" background="P4" color="p">
         Hello
       </Paper>
-      <Paper height="screen" background="P4" color="p">
+      <Paper height="100vh" background="P4" color="p">
         Hello
       </Paper>
     </div>

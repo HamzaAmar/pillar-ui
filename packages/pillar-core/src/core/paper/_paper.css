@@ -1,7 +1,9 @@
 .pp- {
-  --pbg: none;
+  --PBG: none;
+  --PW: none;
+  --PH: none;
+  width: var(--PW);
+  height: var(--PH);
+  background-color: var(--PBG);
   border-radius: var(--border-radius, var(--paper-rad), 0);
-  /* background-color: var(--pbg, transparent); */
-  background-color: var(--pbg);
-  width: var(--PW, revert);
 }

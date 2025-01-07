@@ -1,5 +1,6 @@
 import { CSSProperties, forwardRef } from 'react'
 import { cx } from '../cx'
+import { st } from '../st'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
 import type { PaperProps } from './paper.type'
@@ -38,8 +39,6 @@ export const Paper = forwardRef(
       [`S-${shadow}`]: shadow,
       [`Sf-${flow}`]: flow,
       [`R-${corner}`]: corner,
-      [`Sw-${width}`]: width,
-      [`Sh-${height}`]: height,
       [`Sr-${ratio}`]: ratio,
       [`B`]: border,
       [`Sp-${p}`]: p,
@@ -55,10 +54,10 @@ export const Paper = forwardRef(
       [className!]: className,
     })
 
-    const bg = background ? { '--pbg': `var(--${background})` } : {}
+    const styles = st({ PBG: `var(--${background})`, PW: width, PH: height })
 
     return (
-      <Tag style={{ ...bg, ...style } as CSSProperties} className={classNames} ref={ref} {...rest}>
+      <Tag style={{ ...styles, ...style } as CSSProperties} className={classNames} ref={ref} {...rest}>
         {children}
       </Tag>
     )

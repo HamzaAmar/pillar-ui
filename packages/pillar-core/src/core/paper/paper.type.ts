@@ -1,5 +1,6 @@
 // import type { CSSProperties } from 'react'
-import type { Corner, CornerBlob, CornerHand, Size, Width, Height } from '../../types'
+import { CSSProperties } from 'react'
+import type { Corner, CornerBlob, CornerHand, Size } from '../../types'
 
 type Shadow = Corner
 
@@ -23,8 +24,8 @@ export interface PaperProps {
   ml?: Size
   flow?: Size
   shadow?: Shadow
-  width?: Width
-  height?: Height
+  width?: CSSProperties['width']
+  height?: CSSProperties['height']
   border?: boolean
   ratio?: Ratio
   corner?: Corner | CornerBlob | CornerHand
