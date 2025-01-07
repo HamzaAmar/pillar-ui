@@ -117,4 +117,23 @@ export const FormControllerErrorAndHint = () => {
   )
 }
 
+export const FormControllerStateInput = () => {
+  return (
+    <div className="Sf-5">
+      <FormController label="Hello">
+        <Input fluid name="name" required />
+      </FormController>
+      <FormController label="Hello">
+        <Input disabled fluid name="name" required />
+      </FormController>
+      <FormController label="Hello">
+        <Input readOnly fluid name="name" required />
+      </FormController>
+      <FormController error="The minimum length for this field is 5 characters." label="Hello">
+        <Input fluid name="name" required />
+      </FormController>
+    </div>
+  )
+}
+
 export const Playground = {}

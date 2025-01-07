@@ -21,7 +21,7 @@
   text-transform: var(--field-transform);
 
   &:has(.fi-:read-only) {
-    background: var(--B7);
+    background: var(--B5);
   }
 
   &:has(.fi-:focus):not(.fi-C-bordered) {
@@ -114,9 +114,9 @@
 .fc-o {
   width: 100%;
 
-  &:has(:read-only) .fi-C {
+  /* &:has(.fi-:read-only) .fi-C {
     background: var(--B4);
-  }
+  } */
 }
 
 /*
