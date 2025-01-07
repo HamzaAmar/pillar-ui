@@ -13,7 +13,6 @@ export { Breadcrumb, BreadcrumbItem } from './core/breadcrumb'
 export { Checkbox } from './core/checkbox'
 export { Radio, RadioGroup, CustomRadio } from './core/radio'
 export { Timeline, TimelineItem } from './core/timeline'
-export { Stepper, StepperStep } from './core/stepper'
 export {
   FormGroup,
   Input,
@@ -77,7 +76,6 @@ export type {
   TimelineContextProps,
   TimelineContextProviderProps,
 } from './core/timeline'
-export type { StepperProps, StepProps } from './core/stepper'
 export type {
   FormControllerProps,
   FormControllerContextProps,
