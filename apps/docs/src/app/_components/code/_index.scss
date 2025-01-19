@@ -93,6 +93,7 @@
   max-height: 500px;
   border-radius: var(--sha-rad);
   overflow: auto;
+  scrollbar-width: thin;
 }
 .playground-row {
   align-items: center;

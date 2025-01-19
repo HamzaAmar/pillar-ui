@@ -1,5 +1,5 @@
 .ta-C {
-  overflow-x: auto;
+  overflow: auto;
   width: 100%;
 }
 
@@ -8,42 +8,39 @@
   max-width: 100%;
   border-collapse: collapse;
   table-layout: auto;
-}
+  white-space: nowrap;
+  & td,
+  & th {
+    text-align: start;
+    padding: 0.375em;
+    font-size: 0.85em;
+  }
+  & tr {
+    border-block-end: var(--c4) 1px solid;
+    background: var(--c1);
+    width: 100%;
+  }
 
-.tc-,
-.ta-B .column {
-  border: var(--c5) 1px solid;
+  & th {
+    font-weight: 500;
+  }
 }
 
 .ta-striped {
-  & .tr-body:nth-child(odd) {
+  & tbody tr:nth-child(even),
+  & thead tr {
     background: var(--c4);
   }
 }
 .ta-soft {
-  & .tr- {
+  & tr {
     background: var(--c5);
+    border-color: var(--c7);
   }
 }
 .ta-head-color {
-  & .tr-head {
-    background: var(--c8);
+  & th {
+    background: var(--c5);
     color: var(--c12);
   }
-}
-
-.tr- {
-  border-block-end: var(--c5) 1px solid;
-  background: var(--c1);
-  width: 100%;
-}
-
-.tc- {
-  text-align: start;
-  font-size: 0.85em;
-  padding: 0.5em 0.25em;
-}
-
-.tc-head {
-  font-weight: 500;
 }

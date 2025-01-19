@@ -19,7 +19,7 @@ export const TabList = forwardRef(({ children, ...rest }, ref) => {
     <div
       role="tablist"
       aria-orientation={orientation}
-      className={cx('ta-L fl- Sg-3', { ['fl-col']: orientation !== 'vertical' })}
+      className={cx('tab-L fl- Sg-3', { ['fl-col']: orientation !== 'vertical' })}
       ref={ref}
       {...rest}
     >
@@ -42,7 +42,7 @@ export const Tab = forwardRef(({ title, value, ...rest }, ref) => {
     <button
       onClick={() => handleSelect?.(value)}
       type="button"
-      className={`ta- ta-${variant} R-${corner}`}
+      className={`tab- tab-${variant} R-${corner}`}
       role="tab"
       aria-selected={selected === value}
       aria-controls={`${id}-p`}

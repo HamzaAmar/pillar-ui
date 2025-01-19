@@ -2,7 +2,7 @@
 title: Table
 type: core
 excerpt: The Table component is a UI component used to display tabular data in a structured format. It provides options for customizing the appearance and behavior of the table.
-items: ['Table', 'TableRow', 'TableColumn']
+items: ['Table']
 directory: table/index.tsx
 lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
@@ -20,20 +20,20 @@ import { Table } from '@pillar-ui/core'
 
 ## Examples
 
-### data
+### Size
 
-The data prop is used to provide the table data in an array format. Each element in the array represents a row in the table, and the properties of each element represent the columns.
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
 
-Example:
+<Playground name="tableSize" root="table" />
 
-## Use Case
+### Variants
 
-The Table component can be used to display tabular data in various applications such as data grids, reports, or dashboards. It provides a structured and organized way to present data to users.
+<Prop defaultValue="default" type="'default' | 'striped' | 'soft' | 'head-color'" />
 
-## Troubleshooting
+<Playground name="tableVariant" root="table" />
 
-If you encounter any issues with the Table component, make sure that you have correctly passed the props and values. If you are still having issues, check the console for any error messages.
+### Color
 
-## Conclusion
+<Prop defaultValue="p" type="'i' | 'd' | 'su' | 'se' | 'w' | 'p' | 'b' | 'o'" />
 
-The Table component is a versatile UI component for displaying tabular data. It provides options for customization and supports common features like sorting, striping, compactness, and borders. The Table component helps in presenting data in a structured and organized manner, enhancing the user experience.
+<Playground name="tableColor" root="table" />

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
-import { Button, Flex, Heading, Table, TableColumn, TableRow } from '@pillar-ui/core'
+import { Button, Flex, Heading, IconButton, Table } from '@pillar-ui/core'
 import type { TableProps } from '@pillar-ui/core'
-import { ArrowDown } from '@pillar-ui/icons'
+import { Pencil, Trash } from '@pillar-ui/icons'
 
 const meta: Meta<typeof Table> = {
   title: 'Components/Table',
@@ -14,57 +14,57 @@ export default meta
 export const NormalTableExample = (props: Partial<TableProps>) => {
   return (
     <Table {...props}>
-      <TableRow type="head">
-        <TableColumn as="th">ID</TableColumn>
-        <TableColumn as="th">User</TableColumn>
-        <TableColumn as="th">Followers</TableColumn>
-        <TableColumn as="th">Following</TableColumn>
-        <TableColumn as="th">Action</TableColumn>
-      </TableRow>
-      <TableRow>
-        <TableColumn weight="5">#HE1234</TableColumn>
-        <TableColumn>Samir Lamir</TableColumn>
-        <TableColumn weight="5">15.3K</TableColumn>
-        <TableColumn weight="5">1</TableColumn>
-        <TableColumn>
-          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="4" variant="text">
-            Accept
-          </Button>
-        </TableColumn>
-      </TableRow>
-      <TableRow>
-        <TableColumn weight="5">#HE12sd</TableColumn>
-        <TableColumn>Kent Lempo</TableColumn>
-        <TableColumn weight="5">19.3K</TableColumn>
-        <TableColumn weight="5">190.9K</TableColumn>
-        <TableColumn>
-          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="4" variant="text">
-            Accept
-          </Button>
-        </TableColumn>
-      </TableRow>
-      <TableRow>
-        <TableColumn weight="5">#HE15434</TableColumn>
-        <TableColumn>Ryan Dod</TableColumn>
-        <TableColumn weight="5">2.5K</TableColumn>
-        <TableColumn weight="5">20K</TableColumn>
-        <TableColumn>
-          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="4" variant="text">
-            Accept
-          </Button>
-        </TableColumn>
-      </TableRow>
-      <TableRow>
-        <TableColumn weight="5">#HE12s56</TableColumn>
-        <TableColumn>Remix Run</TableColumn>
-        <TableColumn weight="5">20.5K</TableColumn>
-        <TableColumn weight="5">27.8K</TableColumn>
-        <TableColumn>
-          <Button iconPosition="end" icon={<ArrowDown direction="right" width={16} />} size="4" variant="text">
-            Accept
-          </Button>
-        </TableColumn>
-      </TableRow>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>User</th>
+          <th>Followers</th>
+          <th>Following</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#HE1234</td>
+          <td>Samir Lamir</td>
+          <td>15.3K</td>
+          <td>1</td>
+          <Flex as="td" gap="2">
+            <IconButton title="Update" color="i" icon={<Pencil />} size="3" />
+            <IconButton title="Delete" color="d" icon={<Trash />} size="3" />
+          </Flex>
+        </tr>
+        <tr>
+          <td>#HE12sd</td>
+          <td>Kent Lempo</td>
+          <td>19.3K</td>
+          <td>190.9K</td>
+          <Flex as="td" gap="2">
+            <IconButton title="Update" color="i" icon={<Pencil />} size="3" />
+            <IconButton title="Delete" color="d" icon={<Trash />} size="3" />
+          </Flex>
+        </tr>
+        <tr>
+          <td>#HE15434</td>
+          <td>Ryan Dod</td>
+          <td>2.5K</td>
+          <td>20K</td>
+          <Flex as="td" gap="2">
+            <IconButton title="Update" color="i" icon={<Pencil />} size="3" />
+            <IconButton title="Delete" color="d" icon={<Trash />} size="3" />
+          </Flex>
+        </tr>
+        <tr>
+          <td>#HE12s56</td>
+          <td>Remix Run</td>
+          <td>20.5K</td>
+          <td>27.8K</td>
+          <Flex as="td" gap="2">
+            <IconButton title="Update" color="i" icon={<Pencil />} size="3" />
+            <IconButton title="Delete" color="d" icon={<Trash />} size="3" />
+          </Flex>
+        </tr>
+      </tbody>
     </Table>
   )
 }

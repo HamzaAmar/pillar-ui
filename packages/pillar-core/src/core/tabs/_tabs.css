@@ -1,4 +1,4 @@
-.ta-L {
+.tab-L {
   flex-shrink: 0;
   overflow: auto hidden;
   overscroll-behavior-x: contain;
@@ -18,7 +18,7 @@
   &[aria-orientation='horizontal'] {
     border-inline-end: 1px solid var(--O6);
 
-    & .ta- {
+    & .tab- {
       border-start-end-radius: 0;
       border-end-end-radius: 0;
       &[aria-selected='true'] {
@@ -28,7 +28,7 @@
   }
   &[aria-orientation='vertical'] {
     border-block-end: 1px solid var(--O6);
-    & .ta- {
+    & .tab- {
       border-end-start-radius: 0;
       border-end-end-radius: 0;
       &[aria-selected='true'] {
@@ -38,24 +38,24 @@
   }
 }
 
-.ta- {
+.tab- {
   padding: 0.5em 1em;
   border: 2px solid transparent;
   margin-bottom: -1px;
   font-size: 0.85em;
 }
 
-.ta-solid[aria-selected='true'] {
+.tab-solid[aria-selected='true'] {
   background: var(--c9);
   color: white;
 }
-.ta-soft[aria-selected='true'] {
+.tab-soft[aria-selected='true'] {
   border: 1px solid var(--O6);
   border-bottom: 0;
   background: var(--c4);
   color: var(--c12);
 }
-.ta-outline[aria-selected='true'] {
+.tab-outline[aria-selected='true'] {
   border: 1px solid var(--O6);
   border-bottom: 0;
   background: var(--B1);
