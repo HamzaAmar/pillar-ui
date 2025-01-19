@@ -1,16 +1,15 @@
 .av- {
   /* TODO: CHECK IF IT INLINE FLEX OR The Cache  */
   --fx: inline-flex;
-  --eq-s: 2.75em;
+  --sh-s: 2.75em;
   padding: 0;
-  font-weight: 500;
+  /* font-weight: 500; */
   /* border: 3px solid var(--B1); */
   background:
     linear-gradient(var(--av-b), var(--av-b)) content-box,
     linear-gradient(var(--B1), var(--B1)) padding-box;
-  min-width: var(--eq-s);
-  /* aspect-ratio: 1; */
-  max-height: var(--eq-s);
+  /* min-width: var(--eq-s); */
+  /* max-height: var(--eq-s); */
   overflow: hidden;
 
   /* Default Value set by the Client */

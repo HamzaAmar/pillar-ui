@@ -1,5 +1,5 @@
 import React, { CSSProperties, useRef, useState } from 'react'
-import { Avatar, Flex, Paper, Button, AvatarGroup } from '@pillar-ui/core'
+import { Avatar, Flex, Paper, Button, AvatarGroup, Grid } from '@pillar-ui/core'
 import { Meta, StoryFn } from '@storybook/react'
 import { DotsHorizontal, Exclamation, Users } from '@pillar-ui/icons'
 
@@ -204,6 +204,57 @@ export function AvatarPolymorphic() {
       <Avatar title="Hello" as="button" onClick={() => alert('Hello world my name is hazma')} />
       <Avatar as="a" href="#" src="https://picsum.photos/id/128/100/100" title="Hello" />
       <Avatar fallback={<DotsHorizontal width="20" />} src="https://picsum.photos/id/123/100/100" title="Hello" />
+    </div>
+  )
+}
+export function AvatarIssues() {
+  return (
+    <div className="Sf-4">
+      <Flex gap="8">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur amet dignissimos et tempore hic expedita
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          illo.
+        </p>
+        <Avatar title="Hello" />
+      </Flex>
+      <Grid cols={{ default: '1fr auto' }}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur amet dignissimos et tempore hic expedita
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          illo.
+        </p>
+        <Avatar title="Hello" />
+      </Grid>
+      <Grid rows={{ default: '1fr 1fr' }}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur amet dignissimos et tempore hic expedita
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          impedit. Ipsum laborum temporibus esse eius. Incidunt, suscipit vitae dolor adipisci blanditiis aut error
+          illo.
+        </p>
+        <Avatar title="Hello" />
+      </Grid>
     </div>
   )
 }

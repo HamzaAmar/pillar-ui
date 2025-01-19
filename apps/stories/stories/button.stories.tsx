@@ -320,3 +320,20 @@ export function ButtonDefaults() {
     </div>
   )
 }
+
+export function ButtonIssues() {
+  return (
+    <div className="Sf-3">
+      <Flex>
+        <p>
+          orrupti mollitia alias! Deleniti quam odit, inventore sed unde at dolore aperiam, quod eveniet alias commodi
+          sint laborum edit ex, nemo ducimus nesciunt eaque. Laboriosam rerum consectetur porro est possimus, mollitia
+          incidunt nihil adipisci, asperiores eveniet eligendi necessitatibus. Vitae sequi tenetur eligendi ipsa ab
+          accusamus qui ut voluptas nostrum laudantium! Repellat iste suscipit, aperiam inventore maiores culpa
+          architecto iusto voluptatem veritatis! Ex!
+        </p>
+        <Button>green</Button>
+      </Flex>
+    </div>
+  )
+}

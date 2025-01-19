@@ -78,7 +78,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
 
   const [isError, setIsError] = useState(!src)
 
-  const classNames = cx(`av- av-${variant} C-${color} S-e F-c`, {
+  const classNames = cx(`av- shd av-${variant} C-${color} F-c`, {
     [`A-${animate}`]: animate,
     [`Fs-${size}`]: size,
     [`R-${corner}`]: corner,

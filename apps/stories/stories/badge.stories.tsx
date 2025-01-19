@@ -326,4 +326,19 @@ export function ButtonCornerDefaults() {
   )
 }
 
+export const BadgeIssues = () => {
+  return (
+    <Flex gap="4">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta animi assumenda debitis sed totam porro odit,
+        nihil, possimus, recusandae ea minus voluptatum molestiae nesciunt iusto quod cupiditate temporibus eligendi
+        magnam.possimus, recusandae ea minus voluptatum molestiae nesciunt iusto quod cupiditate temporibus eligendi
+        magnam.possimus, recusandae ea minus voluptatum molestiae nesciunt iusto quod cupiditate temporibus eligendi
+        magnam.
+      </p>
+      <Badge type="numeric" number={15} max={10} color="d" />
+    </Flex>
+  )
+}
+
 export const Playground: StoryObj<typeof Badge> = {}
