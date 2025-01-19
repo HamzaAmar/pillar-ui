@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Meta } from '@storybook/react'
-import { Chips, Flex, Button, Paper } from '@pillar-ui/core'
+import { Chips, Flex, Button, Paper, Text } from '@pillar-ui/core'
 import { DotsHorizontal, Plus } from '@pillar-ui/icons'
 
 const meta: Meta<typeof Chips> = {
@@ -318,3 +318,20 @@ export function ChipsCornerDefaults() {
     </div>
   )
 }
+
+export const ChipsIssues = () => (
+  <div className="Sf-4">
+    <Flex gap="3">
+      <Text>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nihil numquam iusto hic animi nesciunt alias
+        ducimus eos quaerat ipsum, nemo at. Veniam incidunt sunt odit autem facilis repudiandae quod. ducimus eos
+        quaerat ipsum, nemo at. Veniam incidunt sunt odit autem facilis repudiandae quod. ducimus eos quaerat ipsum,
+        nemo at. Veniam incidunt sunt odit autem facilis repudiandae quod. ducimus eos quaerat ipsum, nemo at. Veniam
+        incidunt sunt odit autem facilis repudiandae quod.
+      </Text>
+      <Chips color="d" variant="soft">
+        Hello
+      </Chips>
+    </Flex>
+  </div>
+)

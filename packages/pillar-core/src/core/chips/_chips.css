@@ -1,8 +1,7 @@
 .ci- {
-  max-width: 35ch;
   padding: 0.175em 0.2em;
   line-height: 1.2;
-
+  display: inline-flex;
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to
