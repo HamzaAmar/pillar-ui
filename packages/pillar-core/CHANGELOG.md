@@ -1,5 +1,26 @@
 # @pillar/core
 
+## 0.11.3
+
+### Patch Changes
+
+- # Changes
+
+  ## **1. Refactor: Remove `TableColumn` , `TableRow` and Use Native HTML Elements (#121)**
+
+  - **Description:** The `TableColumn`, `TableRow` component has been removed, and native HTML elements (`<tr>`, `<th>`, `<td>`) are now used for better compatibility and simplicity.
+  - **Impact:** This change improves bundle size and reduces dependency on custom components.
+
+  ## **2. Fix: Add `shd` Class to Avatar and Check Other Components (#ae9a136)**
+
+  - **Description:** The `shd` class has been added to the `Avatar` component to ensure proper styling. Other components have also been reviewed to ensure they do not shrink unexpectedly.
+  - **Impact:** This fixes layout issues and ensures consistent rendering across components.
+
+  ## **3. Fix: Resolve Chips Overflow Issue (#119)**
+
+  - **Description:** The `Chips` component has been updated to prevent overflow issues, ensuring that content remains within its boundaries.
+  - **Impact:** This improves the usability and appearance of the `Chips` component.
+
 ## 0.11.2
 
 ### Patch Changes
