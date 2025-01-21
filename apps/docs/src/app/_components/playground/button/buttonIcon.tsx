@@ -1,5 +1,5 @@
 import { Button } from '@pillar-ui/core'
-import { Close, Maximize, Minimize } from '@pillar-ui/icons'
+import { Close } from '@pillar-ui/icons'
 
 export function ButtonIcon() {
   return (

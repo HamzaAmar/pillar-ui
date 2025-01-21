@@ -1,5 +1,4 @@
-import { Button, Flex, IconButton } from '@pillar-ui/core'
-import { ZoomPlus } from '@pillar-ui/icons'
+import { Button } from '@pillar-ui/core'
 
 export function ButtonColor() {
   return (
