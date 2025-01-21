@@ -36,7 +36,6 @@ const content = (
     </tbody>
   </>
 )
-
 export const TableVariant = () => {
   return (
     <>

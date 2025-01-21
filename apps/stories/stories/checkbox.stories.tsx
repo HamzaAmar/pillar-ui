@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
-import { Checkbox, Flex, FormController, Input } from '@pillar-ui/core'
+import { Avatar, Checkbox, Chips, Flex, FormController, Input, Paper, Text } from '@pillar-ui/core'
 import { useCheckboxGroup } from '@pillar-ui/hooks'
 
 const meta: Meta<typeof Checkbox> = {
@@ -209,6 +209,27 @@ export const CheckboxStatus = () => {
       <Checkbox name="hello" isIndeterminate checked>
         Hello world
       </Checkbox>
+    </Flex>
+  )
+}
+
+export const CheckboxCustom = () => {
+  return (
+    <Flex gap="4" items="center">
+      <Paper p="5" border>
+        <Checkbox name="hello">
+          <Flex justify="between" items="center" gap="5">
+            <Flex>
+              <Avatar title="Hello world" size="5" />
+              <div>
+                <Text>Hamza Miloud Amar</Text>
+                <Text>Software Engineer</Text>
+              </div>
+            </Flex>
+            <Chips>Hello</Chips>
+          </Flex>
+        </Checkbox>
+      </Paper>
     </Flex>
   )
 }

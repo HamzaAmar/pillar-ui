@@ -1,7 +1,7 @@
 import React, { CSSProperties, useRef, useState } from 'react'
 import { Avatar, Flex, Paper, Button, AvatarGroup, Grid } from '@pillar-ui/core'
 import { Meta, StoryFn } from '@storybook/react'
-import { DotsHorizontal, Exclamation, Users } from '@pillar-ui/icons'
+import { Album, DotsHorizontal, Exclamation, PictureInPicture, Users } from '@pillar-ui/icons'
 
 const meta: Meta<typeof Avatar> = {
   title: 'Components/Avatar',
@@ -34,10 +34,10 @@ export function AvatarsFallback() {
       <Avatar src="https://pisum" size="3" title="Hello" />
       <Avatar size="4" title="Hello" />
       <Avatar size="5" title="Hello" />
-      <Avatar size="6" title="Hello" />
-      <Avatar size="7" title="Hello" />
-      <Avatar size="8" title="Hello" />
-      <Avatar size="9" title="Hello" />
+      <Avatar fallback="NA" size="6" title="Hello" />
+      <Avatar fallback={<Exclamation />} size="7" title="Hello" />
+      <Avatar size="8" fallback={<Users />} title="Hello" />
+      <Avatar size="9" fallback={<Album />} title="Hello" />
     </Flex>
   )
 }

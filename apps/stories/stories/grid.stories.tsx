@@ -57,7 +57,7 @@ export const ResponsiveColumn = () => {
       cols={{ default: '1fr', md: 'repeat(4, 1fr)' }}
       rows={{ default: 'repeat(4, 1fr)', md: 'repeat(6,1fr)' }}
     >
-      <GridItem as={Box} col={{ default: '1/2', md: '1/5' }} height="48p">
+      <GridItem as={Box} col={{ default: '1/2', md: '1/5' }} height="48px">
         Hello
       </GridItem>
       <GridItem as={Box} col={{ default: '1/2', md: 'span 2' }} row={{ default: '2/3', md: 'span 4' }}>
@@ -66,7 +66,7 @@ export const ResponsiveColumn = () => {
       <GridItem as={Box} col={{ default: '1/2', md: 'span 2' }} row={{ default: '3/4', md: 'span 4' }}>
         Hello
       </GridItem>
-      <GridItem as={Box} col={{ default: '1/2', md: 'span 4' }} height="48p">
+      <GridItem as={Box} col={{ default: '1/2', md: 'span 4' }} height="48px">
         Hello
       </GridItem>
     </Grid>
