@@ -1,9 +1,5 @@
 import { Grid, Paper } from '@pillar-ui/core'
 
-const Box = (props: any) => {
-  return
-}
-
 const boxes = Array.from({ length: 3 }, (_, index) => (
   <Paper background="W11" corner="2" className="F-c">
     {index + 1}

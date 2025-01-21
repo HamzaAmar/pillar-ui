@@ -1,14 +1,14 @@
 import { Grid, Paper } from '@pillar-ui/core'
 
 const boxes = Array.from({ length: 10 }, (_, index) => (
-  <Paper width="48p" ratio="1" background="W10" corner="2" className="F-c">
+  <Paper width="48px" ratio="1" background="W10" corner="2" className="F-c">
     {index + 1}
   </Paper>
 ))
 
 const shared = {
   as: Paper,
-  height: '192p',
+  height: '190px',
   className: 'ex-striped',
   cols: { default: 'repeat(5,50px)' },
   gap: '4',

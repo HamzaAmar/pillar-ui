@@ -1,7 +1,7 @@
 import { Flex, Paper } from '@pillar-ui/core'
 
 const Box = (props: any) => {
-  return <Paper width="48p" ratio="1" background="B6" corner="2" className="F-c" {...props} />
+  return <Paper width="48px" ratio="1" background="B6" corner="2" className="F-c" {...props} />
 }
 
 const boxes = Array.from({ length: 5 }, (_, index) => <Box key={index} />)

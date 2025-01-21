@@ -3,7 +3,7 @@ import { Grid, GridItem, Paper } from '@pillar-ui/core'
 const shared = {
   className: 'ex-striped',
   as: Paper,
-  height: '96p',
+  height: '96px',
   gap: '4',
   p: '5',
   corner: '2',
