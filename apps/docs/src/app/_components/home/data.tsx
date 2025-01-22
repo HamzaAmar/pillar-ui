@@ -122,7 +122,7 @@ export const SIMPLE_DEVELOPMENT = [
   {
     id: 'Unlock Efficiency',
     title: 'Unlock Efficiency',
-    description: 'Build faster with pre-built components, hooks, and utilities.',
+    description: 'Build faster with pre-built components, hooks, icons, and utilities.',
   },
   {
     id: 'all-in-one',
@@ -137,7 +137,7 @@ export const SIMPLE_DEVELOPMENT = [
   {
     id: 'lightweight-powerful',
     title: 'Lightweight Projects, Powerful Results',
-    description: 'Optimize performance with shared functionality and streamlined code. ',
+    description: 'A Core library that is 9 times smaller than any other react UI library.',
   },
   {
     id: 'simplify-streamline',
@@ -317,7 +317,7 @@ export const strokes = {
 } as const
 
 export const filles = {
-  fill: 'var(--B1)',
+  fill: 'var(--B2)',
   fillRule: 'evenodd',
   clipRule: 'evenodd',
 } as const

@@ -5,6 +5,41 @@
   margin: auto;
 }
 
+.hero-bundle {
+  &:nth-child(odd) {
+    --from: -2rem;
+    transform-origin: top left;
+  }
+  transform: translate(var(--from, 2rem), -2rem) rotate(2deg);
+  transform-origin: bottom right;
+
+  opacity: 0;
+  animation: moves 0.5s calc(var(--B_STEP) * 0.2s) ease-in-out forwards;
+  border-bottom: 1px solid var(--B5);
+  position: relative;
+
+  & .hero-bundle-counter::before {
+    position: absolute;
+    top: 0.85rem;
+    left: -0.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 0.5em var(--B11);
+    counter-increment: bundle;
+    content: '0' counter(bundle);
+    font-size: 1.5rem;
+  }
+}
+@keyframes moves {
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.hero-bundles {
+  counter-reset: bundle;
+}
+
 .hero-hdg {
   font-size: max(5vw, 2.5rem);
   line-height: 1.15;
@@ -25,9 +60,23 @@
 
 .hero-txt {
   font-size: max(2.5vw, 1.75rem);
+  // --text-from: translateX(-1em);
+  // --text-number: 2;
+  // --text-origin: left start;
   line-height: 1.25;
   color: var(--B11);
 }
+
+// .hero-information {
+//   --text-from: translateX(-1em);
+//   --text-number: 3;
+//   --text-origin: left start;
+// }
+// .hero-buttons {
+//   --text-from: translateX(8px) rotate(2deg);
+//   --text-number: 4;
+//   --text-origin: right start;
+// }
 
 // Here we go
 
@@ -38,7 +87,7 @@
   z-index: 1;
   max-width: 100%;
   &:nth-child(even) {
-    background: var(--B2);
+    background: var(--B3);
   }
 }
 .rtl--support {
@@ -77,7 +126,7 @@
   position: relative;
   z-index: 1;
   border-radius: 0.5rem;
-  background-color: var(--B1);
+  background-color: var(--B2);
 }
 
 .article--icon-container {

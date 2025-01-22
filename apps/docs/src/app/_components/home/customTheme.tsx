@@ -15,8 +15,9 @@ export function CustomTheme() {
           </Text>
           <Text className="dark--description" color="b" low size="7">
             In the theme settings, you can enhance your user experience by customizing various elements. This includes
-            adjusting the size, corner details, and text transformations. You can select specific areas within the
-            entire tree structure to apply these style changes, ensuring a consistent and personalized look.
+            adjusting the size, corner details, and text transformations Of any components. You can select specific
+            areas within the entire tree structure to apply these style changes, ensuring a consistent and personalized
+            look.
           </Text>
         </div>
       </div>

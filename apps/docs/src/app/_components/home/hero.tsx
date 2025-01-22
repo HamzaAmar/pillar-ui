@@ -1,20 +1,40 @@
-import { ArrowCircleTop, Booking, Discord, Dollar, Github, Id, Linkdin, ThumbUp, Youtube } from '@pillar-ui/icons'
+import {
+  ArrowCircleTop,
+  Booking,
+  Discord,
+  Dollar,
+  Github,
+  Id,
+  Linkdin,
+  ThumbUp,
+  Twitter,
+  Youtube,
+} from '@pillar-ui/icons'
 import Link from 'next/link'
-import { Button, Flex, Grid, IconButton, Paper, Text } from '@pillar-ui/core'
+import { Button, Flex, Grid, Heading, IconButton, Paper, Text } from '@pillar-ui/core'
+import { CSSProperties } from 'react'
+import Socials from '../social'
 
 const BUNDLE_SIZE_PROJECTS = [
   {
     id: 'pillar-ui',
     name: 'Pillar UI',
     size: '11.0KB',
-    link: 'https://bundlephobia.com/package/@pillar-ui/core@0.11.2',
+    link: 'https://bundlephobia.com/package/@pillar-ui/core@0.11.3',
     winner: true,
   },
   {
     id: 'radix-themes',
-    name: 'Radix-ui themes',
+    name: 'Radix themes',
     size: '90.7kB',
     link: 'https://bundlephobia.com/package/@radix-ui/themes@3.1.6',
+    winner: false,
+  },
+  {
+    Id: 'mui',
+    name: 'Material UI',
+    size: '141.9kB+',
+    link: 'https://bundlephobia.com/package/@mui/material@6.4.0',
     winner: false,
   },
   {
@@ -45,24 +65,27 @@ const BUNDLE_SIZE_PROJECTS = [
     link: 'https://bundlephobia.com/package/@heroui/react@2.6.14',
     winner: false,
   },
-  {
-    Id: 'mui',
-    name: 'Material UI',
-    size: '141.9kB+',
-    link: 'https://bundlephobia.com/package/@mui/material@6.4.0',
-    winner: false,
-  },
 ]
 
-function BundleItem({ name, size, link }: any) {
+function BundleItem({ name, size, link, index }: any) {
   return (
-    <Paper as={Flex} justify="between" items="center" gap="2" p="4" style={{ borderBottom: '1px solid var(--B5)' }}>
-      <Flex gap="3" items="center">
-        <ThumbUp width="24" />
-        <Text weight="6">{name}</Text>
+    <Paper
+      style={{ '--B_STEP': index + 1 } as CSSProperties}
+      className="hero-bundle"
+      as={Flex}
+      justify="between"
+      items="center"
+      gap="2"
+      p="5"
+    >
+      <Flex gap="4" items="center">
+        <div className="hero-bundle-counter"></div>
+        <Text weight="5" size="6">
+          {name}
+        </Text>
       </Flex>
       <Flex gap="4" items="center">
-        <Text weight="7" size="4">
+        <Text size="4" color="b" low>
           {size}
         </Text>
         <IconButton
@@ -72,7 +95,6 @@ function BundleItem({ name, size, link }: any) {
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="hero-bundle"
           icon={<ArrowCircleTop />}
           size="3"
         />
@@ -83,7 +105,7 @@ function BundleItem({ name, size, link }: any) {
 
 export function Hero() {
   return (
-    <Grid items="start" gap="6" cols={{ default: '1fr', lg: '3fr 1fr' }} className="section hero">
+    <Grid gap="9" items="center" cols={{ default: '1fr', lg: '2.5fr 1fr' }} className="section hero">
       <Flex as="section" direction="col" gap="7" justify="center">
         <h1 className="hero-hdg">
           <Text as="span" className="hero-ttl">
@@ -124,17 +146,17 @@ export function Hero() {
           </Button>
         </Flex>
 
-        <Flex justify="end" gap="4">
-          <IconButton color="b" variant="soft" title="Go to Github" icon={<Github />} />
-          <IconButton color="b" variant="soft" title="Go to Discord" icon={<Discord />} />
-          <IconButton color="b" variant="soft" title="Go to Youtube" icon={<Youtube />} />
-          <IconButton color="b" variant="soft" title="Go to Linkdin" icon={<Linkdin />} />
-        </Flex>
+        <Socials />
       </Flex>
-      <Paper flow="2">
-        {BUNDLE_SIZE_PROJECTS.map(({ id, ...rest }) => (
-          <BundleItem key={id} {...rest} />
-        ))}
+      <Paper flow="9">
+        <Paper flow="4" className="hero-bundles">
+          <Text size="8" low color="b" weight="3" className="text-animation">
+            Bundle Size comparison
+          </Text>
+          {BUNDLE_SIZE_PROJECTS.map(({ id, ...rest }, index) => (
+            <BundleItem key={id} {...rest} index={index} />
+          ))}
+        </Paper>
       </Paper>
     </Grid>
   )
