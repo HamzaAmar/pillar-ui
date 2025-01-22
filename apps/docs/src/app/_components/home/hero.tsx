@@ -153,9 +153,11 @@ export function Hero() {
           <Text size="8" low color="b" weight="3" className="text-animation">
             Bundle Size comparison
           </Text>
-          {BUNDLE_SIZE_PROJECTS.map(({ id, ...rest }, index) => (
-            <BundleItem key={id} {...rest} index={index} />
-          ))}
+          <Grid gap="4" cols={{ default: '1fr', md: '1fr 1fr', lg: '1fr' }}>
+            {BUNDLE_SIZE_PROJECTS.map(({ id, ...rest }, index) => (
+              <BundleItem key={id} {...rest} index={index} />
+            ))}
+          </Grid>
         </Paper>
       </Paper>
     </Grid>
