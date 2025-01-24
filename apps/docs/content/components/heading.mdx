@@ -69,3 +69,19 @@ import { Heading } from '@pillar-ui/core'
 ### dir RTL language
 
 <Playground direction="column" name="headingRTL" root="heading" />
+
+## Customizing Appearance
+
+Our design system uses CSS variables to set default styles for components. You can customize these variables to change the overall look of your component accross your project.
+
+### Available Properties:
+
+```css
+/* Change the default size of the Heading */
+--typography-size:;
+/* Change the default transform of the Heading */
+--typography-transform:;
+```
+
+font-size: var(--typography-size, inherit);
+text-transform: var(--typography-transform, inherit);

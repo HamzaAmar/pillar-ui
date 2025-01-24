@@ -1,0 +1,67 @@
+---
+title: Radius
+type: themes
+excerpt: 'The following CSS variables define border radius for your project. These variables are responsive and adjust dynamically based on the viewport size. If you prefer different font sizes for your project, you can customize these values according to your needs.'
+root: themes
+lastModified: '2024-07-31T05:35:07.322Z'
+publishedAt: '2024-05-03T05:35:07.322Z'
+---
+
+# CSS Font Size Variables
+
+Font size variables in CSS, defined in the `:root` selector, let you create responsive typography that's both accessible and visually consistent.
+
+### Font Size Variables
+
+Here’s a quick overview of the default font size variables:
+
+| Variable | Description                               | Default Value Range |
+| -------- | ----------------------------------------- | ------------------- |
+| `--F1`   | Font size variable for 3 extra small text | 0.55rem - 0.66rem   |
+| `--F2`   | Font size variable for 2 extra small text | 0.61rem - 0.8rem    |
+| `--F3`   | Font size variable for extra small text   | 0.69rem - 0.96rem   |
+| `--F4`   | Font size variable for small text         | 0.78rem - 1.15rem   |
+| `--F5`   | Font size variable for medium text        | 0.88rem - 1.38rem   |
+| `--F6`   | Font size variable for large text         | 0.98rem - 1.65rem   |
+| `--F7`   | Font size variable for extra large text   | 1.11rem - 1.98rem   |
+| `--F8`   | Font size variable for 2 extra large text | 1.25rem - 2.38rem   |
+| `--F9`   | Font size variable for 3 extra large text | 1.4rem - 2.85rem    |
+
+### Customizing Font Sizes
+
+You can override these variables to match your design. For example:
+
+<Alert
+  color="w"
+  title="Caution"
+  variant="soft"
+  message="Customizing font using the `--CF*` variables may impact the responsive layout. Default values utilize the `clamp` function to adapt spacing based on viewport size, maintaining proportions and alignment. Modifying these values might result in spacing inconsistencies."
+/>
+
+```css
+:root {
+  --CF1: 2px;
+  --CF2: 4px;
+  --CF3: 8px;
+  --CF4: 12px;
+  --CF5: 16px;
+  --CF6: 24px;
+  --CF7: 32px;
+  --CF8: 48px;
+  --CF9: 72px;
+}
+```
+
+These customizations adjust the font sizes in your **Text**, **Heading**, and **Link** components.
+
+### Tips for Best Results
+
+1. **Keep It Consistent**: Use default values when possible for a cohesive design.
+2. **Accessibility First**: Avoid extremely small sizes (`--F1`, `--F2`) unless absolutely necessary, and ensure text meets contrast guidelines.
+3. **Preview and Test**: Always check your design on various devices to confirm legibility and visual balance.
+
+### Conclusion
+
+Font size variables simplify creating responsive, accessible typography. Customize thoughtfully to balance design, readability, and user experience. Start with defaults, tweak where needed, and keep accessibility at the forefront.
+
+Enjoy crafting your unique, user-friendly designs! 🎨

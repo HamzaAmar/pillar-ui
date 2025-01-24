@@ -1,0 +1,131 @@
+**Title: Introducing Pillar UI: Build Accessible, Blazing-Fast React Apps Without the Bloat**
+
+Hi there! 👋 I’m Hamza Miloud Amar, and I want to talk about something we’ve all felt: that sinking moment when you realize your UI library is costing you more than it’s giving you. The sluggish load times. The guilt of shipping 200KB of components just to render some UI’s.
+
+That’s why I built **Pillar UI** a React design system that respects your users bandwidth while giving you the tools to build accessibly and joyfully. Let me show you how it works.
+
+### **Why Another UI Library?**
+
+We’ve all care about performance when we make our apps. You shouldn’t need to ship a small novel’s worth of JavaScript just to style a form.
+
+I created Pillar UI because I couldn’t find a library that gather both **speed** and **UX**. Most solutions force you into a false choice:
+
+- "Use our utility-first CSS… but good luck with accessibility!"
+- "Here’s a fully-featured toolkit… and also, your bundle just grew by hunderds kilobytes!"
+
+Pillar UI solves this with a radical focus on **lean, purposeful code**. The core is **11KB gzipped** smaller than most blog hero images and every byte is audited for performance _and_ accessibility.
+
+### **What Makes Pillar UI Different?**
+
+#### 1. **Built for Speed, Optimized for Real Life**
+
+Pillar UI's entire core is
+
+```bash
+npm install @pillar-ui/core  # Installs in seconds. Zero bloat.
+```
+
+#### 2. **Accessibility by Default, Not Accident**
+
+Performance means nothing if your app excludes people. Pillar UI components:
+
+- Follow WCAG guidelines out of the box (keyboard nav, ARIA roles, contrast ratios).
+- Support RTL languages.
+- Support Windows High Contrast Mode.
+- We Do our best to make the color contrast ratios of our components accessible.
+- Use Reduce Motion to avoid janky animations for users with motion sensitivity issues.
+- Support font size adjustment in zoom mode.
+- Use Semantic Markup when possible to make the library accessible and lightweight.
+- Make it Color-blind Friendly Design
+
+#### 3. **Themes Made Simple**
+
+Most libraries rely on runtime theme providers, CSS-in-JS, or complex context wrappers, which add unnecessary weight and complexity. Pillar UI takes a different approach by using native CSS variables.
+
+**Why this matters:**
+
+- **No theme provider** = No extra React components clogging your app.
+- **Zero runtime CSS parsing** = Avoids CSS-in-JS solutions that bloat your bundle.
+- **Pure CSS** = Fully compatible with any stack (Next.js, Remix, etc.).
+- **No issues in server components** = Easily access your theme directly in server components.
+
+```css
+/* Override defaults without digging through layers */
+:root {
+  --primary: hsl(248deg 54% 42%);
+  --spacing-sm: 0.5rem;
+}
+
+/* Dark mode? Just add a class. */
+.dark {
+  --primary: hsl(248deg 84% 72%);
+}
+```
+
+#### 4. **Work _With_ Your Stack, Not Against It**
+
+Pillar UI embraces the platform. It’s not a framework just React and CSS variables.
+
+- Works with CRA, Next.js, Remix, Vite.
+- No plugin conflicts.
+- Zero config only your themes.
+
+---
+
+### **Developer Happiness, Engineered**
+
+I believe tools should _reduce_ complexity, not add it.
+
+- **Responsive Props:** Adjust styles per breakpoint without media queries.
+- **Pre-Baked Patterns:** Buttons, forms, modals styled once, used everywhere.
+- **TypeScript First:** Autocomplete every variant, every time.
+
+```jsx
+// Build a responsive navbar in 5 lines
+import { Flex, Button, Logo } from '@pillar-ui/core'
+
+function Nav() {
+  return (
+    <Flex gap="5" wrap>
+      <Logo />
+      <Button variant="outline">Sign In</Button>
+    </Flex>
+  )
+}
+```
+
+---
+
+### **Join the Pillar Movement**
+
+This isn’t just my project it’s ours.
+
+- **GitHub Discussions:** helps me .
+- **Discord Community:** Share wins and get unstuck.
+- **Star the Repo:** Help others discover Pillar UI.
+
+---
+
+### **Why Trust This Approach?**
+
+I’ve spent years untangling knotty UIs in production. Pillar UI is the library _I_ needed one that treats bundle size as a feature, not a footnote.
+
+Try it risk-free:
+
+```bash
+npx create-react-app my-app --template @pillar-ui/cra-template
+```
+
+Or explore the [docs](https://www.pillar-ui.com/docs) to see how 11KB can change your workflow.
+
+---
+
+**Build apps that are fast _and_ inclusive. Build with Pillar UI.**
+
+Hamza Miloud Amar
+
+_P.S. If you’re tired of “lightweight” libraries that aren’t, give Pillar UI a shot then share it with a friend who’s still waiting for MUI to hydrate. ⚡️_
+
+---
+
+_Inspired by the ethos of Kent C. Dodds: Prioritize fundamentals. Empower developers. Ship thoughtfully._
