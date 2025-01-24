@@ -5,8 +5,9 @@ import { DOMAIN } from '~/constant/domain'
 import { notFound } from 'next/navigation'
 import { SlugParamsProps } from '~/types/params'
 import { DocHeader, TableOfContent } from '~/app/_components'
-import { Flex, Paper } from '@pillar-ui/core'
+import { Flex, Link, Paper, Text } from '@pillar-ui/core'
 import DocNavigate from '~/app/_components/docNavigate'
+import { Ads } from '~/app/_components/ads'
 
 export async function generateStaticParams() {
   return getComponents().map(({ slug }) => ({
@@ -57,7 +58,10 @@ function Page({ params }: SlugParamsProps) {
         }}
       />
       <div id="doc-content" className="docs--content">
-        <DocHeader root="pillar-core/src/core" title={title} {...rest} />
+        <div>
+          <DocHeader root="pillar-core/src/core" title={title} {...rest} />
+          <Ads />
+        </div>
         <div className="section prose Sf-6">
           <CustomMDX source={content} />
           <Flex as={Paper} mt="9" gap="4" justify="between" items="center" wrap>

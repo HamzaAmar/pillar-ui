@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import React from 'react'
 import { getGetStarted, getGetStartedBySlug } from '~/api/docs'
 import { TableOfContent } from '~/app/_components'
+import { Ads } from '~/app/_components/ads'
 import { CustomMDX } from '~/app/_components/mdx'
 import { DOMAIN } from '~/constant/domain'
 import { SlugParamsProps } from '~/types/params'
@@ -19,9 +20,12 @@ function GettingStarted({ params }: SlugParamsProps) {
   const { content, headings, ...rest } = feature
   return (
     <>
-      <div className="section docs--content prose">
-        <div className="Sf-6">
-          <CustomMDX source={content} />
+      <div>
+        <Ads />
+        <div className="section docs--content prose">
+          <div className="Sf-6">
+            <CustomMDX source={content} />
+          </div>
         </div>
       </div>
 

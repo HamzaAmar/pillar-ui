@@ -5,6 +5,7 @@ import { SlugParamsProps } from '~/types/params'
 import { Metadata } from 'next'
 import { DOMAIN } from '~/constant/domain'
 import { TableOfContent } from '~/app/_components'
+import { Ads } from '~/app/_components/ads'
 
 interface Props {
   slug: string
@@ -22,9 +23,12 @@ function Themes({ params }: SlugParamsProps) {
 
   return (
     <>
-      <div className="section docs--content prose">
-        <div className="Sf-4">
-          <CustomMDX source={content} />
+      <div>
+        <Ads />
+        <div className="section docs--content prose">
+          <div className="Sf-6">
+            <CustomMDX source={content} />
+          </div>
         </div>
       </div>
 

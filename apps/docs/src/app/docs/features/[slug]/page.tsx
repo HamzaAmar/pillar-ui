@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getFeatureBySlug, getFeatures } from '~/api/docs'
 import { CustomMDX, TableOfContent } from '~/app/_components'
+import { Ads } from '~/app/_components/ads'
 import { DOMAIN } from '~/constant/domain'
 import { SlugParamsProps } from '~/types/params'
 
@@ -17,9 +18,12 @@ function Features({ params }: SlugParamsProps) {
   const { content, headings } = feature
   return (
     <>
-      <div className="section docs--content prose">
-        <div className="Sf-6">
-          <CustomMDX source={content} />
+      <div>
+        <Ads />
+        <div className="section docs--content prose">
+          <div className="Sf-6">
+            <CustomMDX source={content} />
+          </div>
         </div>
       </div>
 
