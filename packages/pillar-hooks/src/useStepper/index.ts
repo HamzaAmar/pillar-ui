@@ -63,8 +63,6 @@ export function useStepper(max: number, initial: number = 0) {
 
   const goToFirst = useCallback(() => setStep(initial), [initial])
 
-  const [isFirst, isLast] = [step === initial, step === max]
-
   return {
     step,
     setStep,
@@ -73,7 +71,7 @@ export function useStepper(max: number, initial: number = 0) {
     jumpTo,
     goToLast,
     goToFirst,
-    isFirst,
-    isLast,
+    isFirst: step === initial,
+    isLast: step === max,
   }
 }

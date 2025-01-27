@@ -9,16 +9,7 @@ export const useTimeout = (callback: TimeoutHandler, delay: number = 150) => {
   const timerRef = useRef<TimeoutType>(null)
   const persistedCallback = usePersistentCallback(callback)
 
-  if (typeof callback !== 'function') {
-    throw new Error(`useTimeout: expects its parameter to be a function, but it received a [ ${typeof callback}`)
-  }
-  if (delay < 0) {
-    throw new Error('useTimeout: The delay should not be smaller than 0.')
-  }
-
-  if (isNaN(delay)) {
-    throw new Error('useTimeout: delay parameter cannot be NaN.')
-  }
+  delay = Math.max(delay, 0)
 
   const clearTimer = useCallback(() => {
     if (timerRef.current) {
