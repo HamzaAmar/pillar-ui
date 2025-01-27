@@ -41,7 +41,7 @@ const FooterNav = ({ links, title }: { title: string; links: FooterItemProps[] }
 
 const footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <Paper background="B3" as={Grid} p="6" gap="6" cols={{ default: '1fr', lg: '1fr 1fr', xl: 'repeat(4, 1fr)' }}>
         <div>
           <Logo width={100} />
