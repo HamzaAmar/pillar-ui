@@ -1,0 +1,51 @@
+---
+title: Tabs
+type: core
+excerpt: The Tabs component is a UI component used to display tabular data in a structured format. It provides options for customizing the appearance and behavior of the tabs.
+items: ['Tabs']
+directory: tabs/index.tsx
+lastModified: '2024-07-31T05:35:07.322Z'
+publishedAt: '2024-05-03T05:35:07.322Z'
+---
+
+## Usage
+
+```tsx
+import { Tabs } from '@pillar-ui/core'
+```
+
+```tsx
+<Tabs />
+```
+
+## Examples
+
+### Size
+
+<Prop defaultValue="4" type="'1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'" />
+
+<Playground name="tabsSize" root="tabs" />
+
+### Variants
+
+<Prop defaultValue="default" type="'default' | 'striped' | 'soft' | 'head-color'" />
+
+<Playground name="tabsVariant" root="tabs" />
+
+### Color
+
+<Prop defaultValue="p" type="'i' | 'd' | 'su' | 'se' | 'w' | 'p' | 'b'" />
+
+<Playground name="tabsColor" root="tabs" />
+
+### Corner
+
+<Prop defaultValue="p" type="'0' | '1' | '2' | '3' | '4' | '5' | 'full'" />
+
+<Playground name="tabsCorner" root="tabs" />
+
+### Disabled
+
+<Prop type="boolean" />
+
+<Playground name="tabsDisabled" root="tabs" />

@@ -1,10 +1,9 @@
 'use client'
 import { forwardRef, useId, useState } from 'react'
-import { cx } from '../cx'
 import { context } from '../provider'
 
 import type { ForwardRefComponent } from '../../types/polymorphic.type'
-import type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProps, TabPanelsProps } from './tabs.type'
+import type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProps } from './tabs.type'
 /*
 ===============================================================================================
     Tab List Core Component
@@ -13,16 +12,10 @@ import type { TabsProps, TabListProps, TabPanelProps, TabsProviderProps, TabProp
 
 const [TabsProvider, useTabsContext] = context<TabsProviderProps>({ name: 'Tabs' })
 
-export const TabList = forwardRef(({ children, ...rest }, ref) => {
+export const TabList = forwardRef(({ children, corner = '2', ...rest }, ref) => {
   const { orientation } = useTabsContext() ?? {}
   return (
-    <div
-      role="tablist"
-      aria-orientation={orientation}
-      className={cx('tab-L fl- Sg-3', { ['fl-col']: orientation !== 'vertical' })}
-      ref={ref}
-      {...rest}
-    >
+    <div role="tablist" aria-orientation={orientation} className={`tab-L R-${corner}`} ref={ref} {...rest}>
       {children}
     </div>
   )
@@ -35,20 +28,21 @@ TabList.displayName = 'TabList'
 ===============================================================================================
 */
 
-export const Tab = forwardRef(({ title, value, ...rest }, ref) => {
-  const { id, handleSelect, selected, variant, corner } = useTabsContext() ?? {}
+export const Tab = forwardRef(({ title, value, icon, ...rest }, ref) => {
+  const { id, handleSelect, selected, variant } = useTabsContext() ?? {}
 
   return (
     <button
       onClick={() => handleSelect?.(value)}
       type="button"
-      className={`tab- tab-${variant} R-${corner}`}
+      className={`tab- tab-${variant} F-c`}
       role="tab"
       aria-selected={selected === value}
       aria-controls={`${id}-p`}
       ref={ref}
       {...rest}
     >
+      {icon}
       {title}
     </button>
   )
@@ -75,41 +69,12 @@ TabPanel.displayName = 'TabPanel'
 
 /*
 ===============================================================================================
-    Tab Panels Core Component
-===============================================================================================
-*/
-
-export const TabPanels = forwardRef((props, ref) => {
-  const { color = 'b-12', children, ...rest } = props
-
-  return (
-    <div ref={ref} {...rest}>
-      {children}
-    </div>
-  )
-}) as ForwardRefComponent<'div', TabPanelsProps>
-TabPanels.displayName = 'TabPanels'
-
-/*
-===============================================================================================
     Tabs Core Component
 ===============================================================================================
 */
 
 export const Tabs = forwardRef(
-  (
-    {
-      children,
-      orientation = 'vertical',
-      defaultValue = 0,
-      size,
-      variant = 'bordered',
-      corner = '2',
-      color = 'p',
-      ...rest
-    },
-    ref
-  ) => {
+  ({ children, orientation = 'vertical', defaultValue = 1, size, variant = 'border', color = 'p', ...rest }, ref) => {
     const id = useId()
     // const { focusedIndex, handleIndexChange, handleKeyEvent } = useRovingIndex(Children.count(children), {
     //   loop: true,
@@ -126,17 +91,12 @@ export const Tabs = forwardRef(
       handleSelect,
       // handleKeySelect: handleKeyEvent,
       variant,
-      corner,
       id,
     }
 
     return (
       <TabsProvider {...context}>
-        <div
-          ref={ref}
-          className={cx(`fl- Sg-4 C-${color} Fs-${size}`, { ['fl-col']: orientation === 'vertical' })}
-          {...rest}
-        >
+        <div ref={ref} className={`tabs- C-${color} Fs-${size}`} {...rest}>
           {children}
         </div>
       </TabsProvider>
