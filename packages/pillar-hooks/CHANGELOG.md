@@ -1,5 +1,14 @@
 # @pillar/hooks
 
+## 0.7.8
+
+### Patch Changes
+
+- **Improved Performance:** The size of existing hooks has been reduced, leading to a smaller bundle size and potentially faster execution. (592b272)
+
+  - **Enhanced Hook API:** The `useBooleanState` hook has been renamed to `useBool` for better clarity and conciseness. (4cc685c)
+  - **Bug Fix:** `useCallback` has been added to `useBool` to prevent unnecessary re-renders in components using this hook. (e8c3466)
+
 ## 0.7.7
 
 ### Patch Changes
