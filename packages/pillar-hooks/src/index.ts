@@ -1,5 +1,5 @@
 export { useArray } from './useArray/index.js'
-export { useBooleanState } from './useBoolean/index.js'
+export { useBool } from './useBoolean/index.js'
 export { useCheckboxGroup } from './useCheckboxGroup/index.js'
 export { useClickOutside } from './useClickOutside/index.js'
 export { useControllableState } from './useControllableState/index.js'

@@ -1,13 +1,13 @@
 'use client'
 
 import { IconButton, Spinner } from '@pillar-ui/core'
-import { useBooleanState } from '@pillar-ui/hooks'
+import { useBool } from '@pillar-ui/hooks'
 import { Moon, Sun } from '@pillar-ui/icons'
 import { useTheme } from 'next-themes'
 import React, { useEffect } from 'react'
 
 export const SwitchMode = () => {
-  const { value: mounted, setTrue } = useBooleanState(false)
+  const { value: mounted, setTrue } = useBool(false)
   const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {

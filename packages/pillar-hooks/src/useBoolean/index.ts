@@ -22,7 +22,7 @@ import { useState } from 'react'
  * @example
  * // Example usage in a functional component:
  * function BooleanComponent() {
- *   const { value, setTrue, setFalse, toggle } = useBooleanState(true);
+ *   const { value, setTrue, setFalse, toggle } = useBool(true);
  *
  *   return (
  *     <div>
@@ -35,7 +35,7 @@ import { useState } from 'react'
  * }
  */
 
-export const useBooleanState = (defaultValue: boolean = false) => {
+export const useBool = (defaultValue: boolean = false) => {
   const [value, setValue] = useState(defaultValue)
 
   const setTrue = () => setValue(true)
