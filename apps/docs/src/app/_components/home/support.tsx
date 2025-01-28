@@ -2,9 +2,16 @@ import { Flex, Text, Button, Grid, IconButton } from '@pillar-ui/core'
 import { SUPPORTED } from './data'
 import { Discord, Github, Twitter } from '@pillar-ui/icons'
 import { SectionHeading } from '~/component/core/sectionHeading'
+import Link from 'next/link'
+import Socials from '../social'
 export function PillarSupport() {
   return (
-    <Flex gap="7" justify="evenly" className="simplify-dev--container section">
+    <Grid
+      gap="7"
+      cols={{ default: '1fr', md: '1fr 1fr', lg: '1.5fr 1fr' }}
+      justify="evenly"
+      className="simplify-dev--container section"
+    >
       <div className="Sf-7">
         <div
           className="Sf
@@ -20,8 +27,9 @@ export function PillarSupport() {
         <Grid
           style={{ position: 'sticky', top: '8rem' }}
           items="center"
+          justifyItem="center"
           gap="7"
-          cols={{ default: 'repeat(auto-fit, minmax(180px, 1fr))' }}
+          cols={{ default: '1fr 1fr', md: '1fr 1fr 1fr', lg: '1fr 1fr 1fr 1fr' }}
         >
           {SUPPORTED.map(({ slug, icon }) => (
             <div key={slug}>{icon}</div>
@@ -36,7 +44,9 @@ export function PillarSupport() {
           <Text size="4" color="b" low>
             Build faster and lighter. Experience the power of our streamlined design system.
           </Text>
-          <Button>Get Started</Button>
+          <Button as={Link} href="/docs/getting-started/cra">
+            Get Started
+          </Button>
         </div>
         <div className="get-started Sf-4">
           <Text weight="5" size="6">
@@ -45,13 +55,9 @@ export function PillarSupport() {
           <Text size="4" color="b" low>
             Get involved in our community. Everyone is welcome!
           </Text>
-          <Flex gap="4">
-            <IconButton size="4" icon={<Twitter />} title="Connect With Twitter" />
-            <IconButton size="4" icon={<Github />} title="Connect With Github" />
-            <IconButton size="4" icon={<Discord />} title="Connect With Twitter" />
-          </Flex>
+          <Socials />
         </div>
       </div>
-    </Flex>
+    </Grid>
   )
 }

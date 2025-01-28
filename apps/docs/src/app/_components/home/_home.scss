@@ -217,3 +217,13 @@
 .rtl--support--content {
   max-width: 868px;
 }
+
+.theme-gallery {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .theme-gallery {
+    display: inline-flex;
+  }
+}
