@@ -41,8 +41,8 @@ const Icons = () => {
   }
 
   return (
-    <div className="Sf-4 icons">
-      <Flex className="icons-scroll" as={Paper} corner="4" gap="4">
+    <div className="Sf-4 section icons">
+      <Flex className="icons-scroll" as={Paper} p="4" m="2" gap="4">
         {CATEGORIES.map((category) => (
           <Button
             onClick={() => setCurrent(category)}
@@ -53,7 +53,7 @@ const Icons = () => {
           </Button>
         ))}
       </Flex>
-      <div className="Sp Sflg">
+      <div className="Sp Sf-6">
         <Heading as="h2">
           Number of Icons In {current}: {lists.length}
         </Heading>
@@ -63,7 +63,6 @@ const Icons = () => {
           ))}
         </Grid>
       </div>
-      <h1>Hello</h1>
     </div>
   )
 }

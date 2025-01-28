@@ -7,10 +7,10 @@ import { getUtils } from '~/api/docs'
 export default function utils() {
   const utils = getUtils()
   return (
-    <Paper as={Grid} m="5" cols={{ default: 'repeat(4, 1fr)' }} gap="4">
+    <Paper as={Grid} m="5" cols={{ default: '1fr 1fr', lg: 'repeat(4, 1fr)' }} gap="4">
       {utils.map((util) => (
         <Link href={`utils/${util.slug}`} key={util.slug}>
-          <Paper height="96p" corner="2" background="B3" className="F-c">
+          <Paper height="96px" corner="2" border className="F-c">
             <Text size="6" weight="5" color="b">
               {util.title}
             </Text>

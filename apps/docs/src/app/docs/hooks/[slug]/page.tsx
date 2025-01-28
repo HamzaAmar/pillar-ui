@@ -18,7 +18,7 @@ export default function Blog({ params }: SlugParamsProps) {
   const { content, headings, ...rest } = hook
   return (
     <>
-      <div className="section prose docs--content Sflg">
+      <div className="section prose docs--content Sf-6">
         <DocHeader root="pillar-hooks/src" {...rest} />
         <div className="Sf-4">
           <CustomMDX source={content} />
