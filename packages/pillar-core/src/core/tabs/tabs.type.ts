@@ -7,7 +7,7 @@ interface TabsBase {
   color?: Color
   defaultValue?: number
   size?: Size
-  variant?: Omit<Variant, 'text'> | 'bordered'
+  variant?: Omit<Variant, 'text'> | 'border' | 'group'
   corner?: Corner
   id?: string
 }
@@ -25,7 +25,9 @@ export interface TabProps {
 
 export interface TabPanelsProps {}
 
-export interface TabListProps {}
+export interface TabListProps {
+  corner?: Corner
+}
 
 export interface TabsProviderProps extends TabsBase {
   handleSelect: (value: number) => void

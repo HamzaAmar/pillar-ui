@@ -1,5 +1,23 @@
 # @pillar/core
 
+## 0.12.1
+
+### Patch Changes
+
+- **Improved Performance:** The size of existing hooks has been reduced, leading to a smaller bundle size and potentially faster execution. (592b272)
+
+  - **Enhanced Hook API:** The `useBooleanState` hook has been renamed to `useBool` for better clarity and conciseness. (4cc685c)
+  - **Bug Fix:** `useCallback` has been added to `useBool` to prevent unnecessary re-renders in components using this hook. (e8c3466)
+
+## 0.12.0
+
+### Minor Changes
+
+- - **New Tab Variants (46e2cb6):** Added new variants to the `Tab` component, expanding its styling options and flexibility. This change allows for greater customization and integration with different design systems.
+  - **Documentation Improvements:**
+    - **Removed Deprecated Articles (6a3d8a5):** Cleaned up the documentation by removing outdated and deprecated articles, improving the overall user experience.
+    - **Styling Updates (bce7d49):** Improved the visual appeal of the documentation by changing the background of the aside and footer sections and adding borders for better clarity.
+
 ## 0.11.3
 
 ### Patch Changes

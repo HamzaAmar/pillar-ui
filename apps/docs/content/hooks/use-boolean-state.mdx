@@ -1,8 +1,8 @@
 ---
-title: useBooleanState
+title: useBool
 type: hooks
-excerpt: 'The useBooleanState hook is a custom hook for managing a boolean state value. It returns an object containing the current boolean value and functions for updating it.'
-directory: useBooleanState/index.ts
+excerpt: 'The useBool hook is a custom hook for managing a boolean state value. It returns an object containing the current boolean value and functions for updating it.'
+directory: useBool/index.ts
 lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
 ---
@@ -11,13 +11,13 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 
 is a custom React hook designed to provide an easy to use interface for managing boolean states in your components. It not only allows you to get the current state and set a new state but also offers handy utility functions to directly set the state to true or false, or to toggle the state.
 
-## Why useBooleanState
+## Why useBool
 
 Managing boolean state values can be a common task in React applications, and this hook provides an easy way to handle it in a consistent and reusable way.
 
 ## Installation
 
-To use useBooleanState in your project, you can install it from npm:
+To use useBool in your project, you can install it from npm:
 
 ```bash
 npm install --dev '@pillar-ui/hooks'
@@ -26,18 +26,18 @@ npm install --dev '@pillar-ui/hooks'
 ## Usage
 
 ```tsx showLineNumbers title="Alert.tsx"
-const { value, setTrue, setFalse, toggle } = useBooleanState(true)
+const { value, setTrue, setFalse, toggle } = useBool(true)
 ```
 
 ## Examples
 
-Here's an example of how you can use useBooleanState in a functional component:
+Here's an example of how you can use useBool in a functional component:
 
 ```tsx showLineNumbers title="Alert.tsx"
-import { useBooleanState } from 'path-to-useBooleanState'
+import { useBool } from 'path-to-useBool'
 
 function BooleanComponent() {
-  const { value, setTrue, setFalse, toggle } = useBooleanState(true)
+  const { value, setTrue, setFalse, toggle } = useBool(true)
 
   return (
     <div>
@@ -52,23 +52,23 @@ function BooleanComponent() {
 
 ## Use Case
 
-- **Toggling a menu or modal**: You can use useBooleanState to manage the state of a menu or modal that is toggled by a button click.
+- **Toggling a menu or modal**: You can use useBool to manage the state of a menu or modal that is toggled by a button click.
 
-- **Managing the state** of a checkbox or toggle switch: If you have a checkbox or toggle switch in your UI, you can use useBooleanState to manage its state.
+- **Managing the state** of a checkbox or toggle switch: If you have a checkbox or toggle switch in your UI, you can use useBool to manage its state.
 
-- **Controlling the visibility of an element**: You can use useBooleanState to manage the visibility of an element based on a boolean value. For example, you could use it to show or hide a tooltip when a user hovers over an element.
+- **Controlling the visibility of an element**: You can use useBool to manage the visibility of an element based on a boolean value. For example, you could use it to show or hide a tooltip when a user hovers over an element.
 
-- **Conditional rendering**: You can use useBooleanState to conditionally render components based on a boolean value. For example, you could use it to conditionally render a "Save" button only when a form has been edited.
+- **Conditional rendering**: You can use useBool to conditionally render components based on a boolean value. For example, you could use it to conditionally render a "Save" button only when a form has been edited.
 
-- **Managing the state of a feature flag**: If you have a feature flag in your application that determines whether a certain feature is enabled or not, you can use useBooleanState to manage the state of the flag. This allows you to easily toggle the feature on and off as needed.
+- **Managing the state of a feature flag**: If you have a feature flag in your application that determines whether a certain feature is enabled or not, you can use useBool to manage the state of the flag. This allows you to easily toggle the feature on and off as needed.
 
 ## Implementation details
 
-The useBooleanState hook uses the useState and useCallback hooks from the React library to manage the boolean state value and update functions respectively.
+The useBool hook uses the useState and useCallback hooks from the React library to manage the boolean state value and update functions respectively.
 
 ## API Reference
 
-useBooleanState takes a single optional argument:
+useBool takes a single optional argument:
 
 - `defaultValue`: boolean (optional): The initial state of the boolean. Default is false.
 
@@ -86,13 +86,13 @@ This hook is written in TypeScript and provides type definitions for its usage
 
 ## FAQs
 
-**Q: Can I use useBooleanState in a class component?**
+**Q: Can I use useBool in a class component?**
 
-`Answer:` useBooleanState, like all hooks, can only be used in functional components, not class components. Hooks are a feature introduced in React 16.8 that lets you use state and other React features without writing a class.
+`Answer:` useBool, like all hooks, can only be used in functional components, not class components. Hooks are a feature introduced in React 16.8 that lets you use state and other React features without writing a class.
 
-**Q: What is the advantage of using useBooleanState over traditional useState?**
+**Q: What is the advantage of using useBool over traditional useState?**
 
-`Answer:` useBooleanState provides an abstraction over the useState hook and comes bundled with utility functions (setTrue, setFalse, toggle) that directly set the boolean state to desired values. This not only makes your code simpler and more intuitive but also helps reduce the size of your code by eliminating the need for additional logic to handle boolean state changes.
+`Answer:` useBool provides an abstraction over the useState hook and comes bundled with utility functions (setTrue, setFalse, toggle) that directly set the boolean state to desired values. This not only makes your code simpler and more intuitive but also helps reduce the size of your code by eliminating the need for additional logic to handle boolean state changes.
 
 **Q: Are the utility functions (setTrue, setFalse, toggle) always the same between renders?**
 
@@ -100,7 +100,7 @@ This hook is written in TypeScript and provides type definitions for its usage
 
 ## Troubleshooting
 
-If you encounter any issues using the useBooleanState hook, please refer to the documentation or open an issue on the project's GitHub repository.
+If you encounter any issues using the useBool hook, please refer to the documentation or open an issue on the project's GitHub repository.
 
 ## Conclusion
 

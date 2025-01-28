@@ -141,7 +141,7 @@ export function Hero() {
             Get Started
           </Button>
 
-          <Button color="b" variant="outline" icon={<Dollar />}>
+          <Button as={Link} href="/coming-soon" color="b" variant="outline" icon={<Dollar />}>
             Donation
           </Button>
         </Flex>

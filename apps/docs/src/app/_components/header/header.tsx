@@ -5,7 +5,7 @@ import { default as Logo } from '../logo'
 import { Flex, IconButton, InputSearch, Paper } from '@pillar-ui/core'
 import { Menu, ListSearch, Close } from '@pillar-ui/icons'
 import Link from 'next/link'
-import { useBooleanState } from '~/hooks/pillar'
+import { useBool } from '~/hooks/pillar'
 import { SwitchMode } from './switchMode'
 import { useDrawer } from '../drawerProvider'
 import { usePathname } from 'next/navigation'
@@ -13,7 +13,7 @@ import { DocSearch } from '@docsearch/react'
 import { SEARCH_API_KEY, SEARCH_APP_ID } from '~/constant/algolia'
 
 const Header = () => {
-  const { value, setTrue, setFalse } = useBooleanState(false)
+  const { value, setTrue, setFalse } = useBool(false)
   const { toggleDrawer } = useDrawer() ?? {}
   const pathname = usePathname()
   const hasDocs = pathname.startsWith('/docs')

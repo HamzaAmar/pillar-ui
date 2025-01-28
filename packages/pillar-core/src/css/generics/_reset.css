@@ -45,7 +45,7 @@ body {
   color: var(--B12);
 
   /* // Please Make Sure If you want to update This Background color you need to update .storybook/preview.js */
-  background: var(--B1);
+  background: var(--B2);
   -webkit-font-smoothing: antialiased;
   font-family: var(--custom-body-font, var(--body-font));
   font-weight: 400;

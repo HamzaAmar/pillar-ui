@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 
 /**
  * A custom React hook to manage a boolean state and provide utility functions to update it.
@@ -22,7 +22,7 @@ import { useState } from 'react'
  * @example
  * // Example usage in a functional component:
  * function BooleanComponent() {
- *   const { value, setTrue, setFalse, toggle } = useBooleanState(true);
+ *   const { value, setTrue, setFalse, toggle } = useBool(true);
  *
  *   return (
  *     <div>
@@ -35,12 +35,12 @@ import { useState } from 'react'
  * }
  */
 
-export const useBooleanState = (defaultValue: boolean = false) => {
+export const useBool = (defaultValue: boolean = false) => {
   const [value, setValue] = useState(defaultValue)
 
-  const setTrue = () => setValue(true)
-  const setFalse = () => setValue(false)
-  const toggle = () => setValue((v) => !v)
+  const setTrue = useCallback(() => setValue(true), [])
+  const setFalse = useCallback(() => setValue(false), [])
+  const toggle = useCallback(() => setValue((v) => !v), [])
 
   return { value, setValue, setTrue, setFalse, toggle }
 }

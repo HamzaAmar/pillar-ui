@@ -42,13 +42,7 @@ export function useInterval(callback: () => void, interval: number = 150) {
   const intervalRef = useRef<number>()
   const persistedCallback = usePersistentCallback(callback)
 
-  if (interval < 0) {
-    console.error('useInterval: The interval should not be smaller than 0.')
-  }
-
-  if (isNaN(interval)) {
-    console.error('useInterval: interval parameter cannot be NaN.')
-  }
+  interval = Math.max(interval, 0)
 
   const start = useCallback(() => {
     window.clearInterval(intervalRef.current)

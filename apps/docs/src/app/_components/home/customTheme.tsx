@@ -22,7 +22,7 @@ export function CustomTheme() {
         </div>
       </div>
 
-      <svg viewBox="0 0 490 490" height="491" fill="none">
+      <svg className="theme-gallery" viewBox="0 0 490 490" height="491" fill="none">
         <path
           {...filles}
           d="m381 112-13-7c-19-7-43-2-62-1l-86 3c-17 1-35 0-52 2-19 3-39-3-57 6-26 13-25 33-25 60l1 108c0 17 1 41 3 58 4 24 25 49 53 48 52 1 109-2 159-4 22 0 49-1 71-7 35-11 32-67 31-95 0-8-4-113-9-142-1-5-2-13-5-18"

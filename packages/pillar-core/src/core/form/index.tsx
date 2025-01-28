@@ -1,5 +1,5 @@
 'use client'
-import { useBooleanState, useControllableState, useComposedRefs } from '@pillar-ui/hooks'
+import { useBool, useControllableState, useComposedRefs } from '@pillar-ui/hooks'
 import { RefObject, forwardRef, useId, useRef, useState } from 'react'
 
 import type {
@@ -153,7 +153,7 @@ InputNumber.displayName = 'InputNumber'
 export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((props, forwardedRef) => {
   const { visibleIcon = <Eye width="16" />, hiddenIcon = <EyeOff width="16" />, ...restProps } = props
   const { cls, prefix, field } = useField(restProps)
-  const { value, toggle } = useBooleanState(false)
+  const { value, toggle } = useBool(false)
   return (
     <div className={cls}>
       {prefix}

@@ -51,7 +51,7 @@ If applicable, include relevant details about the environment you experienced th
 
 ## Possible Solutions 🤔
 
-If you have any insight into what might be wrong, please share that here. If not, that's perfectly fine—our team will look into the issue soon!
+If you have any insight into what might be wrong, please share that here. If not, that's perfectly fine our team will look into the issue soon!
 
 ## Additional Context 💡
 

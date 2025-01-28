@@ -11,7 +11,7 @@ import {
   SkeletonAvatar,
   Paper,
 } from '@pillar-ui/core'
-import { useBooleanState } from '@pillar-ui/hooks'
+import { useBool } from '@pillar-ui/hooks'
 import { Meta } from '@storybook/react'
 import React, { useEffect, useRef } from 'react'
 
@@ -23,7 +23,7 @@ const meta: Meta<typeof Skeleton> = {
 export default meta
 
 function useLoading() {
-  const { value: loading, setFalse } = useBooleanState(true)
+  const { value: loading, setFalse } = useBool(true)
   const timerRef = useRef<NodeJS.Timeout>()
 
   useEffect(() => {

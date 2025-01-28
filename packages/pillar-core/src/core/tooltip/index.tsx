@@ -1,7 +1,7 @@
 'use client'
 import { forwardRef, useEffect, useId, useRef, useState } from 'react'
 import { context } from '../provider'
-import { useBooleanState, useComposedRefs } from '@pillar-ui/hooks'
+import { useBool, useComposedRefs } from '@pillar-ui/hooks'
 import { Popover } from '../popover'
 
 import type { TooltipContentProps, TooltipContext, TooltipProps } from './tooltip.type'
@@ -18,7 +18,7 @@ const [TooltipProvider, useTooltipContext] = context<TooltipContext>({
 })
 
 export const Tooltip = forwardRef(({ children, as: Tag = 'div', delay = 200, ...rest }, forwardedRef) => {
-  const { value, setFalse, setTrue, toggle, setValue } = useBooleanState()
+  const { value, setFalse, setTrue, toggle, setValue } = useBool()
   const triggerRef = useRef<HTMLButtonElement>(null)
   const id = useId()
 
