@@ -19,6 +19,7 @@ import { cx } from '../cx'
 import { Flex } from '../flex'
 import { context } from '../provider'
 import { ChevronDown, Close, Eye, EyeOff, Search } from '../icons'
+import { Fieldset } from '../fieldset'
 
 const [FormControllerProvider, useFormController] = context<FormControllerContextProps>({
   name: 'FormController',
@@ -389,13 +390,17 @@ export const FormController = ({
   )
 }
 
-export const FormGroup = ({ title, hideTitle, direction = 'col', children, hideBorder, ...rest }: FormGroupProps) => (
-  <fieldset className={cx('fg-C', { 'f-g-hide-border': hideBorder })}>
-    <legend className={cx('fg-L', { 'H-sr': hideTitle })}>{title}</legend>
-    <Flex gap="4" className={cx('f-g', { 'fg-fluid': rest.fluid })} items="start" direction={direction}>
-      <FormGroupProvider {...rest}>{children}</FormGroupProvider>
-    </Flex>
-  </fieldset>
+export const FormGroup = ({ legend, hideLegend, direction = 'col', id, children, ...rest }: FormGroupProps) => (
+  // <fieldset className={cx('fg-C', { 'f-g-hide-border': hideBorder })}>
+  //   <legend className={cx('fg-L', { 'H-sr': hideTitle })}>{title}</legend>
+  //   <Flex gap="4" className={cx('f-g', { 'fg-fluid': rest.fluid })} items="start" direction={direction}>
+
+  //   </Flex>
+  // </fieldset>
+
+  <Fieldset direction={direction} id={id} hideLegend={hideLegend} legend={legend}>
+    <FormGroupProvider {...rest}>{children}</FormGroupProvider>
+  </Fieldset>
 )
 
 export type {

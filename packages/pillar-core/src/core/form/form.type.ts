@@ -1,6 +1,7 @@
-import type { Color, Corner, Direction, Size, Transform } from '../../types'
+import type { Color, Corner, Size, Transform } from '../../types'
 import type { ComponentPropsWithRef, ReactNode, ReactElement, AriaAttributes } from 'react'
 import type { TypographyProps } from '../typography'
+import { FieldsetProps } from '../fieldset/fieldset.type'
 
 type Variant = 'filled' | 'outline' | 'bordered'
 type Status = 'd' | 's' | 'w' | 'p' | 'text'
@@ -27,14 +28,7 @@ interface SharedProps {
   id?: string
 }
 
-export interface FormGroupProps extends FormFieldSharedProps {
-  title: string
-  children: ReactNode
-  direction?: Direction
-
-  hideTitle?: boolean
-  hideBorder?: boolean
-}
+export interface FormGroupProps extends FormFieldSharedProps, Omit<FieldsetProps, 'size' | 'color'> {}
 
 export interface SelectProps extends Omit<ComponentPropsWithRef<'select'>, 'size' | 'color'>, FormFieldSharedProps {
   isInvalid?: boolean

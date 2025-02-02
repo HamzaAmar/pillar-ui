@@ -176,13 +176,13 @@
 }
 .fn-B {
   line-height: 0;
-  background: var(--B7);
+  background: var(--B4);
   height: 50%;
   &:active {
-    background: var(--O8);
+    background: var(--O6);
   }
   &:hover {
-    background: var(--B8);
+    background: var(--B6);
   }
 }
 
@@ -283,14 +283,19 @@
   background: var(--B1);
   width: 100%;
   padding-inline: 0.75rem;
+  padding-inline-end: 1.75em !important;
 }
 .fse-I {
   position: absolute;
   inset-inline-end: 0.5rem;
   top: 50%;
   transform: translateY(-50%);
-  stroke: var(--B11);
-  width: 1em;
+  display: inline-flex;
+  /* font-size: 0; */
+  & svg {
+    stroke: var(--B10);
+    width: 1em;
+  }
 }
 
 .fif- {
