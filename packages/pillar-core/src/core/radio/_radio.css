@@ -67,7 +67,14 @@
 /* Radio Group Section Style Start */
 .ra-G {
   border-radius: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  border: none;
+}
+.fg-L {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
 }
 
 .ra-GL {
@@ -114,8 +121,16 @@
   }
 }
 
-.cr-C {
+.cr- {
   padding: 1rem;
   border: 1px solid var(--B6);
   border-radius: 0.5rem;
+  &:has(.ra-:checked) {
+    background-color: var(--c3);
+    border-color: var(--c9);
+  }
+
+  & [data-indicator='false'] + .rc- {
+    display: none;
+  }
 }

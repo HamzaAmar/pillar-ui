@@ -1,6 +1,6 @@
 import React from 'react'
 import { StoryObj, Meta } from '@storybook/react'
-import { Radio, Flex, RadioGroup, CustomRadio } from '@pillar-ui/core'
+import { Radio, Flex, RadioGroup, CustomRadio, Text, Paper } from '@pillar-ui/core'
 
 const meta: Meta<typeof Radio> = {
   title: 'Components/Radio',
@@ -308,7 +308,7 @@ export function RadioGroupVertical() {
 
 export function RadioGroupVl() {
   return (
-    <RadioGroup name="red" label="Choose you Color" showLabel size="6" color="d">
+    <RadioGroup name="red" label="Choose you Color" size="6" color="d">
       <Radio>Green</Radio>
       <Radio>Green</Radio>
       <Radio>Green</Radio>
@@ -319,7 +319,7 @@ export function RadioGroupVl() {
 
 export function RadioGroupLongText() {
   return (
-    <RadioGroup name="red" label="Choose you Color" showLabel size="5" color="d">
+    <RadioGroup name="red" label="Choose you Color" size="5" color="d">
       <Radio>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora saepe laborum, iste ad eaque animi laboriosam
         officiis architecto at, esse magnam eos dolorem! Culpa odit temporibus ab excepturi, fugiat a?
@@ -337,19 +337,6 @@ export function RadioGroupLongText() {
         officiis architecto at, esse magnam eos dolorem! Culpa odit temporibus ab excepturi, fugiat a?
       </Radio>
     </RadioGroup>
-  )
-}
-
-export function CustomRadioTest() {
-  return (
-    <CustomRadio
-      name="hello"
-      label="Choose you Color"
-      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora saepe laborum, iste ad eaque animi laboriosam officiis architecto at, esse magnam eos dolorem! Culpa odit temporibus ab excepturi, fugiat a?"
-    >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora saepe laborum, iste ad eaque animi laboriosam
-      officiis architecto at, esse magnam eos dolorem! Culpa odit temporibus ab excepturi, fugiat a?
-    </CustomRadio>
   )
 }
 

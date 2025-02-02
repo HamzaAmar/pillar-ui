@@ -2,7 +2,7 @@
 title: Radio
 type: core
 excerpt: The Radio component is a simple radio input that allows users to select a single option from a list of options.
-items: ['Radio']
+items: ['Radio', CustomRadio, RadioGroup]
 directory: radio/index.tsx
 lastModified: '2024-07-31T05:35:07.322Z'
 publishedAt: '2024-05-03T05:35:07.322Z'
@@ -18,7 +18,7 @@ import { Radio } from '@pillar-ui/core'
 <Radio />
 ```
 
-## Examples
+## Radio
 
 ### Children
 
@@ -51,3 +51,33 @@ import { Radio } from '@pillar-ui/core'
 ### Disabled
 
 <Playground name="radioDisabled" root="radio" />
+
+## RadioGroup
+
+RadioGroup groups radio buttons, ensuring only one can be selected. It shares common properties across all buttons within it, reducing code repetition and simplifying management.
+
+<Playground name="radioGroupBase" root="radio" />
+
+### Radio Group Direction
+
+<Prop defaultValue="col" type="'col' | 'row'" />
+
+<Playground name="radioGroupDirection" root="radio" />
+
+## CustomRadio
+
+### Custom Radio Direction
+
+<Prop defaultValue="col" type="'col' | 'row'" />
+
+<Playground name="customRadioDirection" root="radio" />
+
+### Custom Radio Color
+
+<Playground name="customRadioColor" root="radio" />
+
+### indicator
+
+<Prop defaultValue="true" type="boolean" />
+
+<Playground name="customRadioNoIndicator" root="radio" />
