@@ -27,4 +27,5 @@ export interface CustomRadioProps extends RadioProps {
   children?: ReactNode
   direction?: 'col' | 'row'
   indicator?: boolean
+  reversed?: boolean
 }

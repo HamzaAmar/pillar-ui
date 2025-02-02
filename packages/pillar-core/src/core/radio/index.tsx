@@ -3,6 +3,7 @@ import { useId } from 'react'
 import type { CustomRadioProps, RadioContextProps, RadioGroupProps, RadioProps } from './radio.type'
 import { context } from '../provider'
 import { Fieldset } from '../fieldset'
+import { cx } from '../cx'
 
 /*
 ===================================================================================================
@@ -64,10 +65,14 @@ export const Radio = (props: RadioProps) => {
 */
 
 export const CustomRadio = (props: CustomRadioProps) => {
-  const { className, children, indicator = true, ...rest } = props
+  const { className = ' ', children, indicator = true, reversed = false, ...rest } = props
 
   return (
-    <Radio {...rest} data-indicator={indicator} className={`cr- ${className}`}>
+    <Radio
+      {...rest}
+      data-indicator={indicator}
+      className={cx(`cr-  Ajc-between ${className}`, { 'fl-row-reverse': !reversed })}
+    >
       {children}
     </Radio>
   )
