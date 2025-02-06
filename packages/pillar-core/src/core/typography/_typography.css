@@ -1,4 +1,5 @@
 .ty- {
+  --c12: var(--B12);
   color: var(--c12);
   font-size: var(--typography-size, inherit);
   text-transform: var(--typography-transform, inherit);

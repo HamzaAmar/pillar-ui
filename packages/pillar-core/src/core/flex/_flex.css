@@ -2,8 +2,16 @@
   display: flex;
 }
 
+.fl-inline {
+  display: inline-flex;
+}
+
 .fl-col {
   flex-direction: column;
+}
+
+.fl-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .fl-wrap {
@@ -24,8 +32,4 @@
 
 .fl-auto {
   flex: auto;
-}
-
-.fl-inline {
-  display: inline-flex;
 }

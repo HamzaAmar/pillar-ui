@@ -1,4 +1,4 @@
-/* Color: Cp, Cse, Cw, Cs, Cd, Ci, Cb */
+/* Color: Cp, Cse, Cw, Cs, Cd, Ci, C-b */
 
 .C-p {
   --c1: var(--P1);

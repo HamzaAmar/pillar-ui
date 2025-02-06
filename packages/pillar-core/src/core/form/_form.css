@@ -4,7 +4,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.fi-C {
+.fo-Ic {
   border: 1px solid transparent;
   position: relative;
   overflow: hidden;
@@ -14,17 +14,17 @@
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to
-    avatars are provided, they will override these properties.
+    form are provided, they will override these properties.
   */
   font-size: max(14px, var(--field-size, 1rem));
   border-radius: var(--field-rad, 0.25rem);
   text-transform: var(--field-transform);
 
-  &:has(.fi-:read-only) {
+  &:has(.fo-I:read-only) {
     background: var(--B5);
   }
 
-  &:has(.fi-:focus):not(.fi-C-bordered) {
+  &:has(.fo-I:focus):not(.fo-Ic-bordered) {
     outline: 2px solid var(--c9);
     outline-offset: -1px;
   }
@@ -46,33 +46,33 @@
     border-color: var(--O1);
   }
 
-  &:not(:has(.fi-Pr)) .fi-:not(.pin-input) {
+  &:not(:has(.fo-Pr)) .fo-I:not(.pin-input) {
     padding-inline-start: 0.625em;
   }
 
-  &:has(.fin-C) .fi- {
+  &:has(.fo-Inc) .fo-I {
     padding-inline-end: 2.85rem !important;
   }
 
-  &:not(:has(.fi-Su)) .fi-:not(.pin-input) {
+  &:not(:has(.fo-Su)) .fo-I:not(.pin-input) {
     padding-inline-end: 0.625em;
   }
 }
 
-/* .fi-C .fi-C__fluid { */
-.fi-C-fluid {
+/* .fo-Ic .fo-Ic__fluid { */
+.fo-Ic-fluid {
   width: 100%;
 }
 
-.fi-C-outline {
+.fo-Ic-outline {
   border-color: var(--B7);
   background: var(--B1);
 }
-.fi-C-filled {
+.fo-Ic-filled {
   border-color: var(--B7);
 }
 
-.fi-C-bordered {
+.fo-Ic-bordered {
   /* border: none; */
   /* outline: 2px solid red; */
 
@@ -111,10 +111,10 @@
   }
 }
 
-.fc-o {
+.fo-C {
   width: 100%;
 
-  /* &:has(.fi-:read-only) .fi-C {
+  /* &:has(.fo-I:read-only) .fo-Ic {
     background: var(--B4);
   } */
 }
@@ -124,7 +124,7 @@
  Form Field Style Section 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
-.fi- {
+.fo-I {
   flex: 1;
   min-width: 0;
   cursor: inherit;
@@ -149,11 +149,12 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.fi-Pr,
-.fi-Su {
-  font-size: 0.75rem;
-  min-width: 2rem;
-  padding: 0.25em 0.5em;
+.fo-Pr,
+.fo-Su {
+  font-size: 0.75em;
+  /* min-width: 2rem; */
+  padding: 0.5em;
+  color: var(--B10);
 }
 
 /*
@@ -162,7 +163,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.fin-C {
+.fo-Inc {
   position: absolute;
   inset-inline-end: 0;
   top: 0;
@@ -174,7 +175,7 @@
     border-top: 1px solid var(--O6);
   }
 }
-.fn-B {
+.fo-Inb {
   line-height: 0;
   background: var(--B4);
   height: 50%;
@@ -192,18 +193,14 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.fp-B {
+.fo-IpB {
   line-height: 0;
-  min-height: 100%;
   padding: 0 0.5em;
   &:focus-visible {
-    box-shadow: inset 0 0 16px var(--O8);
+    outline-offset: -2px;
   }
   &:hover {
     background: var(--B5);
-  }
-  & svg {
-    width: 20px;
   }
 }
 
@@ -212,7 +209,7 @@
   Form Group Style Section 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 */
-.fg-C {
+/* .fg-C {
   color: var(--B11);
   border: 1px solid var(--O6);
 }
@@ -231,7 +228,7 @@
 }
 .fg-fluid > * {
   flex-grow: 1;
-}
+} */
 
 /*
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -248,29 +245,29 @@
   vertical-align: center;
 } */
 
-.fis-:placeholder-shown + .fis-Su {
-  & .fs-I {
+.fo-Is:placeholder-shown + .fo-IsSu {
+  & .fo-IsI {
     display: none;
   }
-  & .fi-Su {
+  & .fo-Su {
     display: flex;
   }
 }
 
-.fis-:not(:placeholder-shown) + .fis-Su {
-  & .fs-I {
+.fo-Is:not(:placeholder-shown) + .fo-IsSu {
+  & .fo-IsI {
     display: flex;
   }
-  & .fi-Su {
+  & .fo-Su {
     display: none;
   }
 }
 
-.fis-:hover {
+.fo-Is:hover {
   stroke: var(--c-8, var(--P10));
 }
 
-.fis- {
+.fo-Is {
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
   &::-webkit-search-results-button,
@@ -279,13 +276,13 @@
   }
 }
 
-.fs- {
+.fo-S {
   background: var(--B1);
   width: 100%;
   padding-inline: 0.75rem;
   padding-inline-end: 1.75em !important;
 }
-.fse-I {
+.fo-SI {
   position: absolute;
   inset-inline-end: 0.5rem;
   top: 50%;
@@ -298,22 +295,22 @@
   }
 }
 
-.fif- {
+.fo-If {
   background: var(--c9, var(--B8));
   font-size: 0.9em;
   padding: 0.25rem 1rem;
   cursor: pointer;
 
-  .fi-C:not([data-disabled]) &:hover {
+  .fo-Ic:not([data-disabled]) &:hover {
     background: var(--c10, var(--B9));
   }
 }
 
-.ff-t {
+.fo-IfT {
   padding: 0 1em;
 }
 
-.fp- {
+.fo-Pi {
   font-size: var(--font-size, var(--input-size, 1rem));
   width: 2.25em;
   height: 2.25em;
@@ -322,12 +319,12 @@
   padding: 0 !important;
 }
 
-.fc-E {
+.fo-CE {
   color: var(--D11);
   width: fit-content;
   gap: var(--S1);
 }
 
-.fc-I {
+.fo-CEI {
   font-size: 0;
 }

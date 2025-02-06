@@ -35,9 +35,7 @@ yarn dev
 1. Make your changes and commit them to a new branch.
 1. Push your branch to your forked repository.
 1. Open a pull request on the main repository with a detailed description of your changes.
-1. Code of Conduct
-1. Please note that the Pillar Design System has a code of conduct, and we ask all contributors to
-1. adhere to it. You can read the full code of conduct here.
+1. Please note that the Pillar Design System has a code of conduct, and we ask all contributors to adhere to it. You can read the full code of conduct here.
 
 ## ## Bug Reports and Feature Requests
 
@@ -49,75 +47,267 @@ Pillar follows a set of design and coding guidelines to ensure consistency and m
 
 ### Component Class Naming Convention
 
-for class naming convention we use like bem methodology .block_element-modifier please we want it to follow this one.
+for class naming convention we use like bem methodology .Folder-element-modifier please we want it to follow this new ones.
 
-also for utilities, and layout we prefix them with with the beginning of the folder followed by \_
+### CSS Naming convention
 
-`utils` ====> u\_
-`layout` ====> l\_
+#### 1. **Folder**
 
-but for the components we follow this inscruction below :
+- The Folder is derived from the first two letters of the component's folder name, suffix by a hyphen (`-`).
+- Example:
+  - Folder Name: `button`, `alert`, `form`
+  - Prefix: `.bu-`, `.al-`, `.fo-`
 
-To ensure uniqueness and minimize bundle size, Pillar adopts the following class naming convention for components:
+#### 2. **Element**
 
-The first and second letters of the component's folder name, separated by a hyphen (-).
+- The element is named using the first letter or more of the component's name, if the component name is composite example InputNumber the element will be (`In`) . Use additional letters if necessary to avoid conflicts between elements with the same First letter name.
 
-Absolutely! Let's refine your component class naming convention description.
+- If the element has a sub-element, the sub-element is camelCased.
+- Example:
+  - Component Folder: `form`
+  - Element: `InputNumber`, `InputSearch`
+  - Sub-Element: `Suffix-Icon`,`close-Icon`
+  - Class: `.fo-InSi`, `.fo-IsCi`
+- caution: sometimes the element or sub-element has the same two letters in this component's for that we can get more letters to prevent conflicts.
 
-Pillar components adhere to a unique class naming convention designed for both clarity and efficiency:
+#### 3. **Modifier**
 
-1. **Base Abbreviation:** The first two letters of the component folder name are used as the base abbreviation. (e.g., "Button" becomes "bu-")
+- Modifiers are prefixed with a hyphen (`-`) and written as-is.
+- Example:
+  - Modifier for `bu-`: `bu-primary`, `bu-secondary`, `bu-soft`, , `bu-sharp`
 
-2. **Disambiguation:**
-   - If two or more components share the same base abbreviation, the third letter is included for distinction.
-   - If ambiguity persists, the first unique letter encountered in the component folder name is added to the abbreviation.
-   - This step is repeated as needed until a unique class name is generated.
+---
+
+### Naming Convention Examples
+
+#### Example 1: Button Component
+
+- **Folder Name**: `Button`
+- **Element**: `Button`
+- **Base Class**: `bu-`
+- **Sub-Elements**:
+  - text: `bu-T`
+  - Icon: `bu-I`
+- **Modifiers**:
+  - Primary Button: `bu-primary`
+  - Secondary Button: `bu-secondary`
+
+#### Example 2: InputNumber Component
+
+- **Folder Name**: `Form`
+- **Element**: `InputNumber`
+- **Base Class**: `fo-In`
+- **Sub-Elements**:
+  - Container: `fo-InC`
+  - Prefix Icon: `fo-InPi`
+- **Modifiers**:
+  - Fluid: `fo-In-fluid`
+  - Outline: `fo-In-outline`
+  - Bordered: `fo-In-bordered`
+
+---
+
+### Implementation Guidelines
+
+1. **Consistency**:
+
+   - Always use the same pattern for prefixes, elements, and modifiers across all components.
+   - Ensure that the first two letters of the folder name are consistently used.
+
+2. **Scalability**:
+
+   - Use camelCase for sub-elements to make the structure clear and readable.
+
+3. **Separation of Concerns**:
+   - Keep base classes, sub-elements, and modifiers distinct.
+   - Use modifiers sparingly and only when necessary to avoid over-complicating the CSS.
+
+---
+
+Certainly! Let's break down and structure your utility class naming convention in a clear and easy-to-understand way. This will ensure that developers can quickly grasp the logic behind the utility classes and how they are organized.
+
+---
+
+### Utility Class Naming Convention
+
+This naming convention is designed to make utility classes distinct from regular component-based classes, while also making it easy for developers to identify which file a utility class belongs to and what CSS property it affects.
+
+---
+
+#### 1. **Utility File Prefix**
+
+- The first letter of the utility file name is used as a prefix for all utility classes within that file.
+- This helps developers easily associate the utility class with its corresponding file.
 
 **Example:**
 
-```html
-<div class="bu-"></div>
-<div class="bu--primary"></div>
-<div class="bu--large"></div>
+- File Name: `alignment.css`
+- Prefix: `A`
+- File Name: `font.css`
+- Prefix: `F`
+
+---
+
+#### 2. **Property Abbreviation**
+
+- If the utility class represents a single CSS property, use the first letter of the property name after the file prefix.
+- If the utility class combines multiple properties, use the first letter of each property involved.
+
+**Examples:**
+
+- For `justify-content`:
+- First letter: `j`
+- Combined with the file prefix (`A` for `alignment`): `.Ajc-`
+  - For `font-style`:
+- First letter: `f`
+- Combined with the file prefix (`F` for `font`): `.Fst-`
+
+---
+
+#### 3. **Value Representation**
+
+- The value of the CSS property is appended to the class name, separated by a hyphen (`-`).
+- Use the exact value or a simplified version of it (e.g., `start` instead of `flex-start`).
+
+**Examples:**
+
+- For `justify-content: flex-start;`:
+- Class Name: `.Ajc-start`
+  - For `font-style: italic;`:
+- Class Name: `.Fst-italic`
+
+---
+
+#### 4. **Combining Multiple Properties**
+
+- If a utility class combines multiple properties, include the first letter of each property in the class name.
+- Separate the letters with no spaces or underscores.
+
+**Example:**
+
+- File Name: `spacing.css`
+- Prefix: `S`
+  - Combining `margin-top` and `padding-bottom`:
+- First letters: `m` (for `margin`) and `p` (for `padding`)
+- Class Name: `.Smp-tb-10` (where `tb` indicates top and bottom, and `10` is the value)
+
+---
+
+### Examples
+
+#### Example 1: Alignment Utilities
+
+- **File Name**: `alignment.css`
+- **Prefix**: `A`
+- **Utilities**:
+  - `justify-content: flex-start;` → `.Ajc-start`
+  - `align-items: center;` → `.Aai-center`
+  - `text-align: right;` → `.Ata-right`
+
+#### Example 2: Font Utilities
+
+- **File Name**: `font.css`
+- **Prefix**: `F`
+- **Utilities**:
+  - `font-style: italic;` → `.Fst-italic`
+  - `font-weight: bold;` → `.Fwt-bold`
+  - `line-height: 1.5;` → `.Flh-1_5`
+
+#### Example 3: Spacing Utilities
+
+- **File Name**: `spacing.css`
+- **Prefix**: `S`
+- **Utilities**:
+  - `margin-top: 10px;` → `.Sm-t-10`
+  - `padding-bottom: 20px;` → `.Sp-b-20`
+  - `margin-top: 10px; padding-bottom: 20px;` → `.Smp-tb-10-20`
+
+---
+
+#### Implementation Guidelines
+
+1. **Consistency**:
+
+   - Always use the same pattern for utility class names across all files.
+   - Ensure that the file prefix and property abbreviations are consistent.
+
+2. **Readability**:
+
+   - Keep utility class names concise but meaningful.
+   - Avoid overly long or cryptic abbreviations.
+
+3. **Scalability**:
+
+   - Use this convention for all utility files to maintain uniformity.
+   - If a new utility file is added, follow the same rules for its prefix and class names.
+
+4. **Documentation**:
+   - Document this naming convention in your project's README or style guide to ensure consistency among contributors.
+
+---
+
+### Benefits of This Convention
+
+1. **Easy Identification**:
+
+   - Developers can quickly identify which file a utility class belongs to based on the prefix.
+
+2. **Clear Property Mapping**:
+
+   - The abbreviation of the property makes it easy to understand what the utility class does.
+
+3. **Value Transparency**:
+
+   - The value is explicitly included in the class name, making it clear what styles are applied.
+
+4. **Maintainability**:
+   - This convention ensures that utility classes remain organized and predictable, even as the project grows.
+
+---
+
+### Example CSS Code
+
+```css
+/* alignment.css */
+.Ajc-start {
+  justify-content: flex-start;
+}
+
+.Aai-center {
+  align-items: center;
+}
+
+.Ata-right {
+  text-align: right;
+}
+
+/* font.css */
+.Fst-italic {
+  font-style: italic;
+}
+
+.Fwt-bold {
+  font-weight: bold;
+}
+
+.Flh-1_5 {
+  line-height: 1.5;
+}
+
+/* spacing.css */
+.Sm-t-10 {
+  margin-top: 10px;
+}
+
+.Sp-b-20 {
+  padding-bottom: 20px;
+}
+
+.Smp-tb-10-20 {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
 ```
-
-**Benefits:**
-
-- **Collision Prevention:** This approach minimizes the risk of Pillar component styles conflicting with user-defined classes.
-- **Conciseness:** Short, predictable class names reduce CSS bundle size, also component size, enhancing website performance.
-- **Readability:** While abbreviated, the class names remain reasonably intuitive, aiding in code maintainability.
-- **Scalability:** The convention accommodates a growing number of components without sacrificing uniqueness.
-
-**Additional Considerations (Optional):**
-
-- **Delimiter:** Consider using a consistent delimiter (e.g., hyphen, underscore) to visually separate the abbreviation parts in longer class names.
-- **Documentation:** Include the naming convention details in your component documentation or style guide for easy reference.
-
-## CSS Reserved Words (Continued)
-
-| Reserved Word | Description               | Example    |
-| ------------- | ------------------------- | ---------- |
-| `_btn`        | Reserved for "button"     | `.bu-_btn` |
-| `_cnt`        | Reserved for "content"    | `.bu-_cnt` |
-| `_err`        | Reserved for "error"      | `.bu-_err` |
-| `_ele`        | Reserved for "element"    | `.bu-_el`  |
-| `_flb`        | Reserved for "fallback"   | `.bu-_flb` |
-| `_hor`        | Reserved for "horizontal" | `.bu-_hor` |
-| `_itm`        | Reserved for "item"       | `.b-Aaim`  |
-| `_img`        | Reserved for "image"      | `.bu-_img` |
-| `_icn`        | Reserved for "icon"       | `.bu-_icn` |
-| `_lnk`        | Reserved for "link"       | `.bu-_lnk` |
-| `_lbl`        | Reserved for "label"      | `.bu-_lbl` |
-| `_lst`        | Reserved for "list"       | `.bu-_lst` |
-| `_pnl`        | Reserved for "panel"      | `.bu-_pnl` |
-| `_pfx`        | Reserved for "prefix"     | `.bu-_pfx` |
-| `_sh`         | Reserved for "show"       | `.bu-_shw` |
-| `_sfx`        | Reserved for "suffix"     | `.bu-_sfx` |
-| `_txt`        | Reserved for "text"       | `.bu-_txt` |
-| `_ver`        | Reserved for "vertical"   | `.bu-_ver` |
-| `_wrp`        | Reserved for "wrapper"    | `.bu-_wrp` |
-
-Please adhere to this convention when creating or modifying Pillar components.
 
 ## Commit Messages
 

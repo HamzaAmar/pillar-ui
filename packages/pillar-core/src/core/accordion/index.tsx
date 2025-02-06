@@ -1,9 +1,6 @@
 'use client'
 
 import { Children, cloneElement, forwardRef, isValidElement, useId, useState } from 'react'
-
-// TODO: Docs BUild Failed when importing from index and get error of not a function
-// import { cx, context } from '../..'
 import { context } from '../provider'
 import { cx } from '../cx'
 

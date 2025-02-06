@@ -43,12 +43,12 @@ function useField(props: any) {
     ...restProps
   } = props
 
-  const prefix = prefixInput && <span className="fi-Pr F-c">{prefixInput}</span>
-  const suffix = suffixInput && <span className="fi-Su F-c">{suffixInput}</span>
+  const prefix = prefixInput && <span className="fo-Pr F-c">{prefixInput}</span>
+  const suffix = suffixInput && <span className="fo-Su F-c">{suffixInput}</span>
 
-  const cls = cx(`fi-C fl- fi-C-${variant} C-${color}`, {
+  const cls = cx(`fo-Ic fl- fo-Ic-${variant} C-${color}`, {
     [`Tt-${transform}`]: transform,
-    'fi-C-fluid': fluid,
+    'fo-Ic-fluid': fluid,
     [`Fs-${size}`]: size,
     [`R-${corner}`]: corner,
   })
@@ -74,7 +74,7 @@ const handleStep =
 function InputNumberButton({ onClick, title, direction = 'top' }: InputNumberButtonProps) {
   const dir = direction ? ({ direction } as const) : {}
   return (
-    <button type="button" onClick={onClick} aria-label={title} tabIndex={-1} className="fn-B">
+    <button type="button" onClick={onClick} aria-label={title} tabIndex={-1} className="fo-Inb">
       <ChevronDown width=".85em" {...dir} />
     </button>
   )
@@ -92,7 +92,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, f
   return (
     <div className={cls}>
       {prefix}
-      <textarea ref={forwardedRef} {...field} className="fi-"></textarea>
+      <textarea ref={forwardedRef} {...field} className="fo-I"></textarea>
       {suffix}
     </div>
   )
@@ -112,7 +112,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedR
   return (
     <div className={cls}>
       {prefix}
-      <input ref={forwardedRef} type="text" {...field} className="fi-" />
+      <input ref={forwardedRef} type="text" {...field} className="fo-I" />
       {suffix}
     </div>
   )
@@ -134,8 +134,8 @@ export const InputNumber = forwardRef<HTMLInputElement, InputProps>((props, forw
   return (
     <div className={cls}>
       {prefix}
-      <input type="number" ref={composedRef} {...field} className="fi-" />
-      <div className="fin-C">
+      <input type="number" ref={composedRef} {...field} className="fo-I" />
+      <div className="fo-Inc">
         <InputNumberButton onClick={handleStep(inputRef, 'stepUp')} title="Increase Value" />
         <InputNumberButton onClick={handleStep(inputRef, 'stepDown')} direction="bottom" title="Decrease Value" />
       </div>
@@ -158,9 +158,9 @@ export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>((p
   return (
     <div className={cls}>
       {prefix}
-      <input type={value ? 'text' : 'password'} ref={forwardedRef} {...field} className="fi-" />
+      <input type={value ? 'text' : 'password'} ref={forwardedRef} {...field} className="fo-I" />
 
-      <button aria-label={`${value ? 'Hide' : 'Show '} Password`} type="button" onClick={toggle} className="fip-B F-c">
+      <button aria-label={`${value ? 'Hide' : 'Show '} Password`} type="button" onClick={toggle} className="fo-IpB F-c">
         {value ? hiddenIcon : visibleIcon}
       </button>
     </div>
@@ -181,7 +181,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
     prefix,
     suffix,
     field: { placeholder = ' ', ...rest },
-  } = useField({ ...props, prefixInput: props.prefixInput ?? <Search width="16" /> })
+  } = useField({ ...props, prefixInput: props.prefixInput ?? <Search width="1em" /> })
 
   const inputRef = useRef<HTMLInputElement>(null)
   const mergedRef = useComposedRefs(inputRef, forwardedRef)
@@ -194,10 +194,10 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>((props
   return (
     <div className={cls}>
       {prefix}
-      <input type="search" ref={mergedRef} placeholder={placeholder} {...rest} className="fi- fis-" />
-      <Flex as="span" items="center" className="fis-Su">
+      <input type="search" ref={mergedRef} placeholder={placeholder} {...rest} className="fo-I fo-Is" />
+      <Flex as="span" items="center" className="fo-IsSu">
         {suffix}
-        <Close width={16} onClick={handleInputClick} className="fs-I" transform="translate(-8,0)" />
+        <Close width={16} onClick={handleInputClick} className="fo-IsI" transform="translate(-8,0)" />
       </Flex>
     </div>
   )
@@ -216,10 +216,10 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(({ children, ..
 
   return (
     <div className={cls}>
-      <select ref={forwardedRef} {...field} className="fi- fs-">
+      <select ref={forwardedRef} {...field} className="fo-I fo-S">
         {children}
       </select>
-      <span className="fse-I">
+      <span className="fo-SI">
         <ChevronDown width={16} />
       </span>
     </div>
@@ -249,7 +249,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
     children,
     ...rest
   } = props
-  const className = cx(`fi-C fi-C-${variant} fl- Sg-3 C-${color}`, {
+  const className = cx(`fo-Ic fo-Ic-${variant} fl- Sg-3 C-${color}`, {
     [`R-${corner}`]: corner,
     [`Tt-${transform}`]: transform,
     [`Fs-${size}`]: size,
@@ -287,7 +287,7 @@ export const PinInput = forwardRef<HTMLInputElement, PinInputProps>((props, forw
         <div className={className} key={index}>
           <input
             placeholder={placeholder}
-            className="fi- fp-"
+            className="fo-I fo-Pi"
             value={pin[index]}
             onChange={(e) => handleInputChange(e.target.value, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
@@ -335,11 +335,11 @@ export const InputFile = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className={cls} onClick={() => inputRef.current?.click()}>
         <input type="file" ref={composedRef} {...field} className="H-sr" onChange={handleChange} />
-        <Flex as="span" items="center" className="fif-">
+        <Flex as="span" items="center" className="fo-If">
           {title}
         </Flex>
 
-        <span className="ff-t t-y fl- Fs-3 Aai-center Cb t-y-low">{hasValue ? _value : 'No file Choose'}</span>
+        <span className="fo-IfT t-y fl- Fs-3 Aai-center C-b ty-low">{hasValue ? _value : 'No file Choose'}</span>
       </div>
     )
   }
@@ -373,15 +373,15 @@ export const FormController = ({
   const fieldLabel = `${label}${rest.required ? ' *' : ''}`
   return (
     <FormControllerProvider {...values}>
-      <Flex direction="col" className={cx('fc-o Fs-3', { [className!]: className })}>
+      <Flex direction="col" className={cx('fo-C Fs-3', { [className!]: className })}>
         <label className={cx('Fw-5 Fs-4', { 'H-sr': hideLabel })} htmlFor={id}>
           {fieldLabel}
         </label>
         {hint && <span id={hintID}>{hint}</span>}
         {children}
         {error && (
-          <div className="fc-E F-c" id={messageID} role="alert">
-            <span className="fc-I Sw-fit">{<Close type="circle" width="16" />}</span>
+          <div className="fo-CE F-c" id={messageID} role="alert">
+            <span className="fo-CEI Sw-fit">{<Close type="circle" width="16" />}</span>
             <span> {error}</span>
           </div>
         )}

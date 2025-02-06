@@ -91,7 +91,7 @@ export const ProgressBarStack = ({ size = '4', children }: ProgressBarStackProps
       <ul className="fl- Sg-5 fl-wrap">
         {_children?.map(({ children, color }, index) => (
           <li className={`prs-C fl- Aai-center Sg-2 C-${color}`} key={index}>
-            <span className="Cb t-y-low">{children}</span>
+            <span className="C-b ty-low">{children}</span>
           </li>
         ))}
       </ul>
