@@ -35,7 +35,7 @@ const User = ({ online = false, name, email, job }: UserProps) => {
 export const CustomRadioAdvanced = () => {
   return (
     <RadioGroup legend="Choose Your Best option" name="hello" direction="row">
-      <CustomRadio className="fl-1">
+      <CustomRadio>
         <User name="John Doe" email="john@doe.com" job="AI engineer" online />
       </CustomRadio>
       <CustomRadio>

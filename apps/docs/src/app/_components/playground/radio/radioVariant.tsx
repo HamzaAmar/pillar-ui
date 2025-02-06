@@ -4,9 +4,6 @@ export const RadioVariant = () => {
   return (
     <>
       <Radio name="default.se">Hello World</Radio>
-      <Radio variant="solid" name="se">
-        Hello World
-      </Radio>
       <Radio variant="outline" name="outline.sec2">
         Hello World
       </Radio>

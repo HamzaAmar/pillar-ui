@@ -25,8 +25,8 @@ const RadioCard = ({ title, price, deliveryTime }: any) => {
 
 export const CustomRadioDirection = () => {
   return (
-    <Flex direction="col" gap="4">
-      <RadioGroup legend="Delivery Method" direction="row" name="delivery">
+    <>
+      <RadioGroup color="w" legend="Delivery Method" direction="row" name="delivery">
         <CustomRadio>
           <RadioCard title="Standard" price="25.00" deliveryTime="12-15 business days" />
         </CustomRadio>
@@ -37,7 +37,7 @@ export const CustomRadioDirection = () => {
           <RadioCard title="Super Fast" price="50.00" deliveryTime="1-3 business days" />
         </CustomRadio>
       </RadioGroup>
-      <RadioGroup legend="Delivery Method" direction="col" name="delivery">
+      <RadioGroup color="se" legend="Delivery Method" direction="col" name="delivery">
         <CustomRadio>
           <RadioCard title="Standard" price="25.00" deliveryTime="12-15 business days" />
         </CustomRadio>
@@ -48,6 +48,6 @@ export const CustomRadioDirection = () => {
           <RadioCard title="Super Fast" price="50.00" deliveryTime="1-3 business days" />
         </CustomRadio>
       </RadioGroup>
-    </Flex>
+    </>
   )
 }

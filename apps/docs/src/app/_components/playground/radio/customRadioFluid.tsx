@@ -23,20 +23,31 @@ const RadioCard = ({ title, price, deliveryTime }: any) => {
   )
 }
 
-export const CustomRadioNoIndicator = () => {
+export const CustomRadioFluid = () => {
   return (
-    <Flex direction="col" gap="4">
-      <RadioGroup legend="Delivery Method" direction="row" name="delivery">
-        <CustomRadio indicator={false}>
+    <>
+      <RadioGroup fluid legend="Delivery Method" direction="row" name="delivery">
+        <CustomRadio>
           <RadioCard title="Standard" price="25.00" deliveryTime="12-15 business days" />
         </CustomRadio>
-        <CustomRadio indicator={false}>
+        <CustomRadio>
           <RadioCard title="Express" price="35.00" deliveryTime="3-6 business days" />
         </CustomRadio>
-        <CustomRadio indicator={false}>
+        <CustomRadio>
           <RadioCard title="Super Fast" price="50.00" deliveryTime="1-3 business days" />
         </CustomRadio>
       </RadioGroup>
-    </Flex>
+      <RadioGroup fluid reversed legend="Delivery Method" direction="row" name="delivery">
+        <CustomRadio>
+          <RadioCard title="Standard" price="25.00" deliveryTime="12-15 business days" />
+        </CustomRadio>
+        <CustomRadio>
+          <RadioCard title="Express" price="35.00" deliveryTime="3-6 business days" />
+        </CustomRadio>
+        <CustomRadio>
+          <RadioCard title="Super Fast" price="50.00" deliveryTime="1-3 business days" />
+        </CustomRadio>
+      </RadioGroup>
+    </>
   )
 }

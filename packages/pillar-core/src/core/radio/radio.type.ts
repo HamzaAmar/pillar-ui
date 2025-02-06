@@ -5,27 +5,31 @@ import { FieldsetProps } from '../fieldset/fieldset.type'
 interface SharedProps {
   color?: Color
   size?: Size
-  variant?: Variant
+  variant?: Omit<Variant, 'text'>
 }
 
 interface RadioGroup {
   name?: string
 }
 
-export interface RadioProps extends Omit<ComponentPropsWithoutRef<'input'>, 'size'> {
-  color?: Color
-  size?: Size
-  variant?: Omit<Variant, 'text'>
+interface CustomSharedProps {
+  indicator?: boolean
+  reversed?: boolean
+  fluid?: boolean
+}
+
+export interface RadioProps extends Omit<ComponentPropsWithoutRef<'input'>, 'size' | 'color'>, SharedProps {
   items?: 'center' | 'end' | 'start'
 }
 
-// export interface RadioGroupProps extends RadioGroup, SharedProps, RadioGroupBase {}
-export interface RadioGroupProps extends Omit<FieldsetProps, 'size' | 'color'>, RadioGroup, SharedProps {}
+export interface RadioGroupProps
+  extends Omit<FieldsetProps, 'size' | 'color'>,
+    RadioGroup,
+    SharedProps,
+    CustomSharedProps {}
 
-export interface RadioContextProps extends RadioGroup, SharedProps {}
-export interface CustomRadioProps extends RadioProps {
+export interface RadioContextProps extends RadioGroup, SharedProps, CustomSharedProps {}
+export interface CustomRadioProps extends RadioProps, CustomSharedProps {
   children?: ReactNode
   direction?: 'col' | 'row'
-  indicator?: boolean
-  reversed?: boolean
 }

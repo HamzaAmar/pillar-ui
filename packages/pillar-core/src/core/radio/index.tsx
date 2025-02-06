@@ -53,7 +53,7 @@ export const Radio = (props: RadioProps) => {
     <label className={`fl-inline Aai-${items} Sg-3 ra-C Fs-${size} C-${color} ${className}`} htmlFor={id}>
       <input type="radio" name={name} className="ra- H-sr" id={id} {...rest} />
       <span className={`rc- rc-${variant} S-e`} />
-      <span className="ra-L">{children}</span>
+      <div className="ra-L fl-1">{children}</div>
     </label>
   )
 }
@@ -65,13 +65,21 @@ export const Radio = (props: RadioProps) => {
 */
 
 export const CustomRadio = (props: CustomRadioProps) => {
-  const { className = ' ', children, indicator = true, reversed = false, ...rest } = props
+  const ctx = useRadioContext()
+  const {
+    className = ' ',
+    children,
+    fluid = ctx?.fluid,
+    indicator = ctx?.indicator ?? true,
+    reversed = ctx?.reversed,
+    ...rest
+  } = props
 
   return (
     <Radio
       {...rest}
       data-indicator={indicator}
-      className={cx(`cr-  Ajc-between ${className}`, { 'fl-row-reverse': !reversed })}
+      className={cx(`cr- ${className}`, { 'fl-row-reverse': !reversed, 'fl-1': fluid })}
     >
       {children}
     </Radio>
