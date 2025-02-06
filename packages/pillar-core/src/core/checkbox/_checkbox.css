@@ -4,11 +4,8 @@
 }
 
 .ch-C {
-  width: fit-content;
+  /* width: fit-content; */
   color: var(--text-8);
-  display: flex;
-  gap: var(--S3);
-  align-items: start;
 
   /* Default Value by The Client */
   font-size: var(--checkbox-size, 1rem);
@@ -85,5 +82,19 @@
       background: GrayText;
       border-color: GrayText;
     }
+  }
+}
+
+.ch-Cu {
+  padding: 1rem;
+  border: 1px solid var(--B6);
+  border-radius: 0.5rem;
+  &:has(.ch-E:checked) {
+    background-color: var(--c3);
+    border-color: var(--c9);
+  }
+
+  & [data-indicator='false'] + .ch- {
+    display: none;
   }
 }
