@@ -1,0 +1,19 @@
+.fi- {
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fi-L {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.fi-border {
+  padding: 1rem;
+  border: 1px solid var(--B6);
+}

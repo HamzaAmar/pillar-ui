@@ -10,9 +10,10 @@ export { Spinner } from './core/spinner'
 export { Switch } from './core/switch'
 export { Text, Heading, Link } from './core/typography'
 export { Breadcrumb, BreadcrumbItem } from './core/breadcrumb'
-export { Checkbox } from './core/checkbox'
+export { Checkbox, CheckboxGroup, CustomCheckbox } from './core/checkbox'
 export { Radio, RadioGroup, CustomRadio } from './core/radio'
 export { Timeline, TimelineItem } from './core/timeline'
+export { Fieldset } from './core/fieldset'
 export {
   FormGroup,
   Input,

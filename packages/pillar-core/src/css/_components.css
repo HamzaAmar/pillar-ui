@@ -27,4 +27,5 @@
 @import '../core/blockquote/_blockquote.css';
 @import '../core/popover/_popover.css';
 @import '../core/counterButton/_couterButton.css';
+@import '../core/fieldset/_fieldset.css';
 @import '../core/icons/_index.scss';

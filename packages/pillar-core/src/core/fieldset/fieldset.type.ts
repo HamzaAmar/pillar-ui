@@ -3,6 +3,7 @@ import { Direction } from '../../types'
 
 export interface FieldsetProps extends ComponentPropsWithoutRef<'fieldset'> {
   hideLegend?: boolean
-  legend?: string
+  legend: string
   direction?: Direction
+  border?: boolean
 }
