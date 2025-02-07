@@ -286,7 +286,7 @@ export function RadioStates() {
 
 export function RadioGroupHorizontal() {
   return (
-    <RadioGroup direction="row" label="Choose you Color">
+    <RadioGroup direction="row" legend="Choose you Color">
       <Radio name="red">Red</Radio>
       <Radio name="red">Red</Radio>
       <Radio name="red">Red</Radio>
@@ -297,7 +297,7 @@ export function RadioGroupHorizontal() {
 
 export function RadioGroupVertical() {
   return (
-    <RadioGroup label="Choose you Color">
+    <RadioGroup legend="Choose you Color">
       <Radio name="red">Red</Radio>
       <Radio name="red">Red</Radio>
       <Radio name="red">Red</Radio>
@@ -308,7 +308,7 @@ export function RadioGroupVertical() {
 
 export function RadioGroupVl() {
   return (
-    <RadioGroup name="red" label="Choose you Color" size="6" color="d">
+    <RadioGroup name="red" legend="Choose you Color" size="6" color="d">
       <Radio>Green</Radio>
       <Radio>Green</Radio>
       <Radio>Green</Radio>
@@ -319,7 +319,7 @@ export function RadioGroupVl() {
 
 export function RadioGroupLongText() {
   return (
-    <RadioGroup name="red" label="Choose you Color" size="5" color="d">
+    <RadioGroup name="red" legend="Choose you Color" size="5" color="d">
       <Radio>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora saepe laborum, iste ad eaque animi laboriosam
         officiis architecto at, esse magnam eos dolorem! Culpa odit temporibus ab excepturi, fugiat a?

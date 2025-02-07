@@ -3,7 +3,7 @@ import React from 'react'
 
 export const RadioGroupBase = () => {
   return (
-    <RadioGroup variant="outline" name="color" color="se" size="4">
+    <RadioGroup legend="Color" variant="outline" name="color" color="se" size="4">
       <Radio value="red">Red</Radio>
       <Radio value="green">Green</Radio>
       <Radio value="blue">Blue</Radio>

@@ -11,16 +11,14 @@ const BaseFormController = (props: Omit<FormControllerProps, 'children'>) => {
 export const FormGroupTitle = () => {
   return (
     <>
-      <FormGroup title="User">
-        <BaseFormController label="Name" />
-        <BaseFormController label="Age" />
-        <BaseFormController label="Age" />
+      <FormGroup legend="Name" title="User">
+        <BaseFormController label="First Name" />
+        <BaseFormController label="Last Name" />
       </FormGroup>
 
-      <FormGroup title="User" hideTitle>
-        <BaseFormController label="Name" />
-        <BaseFormController label="Age" />
-        <BaseFormController label="Age" />
+      <FormGroup legend="User" hideLegend>
+        <BaseFormController label="First Name" />
+        <BaseFormController label="Last Name" />
       </FormGroup>
     </>
   )
@@ -29,17 +27,17 @@ export const FormGroupTitle = () => {
 export const FormGroupColors = () => {
   return (
     <>
-      <FormGroup title="User" color="d">
+      <FormGroup legend="User" color="d">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="User" color="su">
+      <FormGroup legend="User" color="su">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="User" color="se">
+      <FormGroup legend="User" color="se">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
@@ -51,12 +49,12 @@ export const FormGroupColors = () => {
 export const FormGroupDirection = () => {
   return (
     <>
-      <FormGroup title="Hello">
+      <FormGroup legend="Hello">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="Hello" direction="row">
+      <FormGroup legend="Hello" direction="row">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
@@ -68,12 +66,12 @@ export const FormGroupDirection = () => {
 export const FormGroupCorner = () => {
   return (
     <>
-      <FormGroup title="Hello" corner="2">
+      <FormGroup legend="Hello" corner="2">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="Hello" corner="full">
+      <FormGroup legend="Hello" corner="full">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
@@ -85,17 +83,17 @@ export const FormGroupCorner = () => {
 export const FormGroupVariants = () => {
   return (
     <>
-      <FormGroup title="Hello" variant="outline">
+      <FormGroup legend="Hello" variant="outline">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="Hello" variant="bordered">
+      <FormGroup legend="Hello" variant="bordered">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="Hello" variant="filled">
+      <FormGroup legend="Hello" variant="filled">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
@@ -107,12 +105,12 @@ export const FormGroupVariants = () => {
 export const FormGroupFluid = () => {
   return (
     <>
-      <FormGroup title="Hello" fluid>
+      <FormGroup legend="Hello" fluid>
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
       </FormGroup>
-      <FormGroup title="Hello">
+      <FormGroup legend="Hello">
         <BaseFormController label="Name" />
         <BaseFormController label="Age" />
         <BaseFormController label="Age" />
