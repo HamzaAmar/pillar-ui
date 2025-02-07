@@ -2,7 +2,6 @@
   border-inline-start: 4px solid var(--c9);
   /* background-clip: ;
   background-color: ; */
-  padding: 1.5em;
   background: padding-box var(--B3);
   position: relative;
 
@@ -11,6 +10,7 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
+  padding: var(--blockquote-pad, 1.5em);
   border-radius: var(--blockquote-rad, 0.25em);
   font-size: var(--blockquote-size, var(--F5));
 

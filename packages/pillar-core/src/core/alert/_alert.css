@@ -1,7 +1,7 @@
 .al- {
-  padding: 0.5em 1em;
   border: 1px solid transparent;
   /* Default Value set by the Client */
+  padding: var(--alert-pad, 0.5em 1em);
   border-radius: var(--alert-rad, 0);
   font-size: var(--alert-size, var(--F5));
 }

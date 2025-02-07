@@ -54,7 +54,14 @@ Our design system uses CSS variables to set default styles for components. You c
 
 ```css
 /* Change the default corner of the Blockquote */
---blockquote-rad:;
+--blockquote-rad: 0.25em;
 /* Change the default size of the Blockquote */
---blockquote-size:;
+--blockquote-size: var(--F5);
+/* Change the default padding of the Blockquote */
+--blockquote-pad: 1.5em;
 ```
+
+padding: var(--breadcrumb-pad, 0);
+font-size: var(--breadcrumb-size, 0.875em);
+text-decoration: var(--breadcrumb-decoration, none);
+text-transform: var(--breadcrumb-transform, capitalize);

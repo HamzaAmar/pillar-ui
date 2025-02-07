@@ -89,13 +89,30 @@ A "controlled" alert means that you manage its visibility programmatically using
 
 ## Customizing Appearance
 
-Our design system uses CSS variables to set default styles for components. You can customize these variables to change the overall look of your component accross your project.
+Our design system leverages CSS variables to define default styles for all components. This approach ensures consistency and flexibility throughout your project. By customizing these variables, you can effortlessly adjust the overall look and feel of your components without repeating yourself.
 
 ### Available Properties:
 
 ```css
-/* Change the default corner of the Alert */
---alert-rad:;
-/* Change the default size of the Alert */
---alert-size:;
+/* 
+ * Change the default corner radius of the Alert.
+ * Default: 0 
+ */
+--alert-radius: 0;
+
+/* 
+ * Change the default size of the Alert.
+ * Default: var(--F5)
+ */
+--alert-size: var(--F5);
+
+/* 
+ * Change the default padding of the Alert.
+ * Default: 0.5em 1em  
+ *
+ * PLEASE IF YOU LIKE THE PADDING TO BE DEPEND
+ * ON THE SIZE PLEASE TRY TO USE em INSTEAD OF
+ * OTHER UNITS 
+ */
+--alert-padding: 0.5em 1em;
 ```

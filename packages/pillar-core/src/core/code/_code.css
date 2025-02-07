@@ -1,13 +1,14 @@
 .co- {
   width: fit-content;
   display: inline-block;
-  padding: 0 0.25rem;
+  padding: 0 0.25em;
   line-height: 1.5;
   /*
     These properties serve as fallbacks. If the corresponding utility functions are
     unavailable, these properties take priority. However, if specific props related to
     Code are provided, they will override these properties.
   */
+  padding: var(--code-pad, 0 0.25em);
   border-radius: var(--code-rad, 0.125em);
   font-size: var(--code-size, var(--F4));
   text-transform: var(--code-transform, capitalize);

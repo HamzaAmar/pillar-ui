@@ -1,7 +1,6 @@
 .bu- {
   --fx: inline-flex;
 
-  padding: 0.5em 1em;
   min-width: clamp(3rem, fit-content, 100%);
   transition: transform 50ms cubic-bezier(0.68, 0.55, 0.265, -2);
   transform-origin: bottom center;
@@ -39,6 +38,7 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
+  padding: var(--button-pad, 0.5em 1em);
   border-radius: var(--button-rad, 0.25em);
   font-size: var(--button-size, var(--F4));
   text-transform: var(--button-transform, capitalize);

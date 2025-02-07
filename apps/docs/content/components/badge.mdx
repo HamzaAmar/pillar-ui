@@ -68,13 +68,15 @@ By default, badges with a value of zero are hidden. Set the `showZero` prop to `
 
 ## Customizing Appearance
 
-Our design system uses CSS variables to set default styles for components. You can customize these variables to change the overall look of your component accross your project.
+Our design system leverages CSS variables to define default styles for all components. This approach ensures consistency and flexibility throughout your project. By customizing these variables, you can effortlessly adjust the overall look and feel of your components without repeating yourself.
 
 ### Available Properties:
 
 ```css
 /* Change the default corner of the Badge */
---badge-rad:;
+--badge-rad: 1em;
 /* Change the default size of the Badge */
---badge-size:;
+--badge-size: 0.85rem;
+/* Change the default padding of the Badge */
+--badge-pad: 0.125em;
 ```

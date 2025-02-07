@@ -1,5 +1,4 @@
 .ci- {
-  padding: 0.175em 0.2em;
   line-height: 1.2;
   display: inline-flex;
   /*
@@ -7,6 +6,7 @@
     unavailable, these properties take priority. However, if specific props related to
     avatars are provided, they will override these properties.
   */
+  padding: var(--chip-pad, 0.175em 0.2em);
   border-radius: var(--chip-rad, 0.25em);
   font-size: var(--chip-size, var(--F3));
   text-transform: var(--chip-transform, capitalize);
