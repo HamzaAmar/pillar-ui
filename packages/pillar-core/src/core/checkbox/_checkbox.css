@@ -23,10 +23,10 @@
   &[aria-checked='false'] + .ch- svg {
     display: none;
   }
-  &:where(:checked, :indeterminate) + .ch- {
+  &:where(:checked, [aria-checked='mixed'], [aria-checked='true']) + .ch- {
     &.ch-solid {
       background: var(--c9, none);
-      color: var(--c1);
+      color: white;
     }
     &.ch-outline {
       background: transparent;

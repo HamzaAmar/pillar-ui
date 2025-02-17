@@ -41,6 +41,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, forw
   } = props
   const ref = useComposedRefs(forwardedRef, (element: HTMLInputElement | null) => {
     if (element && isIndeterminate) {
+      console.log(isIndeterminate, element)
       element.indeterminate = !!isIndeterminate
     }
   })
