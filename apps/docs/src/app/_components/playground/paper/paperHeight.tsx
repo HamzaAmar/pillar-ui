@@ -2,12 +2,12 @@ import { Paper } from '@pillar-ui/core'
 
 export const PaperHeight = () => {
   return (
-    <div>
-      <Paper border height="24p" ratio="1" />
-      <Paper border height="48px" ratio="1" />
-      <Paper border height="96p" ratio="1" />
-      <Paper border height="192px" ratio="1" />
-      <Paper border height="384p" ratio="1" />
-    </div>
+    <>
+      <Paper background="B1" border height="24px" ratio="1" />
+      <Paper background="B1" border height="48px" ratio="1" />
+      <Paper background="B1" border height="96px" ratio="1" />
+      <Paper background="B1" border height="192px" ratio="1" />
+      <Paper background="B1" border height="384px" ratio="1" />
+    </>
   )
 }
