@@ -8,10 +8,10 @@ export const AvatarVariant = () => {
   return (
     <>
       <Flex gap="2">
-        <Avatar variant="solid" {...shared} />
-        <Avatar variant="soft" {...shared} />
-        <Avatar variant="outline" {...shared} />
-        <Avatar variant="dashed" {...shared} />
+        <Avatar variant="solid" title="Hello" />
+        <Avatar variant="soft" title="Hello" />
+        <Avatar variant="outline" title="Hello" />
+        <Avatar variant="dashed" title="Hello" />
       </Flex>
       <Flex gap="2">
         <Avatar variant="solid" {...shared} corner="b2" />
