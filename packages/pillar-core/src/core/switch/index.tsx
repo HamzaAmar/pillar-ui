@@ -40,11 +40,11 @@ export const Switch = forwardRef(
 
     return (
       <button
+        aria-label={label}
         ref={ref}
         type="button"
         aria-pressed={pressed}
         className={classNames}
-        // name={name}
         onClick={switchPress}
         {...rest}
       />

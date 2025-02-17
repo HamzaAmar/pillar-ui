@@ -1,4 +1,4 @@
-/*Size: W, H, Ar */
+/*Size: Ar */
 
 .Sr-1 {
   aspect-ratio: 1;
@@ -18,99 +18,26 @@
 .Sr-golden {
   aspect-ratio: 1.618/1;
 }
-.Sw-25c {
-  width: 25ch;
+.Smw-25c {
+  max-width: 25ch;
 }
-.Sw-30c {
-  width: 30ch;
+.Smw-30c {
+  max-width: 30ch;
 }
-.Sw-45c {
-  width: 45ch;
-}
-
-.Sw-60c {
-  width: 60ch;
+.Smw-45c {
+  max-width: 45ch;
 }
 
-.Sw-75c {
-  width: 75ch;
+.Smw-60c {
+  max-width: 60ch;
 }
 
-.Sw-90c {
-  width: 90ch;
+.Smw-75c {
+  max-width: 75ch;
 }
 
-.Sw-25 {
-  width: 25%;
-}
-.Sw-50 {
-  width: 50%;
-}
-.Sw-75 {
-  width: 75%;
-}
-.Sw-100 {
-  width: 100%;
-}
-
-.Sw-screen {
-  width: 100vw;
-}
-
-.Sw-fit {
-  width: fit-content;
-}
-
-.Sw-24p {
-  width: 24px;
-}
-.Sw-48p {
-  width: 48px;
-}
-.Sw-96p {
-  width: 96px;
-}
-.Sw-192p {
-  width: 192px;
-}
-.Sw-384p {
-  width: 384px;
-}
-
-.Sh-25 {
-  height: 25%;
-}
-.Sh-50 {
-  height: 50%;
-}
-.Sh-75 {
-  height: 75%;
-}
-.Sh-100 {
-  height: 100%;
-}
-
-.Sh-fit {
-  height: fit-content;
-}
-
-.Sh-24p {
-  height: 24px;
-}
-.Sh-48p {
-  height: 48px;
-}
-.Sh-96p {
-  height: 96px;
-}
-.Sh-192p {
-  height: 192px;
-}
-.Sh-384p {
-  height: 384px;
-}
-.Sh-screen {
-  height: 100vh;
+.Smw-90c {
+  max-width: 90ch;
 }
 
 .S-e {
