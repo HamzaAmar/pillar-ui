@@ -10,7 +10,7 @@
   border: 1px solid transparent;
 
   &:hover {
-    background: var(--c4);
+    background: var(--c5);
   }
 
   &:active {
@@ -28,9 +28,6 @@
   }
   &:is(.V-solid, .V-shadow):hover {
     background: var(--c10);
-  }
-  &.V-outline:hover {
-    background: var(--c5);
   }
 
   /*

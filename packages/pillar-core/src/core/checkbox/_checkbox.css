@@ -26,6 +26,7 @@
   &:where(:checked, [aria-checked='mixed'], [aria-checked='true']) + .ch- {
     &.ch-solid {
       background: var(--c9, none);
+      border-color: var(--c9);
       color: white;
     }
     &.ch-outline {
