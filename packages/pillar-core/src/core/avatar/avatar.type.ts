@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import type { Color, Corner, CornerBlob, CornerHand, Size, Variant } from '../../types'
+import type { Color, Corner, CornerBlob, CornerHand, Size } from '../../types'
 
 type Animate = 'zoom' | 'jump-y' | 'jump-x' | 'jump--y' | 'jump--x' | 'zoom-in'
 
@@ -7,7 +7,7 @@ interface AvatarBase {
   size?: Size
   corner?: Corner | CornerBlob | CornerHand
   color?: Color
-  variant?: Omit<Variant, 'text'> | 'dashed'
+  variant?: 'solid' | 'outline' | 'soft' | 'dashed'
   animate?: Animate
   fallback?: ReactNode
 }

@@ -29,7 +29,7 @@
 /* Avatar Variants */
 
 .av-soft {
-  --av-b: var(--c3);
+  --av-b: var(--c4);
   color: var(--c11);
 }
 
