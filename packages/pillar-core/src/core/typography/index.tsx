@@ -34,7 +34,7 @@ export const Text = forwardRef(
       [`Tl-${leading}`]: leading,
       [`Fst-${fontStyle}`]: fontStyle,
       [`C-${color}`]: color,
-      [`Sw-${width}`]: width,
+      [`Smw-${width}`]: width,
       [`ty-low`]: low,
       [`${className}`]: className,
     })
@@ -58,9 +58,9 @@ export const Heading = forwardRef(({ as: Tag = 'h1', children, ...rest }, forwar
 
 Heading.displayName = 'Heading'
 
-export const Link = forwardRef(({ children, ...rest }, forwardedRef) => {
+export const Link = forwardRef(({ children, color = 'p', ...rest }, forwardedRef) => {
   return (
-    <Text ref={forwardedRef} color="p" low className="ty-L" as="a" {...rest}>
+    <Text ref={forwardedRef} color={color} low className="ty-L" as="a" {...rest}>
       {children}
     </Text>
   )

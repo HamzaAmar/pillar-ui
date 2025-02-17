@@ -15,9 +15,9 @@
 
 .ty-L {
   padding: 2px;
-  color: var(--P11);
+  color: var(--c11);
   &:hover {
-    text-decoration: underline var(--P9) clamp(1px, 0.1em, 2px);
+    text-decoration: underline var(--c9) clamp(1px, 0.1em, 2px);
   }
   &:focus-visible {
     outline: 2px dashed var(--c9);
