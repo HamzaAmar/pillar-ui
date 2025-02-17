@@ -1,5 +1,9 @@
 /* border: B */
 
 .B {
-  border: 1px solid var(--B6);
+  border: 1px solid var(--B5);
+}
+
+.B-s > * + * {
+  border-top: 1px solid var(--B5);
 }
