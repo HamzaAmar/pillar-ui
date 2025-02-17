@@ -3,7 +3,7 @@ import React from 'react'
 
 export const CardSocial = () => {
   return (
-    <Paper as="article" dir="ltr" border p="4" corner="3" flow="4">
+    <Paper as="article" background="B1" dir="ltr" border p="4" corner="3" flow="4">
       <Flex items="center" justify="between" gap="3">
         <Flex gap="4">
           <Avatar color="b" variant="dashed" />

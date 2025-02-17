@@ -3,7 +3,7 @@ import { Eye, ThumbDown, ThumbUp } from '@pillar-ui/icons'
 
 export const CardReview = () => {
   return (
-    <Paper flow="4" border corner="2" p="5">
+    <Paper background="B1" flow="4" border corner="2" p="5">
       <Flex as="header" items="center" justify="between">
         <Flex items="center" gap="3">
           <Avatar title="Hamza Miloud Amar" />

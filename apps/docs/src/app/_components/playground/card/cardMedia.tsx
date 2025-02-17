@@ -4,7 +4,7 @@ import React from 'react'
 
 export const CardMedia = () => {
   return (
-    <Flex as={Paper} gap="6">
+    <Flex background="B1" border width="fit-content" p="4" corner="3" as={Paper} gap="6" items="center">
       <Paper flow="5">
         <div>
           <Text size="5" weight="5">
@@ -14,9 +14,8 @@ export const CardMedia = () => {
             @miloudamar
           </Text>
         </div>
-        <Paper flow="2">
+        <Paper flow="3">
           <ProgressBar color="se" label="Progress" value={50} size="1" />
-
           <Flex gap="3">
             <IconButton corner="full" size="4" icon={<PlayerSkipBack />} title="Go to Previous Sound" />
             <IconButton corner="full" size="4" icon={<PlayerPlay />} title="play Sound" />
@@ -25,7 +24,7 @@ export const CardMedia = () => {
         </Paper>
       </Paper>
       <div>
-        <img src="https://picsum.photos/id/15/200/100" alt="kitten" />
+        <img className="R-3" src="https://picsum.photos/id/15/200/100" alt="kitten" />
       </div>
     </Flex>
   )

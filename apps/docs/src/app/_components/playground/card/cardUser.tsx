@@ -29,7 +29,7 @@ const User = ({ online = false, name, email, job }: UserProps) => {
   const COLOR = online ? 'su' : 'd'
   const STATUS = online ? 'Online' : 'Offline'
   return (
-    <Flex as={Paper} p="4" corner="2" border items="center" justify="between" gap="5">
+    <Flex background="B1" as={Paper} p="4" corner="2" border items="center" justify="between" gap="5">
       <Flex gap="3">
         <Avatar title="John Doe" size="4" />
         <div>

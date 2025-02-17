@@ -33,7 +33,7 @@ export const CardEcommerce = () => {
           <IconButton
             size="4"
             onClick={() => setIsFavorite(!isFavorite)}
-            icon={<Heart width="16" />}
+            icon={<Heart width="16" fill={isFavorite ? 'var(--D11)' : 'none'} />}
             title="Favorite"
             color={isFavorite ? 'd' : 'b'}
             variant={isFavorite ? 'mixed' : 'soft'}

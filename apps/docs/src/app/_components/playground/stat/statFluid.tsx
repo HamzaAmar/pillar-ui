@@ -1,7 +1,6 @@
-import { Chips, Flex, Grid, Heading, Paper, Text } from '@pillar-ui/core'
-import { ArrowCircleDown, ArrowBarTop, ArrowCircleTop, Equal } from '@pillar-ui/icons'
+import { Flex, Paper, Text, Button, Chips, Heading } from '@pillar-ui/core'
+import { ArrowCircleDown, ArrowCircleTop, PlayerPause, PlayerPlay, Repeat } from '@pillar-ui/icons'
 import { formatPrice } from '@pillar-ui/utils'
-import React from 'react'
 
 const STAT = {
   up: {
@@ -22,34 +21,40 @@ const STAT = {
 } as const
 
 const StatItem = ({ stat = 'up' }: { stat?: 'up' | 'down' | 'flat' }) => {
+  const SHIP = stat !== 'flat' && (
+    <Chips variant="soft" color={STAT[stat].color}>
+      {STAT[stat].text}
+    </Chips>
+  )
   return (
-    <Paper background="B1" flow="3" p="4" border corner="2">
-      <Text size="3" color="b" low>
-        Last month revenue is {formatPrice(182)}
-      </Text>
+    <Paper justify="between" items="center" gap="3" as={Flex} background="B1" p="4" border corner="2">
       <Flex gap="2" items="center">
+        <Text size="3" color="b" low>
+          Last month revenue is {formatPrice(182)}
+        </Text>
         {STAT[stat].icon}
-        <Text weight="5" size="7" leading="1">
+      </Flex>
+      <Flex gap="2" items="center">
+        {SHIP}
+        <Text weight="5" leading="1">
           {formatPrice(250)}
         </Text>
-        <Chips variant="soft" color={STAT[stat].color}>
-          {STAT[stat].text}
-        </Chips>
       </Flex>
     </Paper>
   )
 }
-export const StatList = () => {
+
+export const StatFluid = () => {
   return (
     <Paper flow="6" p="4">
       <Heading weight="4" color="b" low>
         Revenue and growth stats
       </Heading>
-      <Grid gap="4" cols={{ default: '1fr', md: '1fr 1fr 1fr' }}>
+      <Paper flow="5">
         <StatItem />
         <StatItem stat="down" />
         <StatItem stat="flat" />
-      </Grid>
+      </Paper>
     </Paper>
   )
 }
