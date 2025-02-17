@@ -3,10 +3,10 @@ import { InputSearch } from '@pillar-ui/core'
 export const InputSearchStatus = () => {
   return (
     <>
-      <InputSearch />
-      <InputSearch disabled />
-      <InputSearch readOnly />
-      <InputSearch isInvalid />
+      <InputSearch placeholder="Normal" />
+      <InputSearch placeholder="disabled" disabled />
+      <InputSearch placeholder="readOnly" readOnly />
+      <InputSearch placeholder="isInvalid" isInvalid />
     </>
   )
 }

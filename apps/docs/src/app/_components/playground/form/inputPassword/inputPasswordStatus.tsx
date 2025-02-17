@@ -3,10 +3,10 @@ import { InputPassword } from '@pillar-ui/core'
 export const InputPasswordStatus = () => {
   return (
     <>
-      <InputPassword />
-      <InputPassword readOnly />
-      <InputPassword disabled />
-      <InputPassword isInvalid />
+      <InputPassword placeholder="Normal" />
+      <InputPassword placeholder="readOnly" readOnly />
+      <InputPassword placeholder="disabled" disabled />
+      <InputPassword placeholder="isInvalid" isInvalid />
     </>
   )
 }
