@@ -9,6 +9,8 @@ export const PaginationVariant = () => {
       <Pagination count={10} variant="mixed" />
       <Pagination count={10} variant="soft" />
       <Pagination count={10} variant="outline" />
+      <Pagination count={10} variant="text" />
+      <Pagination count={10} variant="link" />
     </>
   )
 }

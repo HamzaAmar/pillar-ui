@@ -9,7 +9,7 @@
     border-color: var(--O8);
     outline: min(0.25em, 3px) solid var(--c10);
     outline-offset: -2px;
-    &.V-solid {
+    &:is(.V-solid, .V-shadow) {
       outline-color: var(--c11);
     }
   }

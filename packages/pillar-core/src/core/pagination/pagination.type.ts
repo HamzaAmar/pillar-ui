@@ -3,7 +3,7 @@ import type { Color, Corner, Size, Variant } from '../../types'
 
 interface PaginationBase {
   color?: Color
-  variant?: Variant
+  variant?: Variant | 'link'
   corner?: Corner
   size?: Size
 }
