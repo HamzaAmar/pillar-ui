@@ -19,7 +19,7 @@ export const DocsCode = ({ code, html }: DocsCodeProps) => {
   )
 }
 
-export const Playground = async ({ name, root, direction = 'row' }: PreviewProps) => {
+export const Playground = async ({ name, root, direction = 'row', ...rest }: PreviewProps) => {
   const content = await readExampleFile(root, name)
   const html = highlight(content)
   const Component = dynamic(() =>
@@ -31,7 +31,7 @@ export const Playground = async ({ name, root, direction = 'row' }: PreviewProps
 
   return (
     <section className="Sf-3">
-      <div className={`playground playground-${direction}`}>
+      <div className={`playground playground-${direction}`} {...rest}>
         <Component />
       </div>
       <DocsCode code={content} html={html} />

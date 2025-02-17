@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Flex } from '@pillar-ui/core'
+import { Badge, Chips, Flex } from '@pillar-ui/core'
 import { Book, Bridge, ChevronDown, Fish, Help, Palette, PictureInPicture, Star } from '@pillar-ui/icons'
 // import type { MenuItemData } from './aside.type'
 import { Item } from './listItem'
@@ -60,7 +60,7 @@ const MenuBar = ({ data }: DocsProps) => {
                 </Item>
                 {contents && (
                   <ul data-active={current?.includes(key) ?? false} className="menu-nest">
-                    {contents.map(({ slug, type, title }) => {
+                    {contents.map(({ slug, type, title, directory }) => {
                       const to = type === 'core' ? 'components' : type
 
                       return (
@@ -71,7 +71,9 @@ const MenuBar = ({ data }: DocsProps) => {
                           key={slug}
                           isActive={path === `${key}/${slug}`}
                           title={title}
-                        />
+                        >
+                          {type === 'core' && directory == null && <Chips size="2">Composite</Chips>}
+                        </Item>
                       )
                     })}
                   </ul>

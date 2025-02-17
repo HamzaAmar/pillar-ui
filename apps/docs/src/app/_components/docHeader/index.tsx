@@ -42,40 +42,42 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
         </>
       </Grid>
 
-      <Flex gap="4" wrap>
-        <Button
-          as="a"
-          size="3"
-          color="b"
-          target="_blank"
-          href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
-          icon={<Github strokeWidth={2} />}
-        >
-          Go To {slug} Source Code
-        </Button>
-        <Button
-          as="a"
-          href="https://github.com/HamzaAmar/pillar-ui/issues"
-          target="_blank"
-          variant="soft"
-          color="b"
-          icon={<Github strokeWidth={2} />}
-          size="3"
-        >
-          Issues
-        </Button>
-        <Button
-          as="a"
-          href="https://github.com/HamzaAmar/pillar-ui/discussions"
-          target="_blank"
-          variant="soft"
-          color="b"
-          icon={<Github strokeWidth={2} />}
-          size="3"
-        >
-          discussions
-        </Button>
-      </Flex>
+      {type === 'core' && directory == null ? null : (
+        <Flex gap="4" wrap>
+          <Button
+            as="a"
+            size="3"
+            color="b"
+            target="_blank"
+            href={`https://github.com/HamzaAmar/pillar-ui/blob/main/packages/${root}/${directory}`}
+            icon={<Github strokeWidth={2} />}
+          >
+            Go To {slug} Source Code
+          </Button>
+          <Button
+            as="a"
+            href="https://github.com/HamzaAmar/pillar-ui/issues"
+            target="_blank"
+            variant="soft"
+            color="b"
+            icon={<Github strokeWidth={2} />}
+            size="3"
+          >
+            Issues
+          </Button>
+          <Button
+            as="a"
+            href="https://github.com/HamzaAmar/pillar-ui/discussions"
+            target="_blank"
+            variant="soft"
+            color="b"
+            icon={<Github strokeWidth={2} />}
+            size="3"
+          >
+            discussions
+          </Button>
+        </Flex>
+      )}
     </Paper>
   )
 }
