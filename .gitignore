@@ -12,6 +12,7 @@ server/dist
 public/dist
 storybook-static/
 packages/pillar-core/css
+apps/docs/tsconfig.tsbuildinfo
 
 public/sitemap.xml
 public/feed.xml
