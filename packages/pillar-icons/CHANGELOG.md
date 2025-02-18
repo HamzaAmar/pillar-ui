@@ -1,5 +1,30 @@
 # @pillar/icons
 
+## 0.8.3
+
+### Patch Changes
+
+- ## Improved CI Stability and Reliability
+
+  This release focuses on resolving critical dependency issues that were causing failures in the Continuous Integration (CI) pipeline. These fixes ensure a more stable and reliable build and release process.
+
+  **Key Changes:**
+
+  - **🛠️ Tooling Update: Yarn 4.6 Upgrade (feat: switch to yarn 4.6):**
+
+    - Upgraded Yarn to version 4.6. This brings the latest improvements and potentially performance enhancements from the Yarn package manager. This upgrade is part of the effort to stabilize the CI environment.
+
+  - **🐛 Bug Fix: Dependency Resolution Improvements for CI (fix: add the needed packages to fix the issues in CI):**
+
+    - Addressed and resolved critical dependency resolution issues that were causing CI builds to fail with "checksum mismatch" and "lockfile modification forbidden" errors.
+    - Ensured all necessary packages are correctly declared and installed, especially within the workspace environment.
+    - This fix directly addresses the `YN0002`, `YN0060`, and `YN0086` errors observed in the CI environment.
+
+  - **🔧 CI Configuration and Lockfile Updates (fix: try to install deps with immutable, chore: regenerate lock and remove node module to fix CI installation issue, chore: remove yarn lock file and reinstall):**
+    - Implemented robust CI configuration changes to ensure consistent and reliable dependency installations.
+    - Regenerated `yarn.lock` file to accurately reflect the corrected dependency tree and ensure lockfile consistency across environments.
+    - Improved CI installation process to align with best practices for Yarn and monorepo setups.
+
 ## 0.8.2
 
 ### Patch Changes
