@@ -1,4 +1,4 @@
-import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Heading, Paper, Text } from '@pillar-ui/core'
+import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Text } from '@pillar-ui/core'
 import React from 'react'
 
 function AccordionBase(props: any) {
@@ -20,7 +20,6 @@ function AccordionBase(props: any) {
       </AccordionItem>
       <AccordionItem value={2}>
         <AccordionButton>
-          {' '}
           <Text weight="5" size="4">
             Hello World
           </Text>
