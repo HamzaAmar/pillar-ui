@@ -1,5 +1,51 @@
 # @pillar/hooks
 
+## 0.7.9
+
+### Patch Changes
+
+- ## Release Notes
+
+  This release includes several key improvements, bug fixes, and new features focused on enhancing the component library's functionality, consistency, and documentation.
+
+  ### CORE
+
+  **New Features:**
+
+  - **Custom Checkbox and Radio:** Added custom checkbox and radio components, including a radio group component, providing more styling flexibility. (#90, #94, 26e6276, d08a11e, e020b47)
+  - **Fieldset Component:** Introduced the fieldset component for grouping related form elements, improving form structure. (51824ce, 8087fd1)
+  - **Form Group Refactoring:** Refactored form groups to utilize the Fieldset component and addressed a select component issue. (002b21e)
+
+  **Bug Fixes:**
+
+  - **Skeleton Avatar Variant:** Resolved an issue with the skeleton avatar variant. (92687fb)
+  - **Checkbox and Button Soft Colors:** Fixed the soft colors for checkbox and button components. (0a2e232)
+  - **Pagination Current Selected:** Fixed an issue with the pagination's current selected state and added a link variant. (48aa965)
+  - **Avatar Typescript and Soft Color:** Resolved a typescript issue with the avatar component and ensured consistent soft colors. (10b1a08)
+  - **CSS Utilities:** Removed width and height CSS utilities and implemented a new width system for full-width elements. (e5bee7a)
+  - **Border Color Consistency:** Ensured consistent border color between separator and border utility components. (da13359)
+  - **Link Color Issues:** Fixed color issues with links. (a80aa83)
+  - **Checkbox Indeterminate State:** Corrected an issue with the checkbox in the indeterminate state. (d04d67d)
+  - **Form Group Legend:** Added the missing legend to the form group component. (ec9b6dd)
+  - **Class Names Consistency:** Addressed and documented inconsistencies in class names. (0536e3c)
+
+  ### Docs
+
+  - **Input Form Status Placeholder:** Added a placeholder to the input form status for better user feedback. (b585142)
+  - **Composite Component Documentation:** Added documentation for the composite component. (319e2e2)
+  - **Playground Enhancements:** Added playgrounds for header, status, card, and stat components, facilitating interactive exploration. (db48cf7)
+  - **Stat and Card Component Improvements:** Improved the stat and card components' functionality and appearance. (0a43516)
+  - **Switch Avatar, Checkbox Docs Enhancements:** Added new examples to the switch avatar and checkbox documentation for clarity. (351caf8)
+  - **Docs Component Playground Design Improvement:** Implemented design improvements in the docs component playground. (8f7408d)
+  - **Paper Docs Width and Height:** Corrected an issue related to width and height in the paper documentation. (a8a553b)
+
+  **Bug Fixes:**
+
+  - **Radio Component Doc Update:** Updated the radio component documentation. (0c09ace)
+  - **Apps Docs Tsconfig Gitignore:** Added the apps docs tsconfig file to the gitignore. (09b8553)
+  - **Missing Props Default Style:** Attempted to add missing props default styles to the project. (6c7cdb4)
+  - **Radio Component Improvement:** Implemented improvements in the radio component. (2d385a8)
+
 ## 0.7.8
 
 ### Patch Changes
