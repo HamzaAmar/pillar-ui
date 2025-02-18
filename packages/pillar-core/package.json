@@ -1,100 +1,100 @@
 {
-      "name": "@pillar-ui/core",
-      "version": "0.12.2",
-      "description": "@pillar-ui/core is a lightweight and comprehensive UI component library packed with reusable and customizable UI components designed for modern web development. Our components adhere to best practices, ensuring a consistent and accessible user experience across your applications, without sacrificing performance.",
-      "author": {
-          "name": "Hamza Miloud Amar",
-          "email": "hamzamiloudamar@gmail.com"
-      },
-      "license": "MIT",
-      "main": "./dist/cjs/index.cjs",
-      "module": "./dist/esm/index.mjs",
-      "types": "./dist/index.d.ts",
-      "sideEffects": [
-          "*.css"
-      ],
-      "files": [
-          "dist/**",
-          "README.md"
-      ],
-      "repository": {
-          "type": "git",
-          "url": "https://github.com/HamzaAmar/pillar-ui",
-          "directory": "packages/pillar-core"
-      },
-      "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
-      "homepage": "https://www.pillar-ui.com/",
-      "exports": {
-          ".": {
-              "import": {
-                  "types": "./dist/index.d.ts",
-                  "default": "./dist/esm/index.mjs"
+        "name": "@pillar-ui/core",
+        "version": "0.12.2",
+        "description": "@pillar-ui/core is a lightweight and comprehensive UI component library packed with reusable and customizable UI components designed for modern web development. Our components adhere to best practices, ensuring a consistent and accessible user experience across your applications, without sacrificing performance.",
+        "author": {
+              "name": "Hamza Miloud Amar",
+              "email": "hamzamiloudamar@gmail.com"
+        },
+        "license": "MIT",
+        "main": "./dist/cjs/index.cjs",
+        "module": "./dist/esm/index.mjs",
+        "types": "./dist/index.d.ts",
+        "sideEffects": [
+              "*.css"
+        ],
+        "files": [
+              "dist/**",
+              "README.md"
+        ],
+        "repository": {
+              "type": "git",
+              "url": "https://github.com/HamzaAmar/pillar-ui",
+              "directory": "packages/pillar-core"
+        },
+        "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
+        "homepage": "https://www.pillar-ui.com/",
+        "exports": {
+              ".": {
+                    "import": {
+                          "types": "./dist/index.d.ts",
+                          "default": "./dist/esm/index.mjs"
+                    },
+                    "require": {
+                          "types": "./dist/index.d.ts",
+                          "default": "./dist/cjs/index.cjs"
+                    }
               },
-              "require": {
-                  "types": "./dist/index.d.ts",
-                  "default": "./dist/cjs/index.cjs"
-              }
-          },
-          "./main.css": "./dist/css/main.css",
-          "./package.json": "./package.json"
-      },
-      "keywords": [
-          "accessibility",
-          "typescript",
-          "a11y",
-          "accessibility",
-          "pillar-core",
-          "ui-components",
-          "design-system",
-          "storybook"
-      ],
-      "scripts": {
-          "js-build": "rollup -c",
-          "css-build": "postcss --config postcss.config.js src/css/main.css --output ./dist/css/main.css",
-          "build": "npm-run-all -p css-build js-build",
-          "js-build:watch": "rollup -c -w",
-          "css-build:watch": "yarn css-build --watch --verbose",
-          "dev": "npm-run-all -p -r js-build:watch css-build:watch",
-          "lint": "eslint \"src/**/*.ts*\"",
-          "clean:turbo": "rimraf .turbo",
-          "clean:modules": "rimraf node_modules",
-          "clean:dist": "rimraf dist",
-          "clean": "npm-run-all clean:turbo clean:modules clean:dist",
-          "type:check": "tsc --noEmit"
-      },
-      "peerDependencies": {
-          "@pillar-ui/hooks": ">=0.7 <1",
-          "react": ">=18",
-          "react-dom": ">=18"
-      },
-      "devDependencies": {
-          "@pillar-ui/eslint": "*",
-          "@pillar-ui/hooks": "workspace:*",
-          "@pillar-ui/tsconfig": "*",
-          "@rollup/plugin-alias": "^5.1.1",
-          "@rollup/plugin-node-resolve": "^15.3.0",
-          "@rollup/plugin-replace": "^6.0.1",
-          "@types/node": "^22.5.3",
-          "@types/react": "^18.3.3",
-          "@types/react-dom": "^18.3.0",
-          "autoprefixer": "^10.4.20",
-          "cssnano": "^7.0.6",
-          "eslint": "^8.57.0",
-          "npm-run-all": "^4.1.5",
-          "postcss": "^8.4.41",
-          "postcss-cli": "^10.1.0",
-          "postcss-import": "^15.1.0",
-          "postcss-nested": "^6.2.0",
-          "react": "^18.3.1",
-          "rimraf": "^6.0.1",
-          "rollup": "^4.24.4",
-          "rollup-plugin-dts": "^6.1.1",
-          "rollup-plugin-esbuild": "^6.1.1",
-          "rollup-plugin-postcss": "^4.0.2",
-          "rollup-preserve-directives": "^1.1.2",
-          "sass": "^1.77.8",
-          "typescript": "^5.5.4",
-          "vite": "^5.4.11"
-      }
+              "./main.css": "./dist/css/main.css",
+              "./package.json": "./package.json"
+        },
+        "keywords": [
+              "accessibility",
+              "typescript",
+              "a11y",
+              "accessibility",
+              "pillar-core",
+              "ui-components",
+              "design-system",
+              "storybook"
+        ],
+        "scripts": {
+              "js-build": "rollup -c",
+              "css-build": "postcss --config postcss.config.js src/css/main.css --output ./dist/css/main.css",
+              "build": "npm-run-all -p css-build js-build",
+              "js-build:watch": "rollup -c -w",
+              "css-build:watch": "yarn css-build --watch --verbose",
+              "dev": "npm-run-all -p -r js-build:watch css-build:watch",
+              "lint": "eslint \"src/**/*.ts*\"",
+              "clean:turbo": "rimraf .turbo",
+              "clean:modules": "rimraf node_modules",
+              "clean:dist": "rimraf dist",
+              "clean": "npm-run-all clean:turbo clean:modules clean:dist",
+              "type:check": "tsc --noEmit"
+        },
+        "peerDependencies": {
+              "@pillar-ui/hooks": ">=0.7 <1",
+              "react": ">=18",
+              "react-dom": ">=18"
+        },
+        "devDependencies": {
+              "@pillar-ui/eslint": "*",
+              "@pillar-ui/hooks": "workspace:*",
+              "@pillar-ui/tsconfig": "*",
+              "@rollup/plugin-alias": "^5.1.1",
+              "@rollup/plugin-node-resolve": "^15.3.0",
+              "@rollup/plugin-replace": "^6.0.1",
+              "@types/node": "^22.5.3",
+              "@types/react": "^18.3.3",
+              "@types/react-dom": "^18.3.0",
+              "autoprefixer": "^10.4.20",
+              "cssnano": "^7.0.6",
+              "eslint": "^8.57.0",
+              "npm-run-all": "^4.1.5",
+              "postcss": "^8.4.41",
+              "postcss-cli": "^10.1.0",
+              "postcss-import": "^15.1.0",
+              "postcss-nested": "^6.2.0",
+              "react": "^18.3.1",
+              "rimraf": "^6.0.1",
+              "rollup": "^4.24.4",
+              "rollup-plugin-dts": "^6.1.1",
+              "rollup-plugin-esbuild": "^6.1.1",
+              "rollup-plugin-postcss": "^4.0.2",
+              "rollup-preserve-directives": "^1.1.2",
+              "sass": "^1.77.8",
+              "typescript": "^5.5.4",
+              "vite": "^5.4.11"
+        }
   }
     

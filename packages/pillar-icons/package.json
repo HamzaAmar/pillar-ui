@@ -1,76 +1,76 @@
 {
-        "name": "@pillar-ui/icons",
-        "version": "0.8.2",
-        "description": "A library of scalable icons suitable for various web development projects. These icons are highly customizable, accessible, and designed to seamlessly integrate into modern user interfaces.",
-        "keywords": [
-              "icons",
-              "icon library",
-              "scalable icons",
-              "web development",
-              "user interface",
-              "customizable",
-              "accessibility",
-              "modern",
-              "vector",
-              "@pillar-icons",
-              "development",
-              "components",
-              "SVG",
-              "visual",
-              "web design"
-        ],
-        "repository": {
-              "type": "git",
-              "url": "https://github.com/HamzaAmar/pillar-ui",
-              "directory": "packages/pillar-icons"
-        },
-        "homepage": "https://www.pillar-ui.com/",
-        "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
-        "main": "./dist/index.js",
-        "module": "./dist/index.mjs",
-        "types": "./dist/index.d.ts",
-        "sideEffects": true,
-        "license": "MIT",
-        "files": [
-              "dist/**"
-        ],
-        "author": {
-              "name": "Hamza Miloud Amar",
-              "email": "hamzamiloudamar@gmail.com"
-        },
-        "exports": {
-              ".": {
-                    "types": "./dist/index.d.ts",
-                    "require": "./dist/index.js",
-                    "import": "./dist/index.mjs"
-              }
-        },
-        "scripts": {
-              "build": "tsup",
-              "build:watch": "tsup --watch",
-              "lint": "eslint \"src/**/*.ts*\"",
-              "clean:turbo": "rimraf .turbo",
-              "clean:modules": "rimraf node_modules",
-              "clean:dist": "rimraf dist",
-              "clean": "npm-run-all clean:turbo clean:modules clean:dist",
-              "dev": "yarn build:watch",
-              "type:check": "tsc --noEmit"
-        },
-        "peerDependencies": {
-              "react": "^18.0.0",
-              "react-dom": "^18.0.0"
-        },
-        "devDependencies": {
-              "@pillar-ui/eslint": "*",
-              "@pillar-ui/tsconfig": "*",
-              "@types/react": "^18.3.3",
-              "@types/react-dom": "^18.3.0",
-              "eslint": "^8.57.0",
-              "npm-run-all": "^4.1.5",
-              "react": "^18.3.1",
-              "rimraf": "^6.0.1",
-              "tsup": "^8.2.4",
-              "typescript": "^5.5.4"
-        }
+          "name": "@pillar-ui/icons",
+          "version": "0.8.2",
+          "description": "A library of scalable icons suitable for various web development projects. These icons are highly customizable, accessible, and designed to seamlessly integrate into modern user interfaces.",
+          "keywords": [
+                  "icons",
+                  "icon library",
+                  "scalable icons",
+                  "web development",
+                  "user interface",
+                  "customizable",
+                  "accessibility",
+                  "modern",
+                  "vector",
+                  "@pillar-icons",
+                  "development",
+                  "components",
+                  "SVG",
+                  "visual",
+                  "web design"
+          ],
+          "repository": {
+                  "type": "git",
+                  "url": "https://github.com/HamzaAmar/pillar-ui",
+                  "directory": "packages/pillar-icons"
+          },
+          "homepage": "https://www.pillar-ui.com/",
+          "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
+          "main": "./dist/index.js",
+          "module": "./dist/index.mjs",
+          "types": "./dist/index.d.ts",
+          "sideEffects": true,
+          "license": "MIT",
+          "files": [
+                  "dist/**"
+          ],
+          "author": {
+                  "name": "Hamza Miloud Amar",
+                  "email": "hamzamiloudamar@gmail.com"
+          },
+          "exports": {
+                  ".": {
+                          "types": "./dist/index.d.ts",
+                          "require": "./dist/index.js",
+                          "import": "./dist/index.mjs"
+                  }
+          },
+          "scripts": {
+                  "build": "tsup",
+                  "build:watch": "tsup --watch",
+                  "lint": "eslint \"src/**/*.ts*\"",
+                  "clean:turbo": "rimraf .turbo",
+                  "clean:modules": "rimraf node_modules",
+                  "clean:dist": "rimraf dist",
+                  "clean": "npm-run-all clean:turbo clean:modules clean:dist",
+                  "dev": "yarn build:watch",
+                  "type:check": "tsc --noEmit"
+          },
+          "peerDependencies": {
+                  "react": "^18.0.0",
+                  "react-dom": "^18.0.0"
+          },
+          "devDependencies": {
+                  "@pillar-ui/eslint": "*",
+                  "@pillar-ui/tsconfig": "*",
+                  "@types/react": "^18.3.3",
+                  "@types/react-dom": "^18.3.0",
+                  "eslint": "^8.57.0",
+                  "npm-run-all": "^4.1.5",
+                  "react": "^18.3.1",
+                  "rimraf": "^6.0.1",
+                  "tsup": "^8.2.4",
+                  "typescript": "^5.5.4"
+          }
   }
     
