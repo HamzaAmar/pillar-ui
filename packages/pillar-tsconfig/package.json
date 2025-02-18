@@ -1,6 +1,7 @@
 {
-  "name": "@pillar-ui/tsconfig",
-  "version": "0.1.0",
-  "private": true,
-  "license": "MIT"
-}
+      "name": "@pillar-ui/tsconfig",
+      "version": "0.1.0",
+      "private": true,
+      "license": "MIT"
+  }
+    

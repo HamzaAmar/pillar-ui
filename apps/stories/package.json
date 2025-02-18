@@ -1,44 +1,45 @@
 {
-  "name": "@pillar-ui/stories",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "storybook dev -p 6006",
-    "build-story": "storybook build --docs",
-    "preview-storybook": "serve storybook-static",
-    "clean:turbo": "rimraf .turbo",
-    "clean:modules": "rimraf node_modules",
-    "clean": "npm-run-all clean:turbo clean:modules",
-    "type:check": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@pillar-ui/core": "*",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.25.2",
-    "@babel/preset-env": "^7.25.3",
-    "@babel/preset-react": "^7.24.7",
-    "@chromatic-com/storybook": "1.9.0",
-    "@pillar-ui/tsconfig": "*",
-    "@storybook/addon-a11y": "^8.4.5",
-    "@storybook/addon-actions": "^8.4.5",
-    "@storybook/addon-docs": "^8.4.5",
-    "@storybook/addon-essentials": "^8.4.5",
-    "@storybook/addon-links": "^8.4.5",
-    "@storybook/nextjs": "8.4.5",
-    "@storybook/react": "^8.4.5",
-    "@storybook/test": "8.4.5",
-    "@storybook/test-runner": "^0.19.1",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint-config-custom": "*",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^6.0.1",
-    "serve": "^13.0.4",
-    "storybook": "^8.4.5",
-    "storybook-addon-pseudo-states": "^4.0.2",
-    "typescript": "^5.5.4",
-    "webpack": "^5.93.0"
+      "name": "@pillar-ui/stories",
+      "version": "0.0.0",
+      "private": true,
+      "scripts": {
+          "dev": "storybook dev -p 6006",
+          "build-story": "storybook build --docs",
+          "preview-storybook": "serve storybook-static",
+          "clean:turbo": "rimraf .turbo",
+          "clean:modules": "rimraf node_modules",
+          "clean": "npm-run-all clean:turbo clean:modules",
+          "type:check": "tsc --noEmit"
+      },
+      "dependencies": {
+          "@pillar-ui/core": "*",
+          "react": "^18.3.1",
+          "react-dom": "^18.3.1"
+      },
+      "devDependencies": {
+          "@babel/plugin-transform-react-jsx": "^7.25.2",
+          "@babel/preset-env": "^7.25.3",
+          "@babel/preset-react": "^7.24.7",
+          "@chromatic-com/storybook": "1.9.0",
+          "@pillar-ui/tsconfig": "*",
+          "@storybook/addon-a11y": "^8.4.5",
+          "@storybook/addon-actions": "^8.4.5",
+          "@storybook/addon-docs": "^8.4.5",
+          "@storybook/addon-essentials": "^8.4.5",
+          "@storybook/addon-links": "^8.4.5",
+          "@storybook/nextjs": "8.4.5",
+          "@storybook/react": "^8.4.5",
+          "@storybook/test": "8.4.5",
+          "@storybook/test-runner": "^0.19.1",
+          "@vitejs/plugin-react": "^4.3.4",
+          "eslint-config-custom": "*",
+          "npm-run-all": "^4.1.5",
+          "rimraf": "^6.0.1",
+          "serve": "^13.0.4",
+          "storybook": "^8.4.5",
+          "storybook-addon-pseudo-states": "^4.0.2",
+          "typescript": "^5.5.4",
+          "webpack": "^5.93.0"
+      }
   }
-}
+    

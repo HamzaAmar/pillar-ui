@@ -1,77 +1,78 @@
 {
-  "name": "@pillar-ui/utils",
-  "version": "0.8.5",
-  "sideEffects": false,
-  "description": "A collection of utility functions and tools to assist with common tasks and improve the efficiency of web development. These utilities are carefully crafted to enhance productivity and streamline the development process.",
-  "keywords": [
-    "utils",
-    "utility functions",
-    "web development",
-    "productivity",
-    "efficiency",
-    "code optimization",
-    "development tools",
-    "programming"
-  ],
-  "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist/**"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/HamzaAmar/pillar-ui",
-    "directory": "packages/pillar-utils"
-  },
-  "homepage": "https://www.pillar-ui.com/",
-  "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
-  "author": {
-    "name": "Hamza Miloud Amar",
-    "email": "hamzamiloudamar@gmail.com"
-  },
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
+      "name": "@pillar-ui/utils",
+      "version": "0.8.5",
+      "sideEffects": false,
+      "description": "A collection of utility functions and tools to assist with common tasks and improve the efficiency of web development. These utilities are carefully crafted to enhance productivity and streamline the development process.",
+      "keywords": [
+          "utils",
+          "utility functions",
+          "web development",
+          "productivity",
+          "efficiency",
+          "code optimization",
+          "development tools",
+          "programming"
+      ],
+      "license": "MIT",
+      "main": "./dist/index.js",
+      "module": "./dist/index.mjs",
+      "types": "./dist/index.d.ts",
+      "files": [
+          "dist/**"
+      ],
+      "repository": {
+          "type": "git",
+          "url": "https://github.com/HamzaAmar/pillar-ui",
+          "directory": "packages/pillar-utils"
       },
-      "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+      "homepage": "https://www.pillar-ui.com/",
+      "bugs": "https://github.com/HamzaAmar/pillar-ui/issues",
+      "author": {
+          "name": "Hamza Miloud Amar",
+          "email": "hamzamiloudamar@gmail.com"
+      },
+      "exports": {
+          ".": {
+              "import": {
+                  "types": "./dist/index.d.mts",
+                  "default": "./dist/index.mjs"
+              },
+              "require": {
+                  "types": "./dist/index.d.ts",
+                  "default": "./dist/index.js"
+              }
+          },
+          "./package.json": "./package.json"
+      },
+      "scripts": {
+          "build": "tsup",
+          "build:watch": "tsup --watch",
+          "lint": "eslint \"src/**/*.ts*\"",
+          "clean:turbo": "rimraf .turbo",
+          "clean:modules": "rimraf node_modules",
+          "clean:dist": "rimraf dist",
+          "clean": "npm-run-all clean:turbo clean:modules clean:dist",
+          "dev": "yarn build:watch",
+          "test": "vitest run",
+          "type:check": "tsc --noEmit"
+      },
+      "peerDependencies": {
+          "react": "^18.3.1"
+      },
+      "devDependencies": {
+          "@pillar-ui/eslint": "*",
+          "@pillar-ui/tsconfig": "*",
+          "@types/benchmark": "^2",
+          "@types/react": "^18.3.3",
+          "@types/react-dom": "^18.3.0",
+          "benchmark": "^2.1.4",
+          "eslint": "^8.57.0",
+          "npm-run-all": "^4.1.5",
+          "react": "^18.3.1",
+          "rimraf": "^6.0.1",
+          "tsup": "^8.2.4",
+          "typescript": "^5.5.4",
+          "vitest": "^2.1.6"
       }
-    },
-    "./package.json": "./package.json"
-  },
-  "scripts": {
-    "build": "tsup",
-    "build:watch": "tsup --watch",
-    "lint": "eslint \"src/**/*.ts*\"",
-    "clean:turbo": "rimraf .turbo",
-    "clean:modules": "rimraf node_modules",
-    "clean:dist": "rimraf dist",
-    "clean": "npm-run-all clean:turbo clean:modules clean:dist",
-    "dev": "yarn build:watch",
-    "test": "vitest run",
-    "type:check": "tsc --noEmit"
-  },
-  "peerDependencies": {
-    "react": "^18.3.1"
-  },
-  "devDependencies": {
-    "@pillar-ui/eslint": "*",
-    "@pillar-ui/tsconfig": "*",
-    "@types/benchmark": "^2",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "benchmark": "^2.1.4",
-    "eslint": "^8.57.0",
-    "npm-run-all": "^4.1.5",
-    "react": "^18.3.1",
-    "rimraf": "^6.0.1",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4",
-    "vitest": "^2.1.6"
   }
-}
+    
