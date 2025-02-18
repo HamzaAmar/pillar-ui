@@ -4,10 +4,10 @@ import { Quotes } from '@pillar-ui/icons'
 const Testimonial = () => {
   return (
     <Paper as="article" p="4" background="B2" border corner="3">
-      <Flex justify="between" direction="col" as={Paper} gap="6">
+      <Flex justify="between" direction="col" as={Paper} gap="4">
         <Flex gap="3" items="center">
           <Avatar variant="dashed" />
-          <Paper flow="2">
+          <Paper flow="1">
             <div>
               <Flex gap="2" items="center">
                 <Text size="4" weight="7">

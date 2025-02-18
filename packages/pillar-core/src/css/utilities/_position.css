@@ -1,3 +1,9 @@
+@property --PS {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0;
+}
+
 /* Position Classes */
 .P-relative {
   position: relative;
@@ -16,24 +22,24 @@
 }
 
 .P-start-start {
-  top: 0;
-  left: 0;
+  top: var(--PS);
+  left: var(--PS);
 }
 
 .P-start-center {
-  top: 0;
+  top: var(--PS);
   left: 50%;
   transform: translateX(-50%);
 }
 
 .P-start-end {
-  top: 0;
-  right: 0;
+  top: var(--PS);
+  right: var(--PS);
 }
 
 .P-center-start {
   top: 50%;
-  left: 0;
+  left: var(--PS);
   transform: translateY(-50%);
 }
 
@@ -45,22 +51,22 @@
 
 .P-center-end {
   top: 50%;
-  right: 0;
+  right: var(--PS);
   transform: translateY(-50%);
 }
 
 .P-end-start {
-  bottom: 0;
-  left: 0;
+  bottom: var(--PS);
+  left: var(--PS);
 }
 
 .P-end-center {
-  bottom: 0;
+  bottom: var(--PS);
   left: 50%;
   transform: translateX(-50%);
 }
 
 .P-end-end {
-  bottom: 0;
-  right: 0;
+  bottom: var(--PS);
+  right: var(--PS);
 }

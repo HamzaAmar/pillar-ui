@@ -7,7 +7,7 @@ export const CardMedia = () => {
     <Flex background="B1" border width="fit-content" p="4" corner="3" as={Paper} gap="6" items="center">
       <Paper flow="5">
         <div>
-          <Text size="5" weight="5">
+          <Text size="4" weight="5">
             Card Media Here
           </Text>
           <Text color="b" low size="4">

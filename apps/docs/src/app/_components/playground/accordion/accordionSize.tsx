@@ -5,18 +5,31 @@ function AccordionBase(props: any) {
   return (
     <Accordion {...props}>
       <AccordionItem value={1}>
-        <AccordionButton>Hello world</AccordionButton>
+        <AccordionButton>
+          <Text weight="5" size="4">
+            Hello World
+          </Text>
+        </AccordionButton>
         <AccordionPanel>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt hic debitis, neque accusamus atque
-          provident facilis vel ipsa illo officia aliquid dolore veritat iente at cum dolores.
+          <Text size="4" color="b" low>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos laborum distinctio officiis a eaque
+            perspiciatis itaque, fugiat quaerat! Natus beatae eius ullam sed repellendus aliquam provident quod fugiat
+            veniam recusandae.
+          </Text>
         </AccordionPanel>
       </AccordionItem>
       <AccordionItem value={2}>
-        <AccordionButton>Hello world</AccordionButton>
+        <AccordionButton>
+          <Text weight="5" size="4">
+            Hello World
+          </Text>
+        </AccordionButton>
         <AccordionPanel>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos laborum distinctio officiis a eaque
-          perspiciatis itaque, fugiat quaerat! Natus beatae eius ullam sed repellendus aliquam provident quod fugiat
-          veniam recusandae.
+          <Text size="4" color="b" low>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos laborum distinctio officiis a eaque
+            perspiciatis itaque, fugiat quaerat! Natus beatae eius ullam sed repellendus aliquam provident quod fugiat
+            veniam recusandae.
+          </Text>
         </AccordionPanel>
       </AccordionItem>
     </Accordion>
