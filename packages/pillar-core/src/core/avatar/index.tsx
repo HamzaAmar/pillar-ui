@@ -68,7 +68,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
     size = ctx?.size,
     corner = ctx?.corner,
     color = ctx?.color ?? 'p',
-    fallback = ctx?.fallback ?? <User strokeWidth="1.5" width="max(1.5em, 10px)" />,
+    fallback = ctx?.fallback ?? <User strokeWidth="1.5" />,
     src = '',
     className,
     title,
@@ -86,7 +86,7 @@ export const Avatar = forwardRef((props, forwardRef) => {
   })
 
   const content = isError ? (
-    <span className="F-c">{fallback}</span>
+    <span className="av-F F-c">{fallback}</span>
   ) : (
     // eslint-disable-next-line @next/next/no-img-element
     <img

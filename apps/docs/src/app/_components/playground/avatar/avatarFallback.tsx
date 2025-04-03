@@ -4,10 +4,13 @@ import { Users } from '@pillar-ui/icons'
 export const AvatarFallback = () => {
   return (
     <>
+      <Avatar fallback={<Users />} size="1" />
+      <Avatar fallback="4K" size="2" />
+      <Avatar fallback="HL" size="3" />
+      <Avatar fallback={<Users />} size="4" />
       <Avatar />
-      <Avatar fallback="HL" />
-      <Avatar fallback={<Users />} />
-      <Avatar fallback="4K" />
+      <Avatar fallback={12} size="6" />
+      <Avatar fallback={<Users />} size="7" />
     </>
   )
 }

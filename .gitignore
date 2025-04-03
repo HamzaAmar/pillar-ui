@@ -20,3 +20,4 @@ public/feed.xml
 
 # Contentlayer
 .contentlayer/
+.qodo

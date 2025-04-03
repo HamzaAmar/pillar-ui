@@ -21,6 +21,10 @@
   }
 }
 
+.av-F > svg {
+  width: max(1.5em, 10px);
+}
+
 .av-I {
   /* width: 100%; */
   object-fit: cover;
@@ -69,9 +73,9 @@
 }
 
 .av-G-stack > * + * {
-  margin-inline-start: -0.5em;
+  margin-inline-start: -1.25em;
 }
 
 .av-G-grid {
-  gap: 0.375em;
+  gap: 0.25em;
 }
