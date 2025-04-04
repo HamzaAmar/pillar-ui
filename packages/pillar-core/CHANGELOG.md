@@ -1,5 +1,20 @@
 # @pillar/core
 
+## 0.12.4
+
+### Patch Changes
+
+- a new release focused on fixing a issue in the core component library!
+
+  **What's New:**
+
+  - **Reliable Documentation:** Access our updated documentation at **https://pillar-ui.com**. This change resolves a previous issue with our search functionality.
+  - **Visually Improved Avatars:** We've refined the styling of avatars for a more consistent and polished look:
+    - SVG icons within avatars now render with uniform sizing.
+    - Stacked avatars now appear more cohesive with reduced spacing (Fixes #123).
+
+  These updates ensure you have access to reliable information and a more visually harmonious component library.
+
 ## 0.12.3
 
 ### Patch Changes
