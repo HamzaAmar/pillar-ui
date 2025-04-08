@@ -39,7 +39,7 @@ export function PillarSupport() {
       <div className="support--second Sf-4">
         <div className="get-started Sf-4">
           <Text weight="5" size="6">
-            Let's Get Started.
+            Let&apos;s Get Started.
           </Text>
           <Text size="4" color="b" low>
             Build faster and lighter. Experience the power of our streamlined design system.
