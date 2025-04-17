@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const tallyMark3 = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M8 5v14m4-14v14m4-14v14" />
-  </svg>
+  </Svg>
 )
 
 export default tallyMark3

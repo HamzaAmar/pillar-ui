@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const tv = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M12 18h0" />
-  </svg>
+  </Svg>
 )
 
 export default tv

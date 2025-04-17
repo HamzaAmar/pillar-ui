@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const temperature = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M8 9h4m4 0h6M8 13.5a4 4 0 1 0 4 0V5a2 2 0 1 0-4 0v8.5Z" />
-  </svg>
+  </Svg>
 )
 
 export default temperature

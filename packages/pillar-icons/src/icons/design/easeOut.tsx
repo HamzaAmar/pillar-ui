@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const easeOut = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M3 20S13 4 21 4" />
-  </svg>
+  </Svg>
 )
 
 export default easeOut

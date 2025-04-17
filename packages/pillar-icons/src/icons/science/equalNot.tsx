@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const equalNot = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M5 9h14M5 15h14m0-10L5 19" />
-  </svg>
+  </Svg>
 )
 
 export default equalNot

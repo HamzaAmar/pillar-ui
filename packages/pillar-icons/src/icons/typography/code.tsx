@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const justify = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="m7 8-4 4 4 4m10-8 4 4-4 4M14 4l-4 16" />
-  </svg>
+  </Svg>
 )
 
 export default justify

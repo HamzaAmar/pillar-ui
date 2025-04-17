@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const pennant = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M8 21h4m-2 0V3m0 1 9 4-9 4" />
-  </svg>
+  </Svg>
 )
 
 export default pennant

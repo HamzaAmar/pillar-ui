@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const ripple = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M18 5H7h3a4 4 0 1 1 0 8H7l6 6M7 9h11" />
-  </svg>
+  </Svg>
 )
 
 export default ripple

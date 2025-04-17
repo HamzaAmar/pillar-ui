@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const frame = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M4 7h16M4 17h16M7 4v16M17 4v16" />
-  </svg>
+  </Svg>
 )
 
 export default frame
