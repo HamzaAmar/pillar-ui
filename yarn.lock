@@ -3366,7 +3366,7 @@ __metadata:
     rollup-plugin-postcss: "npm:^4.0.2"
     rollup-preserve-directives: "npm:^1.1.2"
     sass: "npm:^1.77.8"
-    typescript: "npm:^5.5.4"
+    typescript: "npm:^5.8.3"
     vite: "npm:^5.4.11"
   peerDependencies:
     "@pillar-ui/hooks": ">=0.7 <1"
@@ -3403,7 +3403,7 @@ __metadata:
     remark-gfm: "npm:^4.0.0"
     rimraf: "npm:^6.0.1"
     sugar-high: "npm:^0.7.0"
-    typescript: "npm:^5.5.4"
+    typescript: "npm:^5.8.3"
   languageName: unknown
   linkType: soft
 
@@ -3417,7 +3417,7 @@ __metadata:
     eslint-config-turbo: "npm:^2.0.14"
     eslint-plugin-react: "npm:7.35.0"
     turbo: "npm:^2.4.2"
-    typescript: "npm:^5.7.3"
+    typescript: "npm:^5.8.3"
   languageName: unknown
   linkType: soft
 
@@ -3432,7 +3432,7 @@ __metadata:
     "@testing-library/react": "npm:^16.0.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
-    "@vitejs/plugin-react": "npm:^4.3.4"
+    "@vitejs/plugin-react": "npm:^4.4.1"
     eslint: "npm:^8.57.0"
     jsdom: "npm:^22.1.0"
     npm-run-all: "npm:^4.1.5"
@@ -3440,9 +3440,9 @@ __metadata:
     react-dom: "npm:^18.3.1"
     rimraf: "npm:^6.0.1"
     tsup: "npm:^8.2.4"
-    typescript: "npm:^5.5.4"
+    typescript: "npm:^5.8.3"
     vite: "npm:^5.4.11"
-    vitest: "npm:^2.1.6"
+    vitest: "npm:^2.1.9"
   peerDependencies:
     react: ">=18"
     react-dom: ">=18"
@@ -3462,7 +3462,7 @@ __metadata:
     react: "npm:^18.3.1"
     rimraf: "npm:^6.0.1"
     tsup: "npm:^8.2.4"
-    typescript: "npm:^5.5.4"
+    typescript: "npm:^5.8.3"
   peerDependencies:
     react: ">=18"
     react-dom: ">=18"
@@ -3488,7 +3488,7 @@ __metadata:
     "@storybook/react": "npm:^8.4.5"
     "@storybook/test": "npm:8.4.5"
     "@storybook/test-runner": "npm:^0.19.1"
-    "@vitejs/plugin-react": "npm:^4.3.4"
+    "@vitejs/plugin-react": "npm:^4.4.1"
     eslint-config-custom: "npm:*"
     npm-run-all: "npm:^4.1.5"
     react: "npm:^18.3.1"
@@ -3497,7 +3497,7 @@ __metadata:
     serve: "npm:^13.0.4"
     storybook: "npm:^8.4.5"
     storybook-addon-pseudo-states: "npm:^4.0.2"
-    typescript: "npm:^5.5.4"
+    typescript: "npm:^5.8.3"
     webpack: "npm:^5.93.0"
   languageName: unknown
   linkType: soft
@@ -3523,8 +3523,8 @@ __metadata:
     react: "npm:^18.3.1"
     rimraf: "npm:^6.0.1"
     tsup: "npm:^8.2.4"
-    typescript: "npm:^5.5.4"
-    vitest: "npm:^2.1.6"
+    typescript: "npm:^5.8.3"
+    vitest: "npm:^2.1.9"
   peerDependencies:
     react: ">=18"
   languageName: unknown
@@ -5486,9 +5486,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-react@npm:^4.3.4":
-  version: 4.4.0
-  resolution: "@vitejs/plugin-react@npm:4.4.0"
+"@vitejs/plugin-react@npm:^4.4.1":
+  version: 4.4.1
+  resolution: "@vitejs/plugin-react@npm:4.4.1"
   dependencies:
     "@babel/core": "npm:^7.26.10"
     "@babel/plugin-transform-react-jsx-self": "npm:^7.25.9"
@@ -5497,7 +5497,7 @@ __metadata:
     react-refresh: "npm:^0.17.0"
   peerDependencies:
     vite: ^4.2.0 || ^5.0.0 || ^6.0.0
-  checksum: 10c0/a3e71dd6f67cca6a2a9ef3a8176bb30b58926fc93c01fa3f15c374aaca0a49fdd01d91fb22b84031ec47175563ad20659167800b1373ede8c4f0b94452ccfeba
+  checksum: 10c0/0eda45f2026cdfff4b172b1b2148824e5ac41ce65f1f1ce108f3ce4de2f0024caf79c811c1305a782168a269b0b1bc58d4cf8eaf164e4ef19954f05428ba7077
   languageName: node
   linkType: hard
 
@@ -8696,9 +8696,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.73":
-  version: 1.5.138
-  resolution: "electron-to-chromium@npm:1.5.138"
-  checksum: 10c0/f8e8b334857c3f858bb9ba1fa78b211e4174682fcc62316669a7cad6c86bbd01883a6433841b32effec694f90542bc439f28926826bb7e48d285ba951b4772ec
+  version: 1.5.139
+  resolution: "electron-to-chromium@npm:1.5.139"
+  checksum: 10c0/1b468c0c02a38322261b50b12ed090ff792a0d2ea24f299368babd484d5b81829528540463158572a3524fd835014d877d6c4bf097509bdb13ca696609b04aca
   languageName: node
   linkType: hard
 
@@ -10152,14 +10152,14 @@ __metadata:
   linkType: hard
 
 "fdir@npm:^6.4.3":
-  version: 6.4.3
-  resolution: "fdir@npm:6.4.3"
+  version: 6.4.4
+  resolution: "fdir@npm:6.4.4"
   peerDependencies:
     picomatch: ^3 || ^4
   peerDependenciesMeta:
     picomatch:
       optional: true
-  checksum: 10c0/d13c10120e9625adf21d8d80481586200759928c19405a816b77dd28eaeb80e7c59c5def3e2941508045eb06d34eb47fad865ccc8bf98e6ab988bb0ed160fb6f
+  checksum: 10c0/6ccc33be16945ee7bc841e1b4178c0b4cf18d3804894cb482aa514651c962a162f96da7ffc6ebfaf0df311689fb70091b04dd6caffe28d56b9ebdc0e7ccadfdd
   languageName: node
   linkType: hard
 
@@ -21090,7 +21090,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.5.4, typescript@npm:^5.7.3":
+"typescript@npm:^5.8.3":
   version: 5.8.3
   resolution: "typescript@npm:5.8.3"
   bin:
@@ -21100,7 +21100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.5.4#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.7.3#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.8.3#optional!builtin<compat/typescript>":
   version: 5.8.3
   resolution: "typescript@patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"
   bin:
@@ -21918,7 +21918,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:^2.1.6":
+"vitest@npm:^2.1.9":
   version: 2.1.9
   resolution: "vitest@npm:2.1.9"
   dependencies:
