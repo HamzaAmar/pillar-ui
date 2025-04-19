@@ -1,5 +1,27 @@
 # @pillar/utils
 
+## 0.9.0
+
+### Minor Changes
+
+- ### Features
+
+  - Add new rotate CSS utilities (#f77eb21) Core Component
+
+  ### Fixes
+
+  - Typo in the Support Component (#abf55c5, #726eb90)
+  - Upgrade vitest and vite/react plugin to next versions (#194473a)
+  - Remove examples from the repo (#e9edad9)
+  - Address icon rendering issue on iOS by applying CSS transforms through classnames (#4bf22e5)
+  - New icons docs to support the changed ones (#8cb3884)
+  - Problem caused by switching React peerDeps to 18 and above (#7ea9999)
+  - Package formatter issue (#e840a0e)
+
+  ### Chores
+
+  - Make all the packages depend on react 18 and above (#162d427)
+
 ## 0.8.6
 
 ### Patch Changes
