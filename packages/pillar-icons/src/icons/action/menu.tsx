@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import { SvgType } from '../../type'
 
 const menu = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M4 6h16M4 12h16M4 18h16" />
-  </svg>
+  </Svg>
 )
 
 export default menu

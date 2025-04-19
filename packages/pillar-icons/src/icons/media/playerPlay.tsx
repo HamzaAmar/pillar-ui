@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const playerPlay = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M7 4v16l13-8L7 4Z" />
-  </svg>
+  </Svg>
 )
 
 export default playerPlay

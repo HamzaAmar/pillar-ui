@@ -1,0 +1,29 @@
+.Tr-l {
+  transform: rotate(-90deg);
+}
+
+.Tr-r {
+  transform: rotate(90deg);
+}
+
+.Tr-b {
+  transform: rotate(180deg);
+}
+
+.Tr-t {
+  transform: rotate(0);
+}
+
+.Tr-lt {
+  transform: rotate(-45deg);
+}
+
+.Tr-lb {
+  transform: rotate(-135deg);
+}
+.Tr-rt {
+  transform: rotate(45deg);
+}
+.Tr-rb {
+  transform: rotate(135deg);
+}

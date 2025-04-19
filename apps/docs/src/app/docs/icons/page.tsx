@@ -3,11 +3,10 @@ import { useState } from 'react'
 import * as ICONS from '@pillar-ui/icons'
 import { Button, Flex, Grid, Heading, Paper, Text } from '@pillar-ui/core'
 import iconJson from './icons.json'
-import { CopyButton } from '~/app/_components'
 
 const CATEGORIES: string[] = ['all', ...Object.keys(iconJson)]
 
-type ItemProps = [string, (props: ICONS.SvgType | ICONS.SvgWithDirection) => JSX.Element]
+type ItemProps = [string, (props: ICONS.SvgType) => JSX.Element]
 
 const IconsItem = ({ item }: { item: ItemProps }) => {
   const [name, Icon] = item

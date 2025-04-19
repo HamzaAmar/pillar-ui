@@ -1,46 +1,50 @@
-export { default as ArrowBarDown } from './arrowBarDown'
-export { default as ArrowBarRight } from './arrowBarRight'
-export { default as ArrowBarLeft } from './arrowBarLeft'
-export { default as ArrowBarTop } from './arrowBarTop'
-export { default as ArrowCircleDown } from './arrowCircleDown'
-export { default as ArrowCircleRight } from './arrowCircleRight'
-export { default as ArrowCircleTop } from './arrowCircleTop'
-export { default as ArrowCircleLeft } from './arrowCircleLeft'
-export { default as ArrowDown } from './arrowDown'
-export { default as ArrowLeft } from './arrowLeft'
-export { default as ArrowRight } from './arrowRight'
-export { default as ArrowTop } from './arrowTop'
-export { default as ArrowsDoubleDown } from './arrowsDoubleDown'
-export { default as ArrowsDoubleLeft } from './arrowsDoubleLeft'
-export { default as ArrowsDoubleRight } from './arrowsDoubleRight'
-export { default as ArrowsDoubleTop } from './arrowsDoubleTop'
-export { default as ArrowsDown } from './arrowsDown'
-export { default as ArrowsRight } from './arrowsRight'
-export { default as ArrowsLeft } from './arrowsLeft'
-export { default as ArrowsTop } from './arrowsTop'
-export { default as BigArrowDown } from './bigArrowDown'
-export { default as BigArrowRight } from './bigArrowRight'
-export { default as BigArrowLeft } from './bigArrowLeft'
-export { default as BigArrowTop } from './bigArrowTop'
-export { default as CaretDown } from './caretDown'
-export { default as CaretRight } from './caretRight'
-export { default as CaretLeft } from './caretLeft'
-export { default as CaretTop } from './caretTop'
-export { default as ChevronDown } from './chevronDown'
-export { default as ChevronTop } from './chevronTop'
-export { default as ChevronLeft } from './chevronLeft'
-export { default as ChevronRight } from './chevronRight'
-export { default as ChevronsDown } from './chevronsDown'
-export { default as ChevronsTop } from './chevronsTop'
-export { default as ChevronsLeft } from './chevronsLeft'
-export { default as ChevronsRight } from './chevronsRight'
-export { default as CornerDoubleDown } from './cornerDoubleDown'
-export { default as CornerDoubleLeft } from './cornerDoubleLeft'
-export { default as CornerDoubleRight } from './cornerDoubleRight'
-export { default as CornerDoubleTop } from './cornerDoubleTop'
-export { default as CornerRightArrow } from './cornerRightArrow'
-export { default as CornerDownArrow } from './cornerDownArrow'
-export { default as CornerTopArrow } from './cornerTopArrow'
-export { default as CornerLeftArrow } from './cornerLeftArrow'
+export { ArrowBarDown, ArrowBarLeft, ArrowBarRight, ArrowBarTop } from './arrowBar'
+export {
+  ArrowCircleDown,
+  ArrowCircleBottomLeft,
+  ArrowCircleBottomRight,
+  ArrowCircleLeft,
+  ArrowCircleRight,
+  ArrowCircleTop,
+  ArrowCircleTopLeft,
+  ArrowCircleTopRight,
+} from './arrowCircle'
+
+export {
+  ArrowDown,
+  ArrowBottomLeft,
+  ArrowBottomRight,
+  ArrowLeft,
+  ArrowRight,
+  ArrowTop,
+  ArrowTopLeft,
+  ArrowTopRight,
+} from './arrow'
+export {
+  ArrowsTop,
+  ArrowsBottomLeft,
+  ArrowsBottomRight,
+  ArrowsDown,
+  ArrowsLeft,
+  ArrowsRight,
+  ArrowsTopLeft,
+  ArrowsTopRight,
+} from './arrows'
+export { BigArrowDown, BigArrowLeft, BigArrowRight, BigArrowTop } from './bigArrow'
+export { CaretTop, CaretDown, CaretLeft, CaretRight } from './caret'
+
+export { ChevronTop, ChevronDown, ChevronLeft, ChevronRight } from './chevron'
+export {
+  ChevronsRight,
+  ChevronsBottomLeft,
+  ChevronsBottomRight,
+  ChevronsDown,
+  ChevronsLeft,
+  ChevronsTop,
+  ChevronsTopLeft,
+  ChevronsTopRight,
+} from './chevrons'
+export { CornerArrowTop, CornerArrowDown, CornerArrowLeft, CornerArrowRight } from './cornerArrow'
+export { CornersArrowDown, CornersArrowLeft, CornersArrowRight, CornersArrowTop } from './cornersArrow'
 export { default as Maximize } from './maximize'
 export { default as Minimize } from './minimize'

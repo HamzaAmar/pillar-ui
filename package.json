@@ -1,67 +1,67 @@
 {
-          "name": "pillar-monorepo",
-          "private": true,
-          "workspaces": [
-                    "apps/*",
-                    "packages/*"
-          ],
-          "description": "A monorepo containing a comprehensive set of reusable UI components, React hooks,Icons, and other tools for modern web development. Built with accessibility, scalability, and best practices in mind, this monorepo streamlines the development process and makes it easier than ever to build robust, high-quality web applications.",
-          "author": {
-                    "name": "Hamza Miloud Amar",
-                    "email": "hamzamiloudamar@gmail.com"
-          },
-          "keywords": [
-                    "react",
-                    "typescript",
-                    "design-system",
-                    "user-interface",
-                    "accessible",
-                    "a11y",
-                    "pillar-core",
-                    "pillar-icons",
-                    "pillar-hooks",
-                    "ui-components",
-                    "custom-hooks",
-                    "icons"
-          ],
-          "scripts": {
-                    "build": "turbo run build",
-                    "build:release": "turbo run build --filter=./packages/*",
-                    "dev": "turbo run dev",
-                    "info": "turbo run info",
-                    "lint": "turbo run lint",
-                    "clean": "turbo run clean && rm -rf node_modules",
-                    "test": "turbo run test",
-                    "type:check": "turbo run type:check",
-                    "type:check:release": "turbo run type:check --filter=./packages/*",
-                    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-                    "changeset": "changeset",
-                    "changeset:version": "changeset version",
-                    "pre-commit": "lint-staged",
-                    "prepare": "husky install",
-                    "lint-staged": "lint-staged",
-                    "lint-language": "alex .",
-                    "prettier:base": "prettier --parser typescript --write",
-                    "prettier:check": "yarn prettier:base --list-different \"packages/**/*.{ts,tsx}\"",
-                    "prettier:write": "yarn prettier:base \"src/**/*.{ts,tsx}\"",
-                    "validation": "yarn lint && yarn test",
-                    "ci": "yarn build && yarn validation && yarn type:check",
-                    "prerelease": "yarn build:release && yarn validation && yarn type:check:release",
-                    "release": "changeset publish"
-          },
-          "devDependencies": {
-                    "@changesets/changelog-github": "^0.5.0",
-                    "alex": "^11.0.1",
-                    "eslint-config-custom": "*",
-                    "husky": "^9.1.5",
-                    "lint-staged": "^15.2.9",
-                    "prettier": "^3.3.3",
-                    "turbo": "^2.0.14"
-          },
-          "packageManager": "yarn@4.6.0",
-          "dependencies": {
-                    "@changesets/cli": "^2.27.7",
-                    "algoliasearch": "^5.18.0"
-          },
-          "version": "0.0.0"
+  "name": "pillar-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "description": "A monorepo containing a comprehensive set of reusable UI components, React hooks,Icons, and other tools for modern web development. Built with accessibility, scalability, and best practices in mind, this monorepo streamlines the development process and makes it easier than ever to build robust, high-quality web applications.",
+  "author": {
+    "name": "Hamza Miloud Amar",
+    "email": "hamzamiloudamar@gmail.com"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "design-system",
+    "user-interface",
+    "accessible",
+    "a11y",
+    "pillar-core",
+    "pillar-icons",
+    "pillar-hooks",
+    "ui-components",
+    "custom-hooks",
+    "icons"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "build:release": "turbo run build --filter=./packages/*",
+    "dev": "turbo run dev",
+    "info": "turbo run info",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "test": "turbo run test",
+    "type:check": "turbo run type:check",
+    "type:check:release": "turbo run type:check --filter=./packages/*",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
+    "lint-language": "alex .",
+    "prettier:base": "prettier --parser typescript --write",
+    "prettier:check": "yarn prettier:base --list-different \"packages/**/*.{ts,tsx}\"",
+    "prettier:write": "yarn prettier:base \"src/**/*.{ts,tsx}\"",
+    "validation": "yarn lint && yarn test",
+    "ci": "yarn build && yarn validation && yarn type:check",
+    "prerelease": "yarn build:release && yarn validation && yarn type:check:release",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "alex": "^11.0.1",
+    "eslint-config-custom": "*",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3",
+    "turbo": "^2.0.14"
+  },
+  "packageManager": "yarn@4.6.0",
+  "dependencies": {
+    "@changesets/cli": "^2.27.7",
+    "algoliasearch": "^5.18.0"
+  },
+  "version": "0.0.0"
 }

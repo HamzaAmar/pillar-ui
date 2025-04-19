@@ -94,7 +94,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-preserve-directives": "^1.1.2",
     "sass": "^1.77.8",
-    "typescript": "^5.5.4",
+    "typescript": "^5.8.3",
     "vite": "^5.4.11"
   }
 }

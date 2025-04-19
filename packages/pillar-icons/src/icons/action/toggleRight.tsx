@@ -1,11 +1,11 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import { SvgType } from '../../type'
 
 const toggleRight = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M16 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
     <path d="M16 6H8a6 6 0 1 0 0 12h8a6 6 0 0 0 0-12Z" />
-  </svg>
+  </Svg>
 )
 
 export default toggleRight

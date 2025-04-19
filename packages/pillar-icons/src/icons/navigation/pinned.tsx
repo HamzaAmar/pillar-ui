@@ -1,10 +1,10 @@
-import { svgProps } from '../../shared'
+import { Svg } from '../../shared/svg'
 import type { SvgType } from '../../type'
 
 const pinned = (props: SvgType) => (
-  <svg {...svgProps} {...props}>
+  <Svg {...props}>
     <path d="M9 4v6l-2 4v2h10v-2l-2-4V4m-3 12v5M8 4h8" />
-  </svg>
+  </Svg>
 )
 
 export default pinned
