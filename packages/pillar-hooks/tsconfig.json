@@ -3,6 +3,6 @@
   "compilerOptions": {
     "types": ["vitest/globals"]
   },
-  "include": [".", "**/*.d.ts"],
+  "include": [".", "**/*.d.ts", "vitest.config.ts"],
   "exclude": ["dist", "build", "node_modules"]
 }
