@@ -1,4 +1,7 @@
 export { ArrowBarDown, ArrowBarLeft, ArrowBarRight, ArrowBarTop } from './arrowBar'
+export { ArrowTurnDown, ArrowTurnLeft, ArrowTurnRight, ArrowTurnTop } from './arrowTurn'
+export { ArrowTailDown, ArrowTailLeft, ArrowTailRight, ArrowTailTop } from './arrowTail'
+export { ArrowMoveDown, ArrowMoveLeft, ArrowMoveRight, ArrowMoveTop } from './arrowMove'
 export {
   ArrowCircleDown,
   ArrowCircleBottomLeft,
