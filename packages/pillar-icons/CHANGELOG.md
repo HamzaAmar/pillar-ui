@@ -1,5 +1,19 @@
 # @pillar/icons
 
+## 0.9.1
+
+### Patch Changes
+
+- ## Fixes
+
+  - fix: remove repeated icons
+  - fix: remove examples from the jsDoc to make it more readable
+  - fix: remove examples from jsDocs and fix typescript issue in getURLParameters
+
+  ## Features
+
+  - feat: add new icons to the icons package
+
 ## 0.9.0
 
 ### Minor Changes

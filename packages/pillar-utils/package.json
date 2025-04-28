@@ -1,6 +1,6 @@
 {
   "name": "@pillar-ui/utils",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "sideEffects": false,
   "description": "A collection of utility functions and tools to assist with common tasks and improve the efficiency of web development. These utilities are carefully crafted to enhance productivity and streamline the development process.",
   "keywords": [
