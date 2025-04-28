@@ -25,21 +25,6 @@ import { useState } from 'react'
  *   - **decrement**: A function to decrement the counter by a specified amount (default is 1).
  *   - **reset**: A function to reset the counter to its initial value or the minimum value.
  *   - **setCount**: A setter function to update the counter value.
- *
- * @example
- * // Example usage in a functional component:
- * function CounterComponent() {
- *   const { count, increment, decrement, reset } = useCounter({ value: 0, min: 0, max: 10, step: 1 });
- *
- *   return (
- *     <div>
- *       <p>Count: {count}</p>
- *       <button onClick={() => increment(1)}>Increment</button>
- *       <button onClick={() => decrement(1)}>Decrement</button>
- *       <button onClick={reset}>Reset</button>
- *     </div>
- *   );
- * }
  */
 const clamp = (value: number, [min, max]: [number, number]) => Math.min(max, Math.max(min, value))
 

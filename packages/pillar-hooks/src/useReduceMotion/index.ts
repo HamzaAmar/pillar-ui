@@ -8,18 +8,6 @@ import type { UseMediaQueryOptions } from '../useMediaQuery'
  * @param {UseMediaQueryOptions} [options] - The optional options object for the `useMediaQuery` hook.
  *
  * @returns {boolean} - `true` if the user has enabled "reduce motion" preference, otherwise `false`.
- *
- * @example
- * // Example usage in a functional component:
- * function AnimationComponent() {
- *   const isReducedMotion = useReducedMotion();
- *
- *   return (
- *     <div>
- *       {isReducedMotion ? <p>Animations are disabled.</p> : <p>Animations are enabled.</p>}
- *     </div>
- *   );
- * }
  */
 export function useReducedMotion(initialValue?: boolean, options?: UseMediaQueryOptions) {
   return useMediaQuery('(prefers-reduced-motion: reduce)', initialValue, options)
