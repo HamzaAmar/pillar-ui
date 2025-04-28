@@ -18,23 +18,6 @@ import { usePersistentCallback } from '../usePersistentCallback'
  *   - **stop**: Stop the interval.
  *   - **toggle**: Toggle the interval (start if inactive, stop if active).
  *   - **active**: A boolean indicating whether the interval is currently active.
- *
- * @example
- * // Example usage in a functional component:
- * function IntervalComponent() {
- *   const { start, stop, toggle, active } = useInterval(() => {
- *     console.log('Interval tick');
- *   }, 1000);
- *
- *   return (
- *     <div>
- *       <p>Interval is {active ? 'active' : 'inactive'}</p>
- *       <button onClick={start}>Start Interval</button>
- *       <button onClick={stop}>Stop Interval</button>
- *       <button onClick={toggle}>Toggle Interval</button>
- *     </div>
- *   );
- * }
  */
 
 export function useInterval(callback: () => void, interval: number = 150) {

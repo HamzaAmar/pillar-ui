@@ -8,31 +8,6 @@ import type { RefObject } from 'react'
  * @param {(event: Event) => void} handler - The handler function to be executed when a click outside the element occurs.
  *
  * @returns {React.RefObject<T>} - A ref object that should be attached to the DOM element you want to track clicks outside of.
- *
- * @example
- * // Example usage in a functional component:
- * import { useState } from 'react';
- *
- * function ClickOutsideComponent() {
- *   const [isOpen, setOpen] = useState(false);
- *
- *   const handleOutsideClick = () => {
- *     setOpen(false);
- *   };
- *
- *   const outsideRef = useClickOutside(handleOutsideClick);
- *
- *   return (
- *     <div>
- *       <button onClick={() => setOpen(!isOpen)}>Toggle Menu</button>
- *       {isOpen && (
- *         <div ref={outsideRef} style={{ border: '1px solid black', padding: '10px' }}>
- *           Click outside this box to close the menu.
- *         </div>
- *       )}
- *     </div>
- *   );
- * }
  */
 
 export const useClickOutside = <T extends HTMLElement = HTMLElement>(

@@ -13,25 +13,6 @@ type CopyFn = (text: string) => Promise<boolean>
  *   copy: CopyFn,
  *   copied: boolean
  * }} - An object containing the current copied text, the copy function, and the copied state.
- *
- * @example
- * // Example usage in a functional component:
- * import { useCopyToClipboard } from '@pillar-ui/hooks'; // Adjust the path accordingly
- *
- * function CopyToClipboardComponent() {
- *   const { text, copy, copied } = useCopyToClipboard(500);
- *
- *   const handleCopyClick = () => {
- *     copy('Text to copy');
- *   };
- *
- *   return (
- *     <div>
- *       <button onClick={handleCopyClick}>Copy to Clipboard</button>
- *       {copied ? <p>Copied: {text}</p> : null}
- *     </div>
- *   );
- * }
  */
 type Initial = [CopiedValue, boolean]
 const initial: Initial = [null, false]
