@@ -3,7 +3,6 @@ import { useCallback } from 'react'
 type RefType<T> = React.Ref<T> | undefined
 
 export function useComposedRefs<T>(...refs: RefType<T>[]) {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   return useCallback(
     (node: T) => {
       refs.forEach((ref) => {

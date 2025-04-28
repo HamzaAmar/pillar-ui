@@ -6,23 +6,6 @@ import { useState, useEffect } from 'react'
  * @param {React.RefObject<HTMLElement>} elementRef - A ref object pointing to the target HTMLElement.
  *
  * @returns {ElementSize} - An object containing various dimension properties of the element.
- *
- * @example
- * // Example usage in a functional component:
- * import { useRef } from 'react';
- * import { useDimension } from '@pillar-ui/hooks'; // Adjust the path accordingly
- *
- * function DimensionComponent() {
- *   const elementRef = useRef(null);
- *   const size = useDimension(elementRef);
- *
- *   return (
- *     <div ref={elementRef}>
- *       <p>Element Width: {size.width}px</p>
- *       <p>Element Height: {size.height}px</p>
- *     </div>
- *   );
- * }
  */
 
 export const useDimension = (elementRef: React.RefObject<HTMLElement>) => {

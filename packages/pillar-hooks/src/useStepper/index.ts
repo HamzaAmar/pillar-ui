@@ -27,28 +27,6 @@ import { useCallback, useState } from 'react'
  *   - **goToFirst**: A function to jump to the first step in the sequence.
  *   - **isFirst**: `true` if the step step is the first step, otherwise `false`.
  *   - **isLast**: `true` if the step step is the last step, otherwise `false`.
- *
- * @example
- * // Example usage in a functional component:
- * function StepperComponent() {
- *   const totalSteps = 3;
- *   const { step, goToNext, goToPrevious, jumpTo, isFirst, isLast } = useStepper(totalSteps);
- *
- *   return (
- *     <div>
- *       <h1>Step {step}</h1>
- *       <button onClick={goToPrevious} disabled={isFirst}>
- *         Previous
- *       </button>
- *       <button onClick={goToNext} disabled={isLast}>
- *         Next
- *       </button>
- *       <button onClick={() => jumpTo(1)}>Go to Step 1</button>
- *       <button onClick={() => jumpTo(2)}>Go to Step 2</button>
- *       <button onClick={() => jumpTo(3)}>Go to Step 3</button>
- *     </div>
- *   );
- * }
  */
 export function useStepper(max: number, initial: number = 0) {
   const [step, setStep] = useState(initial)

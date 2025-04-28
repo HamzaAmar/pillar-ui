@@ -18,21 +18,6 @@ import { useCallback, useState } from 'react'
  *   - **setTrue**: A function to set the boolean state to `true`.
  *   - **setFalse**: A function to set the boolean state to `false`.
  *   - **toggle**: A function to toggle the boolean state (from `true` to `false` or vice versa).
- *
- * @example
- * // Example usage in a functional component:
- * function BooleanComponent() {
- *   const { value, setTrue, setFalse, toggle } = useBool(true);
- *
- *   return (
- *     <div>
- *       <p>Boolean Value: {value ? 'True' : 'False'}</p>
- *       <button onClick={setTrue}>Set True</button>
- *       <button onClick={setFalse}>Set False</button>
- *       <button onClick={toggle}>Toggle</button>
- *     </div>
- *   );
- * }
  */
 
 export const useBool = (defaultValue: boolean = false) => {

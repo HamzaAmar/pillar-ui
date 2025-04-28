@@ -5,9 +5,6 @@
  * @param {number} params.min - The minimum value of the range.
  * @param {number} params.max - The maximum value of the range.
  * @returns {boolean} Returns true if the number is within the range, false otherwise.
- * @example
- * isInRange({ num: 5, min: 1, max: 10 }); // true
- * isInRange({ num: 15, min: 1, max: 10 }); // false
  */
 
 interface Range {
