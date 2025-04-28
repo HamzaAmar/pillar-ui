@@ -19,22 +19,6 @@ export function getDirectionInitial(element: HTMLElement): Direction {
  *   directionScript: JSX.Element,
  *   toggleDirection: () => void
  * }} - An object containing text direction state, direction toggling function, and direction script element.
- *
- * @example
- * // Example usage in a functional component:
- * import { useDirection } from '@pillar-ui/hooks'; // Adjust the path accordingly
- *
- * function DirectionComponent() {
- *   const { isLtr, toggleDirection, directionScript } = useDirection();
- *
- *   return (
- *     <div>
- *       <button onClick={toggleDirection}>Toggle Direction</button>
- *       <p>Current direction: {isLtr ? 'LTR' : 'RTL'}</p>
- *       {directionScript}
- *     </div>
- *   );
- * }
  */
 
 export function useDirection(element?: HTMLElement) {

@@ -50,30 +50,6 @@ function setupEventEffects(handleFullscreenChange: any, handleFullscreenError: a
  *   - `enterFullscreen`: A function to enter fullscreen mode.
  *   - `exitFullscreen`: A function to exit fullscreen mode.
  *   - `toggleFullscreen`: A function to toggle fullscreen mode.
- *
- * @example
- * 
- * ```tsx
-*   import React from 'react';
-*   import useFullscreen from './useFullscreen';
-
-*   const App = () => {
-*     const [isFullscreen, enterFullscreen, exitFullscreen] = useFullscreen();
-*   
-*     return (
-*               <div>
-*                 <h1>My Fullscreen App</h1>
-*                 <button onClick={enterFullscreen}>Enter Fullscreen</button>
-*                 <button onClick={exitFullscreen}>Exit Fullscreen</button>
-*                 <div className={isFullscreen ? 'fullscreen-element' : ''}>
-*                       // You content here
-*                 </div>
-*               </div>
-*         );
-*       };
-*       
-*       export default App;
-* ```
  */
 
 export const useFullscreen = () => {

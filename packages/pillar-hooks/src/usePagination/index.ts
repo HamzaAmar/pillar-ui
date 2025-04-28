@@ -29,33 +29,6 @@ export interface UsePaginationProps {
  *   - isFirst: A boolean indicating if the step page is the first page.
  *   - isLast: A boolean indicating if the step page is the last page.
  *   - goTo: A function to navigate to a specific page.
- *
- * @example
- * // Example usage in a functional component:
- * function PaginationComponent() {
- *   const max = 10;
- *   const { range, step, isFirst, isLast, goTo } = usePagination({ max, perView: 5 });
- *
- *   return (
- *     <div>
- *       <button onClick={() => goTo(step - 1)} disabled={isFirst}>
- *         Previous
- *       </button>
- *       {range.map((step, index) => (
- *         <span key={index}>
- *           {step === '.' ? '...' : (
- *             <button onClick={() => goTo(step)} disabled={step === step}>
- *               {step}
- *             </button>
- *           )}
- *         </span>
- *       ))}
- *       <button onClick={() => goTo(step + 1)} disabled={isLast}>
- *         Next
- *       </button>
- *     </div>
- *   );
- * }
  */
 function range(start: number, end: number) {
   if (typeof start !== 'number' || typeof end !== 'number' || isNaN(start) || isNaN(end)) return []

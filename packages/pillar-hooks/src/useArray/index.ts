@@ -36,26 +36,6 @@ type Position = 'first' | 'last' | number
  *   - **add**: A function to add an element to the array at the specified position.
  *   - **clear**: A function to clear the array by setting it to an empty array.
  *   - **setArr**: A setter function to update the array state.
- *
- * @example
- * // Example usage in a functional component:
- * function ArrayComponent() {
- *   const { arr, first, last, isEmpty, getIndex, hasElement, remove, add, clear } = useArray([1, 2, 3]);
- *
- *   return (
- *     <div>
- *       <p>Array: {arr.join(', ')}</p>
- *       <p>First Element: {first}</p>
- *       <p>Last Element: {last}</p>
- *       <p>Is Empty: {isEmpty ? 'Yes' : 'No'}</p>
- *       <p>Index of 2: {getIndex(2)}</p>
- *       <p>Has Element 3: {hasElement(3) ? 'Yes' : 'No'}</p>
- *       <button onClick={() => remove('first')}>Remove First Element</button>
- *       <button onClick={() => add(4, 'last')}>Add 4 at Last</button>
- *       <button onClick={clear}>Clear Array</button>
- *     </div>
- *   );
- * }
  */
 
 export const useArray = <T = unknown>(initialValue: T[] = []) => {

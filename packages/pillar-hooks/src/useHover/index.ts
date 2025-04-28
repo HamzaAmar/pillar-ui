@@ -7,17 +7,6 @@ import { useState, useCallback } from 'react'
  *   An object containing hover event handlers and the current hover state.
  *   - hoverHandlers: An object with `onMouseEnter` and `onMouseLeave` event handlers.
  *   - isHovered: A boolean representing the current hover state of the element.
- *
- * @example
- * function MyComponent() {
- *   const { hoverHandlers, isHovered } = useHover();
- *
- *   return (
- *     <div {...hoverHandlers}>
- *       {isHovered ? 'Hovered' : 'Not Hovered'}
- *     </div>
- *   );
- * }
  */
 export function useHover() {
   const [isHovered, setIsHovered] = useState(false)

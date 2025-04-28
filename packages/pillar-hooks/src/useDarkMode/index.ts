@@ -32,22 +32,6 @@ function ejectClassNameMode(mode: Mode = 'light') {
  *   toggleMode: () => void,
  *   modeScript: JSX.Element
  * }} - An object containing dark mode state, mode toggling function, and mode script element.
- *
- * @example
- * // Example usage in a functional component:
- * import { useDarkMode } from '@pillar-ui/hooks'; // Adjust the path accordingly
- *
- * function DarkModeComponent() {
- *   const { isDark, toggleMode, modeScript } = useDarkMode();
- *
- *   return (
- *     <div>
- *       <button onClick={toggleMode}>Toggle Dark Mode</button>
- *       <p>Current mode: {isDark ? 'Dark' : 'Light'}</p>
- *       {modeScript}
- *     </div>
- *   );
- * }
  */
 
 export function useDarkMode() {

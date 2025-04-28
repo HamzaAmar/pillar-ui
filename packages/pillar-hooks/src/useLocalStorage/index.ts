@@ -44,30 +44,6 @@ export const storageService = {
  *   setValue: (value: T | ((prevValue: T) => T)) => void,
  *   removeValue: () => void
  * }} - An object containing the current stored value, a function to set the value, and a function to remove the value.
- *
- * @example
- * // Example usage in a functional component:
- * import { useState } from 'react';
- * import { useLocalStorage } from '@pillar-ui/hooks'; // Adjust the path accordingly
- *
- * function LocalStorageComponent() {
- *   const { value, setValue, removeValue } = useLocalStorage({
- *     key: 'myKey',
- *     initialValue: '',
- *   });
- *
- *   return (
- *     <div>
- *       <p>Stored Value: {value}</p>
- *       <input
- *         type="text"
- *         value={value}
- *         onChange={(e) => setValue(e.target.value)}
- *       />
- *       <button onClick={removeValue}>Remove Value</button>
- *     </div>
- *   );
- * }
  */
 export function useLocalStorage<T>({
   key,

@@ -10,28 +10,6 @@ type IntersectionObserverOptions = IntersectionObserverInit & {
  * @param {IntersectionObserverOptions} options - Options for the Intersection Observer.
  * @param {IntersectionObserverCallback} callback - The callback function to be invoked when intersections change.
  * @returns {void}
- *
- * @example
- * // Example usage in a functional component:
- * import { useRef } from 'react';
- * import { useIntersectionObserver } from '@pillar-ui/hooks'; // Adjust the path accordingly
- *
- * function IntersectionComponent() {
- *   const targetRef = useRef();
- *   const handleIntersection = (entries) => {
- *     entries.forEach((entry) => {
- *       console.log('Element is in viewport:', entry.isIntersecting);
- *     });
- *   };
- *
- *   useIntersectionObserver(targetRef, { threshold: 0.5 }, handleIntersection);
- *
- *   return (
- *     <div ref={targetRef} style={{ height: '300px', overflow: 'scroll' }}>
- *       Scroll down to see intersection events
- *     </div>
- *   );
- * }
  */
 export const useIntersectionObserver = (
   ref: React.RefObject<HTMLElement> | Array<React.RefObject<HTMLElement>>,
