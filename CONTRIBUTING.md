@@ -19,15 +19,8 @@ To get started:
 ## How to Contribute
 
 1. **Fork and clone** the [Pillar repository](https://github.com/HamzaAmar/pillar-ui).
-2. **Install dependencies**:
-   ```bash
-   yarn
-   ```
-3. **Start the development environment**:
-
-   ```bash
-   yarn dev
-   ```
+2. **Install dependencies**: `yarn`
+3. **Start the development environment**:`yarn dev`
 
    This will:
 
