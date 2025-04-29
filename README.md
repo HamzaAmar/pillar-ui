@@ -6,19 +6,20 @@ Pillar is a modern design system built with React, with the goal of providing a 
 
 ## Features
 
-- **Accessibility**: All components are designed to be fully accessible, following the latest WCAG 2.1 guidelines support high contrast mode and prefer-reduced-motion..
-- **Modularity**: Components are designed to be modular, quick to customize and extend, and can be used individually or together to build complex User Interfaces.
-- **Consistency**: A consistent visual language and naming conventions are used across components to make them easier to learn and use.
-- **Responsive**: Components are designed to be responsive and work across a range of devices and screen sizes and screen modes
-- **Theming**: Components are designed to be themable and can be quickly customized to match your brand or application.
-- **Icon Component**: A customizable icon component is included, with a range of pre-built icons available.
-- **Hooks**: A set of hooks are included to make common UI interactions (such as toggling a menu) easier to implement.
-- **Usability**: Respects UX principles and guidelines, providing a consistent and intuitive user experience.
-- **Flexibility**: Works with variants, allowing for greater flexibility and customization of components.
+- **Lightweight**: Only 11KB. Built as a lightweight alternative with full support for RTL languages, TypeScript, dark mode, and customization at both global and component levels.
+- **Accessibility**: Fully compliant with WCAG 2.1 guidelines, including color contrast, high contrast mode, semantic markup, keyboard navigation, text resizing, and reduced-motion support.
+- **Modularity**: Each component is standalone and extensible, allowing for flexible usage in isolation or in combination for building complex UIs.
+- **Consistency**: Promotes a unified design language and consistent naming conventions for better usability and developer experience.
+- **Flexibility**: Offers variants and customization options while following best practices in CSS and JavaScript to reduce bundle size and boost runtime performance.
+- **Responsive**: Built with fluid design principles. Spacing, typography, and layout adapt seamlessly across screen sizes by default.
+- **Theming**: Powered by CSS variables, making it easy to create and apply custom themes that reflect any brand or application style.
+- **Icon Component**: Includes a fully customizable icon component with a rich set of prebuilt icons.
+- **Hooks**: Ships with helpful React hooks to simplify UI interactions like toggling menus and handling user input.
+- **Usability**: Designed with UX best practices to ensure a consistent, intuitive, and accessible experience for users.
 
 ## Installation
 
-Before You Install we need to let you know that pillar divided to three packages (core, hooks, icons), First to install choose which on of the package you need We make it separate to make bundle size small and use what you need `Core` `Icons` `Hooks`
+Before You Install we need to let you know that pillar contain four packages (core, hooks,utils icons).
 
 ```bash
 # you can install all of them or only what you need
@@ -65,67 +66,17 @@ function MyComponent() {
 }
 ```
 
-## Security Policy
-
-Please see our [Security Policy](https://github.com/HamzaAmar/pillar-ui/blob/main/SECURITY.md) for information on how to report security vulnerabilities and our disclosure policy.
-
 ## Contributing
 
-We welcome contributions to Pillar-ui, whether that's through reporting issues, submitting feature requests, or contributing code. Here's how you can get involved:
-
-## Reporting Security Vulnerabilities
-
-Pillar-ui takes security very seriously. If you find a security vulnerability in Pillar-ui, please report it as soon as possible. You can report security vulnerabilities by following these steps:
-
-1. Create an issue on the Pillar-ui GitHub repository.
-1. In the issue, provide as much information as possible about the vulnerability, including:
-   - A description of the vulnerability
-   - Steps to reproduce the vulnerability
-   - Any other information that may be helpful in understanding or fixing the vulnerability
-1. Do not share the vulnerability with anyone else until it has been fixed.
-
-We will investigate all security vulnerabilities reported to us and take appropriate action to fix them. We will also work with you to ensure that your report is kept confidential.
-
-Thank you for helping to keep Pillar-ui secure!
-
-Here are some additional tips for reporting security vulnerabilities:
-
-- Be as specific as possible when describing the vulnerability.
-- Provide steps to reproduce the vulnerability, if possible.
-- Do not share the vulnerability with anyone else until it has been fixed.
-- Be patient. It may take some time for the vulnerability to be fixed.
-
-## Submitting Feature Requests
-
-If there's a feature you'd like to see added to Pillar-ui, please open an issue on our GitHub repository and provide as much detail as possible about the feature you're requesting. We'll review your request and consider it for inclusion in a future release.
-
-## Contributing Code
-
-If you'd like to contribute code to Pillar-ui, we'd be thrilled to have your help! Before getting started, please review our contributing guidelines for information on our coding standards, development workflow, and other important details.
-
-Once you're ready to contribute, please fork our GitHub repository and create a new branch for your changes. When you're ready to submit your changes, please create a pull request and provide a clear description of the changes you've made and why they're necessary.
-
-We review all pull requests and will work with you to ensure your changes are merged as smoothly as possible. Thank you for your interest in contributing to Pillar-ui!
-
-## Development and Maintenance
-
-Pillar-ui is an open-source project that welcomes contributions from the community. The project is maintained by a team of dedicated developers who work to ensure that the library is up to date, secure, and easy to use.
-
-## Issue Triage
-
-When issues are reported, they are triaged by the Pillar-ui team to ensure that they are valid and that they have not already been reported. Once an issue has been validated, it is assigned a priority based on its severity and impact. Issues are then added to the project board, which is used to track the progress of the issue and ensure that it is resolved in a timely manner.
-
-## Pull Requests
-
-Pull requests are welcome and should follow the guidelines outlined in the CONTRIBUTING.md file. Once a pull request is submitted, it is reviewed by the Pillar-ui team, who will provide feedback and suggest any necessary changes. Once the pull request is approved, it will be merged into the main branch and included in the next release.
-
-## Releases
-
-Pillar-ui releases are managed using Semantic Versioning. When a new release is ready, the team will create a release branch and begin the process of testing and preparing the release. Once the release has been thoroughly tested and is ready for deployment, it will be merged into the main branch and published to NPM.
+We welcome contributions to Pillar-ui, whether that's through reporting issues, submitting feature requests, or contributing code. [For More Information Check CONTRIBUTING.md file](https://github.com/HamzaAmar/pillar-ui/blob/main/CONTRIBUTING.md)
 
 ## Roadmap
 
 We are constantly working to improve Pillar-ui and add new features to the library. Our roadmap includes plans to improve accessibility, add new components, and improve the documentation. We welcome feedback and suggestions from the community and encourage you to get involved in the development process.
+
+## Security Policy
+
+Please see our [Security Policy](https://github.com/HamzaAmar/pillar-ui/blob/main/SECURITY.md) for information on how to report security vulnerabilities and our disclosure policy.
 
 ## Sponsor Pillar-ui
 
