@@ -1,5 +1,5 @@
 ---
-title: Pillar ui Getting started with Remix
+title: Remix
 type: getting-started
 excerpt: 'Welcome to the Pillar project! This Library houses a comprehensive collection of reusable UI components, React hooks, Icons, and other tools designed to enhance modern web development. With a focus on accessibility, scalability, and best practices, Pillar streamlines the development process and empowers you to build robust, high-quality web applications.'
 lastModified: '2024-07-31T05:35:07.322Z'
@@ -7,8 +7,6 @@ publishedAt: '2024-05-03T05:35:07.322Z'
 ---
 
 # Getting Started with Pillar UI
-
-Welcome to Pillar UI! This powerful library offers a wide range of reusable UI components, React hooks, icons, and tools to simplify your web development process. While our primary focus is on performance and a small bundle size, we also prioritize accessibility, scalability, and best practices, helping you build robust and high-quality web applications with ease.
 
 ## Quick Start Guide
 
@@ -19,7 +17,7 @@ Welcome to Pillar UI! This powerful library offers a wide range of reusable UI c
 
     Install Pillar UI in your project:
 
-    ```bash
+    ```node
     npm install @pillar-ui/core
     ```
 
@@ -35,10 +33,16 @@ Welcome to Pillar UI! This powerful library offers a wide range of reusable UI c
     <div className="Sf-4">
 ### Adding Styles
 
-    Import the Pillar UI CSS file in your main app file:
+    Import the Pillar UI CSS file in your main root file
+
+
 
     ```tsx
-    import '@pillar-ui/core/main.css'
+        import styles from "@pillar-ui/core/main.css";
+
+    export const links: LinksFunction = () => [
+      { rel: "stylesheet", href: styles },
+    ];
     ```
         </div>
 
@@ -47,38 +51,37 @@ Welcome to Pillar UI! This powerful library offers a wide range of reusable UI c
     <div className="Sf-4">
 ### Customizing Your Theme
 
-    In Pillar, we offer a comprehensive color palette consisting of 7 default colors, each with 12 variants and support for light and dark modes: `p`(Primary), `se`(Secondary), `su`(Success), `d`(Danger), `w`(Warning), `i`(Info), Background (`b`).
+pillar ui add theming by default with css variables if you want to customize something in your theme follow this instructions
 
-     This robust system allows for extensive customization via a `theme.css` file, where you can not only modify these colors but also adjust other design elements such as spacing, shadows,font-size, radius.
+1. Create a new file in your project called `theme.css` and add the following code:
 
-    we strongly advise prioritizing color adjustments for the primary and secondary colors. The remaining colors are often intrinsically linked to specific states or meanings within the system, and altering them could inadvertently impact user comprehension and overall experience.
+2. Add only the variables that you want to change to match you theme for more information take a closer look to the theme section if you are in the phone please try to open the sidebar and go to the them section
 
-    By adhering to this guideline, you can ensure a cohesive and intuitive user interface while still enjoying the flexibility to express your brand identity through thoughtful color choices.
+   ```css
+   :root {
+     --Pl-1: hsl(225deg 60% 99.4%);
+     --Pl-2: hsl(223deg 100% 98.6%);
+     /* ... */
+     --Pl-11: hsl(226deg 55% 45%);
+     --Pl-12: hsl(226dg 62% 17%);
 
-    ```css
-    :root {
-      --Pl-1: hsl(225deg 60% 99.4%);
-      --Pl-2: hsl(223deg 100% 98.6%);
-      /* ... */
-      --Pl-11: hsl(226deg 55% 45%);
-      --Pl-12: hsl(226dg 62% 17%);
+     /* dark colors */
+     --Pd-1: hsl(229deg 24% 10%);
+     --Pd-2: hsl(230deg 36.4% 12.9%);
+     /* ... */
+     --Pd-11: hsl(228deg 100% 75.9%);
+     --Pd-12: hsl(226deg 8% 96.3%);
+   }
+   ```
 
-      /* dark colors */
-      --Pd-1: hsl(229deg 24% 10%);
-      --Pd-2: hsl(230deg 36.4% 12.9%);
-      /* ... */
-      --Pd-11: hsl(228deg 100% 75.9%);
-      --Pd-12: hsl(226deg 8% 96.3%);
-    } /* Add dark mode custom properties here */
-    ```
+3. Import your theme file after the main Pillar UI CSS:
 
-    Import your theme file after the main Pillar UI CSS:
+   ```tsx
+   import '@pillar-ui/core/main.css'
+   import './theme.css'
+   ```
 
-    ```tsx
-    import '@pillar-ui/core/main.css'
-    import './theme.css'
-    ```
-        </div>
+</div>
 
   </TimelineItem>
 
@@ -108,37 +111,18 @@ Welcome to Pillar UI! This powerful library offers a wide range of reusable UI c
   </TimelineItem>
       <TimelineItem content="5">
     <div className="Sf-4">
-### Developer experience
 
-      Pillar UI enhances your development experience (DX) with simple workflows for component implementation and customization. It eliminates repetitive styling code and offers customization options to fit your project requirements.
+    ### Developer experience
 
-      - Responsive Variables: Control component appearance easily with responsive variables.
-      - Preventing Repetition: Avoid repetitive styling by using predefined styles and variables.
-      - Customization and Extensibility: Customize Pillar UI to match your project's design language and branding.
+    Pillar UI is built with developer experience (DX) in mind. We make it easy to customize default styles—for example, if you prefer sharp buttons instead of rounded ones, you can change it with one line of code even across your entire project or just a sub-tree of components.
 
-      ```css
-      /*
-      //////////////////////////////////////////////////////////////////////////////////////////////////
-        Theme Section
-      //////////////////////////////////////////////////////////////////////////////////////////////////
-      */
-
-      /*  Define custom theme styles here  */
-
-      /*
-      //////////////////////////////////////////////////////////////////////////////////////////////////
-        Default Properties Section
-      //////////////////////////////////////////////////////////////////////////////////////////////////
-      */
-
-      :root {
-        --button-rad: 0;
-        --avatar-rad: 0;
-        --badge-rad: 0;
-      }
-      ```
-
-      Set `--button-rad`, `--avatar-rad`, and `--badge-rad` to 0 for sharp corners on buttons, avatars, and badges.
+        ```css
+            :root {
+              --button-rad: 0;
+              --avatar-rad: 0;
+              --badge-rad: 0;
+            }
+        ```
 
     </div>
 
@@ -156,15 +140,3 @@ We value your feedback! Help us improve Pillar UI by sharing your experience and
 ## Troubleshooting
 
 If you encounter any issues while integrating Pillar UI, refer to the [Troubleshooting](http://localhost:3001/docs/troubleshooting) section for solutions to common problems.
-
-### Further Assistance
-
-If you're still facing issues after trying the solutions above, consider the following options:
-
-_FAQ:_ Check the Frequently Asked Questions section on our website for answers to common queries.
-
-_Community Discord:_ Join our community Discord server to seek help from other users and our development team. You can find the [invite link on our website](https://discord.gg/GvB865nE).
-
-_GitHub Issues:_ Visit our [GitHub Issues page](https://github.com/HamzaAmar/pillar-ui/issues) to report problems or find solutions to known issues.
-
-Remember, troubleshooting can vary depending on individual projects and setups. These are general guidelines, so adapt them to fit your users' needs and your UI library's peculiarities.
