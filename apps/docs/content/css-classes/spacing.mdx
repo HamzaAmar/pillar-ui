@@ -1,0 +1,61 @@
+---
+title: 'Spacing'
+type: 'css-classes'
+excerpt: 'Explore Pillar’s utility classes for margin and padding. These spacing helpers use semantic variables for consistent, scalable layout spacing across your UI.'
+lastModified: '2024-07-31T05:35:07.322Z'
+publishedAt: '2024-05-03T05:35:07.322Z'
+---
+
+# Spacing Utilities
+
+## Flow
+
+These utilities add spacing between children of a container by applying margin to all elements except the first, ideal for controlling vertical spacing in flow layouts like lists or stacked elements.
+
+| Class  | CSS Rule                 | Description                         |
+| ------ | ------------------------ | ----------------------------------- |
+| `Sf-1` | `margin-top: var(--S1);` | Very small top margin between items |
+| `Sf-2` | `margin-top: var(--S2);` | Small top margin between items      |
+| `Sf-3` | `margin-top: var(--S3);` | Medium small top margin             |
+| `Sf-4` | `margin-top: var(--S4);` | Medium top margin                   |
+| `Sf-5` | `margin-top: var(--S5);` | Large top margin                    |
+| `Sf-6` | `margin-top: var(--S6);` | Very large top margin               |
+| `Sf-7` | `margin-top: var(--S7);` | Extra large top margin              |
+| `Sf-8` | `margin-top: var(--S8);` | Huge top margin                     |
+| `Sf-9` | `margin-top: var(--S9);` | Maximal top margin                  |
+
+## Margin
+
+| Class       | Applies To         | CSS Rule                                 | Description               |
+| ----------- | ------------------ | ---------------------------------------- | ------------------------- |
+| `Sm-{1-9}`  | margin (all sides) | `margin: var(--s1)to var(--s9);`         | Very small uniform margin |
+| `Smt-{1-9}` | margin-top         | `margin-top: var(--s1)to var(--s9);;`    | Small top margin          |
+| `Smr-{1-9}` | margin-right       | `margin-right: var(--s1)to var(--s9);;`  | Large right margin        |
+| `Smb-{1-9}` | margin-bottom      | `margin-bottom: var(--s1)to var(--s9);;` | Small bottom margin       |
+| `Sml-{1-9}` | margin-left        | `margin-left: var(--s1)to var(--s9);;`   | Extra-large left margin   |
+
+## Padding
+
+| Class       | Applies To          | CSS Rule                                 | Description                |
+| ----------- | ------------------- | ---------------------------------------- | -------------------------- |
+| `Sp-{1-9}`  | padding (all sides) | `padding: var(--s1)to var(--s9);`        | Very small uniform padding |
+| `Spt-{1-9}` | padding-top         | `padding-top: var(--s1)to var(--s9);`    | Medium top padding         |
+| `Spr-{1-9}` | padding-right       | `padding-right: var(--s1)to var(--s9);`  | Large right padding        |
+| `Spb-{1-9}` | padding-bottom      | `padding-bottom: var(--s1)to var(--s9);` | Small bottom padding       |
+| `Spl-{1-9}` | padding-left        | `padding-left: var(--s1)to var(--s9);`   | Extra-large left padding   |
+
+## Gap
+
+You only need to use the `Sg` prefix to apply gap utilities to flex or grid containers.
+
+| Class  | CSS Rule          | Description      |
+| ------ | ----------------- | ---------------- |
+| `Sg-1` | `gap: var(--S1);` | Very small gap   |
+| `Sg-2` | `gap: var(--S2);` | Small gap        |
+| `Sg-3` | `gap: var(--S3);` | Medium small gap |
+| `Sg-4` | `gap: var(--S4);` | Medium gap       |
+| `Sg-5` | `gap: var(--S5);` | Large gap        |
+| `Sg-6` | `gap: var(--S6);` | Very large gap   |
+| `Sg-7` | `gap: var(--S7);` | Extra large gap  |
+| `Sg-8` | `gap: var(--S8);` | Huge gap         |
+| `Sg-9` | `gap: var(--S9);` | Maximal gap      |

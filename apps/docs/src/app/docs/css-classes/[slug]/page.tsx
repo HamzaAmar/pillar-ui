@@ -1,21 +1,21 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getFeatureBySlug, getFeatures } from '~/api/docs'
+import { getClassBySlug, getClasses } from '~/api/docs'
 import { CustomMDX, TableOfContent } from '~/app/_components'
 import { Ads } from '~/app/_components/ads'
 import { DOMAIN } from '~/constant/domain'
 import { SlugParamsProps } from '~/types/params'
 
 export async function generateStaticParams() {
-  return getFeatures().map(({ slug }) => ({
+  return getClasses().map(({ slug }) => ({
     slug,
   }))
 }
 
-function Features({ params }: SlugParamsProps) {
-  const feature = getFeatureBySlug(params.slug)
-  if (!feature) notFound()
-  const { content, headings } = feature
+function Classes({ params }: SlugParamsProps) {
+  const cls = getClassBySlug(params.slug)
+  if (!cls) notFound()
+  const { content, headings } = cls
   return (
     <>
       <div>
@@ -32,15 +32,15 @@ function Features({ params }: SlugParamsProps) {
   )
 }
 
-export default Features
+export default Classes
 
 export async function generateMetadata({ params }: SlugParamsProps): Promise<Metadata | undefined> {
-  const feature = getFeatureBySlug(params.slug)
-  if (!feature) {
+  const cls = getClassBySlug(params.slug)
+  if (!cls) {
     return
   }
 
-  let { title, excerpt: description, slug } = feature
+  let { title, excerpt: description, slug } = cls
 
   return {
     title,
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: SlugParamsProps): Promise<Met
       title,
       description,
       type: 'article',
-      url: `${DOMAIN}/docs/features/${slug}`,
+      url: `${DOMAIN}/docs/clss/${slug}`,
     },
     twitter: {
       card: 'summary_large_image',

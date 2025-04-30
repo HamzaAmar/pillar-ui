@@ -26,7 +26,7 @@ export interface Component extends SharedDocs {
   file: string
 }
 
-export interface Feature extends SharedDocs {}
+export interface Class extends SharedDocs {}
 
 export interface GettingStarted extends SharedDocs {}
 

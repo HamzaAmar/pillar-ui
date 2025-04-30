@@ -1,0 +1,36 @@
+---
+title: 'Position'
+type: 'css-classes'
+excerpt: 'Explore Pillar’s utility classes for managing element positioning and alignment. Learn how to quickly apply relative, absolute, fixed, sticky positioning and pre-defined insets for consistent layouts.'
+lastModified: '2024-07-31T05:35:07.322Z'
+publishedAt: '2024-05-03T05:35:07.322Z'
+---
+
+# Positioning Utilities
+
+Pillar provides utility-first positioning classes for building consistent, layout-aware components. These classes cover standard `position` values and common inset patterns like top-left or center-center—so you can skip writing custom styles.
+
+## Position
+
+| Class        | CSS Property          | Description                                                                                  |
+| ------------ | --------------------- | -------------------------------------------------------------------------------------------- |
+| `P-relative` | `position: relative;` | Establishes a positioned ancestor (used with absolute children)                              |
+| `P-absolute` | `position: absolute;` | Removes the element from the normal flow, positioned relative to nearest positioned ancestor |
+| `P-fixed`    | `position: fixed;`    | Positions the element relative to the viewport                                               |
+| `P-sticky`   | `position: sticky;`   | Scrolls with the container until it reaches an offset                                        |
+
+## Predefined Inset Positions
+
+These helper classes combine `top`, `bottom`, `left`, `right`, and `transform` properties to quickly anchor elements in common areas of the container.
+
+| Class             | CSS Properties                                           | Description                       |
+| ----------------- | -------------------------------------------------------- | --------------------------------- |
+| `P-start-start`   | `top: 0; left: 0;`                                       | Pin to top-left                   |
+| `P-start-center`  | `top: 0; left: 50%; transform: translateX(-50%);`        | Top center (horizontal center)    |
+| `P-start-end`     | `top: 0; right: 0;`                                      | Pin to top-right                  |
+| `P-center-start`  | `top: 50%; left: 0; transform: translateY(-50%);`        | Vertical center, aligned left     |
+| `P-center-center` | `top: 50%; left: 50%; transform: translate(-50%, -50%);` | Full center (both axes)           |
+| `P-center-end`    | `top: 50%; right: 0; transform: translateY(-50%);`       | Vertical center, aligned right    |
+| `P-end-start`     | `bottom: 0; left: 0;`                                    | Pin to bottom-left                |
+| `P-end-center`    | `bottom: 0; left: 50%; transform: translateX(-50%);`     | Bottom center (horizontal center) |
+| `P-end-end`       | `bottom: 0; right: 0;`                                   | Pin to bottom-right               |

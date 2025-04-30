@@ -22,7 +22,7 @@ const ICONS = {
   utils: <Help width={24} />,
   tutorials: <Book width={24} />,
   themes: <Palette width={24} />,
-  features: <Star width={24} />,
+  'css-classes': <Star width={24} />,
   'getting-started': <Bridge width={24} />,
 }
 
@@ -46,7 +46,6 @@ const MenuBar = ({ data }: DocsProps) => {
             const linkOrButtonConfig = !contents
               ? ({ href: `/docs/${key}`, as: Link } as any)
               : { as: 'button', onClick: () => toggleMenuItemSelection(key) }
-
             return (
               <li className="Sf-4" key={key}>
                 <Item
@@ -54,7 +53,7 @@ const MenuBar = ({ data }: DocsProps) => {
                   level={2}
                   isActive={current === key && !contents}
                   icon={ICONS[key]}
-                  title={key === 'getting-started' ? 'Getting Started' : key}
+                  title={key === 'getting-started' ? 'Getting Started' : key === 'css-classes' ? 'CSS Classes' : key}
                 >
                   {contents && <ChevronDown width="16" />}
                 </Item>

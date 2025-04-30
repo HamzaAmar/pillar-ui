@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { parse } from 'yaml'
 import readingTime from 'reading-time'
-import { Component, Feature, GettingStarted, Headings, Hook, Theme, Tutorial, Util } from '~/types/docs'
+import { Component, Class, GettingStarted, Headings, Hook, Theme, Tutorial, Util } from '~/types/docs'
 import { toSlug } from '~/utils/slug'
 
 function extractTOCFromMDX(content: string): Headings {
@@ -108,19 +108,19 @@ export function getTutorialBySlug(s: string) {
   return getTutorials().find(({ slug }) => slug === s)
 }
 
-export function getFeatures() {
-  return getMDXData<Feature>(path.join(process.cwd(), 'content/features'))
+export function getClasses() {
+  return getMDXData<Class>(path.join(process.cwd(), 'content/css-classes'))
 }
 
-export function getFeatureBySlug(s: string) {
-  return getFeatures().find(({ slug }) => slug === s)
+export function getClassBySlug(s: string) {
+  return getClasses().find(({ slug }) => slug === s)
 }
 
 export function getAll() {
   const getStarted = getGetStarted()
   const components = getComponents()
   const hooks = getHooks()
-  const features = getFeatures()
+  const classes = getClasses()
   const utils = getUtils()
   const tutorials = getTutorials()
   const themes = getThemes()
@@ -128,7 +128,7 @@ export function getAll() {
   return {
     'getting-started': getStarted,
     themes,
-    features,
+    'css-classes': classes,
     components,
     hooks,
     utils,
