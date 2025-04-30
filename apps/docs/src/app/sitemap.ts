@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getComponents, getFeatures, getGetStarted, getHooks, getThemes, getTutorials, getUtils } from '~/api/docs'
+import { getComponents, getClasses, getGetStarted, getHooks, getThemes, getTutorials, getUtils } from '~/api/docs'
 import { DOMAIN } from '~/constant/domain'
 
 const NOW = new Date().toISOString().split('T')[0]
@@ -11,7 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
     changefreq: 'daily',
   }))
-  let features = getFeatures().map(({ slug, lastModified }) => ({
+  let features = getClasses().map(({ slug, lastModified }) => ({
     url: `${DOMAIN}/docs/features/${slug}`,
     lastModified: lastModified,
     priority: 0.9,
