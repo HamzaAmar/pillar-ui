@@ -103,7 +103,40 @@ Utility classes follow a file–property–value pattern to keep them distinct a
 
 ## Commit Messages
 
-Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for your commit messages. This helps with semantic versioning and changelog generation.
+Pillar uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) so changelogs
+and versions can be generated automatically. Every commit must be atomic: one `why` per commit.
+
+Format: `type(scope): imperative subject under 72 chars`
+
+- `type`: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`, `build`, `revert`
+- `scope` (required in this monorepo): `core`, `hooks`, `icons`, `utils`, `docs`, `stories`, `ci`, `build`, `deps`, `release`, `contrib`
+- Write in imperative mood: `add`, `fix`, `remove`, `update` — never `added`, `fixes`, `mistakes`.
+
+Good examples:
+
+```bash
+feat(core): add switch component with high-contrast support
+fix(hooks): export useCounter types from package index
+fix(icons): rename multiply icon to x for consistency
+docs(docs): fix tooltip props table and add live example
+refactor(core): share variant styles to reduce css size
+chore(ci): cache yarn dependencies in GitHub Actions
+```
+
+Anti-patterns to avoid (real mistakes from our own history):
+
+```bash
+# Bad: vague, no scope, no why
+fix: icons problem
+fix: the pillar ui core mistakes
+fix: fix other design issues
+# Bad: god commit doing 5 things at once
+refactor: Add new release with modifications
+```
+
+Before committing, run `git status` and stage by topic — never blindly `git add .`.
+Prefer `git add -p` to split unrelated hunks. If you would not want to revert
+everything together, split it into separate commits.
 
 ---
 
