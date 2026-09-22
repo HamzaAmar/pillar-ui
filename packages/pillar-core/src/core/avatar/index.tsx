@@ -9,7 +9,7 @@ import type { AvatarGroupContextProps, AvatarGroupProps, AvatarProps } from './a
 
 const [AvatarProvider, useAvatarContext] = context<AvatarGroupContextProps>({ name: 'Avatar' })
 
-/*  
+/*
 =================================================================================
 Avatar Group Component
 =================================================================================
@@ -53,7 +53,7 @@ export const AvatarGroup = forwardRef(
 
 AvatarGroup.displayName = 'AvatarGroup'
 
-/*  
+/*
 =================================================================================
 Avatar Component
 =================================================================================

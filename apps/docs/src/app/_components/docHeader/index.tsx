@@ -20,7 +20,9 @@ export const DocHeader = ({ title, type, items, root, excerpt, slug, directory }
               Components:
             </Text>
             <Flex gap="4" wrap>
-              {items?.map((item) => <Chips key={item}>{item}</Chips>)}
+              {items?.map((item) => (
+                <Chips key={item}>{item}</Chips>
+              ))}
             </Flex>
           </>
         )}

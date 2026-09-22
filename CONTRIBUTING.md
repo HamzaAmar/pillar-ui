@@ -147,12 +147,12 @@ Pillar uses [Oxc](https://oxc.rs) instead of ESLint and Prettier: `oxlint` for l
 
 | Command           | What it does                                              |
 | ----------------- | --------------------------------------------------------- |
-| `yarn lint`       | Lint every workspace through Turbo (`oxlint` per package)  |
-| `yarn lint:fix`   | Apply oxlint autofixes across every workspace              |
-| `yarn format`     | Verify formatting (`oxfmt --check`)                        |
-| `yarn format:fix` | Apply formatting (`oxfmt --write`)                         |
-| `yarn check`      | Format + lint, the same gate CI runs first                 |
-| `yarn check:fix`  | Format then lint with fixes                                |
+| `yarn lint`       | Lint every workspace through Turbo (`oxlint` per package) |
+| `yarn lint:fix`   | Apply oxlint autofixes across every workspace             |
+| `yarn format`     | Verify formatting (`oxfmt --check`)                       |
+| `yarn format:fix` | Apply formatting (`oxfmt --write`)                        |
+| `yarn check`      | Format + lint, the same gate CI runs first                |
+| `yarn check:fix`  | Format then lint with fixes                               |
 
 Configuration lives in `.oxlintrc.json` and `.oxfmtrc.json`. Rules are defined once at the repo
 root; do not add per-package ESLint or Prettier configs.

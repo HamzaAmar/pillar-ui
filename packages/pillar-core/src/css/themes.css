@@ -141,12 +141,14 @@
    */
 
   /* Font Family  */
-  --body-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu,
-    Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Lucida Grande', Helvetica, Arial, sans-serif;
+  --body-font:
+    -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen,
+    'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande',
+    Helvetica, Arial, sans-serif;
   --heading-font: var(--h-font, var(--body-font));
-  --mono-font: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono,
-    Source Code Pro, monospace;
+  --mono-font:
+    Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro,
+    monospace;
 
   /* Font Size variables */
   --F1: var(--CF1, clamp(0.54rem, calc(0.83rem + -0.28vw), 0.77rem));

@@ -5,11 +5,9 @@
 ### Minor Changes
 
 - ### Features
-
   - Add new rotate CSS utilities (#f77eb21) Core Component
 
   ### Fixes
-
   - Typo in the Support Component (#abf55c5, #726eb90)
   - Upgrade vitest and vite/react plugin to next versions (#194473a)
   - Remove examples from the repo (#e9edad9)
@@ -19,7 +17,6 @@
   - Package formatter issue (#e840a0e)
 
   ### Chores
-
   - Make all the packages depend on react 18 and above (#162d427)
 
 ## 0.12.4
@@ -92,7 +89,6 @@
   - **Class Names Consistency:** Addressed and documented inconsistencies in class names. (0536e3c)
 
   ### Docs
-
   - **Input Form Status Placeholder:** Added a placeholder to the input form status for better user feedback. (b585142)
   - **Composite Component Documentation:** Added documentation for the composite component. (319e2e2)
   - **Playground Enhancements:** Added playgrounds for header, status, card, and stat components, facilitating interactive exploration. (db48cf7)
@@ -133,17 +129,14 @@
 - # Changes
 
   ## **1. Refactor: Remove `TableColumn` , `TableRow` and Use Native HTML Elements (#121)**
-
   - **Description:** The `TableColumn`, `TableRow` component has been removed, and native HTML elements (`<tr>`, `<th>`, `<td>`) are now used for better compatibility and simplicity.
   - **Impact:** This change improves bundle size and reduces dependency on custom components.
 
   ## **2. Fix: Add `shd` Class to Avatar and Check Other Components (#ae9a136)**
-
   - **Description:** The `shd` class has been added to the `Avatar` component to ensure proper styling. Other components have also been reviewed to ensure they do not shrink unexpectedly.
   - **Impact:** This fixes layout issues and ensures consistent rendering across components.
 
   ## **3. Fix: Resolve Chips Overflow Issue (#119)**
-
   - **Description:** The `Chips` component has been updated to prevent overflow issues, ensuring that content remains within its boundaries.
   - **Impact:** This improves the usability and appearance of the `Chips` component.
 
@@ -191,17 +184,14 @@
 - # Fix Issues in Core and Hooks
 
   ## Core Package
-
   - Fix issues with Padding in Paper component
   - Fix typescript issue in avatar component
   - fix issue in css variables background in Paper component
 
   ## Hooks Package
-
   - fix issues in vitest and vite that cause build issue
 
   ## Docs improvements
-
   - fix issue that prevent vercel from building project
   - improve color docs
   - improve site seo
@@ -238,18 +228,15 @@
 - # Pillar UI Release Notes
 
   ## Major Features
-
   - **Improved SEO:** Enhanced site SEO by adding creator information to Twitter metadata.
   - **Manifest Integration:** Implemented a manifest file for better web app functionality.
 
   ## Bug Fixes
-
   - **Dependency Removal:** Removed unused dependencies to streamline the project.
   - **Props Spreading:** Fixed an issue with props being spread to the item list incorrectly.
   - **CSS Optimization:** Reduced CSS size by removing unused styles.
 
   ## Refactorings
-
   - **Code Component Types:** Added types for the code component for improved maintainability.
   - **CSS Optimization:** Further optimized the code components by removing unused CSS.
   - **Core Components Size Reduction:** Reduced the size of core components for better performance.
@@ -262,7 +249,6 @@
 ### Patch Changes
 
 - # New Patch Release
-
   - **Dependency Downgrade**: We have downgraded the "pillar hooks" dependency to version 0.7.3. Please review the dependency's changelog for any potential breaking changes or feature removals.
   - **Icon Rotation**: A new feature has been added to allow for rotation of icons in different directions, enhancing visual customization options.
 
@@ -273,14 +259,12 @@
 - # new Release September 20, 2024
 
   ## Major Features
-
   - **Code Components:** Added code and copyButton components for use in the Code section of the mdx component.
   - **Improved Button and Checkbox Styles:** Refactored button and checkbox styles for better consistency and appearance.
   - **Code Playground Restructuring:** Restructured the doc file playground for use in both playground and code highlighting.
   - **Pagination Bug Fix:** Fixed a pagination bug that prevented users from navigating back to previous pages.
 
   ## Bug Fixes
-
   - **Variant Undefined Issue:** Resolved an issue where the variant was undefined in the classname.
   - **--opa Mistakes Value:** Corrected the value for the `--opa` mistake.
   - **Stepper Bug:** Fixed a bug in the stepper and renamed the value for clarity.
@@ -289,7 +273,6 @@
   - **Doc Issue:** Resolved an issue in the documentation after changes to the core.
 
   ## Refactors
-
   - **Removed Icon from Badge:** Removed the icon from the badge component.
   - **Removed Cite Component:** Removed the cite component from the blockquote and set a default value for the icon.
   - **Improved Component Detail Page Style:** Refactored the style of the component detail page.
@@ -301,7 +284,6 @@
   - **Restructured Utils:** Restructured the utils and reduced its size.
 
   ## Additional Notes
-
   - **Yarn Lock File Upgrade:** Upgraded the yarn lock file to ensure compatibility with the latest dependencies.
 
   This release includes significant improvements and bug fixes that enhance the overall functionality and usability of Pillar Core.
@@ -369,7 +351,6 @@
 - d034bc0: # Release Notes v1.x.x
 
   ## Enhancements
-
   - **Core:**
 
     - Added new utility functions to the core project, promoting code reusability and maintainability.
@@ -383,7 +364,6 @@
     - Added new truncate classes, providing additional styling options.
 
   ## Bug Fixes
-
   - Fixed an issue where the `truncate` props didn't support the new styling.
   - Fixed an issue in the `cx` style function where falsy values were not removed.
   - Refactored the typography component to remove the `variant` prop, streamlining the API.
@@ -400,7 +380,6 @@
 - # Release Notes v1.x.x
 
   ## Enhancements
-
   - **Core:**
 
     - Added new utility functions to the core project, promoting code reusability and maintainability.
@@ -414,7 +393,6 @@
     - Added new truncate classes, providing additional styling options.
 
   ## Bug Fixes
-
   - Fixed an issue where the `truncate` props didn't support the new styling.
   - Fixed an issue in the `cx` style function where falsy values were not removed.
   - Refactored the typography component to remove the `variant` prop, streamlining the API.
@@ -429,7 +407,6 @@
 ### Minor Changes
 
 - # Key Improvements
-
   - **Performance Boost:** Significant enhancements to the `utils` module, leading to improved overall application performance (`08b83f1`).
   - **Reduced Bundle Size:** The `pillar-ui/core` package has been optimized, resulting in a smaller bundle size for faster loading times (`4236adb`).
   - **Bug Fixes:**
@@ -437,13 +414,11 @@
     - Resolved missing dependencies and peer dependencies (`ebde610`).
 
   ## Other Changes
-
   - **New Benchmark Script:** Introduced a new script for benchmarking the `classnames` functions to aid in future performance optimizations (`50bc866`).
   - **TSUP Config Update:** Removed `tsx` from `useDirection` in the TSUP configuration (`ee65764`).
   - **Next Example Update:** The Next.js example project has been updated to align with the latest changes in the library (`42bc566`).
 
   ## Additional Notes
-
   - This release includes refactoring efforts that improve code maintainability and set the foundation for future enhancements.
 
 ### Patch Changes
@@ -548,7 +523,6 @@
 ### Patch Changes
 
 - # This release includes the following improvements:
-
   - **Color Class Optimization:** The color class and variant definitions have been refactored to use only the 3 digits of each color. This optimization reduces the overall size of the stylesheets, improving page load times and user experience.
   - **README Enhancement:** The README files have been updated to provide clearer instructions and more detailed information.
 
@@ -569,7 +543,6 @@
   This release primarily focuses on enhancing the codebase's maintainability and performance, setting the stage for future feature development and improvements. While the changes may not be immediately visible to end-users, they significantly impact the project's long-term health and sustainability.
 
   ## Key Enhancements
-
   - **Codebase Refactoring:** A comprehensive overhaul of components, CSS classes, and file structures to improve code quality, consistency, and organization. This refactor enhances maintainability, streamlines development, and lays the groundwork for future optimizations.
   - **Performance Optimizations:** Various adjustments have been made to enhance site speed and overall performance. These include optimizing CSS variables, consolidating theme files, and refining component structures for faster loading times.
   - **SEO and Accessibility Improvements:** The project now includes upgraded meta tags, improved sitemap generation, and content updates to optimize for search engines and screen readers. These changes enhance the project's discoverability and inclusivity.
@@ -577,13 +550,11 @@
   - **Styling Updates:** CSS variables and color schemes have been streamlined, making customization and maintenance easier for developers.
 
   ## Additional Changes
-
   - **Contributor Guidelines:** Naming conventions for contributors have been updated and can be found in the README and Contribute files.
   - **Donation Option:** A donation button has been added to support the project's ongoing development. Details can be found in the updated documentation.
   - **Technical Upgrades:** The project has been upgraded to use a more modern approach to generate favicons and sitemaps. Additionally, various technical adjustments have been made to pages like docs, playground, and stories to ensure compatibility with changes in the core pillar.
 
   ## Developer Notes
-
   - Developers are encouraged to review the updated naming conventions, component structures, and contributor guidelines.
   - The streamlined CSS variables and theme files offer greater flexibility for customization and theming.
 
@@ -704,7 +675,6 @@
 ### Minor Changes
 
 - # New Changes
-
   - **Commit f1f8ee5**: We’ve fixed an issue by adding types to the package.json exports. This should help improve the overall functionality of the library.
   - **Commit cef2462**: We’ve removed index.json and made changes to icons.json. This is part of our ongoing effort to streamline our codebase and improve efficiency.
   - **Commit 3478d24**: We’ve fixed the icon problem that some users were experiencing. This should enhance the user interface and make it more user-friendly.
@@ -718,7 +688,6 @@
 ### Minor Changes
 
 - ## What's New
-
   - **New Documentation for Flex and Grid**: With commit `2914402`, we've added comprehensive documentation for flex and grid layouts. Understanding how to leverage these powerful layout tools is now easier than ever.
 
   - **Info Color and High Contrast**: In commits `de6a284` and `d39d8a0`, we introduced a new 'info' color and a high contrast property to our theming options. These features provide better visual cues and accessibility options for your projects.
@@ -726,7 +695,6 @@
   - **Accordion Item Enhancement**: With commit `5feefc1`, we've made an update to the accordion component, allowing the `value` prop to accept either a string or a number, adding flexibility to the way you handle data.
 
   ## Bug Fixes
-
   - **Documentation Style Fix**: Commit `470f9f2` addresses a styling bug in the documentation. The appearance of our docs is now more consistent and user-friendly.
 
   - **README File Corrections**: With commit `a8ad825`, we've made corrections to the README file, fixing errors and ensuring that the project's introduction is as clear and accurate as possible.
@@ -736,12 +704,10 @@
 ### Patch Changes
 
 - # Core Enhancements and Fixes:
-
   - Fixed form corner defaults and improved gap separation (commit: #df335a2).
   - Added custom fonts to Project 3 (commit: #62af24e).
 
   # Documentation and SEO:
-
   - Enhanced SEO with title and description tags (commit: #f5b4b0f).
   - Added Globby to the site (commit: #88b7989).
   - Refactored page SCSS files (commit: #9dfa9a8).
@@ -760,46 +726,38 @@
   We're excited to roll out a series of enhancements and new features in this minor release that will supercharge your development workflow with the Pillar UI library!
 
   ## 🌐 Global Updates
-
   - Minor version bumps across multiple packages to ensure you’re working with the most refined and updated tools.
 
   ## 🧱 `@pillar-ui/core`
 
   ### New Components
-
   - 🌐 Tooltip and Popover: Elevate your UI with our newly added interactive components.
   - 📜 Blockquote: Seamlessly incorporate quotes into your text with our styled component.
   - 📝 List: Managing and rendering lists got a lot easier.
 
   ### Bug Fixes
-
   - 🐛 Improved the Avatar component’s error handling for enhanced reliability.
 
   ### Refactoring
-
   - 🔄 Renamed `composeRef` to `useComposeRefs` for improved readability and consistency.
 
   ## 🪝 `@pillar-ui/hooks`
 
   ### New Custom Hooks
-
   - 🧰 Introduced `useComposeRefs` to simplify and optimize reference composition.
 
   ### Enhancements
-
   - 📦 Enhanced `useClickOutside` to accept a ref, allowing for a more flexible usage.
 
   ## 🧰 `@pillar-ui/utils`
 
   ### Organizational Improvements
-
   - 🗂 Reorganized the structure of utility functions for easier navigation and usage.
   - 🔄 Shifted `useComposeRefs` from `utils` to `hooks` for logical categorization.
 
   ## 📚 Pillar Docs
 
   ### Documentation Improvements
-
   - 📱 Optimized the documentation header’s responsiveness for improved navigation on various devices.
   - 🚀 Added a dynamic Tutorial page to expedite users' proficiency with the library.
   - 🔍 Incorporated a search functionality, streamlining access to documentation contents.
@@ -811,13 +769,11 @@
 ### Minor Changes
 
 - ### Pillar/utils
-
   - Added new `get` utility functions.
   - Added new `has` utility functions.
   - Added new `is` utility functions.
 
   ### Pillar/hooks
-
   - Added `useTimeout` custom hook.
   - Added `useIntersectionObserver` custom hook.
   - Added `useDebounce` custom hook.
@@ -832,22 +788,18 @@
   - Added `useHover` custom hook.
 
   ## Pillar/core
-
   - Added `pinInput` field.
 
   ## Pillar/icons
-
   - Added new nature icons.
   - Added new health icons.
   - Added new faces icons.
   - Added new development icons.
 
   ### Refactor
-
   - Added `@examples` to JSDoc.
 
   ### Chore
-
   - Added `globals` type.
 
 ## 0.1.0
@@ -868,7 +820,6 @@
   - Implement custom hooks and enhance existing ones
 
   ## Refactoring
-
   - Move classNames to a separate styles directory
   - Refactor and update multiple components
   - Refactor and improve various core components
@@ -877,12 +828,10 @@
   - Enhance code components
 
   ## Fixes
-
   - Fix CSS incorrect URL
   - Fix icons problem and naming issues
 
   ## Chore
-
   - Update build configuration
   - Add lint-staged to the project
   - Configure dependabot

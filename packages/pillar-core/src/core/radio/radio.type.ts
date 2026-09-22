@@ -23,10 +23,7 @@ export interface RadioProps extends Omit<ComponentPropsWithoutRef<'input'>, 'siz
 }
 
 export interface RadioGroupProps
-  extends Omit<FieldsetProps, 'size' | 'color'>,
-    RadioGroup,
-    SharedProps,
-    CustomSharedProps {}
+  extends Omit<FieldsetProps, 'size' | 'color'>, RadioGroup, SharedProps, CustomSharedProps {}
 
 export interface RadioContextProps extends RadioGroup, SharedProps, CustomSharedProps {}
 export interface CustomRadioProps extends RadioProps, CustomSharedProps {

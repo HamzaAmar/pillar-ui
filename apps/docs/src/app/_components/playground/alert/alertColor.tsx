@@ -1,6 +1,6 @@
 import { Alert } from '@pillar-ui/core'
 
-/* 
+/*
   this is the list of the color used in Pillar ui Library
   p => primary | se=> secondary | d => danger | w => warning | i => info | su=> success | b => bg 
 */

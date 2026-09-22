@@ -20,7 +20,8 @@ const CompleteComponent = () => {
       <Text weight="7">Success</Text>
       <Text style={{ width: '90ch' }} size="4" color="b" low>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, illum, ut eius esse voluptates voluptatibus
-        perferendis laborum, quam temporibus consequuntur iure porro excepturi dolore. Enim labore id tempore iusto sed?{' '}
+        perferendis laborum, quam temporibus consequuntur iure porro excepturi dolore. Enim labore id tempore iusto
+        sed?{' '}
       </Text>
     </Flex>
   )

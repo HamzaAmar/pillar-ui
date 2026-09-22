@@ -45,9 +45,7 @@ interface AddonsProps {
 }
 
 export interface InputProps
-  extends AddonsProps,
-    FormFieldSharedProps,
-    Omit<ComponentPropsWithRef<'input'>, 'size' | 'color'> {
+  extends AddonsProps, FormFieldSharedProps, Omit<ComponentPropsWithRef<'input'>, 'size' | 'color'> {
   status?: Status
   className?: string
   isInvalid?: boolean
@@ -61,9 +59,7 @@ export interface InputPasswordProps extends Omit<InputProps, 'suffixInput'> {
 export interface InputSearchProps extends InputProps {}
 
 export interface TextareaProps
-  extends AddonsProps,
-    Omit<ComponentPropsWithRef<'textarea'>, 'size' | 'color'>,
-    FormFieldSharedProps {
+  extends AddonsProps, Omit<ComponentPropsWithRef<'textarea'>, 'size' | 'color'>, FormFieldSharedProps {
   isInvalid?: boolean
   status?: Status
 }

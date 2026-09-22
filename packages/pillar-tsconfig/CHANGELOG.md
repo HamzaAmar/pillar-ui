@@ -5,13 +5,11 @@
 ### Minor Changes
 
 - ### Pillar/utils
-
   - Added new `get` utility functions.
   - Added new `has` utility functions.
   - Added new `is` utility functions.
 
   ### Pillar/hooks
-
   - Added `useTimeout` custom hook.
   - Added `useIntersectionObserver` custom hook.
   - Added `useDebounce` custom hook.
@@ -26,20 +24,16 @@
   - Added `useHover` custom hook.
 
   ## Pillar/core
-
   - Added `pinInput` field.
 
   ## Pillar/icons
-
   - Added new nature icons.
   - Added new health icons.
   - Added new faces icons.
   - Added new development icons.
 
   ### Refactor
-
   - Added `@examples` to JSDoc.
 
   ### Chore
-
   - Added `globals` type.
