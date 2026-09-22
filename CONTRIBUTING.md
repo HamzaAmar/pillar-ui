@@ -140,15 +140,41 @@ everything together, split it into separate commits.
 
 ---
 
+## Code Quality Tools
+
+Pillar uses [Oxc](https://oxc.rs) instead of ESLint and Prettier: `oxlint` for linting and
+`oxfmt` for formatting. Both are Rust binaries, so a full-repo check runs in seconds.
+
+| Command           | What it does                                              |
+| ----------------- | --------------------------------------------------------- |
+| `yarn lint`       | Lint every workspace through Turbo (`oxlint` per package)  |
+| `yarn lint:fix`   | Apply oxlint autofixes across every workspace              |
+| `yarn format`     | Verify formatting (`oxfmt --check`)                        |
+| `yarn format:fix` | Apply formatting (`oxfmt --write`)                         |
+| `yarn check`      | Format + lint, the same gate CI runs first                 |
+| `yarn check:fix`  | Format then lint with fixes                                |
+
+Configuration lives in `.oxlintrc.json` and `.oxfmtrc.json`. Rules are defined once at the repo
+root; do not add per-package ESLint or Prettier configs.
+
+Line endings are pinned to LF in `.gitattributes`. Running `yarn format` on a Windows checkout
+with `core.autocrlf=true` can report files as unformatted until line endings are renormalized.
+
+Lint and format rules that currently report pre-existing issues are set to `warn` so they show up
+in output without failing the build. When cleaning them up, tighten the rule back to `error` in
+the same pull request that removes the last violation.
+
+---
+
 ## Running Tests
 
 Before submitting a PR, run:
 
 ```bash
-yarn ci
+yarn check && yarn ci
 ```
 
-This ensures everything builds and tests pass.
+`yarn check` covers format and lint, `yarn ci` builds, tests and type-checks every workspace.
 
 ---
 
