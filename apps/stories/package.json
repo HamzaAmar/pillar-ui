@@ -14,7 +14,7 @@
                     "type:check": "tsc --noEmit"
           },
           "dependencies": {
-                    "@pillar-ui/core": "*",
+                    "@pillar-ui/core": "workspace:*",
                     "react": "^18.3.1",
                     "react-dom": "^18.3.1"
           },
