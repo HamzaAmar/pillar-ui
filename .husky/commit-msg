@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+# Commit-msg guard: enforce Conventional Commits with a scope.
+# Allows: feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert
+# Requires format: type(scope): subject  e.g. fix(core): align button icon
+# Skips merge and revert commits.
+MSG_FILE="$1"
+MSG_HEAD=$(head -n 1 "$MSG_FILE")
+
+case "$MSG_HEAD" in
+Merge*|Revert*) exit 0 ;;
+esac
+
+if ! echo "$MSG_HEAD" | grep -Eq '^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)\([a-z0-9_-]+\): .+'; then
+  echo ""
+  echo "Invalid commit message: $MSG_HEAD"
+  echo ""
+  echo "Required format: type(scope): subject"
+  echo "Example: fix(core): align button icon and text"
+  echo "Types: feat fix docs style refactor test chore perf ci build revert"
+  echo "Scopes: core hooks icons utils docs stories ci build deps release contrib"
+  echo ""
+  exit 1
+fi
