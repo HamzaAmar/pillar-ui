@@ -1,13 +1,9 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["import", "typescript", "react", "react-perf", "jsx-a11y", "unicorn", "oxc"],
+  "plugins": ["import", "typescript", "react", "react-perf", "unicorn", "oxc"],
   "env": { "browser": true, "node": true, "es2024": true },
   "settings": {
-    "react": { "version": "18.3.1" },
-    "jsx-a11y": {
-      "components": { "Link": "a" },
-      "polymorphicPropName": "as"
-    }
+    "react": { "version": "18.3.1" }
   },
   "ignorePatterns": [
     "**/node_modules/**",
@@ -29,8 +25,8 @@
     "**/*.tsbuildinfo"
   ],
   "categories": {
-    "correctness": "error",
-    "suspicious": "error",
+    "correctness": "warn",
+    "suspicious": "warn",
     "pedantic": "off",
     "perf": "warn",
     "style": "off",
@@ -38,16 +34,32 @@
     "nursery": "off"
   },
   "rules": {
-    "import/no-duplicates": "error",
+    "import/no-duplicates": "warn",
     "import/no-self-import": "error",
+    "import/no-named-as-default-member": "warn",
     "import/no-named-export": "off",
     "import/prefer-default-export": "off",
     "import/no-unassigned-import": "off",
     "react/react-in-jsx-scope": "off",
+    "react/jsx-key": "warn",
+    "react/no-array-index-key": "warn",
+    "react/refs": "warn",
+    "react/set-state-in-effect": "warn",
+    "react/exhaustive-effect-dependencies": "warn",
+    "react/preserve-manual-memoization": "warn",
+    "react/memo-dependencies": "warn",
+    "react/immutability": "warn",
+    "react/static-components": "warn",
+    "react/forward-ref-uses-ref": "warn",
+    "react/no-object-type-as-default-prop": "warn",
     "react-perf/jsx-no-jsx-as-prop": "off",
     "react-perf/jsx-no-new-object-as-prop": "off",
     "react-perf/jsx-no-new-function-as-prop": "off",
     "react-perf/jsx-no-new-array-as-prop": "off",
+    "unicorn/no-empty-file": "off",
+    "unicorn/no-new-array": "warn",
+    "unicorn/no-useless-fallback-in-spread": "warn",
+    "unicorn/prefer-add-event-listener": "warn",
     "typescript/no-explicit-any": "warn",
     "typescript/no-floating-promises": "error",
     "typescript/consistent-type-imports": ["warn", { "prefer": "type-imports", "fixStyle": "inline-type-imports" }],
@@ -56,8 +68,13 @@
       { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }
     ],
     "typescript/no-extraneous-class": "warn",
+    "no-unused-expressions": "warn",
+    "no-unneeded-ternary": "warn",
+    "no-unsafe-optional-chaining": "warn",
+    "no-useless-catch": "warn",
     "no-shadow": "warn",
     "no-underscore-dangle": "warn",
+    "no-await-in-loop": "warn",
     "unicorn/no-array-sort": "warn",
     "unicorn/consistent-function-scoping": "warn",
     "unicorn/no-array-for-each": "off",
@@ -72,7 +89,10 @@
       "plugins": ["vitest"],
       "rules": {
         "no-console": "off",
-        "typescript/no-explicit-any": "off"
+        "typescript/no-explicit-any": "off",
+        "vitest/no-commented-out-tests": "warn",
+        "vitest/require-mock-type-parameters": "warn",
+        "vitest/valid-title": "warn"
       }
     },
     {

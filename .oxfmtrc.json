@@ -11,6 +11,9 @@
   "arrowParens": "always",
   "bracketSameLine": false,
   "bracketSpacing": true,
+  "endOfLine": "lf",
+  "insertFinalNewline": true,
+  "sortPackageJson": false,
   "ignorePatterns": [
     "**/node_modules/**",
     "**/dist/**",
@@ -28,6 +31,8 @@
     "**/.vscode/**",
     "**/.yarn/**",
     "**/.pnp.*",
-    "**/*.tsbuildinfo"
+    "**/*.tsbuildinfo",
+    "**/public/sitemap.xml",
+    "**/public/feed.xml"
   ]
 }

@@ -1,0 +1,24 @@
+# Normalize line endings for every text file the tooling reads.
+# oxfmt enforces LF (endOfLine: "lf"), so the repository must store LF.
+* text=auto eol=lf
+
+# Binary assets must never be normalized.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+*.mp4 binary
+*.pdf binary
+*.zip binary
+
+# Lockfiles and generated output are read by tools, never hand-edited.
+yarn.lock text eol=lf
+*.snap text eol=lf
